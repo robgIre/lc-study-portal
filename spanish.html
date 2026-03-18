@@ -875,404 +875,181 @@
 </div>
 
 <!-- FLASHCARDS TAB -->
-<div id="tab-flashcards" class="tab-content">
+<!-- ====== FLASHCARDS TAB ====== -->
+<div class="tab-content" id="tab-flashcards">
 <div class="card">
-<h2>Spanish Flashcards</h2>
-<p>Click a card to flip it. Navigate with arrow keys or buttons.</p>
-<div class="flashcard-controls">
-<button onclick="prevFlashcard('spanish')" id="prevBtn">← Previous</button>
-<span id="flashcardCounter">1 / 35</span>
-<button onclick="nextFlashcard('spanish')" id="nextBtn">Next →</button>
-</div>
+<h2>Flashcards</h2>
+<p>Click a card to reveal the answer. Filter by topic or shuffle.</p>
 </div>
 
-<div class="flashcard-container" id="flashcardContainer">
-<div class="flashcard active" onclick="flipCard(this)">
-<div class="front"><strong>influencer</strong></div>
-<div class="back">A person who has the power to affect purchasing decisions or opinions of others because of their authority or relationship with their audience</div>
+<div class="fc-topic-filter" id="fcFilter">
+<button class="active" onclick="fc.filter('all')">All Topics</button>
+<button onclick="fc.filter('vocabulary')">Vocabulary</button>
+<button onclick="fc.filter('grammar')">Grammar</button>
+<button onclick="fc.filter('exam-phrases')">Exam Phrases</button>
+<button onclick="fc.filter('literature')">Literature</button>
 </div>
 
-<div class="flashcard" onclick="flipCard(this)">
-<div class="front"><strong>inteligencia artificial (IA)</strong></div>
-<div class="back">Artificial intelligence - computer systems able to perform tasks that normally require human intelligence</div>
+<div class="flashcard-container" id="fcContainer">
+<div class="flashcard" onclick="fc.flip()">
+<div class="flashcard-face flashcard-front">
+<h3>TOPIC</h3>
+<p>Loading...</p>
 </div>
-
-<div class="flashcard" onclick="flipCard(this)">
-<div class="front"><strong>redes sociales</strong></div>
-<div class="back">Social media/networks - platforms like Instagram, Facebook, TikTok</div>
-</div>
-
-<div class="flashcard" onclick="flipCard(this)">
-<div class="front"><strong>choque cultural</strong></div>
-<div class="back">Culture shock - the feeling of disorientation when encountering unfamiliar customs</div>
-</div>
-
-<div class="flashcard" onclick="flipCard(this)">
-<div class="front"><strong>movilidad reducida</strong></div>
-<div class="back">Reduced mobility - limited ability to move around</div>
-</div>
-
-<div class="flashcard" onclick="flipCard(this)">
-<div class="front"><strong>ciudad accesible</strong></div>
-<div class="back">Accessible city - designed to be easy to navigate for everyone including people with disabilities</div>
-</div>
-
-<div class="flashcard" onclick="flipCard(this)">
-<div class="front"><strong>deporte minoritario</strong></div>
-<div class="back">Minority sport - a sport that is not widely practiced or popular</div>
-</div>
-
-<div class="flashcard" onclick="flipCard(this)">
-<div class="front"><strong>contaminación acústica</strong></div>
-<div class="back">Noise pollution - harmful or annoying levels of noise</div>
-</div>
-
-<div class="flashcard" onclick="flipCard(this)">
-<div class="front"><strong>calidad de vida</strong></div>
-<div class="back">Quality of life - standard of health, comfort, and happiness</div>
-</div>
-
-<div class="flashcard" onclick="flipCard(this)">
-<div class="front"><strong>beca Erasmus</strong></div>
-<div class="back">Erasmus grant - EU program providing study abroad opportunities</div>
-</div>
-
-<div class="flashcard" onclick="flipCard(this)">
-<div class="front"><strong>vivienda asequible</strong></div>
-<div class="back">Affordable housing</div>
-</div>
-
-<div class="flashcard" onclick="flipCard(this)">
-<div class="front"><strong>náufrago</strong></div>
-<div class="back">Castaway/shipwreck survivor</div>
-</div>
-
-<div class="flashcard" onclick="flipCard(this)">
-<div class="front"><strong>balsa</strong></div>
-<div class="back">Raft - flat floating structure</div>
-</div>
-
-<div class="flashcard" onclick="flipCard(this)">
-<div class="front"><strong>alucinación</strong></div>
-<div class="back">Hallucination - perception of something not actually present</div>
-</div>
-
-<div class="flashcard" onclick="flipCard(this)">
-<div class="front"><strong>puntualidad</strong></div>
-<div class="back">Punctuality - the quality of being on time</div>
-</div>
-
-<div class="flashcard" onclick="flipCard(this)">
-<div class="front"><strong>horario</strong></div>
-<div class="back">Schedule/timetable</div>
-</div>
-
-<div class="flashcard" onclick="flipCard(this)">
-<div class="front"><strong>madrugada</strong></div>
-<div class="back">Early morning - period between midnight and dawn</div>
-</div>
-
-<div class="flashcard" onclick="flipCard(this)">
-<div class="front"><strong>auriculares</strong></div>
-<div class="back">Headphones/earphones</div>
-</div>
-
-<div class="flashcard" onclick="flipCard(this)">
-<div class="front"><strong>cineasta</strong></div>
-<div class="back">Filmmaker/film director</div>
-</div>
-
-<div class="flashcard" onclick="flipCard(this)">
-<div class="front"><strong>jubilarse</strong></div>
-<div class="back">To retire - to leave one's job and cease to work</div>
-</div>
-
-<div class="flashcard" onclick="flipCard(this)">
-<div class="front"><strong>melancólico</strong></div>
-<div class="back">Melancholic - feeling pensive sadness</div>
-</div>
-
-<div class="flashcard" onclick="flipCard(this)">
-<div class="front"><strong>patinadora artística</strong></div>
-<div class="back">Artistic skater</div>
-</div>
-
-<div class="flashcard" onclick="flipCard(this)">
-<div class="front"><strong>bandera</strong></div>
-<div class="back">Flag</div>
-</div>
-
-<div class="flashcard" onclick="flipCard(this)">
-<div class="front"><strong>entrenar</strong></div>
-<div class="back">To train - to teach skills or prepare for sport</div>
-</div>
-
-<div class="flashcard" onclick="flipCard(this)">
-<div class="front"><strong>instalaciones</strong></div>
-<div class="back">Facilities - place, amenity, or equipment for a purpose</div>
-</div>
-
-<div class="flashcard" onclick="flipCard(this)">
-<div class="front"><strong>enfadarse</strong></div>
-<div class="back">To get angry</div>
-</div>
-
-<div class="flashcard" onclick="flipCard(this)">
-<div class="front"><strong>sensible</strong></div>
-<div class="back">Sensitive - quick to detect or respond to changes</div>
-</div>
-
-<div class="flashcard" onclick="flipCard(this)">
-<div class="front"><strong>leal</strong></div>
-<div class="back">Loyal - giving firm and constant support</div>
-</div>
-
-<div class="flashcard" onclick="flipCard(this)">
-<div class="front"><strong>perezoso</strong></div>
-<div class="back">Lazy - unwilling to work or use energy</div>
-</div>
-
-<div class="flashcard" onclick="flipCard(this)">
-<div class="front"><strong>portavoz</strong></div>
-<div class="back">Spokesperson - person who speaks on behalf of a group</div>
-</div>
-
-<div class="flashcard" onclick="flipCard(this)">
-<div class="front"><strong>ayuntamiento</strong></div>
-<div class="back">City council/town hall - local government authority</div>
-</div>
-
-<div class="flashcard" onclick="flipCard(this)">
-<div class="front"><strong>niebla</strong></div>
-<div class="back">Fog - thick cloud of tiny water droplets</div>
-</div>
-
-<div class="flashcard" onclick="flipCard(this)">
-<div class="front"><strong>alerta amarilla</strong></div>
-<div class="back">Yellow alert - weather warning indicating potential danger</div>
-</div>
-
-<div class="flashcard" onclick="flipCard(this)">
-<div class="front"><strong>tierra natal</strong></div>
-<div class="back">Homeland/birthplace</div>
-</div>
-
-<div class="flashcard" onclick="flipCard(this)">
-<div class="front"><strong>negocio</strong></div>
-<div class="back">Business - commercial activity or enterprise</div>
+<div class="flashcard-face flashcard-back">
+<p>Loading...</p>
 </div>
 </div>
 </div>
 
-<!-- QUIZ TAB -->
-<div id="tab-quiz" class="tab-content">
+<div class="fc-controls" id="fcControls">
+<button class="fc-prev" onclick="fc.prev()">Previous</button>
+<span class="fc-counter" id="fcCounter">0 / 0</span>
+<button class="fc-next" onclick="fc.next()">Next</button>
+<button onclick="fc.shuffle()">Shuffle</button>
+</div>
+</div>
+
+<!-- ====== QUIZ TAB ====== -->
+<div class="tab-content" id="tab-quiz">
 <div class="card">
-<h2>Spanish Quiz</h2>
-<p>Test your knowledge with these practice questions. Click "Show Answer" to reveal the correct answer.</p>
+<h2>Quiz Mode</h2>
+<p>Test your knowledge with multiple-choice questions. Select a topic or try all.</p>
 </div>
 
-<div class="quiz-question">
-<h3>Question 1</h3>
-<p><strong>Translate to Spanish:</strong> "I would like to study in Spain because it has a rich culture."</p>
-<button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
-<div class="answer">"Me gustaría estudiar en España porque tiene una cultura rica" OR "Quisiera estudiar en España porque tiene una cultura rica"</div>
+<div class="quiz-controls">
+<button onclick="quiz.start('all')">All Topics</button>
+<button onclick="quiz.start('vocabulary')">Vocabulary</button>
+<button onclick="quiz.start('grammar')">Grammar</button>
+<button onclick="quiz.start('exam-phrases')">Exam Phrases</button>
+<button onclick="quiz.start('literature')">Literature</button>
 </div>
 
-<div class="quiz-question">
-<h3>Question 2</h3>
-<p><strong>Fill the blank:</strong> "No _____ (remember - yo) el color rojo en la ropa de mi infancia."</p>
-<button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
-<div class="answer"><strong>recuerdo</strong> (present tense, first person singular of "recordar")</div>
-</div>
+<div id="quizArea"></div>
 
-<div class="quiz-question">
-<h3>Question 3</h3>
-<p><strong>What's the difference?</strong> Explain when to use SER vs ESTAR.</p>
-<button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
-<div class="answer"><strong>SER:</strong> permanent characteristics, identity, time, origin (Soy irlandés, Es inteligente)<br><strong>ESTAR:</strong> temporary states, location, mood, progressive tenses (Estoy cansado, Está en Madrid)</div>
-</div>
-
-<div class="quiz-question">
-<h3>Question 4</h3>
-<p><strong>Vocabulary:</strong> What does "choque cultural" mean?</p>
-<button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
-<div class="answer">Culture shock - the feeling of disorientation experienced when encountering unfamiliar customs or ways of life</div>
-</div>
-
-<div class="quiz-question">
-<h3>Question 5</h3>
-<p><strong>Grammar:</strong> Complete with POR or PARA: "Voy a España _____ estudiar español."</p>
-<button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
-<div class="answer"><strong>PARA</strong> (purpose - "in order to study Spanish")</div>
-</div>
-
-<div class="quiz-question">
-<h3>Question 6</h3>
-<p><strong>Listening practice:</strong> What was Almodóvar's concern about the future of cinema?</p>
-<button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
-<div class="answer">Fewer spectators and lots of cinemas have closed</div>
-</div>
-
-<div class="quiz-question">
-<h3>Question 7</h3>
-<p><strong>Conjugate:</strong> Present tense of TENER (to have) for all persons.</p>
-<button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
-<div class="answer">tengo, tienes, tiene, tenemos, tenéis, tienen</div>
-</div>
-
-<div class="quiz-question">
-<h3>Question 8</h3>
-<p><strong>Vocabulary:</strong> What is "movilidad reducida"?</p>
-<button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
-<div class="answer">Reduced mobility - limited ability to move around, often referring to people with disabilities or elderly people</div>
-</div>
-
-<div class="quiz-question">
-<h3>Question 9</h3>
-<p><strong>Reading comprehension:</strong> According to the AI influencers text, what are three expenses that don't apply to Alba Renai?</p>
-<button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
-<div class="answer">Any three of: wardrobe/clothes, accommodation, make-up, hairdressing, other costs that human influencers have</div>
-</div>
-
-<div class="quiz-question">
-<h3>Question 10</h3>
-<p><strong>Grammar:</strong> Write the preterite (past) tense of HABLAR for "yo".</p>
-<button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
-<div class="answer"><strong>hablé</strong></div>
-</div>
-
-<div class="quiz-question">
-<h3>Question 11</h3>
-<p><strong>Translate:</strong> "Without doubt, France has many advantages."</p>
-<button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
-<div class="answer">"Sin duda, Francia tiene muchas ventajas"</div>
-</div>
-
-<div class="quiz-question">
-<h3>Question 12</h3>
-<p><strong>Prescribed literature:</strong> In Relato de un náufrago, who was Massey Nasser?</p>
-<button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
-<div class="answer">The Jewish shop assistant in Mobile, Alabama who sold clothes to Colombian sailors, spoke Spanish correctly, was very happy at the outdoor café</div>
-</div>
-
-<div class="quiz-question">
-<h3>Question 13</h3>
-<p><strong>Opinion writing:</strong> Give three useful phrases to start expressing an opinion in Spanish.</p>
-<button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
-<div class="answer">En mi opinión... | Creo que... | Pienso que... | Me parece que... | Desde mi punto de vista...</div>
-</div>
-
-<div class="quiz-question">
-<h3>Question 14</h3>
-<p><strong>Vocabulary:</strong> What does "entrenar" mean?</p>
-<button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
-<div class="answer">To train - to teach skills or prepare for sport/activity</div>
-</div>
-
-<div class="quiz-question">
-<h3>Question 15</h3>
-<p><strong>Grammar:</strong> Complete: "Me _____ (like) las películas de Almodóvar."</p>
-<button class="show-answer" onclick="toggleAnswer(this)">Show Answer</button>
-<div class="answer"><strong>gustan</strong> (plural because "las películas" is plural)</div>
-</div>
-</div>
-
-<!-- PROGRESS TAB -->
-<div id="tab-progress" class="tab-content">
+<div class="quiz-score" id="quizScore" style="display:none">
 <div class="card">
-<h2>Study Progress Tracker</h2>
-<p>Track your preparation for each exam component. Check off topics as you master them.</p>
+<h3>Quiz Complete!</h3>
+<p id="quizResult"></p>
+<button class="btn btn-primary" onclick="quiz.start('all')">Try Again</button>
+</div>
+</div>
 </div>
 
+<!-- ====== PROGRESS TAB ====== -->
+<div class="tab-content" id="tab-progress">
 <div class="card">
-<h3>Written Exam - Section A</h3>
-<div class="progress-checklist">
-<label><input type="checkbox" onchange="saveProgress('spanish')"> Prescribed Literature - Character analysis</label>
-<label><input type="checkbox" onchange="saveProgress('spanish')"> Prescribed Literature - Plot knowledge</label>
-<label><input type="checkbox" onchange="saveProgress('spanish')"> Prescribed Literature - Themes and discussion</label>
-<label><input type="checkbox" onchange="saveProgress('spanish')"> Journalistic texts - Reading comprehension</label>
-<label><input type="checkbox" onchange="saveProgress('spanish')"> Vocabulary extraction from texts</label>
-<label><input type="checkbox" onchange="saveProgress('spanish')"> Short articles comprehension</label>
+<h2>Your Progress</h2>
+<p>Track your study sessions and quiz scores for Spanish.</p>
+</div>
+
+<div class="card" style="display:flex;gap:1.5rem;flex-wrap:wrap;">
+<div class="stat-card" style="flex:1;min-width:120px;">
+<div class="stat" id="progTopics">0</div>
+<div class="stat-label">Topics Studied</div>
+</div>
+<div class="stat-card" style="flex:1;min-width:120px;">
+<div class="stat" id="progQuizzes">0</div>
+<div class="stat-label">Quizzes Done</div>
+</div>
+<div class="stat-card" style="flex:1;min-width:120px;">
+<div class="stat" id="progAvg">-</div>
+<div class="stat-label">Avg Score</div>
 </div>
 </div>
 
 <div class="card">
-<h3>Written Exam - Section B</h3>
-<div class="progress-checklist">
-<label><input type="checkbox" onchange="saveProgress('spanish')"> Reading comprehension questions</label>
-<label><input type="checkbox" onchange="saveProgress('spanish')"> Finding Spanish synonyms in text</label>
-<label><input type="checkbox" onchange="saveProgress('spanish')"> English explanations of Spanish phrases</label>
-<label><input type="checkbox" onchange="saveProgress('spanish')"> Opinion writing structure (80-150 words)</label>
-<label><input type="checkbox" onchange="saveProgress('spanish')"> Opinion writing - Content/Communication</label>
-<label><input type="checkbox" onchange="saveProgress('spanish')"> Opinion writing - Language quality</label>
-</div>
+<h3>Recent Quiz Results</h3>
+<div id="quizHistory"><p>No quizzes completed yet. Head to the Quiz tab to test yourself!</p></div>
 </div>
 
-<div class="card">
-<h3>Written Exam - Section C</h3>
-<div class="progress-checklist">
-<label><input type="checkbox" onchange="saveProgress('spanish')"> Dialogue construction (5 turns)</label>
-<label><input type="checkbox" onchange="saveProgress('spanish')"> Letter/Email writing</label>
-<label><input type="checkbox" onchange="saveProgress('spanish')"> Diary entry writing</label>
-<label><input type="checkbox" onchange="saveProgress('spanish')"> Note writing</label>
-<label><input type="checkbox" onchange="saveProgress('spanish')"> Developing points fully</label>
-<label><input type="checkbox" onchange="saveProgress('spanish')"> Correct verb usage in production</label>
-</div>
-</div>
-
-<div class="card">
-<h3>Listening Comprehension</h3>
-<div class="progress-checklist">
-<label><input type="checkbox" onchange="saveProgress('spanish')"> Anuncios (Advertisements)</label>
-<label><input type="checkbox" onchange="saveProgress('spanish')"> Diálogos (Interviews/Conversations)</label>
-<label><input type="checkbox" onchange="saveProgress('spanish')"> Descriptivos (Descriptive passages)</label>
-<label><input type="checkbox" onchange="saveProgress('spanish')"> El Tiempo (Weather forecasts)</label>
-<label><input type="checkbox" onchange="saveProgress('spanish')"> Noticias (News reports)</label>
-<label><input type="checkbox" onchange="saveProgress('spanish')"> Note-taking while listening</label>
-<label><input type="checkbox" onchange="saveProgress('spanish')"> Identifying key details</label>
-</div>
-</div>
-
-<div class="card">
-<h3>Grammar & Vocabulary</h3>
-<div class="progress-checklist">
-<label><input type="checkbox" onchange="saveProgress('spanish')"> Present tense regular verbs</label>
-<label><input type="checkbox" onchange="saveProgress('spanish')"> Present tense irregular verbs (ser, estar, tener, ir, hacer)</label>
-<label><input type="checkbox" onchange="saveProgress('spanish')"> Preterite tense</label>
-<label><input type="checkbox" onchange="saveProgress('spanish')"> Future tense</label>
-<label><input type="checkbox" onchange="saveProgress('spanish')"> Conditional tense</label>
-<label><input type="checkbox" onchange="saveProgress('spanish')"> Gustar and similar verbs</label>
-<label><input type="checkbox" onchange="saveProgress('spanish')"> Por vs Para</label>
-<label><input type="checkbox" onchange="saveProgress('spanish')"> Ser vs Estar</label>
-<label><input type="checkbox" onchange="saveProgress('spanish')"> Opinion phrases</label>
-<label><input type="checkbox" onchange="saveProgress('spanish')"> Letter writing phrases</label>
-<label><input type="checkbox" onchange="saveProgress('spanish')"> Time expressions</label>
-<label><input type="checkbox" onchange="saveProgress('spanish')"> Exam-specific vocabulary (30+ words)</label>
-</div>
-</div>
-
-<div class="card">
-<h3>Exam Strategy</h3>
-<div class="progress-checklist">
-<label><input type="checkbox" onchange="saveProgress('spanish')"> Time management plan practiced</label>
-<label><input type="checkbox" onchange="saveProgress('spanish')"> Understand marking scheme</label>
-<label><input type="checkbox" onchange="saveProgress('spanish')"> Know which questions require Spanish vs English</label>
-<label><input type="checkbox" onchange="saveProgress('spanish')"> Practice answering in correct language</label>
-<label><input type="checkbox" onchange="saveProgress('spanish')"> Practice exact transcription for vocabulary questions</label>
-<label><input type="checkbox" onchange="saveProgress('spanish')"> Completed at least one full past paper</label>
-<label><input type="checkbox" onchange="saveProgress('spanish')"> Completed at least one full listening test</label>
-</div>
-</div>
-
-<div class="card">
-<h3>Progress Summary</h3>
-<div id="progressSummary-spanish" class="progress-summary">
-<p>Complete items above to see your progress.</p>
-</div>
-<button onclick="resetProgress('spanish')" style="margin-top:1rem;padding:0.5rem 1rem;background:#dc3545;color:white;border:none;border-radius:4px;cursor:pointer">Reset All Progress</button>
+<div style="margin-top:1rem;text-align:center">
+<button class="btn btn-danger" onclick="if(confirm('Reset all Spanish progress? This cannot be undone.')){localStorage.removeItem('lcs_spanish_progress');localStorage.removeItem('lcs_spanish_quizzes');renderSubjectProgress();alert('Spanish progress reset.')}">Reset Spanish Progress</button>
 </div>
 </div>
 
 <script src="js/shared.js"></script>
+<script>
+function renderSubjectProgress() {
+  const p = LCS.getProgress('spanish');
+  let topics = 0;
+  Object.keys(p).forEach(k => { if (k.startsWith('studied_') && !k.endsWith('_last')) topics++; });
+  document.getElementById('progTopics').textContent = topics;
+  const h = LCS.getQuizHistory('spanish');
+  document.getElementById('progQuizzes').textContent = h.length;
+  if (h.length > 0) {
+    const avg = Math.round(h.reduce((a, q) => a + q.pct, 0) / h.length);
+    document.getElementById('progAvg').textContent = avg + '%';
+    let qhtml = '<table><tr><th>Date</th><th>Score</th><th>%</th></tr>';
+    h.slice(-10).reverse().forEach(r => {
+      qhtml += '<tr><td>' + r.date + '</td><td>' + r.score + '/' + r.total + '</td><td>' + r.pct + '%</td></tr>';
+    });
+    qhtml += '</table>';
+    document.getElementById('quizHistory').innerHTML = qhtml;
+  }
+}
+
+const allCards = [
+{cat:'vocabulary',q:'¿Qué significa "sin embargo"?',a:'However / Nevertheless'},
+{cat:'vocabulary',q:'¿Qué significa "a pesar de"?',a:'In spite of / Despite'},
+{cat:'vocabulary',q:'¿Qué significa "además"?',a:'Furthermore / Moreover / In addition'},
+{cat:'vocabulary',q:'¿Qué significa "por lo tanto"?',a:'Therefore / Consequently'},
+{cat:'vocabulary',q:'¿Qué significa "el bienestar"?',a:'Well-being / Welfare'},
+{cat:'vocabulary',q:'¿Qué significa "lograr"?',a:'To achieve / To manage to'},
+{cat:'vocabulary',q:'¿Qué significa "desarrollar"?',a:'To develop'},
+{cat:'vocabulary',q:'¿Qué significa "el medio ambiente"?',a:'The environment'},
+{cat:'vocabulary',q:'¿Qué significa "la desigualdad"?',a:'Inequality'},
+{cat:'vocabulary',q:'¿Qué significa "cotidiano"?',a:'Daily / Everyday'},
+{cat:'grammar',q:'Conjugate "tener" in the present tense.',a:'tengo, tienes, tiene, tenemos, tenéis, tienen'},
+{cat:'grammar',q:'Conjugate "ser" in the preterite.',a:'fui, fuiste, fue, fuimos, fuisteis, fueron'},
+{cat:'grammar',q:'Conjugate "ir" in the preterite.',a:'fui, fuiste, fue, fuimos, fuisteis, fueron (same as ser!)'},
+{cat:'grammar',q:'When do you use "ser" vs "estar"?',a:'Ser: permanent characteristics, identity, time, origin. Estar: temporary states, location, feelings, progressive tenses.'},
+{cat:'grammar',q:'When do you use "por" vs "para"?',a:'Por: cause/reason, exchange, duration, through. Para: purpose, destination, deadline, recipient, comparison.'},
+{cat:'grammar',q:'How do you form the conditional tense?',a:'Infinitive + ía, ías, ía, íamos, íais, ían. E.g., hablaría, comerían. Irregulars: tendría, pondría, saldría, diría, haría.'},
+{cat:'grammar',q:'How do you form the subjunctive present?',a:'Take the "yo" present form, drop the -o, add opposite endings: -ar verbs: -e, -es, -e, -emos, -éis, -en. -er/-ir: -a, -as, -a, -amos, -áis, -an.'},
+{cat:'grammar',q:'What triggers the subjunctive?',a:'Wishes (querer que), emotions (me alegra que), doubt (dudar que), impersonal expressions (es importante que), commands (te pido que).'},
+{cat:'exam-phrases',q:'How do you say "In my opinion..."?',a:'En mi opinión... / A mi parecer... / Desde mi punto de vista...'},
+{cat:'exam-phrases',q:'How do you say "I agree/disagree..."?',a:'Estoy de acuerdo / No estoy de acuerdo / Estoy en contra de...'},
+{cat:'exam-phrases',q:'How do you say "On the one hand... on the other hand..."?',a:'Por un lado... por otro lado...'},
+{cat:'exam-phrases',q:'How do you say "In conclusion..."?',a:'En conclusión... / Para concluir... / En resumen...'},
+{cat:'exam-phrases',q:'How do you start a formal letter?',a:'Estimado/a señor/a: (Dear Sir/Madam). End with: Atentamente (Yours faithfully).'},
+{cat:'exam-phrases',q:'How do you start an informal letter?',a:'Querido/a [nombre]: (Dear [name]). End with: Un abrazo / Besos / Con cariño.'},
+{cat:'exam-phrases',q:'How to express obligation?',a:'Hay que + infinitive (one must), Tener que + infinitive (to have to), Deber + infinitive (should/ought to).'},
+{cat:'literature',q:'What is "Relato de un náufrago" about?',a:'A true story by Gabriel García Márquez about a sailor who survived 10 days lost at sea after falling from a naval vessel.'},
+{cat:'literature',q:'Who wrote "Relato de un náufrago"?',a:'Gabriel García Márquez — Colombian Nobel Prize-winning author. Originally published as newspaper articles in 1955.'},
+{cat:'vocabulary',q:'¿Qué significa "destacar"?',a:'To stand out / To highlight / To emphasise'},
+{cat:'vocabulary',q:'¿Qué significa "la juventud"?',a:'Youth / Young people'},
+{cat:'vocabulary',q:'¿Qué significa "enfrentar"?',a:'To face / To confront'},
+{cat:'vocabulary',q:'¿Qué significa "actual"?',a:'Current / Present (NOT "actual" in English — false friend!)'},
+{cat:'grammar',q:'What are reflexive verbs?',a:'Verbs where the subject acts on itself. Use reflexive pronouns: me, te, se, nos, os, se. E.g., levantarse (to get up), ducharse (to shower).'},
+{cat:'grammar',q:'How do you form the imperfect tense?',a:'-ar verbs: -aba, -abas, -aba, -ábamos, -abais, -aban. -er/-ir: -ía, -ías, -ía, -íamos, -íais, -ían. Only 3 irregulars: ser (era), ir (iba), ver (veía).'}
+];
+
+const quizQuestions = [
+{topic:'vocabulary',q:'"Sin embargo" means:',options:['Therefore','However','Furthermore','For example'],correct:1,explain:'"Sin embargo" means however/nevertheless. It is used to introduce a contrasting point.'},
+{topic:'vocabulary',q:'"El medio ambiente" means:',options:['The middle class','The environment','The average','The atmosphere'],correct:1,explain:'"El medio ambiente" means the environment. "Medioambiental" = environmental.'},
+{topic:'vocabulary',q:'"Actual" in Spanish means:',options:['Actual','Real','Current','True'],correct:2,explain:'"Actual" is a false friend! It means current/present in Spanish, NOT actual. "Real" or "verdadero" = actual in English.'},
+{topic:'grammar',q:'The preterite of "ir" (yo) is:',options:['iba','fui','voy','iré'],correct:1,explain:'Ir in the preterite: fui, fuiste, fue, fuimos, fuisteis, fueron. Same forms as ser in the preterite!'},
+{topic:'grammar',q:'Which tense uses infinitive + endings (-ía, -ías...)?',options:['Future','Conditional','Imperfect','Subjunctive'],correct:1,explain:'The conditional tense: infinitive + ía, ías, ía, íamos, íais, ían. E.g., hablaría = I would speak.'},
+{topic:'grammar',q:'"Ser" is used for:',options:['Location and feelings','Temporary states','Permanent characteristics and identity','Weather'],correct:2,explain:'Ser: permanent characteristics, identity, nationality, time, origin. Estar: temporary states, location, feelings.'},
+{topic:'grammar',q:'The subjunctive is triggered by:',options:['Certainty and facts','Wishes, emotions, and doubt','Past events only','Questions only'],correct:1,explain:'The subjunctive is used after expressions of wish (querer que), emotion (me alegra que), doubt (dudar que), and impersonal expressions (es importante que).'},
+{topic:'grammar',q:'Which is a reflexive verb?',options:['Comer','Hablar','Levantarse','Escribir'],correct:2,explain:'Levantarse (to get up) is reflexive — the subject acts on itself. The "se" ending indicates a reflexive verb.'},
+{topic:'exam-phrases',q:'"En mi opinión" means:',options:['In my experience','In my opinion','In my house','In conclusion'],correct:1,explain:'"En mi opinión" = In my opinion. Also: "A mi parecer" and "Desde mi punto de vista."'},
+{topic:'exam-phrases',q:'How do you say "on the one hand" in Spanish?',options:['En primer lugar','Por un lado','En conclusión','Sin embargo'],correct:1,explain:'"Por un lado" = on the one hand. "Por otro lado" = on the other hand. Used for balanced arguments.'},
+{topic:'exam-phrases',q:'A formal letter in Spanish begins with:',options:['Querido amigo','Hola, ¿qué tal?','Estimado/a señor/a','¡Buenos días!'],correct:2,explain:'Formal letters begin with "Estimado/a señor/a:" (Dear Sir/Madam). End with "Atentamente" (Yours faithfully).'},
+{topic:'exam-phrases',q:'"Hay que" expresses:',options:['Possibility','Obligation (one must)','Past tense','Preference'],correct:1,explain:'"Hay que" + infinitive expresses impersonal obligation: "one must" / "it is necessary to". E.g., Hay que estudiar = One must study.'},
+{topic:'literature',q:'Who wrote "Relato de un náufrago"?',options:['Pablo Neruda','Isabel Allende','Gabriel García Márquez','Mario Vargas Llosa'],correct:2,explain:'Gabriel García Márquez, the Colombian Nobel Prize winner, wrote this true account of a sailor lost at sea.'},
+{topic:'vocabulary',q:'"Lograr" means:',options:['To lose','To achieve','To play','To forget'],correct:1,explain:'"Lograr" means to achieve or to manage to do something. "Logré aprobar" = I managed to pass.'},
+{topic:'grammar',q:'The imperfect of "ir" (yo) is:',options:['fui','iba','iré','voy'],correct:1,explain:'Ir in the imperfect: iba, ibas, iba, íbamos, ibais, iban. Only 3 verbs are irregular in the imperfect: ser, ir, ver.'}
+];
+
+const fc = new FlashcardEngine(allCards, 'fcContainer', 'fcControls', 'fcCounter', 'fcFilter');
+const quiz = new QuizEngine(quizQuestions, 'quizArea', 'quizScore', 'spanish');
+
+document.addEventListener('DOMContentLoaded', function() {
+  quiz.start('all');
+  renderSubjectProgress();
+});
+</script>
 </body>
 </html>
