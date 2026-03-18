@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LC Study Portal - Leaving Certificate Higher Level</title>
+<link rel="stylesheet" href="css/shared.css">
+<style>
+.hero{background:linear-gradient(135deg,#6C5CE7,#4834d4,#0984e3);color:#fff;padding:3rem 2rem;text-align:center}
+.hero h1{font-size:2.2rem;font-weight:800;margin-bottom:0.5rem}
+.hero p{font-size:1.1rem;opacity:0.9;max-width:600px;margin:0 auto}
+.dashboard{max-width:1000px;margin:0 auto;padding:1.5rem}
+.top-stats{display:flex;gap:1.5rem;margin-bottom:2rem;flex-wrap:wrap;justify-content:center}
+.stat-card{background:var(--card);border-radius:16px;padding:1.5rem 2rem;box-shadow:var(--shadow);text-align:center;min-width:150px;flex:1}
+.stat-card .stat-number{font-size:2.5rem;font-weight:800;line-height:1}
+.stat-card .stat-label{font-size:0.8rem;color:var(--text-light);text-transform:uppercase;font-weight:600;margin-top:0.25rem}
+.section-title{font-size:1.3rem;font-weight:700;margin:2rem 0 1rem;color:var(--text)}
+.motivational{background:linear-gradient(135deg,#00b894,#00a383);color:#fff;border-radius:16px;padding:2rem;text-align:center;margin:2rem 0}
+.motivational p{font-size:1.1rem;font-style:italic;margin-bottom:0.5rem}
+.motivational .author{font-size:0.9rem;opacity:0.8}
+.weak-topics{background:var(--card);border-radius:var(--radius);padding:1.5rem;margin:1.5rem 0;box-shadow:var(--shadow)}
+.weak-topics h3{color:var(--danger);margin-bottom:0.75rem}
+.weak-topic-item{display:flex;align-items:center;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--border)}
+.weak-topic-item:last-child{border:none}
+.weak-topic-item .score{font-weight:700;color:var(--danger)}
+.study-tip{background:rgba(108,92,231,0.06);border:2px solid var(--primary-light);border-radius:var(--radius);padding:1.5rem;margin:1.5rem 0}
+.study-tip h3{color:var(--primary);margin-bottom:0.5rem}
+</style>
+</head>
+<body>
+<div class="hero">
+<h1>LC Study Portal</h1>
+<p>Your personal Leaving Certificate Higher Level study hub. All subjects. All tools. One place.</p>
+<div class="countdown" id="examCountdown"></div>
+</div>
+
+<div class="dashboard">
+
+<!-- Top Stats Row -->
+<div class="top-stats">
+<div class="stat-card">
+<div class="stat-number" style="color:#6C5CE7" id="streakCount">0</div>
+<div class="stat-label">Day Streak</div>
+</div>
+<div class="stat-card">
+<div class="stat-number" style="color:#0984e3" id="totalDays">0</div>
+<div class="stat-label">Days Studied</div>
+</div>
+<div class="stat-card">
+<div class="stat-number" style="color:#00b894" id="totalQuizzes">0</div>
+<div class="stat-label">Quizzes Done</div>
+</div>
+<div class="stat-card">
+<div class="stat-number" style="color:#e17055" id="avgScore">-</div>
+<div class="stat-label">Avg Quiz %</div>
+</div>
+</div>
+
+<!-- Subjects Grid -->
+<div class="section-title">Your Subjects</div>
+<div class="subject-grid" id="subjectGrid">
+
+<a href="accounting.html" class="subject-card">
+<div class="card-banner" style="background:linear-gradient(135deg,#6C5CE7,#4834d4)">
+<h3>Accounting</h3>
+<p>Higher Level</p>
+<div class="card-icon">&#128200;</div>
+</div>
+<div class="card-body">
+<div class="progress-bar"><div class="progress-fill" style="width:0%;background:#6C5CE7" id="prog-accounting"></div></div>
+<div class="card-stats">
+<span id="stat-accounting-quizzes">0 quizzes</span>
+<span id="stat-accounting-avg">-</span>
+</div>
+</div>
+</a>
+
+<a href="maths.html" class="subject-card">
+<div class="card-banner" style="background:linear-gradient(135deg,#0984e3,#0652DD)">
+<h3>Maths</h3>
+<p>Higher Level</p>
+<div class="card-icon">&#128290;</div>
+</div>
+<div class="card-body">
+<div class="progress-bar"><div class="progress-fill" style="width:0%;background:#0984e3" id="prog-maths"></div></div>
+<div class="card-stats">
+<span id="stat-maths-quizzes">0 quizzes</span>
+<span id="stat-maths-avg">-</span>
+</div>
+</div>
+</a>
+
+<a href="english.html" class="subject-card">
+<div class="card-banner" style="background:linear-gradient(135deg,#e17055,#d63031)">
+<h3>English</h3>
+<p>Higher Level</p>
+<div class="card-icon">&#128214;</div>
+</div>
+<div class="card-body">
+<div class="progress-bar"><div class="progress-fill" style="width:0%;background:#e17055" id="prog-english"></div></div>
+<div class="card-stats">
+<span id="stat-english-quizzes">0 quizzes</span>
+<span id="stat-english-avg">-</span>
+</div>
+</div>
+</a>
+
+<a href="spanish.html" class="subject-card">
+<div class="card-banner" style="background:linear-gradient(135deg,#fdcb6e,#f39c12)">
+<h3>Spanish</h3>
+<p>Higher Level</p>
+<div class="card-icon">&#127466;&#127480;</div>
+</div>
+<div class="card-body">
+<div class="progress-bar"><div class="progress-fill" style="width:0%;background:#f39c12" id="prog-spanish"></div></div>
+<div class="card-stats">
+<span id="stat-spanish-quizzes">0 quizzes</span>
+<span id="stat-spanish-avg">-</span>
+</div>
+</div>
+</a>
+
+<a href="biology.html" class="subject-card">
+<div class="card-banner" style="background:linear-gradient(135deg,#00b894,#00a383)">
+<h3>Biology</h3>
+<p>Higher Level</p>
+<div class="card-icon">&#129516;</div>
+</div>
+<div class="card-body">
+<div class="progress-bar"><div class="progress-fill" style="width:0%;background:#00b894" id="prog-biology"></div></div>
+<div class="card-stats">
+<span id="stat-biology-quizzes">0 quizzes</span>
+<span id="stat-biology-avg">-</span>
+</div>
+</div>
+</a>
+
+<a href="chemistry.html" class="subject-card">
+<div class="card-banner" style="background:linear-gradient(135deg,#a29bfe,#6C5CE7)">
+<h3>Chemistry</h3>
+<p>Higher Level</p>
+<div class="card-icon">&#9883;</div>
+</div>
+<div class="card-body">
+<div class="progress-bar"><div class="progress-fill" style="width:0%;background:#a29bfe" id="prog-chemistry"></div></div>
+<div class="card-stats">
+<span id="stat-chemistry-quizzes">0 quizzes</span>
+<span id="stat-chemistry-avg">-</span>
+</div>
+</div>
+</a>
+
+<a href="economics.html" class="subject-card">
+<div class="card-banner" style="background:linear-gradient(135deg,#00cec9,#00b5ad)">
+<h3>Economics</h3>
+<p>Higher Level</p>
+<div class="card-icon">&#128176;</div>
+</div>
+<div class="card-body">
+<div class="progress-bar"><div class="progress-fill" style="width:0%;background:#00cec9" id="prog-economics"></div></div>
+<div class="card-stats">
+<span id="stat-economics-quizzes">0 quizzes</span>
+<span id="stat-economics-avg">-</span>
+</div>
+</div>
+</a>
+
+</div>
+
+<!-- Study Tip -->
+<div class="study-tip" id="studyTip">
+<h3>Study Tip of the Day</h3>
+<p id="tipText"></p>
+</div>
+
+<!-- Motivational Quote -->
+<div class="motivational">
+<p id="quoteText"></p>
+<div class="author" id="quoteAuthor"></div>
+</div>
+
+<!-- Weak Topics Alert -->
+<div class="weak-topics" id="weakTopics" style="display:none">
+<h3>Topics to Revisit</h3>
+<p style="color:var(--text-light);font-size:0.9rem;margin-bottom:0.5rem">These topics had quiz scores below 60%</p>
+<div id="weakTopicsList"></div>
+</div>
+
+</div>
+
+<script src="js/shared.js"></script>
+<script>
+// Exam countdown - LC 2025 English Paper 1 is the first exam
+const examDate = localStorage.getItem('lcs_exam_date') || '2025-06-04';
+renderCountdown(examDate, 'examCountdown');
+
+// Load stats
+function loadDashboard() {
+  const streak = LCS.getStreak();
+  const totalDays = LCS.getTotalDays();
+  const stats = LCS.getOverallStats();
+
+  document.getElementById('streakCount').textContent = streak;
+  document.getElementById('totalDays').textContent = totalDays;
+  document.getElementById('totalQuizzes').textContent = stats.totalQuizzes;
+  document.getElementById('avgScore').textContent = stats.totalQuizzes > 0 ? stats.avgScore + '%' : '-';
+
+  // Per-subject stats
+  Object.keys(stats.perSubject).forEach(s => {
+    const d = stats.perSubject[s];
+    const quizEl = document.getElementById('stat-' + s + '-quizzes');
+    const avgEl = document.getElementById('stat-' + s + '-avg');
+    const progEl = document.getElementById('prog-' + s);
+    if (quizEl) quizEl.textContent = d.quizCount + ' quizzes';
+    if (avgEl) avgEl.textContent = d.quizCount > 0 ? d.avgScore + '% avg' : '-';
+    if (progEl) progEl.style.width = Math.min(d.topicsViewed * 10, 100) + '%';
+  });
+}
+
+// Study tips
+const tips = [
+  "Active recall (testing yourself) is 3x more effective than re-reading notes. Use the Quiz tab in each subject!",
+  "Study in 25-minute focused blocks (Pomodoro technique), then take a 5-minute break. After 4 blocks, take a longer break.",
+  "Don't just read solutions - cover the answer and try to work through it yourself first. Then check.",
+  "For accounting, always show your workings. Even a wrong final answer with correct workings earns most of the marks.",
+  "Teach what you've learned to someone else. If you can explain it simply, you truly understand it.",
+  "Start each study session with the topic you find hardest. Your focus is best at the start.",
+  "Use flashcards for definitions and key terms. Biology and Economics are especially definition-heavy.",
+  "For Maths, practice is everything. Do at least 3 past paper questions per topic before moving on.",
+  "In English, have prepared material for each section of the paper. Don't go in hoping to improvise.",
+  "For Spanish, practise writing opinion phrases every day. They come up in every essay and letter.",
+  "Review your mistakes from quizzes - they show you exactly what to study next.",
+  "The night before an exam, do a light review of key formulas and definitions. Don't cram new material.",
+  "In the exam, read ALL questions before choosing which to answer. Spend 2-3 minutes planning.",
+  "For Chemistry, make sure you know all mandatory experiments - they appear every year.",
+  "Break large topics into small chunks. 'Study Biology' is overwhelming. 'Learn the stages of mitosis' is doable.",
+];
+document.getElementById('tipText').textContent = tips[Math.floor(Math.random() * tips.length)];
+
+// Motivational quotes
+const quotes = [
+  { text: "The expert in anything was once a beginner.", author: "Helen Hayes" },
+  { text: "It does not matter how slowly you go as long as you do not stop.", author: "Confucius" },
+  { text: "Success is the sum of small efforts, repeated day in and day out.", author: "Robert Collier" },
+  { text: "The only way to do great work is to love what you do.", author: "Steve Jobs" },
+  { text: "Believe you can and you're halfway there.", author: "Theodore Roosevelt" },
+  { text: "Education is the passport to the future.", author: "Malcolm X" },
+  { text: "You don't have to be great to start, but you have to start to be great.", author: "Zig Ziglar" },
+  { text: "A little progress each day adds up to big results.", author: "" },
+  { text: "The pain of studying is temporary. The pain of not knowing is forever.", author: "" },
+  { text: "Push yourself, because no one else is going to do it for you.", author: "" },
+  { text: "Don't watch the clock; do what it does. Keep going.", author: "Sam Levenson" },
+  { text: "Your future is created by what you do today, not tomorrow.", author: "Robert Kiyosaki" },
+];
+const quote = quotes[Math.floor(Math.random() * quotes.length)];
+document.getElementById('quoteText').textContent = '"' + quote.text + '"';
+document.getElementById('quoteAuthor').textContent = quote.author ? '- ' + quote.author : '';
+
+loadDashboard();
+</script>
+</body>
+</html>

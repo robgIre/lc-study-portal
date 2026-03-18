@@ -1,0 +1,1251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LC Chemistry - Higher Level Study Tool</title>
+<link rel="stylesheet" href="css/shared.css">
+</head>
+<body class="subject-chemistry">
+<header class="app-header">
+<div>
+<h1>LC Chemistry - Higher Level</h1>
+<p>2025 Exam Study Tool | Leaving Certificate Ireland</p>
+</div>
+<a href="index.html" class="home-link">&#8592; All Subjects</a>
+</header>
+<nav id="mainNav">
+<button class="active" onclick="showTab('study','chemistry')">Study</button>
+<button onclick="showTab('flashcards','chemistry')">Flashcards</button>
+<button onclick="showTab('quiz','chemistry')">Quiz</button>
+<button onclick="showTab('strategy','chemistry')">Exam Strategy</button>
+<button onclick="showTab('marks','chemistry')">Mark Decoder</button>
+<button onclick="showTab('glossary','chemistry')">Glossary</button>
+<button onclick="showTab('formulas','chemistry')">Formulas</button>
+<button onclick="showTab('progress','chemistry')">Progress</button>
+</nav>
+
+<!-- EXAM STRATEGY TAB -->
+<div id="tab-strategy" class="tab-content">
+<div class="card">
+<h2>Exam Paper Structure</h2>
+<p>The LC Chemistry Higher Level exam is <strong>3 hours</strong> (2:00-5:00pm) for <strong>400 marks</strong>. You answer <strong>any 8 questions</strong> from 11 available. All questions carry <strong>50 marks each</strong>.</p>
+<table>
+<tr><th>Section</th><th>Questions</th><th>Topics</th><th>Notes</th></tr>
+<tr><td><strong>Section A</strong></td><td>Q1, Q2, Q3</td><td>Mandatory Experiments</td><td>Based on experiments you MUST have done in class. Very predictable format.</td></tr>
+<tr><td><strong>Section B</strong></td><td>Q4 - Q11</td><td>Theory, Calculations, Organic, Applied</td><td>Q4 is always short questions. Q5-11 are longer topic-based questions.</td></tr>
+</table>
+<p style="margin-top:1rem"><strong>Key point:</strong> There are NO restrictions on which questions to answer. Pick your best 8 from the 11 available.</p>
+</div>
+
+<div class="card">
+<h2>Time Management</h2>
+<p>You get <strong>180 minutes</strong> for <strong>400 marks</strong>. Each question is worth 50 marks = <strong>22.5 minutes per question</strong>.</p>
+<div class="formula-box">
+<div class="formula">50 marks = 22.5 minutes | 1 mark ≈ 27 seconds</div>
+</div>
+
+<h3>Suggested Time Plan</h3>
+<div class="time-block"><span class="time">2:00</span><span>Read full paper, choose your 8 questions (5 min)</span></div>
+<div class="time-block"><span class="time">2:05</span><span>Q4 Short Questions first - quick marks (20 min)</span></div>
+<div class="time-block"><span class="time">2:25</span><span>Section A experiment question you know best (22 min)</span></div>
+<div class="time-block"><span class="time">2:47</span><span>Second experiment question (22 min)</span></div>
+<div class="time-block"><span class="time">3:09</span><span>Third experiment or Section B question (22 min)</span></div>
+<div class="time-block"><span class="time">3:31</span><span>Section B question (22 min)</span></div>
+<div class="time-block"><span class="time">3:53</span><span>Section B question (22 min)</span></div>
+<div class="time-block"><span class="time">4:15</span><span>Section B question (22 min)</span></div>
+<div class="time-block"><span class="time">4:37</span><span>Last question (22 min)</span></div>
+<div class="time-block"><span class="time">4:59</span><span>Review (1 min)</span></div>
+</div>
+
+<div class="card">
+<h2>Top Exam Tips</h2>
+<div class="explain"><strong>1. Always state units!</strong> One mark is deducted for missing or incorrect units. Write cm³, mol L⁻¹, kJ mol⁻¹ etc.</div>
+<div class="explain"><strong>2. Show ALL workings.</strong> Each step of a calculation earns marks separately. A wrong final answer with correct method still earns most marks.</div>
+<div class="explain"><strong>3. Learn the mandatory experiments.</strong> Section A questions are based on experiments you did in class. They appear EVERY year and are very predictable.</div>
+<div class="explain"><strong>4. Use key words from the marking scheme.</strong> In theory questions, specific words earn marks. "Proton donor" not just "gives away hydrogen".</div>
+<div class="explain"><strong>5. Draw labelled diagrams.</strong> Diagrams earn marks and often explain better than words. Label everything.</div>
+<div class="explain"><strong>6. Q4 is guaranteed marks.</strong> Short questions covering many topics. Answer your best 8 from the options given. Each part is only 6 marks.</div>
+<div class="explain"><strong>7. Use the log tables!</strong> The Formulae and Tables booklet is provided. Use it for atomic masses, constants, and formulas.</div>
+</div>
+
+<div class="card">
+<h2>Question Selection Strategy</h2>
+<table>
+<tr><th>Q</th><th>Topic</th><th>Type</th><th>Advice</th></tr>
+<tr><td>Q1</td><td>Volumetric Analysis (Titration)</td><td>Experiment</td><td>Very predictable. Learn the procedures and calculations. Almost always involves moles.</td></tr>
+<tr><td>Q2</td><td>Organic Preparation / Extraction</td><td>Experiment</td><td>Steam distillation, liquid-liquid extraction, recrystallisation. Know your apparatus.</td></tr>
+<tr><td>Q3</td><td>Rates of Reaction</td><td>Experiment</td><td>Graph work, calculating rates, explaining catalyst effects. Practice graph skills.</td></tr>
+<tr><td>Q4</td><td>Short Questions</td><td>Mixed</td><td>Answer 8 from ~12 parts. Quick marks across many topics. Do this first!</td></tr>
+<tr><td>Q5</td><td>Atomic Structure</td><td>Theory + Calc</td><td>Isotopes, electron configuration, orbitals, periodic trends. Very reliable topic.</td></tr>
+<tr><td>Q6</td><td>Fuels / Organic</td><td>Theory + Calc</td><td>Hydrocarbons, fractional distillation, heats of reaction (Hess's Law).</td></tr>
+<tr><td>Q7</td><td>Acids & Bases</td><td>Theory + Calc</td><td>pH calculations, Brønsted-Lowry theory, indicators, ionic product of water.</td></tr>
+<tr><td>Q8</td><td>Organic Chemistry</td><td>Theory</td><td>Reaction schemes, functional groups, organic structures, electron counting.</td></tr>
+<tr><td>Q9</td><td>Equilibrium</td><td>Theory + Calc</td><td>Kc calculations, Le Chatelier's principle. Moles and concentration work.</td></tr>
+<tr><td>Q10</td><td>Bonding & Structure</td><td>Theory</td><td>Electronegativity, dot & cross diagrams, molecular shapes, intermolecular forces.</td></tr>
+<tr><td>Q11</td><td>Environmental / Applied</td><td>Mixed</td><td>Water treatment, radioactivity, nitrogen cycle, electrolysis. Very varied.</td></tr>
+</table>
+</div>
+</div>
+
+<!-- FORMULA SHEET TAB -->
+<div id="tab-formulas" class="tab-content">
+<div class="card">
+<h2>Formula Sheet - LC Chemistry Higher Level</h2>
+<p>Key formulas organised by topic. The Formulae and Tables booklet is provided in the exam - these are the ones you need to know how to USE.</p>
+</div>
+
+<div class="card">
+<h3>Moles & Concentration</h3>
+<div class="formula-box"><strong>Number of Moles</strong><div class="formula">n = mass / Molar mass (M<sub>r</sub>)</div></div>
+<div class="formula-box"><strong>Concentration (Molarity)</strong><div class="formula">c = n / V (in litres)</div><p>To convert cm³ to litres: divide by 1000</p></div>
+<div class="formula-box"><strong>Moles from Solution</strong><div class="formula">n = c × V / 1000 (when V is in cm³)</div></div>
+<div class="formula-box"><strong>Avogadro's Law</strong><div class="formula">At STP: 1 mole of gas = 22.4 L | At room temp: 1 mole = 24.0 L</div></div>
+<div class="formula-box"><strong>Avogadro's Constant</strong><div class="formula">N<sub>A</sub> = 6.0 × 10²³ mol⁻¹</div><p>Number of particles = n × N<sub>A</sub></p></div>
+</div>
+
+<div class="card">
+<h3>Acids & Bases</h3>
+<div class="formula-box"><strong>pH</strong><div class="formula">pH = -log₁₀[H₃O⁺]</div></div>
+<div class="formula-box"><strong>H₃O⁺ from pH</strong><div class="formula">[H₃O⁺] = 10⁻ᵖᴴ</div></div>
+<div class="formula-box"><strong>Weak Acid pH</strong><div class="formula">[H⁺] = √(K<sub>a</sub> × M<sub>acid</sub>)</div><p>Then pH = -log₁₀[H⁺]</p></div>
+<div class="formula-box"><strong>Ionic Product of Water</strong><div class="formula">K<sub>w</sub> = [H⁺][OH⁻]</div><p>At 25°C: K<sub>w</sub> = 1.0 × 10⁻¹⁴ mol² L⁻²</p></div>
+<div class="formula-box"><strong>pH of Pure Water</strong><div class="formula">[H⁺] = √K<sub>w</sub></div><p>At 25°C: pH = 7.0 | At 60°C (K<sub>w</sub> = 9.61 × 10⁻¹⁴): pH = 6.5</p></div>
+</div>
+
+<div class="card">
+<h3>Thermochemistry</h3>
+<div class="formula-box"><strong>Heat Energy</strong><div class="formula">q = mcΔT</div><p>m = mass (kg), c = specific heat capacity (kJ kg⁻¹ K⁻¹), ΔT = temperature change (K)</p></div>
+<div class="formula-box"><strong>Heat of Reaction</strong><div class="formula">ΔH = q / n (kJ mol⁻¹)</div><p>Exothermic: ΔH is negative (heat released) | Endothermic: ΔH is positive (heat absorbed)</p></div>
+<div class="formula-box"><strong>Hess's Law</strong><div class="formula">ΔH<sub>reaction</sub> = Σ ΔH<sub>f</sub>(products) - Σ ΔH<sub>f</sub>(reactants)</div><p>OR use: reverse signs when reversing equations, multiply when scaling</p></div>
+</div>
+
+<div class="card">
+<h3>Equilibrium</h3>
+<div class="formula-box"><strong>Equilibrium Constant (K<sub>c</sub>)</strong><div class="formula">For aA + bB ⇌ cC + dD: K<sub>c</sub> = [C]ᶜ[D]ᵈ / [A]ᵃ[B]ᵇ</div><p>Concentrations in mol L⁻¹ (divide moles by volume in litres)</p></div>
+</div>
+
+<div class="card">
+<h3>Rates of Reaction</h3>
+<div class="formula-box"><strong>Average Rate</strong><div class="formula">Rate = Change in volume (or mass) / Change in time</div></div>
+<div class="formula-box"><strong>Instantaneous Rate</strong><div class="formula">Draw a tangent to the curve at the required time. Rate = slope of tangent.</div></div>
+</div>
+
+<div class="card">
+<h3>Atomic Structure</h3>
+<div class="formula-box"><strong>Relative Atomic Mass</strong><div class="formula">A<sub>r</sub> = Σ(isotope mass × % abundance) / 100</div></div>
+<div class="formula-box"><strong>Mass Number</strong><div class="formula">A = protons + neutrons</div></div>
+<div class="formula-box"><strong>Electronegativity Difference & Bond Type</strong><div class="formula">&lt; 0.4 = non-polar covalent | 0.4-1.7 = polar covalent | &gt; 1.7 = ionic</div></div>
+</div>
+
+<div class="card">
+<h3>Dilution & Concentration</h3>
+<div class="formula-box"><strong>Dilution</strong><div class="formula">c₁V₁ = c₂V₂</div></div>
+<div class="formula-box"><strong>% (w/v) Solution</strong><div class="formula">Mass of solute (g) / Volume of solution (cm³) × 100</div></div>
+<div class="formula-box"><strong>ppm (parts per million)</strong><div class="formula">mg per litre (mg L⁻¹)</div></div>
+</div>
+
+<div class="card">
+<h3>Empirical Formula</h3>
+<div class="formula-box"><strong>Steps</strong><div class="formula">1. Divide each % by atomic mass → ratio
+2. Divide all by smallest → whole number ratio
+3. That gives the empirical formula</div></div>
+</div>
+</div>
+
+<!-- GLOSSARY TAB -->
+<div id="tab-glossary" class="tab-content">
+<div class="card">
+<h2>Chemistry Glossary</h2>
+<p>Search for any term. All definitions written in plain language.</p>
+<input type="text" class="glossary-search" id="glossarySearch" placeholder="Search terms..." oninput="filterGlossary()">
+</div>
+<div id="glossaryList">
+<dl>
+<div class="glossary-item"><dt>Atom</dt><dd>The smallest particle of an element that retains the chemical properties of that element. Made up of protons, neutrons (in the nucleus) and electrons (orbiting the nucleus).</dd></div>
+<div class="glossary-item"><dt>Isotope</dt><dd>Atoms of the same element that have the same number of protons but different numbers of neutrons. They have the same atomic number but different mass numbers. Example: bromine-79 and bromine-81.</dd></div>
+<div class="glossary-item"><dt>Relative Atomic Mass</dt><dd>The average mass of an atom of an element compared to one-twelfth the mass of a carbon-12 atom. Takes into account the masses and abundances of all isotopes.</dd></div>
+<div class="glossary-item"><dt>Mass Spectrometer</dt><dd>An analytical instrument used to determine the relative abundance of isotopes of a given mass number. Separates ions based on their mass-to-charge ratio.</dd></div>
+<div class="glossary-item"><dt>Atomic Orbital</dt><dd>A region in space around the nucleus where there is a high probability of finding an electron. Types: s (spherical), p (dumbbell), d (complex shapes).</dd></div>
+<div class="glossary-item"><dt>Electron Configuration</dt><dd>The arrangement of electrons in an atom's orbitals. Written as 1s² 2s² 2p⁶ etc. Electrons fill lowest energy orbitals first (Aufbau principle).</dd></div>
+<div class="glossary-item"><dt>Atomic (Covalent) Radius</dt><dd>Half the distance between the nuclei of two atoms of the same element joined by a single covalent bond. Increases down a group, decreases across a period.</dd></div>
+<div class="glossary-item"><dt>Electronegativity</dt><dd>The relative attraction that an atom in a molecule has for the shared pair of electrons in a covalent bond. Fluorine is the most electronegative element (3.98).</dd></div>
+<div class="glossary-item"><dt>Ionic Bond</dt><dd>A bond formed by the transfer of electrons from one atom to another, creating oppositely charged ions that attract each other. Forms between metals and non-metals (electronegativity difference > 1.7).</dd></div>
+<div class="glossary-item"><dt>Covalent Bond</dt><dd>A bond formed by the sharing of a pair of electrons between two atoms. Non-polar if atoms have similar electronegativity; polar if they differ significantly.</dd></div>
+<div class="glossary-item"><dt>Polar Molecule</dt><dd>A molecule where the centres of positive and negative charge do not coincide, creating a permanent dipole. Requires polar bonds AND an asymmetric shape (e.g., NF₃ is polar, BF₃ is not).</dd></div>
+<div class="glossary-item"><dt>Van der Waals Forces</dt><dd>Weak intermolecular forces caused by temporary dipoles in molecules. Present in ALL molecules. Strength increases with molecular size.</dd></div>
+<div class="glossary-item"><dt>Dipole-Dipole Forces</dt><dd>Intermolecular forces between polar molecules. The positive end of one molecule attracts the negative end of another. Stronger than Van der Waals forces.</dd></div>
+<div class="glossary-item"><dt>Hydrogen Bonding</dt><dd>A strong intermolecular force between a hydrogen atom bonded to N, O, or F and a lone pair on another N, O, or F atom. Explains water's high boiling point.</dd></div>
+<div class="glossary-item"><dt>Brønsted-Lowry Acid</dt><dd>A proton (H⁺) donor. A strong acid is a good proton donor (fully dissociates). A weak acid is a poor proton donor (partially dissociates).</dd></div>
+<div class="glossary-item"><dt>Brønsted-Lowry Base</dt><dd>A proton (H⁺) acceptor. Bases accept protons from acids in acid-base reactions.</dd></div>
+<div class="glossary-item"><dt>Conjugate Acid-Base Pair</dt><dd>Two species that differ by a single proton (H⁺). Example: HCO₃⁻ and H₂CO₃ are a conjugate pair (they differ by one H⁺).</dd></div>
+<div class="glossary-item"><dt>pH</dt><dd>A measure of the acidity of a solution. pH = -log₁₀[H₃O⁺]. pH 7 = neutral, pH < 7 = acidic, pH > 7 = basic. Each pH unit represents a 10-fold change in H⁺ concentration.</dd></div>
+<div class="glossary-item"><dt>Indicator</dt><dd>A weak acid that changes colour depending on pH. Different indicators change at different pH ranges. Must be chosen to match the pH at the equivalence point of a titration.</dd></div>
+<div class="glossary-item"><dt>Catalyst</dt><dd>A substance that increases the rate of a chemical reaction by providing an alternative pathway with a lower activation energy. It is not consumed in the reaction.</dd></div>
+<div class="glossary-item"><dt>Heterogeneous Catalysis</dt><dd>Catalysis where the catalyst is in a different phase from the reactants. Example: MnO₂ (solid) catalysing decomposition of H₂O₂ (solution). Involves surface adsorption.</dd></div>
+<div class="glossary-item"><dt>Homogeneous Catalysis</dt><dd>Catalysis where the catalyst is in the same phase as the reactants. Example: acid catalysis in esterification.</dd></div>
+<div class="glossary-item"><dt>Rate of Reaction</dt><dd>The change in concentration (or amount) of a reactant or product per unit time. Affected by temperature, concentration, surface area, and catalysts.</dd></div>
+<div class="glossary-item"><dt>Activation Energy</dt><dd>The minimum energy that colliding particles must have for a reaction to occur. A catalyst lowers the activation energy.</dd></div>
+<div class="glossary-item"><dt>Reversible Reaction</dt><dd>A reaction that can proceed in both the forward and reverse directions. Shown by the ⇌ symbol. Reactants can be formed from products.</dd></div>
+<div class="glossary-item"><dt>Dynamic Equilibrium</dt><dd>When the rates of the forward and reverse reactions are equal, so the concentrations of reactants and products remain constant. The reactions haven't stopped - they're occurring at equal rates.</dd></div>
+<div class="glossary-item"><dt>Le Chatelier's Principle</dt><dd>When a system at equilibrium is subjected to a stress (change in concentration, pressure, or temperature), the system shifts to oppose the change and restore equilibrium.</dd></div>
+<div class="glossary-item"><dt>Equilibrium Constant (K<sub>c</sub>)</dt><dd>A number that expresses the ratio of product concentrations to reactant concentrations at equilibrium, each raised to the power of their coefficients. Only changes with temperature.</dd></div>
+<div class="glossary-item"><dt>Heat of Reaction (ΔH)</dt><dd>The heat change when the amounts shown in a balanced equation react completely. Exothermic = negative ΔH. Endothermic = positive ΔH.</dd></div>
+<div class="glossary-item"><dt>Heat of Combustion</dt><dd>The heat released when one mole of a substance reacts completely with excess oxygen. Always exothermic (negative). Measured using a bomb calorimeter.</dd></div>
+<div class="glossary-item"><dt>Hess's Law</dt><dd>The total enthalpy change for a reaction is the same regardless of the route taken. Allows calculation of ΔH using heats of formation.</dd></div>
+<div class="glossary-item"><dt>Saturated Hydrocarbon</dt><dd>A hydrocarbon that contains only single bonds between carbon atoms. All bonds are sigma bonds. Example: alkanes (methane, ethane, propane).</dd></div>
+<div class="glossary-item"><dt>Unsaturated Hydrocarbon</dt><dd>A hydrocarbon that contains at least one double or triple bond between carbon atoms. Example: alkenes (ethene), alkynes (ethyne).</dd></div>
+<div class="glossary-item"><dt>Fractional Distillation</dt><dd>Separation of a mixture into fractions based on boiling points using a fractionating column. Used to separate crude oil into useful products.</dd></div>
+<div class="glossary-item"><dt>Isomers</dt><dd>Molecules with the same molecular formula but different structural arrangements. Example: butane and methylpropane are both C₄H₁₀.</dd></div>
+<div class="glossary-item"><dt>Homologous Series</dt><dd>A series of compounds with the same general formula, similar chemical properties, and a gradual change in physical properties. Each member differs by CH₂.</dd></div>
+<div class="glossary-item"><dt>Aldehyde</dt><dd>An organic compound with a -CHO functional group. Named with "-al" suffix (e.g., ethanal). Can be oxidised to a carboxylic acid. Reduces Fehling's reagent (blue → red).</dd></div>
+<div class="glossary-item"><dt>Ester</dt><dd>An organic compound formed from the reaction of an alcohol with a carboxylic acid. Named as alkyl alkanoate (e.g., ethyl ethanoate). Often have pleasant smells.</dd></div>
+<div class="glossary-item"><dt>Esterification</dt><dd>The reversible reaction between an alcohol and a carboxylic acid to form an ester and water. Requires an acid catalyst (e.g., H₂SO₄).</dd></div>
+<div class="glossary-item"><dt>Oxidation</dt><dd>Loss of electrons. In organic chemistry: addition of oxygen or removal of hydrogen. Oxidation number increases.</dd></div>
+<div class="glossary-item"><dt>Reduction</dt><dd>Gain of electrons. In organic chemistry: addition of hydrogen or removal of oxygen. Oxidation number decreases.</dd></div>
+<div class="glossary-item"><dt>Electrolysis</dt><dd>The breaking down of a chemical compound using electricity. Requires a molten or dissolved ionic compound and inert electrodes. Oxidation at anode, reduction at cathode.</dd></div>
+<div class="glossary-item"><dt>BOD (Biochemical Oxygen Demand)</dt><dd>The quantity of dissolved oxygen consumed by biological action over 5 days in the dark at 20°C. Measures water pollution - higher BOD = more polluted.</dd></div>
+<div class="glossary-item"><dt>Total Hardness (Water)</dt><dd>The total concentration of calcium and magnesium ions in a water sample. Includes both temporary hardness (removed by boiling) and permanent hardness.</dd></div>
+<div class="glossary-item"><dt>Half-life</dt><dd>The time taken for half the atoms in a radioactive sample to decay. Different for each isotope. Radium-226 has a half-life of 1600 years.</dd></div>
+<div class="glossary-item"><dt>Alpha Particle</dt><dd>A particle consisting of 2 protons and 2 neutrons (a helium nucleus). Emitted during alpha decay. Low penetrating ability - stopped by paper or skin.</dd></div>
+<div class="glossary-item"><dt>Beta Particle</dt><dd>A high-speed electron emitted from the nucleus when a neutron converts to a proton. Medium penetrating ability - stopped by aluminium.</dd></div>
+<div class="glossary-item"><dt>Primary Standard</dt><dd>A substance of known high purity that can be used to standardise (determine the exact concentration of) another solution. Example: anhydrous sodium carbonate, ammonium iron(II) sulfate.</dd></div>
+<div class="glossary-item"><dt>Titration</dt><dd>A technique for determining the concentration of a solution by reacting it with a solution of known concentration. Uses a burette and precise measurements.</dd></div>
+<div class="glossary-item"><dt>End Point</dt><dd>The point in a titration at which the indicator changes colour, showing that the reaction is complete. Should coincide with the equivalence point.</dd></div>
+</dl>
+</div>
+</div>
+
+<!-- MARK SCHEME DECODER TAB -->
+<div id="tab-marks" class="tab-content">
+<div class="card">
+<h2>Mark Scheme Decoder</h2>
+<p>Understanding how Chemistry examiners award marks is crucial for maximising your score.</p>
+</div>
+
+<div class="card">
+<h3>General Marking Rules</h3>
+<table>
+<tr><th>Rule</th><th>Detail</th></tr>
+<tr><td><strong>Key words only</strong></td><td>In many answers, only specific key words need to appear in the correct context to earn marks.</td></tr>
+<tr><td><strong>Arithmetical error</strong></td><td>-1 mark each time, but only if the candidate shows correct atomic masses and the error is clearly arithmetical.</td></tr>
+<tr><td><strong>Missing units</strong></td><td>-1 mark for omitting units or giving incorrect units in final answers.</td></tr>
+<tr><td><strong>Organic structures</strong></td><td>-1 if H atoms systematically omitted. -1 if bonds systematically omitted.</td></tr>
+<tr><td><strong>Names OR formulae</strong></td><td>Either the name or formula is accepted for chemical substances, unless otherwise stated. Organic compounds need IUPAC names.</td></tr>
+<tr><td><strong>Cancellation</strong></td><td>If you give more answers than required, or list correct AND incorrect answers, marks may not be awarded.</td></tr>
+</table>
+</div>
+
+<div class="card">
+<h3>Q1 - Titration (50 marks)</h3>
+<div class="mark-info"><strong>Primary standard identification (5)</strong> - Must name the specific substance. "Ammonium iron(II) sulfate" earns 5 marks.</div>
+<div class="mark-info"><strong>Procedure descriptions (3+3 each)</strong> - Key phrases like "drop by drop / slowly" and "bottom of meniscus on the mark" earn 3 marks each.</div>
+<div class="mark-info"><strong>Calculations (3+2+2+2+4 = 15)</strong> - Each step of the moles calculation earns separate marks. Show EVERY step: n = c×V, then ratio, then scale up, then mass, then %.</div>
+</div>
+
+<div class="card">
+<h3>Q4 - Short Questions (50 marks)</h3>
+<div class="mark-info"><strong>6 marks per part + 1 bonus for first two attempted</strong> - Answer 8 parts. First two attempted get 7 marks each (6+1 bonus). Remaining six get 6 marks each.</div>
+<div class="mark-info"><strong>Each part typically has 2 elements worth 3 marks each</strong> - Example: "by atomic mass (3) similar properties (3)" for Mendeleev's periodic table.</div>
+<div class="mark-info"><strong>Total: 8 × 6 + 2 × 1 = 50</strong> - Make sure your first two answers are ones you're most confident about to secure the bonus marks.</div>
+</div>
+
+<div class="card">
+<h3>Q7 - Acids & Bases (50 marks)</h3>
+<div class="mark-info"><strong>Theory definitions (2+2 each)</strong> - "Proton donor" (2) and "proton acceptor" (2). These exact phrases are required.</div>
+<div class="mark-info"><strong>pH calculations (2+2+3)</strong> - Formula (2), substitution (2), correct answer (3). Even if answer is wrong, formula earns marks.</div>
+<div class="mark-info"><strong>K<sub>w</sub> expression (6)</strong> - Writing K<sub>w</sub> = [H⁺][OH⁻] earns 6 marks. Pure definition marks.</div>
+</div>
+
+<div class="card">
+<h3>Q9 - Equilibrium (50 marks)</h3>
+<div class="mark-info"><strong>K<sub>c</sub> expression (6)</strong> - Writing the correct expression earns 6 marks. Square brackets earn 3 marks, round brackets earn 3.</div>
+<div class="mark-info"><strong>K<sub>c</sub> calculation (2+2+3+3)</strong> - Moles of each species (2 each), converting to concentration (3), final K<sub>c</sub> value (3).</div>
+<div class="mark-info"><strong>Le Chatelier's (4+2 each)</strong> - State the effect (4) AND justify using Le Chatelier's principle (2). Always explain WHY the shift occurs.</div>
+</div>
+
+<div class="card">
+<h3>Golden Rules for Maximum Marks</h3>
+<div class="explain"><strong>1. Write formulas for calculations.</strong> K<sub>c</sub> expression, pH = -log[H⁺], n = c×V. The formula alone earns marks even if the calculation goes wrong.</div>
+<div class="explain"><strong>2. Include units in every final answer.</strong> mol L⁻¹, kJ mol⁻¹, cm³ min⁻¹. Missing units = -1 mark every time.</div>
+<div class="explain"><strong>3. Use chemical terminology.</strong> "Proton donor" not "gives H⁺". "Surface adsorption" not "sticks to the surface". Key words earn marks.</div>
+<div class="explain"><strong>4. Don't over-answer.</strong> If asked for ONE advantage, give ONE. Giving two risks cancellation if one is wrong.</div>
+<div class="explain"><strong>5. Show moles calculations step by step.</strong> n = mass/M<sub>r</sub>, then ratio, then scale. Each step is worth marks.</div>
+</div>
+</div>
+
+<!-- STUDY TAB -->
+<div id="tab-study" class="tab-content active">
+<div class="card">
+<h2>Question Walkthroughs</h2>
+<p>Select a question to see the full solution with step-by-step explanations from the 2025 paper. Every concept is explained from scratch.</p>
+</div>
+<div class="question-nav" id="studyNav">
+<button class="active" onclick="showQuestion('q1','chemistry')">Q1 Titration</button>
+<button onclick="showQuestion('q2','chemistry')">Q2 Extraction</button>
+<button onclick="showQuestion('q3','chemistry')">Q3 Rates</button>
+<button onclick="showQuestion('q4','chemistry')">Q4 Short Qs</button>
+<button onclick="showQuestion('q5','chemistry')">Q5 Atomic</button>
+<button onclick="showQuestion('q6','chemistry')">Q6 Fuels</button>
+<button onclick="showQuestion('q7','chemistry')">Q7 Acids</button>
+<button onclick="showQuestion('q8','chemistry')">Q8 Organic</button>
+<button onclick="showQuestion('q9','chemistry')">Q9 Equilibrium</button>
+<button onclick="showQuestion('q10','chemistry')">Q10 Bonding</button>
+<button onclick="showQuestion('q11','chemistry')">Q11 Applied</button>
+</div>
+
+<!-- Q1 TITRATION -->
+<div class="q-section active" id="q-q1">
+<div class="card">
+<h2>Q1: Volumetric Analysis - Iron(II) in Iron Tablets <span class="marks-badge">50 marks</span></h2>
+<p>A student determined the iron(II) content of iron supplement tablets by dissolving 6 tablets (total 2.496 g) in dilute sulfuric acid, making up to 250 cm³, then titrating 25.0 cm³ portions against 0.010 M KMnO₄.</p>
+<p><strong>Reaction:</strong> MnO₄⁻ + 5Fe²⁺ + 8H⁺ → Mn²⁺ + 5Fe³⁺ + 4H₂O</p>
+
+<h3>(a) <span class="marks-badge">5</span></h3>
+<p><strong>Q:</strong> Identify a primary standard to standardise the KMnO₄ solution.</p>
+<div class="working"><strong>Answer:</strong> Ammonium iron(II) sulfate / (NH₄)₂SO₄.FeSO₄.6H₂O</div>
+<div class="explain"><strong>Why?</strong> A primary standard is a substance of known high purity that you can weigh accurately to make a solution of precise concentration. You then use this to find the exact concentration of the KMnO₄. Common primary standards include anhydrous sodium carbonate and ammonium iron(II) sulfate.</div>
+
+<h3>(b)(i) <span class="marks-badge">6</span></h3>
+<p><strong>Q:</strong> Describe how you would make the solution up to the 250 cm³ mark on the volumetric flask.</p>
+<div class="working"><strong>Answer:</strong> Add deionised water <strong>drop by drop / slowly</strong> [3] until the <strong>bottom of the meniscus is on the 250 cm³ mark</strong> [3].</div>
+<div class="explain"><strong>Why drop by drop?</strong> If you add too much water, you overshoot the mark and the solution is too dilute. You can't remove water once added. The meniscus is the curved surface of the liquid - you read the bottom of it at eye level.</div>
+
+<h3>(b)(ii) <span class="marks-badge">3</span></h3>
+<p><strong>Q:</strong> Why was more than one tablet used in this experiment?</p>
+<div class="working"><strong>Answer:</strong> Using more tablets gives a <strong>smaller percentage error</strong> / creates a <strong>higher concentration of iron solution</strong>, requiring a <strong>larger volume of KMnO₄</strong>, which reduces the error from a single tablet.</div>
+
+<h3>(c)(i) <span class="marks-badge">3</span></h3>
+<p><strong>Q:</strong> Name a piece of apparatus used to accurately measure 25.0 cm³ of solution.</p>
+<div class="working"><strong>Answer:</strong> <strong>Pipette</strong> (or burette)</div>
+
+<h3>(c)(ii) <span class="marks-badge">6</span></h3>
+<p><strong>Q:</strong> Describe how you would rinse the pipette before use.</p>
+<div class="working"><strong>Answer:</strong> Rinse first <strong>with deionised water</strong> [3], then rinse <strong>with the iron(II) solution it will contain</strong> [3].</div>
+<div class="explain"><strong>Why two rinses?</strong> Deionised water removes any contaminants. Then rinsing with the actual solution prevents dilution - if water droplets remain inside and you add iron(II) solution, it would be diluted and your concentration would be wrong.</div>
+
+<h3>(d)(i) <span class="marks-badge">3</span></h3>
+<p><strong>Q:</strong> Why was no indicator needed in this titration?</p>
+<div class="working"><strong>Answer:</strong> <strong>Potassium manganate(VII) acts as its own indicator.</strong></div>
+<div class="explain"><strong>Why?</strong> KMnO₄ is deep purple. When it reacts with Fe²⁺, it becomes colourless (Mn²⁺). At the end point, there's no more Fe²⁺ to react with, so the next drop of KMnO₄ stays purple - you can see the colour change without any indicator.</div>
+
+<h3>(d)(ii) <span class="marks-badge">3</span></h3>
+<p><strong>Q:</strong> What was observed at the end point of the titration?</p>
+<div class="working"><strong>Answer:</strong> Solution turns <strong>(pale) pink</strong> and the colour persists.</div>
+
+<h3>(d)(iii) <span class="marks-badge">6</span></h3>
+<p><strong>Q:</strong> What would happen if insufficient acid was used in this titration?</p>
+<div class="working"><strong>Answer:</strong> A <strong>brown precipitate</strong> [3] would form. This is <strong>MnO₂ / Mn⁴⁺</strong> [3] - without enough acid (H⁺), the MnO₄⁻ is only partially reduced to MnO₂ instead of Mn²⁺.</div>
+
+<h3>(e) Calculations <span class="marks-badge">15</span></h3>
+<p><strong>Given:</strong> Average titre = 22.5 cm³ of 0.010 M KMnO₄ | Volume of Fe²⁺ = 25.0 cm³ (from 250 cm³ flask) | 6 tablets, total mass 2.496 g</p>
+
+<h4>(i) Moles of MnO₄⁻ in 22.5 cm³</h4>
+<div class="working"><strong>n = c × V / 1000</strong><br>n = 0.010 × 22.5 / 1000<br>n = 0.000225 mol = <strong>2.25 × 10⁻⁴ mol</strong> [3]</div>
+
+<h4>(ii) Moles of Fe²⁺ in 250 cm³ flask</h4>
+<div class="working"><strong>From equation:</strong> 1 MnO₄⁻ : 5 Fe²⁺<br>Moles of Fe²⁺ in 25 cm³ = 0.000225 × 5 = <strong>0.001125 mol</strong> [2]<br>Moles of Fe²⁺ in 250 cm³ = 0.001125 × 10 = <strong>0.01125 mol</strong> [2]</div>
+<div class="explain"><strong>Why × 10?</strong> The 25 cm³ was taken from a 250 cm³ flask. So the flask contains 250/25 = 10 times as much Fe²⁺ as the sample.</div>
+
+<h4>(iii) Average mass of Fe(II) per tablet</h4>
+<div class="working">Moles per tablet = 0.01125 ÷ 6 = <strong>0.001875 mol</strong> [2]<br>Mass = 0.001875 × 56 = <strong>0.105 g per tablet</strong> [2]</div>
+<div class="explain"><strong>Why × 56?</strong> The relative atomic mass of iron (Fe) = 56. Mass = moles × M<sub>r</sub>.</div>
+
+<h4>(iv) Percentage by mass of Fe(II)</h4>
+<div class="working">Mass of one tablet = 2.496 / 6 = 0.416 g<br>% = (0.105 / 0.416) × 100 = <strong>25.24%</strong> [4]</div>
+<div class="explain"><strong>Alternative method:</strong> 0.630 / 2.496 × 100 = 25.24% (using total mass instead of per tablet - same answer).</div>
+</div>
+</div>
+
+<!-- Q2 EXTRACTION -->
+<div class="q-section" id="q-q2">
+<div class="card">
+<h2>Q2: Steam Distillation & Extraction of Clove Oil <span class="marks-badge">50 marks</span></h2>
+<p>Clove oil is extracted from dried clove buds by steam distillation, then eugenol is isolated by liquid-liquid extraction using cyclohexane.</p>
+
+<h3>(a)(i) <span class="marks-badge">3</span></h3>
+<p><strong>Q:</strong> Identify substance A in the steam distillation setup.</p>
+<div class="working"><strong>Answer:</strong> <strong>Water / H₂O</strong></div>
+<div class="explain"><strong>Why?</strong> Steam distillation passes steam through the plant material. The steam carries the volatile oil with it. When cooled, you get a mixture of water and oil (the distillate).</div>
+
+<h3>(a)(ii) <span class="marks-badge">6</span></h3>
+<p><strong>Q:</strong> Describe the appearance of the distillate collected.</p>
+<div class="working"><strong>Answer:</strong> <strong>Milky</strong> [3] appearance - it's an <strong>emulsion / oil droplets dispersed in water</strong> [3].</div>
+
+<h3>(a)(iii) <span class="marks-badge">3</span></h3>
+<p><strong>Q:</strong> Give one advantage of using steam distillation to extract clove oil.</p>
+<div class="working"><strong>Answer:</strong> <strong>Minimises decomposition / maximises yield / removes the oil at a lower boiling point</strong> than direct heating would.</div>
+<div class="explain"><strong>Why?</strong> Clove oil would decompose if heated to its own boiling point. Steam distillation allows it to evaporate at a temperature below 100°C (steam's boiling point), protecting the delicate oil molecules.</div>
+
+<h3>(b)(i) <span class="marks-badge">9</span></h3>
+<p><strong>Q:</strong> Describe how you would carry out a liquid-liquid extraction to separate the eugenol from the distillate using cyclohexane.</p>
+<div class="working"><strong>Answer:</strong> Pour the distillate into a <strong>separating funnel</strong>. Add cyclohexane. Shake, <strong>vent regularly</strong>. Allow layers to separate. The <strong>organic layer (cyclohexane + eugenol) forms on top</strong> (lower density). Run off the <strong>aqueous layer</strong> from below. Collect the organic layer in a <strong>separate vessel</strong>. [max 6+3 marks]</div>
+<div class="explain"><strong>Key point:</strong> You earn maximum 6 marks for procedure description even without a diagram. If you include a labelled diagram, you can earn up to 6+3 = 9.</div>
+
+<h3>(b)(ii) <span class="marks-badge">6</span></h3>
+<p><strong>Q:</strong> Give two properties of cyclohexane that make it suitable as a solvent for this extraction.</p>
+<div class="working"><strong>Answer (any two):</strong> <strong>Non-polar / low solubility in water</strong> [3] | <strong>Low boiling point / lower density than water / low reactivity</strong> [3]</div>
+<div class="explain"><strong>Why these matter?</strong> The solvent must dissolve eugenol (non-polar dissolves non-polar) but NOT mix with water (immiscible). Low boiling point means it's easy to evaporate off later. Lower density means it floats on top for easy separation.</div>
+
+<h3>(b)(iii) <span class="marks-badge">3</span></h3>
+<p><strong>Q:</strong> How could the yield of eugenol be maximised?</p>
+<div class="working"><strong>Answer:</strong> <strong>Repeat the extraction / washing of the aqueous layer</strong> with fresh cyclohexane.</div>
+
+<h3>(b)(iv) <span class="marks-badge">3</span></h3>
+<p><strong>Q:</strong> How would you isolate the eugenol from the cyclohexane/eugenol mixture?</p>
+<div class="working"><strong>Answer:</strong> <strong>Evaporate the solvent</strong> (cyclohexane has a low boiling point, so gentle heating removes it, leaving eugenol behind).</div>
+
+<h3>(c)(i) <span class="marks-badge">3</span></h3>
+<p><strong>Q:</strong> Give one use of eugenol.</p>
+<div class="working"><strong>Answer:</strong> <strong>Flavouring / antiseptic / fragrance</strong> (any one).</div>
+
+<h3>(c)(ii)</h3>
+<p><strong>Q:</strong> Draw the structural formula of eugenol.</p>
+<div class="explain"><strong>Answer:</strong> Eugenol has a benzene ring with -OH, -OCH₃, and -CH₂CH=CH₂ groups. You must show all atoms and bonds for full marks. -1 for systematic H atom omission, -1 for systematic bond omission.</div>
+
+<h3>(c)(iii) <span class="marks-badge">3</span></h3>
+<p><strong>Q:</strong> Name a spectroscopic technique that could be used to confirm the identity of eugenol.</p>
+<div class="working"><strong>Answer:</strong> <strong>Infra-red (IR) / mass spectroscopy / ultra-violet (UV)</strong></div>
+
+<h3>(c)(iv) <span class="marks-badge">5</span></h3>
+<p><strong>Q:</strong> Calculate the expected volume of eugenol from 18.0 g of cloves, given a 7% yield and density of 1.06 g cm⁻³.</p>
+<div class="working"><strong>Given:</strong> 18.0 g of cloves, 7% yield, density of eugenol = 1.06 g cm⁻³<br>Mass of eugenol = 18.0 × 0.07 = <strong>1.26 g</strong> [3]<br>Volume = mass / density = 1.26 / 1.06 = <strong>1.2 cm³</strong> [2]</div>
+</div>
+</div>
+
+<!-- Q3 RATES -->
+<div class="q-section" id="q-q3">
+<div class="card">
+<h2>Q3: Rate of Reaction - H₂O₂ Decomposition <span class="marks-badge">50 marks</span></h2>
+<p>A student monitored the production of O₂ from H₂O₂ using MnO₂ as a catalyst.</p>
+<p><strong>Reaction:</strong> 2H₂O₂ → O₂ + 2H₂O</p>
+<p><strong>Data:</strong></p>
+<table>
+<tr><th>Time (min)</th><td>0.0</td><td>1.0</td><td>2.0</td><td>3.0</td><td>4.0</td><td>5.0</td><td>6.0</td></tr>
+<tr><th>Volume O₂ (cm³)</th><td>0.0</td><td>60.0</td><td>82.0</td><td>92.0</td><td>98.0</td><td>100.0</td><td>100.0</td></tr>
+</table>
+
+<h3>(a)(i) <span class="marks-badge">12</span></h3>
+<p><strong>Q:</strong> Plot a graph of volume of O₂ (cm³) against time (min) using the data provided.</p>
+<div class="working"><strong>Marks for:</strong> Axes labelled [3] + Points plotted (7×1) [7] + Smooth curve with good fit [2]</div>
+<div class="explain"><strong>Key points:</strong> The curve rises steeply at first (fast reaction), then levels off as H₂O₂ is used up. It plateaus at 100 cm³ when all H₂O₂ has decomposed. Draw a smooth curve through the points - don't just join dots with straight lines.</div>
+
+<h3>(a)(ii) <span class="marks-badge">6</span></h3>
+<p><strong>Q:</strong> From your graph, determine the instantaneous rate of reaction at 2.5 minutes.</p>
+<div class="working"><strong>Method:</strong> Draw a <strong>tangent</strong> to the curve at t = 2.5 min [3]<br>Rate = slope of tangent ≈ <strong>9.8 cm³ min⁻¹</strong> [3]</div>
+<div class="explain"><strong>What's a tangent?</strong> A straight line that just touches the curve at one point. Its slope gives the rate at that exact instant. Rise ÷ Run = change in volume ÷ change in time.</div>
+
+<h3>(b)(i) <span class="marks-badge">3</span></h3>
+<p><strong>Q:</strong> Calculate the average rate of reaction over the first 2.5 minutes.</p>
+<div class="working">Average rate = total volume / total time<br>Read from graph: volume at 2.5 min ≈ 87 cm³<br>Rate = 87 / 2.5 ≈ <strong>34.8 cm³ min⁻¹</strong> [3]</div>
+
+<h3>(b)(ii) <span class="marks-badge">6</span></h3>
+<p><strong>Q:</strong> If granular MnO₂ was used instead of fine powder, how would the rate of reaction be affected? Explain your answer.</p>
+<div class="working"><strong>Answer:</strong> Rate would <strong>decrease</strong> [4].<br><strong>Reason:</strong> Granular particles have <strong>smaller surface area</strong>, so there are <strong>fewer collisions</strong> between H₂O₂ and the catalyst surface per unit time [2].</div>
+
+<h3>(b)(iii) <span class="marks-badge">6</span></h3>
+<p><strong>Q:</strong> If a more concentrated solution of H₂O₂ was used, how would the rate of reaction be affected? Explain your answer.</p>
+<div class="working"><strong>Answer:</strong> Rate would <strong>increase</strong> [4].<br><strong>Reason:</strong> <strong>More particles per unit volume</strong> means <strong>more collisions</strong> per unit time, so more successful reactions [2].</div>
+
+<h3>(c)(i) <span class="marks-badge">3</span></h3>
+<p><strong>Q:</strong> Calculate the average rate of reaction during the first minute.</p>
+<div class="working">Rate = (60.0 - 0.0) / (1.0 - 0.0) = <strong>60 cm³ min⁻¹</strong></div>
+
+<h3>(c)(ii) <span class="marks-badge">3</span></h3>
+<p><strong>Q:</strong> Calculate the average rate of reaction during the second minute.</p>
+<div class="working">Rate = (82.0 - 60.0) / (2.0 - 1.0) = <strong>22 cm³ min⁻¹</strong></div>
+
+<h3>(c)(iii) <span class="marks-badge">3</span></h3>
+<p><strong>Q:</strong> Explain why the rate of reaction decreased as the reaction progressed.</p>
+<div class="working"><strong>Answer:</strong> As the reaction proceeds, the <strong>concentration of reactants (H₂O₂) decreases</strong>, so fewer collisions occur per unit time, and the rate drops.</div>
+
+<h3>(d)(i) <span class="marks-badge">4</span></h3>
+<p><strong>Q:</strong> State how a catalyst increases the rate of a reaction.</p>
+<div class="working"><strong>Answer:</strong> A catalyst <strong>provides an alternative pathway with a lower activation energy</strong>.</div>
+<div class="explain"><strong>Activation energy</strong> is the minimum energy needed for a reaction to happen. By lowering it, more particles have enough energy to react, so the reaction goes faster. The catalyst itself is not used up.</div>
+
+<h3>(d)(ii) <span class="marks-badge">8</span></h3>
+<p><strong>Q:</strong> State the type of catalysis taking place and justify your answer.</p>
+<div class="working"><strong>Answer:</strong> <strong>Surface adsorption / heterogeneous</strong> catalysis [4+2].<br><strong>Justification:</strong> The <strong>reactant and catalyst are in different phases</strong> [2] - H₂O₂ is in solution (liquid) and MnO₂ is a solid.</div>
+</div>
+</div>
+
+<!-- Q4 SHORT QUESTIONS -->
+<div class="q-section" id="q-q4">
+<div class="card">
+<h2>Q4: Short Questions <span class="marks-badge">50 marks</span></h2>
+<p>Answer <strong>eight</strong> parts. Each part is worth 6 marks. The first two parts attempted get 1 bonus mark each (7 marks). Total: 8×6 + 2×1 = 50.</p>
+
+<h3>(a) <span class="marks-badge">6</span></h3>
+<p><strong>Q:</strong> State two features of Mendeleev's arrangement of the elements in his periodic table.</p>
+<div class="working"><strong>Answer:</strong> Elements arranged <strong>by atomic mass</strong> [3] and grouped by <strong>similar properties</strong> [3].</div>
+<div class="explain"><strong>Key difference from modern table:</strong> Mendeleev ordered by atomic mass (not atomic number). He left gaps for undiscovered elements and even predicted their properties.</div>
+
+<h3>(b) <span class="marks-badge">6</span></h3>
+<p><strong>Q:</strong> For the ion ⁵²₂₄Cr³⁺, state the number of (i) protons and (ii) electrons.</p>
+<div class="working"><strong>(i) Protons = 24</strong> [3] (atomic number = number of protons)<br><strong>(ii) Electrons = 21</strong> [3] (24 - 3 = 21, because the 3+ charge means 3 electrons lost)</div>
+
+<h3>(c) <span class="marks-badge">6</span></h3>
+<p><strong>Q:</strong> Write the chemical formula for (i) calcium hydroxide and (ii) aluminium sulfate.</p>
+<div class="working"><strong>(i) Calcium hydroxide:</strong> <strong>Ca(OH)₂</strong> [3]<br><strong>(ii) Aluminium sulfate:</strong> <strong>Al₂(SO₄)₃</strong> [3]</div>
+<div class="explain"><strong>Method:</strong> Ca²⁺ needs 2 OH⁻ ions. Al³⁺ needs 3 SO₄²⁻ ions, but since sulfate is 2⁻ and aluminium is 3+, you need 2 Al and 3 SO₄ to balance charges.</div>
+
+<h3>(d) <span class="marks-badge">6</span></h3>
+<p><strong>Q:</strong> Write the electron configuration of vanadium (V, Z=23) using s, p, d notation.</p>
+<div class="working"><strong>Answer:</strong> <strong>1s² 2s² 2p⁶ 3s² 3p⁶ 4s² 3d³</strong> [3+3]</div>
+<div class="explain"><strong>Why 4s before 3d?</strong> The 4s orbital is slightly lower in energy than 3d, so it fills first. Vanadium (Z=23) has 23 electrons: 2+2+6+2+6+2+3 = 23. ✓</div>
+
+<h3>(e) <span class="marks-badge">6</span></h3>
+<p><strong>Q:</strong> A compound contains 57.84% C, 3.61% H, and 38.55% O. Calculate its empirical formula.</p>
+<div class="working"><strong>Given:</strong> 57.84% C, 3.61% H, 38.55% O<br>C: 57.84/12 = 4.82 | H: 3.61/1 = 3.61 | O: 38.55/16 = 2.41 [3]<br>Ratio: 4.82:3.61:2.41 → divide by smallest (2.41) → 2:1.5:1 → multiply by 2 → <strong>4:3:2</strong><br>Empirical formula: <strong>C₄H₃O₂</strong> [3]</div>
+
+<h3>(f) <span class="marks-badge">6</span></h3>
+<p><strong>Q:</strong> State Avogadro's Law.</p>
+<div class="working"><strong>Answer:</strong> <strong>At the same temperature and pressure</strong> [3], <strong>equal volumes of gases have equal numbers of particles</strong> [3].</div>
+
+<h3>(g) <span class="marks-badge">6</span></h3>
+<p><strong>Q:</strong> Draw the structural formulae of two isomers of C₄H₁₀.</p>
+<div class="working"><strong>Butane:</strong> CH₃-CH₂-CH₂-CH₃ (straight chain) [3]<br><strong>Methylpropane:</strong> CH₃-CH(CH₃)-CH₃ (branched) [3]</div>
+
+<h3>(h) <span class="marks-badge">6</span></h3>
+<p><strong>Q:</strong> A dog (8.3 kg) needs a dose of 140 mg/kg. The medicine is 5.0% (w/v). Calculate the volume of medicine required.</p>
+<div class="working">Dose = 140 mg/kg × 8.3 kg = <strong>1162 mg</strong> [3]<br>5.0% (w/v) = 5 g per 100 cm³ = 50 mg per cm³<br>Volume = 1162 / 50 = <strong>23.24 cm³</strong> [3]</div>
+
+<h3>(i) <span class="marks-badge">6</span></h3>
+<p><strong>Q:</strong> Define BOD (Biochemical Oxygen Demand).</p>
+<div class="working"><strong>Answer:</strong> The <strong>quantity of dissolved oxygen consumed by biological action</strong> [3] <strong>over 5 days in the dark at 20°C</strong> [3].</div>
+
+<h3>(j) <span class="marks-badge">6</span></h3>
+<p><strong>Q:</strong> How would the melting point of impure benzoic acid compare with that of pure benzoic acid?</p>
+<div class="working"><strong>Answer:</strong> Impure has a <strong>lower melting point</strong> [3] and a <strong>broader range / less sharp</strong> melting point [3].</div>
+
+<h3>(k) <span class="marks-badge">6</span></h3>
+<p><strong>Q:</strong> In the reaction 3Cu + 2NO₃⁻ + 8H⁺ → 3Cu²⁺ + 2NO + 4H₂O, identify the element that is reduced and state how its oxidation number changes.</p>
+<div class="working"><strong>Reaction:</strong> 3Cu + 2NO₃⁻ + 8H⁺ → 3Cu²⁺ + 2NO + 4H₂O<br><strong>N: +5 → +2</strong> (reduced, gains electrons) [3]<br>Element reduced: <strong>Nitrogen / N</strong> [3]</div>
+
+<h3>(l) <span class="marks-badge">6</span></h3>
+<p><strong>Q:</strong> Describe how oxygen is separated industrially from air.</p>
+<div class="working"><strong>Answer:</strong> By <strong>fractional distillation</strong> [3] of <strong>liquefied air</strong> [3]. Air is cooled until it liquefies, then slowly warmed. Nitrogen boils off first (-196°C), leaving oxygen (-183°C).</div>
+
+<h3>(l) <span class="marks-badge">6</span></h3>
+<p><strong>Q:</strong> Name the addition polymers X and Y formed from the given monomers.</p>
+<div class="working"><strong>X = polyphenylethene / polystyrene</strong> [3]<br><strong>Y = polypropylene / polypropene</strong> [3]</div>
+</div>
+</div>
+
+<!-- Q5 ATOMIC STRUCTURE -->
+<div class="q-section" id="q-q5">
+<div class="card">
+<h2>Q5: Atomic Structure - Bromine <span class="marks-badge">50 marks</span></h2>
+
+<h3>(a) Isotopes of Bromine <span class="marks-badge">20</span></h3>
+<h4>(i)</h4>
+<p><strong>Q:</strong> Name an instrument used to determine the relative abundance of isotopes.</p>
+<div class="working"><strong>Answer:</strong> <strong>Mass spectrometer</strong> [2]</div>
+
+<h4>(ii)</h4>
+<p><strong>Q:</strong> Compare the nuclei of Br-79 and Br-81 in terms of protons and neutrons.</p>
+<div class="working"><strong>Both have 35 protons</strong> [3]<br><strong>Br-79 has 44 neutrons, Br-81 has 46 neutrons</strong> [3]</div>
+<div class="explain"><strong>How to calculate:</strong> Neutrons = mass number - atomic number. For Br-79: 79-35=44. For Br-81: 81-35=46. Same protons (same element), different neutrons (different isotopes).</div>
+
+<h4>(iii)</h4>
+<p><strong>Q:</strong> Define relative atomic mass.</p>
+<div class="working"><strong>Answer:</strong> The <strong>average mass of an atom</strong> of an element [3] <strong>compared to one-twelfth the mass of a carbon-12 isotope</strong> [3].</div>
+
+<h4>(iv)</h4>
+<p><strong>Q:</strong> Calculate the relative atomic mass of bromine given that Br-79 has 50.69% abundance and Br-81 has 49.31% abundance.</p>
+<div class="working">(50.69 × 79) + (49.31 × 81) [2]<br>= 4004.51 + 3994.11 = 7998.62 [2]<br>7998.62 ÷ 100 = <strong>79.99</strong> [2]</div>
+
+<h3>(b) Atomic Orbitals <span class="marks-badge">18</span></h3>
+<h4>(i)</h4>
+<p><strong>Q:</strong> What is an atomic orbital?</p>
+<div class="working"><strong>Answer:</strong> A region in space around the nucleus <strong>where the probability of finding an electron is high</strong> [3].</div>
+
+<h4>(ii)</h4>
+<p><strong>Q:</strong> What is the shape of the lowest energy orbital?</p>
+<div class="working"><strong>Answer:</strong> <strong>Sphere / circle</strong> [3] (the 1s orbital is spherical).</div>
+
+<h4>(iii)</h4>
+<p><strong>Q:</strong> What is the maximum number of electrons that can occupy a single p-orbital?</p>
+<div class="working"><strong>Answer:</strong> <strong>2</strong> [3] (each orbital holds max 2 electrons with opposite spins).</div>
+<div class="explain"><strong>Note:</strong> A p-SUBshell has 3 orbitals and holds 6 electrons. But ONE p-orbital holds only 2.</div>
+
+<h4>(iv)</h4>
+<p><strong>Q:</strong> How are electrons arranged when filling orbitals of equal energy?</p>
+<div class="working"><strong>Answer:</strong> Electrons <strong>occupy orbitals singly first</strong> [3], <strong>then pair up</strong> [3].</div>
+<div class="explain"><strong>This is Hund's Rule:</strong> In a set of equal-energy orbitals (like the three 2p orbitals), each gets one electron before any gets a second. It's like passengers on a bus - everyone takes an empty seat before sitting beside someone.</div>
+
+<h4>(v)</h4>
+<p><strong>Q:</strong> Under what circumstances might an electron occupy a higher energy orbital than expected?</p>
+<div class="working"><strong>Answer:</strong> When the atom <strong>absorbs a fixed amount of energy</strong> [3] (a photon of light or heat), an electron can be promoted to a higher energy level.</div>
+
+<h3>(c) Atomic Radius <span class="marks-badge">12</span></h3>
+<h4>(i)</h4>
+<p><strong>Q:</strong> Define atomic radius.</p>
+<div class="working"><strong>Answer:</strong> <strong>Half the distance between the nuclei of two atoms of the same element joined by a single covalent bond</strong> [4+4].</div>
+
+<h4>(ii)</h4>
+<p><strong>Q:</strong> Explain why the atomic radius of bromine is greater than that of chlorine.</p>
+<div class="working"><strong>Answer:</strong> Bromine has <strong>more energy levels</strong> than chlorine [2+2]. (Br has 4 energy levels, Cl has 3 - more electron shells means bigger atom.)</div>
+
+<h4>(iii)</h4>
+<p><strong>Q:</strong> Explain why the atomic radius of bromine is less than that of selenium.</p>
+<div class="working"><strong>Answer:</strong> Bromine has a <strong>greater effective nuclear charge / greater atomic number</strong> [2+2]. (Same number of shells, but Br has more protons pulling electrons in more tightly.)</div>
+</div>
+</div>
+
+<!-- Q6 FUELS -->
+<div class="q-section" id="q-q6">
+<div class="card">
+<h2>Q6: Fuels & Thermochemistry <span class="marks-badge">50 marks</span></h2>
+
+<h3>(a) Hydrocarbons & Fractional Distillation <span class="marks-badge">24</span></h3>
+<h4>(i)</h4>
+<p><strong>Q:</strong> What is meant by a saturated hydrocarbon?</p>
+<div class="working"><strong>Answer:</strong> A hydrocarbon containing <strong>only single bonds</strong> [3] between carbon atoms.</div>
+
+<h4>(ii)</h4>
+<p><strong>Q:</strong> Describe, with the aid of a diagram, the fractional distillation of crude oil.</p>
+<div class="working"><strong>Answer:</strong> Crude oil is heated and vapours rise through a <strong>column with outlet pipes (trays) at various levels</strong> [3]. <strong>Temperature decreases from bottom to top</strong> [3]. <strong>Heated crude oil enters near the base and refinery gas is removed at the top</strong> [3]. [max 6 marks without diagram]</div>
+<div class="explain"><strong>How it works:</strong> Different fractions have different boiling points. Lighter gases rise to the top (low bp). Heavier fractions like bitumen stay at the bottom (high bp). Each fraction is collected at its appropriate level.</div>
+
+<h4>(iii)</h4>
+<p><strong>Q:</strong> Name two components of LPG (liquefied petroleum gas).</p>
+<div class="working"><strong>Answer:</strong> <strong>Propane (C₃H₈)</strong> [3] and <strong>butane (C₄H₁₀)</strong> [3].</div>
+
+<h4>(iv)</h4>
+<p><strong>Q:</strong> Name the process used to convert octane to 2,2,4-trimethylpentane.</p>
+<div class="working"><strong>Answer:</strong> <strong>Isomerisation</strong> [3] (same molecular formula C₈H₁₈, different structure - branched instead of straight chain).</div>
+
+<h4>(v)</h4>
+<p><strong>Q:</strong> What inorganic co-product is formed when hexane is converted to cyclohexane?</p>
+<div class="working"><strong>Answer:</strong> <strong>Hydrogen (gas) / H₂</strong> [3]. (This is dehydrogenation/reforming - the straight chain forms a ring, releasing H₂.)</div>
+
+<h3>(b) Heat of Combustion <span class="marks-badge">12</span></h3>
+<h4>(i)</h4>
+<p><strong>Q:</strong> Define heat of combustion.</p>
+<div class="working"><strong>Answer:</strong> The <strong>heat released when one mole reacts completely with excess oxygen</strong> [4+4+2+2].</div>
+
+<h4>(ii)</h4>
+<p><strong>Q:</strong> Name an instrument used to measure the heat of combustion accurately.</p>
+<div class="working"><strong>Answer:</strong> <strong>Bomb calorimeter</strong> [4+4].</div>
+
+<h4>(iii)</h4>
+<p><strong>Q:</strong> Name two industrial methods for producing hydrogen gas.</p>
+<div class="working"><strong>Answer:</strong> <strong>Steam reforming</strong> [4+2] and <strong>electrolysis of water</strong> [4+2].</div>
+
+<h3>(c) Hess's Law Calculation <span class="marks-badge">14</span></h3>
+<p><strong>Reaction:</strong> 2NH₃ + H₂O₂ → N₂H₄ + 2H₂O</p>
+<p><strong>Heats of formation:</strong> NH₃ = -45.9, H₂O₂ = -187.8, N₂H₄ = +50.6, H₂O = -285.8 kJ mol⁻¹</p>
+<div class="working">
+ΔH = Σ ΔH<sub>f</sub>(products) - Σ ΔH<sub>f</sub>(reactants)<br><br>
+<strong>Products:</strong> (+50.6) + 2(-285.8) = 50.6 - 571.6 = -521.0 [3+3]<br>
+<strong>Reactants:</strong> 2(-45.9) + (-187.8) = -91.8 - 187.8 = -279.6 [3+3]<br>
+<strong>ΔH = -521.0 - (-279.6) = -521.0 + 279.6 = -241.4 kJ</strong> [2]
+</div>
+<div class="explain"><strong>Hess's Law method:</strong> ΔH = [sum of ΔH<sub>f</sub> of products] - [sum of ΔH<sub>f</sub> of reactants]. Don't forget to multiply by coefficients! The negative answer tells us this reaction is exothermic (releases heat).</div>
+</div>
+</div>
+
+<!-- Q7 ACIDS & BASES -->
+<div class="q-section" id="q-q7">
+<div class="card">
+<h2>Q7: Acids & Bases <span class="marks-badge">50 marks</span></h2>
+
+<h3>(a) Brønsted-Lowry Theory <span class="marks-badge">13</span></h3>
+<h4>(i)</h4>
+<p><strong>Q:</strong> According to the Brønsted-Lowry theory, define an acid and a base.</p>
+<div class="working"><strong>Acid:</strong> A <strong>proton donor</strong> [2+2]<br><strong>Base:</strong> A <strong>proton acceptor</strong> [2+2]</div>
+
+<h4>(ii)</h4>
+<p><strong>Q:</strong> Distinguish between a strong acid and a weak acid.</p>
+<div class="working"><strong>Strong acid:</strong> A <strong>good proton donor</strong> [2+2] (fully dissociates in water)<br><strong>Weak acid:</strong> A <strong>poor proton donor</strong> [2+2] (only partially dissociates)</div>
+
+<h4>(iii)</h4>
+<p><strong>Q:</strong> What is meant by a conjugate acid-base pair?</p>
+<div class="working"><strong>Answer:</strong> <strong>Two species that differ by a H⁺</strong> [2].</div>
+
+<h4>(iv)</h4>
+<p><strong>Q:</strong> Identify the two conjugate acid-base pairs in the equilibrium: HCO₃⁻ + H₂O ⇌ H₂CO₃ + OH⁻</p>
+<div class="working"><strong>Pair 1:</strong> HCO₃⁻ and H₂CO₃ [differ by H⁺]<br><strong>Pair 2:</strong> H₂O and OH⁻ [differ by H⁺] [3]</div>
+
+<h3>(b) pH Calculations <span class="marks-badge">15</span></h3>
+<h4>(i)</h4>
+<p><strong>Q:</strong> Define pH.</p>
+<div class="working"><strong>Answer:</strong> <strong>-log₁₀</strong> [2] of the <strong>[H⁺] / moles per litre of H⁺ ions</strong> [2].</div>
+
+<h4>(ii)</h4>
+<p><strong>Q:</strong> Calculate the concentration of H₃O⁺ ions in a solution with pH = 1.4.</p>
+<div class="working">[H⁺] = 10⁻ᵖᴴ = <strong>10⁻¹·⁴</strong> [2]<br>= <strong>0.0398 mol L⁻¹</strong> [2]</div>
+
+<h4>(iii)</h4>
+<p><strong>Q:</strong> Calculate the pH of a 0.015 M solution of a weak acid with K<sub>a</sub> = 3.2 × 10⁻⁴.</p>
+<div class="working"><strong>Given:</strong> 0.015 M weak acid, K<sub>a</sub> = 3.2 × 10⁻⁴<br>[H⁺] = √(K<sub>a</sub> × M) [2]<br>= √(3.2 × 10⁻⁴ × 0.015) [2]<br>= √(4.8 × 10⁻⁶) = 0.00219 mol L⁻¹<br><strong>pH = -log(0.00219) = 2.66 / 2.7</strong> [3]</div>
+
+<h3>(c) Ionic Product of Water <span class="marks-badge">12</span></h3>
+<h4>(i)</h4>
+<p><strong>Q:</strong> Write an expression for K<sub>w</sub>, the ionic product of water.</p>
+<div class="working"><strong>K<sub>w</sub> = [H⁺][OH⁻]</strong> [6]</div>
+
+<h4>(ii)</h4>
+<p><strong>Q:</strong> Calculate the pH of pure water at 60°C, given that K<sub>w</sub> = 9.61 × 10⁻¹⁴ mol² L⁻² at that temperature.</p>
+<div class="working"><strong>Given:</strong> K<sub>w</sub> at 60°C = 9.61 × 10⁻¹⁴ mol² L⁻²<br>In pure water: [H⁺] = [OH⁻] = √K<sub>w</sub><br>[H⁺] = √(9.61 × 10⁻¹⁴) = <strong>3.1 × 10⁻⁷</strong> [3]<br><strong>pH = -log(3.1 × 10⁻⁷) = 6.5</strong> [3]</div>
+<div class="explain"><strong>Important:</strong> Pure water at 60°C has pH 6.5, NOT 7. But it's still neutral! At higher temperatures, K<sub>w</sub> increases (more dissociation), so [H⁺] increases and pH drops below 7. But since [H⁺] = [OH⁻], it's still neutral.</div>
+
+<h3>(d) Indicators <span class="marks-badge">10</span></h3>
+<h4>(i)</h4>
+<p><strong>Q:</strong> What colour would the indicator HA display in a strong base? Explain why.</p>
+<div class="working"><strong>Answer:</strong> <strong>Blue</strong> [3]. Strong base has high pH, so the equilibrium HA ⇌ H₃O⁺ + A⁻ shifts right (Le Chatelier's). More A⁻ (blue) is formed [3].</div>
+
+<h4>(ii)</h4>
+<p><strong>Q:</strong> Would the indicator HA (pH range 4.2-5.4) be suitable for this titration? Explain your answer.</p>
+<div class="working"><strong>Answer: Yes</strong> [2]. The indicator changes colour in the pH range 4.2-5.4, and <strong>this range coincides with the vertical (steep) portion of the pH curve</strong> at the equivalence point [2].</div>
+<div class="explain"><strong>Why it works:</strong> At the equivalence point of a strong acid/strong base titration, the pH jumps rapidly (the steep vertical part of the curve). As long as the indicator changes colour within this steep region, it will give an accurate end point.</div>
+</div>
+</div>
+
+<!-- Q8 ORGANIC -->
+<div class="q-section" id="q-q8">
+<div class="card">
+<h2>Q8: Organic Chemistry - Reaction Scheme <span class="marks-badge">50 marks</span></h2>
+<p>Reaction scheme: ethanal → (A) ethanol, (B) ethanoic acid, (C) ethyl ethanoate</p>
+
+<h3>(a) <span class="marks-badge">6</span></h3>
+<p><strong>Q:</strong> Identify which reaction (A, B, or C) is (i) a substitution reaction, (ii) an oxidation reaction, (iii) a reduction reaction.</p>
+<div class="working"><strong>(i) Substitution reaction:</strong> <strong>C</strong> (esterification - OH group replaced) [2]<br><strong>(ii) Oxidation reaction:</strong> <strong>B</strong> (ethanal → ethanoic acid, adding oxygen) [2]<br><strong>(iii) Reduction reaction:</strong> <strong>A</strong> (ethanal → ethanol, adding hydrogen) [2]</div>
+<div class="explain"><strong>Memory aid:</strong> Oxidation = adding O or removing H. Reduction = adding H or removing O. Going from aldehyde (CHO) to acid (COOH) = oxidation. Going from aldehyde to alcohol (CH₂OH) = reduction.</div>
+
+<h3>(b) Ethanal <span class="marks-badge">15</span></h3>
+<h4>(i)</h4>
+<p><strong>Q:</strong> To what homologous series does ethanal belong?</p>
+<div class="working"><strong>Answer:</strong> <strong>Aldehyde</strong> [3]</div>
+
+<h4>(ii)</h4>
+<p><strong>Q:</strong> Describe the colour change when ethanal is heated with Fehling's reagent.</p>
+<div class="working"><strong>Answer:</strong> Colour changes from <strong>blue</strong> [3] <strong>to red</strong> [3] (brick-red precipitate of Cu₂O).</div>
+<div class="explain"><strong>What's happening?</strong> Fehling's reagent contains Cu²⁺ ions (blue). Ethanal reduces them to Cu₂O (red). This test distinguishes aldehydes from ketones - only aldehydes give a positive result.</div>
+
+<h4>(iii)</h4>
+<p><strong>Q:</strong> Name the reagent and catalyst needed to convert ethanal to ethanol.</p>
+<div class="working"><strong>Reagent:</strong> <strong>Hydrogen (gas) / H₂</strong> [3]<br><strong>Catalyst:</strong> <strong>Nickel / Ni</strong> [3]</div>
+
+<h3>(c) Ethyl Ethanoate & Isotope Tracking <span class="marks-badge">20</span></h3>
+<p>Ethanol with O-18 (O*) reacts with ethanoic acid: C₂H₅O*H + CH₃COOH ⇌ CH₃COO*C₂H₅ + H₂O</p>
+
+<h4>(i)</h4>
+<p><strong>Q:</strong> Draw the structural formula of ethyl ethanoate.</p>
+<div class="working"><strong>Answer:</strong> H₃C-C(=O)-O-CH₂-CH₃ showing all atoms and bonds [5]</div>
+
+<h4>(ii)</h4>
+<p><strong>Q:</strong> In the ester formed, where is the O* (oxygen-18) atom located?</p>
+<div class="working"><strong>Answer:</strong> The O* is the <strong>single-bonded oxygen</strong> in the ester linkage (C-O*-C) [3].</div>
+<div class="explain"><strong>Why?</strong> The O* comes from the ethanol. In esterification, the alcohol provides the -O- bridge. The water is formed from the -OH of the acid and -H of the alcohol's OH.</div>
+
+<h4>(iii)</h4>
+<p><strong>Q:</strong> What new bond is formed during the esterification reaction?</p>
+<div class="working"><strong>Answer:</strong> The <strong>C-O* bond</strong> between the carbonyl carbon and the O* atom [3].</div>
+
+<h4>(iv)</h4>
+<p><strong>Q:</strong> How many electrons are involved in sigma bonds in ethyl ethanoate?</p>
+<div class="working"><strong>Answer: 26</strong> [3] (count every single bond × 2 electrons)</div>
+
+<h4>(v)</h4>
+<p><strong>Q:</strong> How many electrons are involved in pi bonds in ethyl ethanoate?</p>
+<div class="working"><strong>Answer: 2</strong> [3] (one C=O double bond has one pi bond = 2 electrons)</div>
+
+<h4>(vi)</h4>
+<p><strong>Q:</strong> How many lone pairs of electrons are there in ethyl ethanoate?</p>
+<div class="working"><strong>Answer: 4</strong> [3] (two on each oxygen atom that aren't involved in bonding)</div>
+
+<h3>(d) Acidic Properties <span class="marks-badge">9</span></h3>
+<h4>(i)</h4>
+<p><strong>Q:</strong> Write a balanced equation for the reaction of ethanol with sodium.</p>
+<div class="working"><strong>Answer:</strong> C₂H₅OH + Na → C₂H₅ONa + ½H₂<br>OR: <strong>2C₂H₅OH + 2Na → 2C₂H₅ONa + H₂</strong> [4+1+2]</div>
+
+<h4>(ii)</h4>
+<p><strong>Q:</strong> Explain why the ethanoate ion (CH₃COO⁻) is a weaker base than the ethoxide ion (C₂H₅O⁻).</p>
+<div class="working"><strong>Answer:</strong> The <strong>ethanoate ion is more stable / ethanoic acid is a stronger acid</strong> [3]. The negative charge in CH₃COO⁻ is delocalised over two oxygen atoms, making it less likely to accept a proton (weaker base).</div>
+</div>
+</div>
+
+<!-- Q9 EQUILIBRIUM -->
+<div class="q-section" id="q-q9">
+<div class="card">
+<h2>Q9: Chemical Equilibrium - NOBr Decomposition <span class="marks-badge">50 marks</span></h2>
+<p><strong>Reaction:</strong> 2NOBr<sub>(g)</sub> ⇌ 2NO<sub>(g)</sub> + Br₂<sub>(g)</sub></p>
+
+<h3>(a) Theory <span class="marks-badge">8</span></h3>
+<h4>(i)</h4>
+<p><strong>Q:</strong> What is meant by a reversible reaction?</p>
+<div class="working"><strong>Answer:</strong> A reaction where <strong>reactants can be formed from products</strong> [4]. The reaction can go in both directions.</div>
+
+<h4>(ii)</h4>
+<p><strong>Q:</strong> Explain why the concentrations of reactants and products remain constant at equilibrium.</p>
+<div class="working"><strong>Answer:</strong> The <strong>rates of the forward and reverse reactions are equal</strong> [4]. Reactants are being consumed at the same rate they're being formed.</div>
+
+<h3>(b) K<sub>c</sub> Calculation <span class="marks-badge">24</span></h3>
+<p><strong>Given:</strong> 55 g NOBr in 2 L container, 78% decomposed at temperature T.</p>
+
+<h4>(i)</h4>
+<p><strong>Q:</strong> Calculate the initial number of moles of NOBr.</p>
+<div class="working">M<sub>r</sub> of NOBr = 14 + 16 + 80 = <strong>110</strong> [2]<br>n = 55 / 110 = <strong>0.5 mol</strong> [2]</div>
+
+<h4>(ii)</h4>
+<p><strong>Q:</strong> Calculate the number of moles of NOBr remaining at equilibrium, given that 78% has decomposed.</p>
+<div class="working">Moles decomposed = 0.5 × 0.78 = <strong>0.390 mol</strong> [2]<br>Moles remaining = 0.5 - 0.390 = <strong>0.110 mol</strong> [2]</div>
+
+<h4>(iii)</h4>
+<p><strong>Q:</strong> Write the expression for K<sub>c</sub> for this reaction.</p>
+<div class="working"><strong>K<sub>c</sub> = [NO]²[Br₂] / [NOBr]²</strong> [6]</div>
+<div class="explain"><strong>How to write K<sub>c</sub>:</strong> Products on top, reactants on bottom. Each concentration raised to the power of its coefficient. Square brackets mean "concentration in mol L⁻¹".</div>
+
+<h4>(iv)</h4>
+<p><strong>Q:</strong> Calculate the value of K<sub>c</sub> at temperature T.</p>
+<div class="working">
+<strong>From stoichiometry:</strong> 2NOBr → 2NO + Br₂<br>
+If 0.390 mol NOBr decompose: 0.390 mol NO formed, 0.195 mol Br₂ formed<br><br>
+<strong>Convert to concentrations (÷ 2 L):</strong><br>
+[NOBr] = 0.110 / 2 = 0.055 mol L⁻¹ [2]<br>
+[NO] = 0.390 / 2 = 0.195 mol L⁻¹ [2]<br>
+[Br₂] = 0.195 / 2 = 0.0975 mol L⁻¹ [2]<br><br>
+K<sub>c</sub> = (0.195)²(0.0975) / (0.055)² [3]<br>
+= 0.038025 × 0.0975 / 0.003025<br>
+= <strong>1.2 mol L⁻¹</strong> [3]
+</div>
+
+<h3>(c) Le Chatelier's Principle <span class="marks-badge">18</span></h3>
+<h4>(i)</h4>
+<p><strong>Q:</strong> State Le Chatelier's Principle.</p>
+<div class="working"><strong>Answer:</strong> When a <strong>system at equilibrium</strong> [4] is subjected to a stress, it shifts to <strong>oppose the applied stress</strong> [2].</div>
+
+<h4>(ii)</h4>
+<p><strong>Q:</strong> What is the effect of increasing pressure on the amount of Br₂ at equilibrium? Explain your answer.</p>
+<div class="working"><strong>Answer:</strong> Moles of Br₂ <strong>decrease</strong> [4].<br><strong>Reason:</strong> Increased pressure causes equilibrium to shift to the side with <strong>fewer moles of gas</strong> [2]. Left side has 2 mol, right side has 3 mol (2NO + Br₂), so shift goes LEFT.</div>
+
+<h4>(iii)</h4>
+<p><strong>Q:</strong> Given that K<sub>c</sub> increases with temperature, is the forward reaction endothermic or exothermic? Explain.</p>
+<div class="working"><strong>Given:</strong> K<sub>c</sub> increases with temperature.<br><strong>Answer: Endothermic</strong> [4].<br><strong>Reason:</strong> If K<sub>c</sub> increases with temperature, more products are formed. By Le Chatelier's, the system shifts in the direction that <strong>absorbs heat</strong> (opposes the temperature increase), which is the forward direction. So the forward reaction is endothermic [2].</div>
+</div>
+</div>
+
+<!-- Q10 BONDING -->
+<div class="q-section" id="q-q10">
+<div class="card">
+<h2>Q10: Bonding & Structure <span class="marks-badge">50 marks</span></h2>
+
+<h3>(a) Nitrogen Trifluoride (NF₃) <span class="marks-badge">26</span></h3>
+<h4>(i)</h4>
+<p><strong>Q:</strong> Using electronegativity values, predict the type of bond in NF₃.</p>
+<div class="working">Electronegativity difference = 3.98(F) - 3.04(N) = <strong>0.94</strong> [3]<br>Bond type: <strong>Polar covalent</strong> [3] (between 0.4 and 1.7)</div>
+
+<h4>(ii)</h4>
+<p><strong>Q:</strong> Draw a dot and cross diagram for NF₃.</p>
+<div class="working"><strong>Answer:</strong> N in centre with 3 F atoms around it. Each N-F bond is a shared pair. N has one lone pair. Each F has 3 lone pairs. [3]</div>
+
+<h4>(iii)</h4>
+<p><strong>Q:</strong> What is the shape of the NF₃ molecule? Explain your answer.</p>
+<div class="working"><strong>Shape:</strong> <strong>Pyramidal</strong> [3]<br><strong>Reason:</strong> <strong>One lone pair and three bonding pairs</strong> around the central N atom [3]. The lone pair pushes the bonding pairs closer together, creating a pyramid shape.</div>
+
+<h4>(iv)</h4>
+<p><strong>Q:</strong> Draw a diagram to show the intermolecular forces between two NF₃ molecules.</p>
+<div class="working"><strong>Answer:</strong> Show two NF₃ molecules with δ+ and δ- charges, with dotted lines between opposite charges on adjacent molecules [3].</div>
+
+<h4>(v)</h4>
+<p><strong>Q:</strong> Name the type of intermolecular force present between NF₃ molecules.</p>
+<div class="working"><strong>Answer:</strong> <strong>Dipole-dipole</strong> forces [3] (also Van der Waals, but dipole-dipole is the main one since NF₃ is polar). "Van der Waals" alone scores [3] but misses the key point.</div>
+
+<h4>(vi)</h4>
+<p><strong>Q:</strong> Explain why BF₃ is a non-polar molecule while NF₃ is polar, even though both contain polar bonds.</p>
+<div class="working"><strong>Answer:</strong> <strong>BF₃ is symmetrical</strong> (trigonal planar - the dipoles cancel out) [4]. In NF₃, the lone pair on N makes it asymmetric (pyramidal), so the dipoles DON'T cancel = polar molecule.</div>
+
+<h3>(b) Ionic Addition of Ethene <span class="marks-badge">24</span></h3>
+<h4>(i)</h4>
+<p><strong>Q:</strong> Draw the structural formula of ethene.</p>
+<div class="working"><strong>Answer:</strong> H₂C=CH₂ showing all atoms and the double bond [4].</div>
+
+<h4>(ii)</h4>
+<p><strong>Q:</strong> What bond is broken in ethene during an addition reaction?</p>
+<div class="working"><strong>Answer:</strong> One of the <strong>C=C bonds</strong> (specifically the pi bond) [3].</div>
+
+<h4>(iii)</h4>
+<p><strong>Q:</strong> Name the two species formed when Cl₂ undergoes heterolytic fission as it approaches ethene.</p>
+<div class="working"><strong>Answer:</strong> <strong>Cl⁺</strong> [3] and <strong>Cl⁻</strong> [3].</div>
+<div class="explain"><strong>How?</strong> As Cl₂ approaches the electron-rich C=C bond, the bond polarises. One Cl gets both electrons (Cl⁻) and the other gets none (Cl⁺, an electrophile).</div>
+
+<h4>(iv)</h4>
+<p><strong>Q:</strong> Describe the intermediate ionic species formed in this reaction.</p>
+<div class="working"><strong>Answer:</strong> A carbocation / bridged chloronium ion. The Cl⁺ adds to one carbon, the other carbon carries a positive charge [3].</div>
+
+<h4>(v)</h4>
+<p><strong>Q:</strong> Explain how the intermediate is converted to 1,2-dichloroethane.</p>
+<div class="working"><strong>Answer:</strong> <strong>Cl⁻ attacks</strong> [3] <strong>the carbocation / bridged chloronium ion</strong> [3], adding to the other carbon to complete the addition.</div>
+
+<h4>(vi)</h4>
+<p><strong>Q:</strong> What inorganic molecule is eliminated when 1,2-dichloroethane is converted to the monomer for PVC?</p>
+<div class="working"><strong>Answer:</strong> The inorganic molecule eliminated is <strong>hydrogen chloride / HCl</strong> [3]. (1,2-dichloroethane → chloroethene (vinyl chloride) + HCl, then vinyl chloride polymerises to PVC.)</div>
+</div>
+</div>
+
+<!-- Q11 APPLIED -->
+<div class="q-section" id="q-q11">
+<div class="card">
+<h2>Q11: Environmental & Applied Chemistry <span class="marks-badge">50 marks</span></h2>
+
+<h3>(a) Water Quality <span class="marks-badge">18</span></h3>
+<h4>(i)</h4>
+<p><strong>Q:</strong> What is meant by total hardness of water?</p>
+<div class="working"><strong>Answer:</strong> <strong>Temporary hardness and permanent hardness / all calcium ions and all magnesium ions</strong> [3].</div>
+
+<h4>(ii)</h4>
+<p><strong>Q:</strong> Give the full name of EDTA.</p>
+<div class="working"><strong>Answer:</strong> <strong>Ethylenediaminetetraacetic acid</strong> [3].</div>
+
+<h4>(iii)</h4>
+<p><strong>Q:</strong> Give one method of removing total hardness from water.</p>
+<div class="working"><strong>Answer:</strong> <strong>Ion-exchange / use of deioniser</strong> [3]. (Hard water passes through a resin that swaps Ca²⁺/Mg²⁺ for Na⁺ ions.)</div>
+
+<h4>(iv)</h4>
+<p><strong>Q:</strong> Describe a test for nitrate ions in water.</p>
+<div class="working"><strong>Answer:</strong> Add <strong>iron(II) sulfate solution / FeSO₄</strong> [2], then carefully add <strong>concentrated sulfuric acid / H₂SO₄</strong> [2]. A <strong>brown ring forms at the interface</strong> [2] if nitrates are present.</div>
+
+<h4>(v)</h4>
+<p><strong>Q:</strong> Name a technique used to measure the concentration of lead ions in water.</p>
+<div class="working"><strong>Answer:</strong> <strong>Atomic absorption spectrometry / AAS</strong> [2].</div>
+
+<h4>(vi)</h4>
+<p><strong>Q:</strong> Give one method of removing lead ions from water.</p>
+<div class="working"><strong>Answer:</strong> <strong>Precipitation / reverse osmosis</strong> [2].</div>
+
+<h4>(vii)</h4>
+<p><strong>Q:</strong> 5.0 L of 1% (w/v) NaOCl is diluted to 25 L. Calculate the concentration in ppm (mg/L).</p>
+<div class="working"><strong>Given:</strong> 5.0 L of 1% (w/v) NaOCl diluted to 25 L.<br>1% = 1 g per 100 cm³ = 10 g per L = 10,000 mg per L [2]<br>5 L contains 50,000 mg [2]<br>In 25 L: 50,000/25 = <strong>2000 ppm (mg per L)</strong> [2]</div>
+
+<h3>(b) Heat of Reaction Experiment <span class="marks-badge">18</span></h3>
+<p><strong>Reaction:</strong> HCl + NaOH → NaCl + H₂O (80 cm³ of 1.0 M each, ΔT = 6.8 K)</p>
+
+<h4>(i)</h4>
+<p><strong>Q:</strong> Why did the temperature of the solution rise during the reaction?</p>
+<div class="working"><strong>Answer:</strong> <strong>Heat released / exothermic reaction</strong> [3].</div>
+
+<h4>(ii)</h4>
+<p><strong>Q:</strong> What is meant by the heat of reaction?</p>
+<div class="working"><strong>Answer:</strong> The <strong>heat change</strong> [3] <strong>when the amounts in a balanced equation react completely</strong> [3].</div>
+
+<h4>(iii)</h4>
+<p><strong>Q:</strong> Calculate the number of moles of HCl used.</p>
+<div class="working">n = c × V / 1000 = 1.0 × 80/1000 = <strong>0.08 mol</strong> [6]</div>
+
+<h4>(iv)</h4>
+<p><strong>Q:</strong> Calculate the heat energy produced in the reaction using q = mcΔT.</p>
+<div class="working"><strong>Given:</strong> density = 1.0 g cm⁻³, specific heat = 4.2 kJ kg⁻¹ K⁻¹<br>Total volume = 80 + 80 = 160 cm³<br>Mass = 160 × 1.0 = 160 g = <strong>0.160 kg</strong> [2]<br>q = mcΔT = 0.160 × 4.2 × 6.8 [2]<br>= <strong>4.5696 kJ / 4569.6 J</strong> [2]</div>
+
+<h4>(v)</h4>
+<p><strong>Q:</strong> Calculate the enthalpy change (ΔH) per mole for this reaction.</p>
+<div class="working">ΔH = q / n = 4.5696 / 0.08 = <strong>57.12 kJ mol⁻¹</strong> [2]<br>Since exothermic: <strong>ΔH = -57.12 kJ mol⁻¹</strong> [2]</div>
+<div class="explain"><strong>Don't forget the minus sign!</strong> Exothermic reactions always have negative ΔH values.</div>
+
+<h3>(c) Radioactivity <span class="marks-badge">24</span></h3>
+<h4>(i)</h4>
+<p><strong>Q:</strong> Name the scientist(s) credited with the discovery of radium.</p>
+<div class="working"><strong>Answer:</strong> <strong>(Marie / Pierre) Curie</strong> [4].</div>
+
+<h4>(ii)</h4>
+<p><strong>Q:</strong> What is an alpha particle?</p>
+<div class="working"><strong>Answer:</strong> A particle consisting of <strong>2 protons and 2 neutrons / a helium nucleus</strong> [3].</div>
+
+<h4>(iii)</h4>
+<p><strong>Q:</strong> Identify the radioisotope formed when Ra-226 undergoes alpha decay.</p>
+<div class="working"><strong>Answer:</strong> <strong>Rn-222 / radon-222</strong> [3].<br>(226 - 4 = 222 mass number, 88 - 2 = 86 atomic number = radon)</div>
+
+<h4>(iv)</h4>
+<p><strong>Q:</strong> Explain why radium paint on a watch face is not dangerous to the wearer.</p>
+<div class="working"><strong>Answer:</strong> Alpha radiation has <strong>low penetrating ability</strong> [3]. It cannot pass through the watch glass or skin.</div>
+
+<h4>(v)</h4>
+<p><strong>Q:</strong> Why would a watch painted with radium 100 years ago still be considered hazardous?</p>
+<div class="working"><strong>Answer:</strong> Ra-226 has a <strong>long half-life (1600 years)</strong>, so <strong>very little of the sample will have decayed in 100 years</strong> [3]. It's still very radioactive.</div>
+
+<h4>(vi-viii) Nuclear Equation: ²²⁵Ra → ˣYZ + ⁰₋₁e</h4>
+<p><strong>Q:</strong> In the beta decay of Ra-225, find the values of X (mass number), Y (atomic number), and Z (element name).</p>
+<div class="working"><strong>X (mass number) = 225</strong> [3] (beta decay doesn't change mass number)<br><strong>Y (atomic number) = 89</strong> [3] (88 + 1 = 89, neutron → proton)<br><strong>Z (element) = Actinium / Ac</strong> [3]</div>
+
+<h3>(d) Options <span class="marks-badge">varies</span></h3>
+<p><em>Students choose Option A (Nitrogen Cycle) or Option B (Electrolysis).</em></p>
+
+<h4>Option A: Nitrogen Cycle</h4>
+<div class="working">
+(i) N₂ is chemically inert due to the <strong>triple bond</strong> (very strong, hard to break) [3]<br>
+(ii) Equations: <strong>N₂ + O₂ → 2NO</strong> [3+1+2] then <strong>2NO + O₂ → 2NO₂</strong> [3+1+2]<br>
+(iii) Acids formed: <strong>HNO₂ (nitrous acid)</strong> [3] and <strong>HNO₃ (nitric acid)</strong> [3]<br>
+(iv) Plants need nitrogen to <strong>make protein / DNA / amino acids</strong> [2]<br>
+(v) Nitrate recycling: <strong>denitrification by denitrifying bacteria</strong> [2]<br>
+(vi) Pathway: <strong>decay / decomposition / excretion</strong> [2]
+</div>
+
+<h4>Option B: Electrolysis of PbBr₂</h4>
+<div class="working">
+(i) Electrolysis: <strong>breaking down a chemical compound</strong> [2] <strong>using electricity</strong> [3]<br>
+(ii) Inert electrodes: <strong>graphite (C) / platinum (Pt)</strong> [3]<br>
+(iii) Solid vs molten: <strong>molten form conducts</strong> [3] because <strong>ions are free to move</strong> [3]<br>
+(iv) Oxidation: <strong>loss of electrons</strong> [3]<br>
+(v) Element at anode: <strong>bromine / Br₂</strong> [3]<br>
+(vi) Half-equation at anode: <strong>2Br⁻ → Br₂ + 2e⁻</strong> [3+1+2]
+</div>
+</div>
+</div>
+
+</div><!-- end study tab -->
+
+<!-- ====== FLASHCARDS TAB ====== -->
+<div class="tab-content" id="tab-flashcards">
+<h2>Flashcards</h2>
+<p>Click a card to reveal the answer. Filter by topic or shuffle.</p>
+
+<div class="flashcard-filter" id="fcFilter">
+<button class="active" onclick="fc.filter('all')">All Topics</button>
+<button onclick="fc.filter('atomic-structure')">Atomic Structure</button>
+<button onclick="fc.filter('bonding')">Bonding</button>
+<button onclick="fc.filter('acids-bases')">Acids & Bases</button>
+<button onclick="fc.filter('organic')">Organic</button>
+<button onclick="fc.filter('equilibrium')">Equilibrium</button>
+<button onclick="fc.filter('rates')">Rates</button>
+<button onclick="fc.filter('thermochemistry')">Thermochemistry</button>
+<button onclick="fc.filter('applied')">Applied</button>
+<button onclick="fc.filter('experiments')">Experiments</button>
+</div>
+
+<div class="flashcard-container" id="fcContainer">
+<div class="flashcard" onclick="fc.flip()">
+<div class="flashcard-face flashcard-front">
+<h3>TOPIC</h3>
+<p>Loading...</p>
+</div>
+<div class="flashcard-face flashcard-back">
+<p>Loading...</p>
+</div>
+</div>
+</div>
+
+<div class="flashcard-controls" id="fcControls">
+<button onclick="fc.prev()">Previous</button>
+<span id="fcCounter">0 / 0</span>
+<button onclick="fc.next()">Next</button>
+<button onclick="fc.shuffle()">Shuffle</button>
+</div>
+</div>
+
+<!-- ====== QUIZ TAB ====== -->
+<div class="tab-content" id="tab-quiz">
+<h2>Quiz Mode</h2>
+<p>Test your knowledge with multiple-choice questions. Select a topic or try all.</p>
+
+<div class="quiz-controls">
+<button onclick="quiz.start('all')">All Topics</button>
+<button onclick="quiz.start('atomic-structure')">Atomic Structure</button>
+<button onclick="quiz.start('bonding')">Bonding</button>
+<button onclick="quiz.start('acids-bases')">Acids & Bases</button>
+<button onclick="quiz.start('organic')">Organic</button>
+<button onclick="quiz.start('equilibrium')">Equilibrium</button>
+<button onclick="quiz.start('rates')">Rates</button>
+<button onclick="quiz.start('thermochemistry')">Thermochemistry</button>
+<button onclick="quiz.start('applied')">Applied</button>
+<button onclick="quiz.start('experiments')">Experiments</button>
+</div>
+
+<div id="quizArea"></div>
+
+<div class="quiz-score" id="quizScore" style="display:none">
+<h3>Quiz Complete!</h3>
+<p id="quizResult"></p>
+<button onclick="quiz.start('all')">Try Again</button>
+</div>
+</div>
+
+<!-- ====== PROGRESS TAB ====== -->
+<div class="tab-content" id="tab-progress">
+<h2>Your Progress</h2>
+<p>Track your study sessions and quiz scores for Chemistry.</p>
+
+<div class="progress-dashboard">
+<div class="progress-stats">
+<div class="stat-card">
+<div class="stat-number" id="progTopics">0</div>
+<div class="stat-label">Topics Studied</div>
+</div>
+<div class="stat-card">
+<div class="stat-number" id="progQuizzes">0</div>
+<div class="stat-label">Quizzes Done</div>
+</div>
+<div class="stat-card">
+<div class="stat-number" id="progAvg">-</div>
+<div class="stat-label">Avg Score</div>
+</div>
+</div>
+
+<h3>Recent Quiz Results</h3>
+<div id="quizHistory"><p>No quizzes completed yet. Head to the Quiz tab to test yourself!</p></div>
+
+<div style="margin-top:1.5rem;text-align:center">
+<button class="reset-btn" onclick="if(confirm('Reset all Chemistry progress? This cannot be undone.')){localStorage.removeItem('lcs_chemistry_progress');localStorage.removeItem('lcs_chemistry_quizzes');renderSubjectProgress();alert('Chemistry progress reset.')}">Reset Chemistry Progress</button>
+</div>
+</div>
+</div>
+
+</div><!-- end .content -->
+
+<script src="js/shared.js"></script>
+<script>
+// Progress rendering
+function renderSubjectProgress() {
+const p = LCS.getProgress('chemistry');
+let topics = 0;
+Object.keys(p).forEach(k => { if (k.startsWith('studied_') && !k.endsWith('_last')) topics++; });
+document.getElementById('progTopics').textContent = topics;
+
+const h = LCS.getQuizHistory('chemistry');
+document.getElementById('progQuizzes').textContent = h.length;
+if (h.length > 0) {
+const avg = Math.round(h.reduce((a, q) => a + q.pct, 0) / h.length);
+document.getElementById('progAvg').textContent = avg + '%';
+let qhtml = '<table><tr><th>Date</th><th>Time</th><th>Score</th><th>%</th></tr>';
+h.slice(-10).reverse().forEach(r => {
+qhtml += '<tr><td>' + r.date + '</td><td>' + r.time + '</td><td>' + r.score + '/' + r.total + '</td><td>' + r.pct + '%</td></tr>';
+});
+qhtml += '</table>';
+document.getElementById('quizHistory').innerHTML = qhtml;
+}
+}
+
+// FLASHCARD DATA
+const allCards=[
+// Atomic Structure
+{cat:'atomic-structure',q:'What is the atomic number?',a:'The number of PROTONS in the nucleus of an atom. It defines the element. E.g., Carbon always has 6 protons.'},
+{cat:'atomic-structure',q:'What is the mass number?',a:'The total number of PROTONS + NEUTRONS in the nucleus. Mass number - Atomic number = Number of neutrons.'},
+{cat:'atomic-structure',q:'What are isotopes?',a:'Atoms of the SAME element with the same number of protons but DIFFERENT numbers of neutrons. E.g., Carbon-12 and Carbon-14 both have 6 protons but 6 and 8 neutrons respectively.'},
+{cat:'atomic-structure',q:'What is Heisenberg\'s Uncertainty Principle?',a:'It is impossible to simultaneously know both the exact position and exact momentum (velocity) of an electron. The more precisely one is known, the less precisely the other can be determined.'},
+{cat:'atomic-structure',q:'What are the four quantum numbers?',a:'n (principal/energy level), l (angular momentum/sublevel shape: s,p,d,f), ml (magnetic/orbital orientation), ms (spin: +1/2 or -1/2).'},
+{cat:'atomic-structure',q:'State the Aufbau Principle.',a:'Electrons fill orbitals in order of increasing energy. The order is: 1s, 2s, 2p, 3s, 3p, 4s, 3d, 4p, 5s, 4d, 5p...'},
+{cat:'atomic-structure',q:'State Hund\'s Rule.',a:'When filling orbitals of equal energy (degenerate orbitals), electrons occupy them singly first, all with the same spin, before pairing up.'},
+{cat:'atomic-structure',q:'What is the electron configuration of Iron (Fe, Z=26)?',a:'1s² 2s² 2p⁶ 3s² 3p⁶ 3d⁶ 4s². Note: 4s fills before 3d (Aufbau), but when forming ions, 4s electrons are lost first.'},
+{cat:'atomic-structure',q:'What is the Pauli Exclusion Principle?',a:'No two electrons in the same atom can have the same set of four quantum numbers. Each orbital can hold a maximum of 2 electrons, and they must have opposite spins.'},
+
+// Bonding
+{cat:'bonding',q:'What is an ionic bond?',a:'The electrostatic attraction between oppositely charged ions, formed when one atom TRANSFERS electrons to another. Typically between metals (lose e⁻) and non-metals (gain e⁻). E.g., NaCl.'},
+{cat:'bonding',q:'What is a covalent bond?',a:'A bond formed by the SHARING of a pair of electrons between two atoms. Each atom contributes one electron to the shared pair. Typically between non-metals. E.g., H₂, H₂O.'},
+{cat:'bonding',q:'What is electronegativity?',a:'The relative attraction that an atom in a molecule has for the shared pair of electrons in a covalent bond. Fluorine is the most electronegative element. Increases across a period, decreases down a group.'},
+{cat:'bonding',q:'What is a dative (coordinate) bond?',a:'A covalent bond where BOTH shared electrons come from the SAME atom. The atom donating the pair must have a lone pair. E.g., NH₄⁺ (ammonia donates lone pair to H⁺), H₃O⁺.'},
+{cat:'bonding',q:'What are van der Waals forces?',a:'Weak intermolecular forces caused by temporary dipoles from the random movement of electrons. Present in ALL molecules. Strength increases with molecular size (more electrons = stronger temporary dipoles).'},
+{cat:'bonding',q:'Explain the shape of a water molecule.',a:'Water has 2 bonding pairs and 2 lone pairs around oxygen. VSEPR theory: lone pairs repel more than bonding pairs, compressing the bond angle from 109.5° (tetrahedral) to 104.5°. Shape: bent/V-shaped.'},
+{cat:'bonding',q:'Why does diamond have a high melting point?',a:'Diamond is a covalent crystal (network solid). Each carbon is bonded to 4 others in a tetrahedral arrangement with strong covalent bonds throughout. Breaking these requires enormous energy.'},
+
+// Acids & Bases
+{cat:'acids-bases',q:'Define an acid (Brønsted-Lowry).',a:'A proton (H⁺) DONOR. An acid donates a proton to a base. E.g., HCl donates H⁺ to water: HCl + H₂O → H₃O⁺ + Cl⁻.'},
+{cat:'acids-bases',q:'Define a base (Brønsted-Lowry).',a:'A proton (H⁺) ACCEPTOR. A base accepts a proton from an acid. E.g., NH₃ accepts H⁺ from water: NH₃ + H₂O → NH₄⁺ + OH⁻.'},
+{cat:'acids-bases',q:'What is a conjugate acid-base pair?',a:'Two species that differ by one proton (H⁺). When an acid donates H⁺, it becomes its conjugate base. When a base accepts H⁺, it becomes its conjugate acid. E.g., HCl/Cl⁻ and H₂O/H₃O⁺.'},
+{cat:'acids-bases',q:'What is pH?',a:'pH = -log₁₀[H⁺]. It measures the concentration of hydrogen ions. pH 7 = neutral, below 7 = acidic, above 7 = basic. Each pH unit is a 10-fold change in [H⁺].'},
+{cat:'acids-bases',q:'What is a buffer solution?',a:'A solution that resists changes in pH when small amounts of acid or base are added. Made from a weak acid + its salt (e.g., ethanoic acid + sodium ethanoate) or a weak base + its salt.'},
+{cat:'acids-bases',q:'What is the equivalence point in a titration?',a:'The point where the moles of acid exactly equal the moles of base — the reaction is complete. Detected by a colour change in the indicator.'},
+{cat:'acids-bases',q:'What indicator is used for strong acid + strong base titration?',a:'Any common indicator works (e.g., methyl orange or phenolphthalein) because the pH change at the equivalence point is very sharp (pH jumps from ~4 to ~10).'},
+
+// Organic Chemistry
+{cat:'organic',q:'What is a homologous series?',a:'A family of organic compounds with the same general formula, same functional group, similar chemical properties, and a gradual change in physical properties as chain length increases. Each member differs by CH₂.'},
+{cat:'organic',q:'What is the difference between an alkane and an alkene?',a:'Alkanes (CₙH₂ₙ₊₂) have only SINGLE bonds — they are saturated. Alkenes (CₙH₂ₙ) have at least one C=C DOUBLE bond — they are unsaturated. Alkenes are more reactive (addition reactions at the double bond).'},
+{cat:'organic',q:'How do you test for unsaturation?',a:'Add bromine water (brown/orange). If it DECOLOURISES, the compound is unsaturated (contains C=C). The bromine adds across the double bond (addition reaction). Alkanes do NOT decolourise bromine water.'},
+{cat:'organic',q:'What is an ester?',a:'Formed when a carboxylic acid reacts with an alcohol in the presence of an acid catalyst (H₂SO₄). The reaction is called esterification. Esters have fruity smells and are used in flavourings and perfumes.'},
+{cat:'organic',q:'What is a structural isomer?',a:'Compounds with the same molecular formula but different structural arrangements. E.g., butane and methylpropane are both C₄H₁₀ but have different structures and slightly different properties.'},
+{cat:'organic',q:'What is addition polymerisation?',a:'Many small unsaturated monomer molecules (with C=C) join together to form a long chain polymer. The double bond opens up to form single bonds linking monomers. E.g., ethene → polyethene.'},
+
+// Equilibrium
+{cat:'equilibrium',q:'What is Le Chatelier\'s Principle?',a:'If a system at equilibrium is disturbed (change in concentration, temperature, or pressure), the system shifts to COUNTERACT the change and restore equilibrium.'},
+{cat:'equilibrium',q:'What is Kc?',a:'The equilibrium constant in terms of concentrations. For aA + bB ⇌ cC + dD: Kc = [C]ᶜ[D]ᵈ / [A]ᵃ[B]ᵇ. A large Kc means products are favoured; a small Kc means reactants are favoured.'},
+{cat:'equilibrium',q:'How does temperature affect equilibrium?',a:'Increasing temperature favours the ENDOTHERMIC direction. Decreasing temperature favours the EXOTHERMIC direction. Temperature is the only factor that changes the value of Kc.'},
+{cat:'equilibrium',q:'What happens when you increase pressure on a gaseous equilibrium?',a:'The equilibrium shifts to the side with FEWER moles of gas, to reduce pressure. If moles are equal on both sides, pressure has no effect.'},
+
+// Rates of Reaction
+{cat:'rates',q:'What is a catalyst?',a:'A substance that increases the rate of a reaction by providing an alternative pathway with LOWER activation energy. It is not consumed in the reaction — it is recovered unchanged at the end.'},
+{cat:'rates',q:'Name 5 factors that affect rate of reaction.',a:'1. Temperature (higher = faster). 2. Concentration (higher = faster). 3. Surface area (larger = faster). 4. Catalyst (lowers Ea). 5. Nature of reactants.'},
+{cat:'rates',q:'How does temperature increase reaction rate?',a:'Higher temperature means particles move faster with more kinetic energy. More particles exceed the activation energy. More frequent AND more energetic collisions = faster reaction.'},
+
+// Thermochemistry
+{cat:'thermochemistry',q:'What is Hess\'s Law?',a:'The enthalpy change for a reaction is the same regardless of the route taken, as long as the initial and final conditions are the same. It is a consequence of the conservation of energy.'},
+{cat:'thermochemistry',q:'What is enthalpy of formation?',a:'The enthalpy change when ONE MOLE of a compound is formed from its elements in their standard states. Standard conditions: 25°C, 1 atm. Symbol: ΔHf.'},
+{cat:'thermochemistry',q:'What is bond energy?',a:'The energy required to break ONE MOLE of a particular bond in the gaseous state. Breaking bonds is ENDOTHERMIC (+). Forming bonds is EXOTHERMIC (-). ΔH = Σ(bonds broken) - Σ(bonds formed).'},
+{cat:'thermochemistry',q:'What is an exothermic reaction?',a:'A reaction that RELEASES heat to the surroundings. ΔH is negative. Products have less energy than reactants. E.g., combustion, neutralisation. Temperature of surroundings increases.'},
+{cat:'thermochemistry',q:'What is calorimetry?',a:'Measuring enthalpy changes using q = mcΔT. q = heat energy (J), m = mass of water (g), c = specific heat capacity of water (4.18 J/g/°C), ΔT = temperature change.'},
+
+// Applied Chemistry
+{cat:'applied',q:'What is the Haber Process?',a:'Industrial manufacture of ammonia: N₂ + 3H₂ ⇌ 2NH₃. Conditions: 450°C, 200 atm, iron catalyst. A compromise between rate and yield. Used to make fertilisers.'},
+{cat:'applied',q:'What is the Contact Process?',a:'Industrial manufacture of sulfuric acid (H₂SO₄). Key step: 2SO₂ + O₂ ⇌ 2SO₃ using a V₂O₅ catalyst at 450°C and 2 atm. SO₃ is then absorbed in H₂SO₄ to make oleum.'},
+{cat:'applied',q:'How does hard water form?',a:'Water dissolves CO₂ from air to form carbonic acid (H₂CO₃). This weak acid reacts with limestone (CaCO₃) to form soluble calcium hydrogencarbonate Ca(HCO₃)₂, making the water hard.'},
+{cat:'applied',q:'What is water treatment?',a:'Steps: 1. Screening (remove large debris). 2. Settling/flocculation (aluminium sulfate). 3. Filtration (sand bed). 4. Chlorination (kill bacteria). 5. Fluoridation (dental health, 1ppm).'},
+
+// Experiments
+{cat:'experiments',q:'How do you carry out a titration?',a:'1. Rinse burette with solution, fill and record initial reading. 2. Pipette 25mL of other solution into conical flask. 3. Add indicator. 4. Add from burette drop by drop near endpoint. 5. Record final reading. 6. Repeat for concordant results (within 0.1mL).'},
+{cat:'experiments',q:'What is a primary standard?',a:'A substance of known high purity, stable, soluble, has a high molar mass (to reduce weighing errors), and does not absorb water. E.g., anhydrous sodium carbonate (Na₂CO₃). Used to standardise solutions.'},
+{cat:'experiments',q:'How do you measure the rate of reaction?',a:'Methods: 1. Gas collection (measure volume of gas over time). 2. Loss in mass (weigh flask over time as gas escapes). 3. Colour change/turbidity (disappearing cross with Na₂S₂O₃ and HCl). Plot results vs time.'},
+{cat:'experiments',q:'What is a flame test?',a:'Dip a clean nichrome wire in HCl, then into the sample, hold in a Bunsen flame. Colours: Li=red, Na=yellow, K=lilac, Cu=blue-green, Ca=brick red, Ba=green, Sr=crimson.'},
+{cat:'experiments',q:'How do you prepare a standard solution?',a:'1. Calculate mass of solute needed (using c=n/V, n=m/M). 2. Weigh accurately on a balance. 3. Dissolve in some distilled water. 4. Transfer to a volumetric flask with washings. 5. Make up to the mark with distilled water. 6. Stopper and invert to mix.'},
+];
+
+// Initialize FlashcardEngine with shared class
+const fc = new FlashcardEngine(allCards, 'fcContainer', 'fcControls', 'fcCounter', 'fcFilter');
+
+// QUIZ DATA
+const quizQuestions=[
+// Atomic Structure
+{topic:'atomic-structure',type:'mc',q:'What is the atomic number of an element?',options:['Number of neutrons','Number of protons','Number of electrons','Mass number'],correct:1,explain:'The atomic number is the number of PROTONS in the nucleus. It defines the element and determines its position in the periodic table.'},
+{topic:'atomic-structure',type:'mc',q:'Isotopes of an element have:',options:['Same mass number, different atomic number','Same number of protons, different number of neutrons','Same number of neutrons, different number of protons','Different numbers of electrons'],correct:1,explain:'Isotopes have the SAME number of protons (same element) but DIFFERENT numbers of neutrons (different mass numbers).'},
+{topic:'atomic-structure',type:'mc',q:'Which quantum number describes the shape of an orbital?',options:['n (principal)','l (angular momentum)','ml (magnetic)','ms (spin)'],correct:1,explain:'The angular momentum quantum number (l) determines the shape: l=0 is s (spherical), l=1 is p (dumbbell), l=2 is d (cloverleaf).'},
+{topic:'atomic-structure',type:'mc',q:'According to the Aufbau Principle, which orbital fills BEFORE 3d?',options:['3p','4s','4p','5s'],correct:1,explain:'The filling order is 1s, 2s, 2p, 3s, 3p, 4s, 3d. The 4s orbital is lower in energy than 3d, so it fills first.'},
+{topic:'atomic-structure',type:'mc',q:'What is the maximum number of electrons in the 3rd energy level?',options:['8','18','2','32'],correct:1,explain:'Max electrons = 2n². For n=3: 2(3²) = 18. These fill the 3s (2), 3p (6), and 3d (10) sublevels.'},
+
+// Bonding
+{topic:'bonding',type:'mc',q:'Which type of bonding occurs in NaCl?',options:['Covalent','Ionic','Metallic','Van der Waals'],correct:1,explain:'NaCl is formed by the transfer of an electron from Na (metal) to Cl (non-metal), creating Na⁺ and Cl⁻ ions held together by ionic bonding.'},
+{topic:'bonding',type:'mc',q:'The shape of a methane (CH₄) molecule is:',options:['Linear','Trigonal planar','Tetrahedral','Bent'],correct:2,explain:'Carbon has 4 bonding pairs and 0 lone pairs. VSEPR theory predicts a tetrahedral shape with bond angles of 109.5°.'},
+{topic:'bonding',type:'mc',q:'A dative bond differs from a normal covalent bond because:',options:['It involves ionic attraction','Both electrons come from the same atom','It is weaker','It only occurs in metals'],correct:1,explain:'In a dative (coordinate) bond, BOTH shared electrons are donated by ONE atom (using a lone pair), rather than one electron from each atom.'},
+
+// Acids & Bases
+{topic:'acids-bases',type:'mc',q:'According to Brønsted-Lowry theory, an acid is:',options:['An electron acceptor','A proton acceptor','A proton donor','A hydroxide producer'],correct:2,explain:'Brønsted-Lowry defines an acid as a proton (H⁺) DONOR. It donates a proton to a base.'},
+{topic:'acids-bases',type:'mc',q:'What is the pH of a 0.01 M HCl solution?',options:['1','2','3','4'],correct:1,explain:'pH = -log₁₀[H⁺]. HCl is a strong acid, fully dissociated: [H⁺] = 0.01 M = 10⁻². pH = -log(10⁻²) = 2.'},
+{topic:'acids-bases',type:'mc',q:'In the reaction NH₃ + HCl → NH₄Cl, the conjugate acid of NH₃ is:',options:['HCl','Cl⁻','NH₄⁺','NH₂⁻'],correct:2,explain:'NH₃ accepts a proton (H⁺) from HCl to become NH₄⁺. The conjugate acid is formed when a base gains a proton.'},
+
+// Organic Chemistry
+{topic:'organic',type:'mc',q:'The general formula for alkenes is:',options:['CₙH₂ₙ₊₂','CₙH₂ₙ','CₙH₂ₙ₋₂','CₙHₙ'],correct:1,explain:'Alkenes have the general formula CₙH₂ₙ. They contain one C=C double bond and are unsaturated.'},
+{topic:'organic',type:'mc',q:'What type of reaction occurs when bromine water is added to ethene?',options:['Substitution','Addition','Elimination','Combustion'],correct:1,explain:'Bromine adds across the C=C double bond in an addition reaction. The double bond breaks to form two single bonds with bromine. Br₂ decolourises.'},
+{topic:'organic',type:'mc',q:'Ethanol can be made by fermentation. What conditions are needed?',options:['High temperature, high pressure, iron catalyst','Room temperature, yeast, anaerobic conditions','UV light and chlorine gas','Concentrated H₂SO₄ at 170°C'],correct:1,explain:'Fermentation uses yeast (enzyme zymase) in anaerobic conditions at ~37°C to convert glucose to ethanol and CO₂. C₆H₁₂O₆ → 2C₂H₅OH + 2CO₂.'},
+{topic:'organic',type:'mc',q:'An ester is formed from:',options:['An alcohol + an alkene','A carboxylic acid + an alcohol','Two alcohols','An acid + a base'],correct:1,explain:'Esterification: carboxylic acid + alcohol → ester + water. An acid catalyst (H₂SO₄) is needed. E.g., ethanoic acid + ethanol → ethyl ethanoate + water.'},
+
+// Equilibrium
+{topic:'equilibrium',type:'mc',q:'For N₂ + 3H₂ ⇌ 2NH₃ (exothermic), increasing temperature will:',options:['Increase yield of NH₃','Decrease yield of NH₃','Have no effect','Stop the reaction'],correct:1,explain:'The forward reaction is exothermic. Increasing temperature shifts equilibrium to the ENDOTHERMIC (reverse) direction to absorb the extra heat. Less NH₃ is produced.'},
+{topic:'equilibrium',type:'mc',q:'Adding a catalyst to a system at equilibrium:',options:['Shifts equilibrium to the right','Shifts equilibrium to the left','Increases rate but does not change equilibrium position','Changes the value of Kc'],correct:2,explain:'A catalyst speeds up BOTH forward and reverse reactions equally. It reaches equilibrium faster but the position (and Kc) is unchanged.'},
+{topic:'equilibrium',type:'mc',q:'Increasing pressure on N₂(g) + 3H₂(g) ⇌ 2NH₃(g) shifts equilibrium:',options:['To the left (4 moles of gas)','To the right (2 moles of gas)','No effect','Depends on temperature'],correct:1,explain:'Increasing pressure shifts equilibrium to the side with FEWER moles of gas. Left side has 4 moles (1+3), right side has 2 moles. So equilibrium shifts RIGHT, producing more NH₃.'},
+
+// Rates
+{topic:'rates',type:'mc',q:'Which factor does NOT affect the rate of reaction?',options:['Temperature','Concentration','Enthalpy change','Surface area'],correct:2,explain:'Rate depends on temperature, concentration, surface area, catalyst, and nature of reactants. Enthalpy change (ΔH) tells you the overall energy change but does NOT determine how fast the reaction occurs.'},
+{topic:'rates',type:'mc',q:'A catalyst increases rate by:',options:['Increasing the temperature','Providing an alternative pathway with lower activation energy','Increasing the concentration of reactants','Making the reaction more exothermic'],correct:1,explain:'A catalyst provides an alternative reaction pathway with a LOWER activation energy (Ea). More particles can exceed this lower Ea, so more successful collisions occur per second.'},
+
+// Thermochemistry
+{topic:'thermochemistry',type:'mc',q:'In an exothermic reaction, ΔH is:',options:['Positive','Negative','Zero','Cannot be determined'],correct:1,explain:'Exothermic reactions RELEASE energy to the surroundings, so the products have less energy than reactants. Energy is lost from the system, giving a negative ΔH.'},
+{topic:'thermochemistry',type:'mc',q:'Using q = mcΔT: 100g of water heated from 20°C to 45°C. q = ?',options:['2,090 J','10,450 J','18,810 J','4,180 J'],correct:1,explain:'q = mcΔT = 100 × 4.18 × (45-20) = 100 × 4.18 × 25 = 10,450 J (or 10.45 kJ).'},
+{topic:'thermochemistry',type:'mc',q:'According to Hess\'s Law, the enthalpy change depends on:',options:['The route taken','The initial and final states only','The catalyst used','The rate of reaction'],correct:1,explain:'Hess\'s Law states that ΔH depends ONLY on the initial and final states, not the route. This allows us to calculate ΔH for reactions that are difficult to measure directly.'},
+
+// Applied Chemistry
+{topic:'applied',type:'mc',q:'In the Haber Process, the catalyst used is:',options:['Vanadium pentoxide','Platinum','Iron','Nickel'],correct:2,explain:'The Haber Process (N₂ + 3H₂ ⇌ 2NH₃) uses an IRON catalyst at 450°C and 200 atm. V₂O₅ is used in the Contact Process.'},
+{topic:'applied',type:'mc',q:'What causes temporary hardness in water?',options:['Dissolved NaCl','Dissolved Ca(HCO₃)₂','Dissolved CaSO₄','Dissolved CO₂'],correct:1,explain:'Temporary hardness is caused by dissolved calcium hydrogencarbonate Ca(HCO₃)₂ (or magnesium equivalent). It can be removed by boiling, which decomposes it back to CaCO₃.'},
+
+// Experiments
+{topic:'experiments',type:'mc',q:'In a titration, concordant results should agree within:',options:['1.0 mL','0.5 mL','0.1 mL','0.01 mL'],correct:2,explain:'Concordant results in a titration should be within 0.1 mL (0.10 cm³) of each other. This ensures accuracy and reliability.'},
+{topic:'experiments',type:'mc',q:'A primary standard must be:',options:['A strong acid','Of known high purity, stable, soluble, high molar mass','Available from a pharmacy','A gas at room temperature'],correct:1,explain:'A primary standard must be of known high purity, stable (not hygroscopic), soluble in water, and have a high molar mass to reduce percentage error when weighing. E.g., Na₂CO₃.'},
+];
+
+// Initialize QuizEngine with shared class
+const quiz = new QuizEngine(quizQuestions, 'quizArea', 'quizScore', 'chemistry');
+
+// INIT
+document.addEventListener('DOMContentLoaded', function() {
+  quiz.start('all');
+  renderSubjectProgress();
+});
+</script>
+</body>
+</html>

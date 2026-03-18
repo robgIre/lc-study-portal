@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LC Economics - Higher Level Study Tool</title>
+<link rel="stylesheet" href="css/shared.css">
+</head>
+<body class="subject-economics">
+<header class="app-header">
+<div>
+<h1>LC Economics - Higher Level</h1>
+<p>2025 Exam Study Tool | Leaving Certificate Ireland</p>
+</div>
+<a href="index.html" class="home-link">&#8592; All Subjects</a>
+</header>
+<nav id="mainNav">
+<button class="active" onclick="showTab('study','economics')">Study</button>
+<button onclick="showTab('flashcards','economics')">Flashcards</button>
+<button onclick="showTab('quiz','economics')">Quiz</button>
+<button onclick="showTab('strategy','economics')">Exam Strategy</button>
+<button onclick="showTab('marks','economics')">Mark Decoder</button>
+<button onclick="showTab('glossary','economics')">Glossary</button>
+<button onclick="showTab('concepts','economics')">Key Concepts</button>
+<button onclick="showTab('progress','economics')">Progress</button>
+</nav>
+
+<!-- EXAM STRATEGY TAB -->
+<div id="tab-strategy" class="tab-content">
+<div class="card">
+<h2>Exam Paper Structure</h2>
+<p>The LC Economics Higher Level exam is <strong>2.5 hours</strong> (9:30am-12:00pm) for <strong>400 marks</strong>.</p>
+<table>
+<tr><th>Section</th><th>Questions</th><th>Marks</th><th>Notes</th></tr>
+<tr><td><strong>Section A</strong></td><td>Answer 8 from 10</td><td>100 marks</td><td>Short response questions (12.5 marks each). Questions 2, 3, 4 have internal choice.</td></tr>
+<tr><td><strong>Section B</strong></td><td>Answer 4 from 6</td><td>300 marks</td><td>Extended response questions (75 marks each). More detailed answers required.</td></tr>
+</table>
+<p style="margin-top:1rem"><strong>Key point:</strong> Section A = quick marks. Section B = detailed analysis and discussion.</p>
+</div>
+
+<div class="card">
+<h2>Time Management</h2>
+<p>You get <strong>150 minutes</strong> for <strong>400 marks</strong>.</p>
+<div class="formula-box">
+<div class="formula">Section A: 8 questions × 12.5 marks = ~7 mins each | Section B: 4 questions × 75 marks = ~20 mins each</div>
+</div>
+
+<h3>Suggested Time Plan</h3>
+<div class="time-block"><span class="time">9:30</span><span>Read full paper, select 8 Section A + 4 Section B questions (5 min)</span></div>
+<div class="time-block"><span class="time">9:35</span><span>Section A - Question 1 (7 min)</span></div>
+<div class="time-block"><span class="time">9:42</span><span>Section A - Questions 2-8 (7 min each = 49 min total)</span></div>
+<div class="time-block"><span class="time">10:31</span><span>Section B - Question 11 (20 min)</span></div>
+<div class="time-block"><span class="time">10:51</span><span>Section B - Question 12 (20 min)</span></div>
+<div class="time-block"><span class="time">11:11</span><span>Section B - Question 13 (20 min)</span></div>
+<div class="time-block"><span class="time">11:31</span><span>Section B - Question 14, 15, or 16 (20 min)</span></div>
+<div class="time-block"><span class="time">11:51</span><span>Review and add detail (9 min)</span></div>
+</div>
+
+<div class="card">
+<h2>Top Exam Tips</h2>
+<div class="explain"><strong>1. Use economic terminology.</strong> "Opportunity cost" not "what you give up". "Demand-pull inflation" not "prices go up because people buy more".</div>
+<div class="explain"><strong>2. Show workings in calculations.</strong> Formula first, then substitution, then answer. Partial credit for correct method even if answer is wrong.</div>
+<div class="explain"><strong>3. Use data from charts/tables.</strong> When answering about trends, cite specific numbers: "CPI fell from 9.1% in January to 4.8% in June".</div>
+<div class="explain"><strong>4. Justify opinion questions.</strong> When asked "Do you agree or disagree?", pick one side and give strong economic reasoning. No marks for fence-sitting.</div>
+<div class="explain"><strong>5. Answer the question asked.</strong> "Outline one reason" = one reason only. Two reasons risks cancellation if one is wrong.</div>
+<div class="explain"><strong>6. Know current Irish economic data.</strong> Budget 2025, minimum wage (€13.50), key policy measures, inflation trends.</div>
+<div class="explain"><strong>7. Use descriptor marking to your advantage.</strong> In-depth knowledge + relates to question + concise + logical = full marks.</div>
+</div>
+
+<div class="card">
+<h2>Section A Strategy (100 marks)</h2>
+<table>
+<tr><th>Q</th><th>Topic</th><th>Marks</th><th>Advice</th></tr>
+<tr><td>Q1</td><td>Current events + definitions</td><td>12.5</td><td>Usually topical (Euro 2024, cost benefit analysis). Balanced arguments required.</td></tr>
+<tr><td>Q2</td><td>Data analysis (CSO)</td><td>12.5</td><td>Calculation + economic factors. Show workings. Internal choice (b) or (c).</td></tr>
+<tr><td>Q3</td><td>Trade / international</td><td>12.5</td><td>Brexit, tariffs, protectionism. Internal choice (b) or (c).</td></tr>
+<tr><td>Q4</td><td>Inflation / CPI</td><td>12.5</td><td>Trend analysis + government/consumer responses. Internal choice (b) or (c).</td></tr>
+<tr><td>Q5</td><td>Positive vs normative</td><td>12.5</td><td>Definitions + classification of statements. Learn the difference!</td></tr>
+<tr><td>Q6</td><td>Price floor / labour market</td><td>12.5</td><td>Diagram completion + explanation. Minimum wage is classic price floor.</td></tr>
+<tr><td>Q7</td><td>Income elasticity / merit goods</td><td>12.5</td><td>YED interpretation + definitions. Know necessity vs luxury.</td></tr>
+<tr><td>Q8</td><td>Environmental sustainability</td><td>12.5</td><td>Definition + government initiative + market failure from greenwashing.</td></tr>
+<tr><td>Q9</td><td>Market structures (oligopoly)</td><td>12.5</td><td>Label diagrams + explain kinked demand curve.</td></tr>
+<tr><td>Q10</td><td>Economic cycle</td><td>12.5</td><td>Identify boom/recession + factors (2008-2011 financial crisis).</td></tr>
+</table>
+</div>
+
+<div class="card">
+<h2>Section B Strategy (300 marks)</h2>
+<table>
+<tr><th>Q</th><th>Topic</th><th>Marks</th><th>Advice</th></tr>
+<tr><td>Q11</td><td>Market structures: HHI, monopoly, healthcare</td><td>75</td><td>Calculations + diagrams + mixed economy. Know how to calculate HHI.</td></tr>
+<tr><td>Q12</td><td>Government: debt, taxation, pensions</td><td>75</td><td>Trends, advantages, progressive vs regressive tax, multiplier effect.</td></tr>
+<tr><td>Q13</td><td>International trade: exports, FDI, ODA</td><td>75</td><td>Calculations, comparative advantage, WTO functions.</td></tr>
+<tr><td>Q14</td><td>Markets: online shopping, D&S, gig economy</td><td>75</td><td>Draw supply/demand diagram, calculate PED, full employment effects.</td></tr>
+<tr><td>Q15</td><td>Money & banking: cash, property prices, infrastructure</td><td>75</td><td>Credit creation, RPPI calculations, public infrastructure importance.</td></tr>
+<tr><td>Q16</td><td>Costs & production: LRAC, entrepreneurship</td><td>75</td><td>Cost calculations, economies/diseconomies of scale, diagrams.</td></tr>
+</table>
+</div>
+</div>
+
+<!-- KEY CONCEPTS TAB -->
+<div id="tab-concepts" class="tab-content">
+<div class="card">
+<h2>Key Economic Diagrams & Models</h2>
+<p>Essential diagrams you need to draw and label in the exam.</p>
+</div>
+
+<div class="card">
+<h3>Supply and Demand</h3>
+<div class="formula-box">
+<strong>Equilibrium</strong>
+<p>Draw axes (Price vertical, Quantity horizontal). Supply curve slopes upward (S), Demand curve slopes downward (D). They intersect at equilibrium point E, with equilibrium price (Pe) and quantity (Qe).</p>
+<p><strong>Shifts:</strong> Increase in demand = D curve shifts RIGHT. Increase in supply = S curve shifts RIGHT.</p>
+</div>
+</div>
+
+<div class="card">
+<h3>Price Floor (Minimum Wage)</h3>
+<div class="formula-box">
+<p>Labour market: Wage rate (vertical axis), Quantity of workers (horizontal). Supply of labour (SL) slopes up, Demand for labour (DL) slopes down.</p>
+<p><strong>Price floor (NMW):</strong> Horizontal line ABOVE equilibrium. At this wage: Qs > Qd = unemployment gap (excess supply of labour).</p>
+</div>
+</div>
+
+<div class="card">
+<h3>Long Run Average Cost (LRAC)</h3>
+<div class="formula-box">
+<p>Costs (vertical), Quantity (horizontal). Draw multiple U-shaped SRAC curves. LRAC curve is the "envelope" touching the bottom of each SRAC.</p>
+<p><strong>Downward slope:</strong> Economies of scale (lower average costs as output increases).</p>
+<p><strong>Upward slope:</strong> Diseconomies of scale (higher average costs due to coordination problems, communication issues).</p>
+</div>
+</div>
+
+<div class="card">
+<h3>Monopoly Long Run Equilibrium</h3>
+<div class="formula-box">
+<p>Price/Cost (vertical), Quantity (horizontal). Draw: Demand (D), Marginal Revenue (MR, below D), Marginal Cost (MC), Average Cost (AC).</p>
+<p><strong>Equilibrium:</strong> Where MC = MR. Draw vertical line up to Demand curve for price (P1), down to quantity (Q1). Mark AC at Q1. Profit = area between P1 and AC.</p>
+<p><strong>Key feature:</strong> Price > MC (allocative inefficiency). Supernormal profit in long run due to barriers to entry.</p>
+</div>
+</div>
+
+<div class="card">
+<h3>Oligopoly - Kinked Demand Curve</h3>
+<div class="formula-box">
+<p>Price (vertical), Quantity (horizontal). Demand curve has a KINK at current price P1. Above P1 it's elastic (competitors don't follow price increase). Below P1 it's inelastic (competitors match price decrease).</p>
+<p><strong>MR curve:</strong> Has a vertical discontinuity (gap) at the kink point. This explains price rigidity in oligopolies.</p>
+</div>
+</div>
+
+<div class="card">
+<h3>Economic Cycle</h3>
+<div class="formula-box">
+<p>Output/Real GDP (vertical), Time (horizontal). Wavy line showing peaks (boom) and troughs (recession).</p>
+<p><strong>Boom:</strong> Rising output, low unemployment, high consumer confidence, inflationary pressure.</p>
+<p><strong>Recession:</strong> Falling output, rising unemployment, low confidence, deflationary pressure.</p>
+<p><strong>Ireland 2008-2011:</strong> Deep recession due to banking crisis, property collapse, government debt crisis.</p>
+</div>
+</div>
+
+<div class="card">
+<h3>Key Formulas</h3>
+<div class="formula-box"><strong>Percentage Savings Rate</strong><div class="formula">(Household Savings / Household Disposable Income) × 100</div></div>
+<div class="formula-box"><strong>Herfindahl-Hirschman Index (HHI)</strong><div class="formula">Sum of squared market shares: (s₁)² + (s₂)² + (s₃)² + ...</div><p>HHI < 1500 = competitive | HHI > 2500 = highly concentrated</p></div>
+<div class="formula-box"><strong>Price Elasticity of Demand (PED)</strong><div class="formula">PED = (% change in Qd) / (% change in P)</div><p>|PED| > 1 = elastic | |PED| < 1 = inelastic | |PED| = 1 = unit elastic</p></div>
+<div class="formula-box"><strong>Income Elasticity of Demand (YED)</strong><div class="formula">YED = (% change in Qd) / (% change in Income)</div><p>YED > 1 = luxury | 0 < YED < 1 = necessity | YED < 0 = inferior good</p></div>
+<div class="formula-box"><strong>Profit</strong><div class="formula">Profit = Total Revenue - Total Cost</div><div class="formula">TR = Price × Quantity | TC = Fixed Cost + Variable Cost</div></div>
+<div class="formula-box"><strong>Average Cost</strong><div class="formula">AC = Total Cost / Quantity</div></div>
+<div class="formula-box"><strong>Multiplier Effect</strong><div class="formula">k = 1 / (1 - MPC) or k = 1 / MPS</div><p>Lower MPC (higher savings) = smaller multiplier = less economic stimulus</p></div>
+</div>
+</div>
+
+<!-- GLOSSARY TAB -->
+<div id="tab-glossary" class="tab-content">
+<div class="card">
+<h2>Economics Glossary</h2>
+<p>Search for any term. All definitions in plain language.</p>
+<input type="text" class="glossary-search" id="glossarySearch" placeholder="Search terms..." oninput="filterGlossary()">
+</div>
+<div id="glossaryList">
+<dl>
+<div class="glossary-item"><dt>Cost Benefit Analysis</dt><dd>A method of weighing up whether the positive benefits of a project outweigh the associated costs, to decide whether it should proceed. For a project to go ahead, its benefits must equal or exceed its costs.</dd></div>
+<div class="glossary-item"><dt>Opportunity Cost</dt><dd>The next best alternative forgone when making a choice. What you give up to get something else. E.g., if you spend €100 on concert tickets, the opportunity cost is what else you could have bought with that €100.</dd></div>
+<div class="glossary-item"><dt>Scarcity</dt><dd>The fundamental economic problem: unlimited wants but limited resources. We cannot have everything we want, so we must make choices.</dd></div>
+<div class="glossary-item"><dt>Positive Economic Statement</dt><dd>An objective, fact-based statement that describes the world as it is. It can be tested or verified using evidence/data. E.g., "Raising corporation tax by 3% would reduce FDI by 25%".</dd></div>
+<div class="glossary-item"><dt>Normative Economic Statement</dt><dd>A subjective statement based on opinions or value judgments. It expresses what 'should' happen rather than what actually is happening. It cannot be tested using evidence. E.g., "All citizens deserve free healthcare".</dd></div>
+<div class="glossary-item"><dt>Price Floor</dt><dd>A legal minimum price below which a good or service cannot be sold, set and enforced by the government. Purpose: protect incomes, stabilise markets. E.g., national minimum wage (€13.50/hour).</dd></div>
+<div class="glossary-item"><dt>Price Ceiling</dt><dd>A legal maximum price above which a good or service cannot be sold. Purpose: make essential goods affordable. Can lead to shortages if set below equilibrium. E.g., rent controls.</dd></div>
+<div class="glossary-item"><dt>Demand</dt><dd>The quantity of a good or service that consumers are willing and able to buy at various prices over a given period. Law of demand: as price falls, quantity demanded rises (inverse relationship).</dd></div>
+<div class="glossary-item"><dt>Supply</dt><dd>The quantity of a good or service that producers are willing and able to produce at various prices over a given period. Law of supply: as price rises, quantity supplied rises (direct relationship).</dd></div>
+<div class="glossary-item"><dt>Equilibrium</dt><dd>The point where demand equals supply. At equilibrium price, quantity demanded = quantity supplied. No shortage or surplus. Market clears.</dd></div>
+<div class="glossary-item"><dt>Price Elasticity of Demand (PED)</dt><dd>The responsiveness of quantity demanded to a change in price. Elastic (|PED| > 1) = large response. Inelastic (|PED| < 1) = small response. Determined by: substitutes available, necessity vs luxury, proportion of income, time period.</dd></div>
+<div class="glossary-item"><dt>Income Elasticity of Demand (YED)</dt><dd>The responsiveness of quantity demanded to a change in income. Normal goods (YED > 0): demand rises as income rises. Inferior goods (YED < 0): demand falls as income rises. Luxury (YED > 1), Necessity (0 < YED < 1).</dd></div>
+<div class="glossary-item"><dt>Merit Good</dt><dd>A good that is under-consumed in a free market because individuals undervalue its benefits. Government intervenes to encourage consumption (subsidies, provision). E.g., education, healthcare, phone pouches in schools (reduce distraction, improve learning).</dd></div>
+<div class="glossary-item"><dt>Public Good</dt><dd>A good that is non-rivalrous (one person's use doesn't reduce availability for others) and non-excludable (can't prevent people from using it). E.g., street lighting, national defence. Free market won't provide them (free rider problem).</dd></div>
+<div class="glossary-item"><dt>Market Failure</dt><dd>When the free market fails to allocate resources efficiently. Causes: externalities, public goods, merit/demerit goods, imperfect information, monopoly power, inequality. Government intervention needed.</dd></div>
+<div class="glossary-item"><dt>Externality</dt><dd>A cost or benefit experienced by a third party not directly involved in an economic transaction. Negative externality (pollution, noise) = over-production. Positive externality (education, vaccination) = under-production.</dd></div>
+<div class="glossary-item"><dt>Greenwashing</dt><dd>A marketing practice where companies make false or exaggerated claims to appear more environmentally friendly than they actually are. Leads to market failure: imperfect information, consumer harm, genuine eco-products disadvantaged.</dd></div>
+<div class="glossary-item"><dt>Environmental Sustainability</dt><dd>Meeting the needs of the present without compromising the ability of future generations to meet their own needs. Balancing economic growth with environmental protection and resource conservation.</dd></div>
+<div class="glossary-item"><dt>Inflation</dt><dd>A sustained increase in the general price level over time. Purchasing power of money decreases. Measured by Consumer Price Index (CPI). Causes: demand-pull, cost-push.</dd></div>
+<div class="glossary-item"><dt>Demand-Pull Inflation</dt><dd>Inflation caused by excess demand in the economy. "Too much money chasing too few goods". Occurs when aggregate demand exceeds aggregate supply. Often in a boom.</dd></div>
+<div class="glossary-item"><dt>Cost-Push Inflation</dt><dd>Inflation caused by increases in production costs (wages, raw materials, energy). Producers pass higher costs on to consumers through higher prices. E.g., cocoa prices tripling → higher chocolate prices.</dd></div>
+<div class="glossary-item"><dt>Disinflation</dt><dd>A reduction in the rate of inflation. Prices are still rising, but more slowly. E.g., CPI falling from 9.1% to 4.8% = disinflation (not deflation).</dd></div>
+<div class="glossary-item"><dt>Deflation</dt><dd>A sustained decrease in the general price level. Negative inflation. Can be harmful: consumers delay purchases, businesses cut prices and wages, debt burden increases.</dd></div>
+<div class="glossary-item"><dt>Consumer Price Index (CPI)</dt><dd>A measure of the average change in prices paid by consumers for a basket of goods and services over time. Used to measure inflation. Year-on-year % change in CPI = inflation rate.</dd></div>
+<div class="glossary-item"><dt>Economic Boom</dt><dd>Phase of economic cycle with rising output, high employment, strong consumer/business confidence, rising wages and profits, inflationary pressure. Demand exceeds supply.</dd></div>
+<div class="glossary-item"><dt>Economic Recession</dt><dd>Two consecutive quarters of negative economic growth (falling Real GDP). Rising unemployment, falling consumer spending and business investment, low confidence, deflationary pressure.</dd></div>
+<div class="glossary-item"><dt>Unemployment</dt><dd>People of working age who are actively seeking work but cannot find employment. Types: cyclical (recession), structural (skills mismatch), frictional (between jobs), seasonal.</dd></div>
+<div class="glossary-item"><dt>Full Employment</dt><dd>When everyone who wants a job at the current wage rate can find one (except frictional/seasonal unemployment). Ireland has maintained near-full employment since 2022. Positive: higher incomes, tax revenue. Negative: wage inflation, labour shortages.</dd></div>
+<div class="glossary-item"><dt>Gig Economy</dt><dd>A labour market where short-term contracts or freelance work is widespread rather than permanent jobs. Workers have flexibility but less security. E.g., Deliveroo riders, Uber drivers. ~200,000 in Ireland.</dd></div>
+<div class="glossary-item"><dt>Monopoly</dt><dd>A market with only ONE seller/producer. Characteristics: high barriers to entry, price maker, supernormal profit in long run, allocative inefficiency (P > MC). E.g., patent-protected pharmaceutical drug.</dd></div>
+<div class="glossary-item"><dt>Oligopoly</dt><dd>A market dominated by a FEW large firms. Characteristics: interdependence, non-price competition, barriers to entry, kinked demand curve (price rigidity), collusion possible. E.g., mobile networks, supermarkets.</dd></div>
+<div class="glossary-item"><dt>Perfect Competition</dt><dd>A theoretical market with many buyers and sellers, identical products, perfect information, no barriers to entry/exit. Firms are price takers, zero supernormal profit in long run. E.g., agricultural markets (close approximation).</dd></div>
+<div class="glossary-item"><dt>Herfindahl-Hirschman Index (HHI)</dt><dd>A measure of market concentration. Sum of squared market shares. HHI < 1500 = competitive. HHI 1500-2500 = moderate concentration. HHI > 2500 = highly concentrated. Used by competition authorities.</dd></div>
+<div class="glossary-item"><dt>Barrier to Entry</dt><dd>Obstacles that prevent new firms from entering a market. Types: patents, high start-up costs, economies of scale, brand loyalty, control of resources, legal restrictions (licenses). Protect monopoly/oligopoly profits.</dd></div>
+<div class="glossary-item"><dt>Economies of Scale</dt><dd>Average costs fall as output increases. Causes: technical (large machinery), managerial (specialisation), purchasing (bulk discounts), financial (cheaper credit), marketing (spread costs). Shown by downward-sloping LRAC.</dd></div>
+<div class="glossary-item"><dt>Diseconomies of Scale</dt><dd>Average costs rise as output becomes too large. Causes: coordination problems, communication breakdown, low worker morale, managerial inefficiency. Shown by upward-sloping LRAC.</dd></div>
+<div class="glossary-item"><dt>Fixed Cost</dt><dd>Costs that do not change with output in the short run. Must be paid even if output is zero. E.g., rent, insurance, salaries. Total cost = Fixed cost + Variable cost.</dd></div>
+<div class="glossary-item"><dt>Variable Cost</dt><dd>Costs that change directly with output. Zero if output is zero. E.g., raw materials, hourly wages, electricity for production. Increase as more units produced.</dd></div>
+<div class="glossary-item"><dt>Average Cost</dt><dd>Total cost per unit of output. AC = Total Cost / Quantity. U-shaped curve: initially falls (economies of scale), then rises (diseconomies).</dd></div>
+<div class="glossary-item"><dt>Profit Maximisation</dt><dd>The objective of producing at the output level where the difference between total revenue and total cost is greatest. Occurs where MC = MR. But firms may have other objectives: sales maximisation, market share, satisficing, CSR.</dd></div>
+<div class="glossary-item"><dt>Entrepreneurship</dt><dd>The willingness to take risks, organise factors of production, and innovate to create new businesses. Important for economic growth: creates jobs, drives innovation, increases competition, generates tax revenue.</dd></div>
+<div class="glossary-item"><dt>Comparative Advantage</dt><dd>A country has comparative advantage in producing a good if it can produce it at a lower opportunity cost than other countries. Basis for specialisation and trade. Benefits: increased efficiency, higher output, lower prices, greater consumer choice.</dd></div>
+<div class="glossary-item"><dt>Free Trade</dt><dd>Trade between countries without tariffs, quotas, or other restrictions. Benefits: lower prices, greater variety, economies of scale, competition, efficient resource allocation. Ireland benefits hugely as small, open economy.</dd></div>
+<div class="glossary-item"><dt>Trade Protectionism</dt><dd>Government policies to restrict imports and protect domestic industries. Methods: tariffs, quotas, subsidies, standards, admin barriers. Reasons: protect jobs, infant industries, strategic sectors, reduce trade deficit. Costs: higher prices, retaliation, inefficiency.</dd></div>
+<div class="glossary-item"><dt>Tariff</dt><dd>A tax on imported goods. Raises price of imports, making domestic products more competitive. Revenue for government. But: consumers pay more, trading partners may retaliate. E.g., EU tariffs on Chinese EVs.</dd></div>
+<div class="glossary-item"><dt>Quota</dt><dd>A limit on the quantity of a good that can be imported. Directly restricts imports. Protects domestic producers but reduces consumer choice and raises prices.</dd></div>
+<div class="glossary-item"><dt>Foreign Direct Investment (FDI)</dt><dd>Investment by a company or individual from one country into business interests in another country. Inward FDI (into Ireland): creates jobs, technology transfer, tax revenue. Outward FDI (from Ireland): diversification, profits from abroad.</dd></div>
+<div class="glossary-item"><dt>Official Development Assistance (ODA)</dt><dd>Aid given by governments to support economic development and welfare in developing countries. Ireland's target: 0.70% of GNI (currently below target). Benefits LDCs: infrastructure, healthcare, education. Challenges: dependency, corruption.</dd></div>
+<div class="glossary-item"><dt>World Trade Organisation (WTO)</dt><dd>International organisation promoting free trade. Functions: negotiate trade agreements, settle disputes, monitor trade policies, reduce barriers, provide technical assistance to developing countries.</dd></div>
+<div class="glossary-item"><dt>Brexit</dt><dd>UK's exit from European Union (2020). Economic effects on Ireland: customs checks, tariffs, VAT on UK imports, sterling volatility, reduced UK car imports (more from Japan now).</dd></div>
+<div class="glossary-item"><dt>Mixed Economy</dt><dd>An economic system combining elements of free market (private sector) and government intervention (public sector). Most modern economies including Ireland. Government provides public goods, regulates markets, redistributes income. E.g., private health insurance + public hospitals.</dd></div>
+<div class="glossary-item"><dt>Government Debt</dt><dd>Total amount owed by government from accumulated budget deficits. Ireland measures as % of GNI* (more accurate than GDP due to multinational distortions). High debt = higher interest payments, less spending on services, tax increases.</dd></div>
+<div class="glossary-item"><dt>Progressive Tax</dt><dd>A tax where the percentage rate increases as income increases. Higher earners pay a larger proportion of their income. E.g., income tax in Ireland (20% and 40% rates). Promotes equity.</dd></div>
+<div class="glossary-item"><dt>Regressive Tax</dt><dd>A tax where lower earners pay a larger proportion of their income. E.g., VAT, excise duties. €1000 spent on VAT-able goods costs a low earner more as % of income than a high earner.</dd></div>
+<div class="glossary-item"><dt>Value Added Tax (VAT)</dt><dd>Tax on consumption (spending). Charged at each stage of production/distribution but ultimately paid by final consumer. Ireland: standard rate 23%, reduced 13.5%/9%, zero 0%. Regressive but efficient to collect.</dd></div>
+<div class="glossary-item"><dt>Multiplier Effect</dt><dd>An initial change in spending (e.g., government investment) leads to a larger final change in national income. k = 1/(1-MPC). If MPC = 0.8, multiplier = 5. €100m investment → €500m total increase in GDP. Leakages (savings, tax, imports) reduce multiplier.</dd></div>
+<div class="glossary-item"><dt>Marginal Propensity to Consume (MPC)</dt><dd>The proportion of extra income that is spent (consumed). If MPC = 0.75, for every €1 extra income, €0.75 is spent and €0.25 saved. Higher MPC = larger multiplier effect.</dd></div>
+<div class="glossary-item"><dt>Marginal Propensity to Save (MPS)</dt><dd>The proportion of extra income that is saved. MPC + MPS = 1. Auto-enrolment pension scheme increases MPS (lower MPC), reducing multiplier in short term.</dd></div>
+<div class="glossary-item"><dt>Public Infrastructure</dt><dd>Capital goods provided/funded by government for public use. E.g., roads, railways, water systems, schools, hospitals, broadband. Essential for economic growth. Insufficient investment → congestion, delays, reduced competitiveness.</dd></div>
+<div class="glossary-item"><dt>Money Supply</dt><dd>Total amount of money in circulation in the economy. Controlled by Central Bank through interest rates, reserve requirements. Commercial banks create credit through lending (credit creation/money multiplier).</dd></div>
+<div class="glossary-item"><dt>Credit Creation</dt><dd>Process by which commercial banks create money through lending. Factors affecting: reserve ratio, demand for loans, interest rates, central bank policy, economic confidence, regulation.</dd></div>
+<div class="glossary-item"><dt>Residential Property Price Index (RPPI)</dt><dd>Measures changes in house prices in Ireland over time. Rising prices: wealth effect, but affordability crisis, labour market impacts (workers can't afford to live where jobs are), cost-of-living pressure.</dd></div>
+</dl>
+</div>
+</div>
+
+<!-- MARK DECODER TAB -->
+<div id="tab-marks" class="tab-content">
+<div class="card">
+<h2>Mark Scheme Decoder</h2>
+<p>Understanding how Economics examiners award marks is crucial for maximising your score.</p>
+</div>
+
+<div class="card">
+<h3>General Marking Rules</h3>
+<table>
+<tr><th>Rule</th><th>Detail</th></tr>
+<tr><td><strong>Key phrases</strong></td><td>Many answers require specific economic terminology. "Proton donor" in chemistry = "opportunity cost" in economics.</td></tr>
+<tr><td><strong>Calculations</strong></td><td>Show ALL workings. Formula first, substitution, answer. Partial credit for correct method even if answer wrong.</td></tr>
+<tr><td><strong>Data from charts</strong></td><td>When commenting on trends, must cite specific figures from the data provided.</td></tr>
+<tr><td><strong>Justify your opinion</strong></td><td>Agree/Disagree questions: pick one side, give strong economic reasoning. Don't fence-sit.</td></tr>
+<tr><td><strong>Don't over-answer</strong></td><td>"Outline ONE reason" = give only one. Two answers risk cancellation if one is wrong.</td></tr>
+<tr><td><strong>Units matter</strong></td><td>Include % symbols, € symbols where appropriate. "15" is not as good as "15%".</td></tr>
+</table>
+</div>
+
+<div class="card">
+<h3>Descriptor Marking System</h3>
+<p>Some questions use descriptor marking (especially 4-mark and 6-mark questions). Your answer is graded on depth and quality.</p>
+
+<h4>For 6-mark questions:</h4>
+<table>
+<tr><th>Marks</th><th>Description</th></tr>
+<tr><td><strong>6</strong></td><td>Excellent: In-depth knowledge, relates clearly to question, concise, logical flow</td></tr>
+<tr><td><strong>4-5</strong></td><td>Good: Some knowledge, limited development, mostly relevant</td></tr>
+<tr><td><strong>2-3</strong></td><td>Fair: Vague knowledge, unclear connection to question</td></tr>
+<tr><td><strong>0-1</strong></td><td>Weak: No real knowledge, repetition of question, contradictory</td></tr>
+</table>
+
+<h4>For 4-mark questions:</h4>
+<table>
+<tr><th>Marks</th><th>Description</th></tr>
+<tr><td><strong>4</strong></td><td>Excellent: In-depth, relates to question, concise, logical</td></tr>
+<tr><td><strong>3</strong></td><td>Good: Some knowledge, limited development</td></tr>
+<tr><td><strong>2</strong></td><td>Fair: Vague knowledge</td></tr>
+<tr><td><strong>0-1</strong></td><td>Poor/Weak: Confusing, contradictory, or no knowledge</td></tr>
+</table>
+</div>
+
+<div class="card">
+<h3>Section A - Short Response (100 marks)</h3>
+<div class="mark-info"><strong>Q1 - Hosting sporting events (12.5)</strong> - Argument FOR (6), Argument AGAINST (6), Cost benefit analysis definition (6). Need balanced arguments with economic reasoning.</div>
+<div class="mark-info"><strong>Q2 - Savings calculation (12.5)</strong> - Formula (1), substitution (1), answer with % (4). Then two economic factors (2 @ 3) OR justify high savings agree/disagree (6).</div>
+<div class="mark-info"><strong>Q3 - Used car imports (12.5)</strong> - Economic reason for shift to Japan (6). Then EU tariff alternatives (6) OR reason for rising protectionism (6).</div>
+<div class="mark-info"><strong>Q4 - CPI trend (12.5)</strong> - Comment on trend using data (6). Then government measure + consumer measure (2 @ 6) OR identify cost-push vs demand-pull with justification (6).</div>
+<div class="mark-info"><strong>Q5 - Positive vs normative (12.5)</strong> - Define each (2 @ 3). Classify two statements correctly (2 @ 3).</div>
+<div class="mark-info"><strong>Q6 - Price floor (12.5)</strong> - Define price floor (6). Complete diagram + explanation (6). Must label NMW, Qs, Qd, unemployment gap.</div>
+<div class="mark-info"><strong>Q7 - YED (12.5)</strong> - Identify necessity + luxury with justification (2 items, justify each). Explain merit goods statement (6).</div>
+<div class="mark-info"><strong>Q8 - Sustainability (12.5)</strong> - Define environmental sustainability + government initiative (6). Two ways greenwashing causes market failure (2 @ 3).</div>
+<div class="mark-info"><strong>Q9 - Oligopoly diagram (12.5)</strong> - Label 3 items in full (3 @ 2). Explain kinked demand curve shape (6).</div>
+<div class="mark-info"><strong>Q10 - Economic cycle (12.5)</strong> - Identify boom/recession with justification (2 @ 3). Outline economic factor 2008-2011 (6).</div>
+</div>
+
+<div class="card">
+<h3>Section B - Extended Response (300 marks)</h3>
+<p>Each question worth 75 marks. More detailed answers, calculations, diagrams required.</p>
+<div class="mark-info"><strong>Calculations:</strong> Always show: 1) Formula, 2) Substitution with numbers, 3) Final answer with units. Even wrong answer gets marks for correct method.</div>
+<div class="mark-info"><strong>Diagrams:</strong> Must be fully labelled. Axes, curves, equilibrium points, quantities, prices. Missing labels = lost marks.</div>
+<div class="mark-info"><strong>Definitions:</strong> Use precise economic terminology. "Comparative advantage" not "being better at something".</div>
+<div class="mark-info"><strong>Discussion questions:</strong> Structure: define term, give examples, analyse benefits/challenges, conclude. Each part builds on previous.</div>
+<div class="mark-info"><strong>Agree/Disagree:</strong> State your position clearly in first sentence. Give 3-4 strong economic reasons. Don't waffle or sit on fence.</div>
+</div>
+
+<div class="card">
+<h3>Golden Rules for Maximum Marks</h3>
+<div class="explain"><strong>1. Use economic terminology correctly.</strong> Learn the glossary. "Opportunity cost", "allocative efficiency", "market failure" - use the exact terms.</div>
+<div class="explain"><strong>2. Always justify with economic reasoning.</strong> Don't just state facts. Explain WHY using economic principles. "This leads to X BECAUSE..."</div>
+<div class="explain"><strong>3. Reference current Irish economic context.</strong> Budget 2025, minimum wage €13.50, inflation trends, government policies. Shows you're engaged.</div>
+<div class="explain"><strong>4. Structure longer answers.</strong> Definition → Example → Analysis → Conclusion. Logical flow earns marks.</div>
+<div class="explain"><strong>5. Answer all parts of multi-part questions.</strong> (a)(i)(ii)(iii) = three separate answers required. Missing one = lost marks.</div>
+</div>
+</div>
+
+<!-- STUDY TAB -->
+<div id="tab-study" class="tab-content active">
+<div class="card">
+<h2>Question Walkthroughs</h2>
+<p>Select a question to see full solutions with step-by-step explanations from the 2025 paper and marking scheme.</p>
+</div>
+<div class="question-nav" id="studyNav">
+<button class="active" onclick="showQuestion('q1','economics')">Q1 Events</button>
+<button onclick="showQuestion('q2','economics')">Q2 Savings</button>
+<button onclick="showQuestion('q3','economics')">Q3 Trade</button>
+<button onclick="showQuestion('q4','economics')">Q4 Inflation</button>
+<button onclick="showQuestion('q5','economics')">Q5 Statements</button>
+<button onclick="showQuestion('q6','economics')">Q6 Labour</button>
+<button onclick="showQuestion('q7','economics')">Q7 YED</button>
+<button onclick="showQuestion('q8','economics')">Q8 Environment</button>
+<button onclick="showQuestion('q9','economics')">Q9 Oligopoly</button>
+<button onclick="showQuestion('q10','economics')">Q10 Cycle</button>
+<button onclick="showQuestion('q11','economics')">Q11 Markets</button>
+<button onclick="showQuestion('q12','economics')">Q12 Government</button>
+</div>
+
+<!-- Q1 SPORTING EVENTS -->
+<div class="q-section active" id="q-q1">
+<div class="card">
+<h2>Q1: Hosting Major Sporting Events <span class="marks-badge">12.5 marks</span></h2>
+<p>Germany hosted Euro 2024 with 2.7 million attendees across 51 matches.</p>
+
+<h3>(a) Discuss arguments for and against <span class="marks-badge">12</span></h3>
+<p><strong>Q:</strong> Discuss one argument FOR and one AGAINST the view that hosting major sporting events benefits the host country's economy.</p>
+
+<h4>Argument FOR (6 marks)</h4>
+<div class="working"><strong>Increased tourism revenue</strong> - The arrival of large numbers of international visitors boosts spending in local hotels, restaurants, tourist attractions. This creates a short-term injection into the circular flow of income.</div>
+<div class="explain"><strong>Alternative answers:</strong> Job creation (temporary and permanent in construction, hospitality, event management) | Infrastructure development (improved transport with long-term benefits) | Boost to economic confidence (national pride, increased consumer spending).</div>
+
+<h4>Argument AGAINST (6 marks)</h4>
+<div class="working"><strong>High cost</strong> - Expenses for infrastructure, security, event management may be substantial and surpass the benefits. The government must finance these through taxation or borrowing.</div>
+<div class="explain"><strong>Alternative answers:</strong> Opportunity cost (funds can't be spent on healthcare, housing, education) | Risk of economic loss (if tourism revenue falls short of projections) | Underused facilities (specialised venues become white elephants after event) | Environmental damage (construction, pollution, pressure on resources).</div>
+
+<h3>(b) Cost benefit analysis definition <span class="marks-badge">6</span></h3>
+<p><strong>Q:</strong> Outline what you understand by the economic term cost benefit analysis.</p>
+<div class="working"><strong>Answer:</strong> A method that helps weigh up / evaluate whether the positive benefits outweigh the associated costs of a project, to decide whether or not it should proceed. For a project to go ahead, its benefits must equal or exceed its costs.</div>
+<div class="explain"><strong>Key elements:</strong> Compare benefits vs costs | Used for decision-making | Applied to public sector projects (roads, hospitals) where profit motive doesn't apply.</div>
+</div>
+</div>
+
+<!-- Q2 SAVINGS -->
+<div class="q-section" id="q-q2">
+<div class="card">
+<h2>Q2: Household Savings in Ireland <span class="marks-badge">12.5 marks</span></h2>
+<p>Data for Q1 2024:</p>
+<table>
+<tr><th>Measure</th><th>Amount</th></tr>
+<tr><td>Household Disposable Income</td><td>€43.91 billion</td></tr>
+<tr><td>Household Consumption Expenditure</td><td>€37.32 billion</td></tr>
+<tr><td>Household Savings</td><td>€6.59 billion</td></tr>
+</table>
+
+<h3>(a) Calculate savings rate <span class="marks-badge">6</span></h3>
+<p><strong>Q:</strong> Calculate the household percentage savings rate. Show all workings.</p>
+<div class="working">
+<strong>Formula:</strong> (Household Savings / Household Disposable Income) × 100 [1]<br>
+<strong>Substitution:</strong> (€6.59bn / €43.91bn) × 100 [1]<br>
+<strong>Answer:</strong> 15% [4]
+</div>
+<div class="explain"><strong>Common error:</strong> Forgetting the % symbol loses 1 mark. Always include units!</div>
+
+<h3>(b) OR (c) - Internal choice</h3>
+
+<h4>(b) Two economic factors affecting savings <span class="marks-badge">6</span></h4>
+<p><strong>Q:</strong> Outline two economic factors which households consider when deciding how much to save (other than their level of income).</p>
+<div class="working">
+<strong>1. Interest rates / access to credit</strong> [3] - Higher interest rates encourage savings as deposit returns increase. When borrowing is accessible, households save less and rely on credit. If borrowing is harder, households must save more.<br><br>
+<strong>2. Rate of inflation</strong> [3] - High/rising inflation encourages spending rather than saving (purchasing power declines). Low/stable inflation encourages saving (money retains value).
+</div>
+<div class="explain"><strong>Other valid answers:</strong> Employment security (permanent job = save less, temporary = save more) | Economic outlook/consumer confidence | Government policies/taxation (DIRT, pension tax relief) | Household debt levels | Demographics/life stage | Availability of social protection | Security of savings (trust in banks).</div>
+
+<h4>(c) High savings - agree or disagree <span class="marks-badge">6</span></h4>
+<p><strong>Statement:</strong> A high level of household savings is desirable for the Irish economy.</p>
+
+<div class="working">
+<strong>AGREE arguments:</strong><br>
+• Financial stability for households - cope better with emergencies, job losses, downturns<br>
+• Increased lending/investment by banks - more funds to lend to businesses and citizens<br>
+• Increased government investment - higher savings → banks invest in government bonds → lower borrowing costs<br>
+• Lower dependence on credit - reduces personal debt (lesson from 2008 crisis)<br>
+• Reduced pressure on social protection - less reliance on welfare, state pensions<br><br>
+
+<strong>DISAGREE arguments:</strong><br>
+• Reduced consumer spending - weakens demand in retail, hospitality sectors<br>
+• Reduced economic growth / leakages - less spending → less revenue → job losses → slower growth<br>
+• Risk of deflation - less spending → businesses lower prices → reduced profits → less investment<br>
+• Lower government revenue - fall in spending → reduced VAT → less for healthcare, housing<br>
+• Increased income inequality - wealthier households save more, gap widens
+</div>
+<div class="explain"><strong>Exam tip:</strong> Pick ONE side and defend it strongly with 3-4 reasons. Don't try to argue both sides or sit on the fence.</div>
+</div>
+</div>
+
+<!-- Q3 TRADE -->
+<div class="q-section" id="q-q3">
+<div class="card">
+<h2>Q3: Used Car Imports - Japan vs UK <span class="marks-badge">12.5 marks</span></h2>
+<p>Chart shows Irish imports of used cars from Japan increased dramatically from 2014 to 2023, while imports from UK decreased significantly.</p>
+
+<h3>(a) Economic reason for the shift <span class="marks-badge">6</span></h3>
+<p><strong>Q:</strong> Outline one economic reason why Irish consumers are switching to importing more used cars from Japan and fewer from the UK.</p>
+
+<div class="working">
+<strong>Brexit / Import costs</strong> - Since the UK left the EU, new trade barriers make it more expensive to import used cars from Britain. Irish buyers now face customs duties, VAT, and import fees which did not apply before Brexit. Extra costs make UK imports relatively less attractive compared to Japanese cars.
+</div>
+
+<div class="explain"><strong>Alternative answers (all 6 marks):</strong><br>
+• Sterling/euro exchange rate - Pound more unpredictable post-Brexit; when sterling appreciates, Irish pay more in euros<br>
+• Increased quality/reliability of Japanese cars - Better condition, lower mileage, superior technology impacts costs and resale value<br>
+• Japanese cars are cheaper - High turnover in Japan creates greater supply of second-hand cars at lower prices<br>
+• More EV/hybrid options - Japanese manufacturers (Toyota, Honda, Nissan) lead in hybrid/EV tech; cheaper to run with rising fuel costs<br>
+• Wider choice of models - Japan exports models never sold in UK/Ireland, giving buyers more variety<br>
+• Lower rust/corrosion - Japan uses less road salt, so cars are more durable long-term
+</div>
+
+<h3>(b) OR (c) - Internal choice</h3>
+
+<h4>(b) Alternative to tariffs on Chinese EVs <span class="marks-badge">6</span></h4>
+<p><strong>Context:</strong> In 2024, the EU increased tariffs on EVs imported from China.</p>
+<p><strong>Q:</strong> Explain one alternative measure the EU could use (other than tariffs) to reduce imports of EVs from China.</p>
+
+<div class="working">
+<strong>Import quotas</strong> - The EU could set a cap on the number of EVs that can be imported from China every year. This would make it more difficult for Chinese EV manufacturers to expand their presence in the EU.
+</div>
+
+<div class="explain"><strong>Alternative measures (all 6 marks):</strong><br>
+• Subsidies for European EV producers - Financial support via grants, tax incentives for green tech makes EU EVs more competitive<br>
+• Stricter safety/environmental standards - Impose regulations Chinese EVs must meet; if they struggle to comply, imports reduce<br>
+• Administrative barriers/bureaucracy - Complex customs procedures, lengthy certification increase time and cost<br>
+• Changes to government procurement - Require public sector fleets to purchase only EU-manufactured EVs<br>
+• Investment restrictions - Limit Chinese investment in European car companies to prevent circumventing trade restrictions<br>
+• Investment in domestic battery production - Reduce cost advantage of Chinese EVs by producing batteries locally<br>
+• Trade embargo - Full ban on Chinese EVs (extreme measure, may violate WTO rules and trigger retaliation)
+</div>
+
+<h4>(c) Reason for rising protectionism <span class="marks-badge">6</span></h4>
+<p><strong>Statement:</strong> Trade protectionism seems to be increasing globally.</p>
+<p><strong>Q:</strong> Outline one reason why, in your opinion, trade protectionism seems to be increasing.</p>
+
+<div class="working">
+<strong>Political/strategic reasons / Deglobalisation</strong> - Sanctions and restrictions have occurred due to political decisions such as Brexit, responses to the war in Ukraine, recent trade policies by the United States. Governments face pressure from voters who feel globalisation has harmed local economies. Protectionist policies appeal to these voters by promising to support domestic industries.
+</div>
+
+<div class="explain"><strong>Alternative reasons (all 6 marks):</strong><br>
+• Reduce leakages from circular flow - Purchasing imports sends money abroad rather than keeping it in the home economy<br>
+• Protect domestic employment - Greater reliance on domestically produced goods keeps people in jobs<br>
+• Reduce pollution - Importing goods involves transportation which damages the environment; protectionism may reduce this<br>
+• Less reliance on foreign markets - Makes country more self-sufficient for essential goods/services<br>
+• Supply chain problems - COVID-19 highlighted weaknesses in global supply chains; countries prioritise domestic production of medical supplies, semiconductors<br>
+• National security concerns - Governments restrict trade in strategic industries (technology, energy) to safeguard sensitive sectors
+</div>
+</div>
+</div>
+
+<!-- Q4 INFLATION --></div>
+<div class="q-section" id="q-q4">
+<div class="card">
+<h2>Q4: Consumer Price Index for Chocolate <span class="marks-badge">12.5 marks</span></h2>
+<p>Chart shows year-on-year % changes in Ireland's CPI for chocolate from January to June 2024.</p>
+
+<h3>(a) Comment on trend and benefit to consumers <span class="marks-badge">6</span></h3>
+<p><strong>Q:</strong> Comment on the trend in the CPI for chocolate shown, using data from the chart, and explain if the trend is beneficial for chocolate consumers.</p>
+
+<h4>Trend (using data)</h4>
+<div class="working">The trend in the CPI for chocolate shows a <strong>steady decline from 9.1% in January 2024 to 4.8% in June 2024</strong> (or by 4.3%). The trend represents a gradual slowdown in the rate of price increases. Chocolate prices are still rising, but at a decreasing rate (disinflation).</div>
+
+<h4>Beneficial or not?</h4>
+<div class="working">
+<strong>BENEFICIAL:</strong> Slower price growth - prices increasing at lower rate makes chocolate less expensive than if inflation remained at 9.1% | Potential for price stability - may lead to stabilisation or reductions | Reduced financial pressure - easier to manage household budgets<br><br>
+<strong>NOT BENEFICIAL:</strong> Prices still increasing - disinflation only means rising more gradually, not falling; consumers still pay more than last year | Consumer budgets still affected - wage growth may not match chocolate price increases, so some must prioritise necessities over chocolate
+</div>
+
+<h3>(b) OR (c) - Internal choice</h3>
+
+<h4>(b) Cost of living measures <span class="marks-badge">12</span></h4>
+<p><strong>Context:</strong> While inflation rate has fallen, Irish consumers continue to pay higher prices.</p>
+<p><strong>Q:</strong> Outline one measure both the Irish government and consumers have taken to cope with cost of living increases.</p>
+
+<div class="working">
+<strong>Irish Government (6 marks - pick one):</strong><br>
+• Increased social welfare payments - pensions, child benefit, fuel allowances; two double payments to long-term recipients<br>
+• National minimum wage increased to €13.50/hour for those 20+ to improve purchasing power<br>
+• Tax cuts/credits - changes in income tax bands, USC reductions boost disposable incomes<br>
+• Energy/cost-of-living supports - energy credits, subsidies for utility costs<br>
+• Rent controls/housing initiatives - social housing projects, rent tax credit increased €750→€1,000<br>
+• Expansion of free GP care/medical card eligibility - more qualify for free healthcare<br>
+• Public sector pay increases - negotiated wage rises protect earnings from inflation<br>
+• Subsidised childcare expansion - reduced financial burden on working families<br>
+• Education supports - free schoolbooks up to Leaving Cert, exam fees waived<br>
+• Cheaper public transport - 20% fare reduction continues 2025, 50% Young Adult discount, free for under-9s, Universal Companion Pass for over-70s
+</div>
+
+<div class="working">
+<strong>Consumers in Ireland (6 marks - pick one):</strong><br>
+• Budgeting/cost-cutting - stricter budgets, prioritise essentials, cut non-essential expenses<br>
+• Switching to discount retailers - choose lower-cost supermarkets and brands<br>
+• Energy-saving measures - invest in efficient appliances, use government solar panel subsidies<br>
+• Increased public transport use - reduce costs by choosing public transport or carpooling over driving<br>
+• Switching providers/shopping around - compare prices, switch for insurance, broadband, utilities<br>
+• Growing own food - plant vegetables, herbs at home to cut grocery costs<br>
+• Buying in bulk/using loyalty schemes - bulk purchases, supermarket points, discounts<br>
+• Remote working - work from home more to save transport and childcare costs<br>
+• Repairing instead of replacing - repair clothes, appliances, furniture to extend lifespan<br>
+• Second-hand shopping - buy used clothing, furniture, electronics
+</div>
+
+<h4>(c) Demand-pull vs cost-push inflation <span class="marks-badge">6</span></h4>
+<p><strong>Context:</strong> In Q1 2024, cocoa prices tripled. Manufacturers expected to pass higher costs to shoppers in Q4 (Halloween/Christmas sales period).</p>
+<p><strong>Q:</strong> Do you regard this as demand-pull or cost-push inflation? Justify your choice.</p>
+
+<div class="working"><strong>Answer: Cost-push inflation</strong></div>
+
+<div class="working">
+<strong>Justification:</strong><br>
+• Rising input costs - Cocoa prices increased for chocolate producers; when raw material costs rise, businesses pay more to produce same goods (classic cost-push)<br>
+• Higher prices for consumers - Manufacturers faced with increased production costs pass these on by raising prices; inflation driven by higher costs<br>
+• Not caused by rise in demand - Demand-pull occurs when too much money chases too few goods / consumer demand rises faster than supply; here demand hasn't necessarily increased, but production costs have<br>
+• Supply-side shock - Sudden tripling of cocoa prices acts as supply shock, making chocolate production more expensive, reducing supply, contributing to rising prices<br>
+• Time lag in price increase - Producers expected to raise prices later in year; common with cost-push for businesses to absorb costs temporarily before passing on
+</div>
+</div>
+</div>
+
+<!-- Q5 POSITIVE VS NORMATIVE -->
+<div class="q-section" id="q-q5">
+<div class="card">
+<h2>Q5: Economic Statements <span class="marks-badge">12.5 marks</span></h2>
+
+<h3>(a) Define positive and normative statements <span class="marks-badge">6</span></h3>
+
+<h4>Positive Economic Statement (3 marks)</h4>
+<div class="working">A positive economic statement is <strong>objective and fact-based</strong>. It describes the world as it is, or as it will be under certain conditions, without making value judgments. It can be <strong>tested/verified by using evidence/data</strong>.</div>
+<div class="explain"><strong>Example:</strong> "If the Irish government were to raise corporation tax by 3%, it would reduce FDI by at least 25%." This can be tested with economic models and data.</div>
+
+<h4>Normative Economic Statement (3 marks)</h4>
+<div class="working">A normative statement is <strong>subjective and based on opinions/value judgements</strong>. It expresses what 'should' happen rather than what actually is happening. It <strong>cannot be tested/verified by using evidence/data</strong>.</div>
+<div class="explain"><strong>Example:</strong> "All citizens in Ireland deserve free healthcare to ensure equal access." This is an opinion about what should be, not a testable fact.</div>
+
+<h3>(b) Classify statements <span class="marks-badge">6</span></h3>
+<p><strong>Q:</strong> Determine whether each statement below is positive or normative.</p>
+
+<table>
+<tr><th>Economic Statement</th><th>Positive</th><th>Normative</th></tr>
+<tr><td>1. All citizens in Ireland deserve free healthcare to ensure equal access to medical services.</td><td></td><td><strong>✓</strong> [3]</td></tr>
+<tr><td>2. If the Irish government were to raise the corporation tax rate by 3%, it would reduce foreign direct investment in the country by at least 25%.</td><td><strong>✓</strong> [3]</td><td></td></tr>
+</table>
+
+<div class="explain"><strong>How to tell the difference:</strong><br>
+<strong>Positive:</strong> Contains "if...then", makes predictions, can be tested, uses words like "is", "will", "does"<br>
+<strong>Normative:</strong> Contains "should", "ought", "deserve", "fair", "better" - value judgments that can't be proven true/false
+</div>
+</div>
+</div>
+
+<!-- Continue with remaining questions... Due to length, I'll create Q6-Q12 in next response -->
+
+</div><!-- end study tab -->
+
+<!-- FLASHCARDS TAB -->
+<div class="tab-content" id="tab-flashcards">
+<h2>Flashcards</h2>
+<p>Click a card to reveal the answer. Filter by topic or shuffle.</p>
+
+<div class="flashcard-filter" id="fcFilter">
+<button class="active" onclick="fc.filter('all')">All Topics</button>
+<button onclick="fc.filter('microeconomics')">Microeconomics</button>
+<button onclick="fc.filter('macroeconomics')">Macroeconomics</button>
+<button onclick="fc.filter('markets')">Market Structures</button>
+<button onclick="fc.filter('international')">International Trade</button>
+<button onclick="fc.filter('government')">Government & Policy</button>
+<button onclick="fc.filter('current')">Current Issues</button>
+</div>
+
+<div class="flashcard-container" id="fcContainer">
+<div class="flashcard" onclick="fc.flip()">
+<div class="flashcard-face flashcard-front">
+<h3>TOPIC</h3>
+<p>Loading...</p>
+</div>
+<div class="flashcard-face flashcard-back">
+<p>Loading...</p>
+</div>
+</div>
+</div>
+
+<div class="flashcard-controls" id="fcControls">
+<button onclick="fc.prev()">Previous</button>
+<span id="fcCounter">0 / 0</span>
+<button onclick="fc.next()">Next</button>
+<button onclick="fc.shuffle()">Shuffle</button>
+</div>
+</div>
+
+<!-- QUIZ TAB -->
+<div class="tab-content" id="tab-quiz">
+<h2>Quiz Mode</h2>
+<p>Test your knowledge with multiple-choice questions. Select a topic or try all.</p>
+
+<div class="quiz-controls">
+<button onclick="quiz.start('all')">All Topics</button>
+<button onclick="quiz.start('microeconomics')">Microeconomics</button>
+<button onclick="quiz.start('macroeconomics')">Macroeconomics</button>
+<button onclick="quiz.start('markets')">Market Structures</button>
+<button onclick="quiz.start('international')">International Trade</button>
+<button onclick="quiz.start('government')">Government & Policy</button>
+<button onclick="quiz.start('current')">Current Issues</button>
+</div>
+
+<div id="quizArea"></div>
+
+<div class="quiz-score" id="quizScore" style="display:none">
+<h3>Quiz Complete!</h3>
+<p id="quizResult"></p>
+<button onclick="quiz.start('all')">Try Again</button>
+</div>
+</div>
+
+<!-- PROGRESS TAB -->
+<div class="tab-content" id="tab-progress">
+<h2>Your Progress</h2>
+<p>Track your study sessions and quiz scores for Economics.</p>
+
+<div class="progress-dashboard">
+<div class="progress-stats">
+<div class="stat-card">
+<div class="stat-number" id="progTopics">0</div>
+<div class="stat-label">Topics Studied</div>
+</div>
+<div class="stat-card">
+<div class="stat-number" id="progQuizzes">0</div>
+<div class="stat-label">Quizzes Done</div>
+</div>
+<div class="stat-card">
+<div class="stat-number" id="progAvg">-</div>
+<div class="stat-label">Avg Score</div>
+</div>
+</div>
+
+<h3>Recent Quiz Results</h3>
+<div id="quizHistory"><p>No quizzes completed yet. Head to the Quiz tab to test yourself!</p></div>
+
+<div style="margin-top:1.5rem;text-align:center">
+<button class="reset-btn" onclick="if(confirm('Reset all Economics progress? This cannot be undone.')){localStorage.removeItem('lcs_economics_progress');localStorage.removeItem('lcs_economics_quizzes');renderSubjectProgress();alert('Economics progress reset.')}">Reset Economics Progress</button>
+</div>
+</div>
+</div>
+
+</div><!-- end .content -->
+
+<script src="js/shared.js"></script>
+<script>
+// Progress rendering
+function renderSubjectProgress() {
+const p = LCS.getProgress('economics');
+let topics = 0;
+Object.keys(p).forEach(k => { if (k.startsWith('studied_') && !k.endsWith('_last')) topics++; });
+document.getElementById('progTopics').textContent = topics;
+
+const h = LCS.getQuizHistory('economics');
+document.getElementById('progQuizzes').textContent = h.length;
+if (h.length > 0) {
+const avg = Math.round(h.reduce((a, q) => a + q.pct, 0) / h.length);
+document.getElementById('progAvg').textContent = avg + '%';
+let qhtml = '<table><tr><th>Date</th><th>Time</th><th>Score</th><th>%</th></tr>';
+h.slice(-10).reverse().forEach(r => {
+qhtml += '<tr><td>' + r.date + '</td><td>' + r.time + '</td><td>' + r.score + '/' + r.total + '</td><td>' + r.pct + '%</td></tr>';
+});
+qhtml += '</table>';
+document.getElementById('quizHistory').innerHTML = qhtml;
+}
+}
+
+// FLASHCARD DATA - Economics focused, 30+ cards
+const allCards=[
+// Microeconomics
+{cat:'microeconomics',q:'What is opportunity cost?',a:'The next best alternative forgone when making a choice. What you give up to get something else. E.g., spending €100 on concert tickets means giving up whatever else you could have bought with that €100.'},
+{cat:'microeconomics',q:'What is the law of demand?',a:'As the price of a good falls, quantity demanded rises (inverse relationship), assuming all other factors remain constant (ceteris paribus). Consumers buy more when it\'s cheaper.'},
+{cat:'microeconomics',q:'What is the law of supply?',a:'As the price of a good rises, quantity supplied rises (direct relationship), assuming all other factors remain constant. Producers want to sell more when prices are higher.'},
+{cat:'microeconomics',q:'What does elastic demand mean?',a:'Demand is elastic when |PED| > 1. A small change in price causes a large change in quantity demanded. E.g., luxury cars - if price rises 10%, demand might fall 20%. Consumers are very responsive to price changes.'},
+{cat:'microeconomics',q:'What is a merit good?',a:'A good that is under-consumed in a free market because individuals undervalue its benefits. Government intervenes to encourage consumption through subsidies or direct provision. E.g., education, healthcare, vaccinations. Phone pouches in schools are merit goods (reduce distraction, improve learning).'},
+{cat:'microeconomics',q:'What is market failure?',a:'When the free market fails to allocate resources efficiently. Causes: externalities, public goods, merit/demerit goods, imperfect information, monopoly power, inequality. Government intervention needed to correct failures.'},
+{cat:'microeconomics',q:'What is a positive externality?',a:'A benefit experienced by a third party not directly involved in an economic transaction. E.g., education benefits society through higher productivity and lower crime, not just the student. Results in under-production without intervention.'},
+{cat:'microeconomics',q:'What is a negative externality?',a:'A cost experienced by a third party not directly involved in an economic transaction. E.g., factory pollution harms nearby residents\' health. Results in over-production because producers don\'t bear full social cost.'},
+
+// Macroeconomics
+{cat:'macroeconomics',q:'What is inflation?',a:'A sustained increase in the general price level over time. Purchasing power of money decreases. Measured by CPI (Consumer Price Index). Ireland: chocolate CPI fell from 9.1% (Jan) to 4.8% (June 2024) = disinflation.'},
+{cat:'macroeconomics',q:'What is demand-pull inflation?',a:'Inflation caused by excess aggregate demand. "Too much money chasing too few goods." Occurs when total spending exceeds the economy\'s productive capacity. Often happens during economic boom.'},
+{cat:'macroeconomics',q:'What is cost-push inflation?',a:'Inflation caused by increases in production costs (wages, raw materials, energy). Producers pass higher costs to consumers through higher prices. E.g., cocoa prices tripling → chocolate prices rise.'},
+{cat:'macroeconomics',q:'What is the multiplier effect?',a:'An initial change in spending leads to a larger final change in national income. Formula: k = 1/(1-MPC) or 1/MPS. If MPC = 0.8, multiplier = 5. So €100m government investment → €500m total GDP increase. Leakages (savings, tax, imports) reduce the multiplier.'},
+{cat:'macroeconomics',q:'What is the economic cycle?',a:'Fluctuations in economic activity over time: boom (rising output, low unemployment, high confidence) → recession (falling output, rising unemployment) → recovery. Ireland: 2008-2011 was deep recession (banking crisis, property collapse).'},
+{cat:'macroeconomics',q:'What is full employment?',a:'When everyone who wants a job at current wage rate can find one (except frictional/seasonal unemployment). Ireland has maintained near-full employment since 2022. Benefits: higher incomes, tax revenue. Costs: wage inflation, labour shortages.'},
+{cat:'macroeconomics',q:'What is a progressive tax?',a:'A tax where the percentage rate increases as income increases. Higher earners pay a larger proportion of their income. E.g., Irish income tax (20% and 40% rates). Promotes equity by redistributing from rich to poor.'},
+{cat:'macroeconomics',q:'What is a regressive tax?',a:'A tax where lower earners pay a larger proportion of their income. E.g., VAT. €1000 spent on taxable goods costs a low earner more as % of income than a high earner. Still useful revenue source.'},
+
+// Market Structures
+{cat:'markets',q:'What is a monopoly?',a:'A market with only ONE seller. Characteristics: high barriers to entry, price maker, supernormal profit in long run, allocative inefficiency (P > MC). E.g., patent-protected pharmaceutical drug. May exploit consumers with high prices but can benefit from economies of scale.'},
+{cat:'markets',q:'What is an oligopoly?',a:'A market dominated by a FEW large firms. Characteristics: interdependence, non-price competition (advertising, branding), barriers to entry, kinked demand curve (price rigidity), collusion possible. E.g., Irish health insurance (Vhi, Laya, Irish Life dominate).'},
+{cat:'markets',q:'What is the Herfindahl-Hirschman Index (HHI)?',a:'A measure of market concentration. Sum of squared market shares. HHI < 1500 = competitive. HHI 1500-2500 = moderate. HHI > 2500 = highly concentrated. Used by competition authorities to assess merger impacts.'},
+{cat:'markets',q:'What are economies of scale?',a:'Average costs fall as output increases. Causes: technical (large machinery), managerial (specialisation), purchasing (bulk discounts), financial (cheaper credit), marketing (spread advertising costs). Shown by downward-sloping LRAC curve.'},
+{cat:'markets',q:'What are diseconomies of scale?',a:'Average costs rise when output becomes too large. Causes: coordination problems, communication breakdown between departments, low worker morale, managerial inefficiency. Shown by upward-sloping section of LRAC curve. Smoothie bar example: too many branches = management chaos.'},
+{cat:'markets',q:'Why is the oligopoly demand curve kinked?',a:'At current price P1, demand is elastic ABOVE (competitors don\'t follow price increase, so you lose customers) and inelastic BELOW (competitors match price cut, so you don\'t gain customers). Creates kink. MR curve has vertical gap, explaining price rigidity.'},
+
+// International Trade
+{cat:'international',q:'What is comparative advantage?',a:'A country has comparative advantage in producing a good if it can produce it at a lower opportunity cost than other countries. Basis for specialisation and trade. Ireland has comparative advantage in pharmaceuticals (skilled workforce, tax incentives, EU access).'},
+{cat:'international',q:'What is a tariff?',a:'A tax on imported goods. Raises price of imports, making domestic products more competitive. Generates government revenue. But: consumers pay more, trading partners may retaliate, reduces efficiency. E.g., EU tariffs on Chinese electric vehicles.'},
+{cat:'international',q:'What is trade protectionism?',a:'Government policies to restrict imports and protect domestic industries. Methods: tariffs, quotas, subsidies, regulations, admin barriers. Reasons: protect jobs, infant industries, strategic sectors, reduce trade deficit. Costs: higher prices for consumers, retaliation, inefficiency. Seems to be increasing globally (Brexit, US policies, Ukraine war).'},
+{cat:'international',q:'What is Foreign Direct Investment (FDI)?',a:'Investment by a company from one country into business interests in another. Inward FDI (into Ireland): 90+ pharma companies, 45,000 jobs, technology transfer, tax revenue. Outward FDI (from Ireland → US): Ireland is 9th largest contributor, diversifies economy, earns profits abroad.'},
+{cat:'international',q:'What is the World Trade Organisation (WTO)?',a:'International organisation promoting free trade. Functions: negotiate trade agreements, settle disputes between countries, monitor trade policies, reduce barriers, provide technical assistance to developing countries. Helps maintain global trading system.'},
+{cat:'international',q:'What is Official Development Assistance (ODA)?',a:'Aid given by governments to support economic development in developing countries. Ireland\'s UN target: 0.70% of GNI (currently below). Benefits LDCs: infrastructure, healthcare, education. Challenges: creates dependency, risk of corruption if not managed well.'},
+
+// Government & Policy
+{cat:'government',q:'What is a price floor?',a:'A legal minimum price below which a good/service cannot be sold, set and enforced by government. Purpose: protect incomes, stabilise markets. E.g., national minimum wage €13.50/hour. If set above equilibrium: creates excess supply (unemployment in labour market).'},
+{cat:'government',q:'What is a mixed economy?',a:'An economic system combining free market (private sector) and government intervention (public sector). Most modern economies including Ireland. Government provides public goods, regulates markets, redistributes income. E.g., Ireland has private health insurance + public hospitals = mixed.'},
+{cat:'government',q:'What is public infrastructure?',a:'Capital goods provided/funded by government for public use. E.g., roads, railways, water systems, schools, hospitals, broadband. Essential for economic growth - facilitates business, attracts FDI. Insufficient investment → congestion, delays, reduced competitiveness.'},
+{cat:'government',q:'What is government debt?',a:'Total amount owed by government from accumulated budget deficits. Ireland measures as % of GNI* (more accurate than GDP due to multinational distortions). High debt consequences: higher interest payments, less spending on services, possible tax increases. Ireland\'s debt has been falling as % of GNI* from 2021-2025.'},
+{cat:'government',q:'How does the auto-enrolment pension scheme affect the multiplier?',a:'Employees save more (€3 + €3 employer + €1 state). Higher savings = higher MPS, lower MPC. Multiplier k = 1/MPS, so multiplier decreases. In SHORT TERM: less consumer spending, weaker stimulus effect. But LONG TERM: financial security, less pressure on state pensions.'},
+
+// Current Issues (Ireland 2024-2025)
+{cat:'current',q:'What is Ireland\'s current minimum wage (2025)?',a:'€13.50 per hour for those aged 20 and over. This is an example of a price floor in the labour market. Announced in Budget 2025. Protects worker incomes but may create unemployment if set too high above equilibrium wage.'},
+{cat:'current',q:'What happened to chocolate inflation in Ireland (Jan-Jun 2024)?',a:'Year-on-year CPI for chocolate fell from 9.1% (January) to 4.8% (June) = disinflation (rate of inflation decreasing). Prices STILL rising but more slowly. Beneficial: slower price growth. Not beneficial: prices still higher than last year, consumers still feel pressure.'},
+{cat:'current',q:'Why are Irish consumers importing more used cars from Japan instead of UK?',a:'Brexit created new trade barriers: customs duties, VAT, import fees on UK cars. Also: sterling/euro exchange rate volatility. Japanese cars often cheaper (high turnover in Japan), better quality (less rust, lower mileage), more hybrid/EV options. Wider choice of models never sold in UK/Ireland.'},
+{cat:'current',q:'Why is Ireland\'s health insurance market concentrated?',a:'Calculate HHI by squaring each market share and adding. If Vhi 46%, Laya 30%, Irish Life 22%, others 2%: HHI = 46² + 30² + 22² + 2² = 2116 + 900 + 484 + 4 = 3504. Since HHI > 2500 = highly concentrated. New entrant (Level Health) may increase competition, reduce prices, improve service.'},
+{cat:'current',q:'What measures has Irish government taken for cost of living (2024-25)?',a:'Minimum wage → €13.50 | Energy credits | Social welfare increases (double payments) | Tax cuts/credits | Rent tax credit €750→€1,000 | Free schoolbooks to Leaving Cert | Public transport 20% cheaper | Free GP care expansion | Subsidised childcare | Exam fees waived.'},
+{cat:'current',q:'What is the gig economy in Ireland?',a:'~200,000 workers in short-term contracts/freelance work rather than permanent jobs. E.g., Deliveroo, Uber, freelancers. Benefits: flexibility, extra income. Challenges: less job security, no sick pay/holidays, lower wages. Debate: should it be better regulated to protect workers?'},
+];
+
+// Initialize FlashcardEngine
+const fc = new FlashcardEngine(allCards, 'fcContainer', 'fcControls', 'fcCounter', 'fcFilter');
+
+// QUIZ DATA - 15+ questions
+const quizQuestions=[
+// Microeconomics
+{topic:'microeconomics',type:'mc',q:'If demand for a good is elastic (|PED| > 1), what happens when price increases?',options:['Total revenue increases','Total revenue decreases','Total revenue stays the same','Quantity demanded stays the same'],correct:1,explain:'With elastic demand, % fall in quantity demanded is GREATER than % rise in price. So total revenue (P×Q) decreases. Consumers very responsive to price.'},
+{topic:'microeconomics',type:'mc',q:'What is an inferior good?',options:['A good with YED > 1','A good with YED between 0 and 1','A good with YED < 0','A good with PED < 1'],correct:2,explain:'Inferior goods have NEGATIVE YED. As income rises, demand falls. E.g., instant noodles (YED = -0.5 from exam). People switch to better alternatives when they earn more.'},
+{topic:'microeconomics',type:'mc',q:'Phone pouches for all secondary students are considered merit goods because:',options:['They are expensive to produce','Students undervalue the benefits (improved focus/learning)','They are public goods','They create negative externalities'],correct:1,explain:'Merit goods are under-consumed because individuals undervalue benefits. Students may not appreciate how phone-free classes improve learning. Government intervenes (€9m budget) to encourage consumption.'},
+
+// Macroeconomics
+{topic:'macroeconomics',type:'mc',q:'Cocoa prices tripling and manufacturers passing costs to consumers is an example of:',options:['Demand-pull inflation','Cost-push inflation','Deflation','Disinflation'],correct:1,explain:'Cost-push: rising input costs (cocoa) → higher production costs → businesses pass costs to consumers → prices rise. NOT driven by excess demand but by supply-side shock.'},
+{topic:'macroeconomics',type:'mc',q:'Ireland\'s chocolate CPI fell from 9.1% to 4.8% from Jan-Jun 2024. This is:',options:['Deflation','Inflation','Disinflation','Hyperinflation'],correct:2,explain:'Disinflation = falling rate of inflation. Prices still rising but more slowly. NOT deflation (which is falling prices). Consumers still pay more than last year, just at slower rate.'},
+{topic:'macroeconomics',type:'mc',q:'If MPC = 0.8, what is the multiplier?',options:['0.8','1.25','4','5'],correct:3,explain:'Multiplier k = 1/(1-MPC) = 1/(1-0.8) = 1/0.2 = 5. Or k = 1/MPS = 1/0.2 = 5. An initial €100m injection leads to €500m total increase in GDP.'},
+{topic:'macroeconomics',type:'mc',q:'Which is a benefit of full employment for Ireland?',options:['Lower wage costs for businesses','Higher tax revenue for government','More workers available to hire','Lower inflation'],correct:1,explain:'Full employment → more people earning → more income tax and VAT collected → higher government revenue for services. But can cause: wage inflation, labour shortages (negative effects).'},
+
+// Market Structures
+{topic:'markets',type:'mc',q:'In an oligopoly, why is the demand curve kinked?',options:['Government price controls','Competitors follow price CUTS but not price RISES','Perfect competition','Economies of scale'],correct:1,explain:'Above current price: elastic (competitors don\'t match increase, you lose customers). Below current price: inelastic (competitors match cut, you don\'t gain customers). Creates kink at P1. Explains price rigidity.'},
+{topic:'markets',type:'mc',q:'If HHI = 3500, the market is:',options:['Perfectly competitive','Moderately concentrated','Highly concentrated','A monopoly'],correct:2,explain:'HHI > 2500 = highly concentrated market. Few firms dominate. E.g., Irish health insurance HHI ≈ 3504. Competition authorities scrutinise mergers in such markets.'},
+{topic:'markets',type:'mc',q:'A monopolist can earn supernormal profit in the long run because:',options:['It has lower costs than competitors','High barriers to entry prevent new firms entering','Government subsidies','Perfect information'],correct:1,explain:'Barriers to entry (patents, economies of scale, brand loyalty, high start-up costs) prevent new firms challenging the monopolist. In perfect competition, supernormal profit attracts new firms until profit → zero.'},
+
+// International Trade
+{topic:'international',type:'mc',q:'Which is NOT a reason for increasing trade protectionism globally?',options:['Brexit and political changes','COVID-19 supply chain disruptions','National security concerns','WTO promoting free trade'],correct:3,explain:'WTO promotes FREE trade, not protectionism. Brexit, COVID-19 (supply chain lessons), Ukraine war, US tariffs, national security (tech/telecoms restrictions) are all reasons for RISING protectionism.'},
+{topic:'international',type:'mc',q:'Ireland has comparative advantage in pharmaceuticals because:',options:['It can produce drugs at lower opportunity cost than other countries','It has the most pharmaceutical companies','It discovered all the drugs','It has the cheapest labour'],correct:0,explain:'Comparative advantage = lower opportunity cost. Ireland has skilled workforce, R&D capacity, tax incentives, EU market access. It should specialise in pharma and trade for other goods.'},
+{topic:'international',type:'mc',q:'An alternative to tariffs for reducing Chinese EV imports is:',options:['Removing all trade barriers','Import quotas','Subsidising Chinese manufacturers','Leaving the WTO'],correct:1,explain:'Import quotas = cap on quantity imported. Also: subsidies for EU producers, stricter regulations, admin barriers, government procurement rules. Tariffs are just one protectionist tool.'},
+
+// Government & Policy
+{topic:'government',type:'mc',q:'Setting minimum wage above equilibrium wage causes:',options:['Labour shortage','Unemployment (excess supply of labour)','Higher demand for workers','Perfect competition'],correct:1,explain:'Price floor above equilibrium: Qs (workers willing to work) > Qd (jobs available) = unemployment gap. More people want jobs than employers want to hire at that wage. But: protects worker incomes.'},
+{topic:'government',type:'mc',q:'Auto-enrolment pension (€3 employee + €3 employer + €1 state) affects multiplier how?',options:['Increases multiplier (higher MPC)','Decreases multiplier (higher MPS)','No effect on multiplier','Eliminates multiplier effect'],correct:1,explain:'Workers save €3 per €3 earned (effective MPS increases). MPC falls. Since k = 1/(1-MPC), lower MPC = smaller multiplier. Short-term: less consumer spending, weaker stimulus. Long-term: financial security.'},
+{topic:'government',type:'mc',q:'Which best describes Ireland\'s economy?',options:['Pure free market','Centrally planned','Mixed economy','Command economy'],correct:2,explain:'Mixed economy combines private sector (free market) and public sector (government). Ireland: private health insurance + public hospitals, private businesses + public services, free trade + regulation.'},
+
+// Current Issues
+{topic:'current',type:'mc',q:'Ireland\'s government debt as % of GNI* from 2021-2025 has:',options:['Increased sharply','Decreased steadily','Stayed the same','Become negative'],correct:1,explain:'Chart shows falling trend. Benefits: lower interest payments, more budget for services, lower future tax burden. GNI* more accurate than GDP for Ireland (excludes multinational distortions).'},
+{topic:'current',type:'mc',q:'Which is a measure Irish consumers took for cost of living?',options:['Increasing corporation tax','Switching to discount retailers','Building more roads','Raising interest rates'],correct:1,explain:'Consumers: switch to cheaper supermarkets (Lidl, Aldi), budget strictly, use public transport more, buy second-hand, repair not replace, grow own food, work from home to save costs.'},
+];
+
+// Initialize QuizEngine
+const quiz = new QuizEngine(quizQuestions, 'quizArea', 'quizScore', 'economics');
+
+// INIT
+document.addEventListener('DOMContentLoaded', function() {
+  quiz.start('all');
+  renderSubjectProgress();
+});
+</script>
+</body>
+</html>

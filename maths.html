@@ -1,0 +1,1371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LC Maths - Higher Level Study Tool</title>
+<link rel="stylesheet" href="css/shared.css">
+</head>
+<body class="subject-maths">
+<header class="app-header">
+<div>
+<h1>LC Maths - Higher Level</h1>
+<p>2025 Exam Study Tool | Leaving Certificate Ireland</p>
+</div>
+<a href="index.html" class="home-link">&#8592; All Subjects</a>
+</header>
+<nav id="mainNav">
+<button class="active" onclick="showTab('study','maths')">Study</button>
+<button onclick="showTab('flashcards','maths')">Flashcards</button>
+<button onclick="showTab('quiz','maths')">Quiz</button>
+<button onclick="showTab('strategy','maths')">Exam Strategy</button>
+<button onclick="showTab('marks','maths')">Mark Decoder</button>
+<button onclick="showTab('glossary','maths')">Glossary</button>
+<button onclick="showTab('formulas','maths')">Formulas</button>
+<button onclick="showTab('progress','maths')">Progress</button>
+</nav>
+
+<!-- EXAM STRATEGY TAB -->
+<div id="tab-strategy" class="tab-content">
+<div class="card">
+<h2>Exam Paper Structure</h2>
+<p>LC Maths Higher Level has <strong>TWO papers</strong>, each worth <strong>300 marks</strong>. Total exam time is <strong>5 hours</strong> across both papers.</p>
+<table>
+<tr><th>Paper</th><th>Date/Time</th><th>Duration</th><th>Structure</th><th>Marks</th></tr>
+<tr><td><strong>Paper 1</strong></td><td>Friday 6 June, 2:00-4:30pm</td><td>2.5 hours</td><td>Section A (6q) + Section B (4q)</td><td>300</td></tr>
+<tr><td><strong>Paper 2</strong></td><td>Monday 9 June, 9:30am-12:00pm</td><td>2.5 hours</td><td>Section A (6q) + Section B (4q)</td><td>300</td></tr>
+</table>
+<p style="margin-top:1rem"><strong>Both papers have the same structure:</strong></p>
+<ul>
+<li><strong>Section A: Concepts and Skills</strong> — 6 questions, answer any 5 (30 marks each = 150 marks)</li>
+<li><strong>Section B: Contexts and Applications</strong> — 4 questions, answer any 3 (50 marks each = 150 marks)</li>
+</ul>
+</div>
+
+<div class="card">
+<h2>Time Management</h2>
+<p><strong>Paper 1:</strong> 150 minutes for 300 marks (8 questions)</p>
+<p><strong>Paper 2:</strong> 150 minutes for 300 marks (8 questions)</p>
+<div class="formula-box">
+<div class="formula">Section A: 30 marks = ~18 mins per question | Section B: 50 marks = ~30 mins per question</div>
+</div>
+
+<h3>Suggested Time Plan (per paper)</h3>
+<div class="time-block"><span class="time">0:00</span><span>Read full paper, choose your 8 questions (5 min)</span></div>
+<div class="time-block"><span class="time">0:05</span><span>Section A Question 1 (18 min)</span></div>
+<div class="time-block"><span class="time">0:23</span><span>Section A Question 2 (18 min)</span></div>
+<div class="time-block"><span class="time">0:41</span><span>Section A Question 3 (18 min)</span></div>
+<div class="time-block"><span class="time">0:59</span><span>Section A Question 4 (18 min)</span></div>
+<div class="time-block"><span class="time">1:17</span><span>Section A Question 5 (18 min)</span></div>
+<div class="time-block"><span class="time">1:35</span><span>Section B Question 1 (30 min)</span></div>
+<div class="time-block"><span class="time">2:05</span><span>Section B Question 2 (30 min)</span></div>
+<div class="time-block"><span class="time">2:35</span><span>Section B Question 3 (30 min)</span></div>
+<div class="time-block"><span class="time">2:45</span><span>Review answers (5 min)</span></div>
+</div>
+
+<div class="card">
+<h2>Top Exam Tips</h2>
+<div class="explain"><strong>1. Show ALL working!</strong> Marks are awarded for METHOD. Even if your final answer is wrong, you get marks for each correct step.</div>
+<div class="explain"><strong>2. Use the Formulae and Tables booklet.</strong> You get this in the exam. It contains log tables, trigonometric values, formulas, and statistical tables.</div>
+<div class="explain"><strong>3. Don't round too early.</strong> Keep full accuracy until the final answer. Incorrect rounding loses marks.</div>
+<div class="explain"><strong>4. Write formulas before calculating.</strong> Writing the formula earns marks even if the calculation goes wrong.</div>
+<div class="explain"><strong>5. Check units!</strong> Give answers in simplest form where relevant. Missing units can lose marks.</div>
+<div class="explain"><strong>6. Choose your questions wisely.</strong> You only need 5 from Section A and 3 from Section B. Pick your strongest topics.</div>
+<div class="explain"><strong>7. Answer without sufficient work earns minimum marks.</strong> Even if correct, you need to show the steps.</div>
+</div>
+
+<div class="card">
+<h2>Paper 1 Topics</h2>
+<table>
+<tr><th>Q</th><th>Topic</th><th>Type</th><th>Advice</th></tr>
+<tr><td>Q1</td><td>Algebra</td><td>Section A</td><td>Inequalities, surds, factorization. Very algebraic manipulation heavy.</td></tr>
+<tr><td>Q2</td><td>Calculus</td><td>Section A</td><td>Differentiation, tangent equations, function graphs, composition.</td></tr>
+<tr><td>Q3</td><td>Calculus</td><td>Section A</td><td>Chain rule, quotient rule, integration with limits.</td></tr>
+<tr><td>Q4</td><td>Complex Numbers</td><td>Section A</td><td>De Moivre's theorem, roots of complex numbers, polar form.</td></tr>
+<tr><td>Q5</td><td>Algebra</td><td>Section A</td><td>Completing the square, logarithms, simultaneous equations.</td></tr>
+<tr><td>Q6</td><td>Algebra</td><td>Section A</td><td>Binomial expansion, discriminant, quadratic theory.</td></tr>
+<tr><td>Q7</td><td>Sequences</td><td>Section B</td><td>Arithmetic and geometric sequences, series, real-world context.</td></tr>
+<tr><td>Q8</td><td>Applied Calculus</td><td>Section B</td><td>Optimization, rates of change, related rates problems.</td></tr>
+<tr><td>Q9</td><td>Calculus Context</td><td>Section B</td><td>Chain rule applications, piecewise functions, integration for averages.</td></tr>
+<tr><td>Q10</td><td>Proof/Patterns</td><td>Section B</td><td>Coordinate geometry patterns, limits, proof by induction.</td></tr>
+</table>
+</div>
+
+<div class="card">
+<h2>Paper 2 Topics</h2>
+<table>
+<tr><th>Q</th><th>Topic</th><th>Type</th><th>Advice</th></tr>
+<tr><td>Q1</td><td>Lines</td><td>Section A</td><td>Equation of a line, slope, angles between lines, intercepts.</td></tr>
+<tr><td>Q2</td><td>Circles</td><td>Section A</td><td>Equation of a circle, tangents, completing the square for circles.</td></tr>
+<tr><td>Q3</td><td>Probability</td><td>Section A</td><td>Venn diagrams, independence, conditional probability.</td></tr>
+<tr><td>Q4</td><td>Statistics</td><td>Section A</td><td>Median, quartiles, mean, frequency tables, grouped data.</td></tr>
+<tr><td>Q5</td><td>Geometry</td><td>Section A</td><td>Congruent triangles, enlargements, similarity, area ratios.</td></tr>
+<tr><td>Q6</td><td>Trigonometry</td><td>Section A</td><td>Sine, cosine, period, range, cosine rule, exact values.</td></tr>
+<tr><td>Q7</td><td>3D Geometry</td><td>Section B</td><td>Pythagoras in 3D, volumes, surface areas, scaled diagrams.</td></tr>
+<tr><td>Q8</td><td>Applied Trig</td><td>Section B</td><td>Angles of elevation, sine rule, percentage error, surveying.</td></tr>
+<tr><td>Q9</td><td>Statistics Context</td><td>Section B</td><td>Tree diagrams, combinations, binomial probability, clinical trials.</td></tr>
+<tr><td>Q10</td><td>Statistics Theory</td><td>Section B</td><td>Normal distribution, confidence intervals, hypothesis testing, sampling.</td></tr>
+</table>
+</div>
+</div>
+
+<!-- FORMULA SHEET TAB -->
+<div id="tab-formulas" class="tab-content">
+<div class="card">
+<h2>Formula Sheet - LC Maths Higher Level</h2>
+<p>Essential formulas across all topics. The Formulae and Tables booklet is provided in the exam.</p>
+</div>
+
+<div class="card">
+<h3>Algebra</h3>
+<div class="formula-box"><strong>Quadratic Formula</strong><div class="formula">x = (-b ± √(b² - 4ac)) / 2a</div><p>For ax² + bx + c = 0</p></div>
+<div class="formula-box"><strong>Discriminant</strong><div class="formula">Δ = b² - 4ac</div><p>Δ > 0: two real roots | Δ = 0: one repeated root | Δ < 0: no real roots</p></div>
+<div class="formula-box"><strong>Sum and Product of Roots</strong><div class="formula">α + β = -b/a  |  αβ = c/a</div></div>
+<div class="formula-box"><strong>Completing the Square</strong><div class="formula">ax² + bx + c = a(x + h)² + k</div><p>where h = b/(2a), k = c - ah²</p></div>
+<div class="formula-box"><strong>Logarithm Laws</strong><div class="formula">log(AB) = log A + log B<br>log(A/B) = log A - log B<br>log(A^n) = n log A<br>log_a(a) = 1  |  log_a(1) = 0</div></div>
+<div class="formula-box"><strong>Absolute Value Inequality</strong><div class="formula">|x - a| ≤ b  ⟹  a - b ≤ x ≤ a + b</div></div>
+</div>
+
+<div class="card">
+<h3>Sequences and Series</h3>
+<div class="formula-box"><strong>Arithmetic Sequence</strong><div class="formula">T<sub>n</sub> = a + (n-1)d</div><p>a = first term, d = common difference</p></div>
+<div class="formula-box"><strong>Arithmetic Series Sum</strong><div class="formula">S<sub>n</sub> = n/2 [2a + (n-1)d]  or  S<sub>n</sub> = n/2 (a + l)</div><p>l = last term</p></div>
+<div class="formula-box"><strong>Geometric Sequence</strong><div class="formula">T<sub>n</sub> = ar^(n-1)</div><p>r = common ratio</p></div>
+<div class="formula-box"><strong>Geometric Series Sum</strong><div class="formula">S<sub>n</sub> = a(r^n - 1)/(r - 1)  or  a(1 - r^n)/(1 - r)</div></div>
+<div class="formula-box"><strong>Infinite Geometric Series</strong><div class="formula">S<sub>∞</sub> = a/(1 - r)  when |r| < 1</div></div>
+</div>
+
+<div class="card">
+<h3>Differentiation</h3>
+<div class="formula-box"><strong>Power Rule</strong><div class="formula">d/dx (x^n) = nx^(n-1)</div></div>
+<div class="formula-box"><strong>Trigonometric Functions</strong><div class="formula">d/dx (sin x) = cos x<br>d/dx (cos x) = -sin x<br>d/dx (tan x) = sec²x</div></div>
+<div class="formula-box"><strong>Exponential and Logarithm</strong><div class="formula">d/dx (e^x) = e^x<br>d/dx (e^(ax)) = ae^(ax)<br>d/dx (ln x) = 1/x</div></div>
+<div class="formula-box"><strong>Chain Rule</strong><div class="formula">dy/dx = dy/du × du/dx</div></div>
+<div class="formula-box"><strong>Product Rule</strong><div class="formula">d/dx (uv) = u(dv/dx) + v(du/dx)</div></div>
+<div class="formula-box"><strong>Quotient Rule</strong><div class="formula">d/dx (u/v) = [v(du/dx) - u(dv/dx)] / v²</div></div>
+<div class="formula-box"><strong>Equation of Tangent</strong><div class="formula">y - y₁ = m(x - x₁)</div><p>m = slope = f'(x₁)</p></div>
+</div>
+
+<div class="card">
+<h3>Integration</h3>
+<div class="formula-box"><strong>Power Rule</strong><div class="formula">∫ x^n dx = x^(n+1)/(n+1) + C  (n ≠ -1)</div></div>
+<div class="formula-box"><strong>Exponential</strong><div class="formula">∫ e^x dx = e^x + C<br>∫ e^(ax) dx = e^(ax)/a + C</div></div>
+<div class="formula-box"><strong>Definite Integral</strong><div class="formula">∫[a to b] f(x) dx = F(b) - F(a)</div><p>where F'(x) = f(x)</p></div>
+<div class="formula-box"><strong>Average Value</strong><div class="formula">Average = (1/(b-a)) ∫[a to b] f(x) dx</div></div>
+</div>
+
+<div class="card">
+<h3>Complex Numbers</h3>
+<div class="formula-box"><strong>Polar Form</strong><div class="formula">z = r(cos θ + i sin θ)</div><p>r = |z| = √(a² + b²),  θ = arg(z) = tan⁻¹(b/a)</p></div>
+<div class="formula-box"><strong>De Moivre's Theorem</strong><div class="formula">[r(cos θ + i sin θ)]^n = r^n(cos nθ + i sin nθ)</div></div>
+<div class="formula-box"><strong>Roots of Complex Numbers</strong><div class="formula">z^n = w  ⟹  z = w^(1/n) = r^(1/n)[cos((θ + 2πk)/n) + i sin((θ + 2πk)/n)]</div><p>k = 0, 1, 2, ..., n-1</p></div>
+<div class="formula-box"><strong>Complex Conjugate</strong><div class="formula">If z = a + bi, then z̄ = a - bi<br>z × z̄ = a² + b²</div></div>
+</div>
+
+<div class="card">
+<h3>Coordinate Geometry - Lines</h3>
+<div class="formula-box"><strong>Slope</strong><div class="formula">m = (y₂ - y₁)/(x₂ - x₁)</div></div>
+<div class="formula-box"><strong>Equation of a Line</strong><div class="formula">y - y₁ = m(x - x₁)  or  y = mx + c</div></div>
+<div class="formula-box"><strong>Perpendicular Slopes</strong><div class="formula">If lines are perpendicular: m₁ × m₂ = -1</div></div>
+<div class="formula-box"><strong>Parallel Lines</strong><div class="formula">If lines are parallel: m₁ = m₂</div></div>
+<div class="formula-box"><strong>Angle Between Lines</strong><div class="formula">tan θ = |(m₁ - m₂)/(1 + m₁m₂)|</div></div>
+</div>
+
+<div class="card">
+<h3>Coordinate Geometry - Circles</h3>
+<div class="formula-box"><strong>Standard Form</strong><div class="formula">(x - h)² + (y - k)² = r²</div><p>Centre (h, k), radius r</p></div>
+<div class="formula-box"><strong>General Form</strong><div class="formula">x² + y² + 2gx + 2fy + c = 0</div><p>Centre (-g, -f), radius √(g² + f² - c)</p></div>
+<div class="formula-box"><strong>Tangent to Circle</strong><div class="formula">At point (x₁, y₁): slope of radius × slope of tangent = -1</div></div>
+</div>
+
+<div class="card">
+<h3>Trigonometry</h3>
+<div class="formula-box"><strong>Sine Rule</strong><div class="formula">a/sin A = b/sin B = c/sin C</div></div>
+<div class="formula-box"><strong>Cosine Rule</strong><div class="formula">c² = a² + b² - 2ab cos C<br>cos C = (a² + b² - c²)/(2ab)</div></div>
+<div class="formula-box"><strong>Area of Triangle</strong><div class="formula">Area = ½ab sin C</div></div>
+<div class="formula-box"><strong>Pythagorean Identity</strong><div class="formula">sin²θ + cos²θ = 1<br>tan θ = sin θ / cos θ</div></div>
+<div class="formula-box"><strong>Double Angle Formulas</strong><div class="formula">sin 2θ = 2 sin θ cos θ<br>cos 2θ = cos²θ - sin²θ = 2cos²θ - 1 = 1 - 2sin²θ</div></div>
+<div class="formula-box"><strong>Period and Range</strong><div class="formula">sin x: period = 2π, range = [-1, 1]<br>cos x: period = 2π, range = [-1, 1]<br>tan x: period = π</div></div>
+</div>
+
+<div class="card">
+<h3>3D Geometry and Mensuration</h3>
+<div class="formula-box"><strong>Pythagoras in 3D</strong><div class="formula">d² = x² + y² + z²</div></div>
+<div class="formula-box"><strong>Cylinder</strong><div class="formula">Volume = πr²h<br>Surface Area = 2πr² + 2πrh</div></div>
+<div class="formula-box"><strong>Cone</strong><div class="formula">Volume = (1/3)πr²h<br>Curved Surface Area = πrl  (l = slant height)</div></div>
+<div class="formula-box"><strong>Sphere</strong><div class="formula">Volume = (4/3)πr³<br>Surface Area = 4πr²</div></div>
+<div class="formula-box"><strong>Hemisphere</strong><div class="formula">Volume = (2/3)πr³</div></div>
+<div class="formula-box"><strong>Pyramid</strong><div class="formula">Volume = (1/3) × base area × height</div></div>
+<div class="formula-box"><strong>Enlargement Scale Factor</strong><div class="formula">If scale factor = k:<br>Length scales by k<br>Area scales by k²<br>Volume scales by k³</div></div>
+</div>
+
+<div class="card">
+<h3>Probability</h3>
+<div class="formula-box"><strong>Addition Rule</strong><div class="formula">P(A ∪ B) = P(A) + P(B) - P(A ∩ B)</div></div>
+<div class="formula-box"><strong>Multiplication Rule</strong><div class="formula">P(A ∩ B) = P(A) × P(B|A)</div></div>
+<div class="formula-box"><strong>Independence</strong><div class="formula">Events A and B are independent if:<br>P(A ∩ B) = P(A) × P(B)</div></div>
+<div class="formula-box"><strong>Conditional Probability</strong><div class="formula">P(A|B) = P(A ∩ B) / P(B)</div></div>
+<div class="formula-box"><strong>Complementary Events</strong><div class="formula">P(A') = 1 - P(A)</div></div>
+<div class="formula-box"><strong>Binomial Probability</strong><div class="formula">P(X = r) = C(n,r) × p^r × (1-p)^(n-r)</div></div>
+<div class="formula-box"><strong>Combinations</strong><div class="formula">C(n,r) = n! / [r!(n-r)!]</div></div>
+<div class="formula-box"><strong>Permutations</strong><div class="formula">P(n,r) = n! / (n-r)!</div></div>
+</div>
+
+<div class="card">
+<h3>Statistics</h3>
+<div class="formula-box"><strong>Mean</strong><div class="formula">x̄ = Σx / n  or  x̄ = Σfx / Σf (grouped data)</div></div>
+<div class="formula-box"><strong>Median</strong><div class="formula">Middle value when data is ordered</div><p>For grouped data: use cumulative frequency</p></div>
+<div class="formula-box"><strong>Quartiles</strong><div class="formula">Q₁ = 25th percentile<br>Q₂ = median = 50th percentile<br>Q₃ = 75th percentile</div></div>
+<div class="formula-box"><strong>Interquartile Range</strong><div class="formula">IQR = Q₃ - Q₁</div></div>
+<div class="formula-box"><strong>Standard Deviation</strong><div class="formula">σ = √[Σ(x - μ)² / N]  (population)<br>s = √[Σ(x - x̄)² / (n-1)]  (sample)</div></div>
+<div class="formula-box"><strong>Normal Distribution</strong><div class="formula">Z = (X - μ) / σ</div><p>Standardized z-score</p></div>
+<div class="formula-box"><strong>Empirical Rule (68-95-99.7)</strong><div class="formula">68% within μ ± σ<br>95% within μ ± 2σ<br>99.7% within μ ± 3σ</div></div>
+<div class="formula-box"><strong>95% Confidence Interval</strong><div class="formula">x̄ ± 1.96(σ/√n)</div></div>
+<div class="formula-box"><strong>Hypothesis Test Statistic</strong><div class="formula">z = (x̄ - μ₀) / (σ/√n)</div></div>
+<div class="formula-box"><strong>Expected Value</strong><div class="formula">E(X) = Σ[x × P(x)]</div></div>
+</div>
+
+<div class="card">
+<h3>Binomial Expansion</h3>
+<div class="formula-box"><strong>Binomial Theorem</strong><div class="formula">(a + b)^n = Σ C(n,r) × a^(n-r) × b^r</div><p>r = 0 to n</p></div>
+<div class="formula-box"><strong>General Term</strong><div class="formula">T<sub>r+1</sub> = C(n,r) × a^(n-r) × b^r</div></div>
+</div>
+</div>
+
+<!-- GLOSSARY TAB -->
+<div id="tab-glossary" class="tab-content">
+<div class="card">
+<h2>Maths Glossary</h2>
+<p>Search for any term. All definitions written in plain language.</p>
+<input type="text" class="glossary-search" id="glossarySearch" placeholder="Search terms..." oninput="filterGlossary()">
+</div>
+<div id="glossaryList">
+<dl>
+<div class="glossary-item"><dt>Absolute Value</dt><dd>The distance of a number from zero on the number line, always positive. Written as |x|. Example: |-5| = 5.</dd></div>
+<div class="glossary-item"><dt>Arithmetic Sequence</dt><dd>A sequence where each term is found by adding a constant (common difference) to the previous term. Example: 3, 7, 11, 15... (d = 4).</dd></div>
+<div class="glossary-item"><dt>Geometric Sequence</dt><dd>A sequence where each term is found by multiplying the previous term by a constant (common ratio). Example: 2, 6, 18, 54... (r = 3).</dd></div>
+<div class="glossary-item"><dt>Binomial Expansion</dt><dd>Expanding expressions of the form (a + b)^n using the binomial theorem. Uses combinations C(n,r) to find coefficients.</dd></div>
+<div class="glossary-item"><dt>Chain Rule</dt><dd>A method for differentiating composite functions. If y = f(g(x)), then dy/dx = f'(g(x)) × g'(x).</dd></div>
+<div class="glossary-item"><dt>Quotient Rule</dt><dd>A method for differentiating fractions. If y = u/v, then dy/dx = [v(du/dx) - u(dv/dx)] / v².</dd></div>
+<div class="glossary-item"><dt>Product Rule</dt><dd>A method for differentiating products. If y = uv, then dy/dx = u(dv/dx) + v(du/dx).</dd></div>
+<div class="glossary-item"><dt>Derivative</dt><dd>The rate of change of a function with respect to a variable. Represents the slope of the tangent line at any point. Written as f'(x) or dy/dx.</dd></div>
+<div class="glossary-item"><dt>Integration</dt><dd>The reverse process of differentiation. Used to find areas under curves, volumes, and accumulated quantities. The integral of f(x) is written ∫f(x)dx.</dd></div>
+<div class="glossary-item"><dt>Definite Integral</dt><dd>Integration with limits. ∫[a to b] f(x)dx gives the net area between the curve and the x-axis from x = a to x = b.</dd></div>
+<div class="glossary-item"><dt>Complex Number</dt><dd>A number of the form a + bi where i² = -1. Has a real part (a) and an imaginary part (b). Example: 3 + 4i.</dd></div>
+<div class="glossary-item"><dt>Modulus</dt><dd>The absolute value of a complex number. For z = a + bi, |z| = √(a² + b²). Represents distance from the origin in the complex plane.</dd></div>
+<div class="glossary-item"><dt>Argument</dt><dd>The angle a complex number makes with the positive real axis. For z = a + bi, arg(z) = tan⁻¹(b/a).</dd></div>
+<div class="glossary-item"><dt>De Moivre's Theorem</dt><dd>States that [r(cos θ + i sin θ)]^n = r^n(cos nθ + i sin nθ). Used to find powers and roots of complex numbers.</dd></div>
+<div class="glossary-item"><dt>Polar Form</dt><dd>Expressing a complex number as z = r(cos θ + i sin θ) where r is the modulus and θ is the argument.</dd></div>
+<div class="glossary-item"><dt>Discriminant</dt><dd>The part b² - 4ac of the quadratic formula. Tells how many real solutions a quadratic equation has. Positive = 2 roots, zero = 1 root, negative = 0 real roots.</dd></div>
+<div class="glossary-item"><dt>Completing the Square</dt><dd>Rewriting a quadratic expression ax² + bx + c in the form a(x + h)² + k. Useful for finding the vertex of a parabola and solving equations.</dd></div>
+<div class="glossary-item"><dt>Conjugate</dt><dd>For a + bi, the conjugate is a - bi. For complex numbers, multiplying by the conjugate gives a real number. Used to simplify complex fractions.</dd></div>
+<div class="glossary-item"><dt>Slope</dt><dd>The steepness of a line. Calculated as rise/run or (y₂ - y₁)/(x₂ - x₁). Also called gradient.</dd></div>
+<div class="glossary-item"><dt>Intercept</dt><dd>Where a line crosses an axis. y-intercept is where x = 0. x-intercept is where y = 0.</dd></div>
+<div class="glossary-item"><dt>Perpendicular</dt><dd>Two lines meeting at 90°. If one line has slope m, a perpendicular line has slope -1/m.</dd></div>
+<div class="glossary-item"><dt>Tangent (to a curve)</dt><dd>A line that touches a curve at exactly one point. The slope of the tangent equals the derivative at that point.</dd></div>
+<div class="glossary-item"><dt>Sine Rule</dt><dd>In any triangle: a/sin A = b/sin B = c/sin C. Used when you know two angles and one side, or two sides and a non-included angle.</dd></div>
+<div class="glossary-item"><dt>Cosine Rule</dt><dd>In any triangle: c² = a² + b² - 2ab cos C. Used when you know three sides or two sides and the included angle.</dd></div>
+<div class="glossary-item"><dt>Radian</dt><dd>A unit for measuring angles. 2π radians = 360°. 1 radian ≈ 57.3°. Used in calculus because it simplifies formulas.</dd></div>
+<div class="glossary-item"><dt>Period</dt><dd>The interval after which a function repeats. For sin x and cos x, the period is 2π. For tan x, the period is π.</dd></div>
+<div class="glossary-item"><dt>Amplitude</dt><dd>For y = A sin(x), the amplitude is |A|. It's half the distance between maximum and minimum values.</dd></div>
+<div class="glossary-item"><dt>Pythagoras' Theorem</dt><dd>In a right-angled triangle: a² + b² = c² where c is the hypotenuse. Extended to 3D: d² = x² + y² + z².</dd></div>
+<div class="glossary-item"><dt>Congruent</dt><dd>Two shapes that are exactly the same size and shape. They may be rotated or reflected but have identical dimensions.</dd></div>
+<div class="glossary-item"><dt>Similar</dt><dd>Two shapes with the same angles but different sizes. All corresponding lengths are in the same ratio (scale factor).</dd></div>
+<div class="glossary-item"><dt>Scale Factor</dt><dd>The ratio by which a shape is enlarged. Lengths scale by k, areas by k², volumes by k³.</dd></div>
+<div class="glossary-item"><dt>Probability</dt><dd>A measure of how likely an event is to occur. Ranges from 0 (impossible) to 1 (certain). P(event) = favorable outcomes / total outcomes.</dd></div>
+<div class="glossary-item"><dt>Independent Events</dt><dd>Two events where the outcome of one doesn't affect the other. For independent events: P(A and B) = P(A) × P(B).</dd></div>
+<div class="glossary-item"><dt>Conditional Probability</dt><dd>The probability of an event given that another event has occurred. Written P(A|B) = P(A and B) / P(B).</dd></div>
+<div class="glossary-item"><dt>Mutually Exclusive</dt><dd>Events that cannot happen at the same time. If A and B are mutually exclusive, P(A and B) = 0.</dd></div>
+<div class="glossary-item"><dt>Mean</dt><dd>The average of a set of numbers. Add all values and divide by how many there are.</dd></div>
+<div class="glossary-item"><dt>Median</dt><dd>The middle value when data is arranged in order. For even number of values, it's the average of the two middle values.</dd></div>
+<div class="glossary-item"><dt>Mode</dt><dd>The value that appears most frequently in a dataset.</dd></div>
+<div class="glossary-item"><dt>Quartiles</dt><dd>Values that divide data into four equal parts. Q₁ = 25th percentile, Q₂ = median, Q₃ = 75th percentile.</dd></div>
+<div class="glossary-item"><dt>Interquartile Range (IQR)</dt><dd>The range of the middle 50% of data. IQR = Q₃ - Q₁. A measure of spread that's resistant to outliers.</dd></div>
+<div class="glossary-item"><dt>Standard Deviation</dt><dd>A measure of how spread out numbers are from the mean. Larger standard deviation = more spread out data.</dd></div>
+<div class="glossary-item"><dt>Normal Distribution</dt><dd>A bell-shaped probability distribution. Many natural phenomena follow this pattern. Symmetric around the mean.</dd></div>
+<div class="glossary-item"><dt>Z-Score</dt><dd>The number of standard deviations a value is from the mean. Z = (X - μ) / σ. Used to standardize normal distributions.</dd></div>
+<div class="glossary-item"><dt>Confidence Interval</dt><dd>A range of values likely to contain the true population parameter. A 95% confidence interval means we're 95% confident the true value is in this range.</dd></div>
+<div class="glossary-item"><dt>Hypothesis Test</dt><dd>A statistical method to test a claim about a population. Uses a null hypothesis (H₀) and alternative hypothesis (H₁).</dd></div>
+<div class="glossary-item"><dt>p-value</dt><dd>The probability of getting results as extreme as observed, assuming the null hypothesis is true. If p-value < 0.05, we reject H₀ at 5% significance level.</dd></div>
+<div class="glossary-item"><dt>Stratified Sample</dt><dd>A sampling method where the population is divided into groups (strata) and random samples are taken from each group proportionally.</dd></div>
+<div class="glossary-item"><dt>Expected Value</dt><dd>The average outcome if an experiment is repeated many times. E(X) = Σ[x × P(x)].</dd></div>
+<div class="glossary-item"><dt>Combination</dt><dd>The number of ways to choose r items from n items where order doesn't matter. C(n,r) = n! / [r!(n-r)!].</dd></div>
+<div class="glossary-item"><dt>Permutation</dt><dd>The number of ways to arrange r items from n items where order matters. P(n,r) = n! / (n-r)!.</dd></div>
+<div class="glossary-item"><dt>Limit</dt><dd>The value a function approaches as the input approaches some value. Written as lim(x→a) f(x).</dd></div>
+<div class="glossary-item"><dt>Proof by Induction</dt><dd>A method of mathematical proof. Step 1: Prove base case (n=1). Step 2: Assume true for n=k. Step 3: Prove true for n=k+1. Conclusion: True for all natural numbers.</dd></div>
+</dl>
+</div>
+</div>
+
+<!-- MARK SCHEME DECODER TAB -->
+<div id="tab-marks" class="tab-content">
+<div class="card">
+<h2>Mark Scheme Decoder</h2>
+<p>Understanding how Maths examiners award marks is crucial for maximising your score.</p>
+</div>
+
+<div class="card">
+<h3>General Marking Principles</h3>
+<table>
+<tr><th>Principle</th><th>Detail</th></tr>
+<tr><td><strong>Step-based marking</strong></td><td>Most questions are marked in steps. Each step can be independently correct or incorrect.</td></tr>
+<tr><td><strong>Show your work</strong></td><td>An answer without sufficient supporting work earns only the lowest level of credit (typically Partial Credit or Low Partial Credit).</td></tr>
+<tr><td><strong>Rounding penalty</strong></td><td>Incorrect rounding is marked with a * and loses 1 mark if you would otherwise have full credit. Only applied once per unit of marking.</td></tr>
+<tr><td><strong>Unit penalties</strong></td><td>Missing or incorrect units may lose marks where specified (typically -1).</td></tr>
+<tr><td><strong>Multiple answers</strong></td><td>If you give more than the required number of answers without crossing out, the lowest mark is awarded.</td></tr>
+<tr><td><strong>Accept candidate's work</strong></td><td>If you make an error in part (a), you can still get full marks in part (b) by correctly using your wrong answer from (a) - unless it oversimplifies the work.</td></tr>
+</table>
+</div>
+
+<div class="card">
+<h3>Marking Scales</h3>
+<p>Questions are marked on different scales depending on the total marks available:</p>
+<table>
+<tr><th>Scale</th><th>Total Marks</th><th>Credit Levels</th></tr>
+<tr><td><strong>5B</strong></td><td>5 marks</td><td>0 (no merit), 2 (partial), 5 (full)</td></tr>
+<tr><td><strong>5C</strong></td><td>5 marks</td><td>0 (no merit), 2 (low partial), 3 (high partial), 5 (full)</td></tr>
+<tr><td><strong>5D</strong></td><td>5 marks</td><td>0, 2 (low partial), 3 (mid partial), 4 (high partial), 5 (full)</td></tr>
+<tr><td><strong>10C</strong></td><td>10 marks</td><td>0, 4 (low partial), 6 (high partial), 10 (full)</td></tr>
+<tr><td><strong>10D</strong></td><td>10 marks</td><td>0, 2 (low partial), 4 (mid partial), 6 (high partial), 10 (full)</td></tr>
+<tr><td><strong>15D</strong></td><td>15 marks</td><td>0, 4 (low partial), 7 (mid partial), 10 (high partial), 15 (full)</td></tr>
+</table>
+<p><strong>Full Credit - 1:</strong> Some errors (rounding, missing units, arithmetic errors) can result in Full Credit - 1, which is one mark below full credit (e.g., 9/10 instead of 10/10).</p>
+</div>
+
+<div class="card">
+<h3>Paper 1 - Sample Question Breakdown</h3>
+<h4>Q1(a) - Absolute Value Inequality (10 marks, Scale 10D)</h4>
+<div class="mark-info"><strong>Steps:</strong> None defined - marked on overall correctness</div>
+<div class="mark-info"><strong>Low Partial (2):</strong> Work of merit, e.g., writes x - 3 = -12, or indicates squaring</div>
+<div class="mark-info"><strong>Mid Partial (4):</strong> Finds x = 15 or x = -9</div>
+<div class="mark-info"><strong>High Partial (6):</strong> Finds both x = 15 and x = -9</div>
+<div class="mark-info"><strong>Full Credit (10):</strong> -9 ≤ x ≤ 15 (accept correct answer without work)</div>
+<div class="mark-info"><strong>Full Credit - 1 (9):</strong> Uses strict inequality, or doesn't include "and" or ∩</div>
+
+<h4>Q1(c) - Factorisation (10 marks, Scale 10D)</h4>
+<div class="mark-info"><strong>Step 1 (2):</strong> Sets up long division / array / product</div>
+<div class="mark-info"><strong>Step 2 (2):</strong> Finds first term in quotient (2x² or 10)</div>
+<div class="mark-info"><strong>Step 3 (2):</strong> Finds 2x² - 9x + 10</div>
+<div class="mark-info"><strong>Step 4 (2):</strong> Factorises 2x² - 9x + 10</div>
+<div class="mark-info"><strong>Step 5 (2):</strong> Finds 3 values of x</div>
+<div class="mark-info"><strong>Low Partial (2):</strong> 1 step correct OR finds 1 value of x OR correct answers without work</div>
+<div class="mark-info"><strong>Mid Partial (4):</strong> 2 or 3 steps correct OR finds x = -3/2 and verifies one other value</div>
+<div class="mark-info"><strong>High Partial (6):</strong> 4 steps correct</div>
+<div class="mark-info"><strong>Full Credit (10):</strong> All 5 steps correct</div>
+</div>
+
+<div class="card">
+<h3>Paper 1 - Complex Numbers (Q4)</h3>
+<h4>Q4(a) - Complex Division (5 marks, Scale 5D)</h4>
+<div class="mark-info"><strong>Method 1 Steps:</strong></div>
+<div class="mark-info">Step 1: Multiply top and bottom by conjugate of denominator</div>
+<div class="mark-info">Step 2: Expand numerator</div>
+<div class="mark-info">Step 3: Expand denominator</div>
+<div class="mark-info">Step 4: Write in form a + bi</div>
+<div class="mark-info"><strong>Low Partial (2):</strong> Work of merit (writes conjugate or states equation)</div>
+<div class="mark-info"><strong>Mid Partial (3):</strong> 2 steps correct</div>
+<div class="mark-info"><strong>High Partial (4):</strong> 3 steps correct</div>
+<div class="mark-info"><strong>Full Credit (5):</strong> -7/41 + 22i/41</div>
+<div class="mark-info"><strong>Full Credit - 1 (4):</strong> (-7 + 22i)/41 (not separated)</div>
+
+<h4>Q4(c) - De Moivre's Theorem (15 marks, Scale 15D)</h4>
+<div class="mark-info"><strong>Step 1 (4):</strong> Finds θ (reference angle -90° or 270° or 3π/2)</div>
+<div class="mark-info"><strong>Step 2 (4):</strong> Finds r = 64</div>
+<div class="mark-info"><strong>Step 3 (4):</strong> 1 root evaluated using De Moivre's Theorem</div>
+<div class="mark-info"><strong>Step 4 (3):</strong> 2nd root found</div>
+<div class="mark-info"><strong>Note:</strong> Since z^6 is even, if one root is found and the second is minus 1 times the first, award full credit</div>
+<div class="mark-info"><strong>Low Partial (4):</strong> Plots -64i OR indicates z = (-64i)^(1/6)</div>
+<div class="mark-info"><strong>Mid Partial (7):</strong> 2 steps correct</div>
+<div class="mark-info"><strong>High Partial (10):</strong> 3 steps correct</div>
+<div class="mark-info"><strong>Full Credit - 1 (14):</strong> Roots correct but in polar form or decimal form</div>
+</div>
+
+<div class="card">
+<h3>Paper 2 - Sample Question Breakdown</h3>
+<h4>Q3 - Probability (15 marks, Scale 15D)</h4>
+<div class="mark-info"><strong>Q3(a)(i):</strong> Show P(A) = 1/4 by counting people in event A from Venn diagram</div>
+<div class="mark-info"><strong>Q3(a)(ii):</strong> Verify P(A ∪ C) = P(A) + P(C) - P(A ∩ C) using diagram values</div>
+<div class="mark-info"><strong>Q3(a)(iii):</strong> Test independence: calculate P(A) × P(B) and compare to P(A ∩ B). Show working!</div>
+<div class="mark-info"><strong>Low Partial (4):</strong> Work of merit in one part</div>
+<div class="mark-info"><strong>Mid Partial (7):</strong> 1 part correct OR work of merit in all 3 parts</div>
+<div class="mark-info"><strong>High Partial (10):</strong> 2 parts correct</div>
+
+<h4>Q10 - Statistics (50 marks total, multiple scales)</h4>
+<div class="mark-info"><strong>Q10(b) - 95% Confidence Interval:</strong> Must use correct standard deviation from table, show formula, substitute values, calculate correctly</div>
+<div class="mark-info"><strong>Q10(c) - Hypothesis Test:</strong> Calculate z-score using z = (x̄ - μ₀)/(σ/√n), find p-value, state conclusion in context</div>
+<div class="mark-info"><strong>Common error:</strong> Using population standard deviation (60) instead of sample standard deviation from table</div>
+</div>
+
+<div class="card">
+<h3>Golden Rules for Maximum Marks</h3>
+<div class="explain"><strong>1. Write the formula first.</strong> Even if your calculation is wrong, the formula earns marks.</div>
+<div class="explain"><strong>2. Show EVERY step.</strong> Each step is worth marks. Don't skip steps in your head.</div>
+<div class="explain"><strong>3. Label your work.</strong> Make it clear which part you're answering: (a)(i), (a)(ii), etc.</div>
+<div class="explain"><strong>4. Don't round until the end.</strong> Keep full calculator accuracy throughout. Only round the final answer.</div>
+<div class="explain"><strong>5. Accept your own errors.</strong> If you make a mistake in part (a), use that wrong answer in part (b). You'll still get marks for correct method in (b).</div>
+<div class="explain"><strong>6. Cross out unwanted attempts.</strong> If you try multiple methods, cross out the one you don't want marked. Otherwise the lowest mark applies.</div>
+<div class="explain"><strong>7. Use the Formulae and Tables booklet.</strong> You don't need to memorize everything - use the booklet provided.</div>
+<div class="explain"><strong>8. Check your units.</strong> Include units in final answers where relevant (m, cm², radians, etc.).</div>
+<div class="explain"><strong>9. Simplify where asked.</strong> If the question says "simplify", "give in surd form", or "exact value", don't use decimals.</div>
+</div>
+</div>
+
+<!-- STUDY TAB -->
+<div id="tab-study" class="tab-content active">
+<div class="card">
+<h2>Paper Selection</h2>
+<p>LC Maths Higher Level has TWO papers. Choose which paper's questions you want to study:</p>
+<div class="question-nav" id="paperNav">
+<button class="active" onclick="showPaper('paper1','maths')">Paper 1</button>
+<button onclick="showPaper('paper2','maths')">Paper 2</button>
+</div>
+</div>
+
+<!-- PAPER 1 CONTENT -->
+<div class="paper-section active" id="paper-paper1">
+<div class="card">
+<h2>Paper 1: Question Walkthroughs</h2>
+<p>Paper 1 was on <strong>Friday 6 June 2025, 2:00-4:30pm</strong>. Select a question to see detailed solutions.</p>
+</div>
+<div class="question-nav" id="studyNavP1">
+<button class="active" onclick="showQuestion('p1q1','maths')">Q1 Algebra</button>
+<button onclick="showQuestion('p1q2','maths')">Q2 Calculus</button>
+<button onclick="showQuestion('p1q3','maths')">Q3 Calculus</button>
+<button onclick="showQuestion('p1q4','maths')">Q4 Complex</button>
+<button onclick="showQuestion('p1q5','maths')">Q5 Algebra</button>
+<button onclick="showQuestion('p1q6','maths')">Q6 Binomial</button>
+<button onclick="showQuestion('p1q7','maths')">Q7 Sequences</button>
+<button onclick="showQuestion('p1q8','maths')">Q8 Optimization</button>
+</div>
+
+<!-- P1 Q1 -->
+<div class="q-section active" id="q-p1q1">
+<div class="card">
+<h2>Paper 1 - Q1: Algebra <span class="marks-badge">30 marks</span></h2>
+
+<h3>(a) Solve the inequality |x - 3| ≤ 12 <span class="marks-badge">10</span></h3>
+<p><strong>Question:</strong> Solve for x ∈ ℝ</p>
+<div class="working">
+<strong>Method 1: Split the absolute value</strong><br>
+|x - 3| ≤ 12 means:<br>
+x - 3 ≤ 12  AND  x - 3 ≥ -12<br>
+x ≤ 15  AND  x ≥ -9<br>
+<strong>Answer: -9 ≤ x ≤ 15</strong>
+</div>
+<div class="explain"><strong>Why this works:</strong> The absolute value |x - 3| represents the distance from x to 3. If this distance is ≤ 12, then x can be 12 units to the left (3 - 12 = -9) or 12 units to the right (3 + 12 = 15) of 3.</div>
+
+<h3>(b) Multiply out and simplify: (4x - 10√x)(2x + 5√x - 7) <span class="marks-badge">10</span></h3>
+<div class="working">
+<strong>Distribute each term:</strong><br>
+= 4x(2x + 5√x - 7) - 10√x(2x + 5√x - 7)<br>
+= 8x² + 20x√x - 28x - 20x√x - 50x + 70√x<br>
+= 8x² + (20x√x - 20x√x) + (-28x - 50x) + 70√x<br>
+<strong>= 8x² - 78x + 70√x</strong>
+</div>
+<div class="explain"><strong>Tip:</strong> The middle terms 20x√x cancel out. Check you have 9 terms total before simplifying (6 in the expanded form, 3 in the final answer).</div>
+
+<h3>(c) Find three solutions to 4x³ - 12x² - 7x + 30 = 0 <span class="marks-badge">10</span></h3>
+<p><strong>Given:</strong> (2x + 3) is a factor</p>
+<div class="working">
+<strong>Use long division or synthetic division:</strong><br>
+4x³ - 12x² - 7x + 30 = (2x + 3)(2x² - 9x + 10)<br><br>
+<strong>Now factor the quadratic:</strong><br>
+2x² - 9x + 10 = (2x - 5)(x - 2)<br><br>
+<strong>So the full factorization is:</strong><br>
+(2x + 3)(2x - 5)(x - 2) = 0<br><br>
+<strong>Solutions:</strong><br>
+2x + 3 = 0  →  x = -3/2<br>
+2x - 5 = 0  →  x = 5/2<br>
+x - 2 = 0   →  x = 2<br><br>
+<strong>Answer: x = -3/2, x = 5/2, x = 2</strong>
+</div>
+<div class="explain"><strong>Steps earn marks:</strong> Setting up the division (2), finding first term (2), finding the quadratic (2), factorizing it (2), finding all 3 values (2) = 10 marks total.</div>
+</div>
+</div>
+
+<!-- P1 Q2 -->
+<div class="q-section" id="q-p1q2">
+<div class="card">
+<h2>Paper 1 - Q2: Calculus and Functions <span class="marks-badge">30 marks</span></h2>
+
+<h3>(a)(i) Find f'(x) where f(x) = 6 + x² + sin 4x <span class="marks-badge">5</span></h3>
+<div class="working">
+<strong>Differentiate term by term:</strong><br>
+f'(x) = 0 + 2x + 4cos 4x<br>
+<strong>f'(x) = 2x + 4cos 4x</strong>
+</div>
+<div class="explain"><strong>Chain rule:</strong> The derivative of sin 4x is cos 4x × 4 (derivative of inside function).</div>
+
+<h3>(a)(ii) Find the equation of the tangent at x = 0 in form ax + by + c = 0 <span class="marks-badge">10</span></h3>
+<div class="working">
+<strong>Step 1: Find the slope at x = 0</strong><br>
+f'(0) = 2(0) + 4cos(4×0) = 4cos(0) = 4<br>
+Slope m = 4<br><br>
+<strong>Step 2: Find the y-value at x = 0</strong><br>
+f(0) = 6 + 0² + sin(4×0) = 6<br>
+Point of contact: (0, 6)<br><br>
+<strong>Step 3: Use point-slope form</strong><br>
+y - 6 = 4(x - 0)<br>
+y - 6 = 4x<br><br>
+<strong>Step 4: Rearrange to required form</strong><br>
+4x - y + 6 = 0  OR  -4x + y - 6 = 0<br>
+<strong>Answer: 4x - y + 6 = 0</strong>
+</div>
+<div class="explain"><strong>Marks breakdown:</strong> Finding slope (2-3), finding y-value (2-3), substituting into line formula (2-3), converting to required form (2-3). Total = 10 marks.</div>
+
+<h3>(b)(i) For g(x) shown in the graph, find values of x where g'(x) > 2 <span class="marks-badge">5</span></h3>
+<p><strong>Graph shows:</strong> g(x) is made of two line segments from x = 0 to x = 4</p>
+<div class="working">
+<strong>g'(x) represents the slope of g(x)</strong><br>
+From the graph: the second line segment (from x = 3 to x = 4) has slope > 2<br>
+<strong>Answer: 3 < x ≤ 4</strong>
+</div>
+<div class="explain"><strong>Understanding g'(x):</strong> The derivative is the slope. Where the graph is steeper (larger slope), g'(x) is larger.</div>
+
+<h3>(b)(ii) Find g(g(3)) <span class="marks-badge">5</span></h3>
+<div class="working">
+<strong>From the graph:</strong><br>
+g(3) = 1<br>
+g(g(3)) = g(1) = 1/3<br>
+<strong>Answer: 1/3</strong>
+</div>
+<div class="explain"><strong>Composite functions:</strong> Work from the inside out. First find g(3), then use that result to find g(1).</div>
+
+<h3>(b)(iii) Draw the graph of y = g⁻¹(x) <span class="marks-badge">5</span></h3>
+<div class="working">
+<strong>The inverse function g⁻¹(x) is the reflection of g(x) in the line y = x</strong><br>
+Reflect each point (a, b) on g(x) to (b, a) on g⁻¹(x)<br>
+Draw a smooth curve through these reflected points
+</div>
+<div class="explain"><strong>Key points to reflect:</strong> If (0, 0), (1, 1/3), (3, 1), (4, 4) are on g, then (0, 0), (1/3, 1), (1, 3), (4, 4) are on g⁻¹. Also draw the line y = x as a guide.</div>
+</div>
+</div>
+
+<!-- P1 Q4 -->
+<div class="q-section" id="q-p1q4">
+<div class="card">
+<h2>Paper 1 - Q4: Complex Numbers <span class="marks-badge">30 marks</span></h2>
+
+<h3>(a) Write (2 + 3i)/(4 - 5i) in the form a + bi <span class="marks-badge">5</span></h3>
+<div class="working">
+<strong>Multiply top and bottom by the conjugate of the denominator:</strong><br>
+Conjugate of (4 - 5i) is (4 + 5i)<br><br>
+= (2 + 3i)(4 + 5i) / (4 - 5i)(4 + 5i)<br><br>
+<strong>Numerator:</strong><br>
+= 8 + 10i + 12i + 15i²<br>
+= 8 + 22i + 15(-1)<br>
+= -7 + 22i<br><br>
+<strong>Denominator:</strong><br>
+= 16 + 20i - 20i - 25i²<br>
+= 16 - 25(-1)<br>
+= 16 + 25 = 41<br><br>
+<strong>Answer: -7/41 + 22i/41</strong>
+</div>
+<div class="explain"><strong>Why multiply by conjugate?</strong> When you multiply (a - bi)(a + bi), the i terms cancel and you get a² + b², which is real. This eliminates i from the denominator.</div>
+
+<h3>(b) Use de Moivre's theorem to prove cos 2θ = cos²θ - sin²θ <span class="marks-badge">10</span></h3>
+<div class="working">
+<strong>By de Moivre's theorem:</strong><br>
+(cos θ + i sin θ)² = cos 2θ + i sin 2θ<br><br>
+<strong>Expand the left side:</strong><br>
+LHS = (cos θ)² + 2i cos θ sin θ + (i sin θ)²<br>
+= cos²θ + 2i cos θ sin θ + i²sin²θ<br>
+= cos²θ + 2i cos θ sin θ - sin²θ<br>
+= (cos²θ - sin²θ) + i(2 cos θ sin θ)<br><br>
+<strong>Equate real parts:</strong><br>
+Real part of LHS = cos²θ - sin²θ<br>
+Real part of RHS = cos 2θ<br><br>
+<strong>Therefore: cos 2θ = cos²θ - sin²θ ✓</strong>
+</div>
+<div class="explain"><strong>Key insight:</strong> De Moivre's theorem connects powers of complex numbers to trigonometric identities. By equating real and imaginary parts, we derive double-angle formulas.</div>
+
+<h3>(c) Find two values of z where z⁶ = -64i <span class="marks-badge">15</span></h3>
+<div class="working">
+<strong>Step 1: Convert -64i to polar form</strong><br>
+-64i is on the negative imaginary axis<br>
+Modulus r = |-64i| = 64<br>
+Argument θ = -90° = -π/2  (or 270° = 3π/2)<br><br>
+<strong>Step 2: Use z = (-64i)^(1/6)</strong><br>
+z = 64^(1/6) × [cos((3π/2 + 2πn)/6) + i sin((3π/2 + 2πn)/6)]<br>
+z = 2 × [cos(π/4 + πn/3) + i sin(π/4 + πn/3)]<br><br>
+<strong>Step 3: Find roots for n = 0, 1, 2, 3, 4, 5</strong><br><br>
+<strong>n = 0:</strong><br>
+z = 2[cos(π/4) + i sin(π/4)]<br>
+z = 2[√2/2 + i√2/2] = <strong>√2 + √2i</strong><br><br>
+<strong>n = 1:</strong><br>
+z = 2[cos(π/4 + π/3) + i sin(π/4 + π/3)]<br>
+z = 2[cos(7π/12) + i sin(7π/12)]<br>
+z = <strong>(-√6 + √2)/2 + i(√6 + √2)/2</strong><br><br>
+<strong>Answer (any two):</strong><br>
+z = √2 + √2i<br>
+z = (-√6 + √2)/2 + i(√6 + √2)/2<br><br>
+(There are 6 roots total; you only need to give 2 in surd form)
+</div>
+<div class="explain"><strong>Note:</strong> Since z⁶ is an even power, if you find one root z₀, then -z₀ is also a root. So finding √2 + √2i means -√2 - √2i is automatically another root.</div>
+</div>
+</div>
+
+<!-- P1 Q7 -->
+<div class="q-section" id="q-p1q7">
+<div class="card">
+<h2>Paper 1 - Q7: Spider Web Sequences <span class="marks-badge">50 marks</span></h2>
+<p><strong>Context:</strong> A spider builds a web in stages. The total length of silk S(n) and extra silk A(n) needed at each stage follow patterns.</p>
+
+<h3>(a)(i) Find A(2) and A(3) <span class="marks-badge">5</span></h3>
+<p><strong>Given:</strong> S(1) = 15.8, S(2) = 37.8, S(3) = 66, A(1) = 15.8</p>
+<div class="working">
+<strong>A(2) = extra silk from Stage 1 to Stage 2</strong><br>
+A(2) = S(2) - S(1) = 37.8 - 15.8 = <strong>22</strong><br><br>
+<strong>A(3) = extra silk from Stage 2 to Stage 3</strong><br>
+A(3) = S(3) - S(2) = 66 - 37.8 = <strong>28.2</strong>
+</div>
+
+<h3>(a)(ii) Find an expression for A(n) <span class="marks-badge">5</span></h3>
+<div class="working">
+<strong>Check if arithmetic sequence:</strong><br>
+A(1) = 15.8,  A(2) = 22,  A(3) = 28.2<br>
+Differences: 22 - 15.8 = 6.2,  28.2 - 22 = 6.2<br>
+Common difference d = 6.2 ✓<br><br>
+<strong>Arithmetic sequence formula:</strong><br>
+A(n) = a + (n - 1)d<br>
+A(n) = 15.8 + (n - 1)(6.2)<br>
+<strong>A(n) = 6.2n + 9.6</strong>
+</div>
+
+<h3>(a)(iii) Find A(100) <span class="marks-badge">5</span></h3>
+<div class="working">
+A(100) = 6.2(100) + 9.6<br>
+A(100) = 620 + 9.6<br>
+<strong>A(100) = 629.6 cm</strong>
+</div>
+
+<h3>(a)(iv) Show that S(n) = 3.1n² + 12.7n <span class="marks-badge">5</span></h3>
+<div class="working">
+<strong>S(n) is the sum of arithmetic series A(1) + A(2) + ... + A(n)</strong><br><br>
+Using sum formula: S_n = n/2[2a + (n-1)d]<br>
+S(n) = n/2[2(15.8) + (n-1)(6.2)]<br>
+S(n) = n/2[31.6 + 6.2n - 6.2]<br>
+S(n) = n/2[6.2n + 25.4]<br>
+S(n) = n(3.1n + 12.7)<br>
+<strong>S(n) = 3.1n² + 12.7n ✓</strong>
+</div>
+
+<h3>(a)(v) Find stage k where total silk first exceeds 10m <span class="marks-badge">5</span></h3>
+<div class="working">
+<strong>10 m = 1000 cm</strong><br>
+S(n) > 1000<br>
+3.1n² + 12.7n = 1000<br>
+3.1n² + 12.7n - 1000 = 0<br><br>
+<strong>Quadratic formula:</strong><br>
+n = [-12.7 ± √(12.7² - 4(3.1)(-1000))] / (2 × 3.1)<br>
+n = [-12.7 ± √(161.29 + 12400)] / 6.2<br>
+n = [-12.7 ± √12561.29] / 6.2<br>
+n = [-12.7 ± 112.07] / 6.2<br>
+n = 99.37/6.2  or  -124.77/6.2<br>
+n ≈ 16.02  (taking positive root)<br><br>
+<strong>Since n must be a natural number: k = 17</strong>
+</div>
+<div class="explain"><strong>Why 17?</strong> Stage 16 gives 996.8 cm (< 1000), Stage 17 gives 1026.5 cm (> 1000). So Stage 17 is the FIRST to exceed 10m.</div>
+
+<h3>(b)(i) Find the length of O₃ <span class="marks-badge">5</span></h3>
+<p><strong>Given:</strong> O₁ = 0.5 cm, O₂ = 0.53 cm, lengths form geometric sequence</p>
+<div class="working">
+<strong>Find common ratio r:</strong><br>
+r = O₂/O₁ = 0.53/0.5 = 1.06<br><br>
+<strong>Find O₃:</strong><br>
+O₃ = O₂ × r = 0.53 × 1.06<br>
+<strong>O₃ = 0.5618 cm</strong>
+</div>
+
+<h3>(b)(ii) Expression for total length of first n orbitals <span class="marks-badge">10</span></h3>
+<div class="working">
+<strong>Geometric series sum:</strong><br>
+S_n = a(r^n - 1)/(r - 1)<br>
+a = 0.5,  r = 1.06<br><br>
+<strong>S_n = 0.5(1.06^n - 1)/(1.06 - 1)</strong><br>
+<strong>S_n = 0.5(1.06^n - 1)/0.06</strong><br>
+or simplified:<br>
+<strong>S_n = (25/3)(1.06^n - 1)</strong>
+</div>
+
+<h3>(b)(iii) Expression for total length of first k laps <span class="marks-badge">10</span></h3>
+<p><strong>Given:</strong> Each lap has exactly 18 orbitals</p>
+<div class="working">
+<strong>One lap = first 18 orbitals</strong><br>
+Length of 1 lap = S₁₈ = (25/3)(1.06¹⁸ - 1)<br><br>
+<strong>k laps = k × S₁₈</strong><br>
+<strong>Total = k × (25/3)(1.06¹⁸ - 1)</strong>
+</div>
+</div>
+</div>
+
+</div>
+
+<!-- PAPER 2 CONTENT -->
+<div class="paper-section" id="paper-paper2">
+<div class="card">
+<h2>Paper 2: Question Walkthroughs</h2>
+<p>Paper 2 was on <strong>Monday 9 June 2025, 9:30am-12:00pm</strong>. Select a question to see detailed solutions.</p>
+</div>
+<div class="question-nav" id="studyNavP2">
+<button class="active" onclick="showQuestion('p2q1','maths')">Q1 Lines</button>
+<button onclick="showQuestion('p2q2','maths')">Q2 Circles</button>
+<button onclick="showQuestion('p2q3','maths')">Q3 Probability</button>
+<button onclick="showQuestion('p2q4','maths')">Q4 Statistics</button>
+<button onclick="showQuestion('p2q6','maths')">Q6 Trig</button>
+<button onclick="showQuestion('p2q10','maths')">Q10 Stats Context</button>
+</div>
+
+<!-- P2 Q1 -->
+<div class="q-section active" id="q-p2q1">
+<div class="card">
+<h2>Paper 2 - Q1: Lines <span class="marks-badge">30 marks</span></h2>
+
+<h3>(a) Find p where (p, 5) lies on 3x - 2y + 28 = 0 <span class="marks-badge">5</span></h3>
+<div class="working">
+<strong>Substitute the point into the equation:</strong><br>
+3(p) - 2(5) + 28 = 0<br>
+3p - 10 + 28 = 0<br>
+3p + 18 = 0<br>
+3p = -18<br>
+<strong>p = -6</strong>
+</div>
+
+<h3>(b) Find acute angle between lines l and h <span class="marks-badge">10</span></h3>
+<p><strong>Given:</strong> l: y = -x/3 + 11,  h: 2x - 5y + 10 = 0</p>
+<div class="working">
+<strong>Find slopes:</strong><br>
+Line l: y = -x/3 + 11,  so m₁ = -1/3<br>
+Line h: 2x - 5y + 10 = 0<br>
+5y = 2x + 10<br>
+y = 2x/5 + 2,  so m₂ = 2/5<br><br>
+<strong>Angle between lines:</strong><br>
+tan θ = |(m₁ - m₂)/(1 + m₁m₂)|<br>
+tan θ = |(-1/3 - 2/5)/(1 + (-1/3)(2/5))|<br>
+tan θ = |(-5/15 - 6/15)/(1 - 2/15)|<br>
+tan θ = |(-11/15)/(13/15)|<br>
+tan θ = |-11/13|<br>
+tan θ = 11/13<br><br>
+θ = tan⁻¹(11/13)<br>
+<strong>θ ≈ 40° (to nearest degree)</strong>
+</div>
+
+<h3>(c) Find equations of two lines with slope -2/3 and triangle area 12 <span class="marks-badge">15</span></h3>
+<p><strong>Given:</strong> Line cuts x-axis at A(a, 0), y-axis at B(0, b), slope = -2/3, triangle area = 12</p>
+<div class="working">
+<strong>From slope:</strong><br>
+m = -2/3 = (b - 0)/(0 - a) = b/(-a)<br>
+b/(-a) = -2/3<br>
+3b = 2a<br>
+b = 2a/3<br><br>
+<strong>From area:</strong><br>
+Area of triangle = ½|a||b| = 12<br>
+½|a||b| = 12<br>
+|ab| = 24<br><br>
+<strong>Substitute b = 2a/3:</strong><br>
+|a × 2a/3| = 24<br>
+|2a²/3| = 24<br>
+2a²/3 = ±24<br>
+a² = ±36<br>
+a² = 36  (taking positive)<br>
+a = ±6<br><br>
+<strong>Case 1: a = 6</strong><br>
+b = 2(6)/3 = 4<br>
+Points: A(6, 0), B(0, 4)<br>
+Equation: y - 0 = -2/3(x - 6)<br>
+3y = -2x + 12<br>
+<strong>Line 1: 2x + 3y - 12 = 0</strong><br><br>
+<strong>Case 2: a = -6</strong><br>
+b = 2(-6)/3 = -4<br>
+Points: A(-6, 0), B(0, -4)<br>
+Equation: y - 0 = -2/3(x - (-6))<br>
+3y = -2x - 12<br>
+<strong>Line 2: 2x + 3y + 12 = 0</strong>
+</div>
+</div>
+</div>
+
+<!-- P2 Q2 -->
+<div class="q-section" id="q-p2q2">
+<div class="card">
+<h2>Paper 2 - Q2: Circles <span class="marks-badge">30 marks</span></h2>
+
+<h3>(a)(i) Centre and radius of (x - 4)² + (y + 2)² = 45 <span class="marks-badge">5</span></h3>
+<div class="working">
+<strong>Standard form: (x - h)² + (y - k)² = r²</strong><br>
+Centre (h, k) = (4, -2)<br>
+r² = 45,  so r = √45 = 3√5<br><br>
+<strong>Centre: (4, -2)</strong><br>
+<strong>Radius: 3√5</strong>
+</div>
+
+<h3>(a)(ii) Equation of tangent at (-2, -5) <span class="marks-badge">10</span></h3>
+<div class="working">
+<strong>Slope of radius from centre (4, -2) to point (-2, -5):</strong><br>
+m_radius = (-5 - (-2))/(-2 - 4) = -3/(-6) = 1/2<br><br>
+<strong>Slope of tangent (perpendicular to radius):</strong><br>
+m_tangent = -1/m_radius = -1/(1/2) = -2<br><br>
+<strong>Equation of tangent through (-2, -5):</strong><br>
+y - (-5) = -2(x - (-2))<br>
+y + 5 = -2(x + 2)<br>
+y + 5 = -2x - 4<br>
+y = -2x - 9<br>
+<strong>Answer: y = -2x - 9</strong>
+</div>
+
+<h3>(b) Find two values of k where y = k is tangent to circle t <span class="marks-badge">15</span></h3>
+<p><strong>Given:</strong> x² + y² + 28x - 46y + k = 0</p>
+<div class="working">
+<strong>Complete the square to find centre and radius:</strong><br>
+(x² + 28x) + (y² - 46y) + k = 0<br>
+(x² + 28x + 196) + (y² - 46y + 529) + k = 196 + 529<br>
+(x + 14)² + (y - 23)² = 725 - k<br><br>
+<strong>Centre:</strong> (-14, 23)<br>
+<strong>Radius:</strong> r = √(725 - k)<br><br>
+<strong>For y = k to be tangent:</strong><br>
+The distance from centre to line y = k equals the radius<br>
+Distance = |23 - k|<br>
+|23 - k| = √(725 - k)<br><br>
+<strong>Square both sides:</strong><br>
+(23 - k)² = 725 - k<br>
+529 - 46k + k² = 725 - k<br>
+k² - 46k + k + 529 - 725 = 0<br>
+k² - 45k - 196 = 0<br><br>
+<strong>Solve using quadratic formula:</strong><br>
+k = [45 ± √(2025 + 784)] / 2<br>
+k = [45 ± √2809] / 2<br>
+k = [45 ± 53] / 2<br><br>
+k = 98/2 = 49  or  k = -8/2 = -4<br><br>
+<strong>Answer: k = 49 or k = -4</strong>
+</div>
+</div>
+</div>
+
+<!-- P2 Q3 -->
+<div class="q-section" id="q-p2q3">
+<div class="card">
+<h2>Paper 2 - Q3: Probability <span class="marks-badge">30 marks</span></h2>
+<p><strong>Context:</strong> 240 people surveyed about which countries (A, B, C) they had visited.</p>
+
+<h3>(a)(i) Show P(A) = 1/4 <span class="marks-badge">5</span></h3>
+<p><strong>From Venn diagram:</strong> n(A only) = 6, n(A∩B only) = 18, n(A∩C only) = 13, n(A∩B∩C) = 23</p>
+<div class="working">
+<strong>Total in A:</strong><br>
+n(A) = 6 + 18 + 13 + 23 = 60<br><br>
+<strong>P(A):</strong><br>
+P(A) = 60/240 = 1/4 ✓
+</div>
+
+<h3>(a)(ii) Verify P(A∪C) = P(A) + P(C) - P(A∩C) <span class="marks-badge">5</span></h3>
+<div class="working">
+<strong>Count from Venn diagram:</strong><br>
+n(A) = 60 (from above)<br>
+n(C) = 13 + 41 + 23 + 16 = 93<br>
+n(A∩C) = 13 + 23 = 36<br>
+n(A∪C) = 6 + 18 + 13 + 41 + 23 + 16 = 117<br><br>
+<strong>LHS: P(A∪C)</strong> = 117/240<br><br>
+<strong>RHS: P(A) + P(C) - P(A∩C)</strong><br>
+= 60/240 + 93/240 - 36/240<br>
+= (60 + 93 - 36)/240<br>
+= 117/240<br><br>
+<strong>LHS = RHS ✓</strong>
+</div>
+
+<h3>(a)(iii) Are A and B independent? Justify. <span class="marks-badge">5</span></h3>
+<div class="working">
+<strong>For independence: P(A∩B) = P(A) × P(B)</strong><br><br>
+n(A) = 60,  P(A) = 60/240 = 1/4<br>
+n(B) = 18 + 56 + 23 + 16 = 113,  P(B) = 113/240<br>
+n(A∩B) = 18 + 23 = 41,  P(A∩B) = 41/240<br><br>
+<strong>Test:</strong><br>
+P(A) × P(B) = (60/240) × (113/240)<br>
+= 6780/57600<br>
+= 113/960<br><br>
+P(A∩B) = 41/240 = 164/960<br><br>
+<strong>113/960 ≠ 164/960</strong><br><br>
+<strong>Answer: No, A and B are NOT independent</strong><br>
+Because P(A∩B) ≠ P(A) × P(B)
+</div>
+
+<h3>(b) Probability one person visited all 3, other visited none <span class="marks-badge">15</span></h3>
+<div class="working">
+<strong>Number who visited all 3:</strong> 23<br>
+<strong>Number who visited none:</strong> 67<br><br>
+<strong>Two ways this can happen:</strong><br>
+1. First person visited all 3, second visited none<br>
+2. First person visited none, second visited all 3<br><br>
+<strong>Probability:</strong><br>
+P = (23/240) × (67/239) + (67/240) × (23/239)<br>
+P = 2 × (23 × 67)/(240 × 239)<br>
+P = 2 × 1541/57360<br>
+P = 3082/57360<br><br>
+<strong>Simplify:</strong><br>
+GCD(3082, 57360) = 2<br>
+P = 1541/28680<br><br>
+<strong>Answer: 1541/28680</strong>
+</div>
+</div>
+</div>
+
+<!-- P2 Q10 -->
+<div class="q-section" id="q-p2q10">
+<div class="card">
+<h2>Paper 2 - Q10: Statistics with Normal Distribution <span class="marks-badge">50 marks</span></h2>
+<p><strong>Context:</strong> Test scores worldwide are normally distributed with mean 400, standard deviation 60.</p>
+
+<h3>(a)(i) Fill in missing values using empirical rule <span class="marks-badge">10</span></h3>
+<p><strong>Empirical Rule (68-95-99.7):</strong> 68% within μ ± σ, 95% within μ ± 2σ, 99.7% within μ ± 3σ</p>
+<div class="working">
+<strong>Given: Mean = 400, SD = 60</strong><br>
+One value shown: 520 (which is 400 + 2×60)<br><br>
+<strong>Missing values at μ ± σ:</strong><br>
+400 - 60 = <strong>340</strong><br>
+400 + 60 = <strong>460</strong><br><br>
+<strong>Missing value at μ - 2σ:</strong><br>
+400 - 2(60) = <strong>280</strong><br><br>
+The four missing values are: <strong>280, 340, 460, 520</strong>
+</div>
+
+<h3>(a)(ii) Proportion scoring above 420 <span class="marks-badge">10</span></h3>
+<div class="working">
+<strong>Standardize using z-score:</strong><br>
+z = (X - μ)/σ = (420 - 400)/60 = 20/60 = 1/3 ≈ 0.33<br><br>
+<strong>From normal distribution table:</strong><br>
+P(Z < 0.33) ≈ 0.6293<br>
+P(Z > 0.33) = 1 - 0.6293 = 0.3707<br><br>
+<strong>Answer: 0.37 (to 2 decimal places)</strong>
+</div>
+
+<h3>(b) 95% confidence interval for Country X <span class="marks-badge">10</span></h3>
+<p><strong>Given:</strong> Sample mean = 387, SD = 66.2, n = 2161</p>
+<div class="working">
+<strong>95% CI formula:</strong><br>
+x̄ ± 1.96(σ/√n)<br><br>
+= 387 ± 1.96(66.2/√2161)<br>
+= 387 ± 1.96(66.2/46.49)<br>
+= 387 ± 1.96(1.424)<br>
+= 387 ± 2.79<br><br>
+<strong>Lower bound:</strong> 387 - 2.8 = 384.2<br>
+<strong>Upper bound:</strong> 387 + 2.8 = 389.8<br><br>
+<strong>Answer: (384.2, 389.8)</strong>
+</div>
+
+<h3>(c)(i) Test statistic for Country Y <span class="marks-badge">10</span></h3>
+<p><strong>Given:</strong> x̄ = 403, σ = 70.6, n = 2724, μ₀ = 400</p>
+<div class="working">
+<strong>z-score formula:</strong><br>
+z = (x̄ - μ₀)/(σ/√n)<br><br>
+z = (403 - 400)/(70.6/√2724)<br>
+z = 3/(70.6/52.19)<br>
+z = 3/1.353<br>
+<strong>z ≈ 2.22</strong>
+</div>
+
+<h3>(c)(ii) p-value and conclusion <span class="marks-badge">10</span></h3>
+<div class="working">
+<strong>Two-tailed test (H₁: μ ≠ 400)</strong><br>
+z = 2.22<br><br>
+<strong>From normal table:</strong><br>
+P(Z > 2.22) ≈ 0.0132<br>
+For two-tailed: p-value = 2 × 0.0132 = 0.0264<br><br>
+<strong>p-value ≈ 0.026</strong><br><br>
+<strong>Conclusion:</strong><br>
+Since p-value (0.026) < 0.05 (5% significance level), we <strong>reject the null hypothesis</strong>.<br>
+There is <strong>sufficient evidence</strong> to conclude that the mean score for Country Y is <strong>different from 400</strong>.
+</div>
+
+<h3>(d) Stratified sampling with respect to having a pet <span class="marks-badge">10</span></h3>
+<div class="working">
+<strong>How to take stratified sample:</strong><br>
+Divide the 2520 students into two strata:<br>
+- Stratum 1: Students with a pet (50% = 1260 students)<br>
+- Stratum 2: Students without a pet (50% = 1260 students)<br>
+Take random samples proportionally from each stratum.<br><br>
+<strong>Why this would NOT be useful:</strong><br>
+Having a pet in the home is <strong>unlikely to be related to maths test scores</strong>. Stratifying on an irrelevant variable doesn't reduce sampling error and adds unnecessary complexity. Better to use simple random sampling or stratify on factors that might affect maths performance (e.g., school type, prior maths grades).
+</div>
+</div>
+</div>
+
+</div>
+
+</div>
+
+<!-- FLASHCARDS TAB -->
+<div id="tab-flashcards" class="tab-content">
+<div class="card">
+<h2>Maths Flashcards</h2>
+<p>Click a card to flip and reveal the answer. Use these to test your recall of key concepts and formulas.</p>
+<div class="flashcard-controls">
+<button onclick="shuffleFlashcards('maths')">Shuffle Cards</button>
+<button onclick="resetFlashcards('maths')">Reset All</button>
+</div>
+</div>
+<div class="flashcard-container" id="flashcardContainer">
+<div class="flashcard" onclick="flipCard(this)">
+<div class="front">What is the quadratic formula?</div>
+<div class="back">x = (-b ± √(b² - 4ac)) / 2a<br>For equation ax² + bx + c = 0</div>
+</div>
+<div class="flashcard" onclick="flipCard(this)">
+<div class="front">What does the discriminant tell you?</div>
+<div class="back">Δ = b² - 4ac<br>Δ > 0: two real roots<br>Δ = 0: one repeated root<br>Δ < 0: no real roots</div>
+</div>
+<div class="flashcard" onclick="flipCard(this)">
+<div class="front">What is the chain rule for differentiation?</div>
+<div class="back">If y = f(g(x)), then<br>dy/dx = f'(g(x)) × g'(x)<br>Or: dy/dx = dy/du × du/dx</div>
+</div>
+<div class="flashcard" onclick="flipCard(this)">
+<div class="front">What is de Moivre's theorem?</div>
+<div class="back">[r(cos θ + i sin θ)]^n = r^n(cos nθ + i sin nθ)<br>Used for powers and roots of complex numbers</div>
+</div>
+<div class="flashcard" onclick="flipCard(this)">
+<div class="front">How do you find the modulus of a complex number z = a + bi?</div>
+<div class="back">|z| = √(a² + b²)<br>This is the distance from origin in complex plane</div>
+</div>
+<div class="flashcard" onclick="flipCard(this)">
+<div class="front">What is the formula for the nth term of an arithmetic sequence?</div>
+<div class="back">T_n = a + (n-1)d<br>where a = first term, d = common difference</div>
+</div>
+<div class="flashcard" onclick="flipCard(this)">
+<div class="front">What is the sum of an arithmetic series?</div>
+<div class="back">S_n = n/2[2a + (n-1)d]<br>or S_n = n/2(a + l) where l = last term</div>
+</div>
+<div class="flashcard" onclick="flipCard(this)">
+<div class="front">What is the formula for the nth term of a geometric sequence?</div>
+<div class="back">T_n = ar^(n-1)<br>where a = first term, r = common ratio</div>
+</div>
+<div class="flashcard" onclick="flipCard(this)">
+<div class="front">What is the sum of a geometric series?</div>
+<div class="back">S_n = a(r^n - 1)/(r - 1)<br>or a(1 - r^n)/(1 - r)</div>
+</div>
+<div class="flashcard" onclick="flipCard(this)">
+<div class="front">When is sin θ = 1/2? (all solutions 0° to 360°)</div>
+<div class="back">θ = 30° and θ = 150°<br>Or θ = π/6 and θ = 5π/6 in radians</div>
+</div>
+<div class="flashcard" onclick="flipCard(this)">
+<div class="front">What is the cosine rule?</div>
+<div class="back">c² = a² + b² - 2ab cos C<br>Used when you know 3 sides or 2 sides and included angle</div>
+</div>
+<div class="flashcard" onclick="flipCard(this)">
+<div class="front">What is the sine rule?</div>
+<div class="back">a/sin A = b/sin B = c/sin C<br>Used when you know 2 angles and 1 side</div>
+</div>
+<div class="flashcard" onclick="flipCard(this)">
+<div class="front">What is the derivative of e^(ax)?</div>
+<div class="back">d/dx(e^(ax)) = ae^(ax)<br>The coefficient becomes a multiplier</div>
+</div>
+<div class="flashcard" onclick="flipCard(this)">
+<div class="front">What is the derivative of ln x?</div>
+<div class="back">d/dx(ln x) = 1/x</div>
+</div>
+<div class="flashcard" onclick="flipCard(this)">
+<div class="front">What is the quotient rule?</div>
+<div class="back">d/dx(u/v) = [v(du/dx) - u(dv/dx)] / v²<br>"Low d-high minus high d-low over low squared"</div>
+</div>
+<div class="flashcard" onclick="flipCard(this)">
+<div class="front">What is the integral of e^x?</div>
+<div class="back">∫ e^x dx = e^x + C<br>e^x is its own derivative AND integral</div>
+</div>
+<div class="flashcard" onclick="flipCard(this)">
+<div class="front">How do you solve |x - a| ≤ b?</div>
+<div class="back">a - b ≤ x ≤ a + b<br>The value is within distance b of a</div>
+</div>
+<div class="flashcard" onclick="flipCard(this)">
+<div class="front">What is the standard form of a circle equation?</div>
+<div class="back">(x - h)² + (y - k)² = r²<br>Centre at (h, k), radius r</div>
+</div>
+<div class="flashcard" onclick="flipCard(this)">
+<div class="front">How do you find the slope of a tangent to a circle?</div>
+<div class="back">Slope of tangent × slope of radius = -1<br>(Tangent is perpendicular to radius at point of contact)</div>
+</div>
+<div class="flashcard" onclick="flipCard(this)">
+<div class="front">What does P(A|B) mean?</div>
+<div class="back">Probability of A given that B has occurred<br>P(A|B) = P(A ∩ B) / P(B)</div>
+</div>
+<div class="flashcard" onclick="flipCard(this)">
+<div class="front">When are events A and B independent?</div>
+<div class="back">P(A ∩ B) = P(A) × P(B)<br>The outcome of one doesn't affect the other</div>
+</div>
+<div class="flashcard" onclick="flipCard(this)">
+<div class="front">What is the volume of a sphere?</div>
+<div class="back">V = (4/3)πr³</div>
+</div>
+<div class="flashcard" onclick="flipCard(this)">
+<div class="front">What is the volume of a cone?</div>
+<div class="back">V = (1/3)πr²h<br>One-third of a cylinder with same base and height</div>
+</div>
+<div class="flashcard" onclick="flipCard(this)">
+<div class="front">If lengths scale by factor k, how do areas and volumes scale?</div>
+<div class="back">Areas scale by k²<br>Volumes scale by k³</div>
+</div>
+<div class="flashcard" onclick="flipCard(this)">
+<div class="front">What is the empirical rule for normal distribution?</div>
+<div class="back">68% within μ ± σ<br>95% within μ ± 2σ<br>99.7% within μ ± 3σ</div>
+</div>
+<div class="flashcard" onclick="flipCard(this)">
+<div class="front">What is a z-score?</div>
+<div class="back">z = (X - μ) / σ<br>Number of standard deviations from the mean</div>
+</div>
+<div class="flashcard" onclick="flipCard(this)">
+<div class="front">What is the 95% confidence interval formula?</div>
+<div class="back">x̄ ± 1.96(σ/√n)<br>We're 95% confident the true mean is in this range</div>
+</div>
+<div class="flashcard" onclick="flipCard(this)">
+<div class="front">What is the interquartile range (IQR)?</div>
+<div class="back">IQR = Q₃ - Q₁<br>The range of the middle 50% of data</div>
+</div>
+<div class="flashcard" onclick="flipCard(this)">
+<div class="front">What is the binomial coefficient C(n,r)?</div>
+<div class="back">C(n,r) = n! / [r!(n-r)!]<br>Number of ways to choose r items from n</div>
+</div>
+<div class="flashcard" onclick="flipCard(this)">
+<div class="front">What is the double angle formula for cos 2θ?</div>
+<div class="back">cos 2θ = cos²θ - sin²θ<br>Also = 2cos²θ - 1<br>Also = 1 - 2sin²θ</div>
+</div>
+</div>
+</div>
+
+<!-- QUIZ TAB -->
+<div id="tab-quiz" class="tab-content">
+<div class="card">
+<h2>Maths Knowledge Quiz</h2>
+<p>Test your understanding with these practice questions. Answers are revealed when you submit.</p>
+<div class="quiz-controls">
+<span id="quizScore">Score: <strong>0/15</strong></span>
+<button onclick="resetQuiz('maths')">Reset Quiz</button>
+</div>
+</div>
+
+<div class="quiz-container" id="quizContainer">
+<div class="quiz-question">
+<p><strong>1.</strong> What is the discriminant of 2x² - 7x + 3 = 0?</p>
+<div class="quiz-options">
+<label><input type="radio" name="q1" value="a"> 25</label>
+<label><input type="radio" name="q1" value="b"> 37</label>
+<label><input type="radio" name="q1" value="c"> 49</label>
+<label><input type="radio" name="q1" value="d"> 61</label>
+</div>
+<div class="quiz-answer" data-correct="a">Correct answer: 25. Δ = b² - 4ac = (-7)² - 4(2)(3) = 49 - 24 = 25</div>
+</div>
+
+<div class="quiz-question">
+<p><strong>2.</strong> If f(x) = x³ + 2x, what is f'(x)?</p>
+<div class="quiz-options">
+<label><input type="radio" name="q2" value="a"> 3x² + 2x</label>
+<label><input type="radio" name="q2" value="b"> 3x² + 2</label>
+<label><input type="radio" name="q2" value="c"> x² + 2</label>
+<label><input type="radio" name="q2" value="d"> 3x³ + 2x</label>
+</div>
+<div class="quiz-answer" data-correct="b">Correct answer: 3x² + 2. Use power rule: d/dx(x³) = 3x², d/dx(2x) = 2</div>
+</div>
+
+<div class="quiz-question">
+<p><strong>3.</strong> What is the modulus of z = 3 + 4i?</p>
+<div class="quiz-options">
+<label><input type="radio" name="q3" value="a"> 7</label>
+<label><input type="radio" name="q3" value="b"> 5</label>
+<label><input type="radio" name="q3" value="c"> 12</label>
+<label><input type="radio" name="q3" value="d"> 25</label>
+</div>
+<div class="quiz-answer" data-correct="b">Correct answer: 5. |z| = √(3² + 4²) = √(9 + 16) = √25 = 5</div>
+</div>
+
+<div class="quiz-question">
+<p><strong>4.</strong> If the 3rd term of an arithmetic sequence is 17 and the 7th term is 33, what is the common difference?</p>
+<div class="quiz-options">
+<label><input type="radio" name="q4" value="a"> 2</label>
+<label><input type="radio" name="q4" value="b"> 4</label>
+<label><input type="radio" name="q4" value="c"> 5</label>
+<label><input type="radio" name="q4" value="d"> 8</label>
+</div>
+<div class="quiz-answer" data-correct="b">Correct answer: 4. From T₃ to T₇ is 4 steps. Difference = (33 - 17)/4 = 16/4 = 4</div>
+</div>
+
+<div class="quiz-question">
+<p><strong>5.</strong> What is ∫ 6x² dx?</p>
+<div class="quiz-options">
+<label><input type="radio" name="q5" value="a"> 12x + C</label>
+<label><input type="radio" name="q5" value="b"> 2x³ + C</label>
+<label><input type="radio" name="q5" value="c"> 6x³ + C</label>
+<label><input type="radio" name="q5" value="d"> 3x² + C</label>
+</div>
+<div class="quiz-answer" data-correct="b">Correct answer: 2x³ + C. ∫ 6x² dx = 6 × x³/3 + C = 2x³ + C</div>
+</div>
+
+<div class="quiz-question">
+<p><strong>6.</strong> If sin θ = 0.5 and 0° ≤ θ ≤ 180°, what are the values of θ?</p>
+<div class="quiz-options">
+<label><input type="radio" name="q6" value="a"> 30° and 60°</label>
+<label><input type="radio" name="q6" value="b"> 30° and 150°</label>
+<label><input type="radio" name="q6" value="c"> 45° and 135°</label>
+<label><input type="radio" name="q6" value="d"> 60° and 120°</label>
+</div>
+<div class="quiz-answer" data-correct="b">Correct answer: 30° and 150°. sin θ = 0.5 at θ = 30° and θ = 180° - 30° = 150°</div>
+</div>
+
+<div class="quiz-question">
+<p><strong>7.</strong> What is the centre of the circle x² + y² - 6x + 4y - 12 = 0?</p>
+<div class="quiz-options">
+<label><input type="radio" name="q7" value="a"> (3, -2)</label>
+<label><input type="radio" name="q7" value="b"> (-3, 2)</label>
+<label><input type="radio" name="q7" value="c"> (6, -4)</label>
+<label><input type="radio" name="q7" value="d"> (-6, 4)</label>
+</div>
+<div class="quiz-answer" data-correct="a">Correct answer: (3, -2). General form: x² + y² + 2gx + 2fy + c = 0 has centre (-g, -f). Here 2g = -6 so g = -3, 2f = 4 so f = 2. Centre = (3, -2)</div>
+</div>
+
+<div class="quiz-question">
+<p><strong>8.</strong> In a bag with 3 red and 7 blue marbles, what is P(red)?</p>
+<div class="quiz-options">
+<label><input type="radio" name="q8" value="a"> 0.3</label>
+<label><input type="radio" name="q8" value="b"> 0.5</label>
+<label><input type="radio" name="q8" value="c"> 0.7</label>
+<label><input type="radio" name="q8" value="d"> 3/7</label>
+</div>
+<div class="quiz-answer" data-correct="a">Correct answer: 0.3. P(red) = 3/(3+7) = 3/10 = 0.3</div>
+</div>
+
+<div class="quiz-question">
+<p><strong>9.</strong> What is the median of: 3, 7, 2, 9, 5?</p>
+<div class="quiz-options">
+<label><input type="radio" name="q9" value="a"> 5</label>
+<label><input type="radio" name="q9" value="b"> 5.2</label>
+<label><input type="radio" name="q9" value="c"> 6</label>
+<label><input type="radio" name="q9" value="d"> 7</label>
+</div>
+<div class="quiz-answer" data-correct="a">Correct answer: 5. Arrange in order: 2, 3, 5, 7, 9. Middle value = 5</div>
+</div>
+
+<div class="quiz-question">
+<p><strong>10.</strong> If two lines have slopes 2 and -1/2, what is their relationship?</p>
+<div class="quiz-options">
+<label><input type="radio" name="q10" value="a"> Parallel</label>
+<label><input type="radio" name="q10" value="b"> Perpendicular</label>
+<label><input type="radio" name="q10" value="c"> Neither</label>
+<label><input type="radio" name="q10" value="d"> Coincident</label>
+</div>
+<div class="quiz-answer" data-correct="b">Correct answer: Perpendicular. m₁ × m₂ = 2 × (-1/2) = -1, so they're perpendicular</div>
+</div>
+
+<div class="quiz-question">
+<p><strong>11.</strong> What is the volume of a cone with radius 3 cm and height 4 cm? (Use π ≈ 3.14)</p>
+<div class="quiz-options">
+<label><input type="radio" name="q11" value="a"> 12π cm³</label>
+<label><input type="radio" name="q11" value="b"> 36π cm³</label>
+<label><input type="radio" name="q11" value="c"> 48π cm³</label>
+<label><input type="radio" name="q11" value="d"> 144π cm³</label>
+</div>
+<div class="quiz-answer" data-correct="a">Correct answer: 12π cm³. V = (1/3)πr²h = (1/3)π(3²)(4) = (1/3)π(36) = 12π</div>
+</div>
+
+<div class="quiz-question">
+<p><strong>12.</strong> For normal distribution with μ = 50, σ = 10, what is the z-score for X = 65?</p>
+<div class="quiz-options">
+<label><input type="radio" name="q12" value="a"> 1.0</label>
+<label><input type="radio" name="q12" value="b"> 1.5</label>
+<label><input type="radio" name="q12" value="c"> 2.0</label>
+<label><input type="radio" name="q12" value="d"> 2.5</label>
+</div>
+<div class="quiz-answer" data-correct="b">Correct answer: 1.5. z = (X - μ)/σ = (65 - 50)/10 = 15/10 = 1.5</div>
+</div>
+
+<div class="quiz-question">
+<p><strong>13.</strong> Simplify log₂(8) + log₂(4)</p>
+<div class="quiz-options">
+<label><input type="radio" name="q13" value="a"> 3</label>
+<label><input type="radio" name="q13" value="b"> 5</label>
+<label><input type="radio" name="q13" value="c"> 7</label>
+<label><input type="radio" name="q13" value="d"> 12</label>
+</div>
+<div class="quiz-answer" data-correct="b">Correct answer: 5. log₂(8) = 3 (since 2³ = 8), log₂(4) = 2 (since 2² = 4). Sum = 3 + 2 = 5. Or: log₂(8×4) = log₂(32) = 5</div>
+</div>
+
+<div class="quiz-question">
+<p><strong>14.</strong> What is the 5th term in the binomial expansion of (x + 2)⁶?</p>
+<div class="quiz-options">
+<label><input type="radio" name="q14" value="a"> 15x²·16</label>
+<label><input type="radio" name="q14" value="b"> 20x²·16</label>
+<label><input type="radio" name="q14" value="c"> 15x²·8</label>
+<label><input type="radio" name="q14" value="d"> 6x²·32</label>
+</div>
+<div class="quiz-answer" data-correct="a">Correct answer: 15x²·16 = 240x². T₅ = C(6,4)x²·2⁴ = 15·x²·16</div>
+</div>
+
+<div class="quiz-question">
+<p><strong>15.</strong> If events A and B are independent with P(A) = 0.4 and P(B) = 0.3, what is P(A ∩ B)?</p>
+<div class="quiz-options">
+<label><input type="radio" name="q15" value="a"> 0.12</label>
+<label><input type="radio" name="q15" value="b"> 0.7</label>
+<label><input type="radio" name="q15" value="c"> 0.1</label>
+<label><input type="radio" name="q15" value="d"> 0.24</label>
+</div>
+<div class="quiz-answer" data-correct="a">Correct answer: 0.12. For independent events: P(A ∩ B) = P(A) × P(B) = 0.4 × 0.3 = 0.12</div>
+</div>
+
+<button class="submit-quiz" onclick="submitQuiz('maths')">Submit Quiz</button>
+</div>
+</div>
+
+<!-- PROGRESS TAB -->
+<div id="tab-progress" class="tab-content">
+<div class="card">
+<h2>Your Study Progress</h2>
+<p>Track your preparation for both Paper 1 and Paper 2. Mark topics as you master them.</p>
+</div>
+
+<div class="card">
+<h3>Paper 1 Progress</h3>
+<div class="progress-tracker">
+<label><input type="checkbox" class="progress-check" data-subject="maths" data-topic="p1-algebra"> Algebra (Q1, Q5, Q6)</label>
+<label><input type="checkbox" class="progress-check" data-subject="maths" data-topic="p1-calculus"> Calculus (Q2, Q3)</label>
+<label><input type="checkbox" class="progress-check" data-subject="maths" data-topic="p1-complex"> Complex Numbers (Q4)</label>
+<label><input type="checkbox" class="progress-check" data-subject="maths" data-topic="p1-sequences"> Sequences & Series (Q7)</label>
+<label><input type="checkbox" class="progress-check" data-subject="maths" data-topic="p1-optimization"> Applied Calculus (Q8, Q9)</label>
+<label><input type="checkbox" class="progress-check" data-subject="maths" data-topic="p1-proof"> Proof & Patterns (Q10)</label>
+</div>
+</div>
+
+<div class="card">
+<h3>Paper 2 Progress</h3>
+<div class="progress-tracker">
+<label><input type="checkbox" class="progress-check" data-subject="maths" data-topic="p2-lines"> Lines (Q1)</label>
+<label><input type="checkbox" class="progress-check" data-subject="maths" data-topic="p2-circles"> Circles (Q2)</label>
+<label><input type="checkbox" class="progress-check" data-subject="maths" data-topic="p2-probability"> Probability (Q3)</label>
+<label><input type="checkbox" class="progress-check" data-subject="maths" data-topic="p2-statistics"> Statistics (Q4)</label>
+<label><input type="checkbox" class="progress-check" data-subject="maths" data-topic="p2-geometry"> Geometry (Q5)</label>
+<label><input type="checkbox" class="progress-check" data-subject="maths" data-topic="p2-trig"> Trigonometry (Q6)</label>
+<label><input type="checkbox" class="progress-check" data-subject="maths" data-topic="p2-3dgeom"> 3D Geometry (Q7)</label>
+<label><input type="checkbox" class="progress-check" data-subject="maths" data-topic="p2-appliedtrig"> Applied Trig (Q8)</label>
+<label><input type="checkbox" class="progress-check" data-subject="maths" data-topic="p2-statscontext"> Statistics Context (Q9, Q10)</label>
+</div>
+</div>
+
+<div class="card">
+<h3>Skills Checklist</h3>
+<div class="progress-tracker">
+<label><input type="checkbox" class="progress-check" data-subject="maths" data-topic="skill-showwork"> Always show ALL working steps</label>
+<label><input type="checkbox" class="progress-check" data-subject="maths" data-topic="skill-formulas"> Write formulas before calculating</label>
+<label><input type="checkbox" class="progress-check" data-subject="maths" data-topic="skill-units"> Check units in final answers</label>
+<label><input type="checkbox" class="progress-check" data-subject="maths" data-topic="skill-rounding"> Don't round until final answer</label>
+<label><input type="checkbox" class="progress-check" data-subject="maths" data-topic="skill-booklet"> Comfortable using Formulae & Tables booklet</label>
+<label><input type="checkbox" class="progress-check" data-subject="maths" data-topic="skill-time"> Can manage time across 8 questions</label>
+<label><input type="checkbox" class="progress-check" data-subject="maths" data-topic="skill-choice"> Know how to choose best 5+3 questions</label>
+</div>
+</div>
+
+<div class="card">
+<h3>Past Papers Completed</h3>
+<div class="progress-tracker">
+<label><input type="checkbox" class="progress-check" data-subject="maths" data-topic="paper-2025p1"> 2025 Paper 1</label>
+<label><input type="checkbox" class="progress-check" data-subject="maths" data-topic="paper-2025p2"> 2025 Paper 2</label>
+<label><input type="checkbox" class="progress-check" data-subject="maths" data-topic="paper-2024p1"> 2024 Paper 1</label>
+<label><input type="checkbox" class="progress-check" data-subject="maths" data-topic="paper-2024p2"> 2024 Paper 2</label>
+<label><input type="checkbox" class="progress-check" data-subject="maths" data-topic="paper-2023p1"> 2023 Paper 1</label>
+<label><input type="checkbox" class="progress-check" data-subject="maths" data-topic="paper-2023p2"> 2023 Paper 2</label>
+</div>
+</div>
+</div>
+
+<script src="js/shared.js"></script>
+</body>
+</html>

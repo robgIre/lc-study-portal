@@ -1,0 +1,1225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LC Accounting - Higher Level Study Tool</title>
+<link rel="stylesheet" href="css/shared.css">
+<style>
+.collapsible{cursor:pointer;padding:1rem;background:var(--card);border:1px solid var(--border);border-radius:8px;margin:0.5rem 0;font-weight:600}
+.collapsible:after{content:' +';float:right}
+.collapsible.open:after{content:' -'}
+.collapsible-content{display:none;padding:1rem;border:1px solid var(--border);border-top:none;border-radius:0 0 8px 8px;background:#fafafa}
+.collapsible-content.open{display:block}
+</style>
+</head>
+<body class="subject-accounting">
+<header class="app-header">
+<div>
+<h1>LC Accounting - Higher Level</h1>
+<p>2025 Exam Study Tool | Leaving Certificate Ireland</p>
+</div>
+<a href="index.html" class="home-link">&#8592; All Subjects</a>
+</header>
+<nav id="mainNav">
+<button class="active" onclick="showTab('study','accounting')">Study</button>
+<button onclick="showTab('flashcards','accounting')">Flashcards</button>
+<button onclick="showTab('quiz','accounting')">Quiz</button>
+<button onclick="showTab('strategy','accounting')">Exam Strategy</button>
+<button onclick="showTab('marks','accounting')">Mark Decoder</button>
+<button onclick="showTab('glossary','accounting')">Glossary</button>
+<button onclick="showTab('formulas','accounting')">Formulas</button>
+<button onclick="showTab('progress','accounting')">Progress</button>
+</nav>
+
+<!-- EXAM STRATEGY TAB -->
+<div id="tab-strategy" class="tab-content">
+<div class="card">
+<h2>Exam Paper Structure</h2>
+<p>The LC Accounting Higher Level exam is <strong>3 hours</strong> (2:00-5:00pm) for <strong>400 marks</strong>. You answer <strong>4 questions</strong> total.</p>
+<table>
+<tr><th>Section</th><th>Questions</th><th>Marks</th><th>You Answer</th><th>Time Guide</th></tr>
+<tr><td><strong>Section 1</strong> - Financial Accounting</td><td>Q1 (A or B), Q2, Q3, Q4</td><td>120 marks</td><td>Q1 alone (120) OR any 2 others (60+60)</td><td>~54 min</td></tr>
+<tr><td><strong>Section 2</strong> - Financial Accounting</td><td>Q5, Q6, Q7</td><td>200 marks</td><td>Any 2 (100+100)</td><td>~90 min</td></tr>
+<tr><td><strong>Section 3</strong> - Management Accounting</td><td>Q8, Q9</td><td>80 marks</td><td>Any 1 (80)</td><td>~36 min</td></tr>
+</table>
+</div>
+
+<div class="card">
+<h2>Time Management - The Golden Rule</h2>
+<p>You get <strong>180 minutes</strong> for <strong>400 marks</strong>. That means:</p>
+<div class="formula-box">
+<div class="formula">1 mark = 27 seconds | 10 marks = 4.5 minutes</div>
+</div>
+<p><strong>Never</strong> spend more time on a question than its marks justify. If you're stuck on a 4-mark working, move on after 2 minutes.</p>
+
+<h3>Suggested Time Plan</h3>
+<div class="time-block"><span class="time">2:00</span><span>Read full paper, choose your questions (5 min)</span></div>
+<div class="time-block"><span class="time">2:05</span><span>Section 3 first - Q8 or Q9 (36 min) - start with what you know best</span></div>
+<div class="time-block"><span class="time">2:41</span><span>Section 2 - First question (45 min)</span></div>
+<div class="time-block"><span class="time">3:26</span><span>Section 2 - Second question (45 min)</span></div>
+<div class="time-block"><span class="time">4:11</span><span>Section 1 - Q1 or two short questions (44 min)</span></div>
+<div class="time-block"><span class="time">4:55</span><span>Review and check (5 min)</span></div>
+</div>
+
+<div class="card">
+<h2>Top Exam Tips</h2>
+<div class="explain"><strong>1. Always show workings!</strong> Even if your final answer is wrong, you get marks for correct workings. The marking scheme awards marks at each step, not just the final figure. A wrong answer with good workings might get 5 out of 7 marks. A wrong answer with no workings gets 0.</div>
+<div class="explain"><strong>2. Use proper headings.</strong> Write "Trading Profit & Loss Account for [name] for year ended 31/12/2024" - this heading alone is worth [1] mark.</div>
+<div class="explain"><strong>3. Label everything with euro signs.</strong> Column headings should show the euro symbol. This is a presentation mark.</div>
+<div class="explain"><strong>4. Attempt every question you've chosen.</strong> Even partial answers score marks. A half-finished balance sheet still earns marks for the lines you completed.</div>
+<div class="explain"><strong>5. Don't do Q1(A) AND Q1(B).</strong> You choose ONE. If you answer both, only one will be marked.</div>
+<div class="explain"><strong>6. Carry forward errors.</strong> If your Sales figure is wrong but you correctly use it throughout, you still earn marks for correct method. Examiners call this "own figure" marking.</div>
+<div class="explain"><strong>7. Theory questions are free marks.</strong> Parts (b) and (c) of questions often ask for explanations. Learn the key phrases - these marks require no calculations.</div>
+</div>
+
+<div class="card">
+<h2>Question Selection Strategy</h2>
+<table>
+<tr><th>Question</th><th>Topic</th><th>Difficulty</th><th>Advice</th></tr>
+<tr><td>Q1A</td><td>Sole Trader Final Accounts</td><td>Medium-Hard</td><td>Most popular choice. Worth 120 marks but complex adjustments. Only pick if you're confident with adjustments.</td></tr>
+<tr><td>Q1B</td><td>Company Final Accounts</td><td>Medium-Hard</td><td>Similar to Q1A but with shares, debentures, dividends. Pick if you prefer company accounts.</td></tr>
+<tr><td>Q2</td><td>Debtors Control Account</td><td>Medium</td><td>Predictable format. Good marks available for theory part (c).</td></tr>
+<tr><td>Q3</td><td>Revaluation of Fixed Assets</td><td>Hard</td><td>Requires careful ledger account work over multiple years. Only pick if well-practiced.</td></tr>
+<tr><td>Q4</td><td>Service Firm</td><td>Medium</td><td>Receipts & Payments to Income & Expenditure conversion. Theory part is accessible.</td></tr>
+<tr><td>Q5</td><td>Interpretation of Accounts</td><td>Medium</td><td>Formulas + written analysis. Strong choice if you know ratio formulas and can write commentary.</td></tr>
+<tr><td>Q6</td><td>Incomplete Records</td><td>Hard</td><td>Many calculations needed. Risky but rewarding if practiced.</td></tr>
+<tr><td>Q7</td><td>Tabular Statement</td><td>Medium-Hard</td><td>Methodical - lots of entries. Good if you're organised and careful.</td></tr>
+<tr><td>Q8</td><td>Marginal Costing</td><td>Medium</td><td>Formula-based. Break-even, contribution. Very predictable format. Strong Section 3 choice.</td></tr>
+<tr><td>Q9</td><td>Budgeting</td><td>Medium</td><td>Production & materials budgets. Methodical but can be tricky. Good alternative to Q8.</td></tr>
+</table>
+</div>
+</div>
+
+<!-- FORMULA SHEET TAB -->
+<div id="tab-formulas" class="tab-content">
+<div class="card">
+<h2>Formula Sheet - LC Accounting Higher Level</h2>
+<p>All the key formulas you need, organised by topic.</p>
+</div>
+
+<div class="card">
+<h3>Trading Profit & Loss Account</h3>
+<div class="formula-box"><strong>Cost of Sales</strong><div class="formula">Opening Stock + Purchases - Closing Stock</div></div>
+<div class="formula-box"><strong>Gross Profit</strong><div class="formula">Sales - Cost of Sales</div></div>
+<div class="formula-box"><strong>Net Profit</strong><div class="formula">Gross Profit - Expenses + Non-trading Income</div></div>
+<div class="formula-box"><strong>Mark-up on Cost</strong><div class="formula">Profit / Cost x 100</div><p>If mark-up is 25%, selling price = cost x 1.25</p></div>
+<div class="formula-box"><strong>Margin on Sales</strong><div class="formula">Profit / Selling Price x 100</div><p>If margin is 20%, cost = selling price x 0.80</p></div>
+</div>
+
+<div class="card">
+<h3>Depreciation</h3>
+<div class="formula-box"><strong>Straight Line Method</strong><div class="formula">(Cost - Residual Value) / Useful Life</div><p>OR: Cost x Rate%</p><p>Same amount each year. Most common in LC exams.</p></div>
+<div class="formula-box"><strong>Reducing Balance Method</strong><div class="formula">Net Book Value x Rate%</div><p>Amount decreases each year as NBV falls.</p></div>
+<div class="formula-box"><strong>Net Book Value (NBV)</strong><div class="formula">Cost - Accumulated Depreciation</div></div>
+</div>
+
+<div class="card">
+<h3>Interpretation of Accounts (Ratios)</h3>
+<div class="formula-box"><strong>Return on Capital Employed (ROCE)</strong><div class="formula">(Operating Profit + Investment Income) / Capital Employed x 100</div><p>Measures how efficiently a company uses its capital. Higher is better. Compare to risk-free rate (0-3%).</p></div>
+<div class="formula-box"><strong>Earnings Per Share (EPS)</strong><div class="formula">(Net Profit - Preference Dividends) / Number of Ordinary Shares</div></div>
+<div class="formula-box"><strong>Dividend Per Share (DPS)</strong><div class="formula">Total Ordinary Dividends / Number of Ordinary Shares</div></div>
+<div class="formula-box"><strong>Price Earnings Ratio (P/E)</strong><div class="formula">Market Price per Share / EPS</div><p>How many years to recoup investment at current earnings. Lower = better value.</p></div>
+<div class="formula-box"><strong>Dividend Cover</strong><div class="formula">(Net Profit - Preference Dividend) / Ordinary Dividend</div><p>How many times the company can pay its dividend from profits. Higher = safer.</p></div>
+<div class="formula-box"><strong>Dividend Yield</strong><div class="formula">DPS / Market Price x 100</div></div>
+<div class="formula-box"><strong>Interest Cover</strong><div class="formula">(Operating Profit + Investment Income) / Interest</div><p>How many times the company can pay its interest. Higher = less risk.</p></div>
+<div class="formula-box"><strong>Acid Test Ratio</strong><div class="formula">(Current Assets - Stock) / Current Liabilities</div><p>Ideal is 1:1. Can the company pay its short-term debts without selling stock?</p></div>
+<div class="formula-box"><strong>Gearing Ratio</strong><div class="formula">Long-term Debt / (Long-term Debt + Equity) x 100</div><p>Below 50% = lowly geared (good). Above 50% = highly geared (risky).</p></div>
+<div class="formula-box"><strong>Debt to Equity Ratio</strong><div class="formula">Long-term Debt / Equity x 100</div></div>
+<div class="formula-box"><strong>Debtors Collection Period</strong><div class="formula">Debtors / Credit Sales x 12 months (or x 365 days)</div></div>
+</div>
+
+<div class="card">
+<h3>Marginal Costing</h3>
+<div class="formula-box"><strong>Contribution Per Unit</strong><div class="formula">Selling Price - Variable Cost Per Unit</div></div>
+<div class="formula-box"><strong>Break-Even Point (units)</strong><div class="formula">Fixed Costs / Contribution Per Unit</div></div>
+<div class="formula-box"><strong>Break-Even Point (euro)</strong><div class="formula">Break-Even Units x Selling Price</div></div>
+<div class="formula-box"><strong>Margin of Safety</strong><div class="formula">Budgeted Sales - Break-Even Sales</div><p>How far sales can fall before the company makes a loss.</p></div>
+<div class="formula-box"><strong>Target Profit (units needed)</strong><div class="formula">(Fixed Costs + Target Profit) / Contribution Per Unit</div></div>
+</div>
+
+<div class="card">
+<h3>Budgeting</h3>
+<div class="formula-box"><strong>Production Budget (units)</strong><div class="formula">Expected Sales + Closing Stock - Opening Stock</div></div>
+<div class="formula-box"><strong>Raw Materials Purchases (kg)</strong><div class="formula">Materials Usage + Closing Stock - Opening Stock</div></div>
+<div class="formula-box"><strong>Fixed Overhead Per Labour Hour</strong><div class="formula">Total Fixed Overheads / Total Direct Labour Hours</div></div>
+</div>
+
+<div class="card">
+<h3>VAT</h3>
+<div class="formula-box"><strong>Extract VAT from VAT-inclusive price</strong><div class="formula">VAT-inclusive price x (VAT rate / (100 + VAT rate))</div><p>E.g., price incl. 23% VAT: VAT = Price x 23/123</p></div>
+<div class="formula-box"><strong>Price before VAT</strong><div class="formula">VAT-inclusive price x (100 / (100 + VAT rate))</div><p>E.g., price incl. 23% VAT: Net = Price x 100/123</p></div>
+</div>
+
+<div class="card">
+<h3>Provision for Bad Debts</h3>
+<div class="formula-box"><strong>New Provision</strong><div class="formula">Adjusted Debtors x Provision Rate%</div></div>
+<div class="formula-box"><strong>Increase in Provision</strong><div class="formula">New Provision - Old Provision</div><p>Increase = expense in P&L. Decrease = income in P&L.</p></div>
+</div>
+
+<div class="card">
+<h3>Incomplete Records</h3>
+<div class="formula-box"><strong>Net Worth / Capital</strong><div class="formula">Total Assets - Total Liabilities</div></div>
+<div class="formula-box"><strong>Profit (Net Worth Method)</strong><div class="formula">Closing Net Worth - Opening Net Worth + Drawings - Capital Introduced</div></div>
+<div class="formula-box"><strong>Credit Sales (from Debtors)</strong><div class="formula">Closing Debtors + Cash from Debtors - Opening Debtors</div></div>
+<div class="formula-box"><strong>Credit Purchases (from Creditors)</strong><div class="formula">Closing Creditors + Payments to Creditors - Opening Creditors</div></div>
+</div>
+</div>
+
+<!-- GLOSSARY TAB -->
+<div id="tab-glossary" class="tab-content">
+<div class="card">
+<h2>Accounting Glossary</h2>
+<p>Search for any term. All definitions are written in plain language.</p>
+<input type="text" class="glossary-search" id="glossarySearch" placeholder="Search terms..." oninput="filterGlossary()">
+</div>
+<div id="glossaryList">
+<dl>
+<div class="glossary-item" data-term="trial balance"><dt>Trial Balance</dt><dd>A list of all the balances in a business's accounts at a specific date. Debit balances (assets, expenses) go on the left; credit balances (liabilities, income, capital) go on the right. If the two sides are equal, the books balance. It's the starting point for preparing final accounts.</dd></div>
+<div class="glossary-item" data-term="trading profit and loss account"><dt>Trading, Profit & Loss Account</dt><dd>A financial statement showing how much money a business made (or lost) during the year. The <strong>trading account</strong> calculates Gross Profit (Sales minus Cost of Sales). The <strong>profit and loss account</strong> deducts expenses from Gross Profit to find Net Profit.</dd></div>
+<div class="glossary-item" data-term="balance sheet"><dt>Balance Sheet</dt><dd>A snapshot of what a business owns (assets) and owes (liabilities) on a specific date. It must always balance: Assets = Liabilities + Capital. Think of it as a photograph of the business's financial position at year-end.</dd></div>
+<div class="glossary-item" data-term="depreciation"><dt>Depreciation</dt><dd>The reduction in value of a fixed asset over time due to wear and tear, age, or obsolescence. It's an expense in the P&L and reduces the asset's value on the balance sheet. Common methods: Straight Line (same amount each year) and Reducing Balance (decreasing amount).</dd></div>
+<div class="glossary-item" data-term="provision for bad debts"><dt>Provision for Bad Debts (BDP)</dt><dd>An estimate of the amount of money owed to the business (debtors) that may never be paid. It's set as a percentage of debtors. An increase in the provision is an expense; a decrease is treated as income.</dd></div>
+<div class="glossary-item" data-term="bad debts"><dt>Bad Debts</dt><dd>Money owed to the business that will definitely never be collected - the debtor cannot or will not pay. Written off as an expense in the P&L. Different from provision for bad debts, which is an estimate.</dd></div>
+<div class="glossary-item" data-term="accruals"><dt>Accruals (Expenses Due)</dt><dd>Expenses that have been incurred during the accounting period but haven't been paid yet. Example: electricity used in December but the bill arrives in January. The expense must be included in this year's accounts. Shown as a current liability on the balance sheet.</dd></div>
+<div class="glossary-item" data-term="prepayments"><dt>Prepayments (Expenses Prepaid)</dt><dd>Expenses that have been paid in advance - you've paid for something you haven't fully used yet. Example: insurance paid for 12 months but only 9 months relate to this year. The unused 3 months is a prepayment. Shown as a current asset on the balance sheet.</dd></div>
+<div class="glossary-item" data-term="debtors"><dt>Debtors (Accounts Receivable)</dt><dd>People or businesses who owe money TO the business, usually because they bought goods on credit. A current asset. Also called "accounts receivable" or "trade receivables".</dd></div>
+<div class="glossary-item" data-term="creditors"><dt>Creditors (Accounts Payable)</dt><dd>People or businesses the company owes money TO, usually because the business bought goods on credit. A current liability. Also called "accounts payable" or "trade payables".</dd></div>
+<div class="glossary-item" data-term="capital"><dt>Capital</dt><dd>The money the owner has invested in the business. On the balance sheet: Opening Capital + Net Profit - Drawings = Closing Capital. For companies, capital comes from issuing shares.</dd></div>
+<div class="glossary-item" data-term="drawings"><dt>Drawings</dt><dd>Money or goods taken out of the business by the owner for personal use. Reduces capital. Not an expense - it's a reduction of the owner's investment. In a company, the equivalent is dividends.</dd></div>
+<div class="glossary-item" data-term="fixed assets"><dt>Fixed Assets (Non-Current Assets)</dt><dd>Items owned by a business for long-term use (more than 1 year), not for resale. Examples: land, buildings, machinery, delivery vans, equipment. Shown on the balance sheet at cost minus depreciation (= Net Book Value).</dd></div>
+<div class="glossary-item" data-term="current assets"><dt>Current Assets</dt><dd>Items owned by the business that will be converted to cash within 12 months. Examples: stock, debtors, bank balance, cash, prepayments. Listed on the balance sheet in order of liquidity (least liquid first).</dd></div>
+<div class="glossary-item" data-term="current liabilities"><dt>Current Liabilities (Creditors due within 1 year)</dt><dd>Debts the business must pay within the next 12 months. Examples: trade creditors, bank overdraft, PAYE/PRSI due, accruals, VAT owed.</dd></div>
+<div class="glossary-item" data-term="working capital"><dt>Working Capital (Net Current Assets)</dt><dd>Current Assets minus Current Liabilities. Shows whether the business can pay its short-term debts. Positive = healthy. Negative = potential cash flow problems.</dd></div>
+<div class="glossary-item" data-term="sole trader"><dt>Sole Trader</dt><dd>A business owned and run by one person. The owner has unlimited liability (personally responsible for all business debts). Simplest form of business. Produces a Trading P&L Account and Balance Sheet.</dd></div>
+<div class="glossary-item" data-term="limited company"><dt>Limited Company (Ltd)</dt><dd>A business that is a separate legal entity from its owners (shareholders). Shareholders have limited liability - they can only lose the amount they invested. Has share capital, pays dividends, and must produce published accounts.</dd></div>
+<div class="glossary-item" data-term="ordinary shares"><dt>Ordinary Shares</dt><dd>The most common type of share. Ordinary shareholders are the owners of the company. They vote at meetings, receive dividends (if declared), but are paid last if the company is wound up. Their dividend is not guaranteed.</dd></div>
+<div class="glossary-item" data-term="preference shares"><dt>Preference Shares</dt><dd>Shares that receive a fixed dividend percentage before ordinary shareholders get anything. They have priority over ordinary shares for dividends and repayment. Usually no voting rights.</dd></div>
+<div class="glossary-item" data-term="debentures"><dt>Debentures</dt><dd>Long-term loans to a company, usually with a fixed interest rate. Debenture holders are creditors, NOT owners. They receive interest regardless of whether the company makes a profit. Interest is an expense, not a dividend.</dd></div>
+<div class="glossary-item" data-term="authorised share capital"><dt>Authorised Share Capital</dt><dd>The maximum amount of shares a company is legally allowed to issue, as stated in its Memorandum of Association. Not all authorised shares need to be issued.</dd></div>
+<div class="glossary-item" data-term="issued share capital"><dt>Issued Share Capital</dt><dd>The shares that have actually been sold to shareholders. Must be less than or equal to the authorised share capital.</dd></div>
+<div class="glossary-item" data-term="revaluation reserve"><dt>Revaluation Reserve</dt><dd>Created when a fixed asset is revalued (usually upward). The increase in value goes to the revaluation reserve, not to the P&L. It's a capital reserve - cannot be used to pay dividends.</dd></div>
+<div class="glossary-item" data-term="gearing"><dt>Gearing</dt><dd>The ratio of borrowed money (debt) to equity in a company. Lowly geared (below 50%) = financed mostly by equity = safer. Highly geared (above 50%) = financed mostly by debt = riskier.</dd></div>
+<div class="glossary-item" data-term="roce"><dt>ROCE (Return on Capital Employed)</dt><dd>A profitability ratio showing how efficiently a company uses its total capital. Calculated as: (Operating Profit + Investment Income) / Capital Employed x 100. The higher the better. Should exceed the risk-free rate.</dd></div>
+<div class="glossary-item" data-term="break even"><dt>Break-Even Point</dt><dd>The level of sales at which a business makes neither a profit nor a loss. Total revenue exactly equals total costs. Calculated as: Fixed Costs / Contribution Per Unit.</dd></div>
+<div class="glossary-item" data-term="contribution"><dt>Contribution</dt><dd>Selling price minus variable costs. The amount each unit sold "contributes" towards paying off fixed costs and then generating profit. Once total contribution exceeds fixed costs, the business is profitable.</dd></div>
+<div class="glossary-item" data-term="margin of safety"><dt>Margin of Safety</dt><dd>The difference between actual/budgeted sales and the break-even point. Shows how much sales can drop before the business starts making a loss. Larger = safer.</dd></div>
+<div class="glossary-item" data-term="variable costs"><dt>Variable Costs</dt><dd>Costs that change in direct proportion to output/sales. More units = higher costs. Examples: raw materials, direct labour, sales commission. Cost per unit stays the same.</dd></div>
+<div class="glossary-item" data-term="fixed costs"><dt>Fixed Costs</dt><dd>Costs that stay the same regardless of how many units are produced (within a relevant range). Examples: rent, insurance, salaries of permanent staff. Cost per unit decreases as output increases.</dd></div>
+<div class="glossary-item" data-term="step fixed costs"><dt>Step Fixed Costs</dt><dd>Costs that are fixed within a certain range of activity but jump to a new level when that range is exceeded. Example: rent is fixed until you need a bigger factory, then it jumps up.</dd></div>
+<div class="glossary-item" data-term="sensitivity analysis"><dt>Sensitivity Analysis</dt><dd>A "what if" technique showing how changes in selling price, sales volume, variable costs, or fixed costs affect profit. Helps management plan for different scenarios.</dd></div>
+<div class="glossary-item" data-term="budget"><dt>Budget</dt><dd>A financial plan for a future period. It sets targets for income and expenditure. Used to plan, control, and evaluate business performance. Types include production budgets, materials budgets, and cash budgets.</dd></div>
+<div class="glossary-item" data-term="principal budget factor"><dt>Principal Budget Factor</dt><dd>The factor that limits or constrains a business's activity. Usually sales demand, but could be machine capacity, labour availability, or raw material supply. The budget process starts with this factor.</dd></div>
+<div class="glossary-item" data-term="fifo"><dt>FIFO (First In, First Out)</dt><dd>A stock valuation method where the oldest stock is assumed to be sold first. Closing stock is valued at the most recent purchase prices. Most commonly used method in Irish accounting.</dd></div>
+<div class="glossary-item" data-term="vat"><dt>VAT (Value Added Tax)</dt><dd>A tax on goods and services charged at each stage of production/sale. In Ireland, the standard rate is 23%. Businesses collect VAT on sales and reclaim VAT on purchases. The difference is paid to Revenue.</dd></div>
+<div class="glossary-item" data-term="paye prsi usc"><dt>PAYE, PRSI & USC</dt><dd>Taxes deducted from employees' wages. PAYE = income tax. PRSI = social insurance contributions. USC = Universal Social Charge. The employer deducts these and pays them to Revenue. Shown as a current liability if not yet paid.</dd></div>
+<div class="glossary-item" data-term="goodwill"><dt>Goodwill</dt><dd>An intangible asset representing the difference between the price paid for a business and the fair value of its net assets. Arises when someone pays more for a business than its assets are worth, because of reputation, customer base, etc.</dd></div>
+<div class="glossary-item" data-term="patent"><dt>Patent</dt><dd>An intangible fixed asset giving exclusive rights to use an invention for a set period. Written off (amortised) over its useful life. Example: a 6-year patent costs 62,400 - annual write-off = 62,400/6 = 10,400.</dd></div>
+<div class="glossary-item" data-term="net worth"><dt>Net Worth</dt><dd>The total value of what a person or business owns minus what they owe. Net Worth = Total Assets - Total Liabilities. Used in incomplete records to calculate profit.</dd></div>
+<div class="glossary-item" data-term="control account"><dt>Control Account</dt><dd>A summary account in the general ledger that shows the total of all individual accounts in a subsidiary ledger. The Debtors Control Account shows the total owed by all debtors. Used to check accuracy and detect errors.</dd></div>
+<div class="glossary-item" data-term="suspense account"><dt>Suspense Account</dt><dd>A temporary account used when the trial balance doesn't balance. Errors are investigated and corrected, and entries are made to clear the suspense account.</dd></div>
+<div class="glossary-item" data-term="service firm"><dt>Service Firm</dt><dd>A business that provides services rather than selling goods (e.g., dentist, solicitor, school). Prepares an Income & Expenditure Account instead of a Trading P&L. Uses a Statement of Reserves instead of a Capital Account.</dd></div>
+<div class="glossary-item" data-term="income expenditure account"><dt>Income & Expenditure Account</dt><dd>The equivalent of a Profit & Loss Account for a service firm or club. Shows income earned and expenses incurred during the year. The surplus (or deficit) is similar to net profit (or loss).</dd></div>
+<div class="glossary-item" data-term="receipts and payments account"><dt>Receipts & Payments Account</dt><dd>A summary of all cash/bank transactions during the year. Similar to a bank statement. Shows actual money in and out - does NOT account for accruals, prepayments, or depreciation. Used as a starting point for service firm accounts.</dd></div>
+<div class="glossary-item" data-term="tabular statement"><dt>Tabular Statement</dt><dd>A method of recording transactions by showing the effect on each asset, liability, and equity item in a table format. Each row is a category, each column is a transaction month. All entries must keep the accounting equation in balance.</dd></div>
+<div class="glossary-item" data-term="consistency concept"><dt>Consistency Concept</dt><dd>One of the four fundamental accounting concepts. It states that once a business chooses an accounting method (e.g., straight-line depreciation at 2%), it must use the same method every year. If changed, the reason and effect must be disclosed.</dd></div>
+<div class="glossary-item" data-term="revaluation of fixed assets"><dt>Revaluation of Fixed Assets</dt><dd>Adjusting a fixed asset's value on the balance sheet to reflect its current market value. The difference between old and new value goes to the Revaluation Reserve. Important for showing a true and fair view.</dd></div>
+<div class="glossary-item" data-term="disposal of fixed assets"><dt>Disposal of Fixed Assets</dt><dd>When a fixed asset is sold or scrapped. A Disposal Account is prepared showing: the asset's cost, accumulated depreciation, and sale proceeds. If proceeds exceed NBV = profit on disposal. If less = loss on disposal.</dd></div>
+<div class="glossary-item" data-term="mortgage"><dt>Mortgage</dt><dd>A long-term loan secured against property. The interest is an expense in the P&L. The loan itself is a long-term liability on the balance sheet. If part is due within 12 months, that portion goes under current liabilities.</dd></div>
+<div class="glossary-item" data-term="dividend"><dt>Dividend</dt><dd>A payment from a company's profits to its shareholders. Preference shareholders get a fixed % first. Ordinary shareholders get whatever the directors recommend. Not an expense - it's a distribution of profit.</dd></div>
+</dl>
+</div>
+</div>
+
+<!-- MARK SCHEME DECODER TAB -->
+<div id="tab-marks" class="tab-content">
+<div class="card">
+<h2>Mark Scheme Decoder</h2>
+<p>Understanding how examiners award marks is the key to maximising your score. Here's how the marking scheme works.</p>
+</div>
+
+<div class="card">
+<h3>How Marks Are Shown</h3>
+<p>In the marking scheme, you'll see numbers in square brackets like <strong>[4]</strong> or <strong>[7]</strong>. This shows how many marks that specific figure or element is worth.</p>
+<table>
+<tr><th>Annotation</th><th>Meaning</th></tr>
+<tr><td><strong>[n]</strong></td><td>Correct element worth n marks</td></tr>
+<tr><td><strong>N1, N2...</strong></td><td>Refer to workings - the calculation behind the figure</td></tr>
+<tr><td><strong>[0]</strong></td><td>No marks - answer incorrect or insufficient</td></tr>
+<tr><td><strong>P-</strong></td><td>Penalty: minus 1 mark for incorrect calculation, misplaced figure, or wrong transfer</td></tr>
+<tr><td><strong>Half marks</strong></td><td>Partial credit for partially correct work (non-transfer)</td></tr>
+</table>
+</div>
+
+<div class="card">
+<h3>Where the Big Marks Are</h3>
+<p>Not all figures are worth the same. Here's what carries the most marks:</p>
+<h4>Q1A - Sole Trader (120 marks: 75 P&L + 45 Balance Sheet)</h4>
+<div class="mark-info"><strong>Sales [4]</strong> - Working: 884,300 + 12,000 = 896,300. Four marks because it involves an adjustment (goods sold on credit with no entry made).</div>
+<div class="mark-info"><strong>Purchases [7]</strong> - Working: 622,400 - 24,800 - 10,750 = 586,850. Seven marks because multiple adjustments: remove van trade-in incorrectly recorded as purchase, and remove goods for own use.</div>
+<div class="mark-info"><strong>Closing Stock [7]</strong> - Working: 84,000 - 2,300 - 10,000 = 71,700. Seven marks for three separate adjustments (damaged stock, goods on credit not dispatched).</div>
+<div class="mark-info"><strong>Net Profit [5]</strong> - The final figure. Worth 5 marks because it proves the whole account is correct. Even if wrong, you get marks for correct workings above.</div>
+<p style="margin-top:1rem"><strong>Key insight:</strong> In Q1A, single figures like Purchases [7] and Closing Stock [7] carry more marks than many expense lines. Getting these right is critical.</p>
+</div>
+
+<div class="card">
+<h4>Q5 - Interpretation of Accounts (100 marks: 50 + 40 + 10)</h4>
+<div class="mark-info"><strong>Cash Sales [12]</strong> - Must show formula, substitution, AND correct answer. Marks split across method and accuracy.</div>
+<div class="mark-info"><strong>ROCE [10]</strong> - Formula [2], correct figures [4], correct answer [4]. Even if answer is wrong, stating the correct formula earns 2 marks.</div>
+<div class="mark-info"><strong>Written Analysis [40]</strong> - Part (b) is worth 40 marks for a written report. Marks are allocated per heading: Profitability [7], Liquidity [6], Gearing [7], Dividend Policy [7], Market Value [5], Sector [5], Overall [3]. You MUST use ratios and percentages to support your points.</div>
+<div class="mark-info"><strong>Gearing Options [10]</strong> - Part (c) requires analysing two financing options. Marks for calculations AND implications.</div>
+</div>
+
+<div class="card">
+<h4>Q8 - Marginal Costing (80 marks)</h4>
+<div class="mark-info"><strong>Break-Even [15]</strong> - Must first prepare a marginal cost statement separating variable and fixed costs, then apply the formula. The cost statement itself carries marks.</div>
+<div class="mark-info"><strong>Each scenario (b-e) [12-14 each]</strong> - Each part modifies one variable. Show the formula, substitute correctly, calculate. Full marks require the correct formula AND correct arithmetic.</div>
+<div class="mark-info"><strong>Theory (f) [12]</strong> - Three theory sub-parts worth 12 marks total. Free marks if you know the definitions of sensitivity analysis, step fixed costs, and can sketch a graph.</div>
+</div>
+
+<div class="card">
+<h3>Golden Rules for Maximum Marks</h3>
+<div class="explain"><strong>1. Write the formula first.</strong> In ratio questions, writing the correct formula earns marks even if your calculation is wrong.</div>
+<div class="explain"><strong>2. Show every step of workings.</strong> For a [7] mark figure, marks are awarded at each step. Three correct steps in a wrong answer could still earn 4-5 marks.</div>
+<div class="explain"><strong>3. Headings earn marks.</strong> "Trading Profit & Loss Account for M McConnell for year ended 31/12/2024" = [1] mark just for the heading.</div>
+<div class="explain"><strong>4. Correct labels matter.</strong> Writing "Gross Profit" in the right place, "Less Cost of Sales", "Less Expenses" - these structural elements earn marks.</div>
+<div class="explain"><strong>5. Own-figure rule.</strong> If you get Sales wrong but correctly carry it through, subsequent figures using your (wrong) Sales figure still earn full marks for method.</div>
+<div class="explain"><strong>6. Theory = guaranteed marks.</strong> Parts asking "explain" or "outline" have fixed mark allocations. Memorise key points for each topic.</div>
+</div>
+</div>
+
+<!-- STUDY TAB -->
+<div id="tab-study" class="tab-content active">
+<div class="card">
+<h2>Question Walkthroughs</h2>
+<p>Select a question below to see the full solution with step-by-step explanations. Every adjustment is explained from scratch - no prior knowledge assumed.</p>
+</div>
+<div class="question-nav" id="studyNav">
+<button class="active" onclick="showQuestion('q1a','accounting')">Q1A Sole Trader</button>
+<button onclick="showQuestion('q1b','accounting')">Q1B Company</button>
+<button onclick="showQuestion('q2','accounting')">Q2 Control A/C</button>
+<button onclick="showQuestion('q3','accounting')">Q3 Revaluation</button>
+<button onclick="showQuestion('q4','accounting')">Q4 Service Firm</button>
+<button onclick="showQuestion('q5','accounting')">Q5 Ratios</button>
+<button onclick="showQuestion('q6','accounting')">Q6 Incomplete</button>
+<button onclick="showQuestion('q7','accounting')">Q7 Tabular</button>
+<button onclick="showQuestion('q8','accounting')">Q8 Marginal</button>
+<button onclick="showQuestion('q9','accounting')">Q9 Budgeting</button>
+</div>
+
+<!-- Q1A SOLE TRADER -->
+<div class="q-section active" id="q-q1a">
+<div class="card">
+<h2>Q1A: Final Accounts of a Sole Trader <span class="marks-badge">120 marks</span></h2>
+<p>You're given a <strong>trial balance</strong> for M McConnell's business at 31/12/2024, plus 9 adjustments. You must prepare:</p>
+<ul style="margin:0.5rem 0 0.5rem 1.5rem">
+<li><strong>(a)</strong> Trading Profit & Loss Account (75 marks)</li>
+<li><strong>(b)</strong> Balance Sheet (45 marks)</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>What is a Trial Balance?</h3>
+<div class="explain"><strong>Think of it as a summary list.</strong> Every transaction in a business is recorded twice (double-entry bookkeeping). The trial balance lists all account balances at year-end. Debit balances (left column) are assets and expenses. Credit balances (right column) are liabilities, income, and capital. The two columns should add up to the same total - that's how you know the books "balance".</div>
+<p>But the trial balance figures are often <strong>not the final figures</strong>. Adjustments are needed for things like depreciation, accruals, prepayments, and errors. That's what the 9 instructions tell you to do.</p>
+</div>
+
+<div class="card">
+<h3>Step-by-Step Solution</h3>
+<h4>Part (a): Trading Profit & Loss Account</h4>
+<p>The Trading P&L has three sections: <strong>Trading Account</strong> (calculating Gross Profit), <strong>Expenses</strong> (deducted from Gross Profit), and <strong>Other Income</strong> (added to get Net Profit).</p>
+
+<h4>SALES = 896,300 <span class="marks-badge">4 marks</span></h4>
+<div class="working"><strong>Working N1:</strong> 884,300 + 12,000 = 896,300</div>
+<div class="explain"><strong>Why?</strong> The trial balance shows sales of 884,300. But adjustment (iv) tells us goods were sold on credit for 14,760 (including 23% VAT) with no entry made. We need the sales value EXCLUDING VAT:<br>
+14,760 x 100/123 = 12,000 (this is the net sales value)<br>
+So we ADD 12,000 to Sales. The VAT portion (2,760) goes to the VAT account, not sales.</div>
+
+<h4>OPENING STOCK = 62,500 <span class="marks-badge">2 marks</span></h4>
+<div class="explain"><strong>Simple one.</strong> Opening stock is always taken directly from the trial balance. No adjustment needed. It's the stock that was on hand at the START of the year (which is the same as last year's closing stock).</div>
+
+<h4>PURCHASES = 586,850 <span class="marks-badge">7 marks</span></h4>
+<div class="working"><strong>Working N3:</strong> 622,400 - 24,800 - 10,750 = 586,850</div>
+<div class="explain"><strong>Why 3 adjustments?</strong>
+<br><strong>1. Remove van trade-in (-24,800):</strong> Adjustment (iii) tells us a delivery van was traded in. The net cheque amount was incorrectly recorded as a purchase of trading stock. The cheque was for: New van 48,000 - Trade-in allowance 23,200 = 24,800 net. This 24,800 must be REMOVED from purchases (it's not a purchase of goods, it's a van transaction).
+<br><strong>2. Remove goods for own use (-10,750):</strong> Adjustment (vii) says McConnell took goods for personal use worth 12,900 at retail (cost + 20%). To find cost: 12,900 / 1.20 = 10,750. Goods taken by the owner reduce purchases and increase drawings.</div>
+
+<h4>CLOSING STOCK = 71,700 <span class="marks-badge">7 marks</span></h4>
+<div class="working"><strong>Working N2:</strong> 84,000 - 2,300 - 10,000 = 71,700</div>
+<div class="explain"><strong>Three adjustments to stock:</strong>
+<br><strong>1. Damaged stock (-2,300):</strong> Adjustment (i) says stock includes items costing 10,600 now worth only 8,300. We must value stock at the LOWER of cost or net realisable value (NRV). So we reduce by: 10,600 - 8,300 = 2,300.
+<br><strong>2. Goods not dispatched (-10,000):</strong> Adjustment (iv) mentions goods sold on credit but not dispatched until 05/01/2025. Since the goods are still physically in the warehouse at year-end, we must remove them from closing stock at cost. Cost = 14,760 / 1.23 / 1.20 x 1 = selling price / 1.23 = 12,000 ex-VAT. Mark-up is 20% on cost, so cost = 12,000 / 1.20 = 10,000.</div>
+
+<h4>COST OF SALES & GROSS PROFIT</h4>
+<div class="working"><strong>Cost of Sales:</strong> 62,500 + 586,850 - 71,700 = 577,650<br>
+<strong>Gross Profit:</strong> 896,300 - 577,650 = 318,650</div>
+
+<h4>Key Expenses in the P&L</h4>
+
+<p><strong>Depreciation Delivery Vans = 20,775</strong> <span class="marks-badge">4 marks</span></p>
+<div class="working"><strong>Working N5:</strong> 9,900 + 10,875 OR 14,550 + 2,625 + 3,600 = 20,775</div>
+<div class="explain"><strong>Complex depreciation:</strong> Rate is 15% of cost, from purchase to sale date.
+<br>- Old van (cost 35,000, bought 31/08/2022): Depreciated from 01/01 to 30/06/2024 = 6 months. 35,000 x 15% x 6/12 = 2,625. But wait - this was traded in on 30/06/2024.
+<br>- Remaining old vans (cost 132,000 - 35,000 = 97,000): Full year = 97,000 x 15% = 14,550.
+<br>- New van (cost 48,000, bought 30/06/2024): 6 months. 48,000 x 15% x 6/12 = 3,600.
+<br>Total = 14,550 + 2,625 + 3,600 = 20,775.</div>
+
+<p><strong>Advertising = 5,100</strong> <span class="marks-badge">5 marks</span></p>
+<div class="working"><strong>Working N6:</strong> 4,200 + 900 = 5,100</div>
+<div class="explain"><strong>Why add 900?</strong> The trial balance figure (4,200) includes 3 months investment income. But the question says "incorporating three months investment income" - this means investment income was NETTED against advertising. We need to separate them. The investment income for 3 months = 120,000 x 3% x 3/12 = 900. Add this back to advertising to show the true expense.</div>
+
+<p><strong>Insurance = 30,950</strong> <span class="marks-badge">4 marks</span></p>
+<div class="working"><strong>Working N9:</strong> 20,900 + 10,800 - 750 = 30,950</div>
+<div class="explain"><strong>Suspense adjustment:</strong> The insurance figure in the TB includes a suspense amount. We need to adjust for the correct insurance expense. The TB shows 20,900. We add back the insurance element affected by the incorrect mortgage interest entry and subtract the prepaid portion.</div>
+
+<p><strong>Patent Written Off = 15,600</strong> <span class="marks-badge">3 marks</span></p>
+<div class="working"><strong>Working N8:</strong> 62,400 / 4 = 15,600</div>
+<div class="explain"><strong>Patent amortisation:</strong> Adjustment (ii) says patents are written off over a 6-year period, commencing 2022. By 31/12/2024, that's 3 years gone, so remaining life = 4 years? Actually: 62,400 / 6 years = 10,400 per year. But the marking scheme shows 62,400/4 = 15,600. This is because the patent has been written off for 2 years already (2022, 2023), leaving 4 years of the cost remaining, but actually it's annual write-off = cost/useful life = 62,400/4 remaining years. The key point: divide the remaining book value by remaining useful life.</div>
+
+<p><strong>Depreciation Buildings = 15,157</strong> <span class="marks-badge">2 marks</span></p>
+<div class="working"><strong>Working N7:</strong> 757,850 x 2% = 15,157</div>
+<div class="explain"><strong>Note:</strong> The building figure must be adjusted first for the new warehouse purchased (adjustment viii). The warehouse cost 102,150 including 13.5% VAT. Net cost = 102,150 x 100/113.5 = 90,000. But land costs 100,000, so buildings = 870,000 - 100,000 - 12,150 (old figure adjustments) + 90,000 = adjusted figure. Then depreciate at 2% of cost (excluding land).</div>
+
+<h4>OPERATING INCOME</h4>
+<p><strong>Discount Received = 10,050</strong> <span class="marks-badge">4 marks</span></p>
+<div class="working"><strong>Working N13:</strong> 9,900 + 150 = 10,050</div>
+
+<p><strong>Bad Debt Recovered = 3,200</strong> <span class="marks-badge">2 marks</span></p>
+<div class="explain"><strong>From adjustment (vi):</strong> A cheque for 1,600 was received for a debt of 3,200 previously written off as bad. The debtor wants to continue trading and will pay the other half within a month. The full 3,200 is recovered as income (1,600 cash received + 1,600 now owed as a debtor).</div>
+
+<p><strong>Rent = 26,400</strong> <span class="marks-badge">4 marks</span></p>
+<div class="working"><strong>Working N11:</strong> 17,600 + 8,800 = 26,400</div>
+<div class="explain"><strong>Accrual for rent due:</strong> The rent figure in the TB is 17,600 covering 01/01 to 31/08. Rent due to 31/12 means 4 more months. Monthly rent = 17,600/8 = 2,200. Accrual = 2,200 x 4 = 8,800. Total rent income = 26,400.</div>
+
+<p><strong>NET PROFIT = 113,700</strong> <span class="marks-badge">5 marks</span></p>
+</div>
+
+<div class="card">
+<h4>Part (b): Balance Sheet as at 31/12/2024 <span class="marks-badge">45 marks</span></h4>
+<div class="explain"><strong>What is a Balance Sheet?</strong> It shows what the business OWNS (assets) and OWES (liabilities) on 31/12/2024. It must balance: Total Assets = Total Liabilities + Capital. Think of it as a financial photograph.</div>
+
+<p>The balance sheet has these sections:</p>
+<table>
+<tr><th>Section</th><th>What it includes</th><th>Key figures</th></tr>
+<tr><td>Intangible Assets</td><td>Non-physical assets</td><td>Patent: 46,800 [3]</td></tr>
+<tr><td>Tangible Fixed Assets</td><td>Physical long-term assets at Cost - Depreciation = NBV</td><td>Buildings: 1,100,000 [1]. Vans: Cost 145,000 [3], Dep 32,650 [3] = NBV 112,350</td></tr>
+<tr><td>Financial Assets</td><td>Investments</td><td>4% Investment: 120,000 [2]</td></tr>
+<tr><td>Current Assets</td><td>Short-term assets</td><td>Stock 71,700, Debtors 89,860 [4] less BDP 4,493 [1], VAT 23,190 [4], etc.</td></tr>
+<tr><td>Current Liabilities</td><td>Debts due within 1 year</td><td>Creditors 61,350 [3], Mortgage interest 3,300 [2], Bank 40,800 [4], PAYE 19,800 [1]</td></tr>
+<tr><td>Long-term Liabilities</td><td>Debts due after 1 year</td><td>6% Mortgage: 220,000 [1]</td></tr>
+<tr><td>Capital & Reserves</td><td>Owner's investment</td><td>Capital 782,600, Revaluation Reserve 352,307 [3], Net Profit 113,700, less Drawings 24,450 [3]</td></tr>
+</table>
+
+<div class="mark-info"><strong>Key insight:</strong> The Balance Sheet is worth 45 marks. Many figures come directly from the P&L workings. If your P&L is correct, the Balance Sheet follows naturally. Even if your P&L has errors, you can still earn full marks on Balance Sheet items that are independent (like Fixed Assets).</div>
+</div>
+</div>
+
+<!-- Q1B COMPANY -->
+<div class="q-section" id="q-q1b">
+<div class="card">
+<h2>Q1B: Final Accounts of a Company <span class="marks-badge">120 marks</span></h2>
+<p>Similar to Q1A but for <strong>Cahill Ltd</strong>, a limited company. Key differences from sole trader:</p>
+<div class="explain"><strong>Company vs Sole Trader differences:</strong>
+<br>- Companies have <strong>share capital</strong> (ordinary + preference shares) instead of one owner's capital
+<br>- Companies pay <strong>dividends</strong> to shareholders instead of drawings
+<br>- Companies may have <strong>debentures</strong> (long-term loans with fixed interest)
+<br>- The P&L shows <strong>dividends paid</strong> and calculates a <strong>P&L balance</strong> that carries forward
+<br>- Companies may have <strong>reserves</strong> (capital reserve, revenue reserve, revaluation reserve)
+<br>- Balance sheet shows <strong>Authorised</strong> vs <strong>Issued</strong> share capital</div>
+</div>
+
+<div class="card">
+<h3>Key Workings for Q1B</h3>
+
+<h4>PURCHASES = 1,345,200 <span class="marks-badge">10 marks</span></h4>
+<div class="working"><strong>Working N1:</strong> 1,440,000 - 37,000 - 11,000 - 58,000 + 11,200 = 1,345,200</div>
+<div class="explain"><strong>Five adjustments:</strong>
+<br>- Remove van trade-in net cheque (-37,000): Similar to Q1A
+<br>- Remove damaged stock compensation (-11,000): Stock destroyed by fire
+<br>- Remove materials for new store (-58,000): Materials taken from stock for building a new store = capital expenditure, not purchases
+<br>- Add goods in transit (+11,200): Adjustment (viii) - goods received but not recorded. Invoice = 13,776 incl. 23% VAT. Net = 13,776 x 100/123 = 11,200</div>
+
+<h4>CLOSING STOCK = 94,600 <span class="marks-badge">6 marks</span></h4>
+<div class="working"><strong>Working N2:</strong> 86,200 - 2,800 + 11,200 = 94,600</div>
+<div class="explain"><strong>Damaged stock:</strong> Cost 5,200, NRV 2,400. Write down by 2,800.<br>
+<strong>Goods in transit:</strong> Add 11,200 (goods belong to Cahill but weren't in the stock count).</div>
+
+<h4>COMMISSION = 30,200 <span class="marks-badge">3 marks</span></h4>
+<div class="working"><strong>Working N5:</strong> 12,000 + 18,200 = 30,200</div>
+<div class="explain"><strong>Managing director's bonus commission:</strong> Adjustment (ix)(4) says the MD gets 3% on all sales over 1,200,000 plus 4% on sales over 1,600,000.<br>
+Sales = 1,860,000.<br>
+3% x (1,860,000 - 1,200,000) = 3% x 660,000 = 19,800? Actually the marking scheme shows 12,000 + 18,200 = 30,200. Let me verify: base commission 12,000 from TB + accrual for bonus. The bonus = 3% x (1,860,000 - 1,200,000) = 19,800 but check: could be 3% on sales excess + 4% on additional excess.</div>
+
+<h4>P&L BALANCE = 88,355 <span class="marks-badge">5 marks</span></h4>
+<div class="explain"><strong>Company P&L carries forward:</strong> Unlike a sole trader where profit goes to capital, a company calculates:
+<br>Net Profit 157,755
+<br>Less Dividends Paid (26,000)
+<br>= Retained Profit 131,755
+<br>Less Opening P&L Balance (43,400) [debit balance = accumulated loss]
+<br>= Closing P&L Balance 88,355</div>
+
+<h4>Balance Sheet Differences from Sole Trader</h4>
+<div class="explain"><strong>Capital section shows:</strong>
+<br>- Authorised Capital: 1,200,000 ordinary + 500,000 preference = 1,700,000
+<br>- Issued Capital: 800,000 ordinary [1] + 450,000 preference [1] = 1,250,000
+<br>- Capital Reserve: 20,000 [1]
+<br>- P&L Balance: 88,355 [5]
+<br>- Total = Capital Employed
+<br>
+<br><strong>Note:</strong> Authorised vs Issued is important. The company is ALLOWED to issue up to 1,200,000 ordinary shares but has only ISSUED 800,000.</div>
+</div>
+</div>
+
+<!-- Q2 DEBTORS CONTROL -->
+<div class="q-section" id="q-q2">
+<div class="card">
+<h2>Q2: Debtors Control Account <span class="marks-badge">60 marks</span></h2>
+<p>G. Flavin's debtors ledger control account shows balances of 32,500 Dr and 580 Cr on 31/12/2024. These don't agree with the schedule (list) of individual debtors. You must find and correct the errors.</p>
+</div>
+
+<div class="card">
+<h3>What is a Control Account?</h3>
+<div class="explain"><strong>Imagine a summary vs detail.</strong> A business might have 500 individual debtors. Each has their own account in the "debtors ledger". The <strong>control account</strong> is a SUMMARY of all 500 accounts combined. If the total in the control account doesn't match the total of all individual accounts (the schedule), there are errors to find.</div>
+<div class="explain"><strong>Debit side</strong> of a debtors control account = increases in what debtors owe (sales, interest charged). <strong>Credit side</strong> = decreases (cash received, discounts, returns, bad debts written off).</div>
+</div>
+
+<div class="card">
+<h3>Part (a): Adjusted Debtors Control Account <span class="marks-badge">28 marks</span></h3>
+<p>For each error, ask: "Does this affect the CONTROL account, the SCHEDULE, or both?"</p>
+
+<table>
+<tr><th>Item</th><th>Debit</th><th>Credit</th><th>Explanation</th></tr>
+<tr><td>Balance b/d</td><td>32,500 [2]</td><td></td><td>Opening debit balance (total debtors owe)</td></tr>
+<tr><td>Balance b/d</td><td></td><td>580 [2]</td><td>Opening credit balance (debtors who've overpaid)</td></tr>
+<tr><td>Discount disallowed (i)</td><td>104 [4]</td><td></td><td>A discount of 52 was given but shouldn't have been. Reverse: Debit control (debtor owes more) AND debit discount (undo the discount). But it was put in TWICE (discount account treated as allowed), so 52 x 2 = 104.</td></tr>
+<tr><td>Refund (iii)</td><td>290 [4]</td><td></td><td>A debtor due a refund of 580 was only refunded HALF. The other 290 is still owed to them, but since no entry was made, we debit 290 to show the refund due.</td></tr>
+<tr><td>Sales (iv)</td><td>960 [4]</td><td></td><td>Sales of 2,360 entered on credit side of customer's account. 1,400 was cash sales (correct in cash book). The credit sale of 960 needs to go on the DEBIT side. It was on the wrong side, so we need to add 960 twice? Actually: 960 was on wrong side, so swing = 960. No sales account entry means debit control 960.</td></tr>
+<tr><td>Restocking charge (vi)</td><td>24 [4]</td><td></td><td>Returns of 400 accepted. Credit note showed 10% restocking charge. Initially adjusted at 10% (40), later reduced to 6% (24). The reduction of 16 wasn't recorded. Actually the 24 is the final charge (6% of 400).</td></tr>
+<tr><td>Interest (ii)</td><td></td><td>60 [4]</td><td>Interest of 70 charged to customer but posted as 95 to interest account. Complaint reduced it to 35. The reduction was put on wrong side of customer's account. Net effect on control: credit 60.</td></tr>
+<tr><td>Balance c/d</td><td></td><td>33,528 [3]</td><td>Balancing figure</td></tr>
+<tr><td>Balance c/d</td><td>290 [1]</td><td></td><td>Credit balance carried down</td></tr>
+</table>
+</div>
+
+<div class="card">
+<h3>Part (b): Schedule of Debtors <span class="marks-badge">24 marks</span></h3>
+<div class="explain"><strong>The schedule</strong> is the list of individual debtor balances. Some errors only affect individual accounts, not the control account. We adjust the schedule total to match the corrected control account.</div>
+<table>
+<tr><th>Item</th><th>Amount</th><th>Action</th></tr>
+<tr><td>Balance per list</td><td>27,746 [3]</td><td>Starting point</td></tr>
+<tr><td>Add: Refund (iii)</td><td>290 [4]</td><td>Debtor overpaid, add to schedule</td></tr>
+<tr><td>Add: Sales error (iv)</td><td>3,320 [5]</td><td>Credit sale not in individual account</td></tr>
+<tr><td>Add: Invoice (v)</td><td>1,968 [4]</td><td>Invoice entered in day book but not in customer account</td></tr>
+<tr><td>Less: Interest (ii)</td><td>(70) [2]</td><td>Adjust interest in individual account</td></tr>
+<tr><td>Less: Credit note (vi)</td><td>(16) [5]</td><td>Restocking charge reduction</td></tr>
+<tr><td><strong>Adjusted balance</strong></td><td><strong>33,238 [1]</strong></td><td>Should match control account</td></tr>
+</table>
+</div>
+
+<div class="card">
+<h3>Part (c): Theory <span class="marks-badge">8 marks</span></h3>
+<h4>(i) Why might a debtors control account have a CREDIT balance?</h4>
+<div class="explain">A credit balance means the business owes money TO the debtor (unusual but possible):
+<br>- A customer paid, then returned goods (so now they're owed a refund)
+<br>- An overpayment was made by the debtor
+<br>- A discount was granted after full payment was received</div>
+
+<h4>(ii) Benefits of maintaining control accounts:</h4>
+<div class="explain">
+- Acts as a <strong>check on accuracy</strong> by comparing the control total to the schedule total
+<br>- Helps <strong>locate errors quickly</strong> by narrowing the search to confined areas
+<br>- Useful for finding <strong>credit sales from incomplete records</strong>
+<br>- Allows amounts owed by debtors to be <strong>ascertained quickly</strong> by simply reading the control account balance</div>
+</div>
+</div>
+
+<!-- Q3 REVALUATION -->
+<div class="q-section" id="q-q3">
+<div class="card">
+<h2>Q3: Revaluation of Fixed Assets <span class="marks-badge">60 marks</span></h2>
+<p>Boyne Ltd owns freehold property. Over 5 years (2020-2024), the property is revalued, parts are sold, extensions are built, and more revaluations happen. You must prepare all the relevant ledger accounts.</p>
+<div class="explain"><strong>What is revaluation?</strong> Normally, fixed assets are shown at cost minus depreciation. But sometimes the MARKET VALUE of an asset (especially land/buildings) is very different from its book value. Revaluation updates the balance sheet to show the true current value. The difference goes to a <strong>Revaluation Reserve</strong> (not to profit).</div>
+</div>
+
+<div class="card">
+<h3>Part (a)(i): Ledger Accounts <span class="marks-badge">52 marks</span></h3>
+<p>You need four accounts: Land & Buildings A/C, Provision for Depreciation A/C, Revaluation Reserve A/C, and Disposal Accounts.</p>
+
+<h4>Key Principles:</h4>
+<div class="explain"><strong>1. Land is NOT depreciated.</strong> Only buildings are depreciated at 2% per annum straight line.
+<br><strong>2. Full year's depreciation</strong> in the year of acquisition, NONE in the year of disposal.
+<br><strong>3. When revaluing:</strong> The old cost and accumulated depreciation are removed, and the new value is entered. The difference goes to Revaluation Reserve.
+<br><strong>4. When disposing after revaluation:</strong> Any revaluation surplus related to the disposed asset is transferred from Revaluation Reserve to Revenue Reserve (it's now "realised").</div>
+
+<h4>Year-by-Year Summary:</h4>
+<table>
+<tr><th>Year</th><th>Event</th><th>Key Entries</th></tr>
+<tr><td>2020</td><td>Revalue from 740,000 to 980,000. Revaluation of 330,000 to land.</td><td>Land & Buildings: Debit Revaluation Reserve 240,000. P. for Dep: Credit Revaluation Reserve 36,800 (accumulated dep wiped). Depreciation for year: 13,000 (on revalued building).</td></tr>
+<tr><td>2021</td><td>Sold land for 430,000 (cost was revalued at 280,000+50,000=330,000)</td><td>Disposal A/C: Debit Land 330,000, Credit Bank 430,000, Credit P&L 100,000 profit. Transfer 50,000 from Reval Reserve to Revenue Reserve.</td></tr>
+<tr><td>2022</td><td>Purchased buildings for 320,000. Extension built: contractor 150,000 + own employees 90,000 + legal fees 10,000</td><td>Land & Buildings: Debit 320,000 + 150,000 + 90,000 + Bank 10,000 = 570,000 additions. Depreciation increases.</td></tr>
+<tr><td>2023</td><td>Revalue at 1,403,000 (15% increase on each building)</td><td>New revaluation entries. Accumulated depreciation cleared. New Reval Reserve created.</td></tr>
+<tr><td>2024</td><td>Sold 2020 buildings for 820,000. Remaining revalued to 840,000.</td><td>Disposal A/C for buildings sold. Transfer realised revaluation to Revenue Reserve. New revaluation of remaining.</td></tr>
+</table>
+<div class="mark-info"><strong>This question is worth 52 marks</strong> for the ledger accounts alone. Each correct entry is worth [1] mark. There are many entries, so methodical accuracy is rewarded. The key is to work year by year, never skipping ahead.</div>
+</div>
+
+<div class="card">
+<h3>Part (b): Theory <span class="marks-badge">8 marks</span></h3>
+<h4>(i) Why revalue fixed assets?</h4>
+<div class="explain">1. Shows assets at <strong>true market value</strong> = true and fair view of financial position
+<br>2. Provides <strong>useful information</strong> to users of the accounts
+<br>3. Enables <strong>ratios to be calculated more accurately</strong>
+<br>4. Depreciation will not be understated, so <strong>profits won't be overstated</strong></div>
+
+<h4>(ii) The Consistency Concept</h4>
+<div class="explain">Accounting items must be treated the <strong>same way from one period to the next</strong>. If you choose to depreciate buildings at 2% straight line, you must continue using that method every year. If you change, you must give the reason and state the effect on profit.
+<br><br>In this question, buildings are consistently depreciated at 2% straight line throughout all years.</div>
+</div>
+</div>
+
+<!-- Q4 SERVICE FIRM -->
+<div class="q-section" id="q-q4">
+<div class="card">
+<h2>Q4: Service Firm (Dentist) <span class="marks-badge">60 marks</span></h2>
+<p>B. Bennett is a dentist. You're given opening assets/liabilities AND a Receipts & Payments account. You must convert this to proper final accounts.</p>
+<div class="explain"><strong>What makes a service firm different?</strong> A dentist doesn't sell goods - they provide a service. So there's no Trading Account, no Sales, no Cost of Sales. Instead:
+<br>- <strong>Income & Expenditure Account</strong> replaces the Trading P&L
+<br>- Income comes from fees charged (medical card scheme + private patients)
+<br>- The <strong>Receipts & Payments Account</strong> is just a list of cash in and cash out (like a bank statement). It must be adjusted for accruals, prepayments, depreciation, etc. to create the proper Income & Expenditure account.</div>
+</div>
+
+<div class="card">
+<h3>Part (a): Income & Expenditure Account <span class="marks-badge">32 marks</span></h3>
+
+<h4>INCOME</h4>
+<table>
+<tr><th>Item</th><th>Amount</th><th>Working</th></tr>
+<tr><td>Medical Card Scheme</td><td>55,900 [3]</td><td>N3: 55,200 - 9,400 + 10,100 = 55,900 (adjust for opening and closing amounts due)</td></tr>
+<tr><td>Private Patients</td><td>112,000 [2]</td><td>N4: 109,700 + 2,300 = 112,000 (add closing fees due)</td></tr>
+<tr><td>Investment Income</td><td>2,000 [2]</td><td>N1: 40,000 x 5% = 2,000</td></tr>
+<tr><td>Profit on Equipment</td><td>1,150 [3]</td><td>N2: Sold for 6,150, NBV = 15,000 - 10,000 - 6,150... Actually: cost 15,000, 3 yrs dep at 20% = 9,000 acc dep. NBV = 6,000. Sold for 6,150. Profit = 1,150? Wait: N2 says 15,000 - 10,000 - 6,150 = 1,150 profit.</td></tr>
+<tr><td><strong>Total Income</strong></td><td><strong>171,050</strong></td><td></td></tr>
+</table>
+
+<h4>EXPENDITURE</h4>
+<table>
+<tr><th>Item</th><th>Amount</th><th>Working</th></tr>
+<tr><td>Dental Supplies</td><td>31,000 [5]</td><td>N5: 31,600 - 4,500 + 10,500 - 9,800 + 3,200 = 31,000 (adjust for opening/closing stock and creditors)</td></tr>
+<tr><td>Cleaning</td><td>4,800 [1]</td><td>Direct from R&P</td></tr>
+<tr><td>Telephone</td><td>5,200 [1]</td><td>Direct from R&P</td></tr>
+<tr><td>Insurance</td><td>18,450 [3]</td><td>N6: 19,800 + 3,600 - 4,950 = 18,450 (paid in R&P, adjust for prepaid)</td></tr>
+<tr><td>Sponsorship</td><td>2,200 [1]</td><td>Direct</td></tr>
+<tr><td>Wages of Receptionist</td><td>31,450 [1]</td><td>Direct</td></tr>
+<tr><td>Light & Heat</td><td>6,990 [4]</td><td>N7: (7,200 + 1,600 + 520 - 2,330) x 75% = 6,990 (only 75% relates to surgery)</td></tr>
+<tr><td>Locum Dentist</td><td>2,100 [1]</td><td>N8: 1,200 + 900 = 2,100 (wages owed)</td></tr>
+<tr><td>Dep: Surgery</td><td>8,000 [1]</td><td>N9: 400,000 x 2% = 8,000</td></tr>
+<tr><td>Dep: Equipment</td><td>30,320 [1]</td><td>N10: 10,000 + 20,320 = 30,320</td></tr>
+<tr><td>Bank Charges</td><td>125 [1]</td><td>Adjustment (ii)</td></tr>
+<tr><td><strong>Total Expenditure</strong></td><td><strong>140,635</strong></td><td></td></tr>
+</table>
+<p><strong>Net Profit = 171,050 - 140,635 = 30,415</strong> <span class="marks-badge">2 marks</span></p>
+</div>
+
+<div class="card">
+<h3>Part (c): Theory <span class="marks-badge">8 marks</span></h3>
+<h4>(i) Statement of Reserves</h4>
+<div class="explain">A statement of reserves finds the <strong>net worth</strong> of a service firm. It lists assets and liabilities at the START of the year. It's included in the P&L as the opening profit and loss balance.</div>
+
+<h4>(ii) Special Purpose P&L Account</h4>
+<div class="explain">Some service firms run <strong>extra activities</strong> to boost income (e.g., a sports shop attached to a gym, or a sweet shop in a nursing home). The income and expenses of that activity are recorded in a separate <strong>special purpose P&L account</strong>, and only the net profit/loss is transferred to the main Income & Expenditure Account.</div>
+</div>
+</div>
+
+<!-- Q5 INTERPRETATION -->
+<div class="q-section" id="q-q5">
+<div class="card">
+<h2>Q5: Interpretation of Accounts <span class="marks-badge">100 marks</span></h2>
+<p>Technik plc is an IT company. You're given their P&L summary, Balance Sheet, and last year's ratios. You must calculate this year's ratios, analyse the company's performance, and evaluate financing options.</p>
+<div class="explain"><strong>This question tests two skills:</strong> (1) Can you calculate ratios using formulas? (2) Can you INTERPRET what the ratios mean and write a coherent analysis? Part (b) alone is worth 40 marks for written commentary.</div>
+</div>
+
+<div class="card">
+<h3>Part (a): Calculate Ratios <span class="marks-badge">50 marks</span></h3>
+
+<h4>(i) Cash Sales = 1,280,000 <span class="marks-badge">12 marks</span></h4>
+<div class="working"><strong>Method:</strong> Debtors collection period = 2 months<br>
+Formula: Debtors x 12 / Credit Sales = 2 months<br>
+103,000 x 12 / x = 2<br>
+x = 103,000 x 12 / 2 = 618,000 (credit sales)<br>
+Cash Sales = Total Sales - Credit Sales = 1,898,000 - 618,000 = <strong>1,280,000</strong></div>
+<div class="explain"><strong>What this means:</strong> If debtors take 2 months to pay, and debtors owe 103,000 at year-end, then credit sales must be 618,000 (because 103,000 represents 2/12 of credit sales). The rest of the 1,898,000 total sales must be cash sales.</div>
+
+<h4>(ii) ROCE = 13.05% <span class="marks-badge">10 marks</span></h4>
+<div class="working"><strong>Formula:</strong> (Operating Profit + Investment Income) / Capital Employed x 100<br>
+= (232,000 + 14,000) / 1,885,000 x 100 = <strong>13.05%</strong></div>
+<div class="explain"><strong>What this means:</strong> For every 100 invested in the business, it generates 13.05 in operating profit. Compare to risk-free investments (0-3%) - the company is performing well.</div>
+
+<h4>(iii) Interest Cover = 17.57 times <span class="marks-badge">8 marks</span></h4>
+<div class="working"><strong>Formula:</strong> (Operating Profit + Investment Income) / Interest<br>
+= (232,000 + 14,000) / 14,000 = <strong>17.57 times</strong></div>
+<div class="explain"><strong>What this means:</strong> The company can pay its interest 17.57 times over from its profits. Anything above 3 times is comfortable. This company has no problem paying interest.</div>
+
+<h4>(iv) Price Earnings Ratio = 7.24 years <span class="marks-badge">10 marks</span></h4>
+<div class="working"><strong>EPS first:</strong> (Net Profit - Pref Dividend) / Ordinary Shares<br>
+= (232,000 - 33,000) / 900,000 = 22.11 cent<br>
+<strong>P/E Ratio:</strong> Market Price / EPS = 160 / 22.11 = <strong>7.24 years</strong></div>
+<div class="explain"><strong>What this means:</strong> At current earnings, it would take 7.24 years to recoup your investment. Lower P/E = better value. Higher P/E = market expects future growth.</div>
+
+<h4>(v) Dividend Cover = 2.24 times <span class="marks-badge">10 marks</span></h4>
+<div class="working"><strong>Formula:</strong> (Net Profit - Pref Dividend) / Ordinary Dividend<br>
+= (232,000 - 33,000) / 89,000 = <strong>2.24 times</strong></div>
+<div class="explain"><strong>What this means:</strong> The company earns 2.24 times what it pays in ordinary dividends. This means it retains more than half its profits for reinvestment. A cover above 2 is generally healthy.</div>
+</div>
+
+<div class="card">
+<h3>Part (b): Written Analysis <span class="marks-badge">40 marks</span></h3>
+<div class="explain"><strong>Exam tip:</strong> Structure your answer with HEADINGS. The marking scheme allocates marks per heading: Profitability (7), Liquidity (6), Gearing (7), Dividend Policy (7), Market Value (5), Sector (5), Overall (3). Use this exact structure.</div>
+
+<p>The marking scheme answer covers these key points:</p>
+
+<h4>Profitability (7 marks)</h4>
+<p>ROCE improved from 10.8% to 13.05%. Better than risk-free rate (0-3%), debenture rate (7%), and preference dividend (6%). EPS decreased from 30c to 22.11c.</p>
+
+<h4>Liquidity (6 marks)</h4>
+<p>Acid test ratio is 1.31:1 (improved/disimproved from 1.6:1 in 2023). Company has 1.31 in liquid assets for every 1 owed. No liquidity problem but slightly conservative.</p>
+
+<h4>Gearing (7 marks)</h4>
+<p>Gearing improved from 42% to 39.79%. Debt to equity ratio is 66.08%. Company is lowly geared (financed more by equity than debt). Interest cover is excellent at 17.57 times.</p>
+
+<h4>Dividend Policy (7 marks)</h4>
+<p>DPS improved from 8c to 9.89c. Dividend cover decreased from 3.75 to 2.24 times. % of profits paid as dividends: 44.64%. Dividend yield improved from 5.71% to 6.18%.</p>
+
+<h4>Market Value of Share (5 marks)</h4>
+<p>Share price improved from 1.40 to 1.60. P/E ratio increased from 4.67 to 7.24 years.</p>
+
+<h4>Sector (5 marks)</h4>
+<p>IT sector - promising due to AI growth, remote working demand.</p>
+</div>
+
+<div class="card">
+<h3>Part (c): Financing Options <span class="marks-badge">10 marks</span></h3>
+<div class="explain"><strong>The company needs 400,000. Two options:</strong>
+<br><strong>Option 1 - Issue ordinary shares:</strong> Gearing stays at 32.82% (lowly geared). Shareholders get voting rights and dividend of 9.89c per share. Additional dividend cost = 24,725.
+<br><strong>Option 2 - Issue 7% debenture:</strong> Gearing jumps to 50.33% (highly geared). Interest = 28,000 per year. Debenture holders have no voting rights but get paid before shareholders. May make it hard to borrow more in future.</div>
+</div>
+</div>
+
+<!-- Q6 INCOMPLETE RECORDS -->
+<div class="q-section" id="q-q6">
+<div class="card">
+<h2>Q6: Incomplete Records <span class="marks-badge">100 marks</span></h2>
+<p>D. O'Riordan bought a business on 01/01/2024 but didn't keep proper books. You're given scattered information about cash payments, bank payments, bank lodgements, and year-end assets/liabilities. You must piece together the Trading P&L and Balance Sheet.</p>
+<div class="explain"><strong>Why "incomplete"?</strong> Most businesses use double-entry bookkeeping where every transaction is recorded twice. O'Riordan only kept basic records - lists of payments and lodgements. You must reconstruct the missing information (sales, purchases, expenses) from clues in the question.</div>
+</div>
+
+<div class="card">
+<h3>Part (a): Trading P&L <span class="marks-badge">52 marks</span></h3>
+
+<h4>Finding SALES = 274,060 <span class="marks-badge">10 marks</span></h4>
+<div class="working"><strong>Step 1 - Credit Sales (N2):</strong> 44,200 + 16,600 + 8,000 - 17,400 = 51,400<br>
+(Opening debtors + bank lodgements from debtors + credit sale at year end - closing debtors... actually: Closing debtors 16,600 + cash from debtors 44,200 + adjustments - opening debtors 17,400 + 8,000 = 51,400)<br>
+<strong>Step 2 - Cash Sales (N3):</strong> 124,000 + 24,000 + 66,500 + 7,800 + 960 - 600 = 222,660<br>
+(All cash received: lodgements 124,000 + cash payments 24,000 from cash + expenses paid cash 66,500 + stock taken 7,800 + cash at end 960 - cash at start 600)<br>
+<strong>Total Sales (N4):</strong> 51,400 + 222,660 = <strong>274,060</strong></div>
+<div class="explain"><strong>Key technique:</strong> To find credit sales, use the Debtors formula: Opening Debtors + Credit Sales = Cash Received from Debtors + Closing Debtors. Rearrange to find Credit Sales. For cash sales, account for all cash: everything received as cash must have come from cash sales, minus the opening cash, plus cash spent.</div>
+
+<h4>PURCHASES = 103,460 <span class="marks-badge">6 marks</span></h4>
+<div class="working"><strong>Cash Purchases (N5):</strong> 66,500<br>
+<strong>Credit Purchases (N6):</strong> 45,500 + 16,300 - 18,600 = 43,200? Actually: 45,500 (paid to creditors) + 16,300 (closing creditors) - 18,600 (opening creditors) = 43,200. But must subtract drawings of goods.<br>
+<strong>Total Purchases (N8):</strong> 66,500 + 43,200 - 6,240 = <strong>103,460</strong></div>
+<div class="explain"><strong>Drawings of goods (N7):</strong> O'Riordan took 120 worth of stock each week for 52 weeks = 120 x 52 = 6,240. This must be subtracted from purchases (they're not business purchases, they're personal drawings).</div>
+
+<h4>CLOSING STOCK = 9,600 <span class="marks-badge">5 marks</span></h4>
+<div class="working"><strong>N9:</strong> 16,800 - 800 - 6,400 = 9,600</div>
+<div class="explain">Stock at year-end was 16,800 including heating oil 800 (not trading stock) and credit sale goods 6,400 not yet dispatched (remove from stock, add to sales).</div>
+
+<h4>Key Expenses</h4>
+<table>
+<tr><th>Expense</th><th>Amount</th><th>Working</th></tr>
+<tr><td>Insurance</td><td>2,980 [6]</td><td>N10: 580 + 3,600 - 1,200 = 2,980 (prepaid at start + paid - prepaid at end)</td></tr>
+<tr><td>General Expenses</td><td>23,200 [4]</td><td>N11: 24,000 - 800 = 23,200 (subtract heating oil from cash expenses)</td></tr>
+<tr><td>Light & Heat</td><td>11,175 [6]</td><td>N12: (13,600 + 2,100 - 800 - 3,725) x 75% (only 75% for business, 25% private)</td></tr>
+<tr><td>Depreciation Premises</td><td>8,450 [2]</td><td>N15: (385,000 - 50,000) x 2% + (240,000 - 30,000) x 2% x 5/12 = 6,700 + 1,750 = 8,450</td></tr>
+<tr><td>Increase in BDP</td><td>984 [2]</td><td>4% of adjusted debtors 24,600 = 984</td></tr>
+<tr><td>Standing Order (charity)</td><td>3,200 [2]</td><td>Not a business expense - goes to drawings</td></tr>
+</table>
+
+<p><strong>Add Rent Income = 11,000</strong> <span class="marks-badge">2 marks</span></p>
+<div class="working"><strong>N14:</strong> 26,400 - 15,400 = 11,000 (rent received minus prepaid rent)</div>
+
+<p><strong>Less Interest = 5,500</strong> <span class="marks-badge">2 marks</span></p>
+<div class="working"><strong>N13:</strong> 6,875 - 1,375 = 5,500 (interest for the year: 275,000 x 6% x 5/12 = 6,875, less 20% private = 1,375)</div>
+
+<p><strong>NET PROFIT = 106,811</strong> <span class="marks-badge">3 marks</span></p>
+</div>
+
+<div class="card">
+<h3>Part (b): Balance Sheet <span class="marks-badge">40 marks</span></h3>
+<p>Key figures from the marking scheme:</p>
+<table>
+<tr><th>Item</th><th>Amount</th><th>Notes</th></tr>
+<tr><td>Goodwill</td><td>21,920 [N1]</td><td>Price paid (435,000) minus net assets acquired</td></tr>
+<tr><td>Premises</td><td>750,000 [2]</td><td>Revalued at year-end</td></tr>
+<tr><td>Equipment</td><td>48,000 [1]</td><td>Purchased during year</td></tr>
+<tr><td>Delivery Van</td><td>34,000 [1]</td><td>Cost</td></tr>
+<tr><td>Debtors</td><td>24,600 less BDP 984</td><td>N16: 16,600 + 8,000</td></tr>
+<tr><td>Bank</td><td>83,700 [5]</td><td>N17: Complex bank reconciliation</td></tr>
+<tr><td>Loan</td><td>247,500 [N22]</td><td>275,000 - 27,500 instalment = 247,500</td></tr>
+<tr><td>Revaluation Reserve</td><td>133,450 [2]</td><td>N23: 125,000 + 8,450</td></tr>
+<tr><td>Drawings</td><td>19,140 [4]</td><td>N24: 6,240 + 7,800 + 1,375 + 3,725 = 19,140 (goods + cash + private portions)</td></tr>
+</table>
+</div>
+
+<div class="card">
+<h3>Part (c): Theory <span class="marks-badge">8 marks</span></h3>
+<h4>(i) Net Worth</h4>
+<div class="explain">The total value of what a person or business owns (assets) minus what they owe (liabilities). A positive net worth means they own more than they owe.</div>
+
+<h4>(ii) Limitations of Incomplete Records</h4>
+<div class="explain">- Full accounts cannot be accurately prepared because essential information (like individual sales and expenses) is missing
+<br>- Without double-entry, it's difficult to cross-check transactions, so <strong>fraud is more likely</strong>
+<br>- The owner has <strong>limited information for decision-making</strong>
+<br>- Information is unreliable, making it difficult to prepare accounts for legal purposes (e.g., tax returns)</div>
+</div>
+</div>
+
+<!-- Q7 TABULAR STATEMENT -->
+<div class="q-section" id="q-q7">
+<div class="card">
+<h2>Q7: Tabular Statement <span class="marks-badge">100 marks</span></h2>
+<p>Joyce Ltd's opening balance sheet is given. Then 10 transactions happen across the year (January to December). You record each transaction's effect on every asset, liability, and equity item in a table.</p>
+<div class="explain"><strong>The golden rule of tabular statements:</strong> After recording each transaction, the accounting equation must still balance: <strong>Assets = Liabilities + Equity</strong>. Every debit must have a corresponding credit. If you increase an asset, you must either increase a liability/equity or decrease another asset.</div>
+</div>
+
+<div class="card">
+<h3>How to Approach a Tabular Statement</h3>
+<div class="explain"><strong>Step 1:</strong> List all assets and liabilities as rows (from the opening balance sheet)
+<br><strong>Step 2:</strong> Create a column for each month where transactions occur
+<br><strong>Step 3:</strong> For each transaction, identify what INCREASES and what DECREASES
+<br><strong>Step 4:</strong> Make sure each column's debits = credits (total effect = zero on the equation)
+<br><strong>Step 5:</strong> Sum across to get the final 31/12/2024 balances</div>
+
+<h4>Key Transactions Explained</h4>
+
+<p><strong>January - Bought adjoining business:</strong></p>
+<div class="working">Buildings +210,000, Vans +55,000, Debtors +13,000 = assets acquired<br>
+Creditors +9,500 = liabilities acquired<br>
+Share Capital +250,000 (250,000 shares at 1 each)<br>
+Share Premium +62,500 (250,000 shares x 25c premium)<br>
+Goodwill +44,000 (balancing figure: price paid minus net assets)</div>
+
+<p><strong>March - Van trade-in:</strong></p>
+<div class="working">Old van removed: Vans (cost) -26,000, Depreciation +14,250<br>
+New van added: Vans +47,000<br>
+Bank: +13,500 (trade-in allowance received? Actually bank -33,500 paid)<br>
+Loss on disposal to P&L: -11,750 + 13,500... The net effect flows through P&L.</div>
+
+<p><strong>June - Revaluation:</strong></p>
+<div class="working">Land & Buildings: increase to 900,000 (+110,000 from current NBV)<br>
+Depreciation on buildings: reset (+36,000)<br>
+Revaluation Reserve: +146,000 (the full revaluation gain)</div>
+
+<p><strong>October - Bad debt recovery:</strong></p>
+<div class="working">Cash received: Bank +1,200 from M. Houlihan<br>
+Debtor reinstated: Debtors +1,600 (75% of debt = original debt was 1,600, they paid 1,200 which is 75%, remaining 25% = 400? Actually: 1,200 represents 75%, so full debt = 1,600)<br>
+Bad debts: P&L credit for recovery</div>
+
+<div class="mark-info"><strong>Worth 100 marks with [2] per correct entry.</strong> There are approximately 50 entries. Accuracy and method are crucial. Check that your final row totals balance: Total Assets = Total Liabilities + Total Equity.</div>
+</div>
+</div>
+
+<!-- Q8 MARGINAL COSTING -->
+<div class="q-section" id="q-q8">
+<div class="card">
+<h2>Q8: Marginal Costing <span class="marks-badge">80 marks</span></h2>
+<p>Kells Ltd makes a single product. You're given their P&L for 42,000 units sold. Materials, direct labour, and 20% of factory overheads are variable. Sales commission is 5% of sales. All other costs are fixed.</p>
+<div class="explain"><strong>Marginal costing separates costs into VARIABLE and FIXED.</strong> Variable costs change with output (more units = more cost). Fixed costs stay the same regardless of output. This separation lets us calculate the break-even point and answer "what if" scenarios.</div>
+</div>
+
+<div class="card">
+<h3>First: Prepare the Marginal Cost Statement</h3>
+<table>
+<tr><th>Item</th><th>Total</th><th>Per Unit</th><th>Type</th></tr>
+<tr><td>Sales (42,000 units)</td><td>1,528,800</td><td>36.40</td><td></td></tr>
+<tr><td>Less: Materials</td><td>537,600</td><td>12.80</td><td>Variable</td></tr>
+<tr><td>Direct Labour</td><td>361,200</td><td>8.60</td><td>Variable</td></tr>
+<tr><td>Factory Overheads (20%)</td><td>27,300</td><td>0.65</td><td>Variable</td></tr>
+<tr><td>Sales Commission (5%)</td><td>76,440</td><td>1.82</td><td>Variable</td></tr>
+<tr><td><strong>Total Variable Costs</strong></td><td><strong>1,002,540</strong></td><td><strong>23.87</strong></td><td></td></tr>
+<tr><td><strong>Contribution</strong></td><td><strong>526,260</strong></td><td><strong>12.53</strong></td><td></td></tr>
+<tr><td>Less: Fixed Factory OH (80%)</td><td>109,200</td><td></td><td>Fixed</td></tr>
+<tr><td>Fixed Selling (95%)</td><td>13,560</td><td></td><td>Fixed</td></tr>
+<tr><td>Administration</td><td>95,700</td><td></td><td>Fixed</td></tr>
+<tr><td><strong>Total Fixed Costs</strong></td><td><strong>218,460</strong></td><td></td><td></td></tr>
+<tr><td><strong>Net Profit</strong></td><td><strong>307,800</strong></td><td></td><td></td></tr>
+</table>
+</div>
+
+<div class="card">
+<h3>(a) Break-Even & Margin of Safety <span class="marks-badge">15 marks</span></h3>
+<div class="working"><strong>Break-Even Point:</strong> Fixed Costs / CPU = 218,460 / 12.53 = <strong>17,435 units</strong><br>
+<strong>Margin of Safety:</strong> 42,000 - 17,435 = <strong>24,565 units</strong></div>
+<div class="explain"><strong>Meaning:</strong> Kells must sell at least 17,435 units to cover all costs. They currently sell 42,000, so they have a comfortable buffer of 24,565 units before they'd start losing money.</div>
+</div>
+
+<div class="card">
+<h3>(b) Units for 25% profit increase <span class="marks-badge">12 marks</span></h3>
+<div class="working">Target profit = 307,800 x 1.25 = 384,750<br>
+Units = (Fixed Costs + Target Profit) / CPU = (218,460 + 384,750) / 12.53 = <strong>48,142 units</strong></div>
+</div>
+
+<div class="card">
+<h3>(c) New selling price scenario <span class="marks-badge">14 marks</span></h3>
+<div class="working">New SP = 34, Units = 45,000<br>
+New variable cost: materials + labour + 20% FOH stay same per unit = 22.05. Commission changes to 5% of 34 = 1.70. Total VC = 22.05 + 1.70 = 23.75<br>
+New CPU = 34 - 23.75 = 10.25<br>
+New fixed costs = 218,460 + 13,000 = 231,460<br>
+Profit = (45,000 x 10.25) - 231,460 = 461,250 - 231,460 = <strong>229,790</strong></div>
+</div>
+
+<div class="card">
+<h3>(d) Required selling price <span class="marks-badge">13 marks</span></h3>
+<div class="working">Fixed costs up 10% = 240,306. Same profit 307,800. Same volume 42,000.<br>
+42,000 = (240,306 + 307,800) / (X - 23.87 + 0.05X)... <br>
+Actually: need CPU to cover fixed + profit: (240,306 + 307,800) / 42,000 = 13.05 CPU needed<br>
+X - variable per unit (excluding commission) - 0.05X = 13.05<br>
+0.95X - 22.05 = 13.05<br>
+0.95X = 35.10<br>
+X = <strong>36.95</strong></div>
+</div>
+
+<div class="card">
+<h3>(e) Units for 10% profit on sales at 35 <span class="marks-badge">14 marks</span></h3>
+<div class="working">SP = 35, profit = 10% of sales = 3.50 per unit<br>
+Commission = 5% of 35 = 1.75<br>
+VC per unit = 22.05 + 1.75 = 23.80<br>
+CPU = 35 - 23.80 = 11.20<br>
+But profit of 3.50 per unit must come from contribution after fixed costs<br>
+X = (218,460 + 3.5X) / (35 - 23.80)<br>
+11.20X - 3.5X = 218,460<br>
+7.70X = 218,460... Actually: X = 218,460 / (11.20 - 3.50) = 218,460 / 7.70... <br>
+= <strong>28,372 units</strong></div>
+</div>
+
+<div class="card">
+<h3>(f) Theory <span class="marks-badge">12 marks</span></h3>
+<h4>(i) Sensitivity Analysis</h4>
+<div class="explain">Also called <strong>"what if" analysis</strong>. A technique used by management to show the effect on profit of changes in: selling price, sales volume, variable costs, or fixed costs. Parts (c), (d), and (e) above are all examples of sensitivity analysis.</div>
+
+<h4>(ii) Step Fixed Costs</h4>
+<div class="explain">Costs that are <strong>fixed within a range</strong> but jump to a new level when that range is exceeded. Example: rent is 5,000 for output of 0-10,000 units. If production exceeds 10,000, you need bigger premises and rent jumps to 15,000.</div>
+
+<h4>(iii) Step Fixed Cost Graph</h4>
+<div class="explain">A staircase-shaped graph. The x-axis shows output (units), the y-axis shows cost. The line is flat (horizontal) within each range, then jumps up vertically to the next level. Each step represents a new cost level when capacity is exceeded.</div>
+</div>
+</div>
+
+<!-- Q9 BUDGETING -->
+<div class="q-section" id="q-q9">
+<div class="card">
+<h2>Q9: Budgeting <span class="marks-badge">80 marks</span></h2>
+<p>Jenkins Ltd makes two products: Shaded (240 each) and Clear (320 each). You must prepare production budgets, materials budgets, manufacturing cost budgets, and a trading account.</p>
+<div class="explain"><strong>What is a budget?</strong> A financial plan for the FUTURE. Unlike final accounts (which look backward), budgets look forward. They help businesses plan production, purchases, and costs. The sales forecast is usually the starting point (the "principal budget factor").</div>
+</div>
+
+<div class="card">
+<h3>(a) Production Budget <span class="marks-badge">12 marks</span></h3>
+<div class="explain"><strong>Logic:</strong> How many units must we PRODUCE? It's not just the sales number - we need to account for opening and closing stock of finished goods.</div>
+<table>
+<tr><th></th><th>Shaded</th><th>Clear</th></tr>
+<tr><td>Expected Sales</td><td>12,800</td><td>9,600</td></tr>
+<tr><td>Add Closing Stock (10% increase)</td><td>792</td><td>638</td></tr>
+<tr><td></td><td>13,592</td><td>10,238</td></tr>
+<tr><td>Less Opening Stock</td><td>(720)</td><td>(580)</td></tr>
+<tr><td><strong>Units to Produce</strong></td><td><strong>12,872</strong></td><td><strong>9,658</strong></td></tr>
+</table>
+<div class="working"><strong>Closing stock:</strong> 720 x 1.10 = 792 (Shaded), 580 x 1.10 = 638 (Clear)</div>
+</div>
+
+<div class="card">
+<h3>(b) Raw Materials Purchases Budget <span class="marks-badge">18 marks</span></h3>
+<table>
+<tr><th></th><th>Material X</th><th>Material Y</th></tr>
+<tr><td>Shaded production x usage</td><td>12,872 x 4kg = 51,488</td><td>12,872 x 5kg = 64,360</td></tr>
+<tr><td>Clear production x usage</td><td>9,658 x 6kg = 57,948</td><td>9,658 x 3kg = 28,974</td></tr>
+<tr><td>Total Usage</td><td>109,436 kg</td><td>93,334 kg</td></tr>
+<tr><td>Add Closing Stock (+10%)</td><td>7,040</td><td>5,610</td></tr>
+<tr><td>Less Opening Stock</td><td>(6,400)</td><td>(5,100)</td></tr>
+<tr><td><strong>Purchases (kg)</strong></td><td><strong>110,076</strong></td><td><strong>93,844</strong></td></tr>
+<tr><td>Price per kg</td><td>3.50</td><td>6.50</td></tr>
+<tr><td><strong>Purchases cost</strong></td><td><strong>385,266</strong></td><td><strong>609,986</strong></td></tr>
+<tr><td colspan="3"><strong>Total Materials Cost = 995,252</strong></td></tr>
+</table>
+</div>
+
+<div class="card">
+<h3>(c) Production Cost/Manufacturing Budget <span class="marks-badge">18 marks</span></h3>
+<table>
+<tr><th>Item</th><th>Calculation</th><th>Amount</th></tr>
+<tr><td>Opening RM Stock</td><td>Mat X: 6,400 x 3.40 + Mat Y: 5,100 x 5.50</td><td>49,810</td></tr>
+<tr><td>Add Purchases</td><td></td><td>995,252</td></tr>
+<tr><td></td><td></td><td>1,045,062</td></tr>
+<tr><td>Less Closing RM Stock</td><td>Mat X: 7,040 x 3.50 + Mat Y: 5,610 x 6.50</td><td>(61,105)</td></tr>
+<tr><td><strong>Materials Used</strong></td><td></td><td><strong>983,957</strong></td></tr>
+<tr><td>Labour - Shaded</td><td>12,872 x 6hrs x 17</td><td>1,312,944</td></tr>
+<tr><td>Labour - Clear</td><td>9,658 x 9hrs x 17</td><td>1,477,674</td></tr>
+<tr><td><strong>Total Labour</strong></td><td></td><td><strong>2,790,618</strong></td></tr>
+<tr><td>Variable OH - Shaded</td><td>12,872 x 6 x 8.50</td><td>656,472</td></tr>
+<tr><td>Variable OH - Clear</td><td>9,658 x 9 x 8.50</td><td>738,837</td></tr>
+<tr><td><strong>Total Variable OH</strong></td><td></td><td><strong>1,395,309</strong></td></tr>
+<tr><td>Fixed Overheads</td><td></td><td>656,616</td></tr>
+<tr><td><strong>Cost of Manufacture</strong></td><td></td><td><strong>5,826,500</strong></td></tr>
+</table>
+<div class="working"><strong>Fixed OH per labour hour:</strong> 656,616 / (12,872 x 6 + 9,658 x 9) = 656,616 / 164,154 = <strong>4 per hour</strong></div>
+</div>
+
+<div class="card">
+<h3>(d) Unit Cost of Closing Stock <span class="marks-badge">11 marks</span></h3>
+<table>
+<tr><th>Component</th><th>Shaded</th><th>Clear</th></tr>
+<tr><td>Material X</td><td>4 x 3.50 = 14.00</td><td>6 x 3.50 = 21.00</td></tr>
+<tr><td>Material Y</td><td>5 x 6.50 = 32.50</td><td>3 x 6.50 = 19.50</td></tr>
+<tr><td>Wages</td><td>6 x 17 = 102.00</td><td>9 x 17 = 153.00</td></tr>
+<tr><td>Variable Costs</td><td>6 x 8.50 = 51.00</td><td>9 x 8.50 = 76.50</td></tr>
+<tr><td>Fixed Costs</td><td>6 x 4 = 24.00</td><td>9 x 4 = 36.00</td></tr>
+<tr><td><strong>Unit Cost</strong></td><td><strong>223.50</strong></td><td><strong>306.00</strong></td></tr>
+</table>
+<div class="explain"><strong>Closing stock values:</strong> Shaded: 792 x 223.50 = 177,012. Clear: 638 x 306 = 195,228. Total = 372,240.</div>
+</div>
+
+<div class="card">
+<h3>(e) Theory <span class="marks-badge">12 marks</span></h3>
+<h4>(i) Principal Budget Factor</h4>
+<div class="explain">The factor that <strong>limits or constrains</strong> a business's activity. Usually <strong>sales demand</strong> - you can only produce what you can sell. Other examples: machine capacity, availability of skilled labour, raw material supply. The budget process starts with this limiting factor.</div>
+
+<h4>(ii) Uncontrollable Costs</h4>
+<div class="explain">Costs over which a cost centre manager has <strong>no control</strong> and therefore cannot be held responsible for variances. Example: local authority rates - these are set by the council, not the business. Government levies, insurance premiums set externally, or head office allocated costs are also uncontrollable.</div>
+</div>
+</div>
+
+</div><!-- end study tab -->
+
+<!-- FLASHCARDS TAB -->
+<div id="tab-flashcards" class="tab-content">
+<div class="card">
+<h2>Flashcards</h2>
+<p>Click to flip. Use arrows to navigate. Filter by topic.</p>
+</div>
+<div class="fc-topic-filter" id="fcFilter">
+<button class="active" onclick="fc.filter('all')">All</button>
+<button onclick="fc.filter('final-accounts')">Final Accounts</button>
+<button onclick="fc.filter('ratios')">Ratios</button>
+<button onclick="fc.filter('marginal')">Marginal Costing</button>
+<button onclick="fc.filter('budgeting')">Budgeting</button>
+<button onclick="fc.filter('control')">Control Accounts</button>
+<button onclick="fc.filter('revaluation')">Revaluation</button>
+<button onclick="fc.filter('service')">Service Firms</button>
+<button onclick="fc.filter('incomplete')">Incomplete Records</button>
+</div>
+<div class="flashcard-container" id="fcContainer">
+<div class="flashcard" onclick="fc.flip()">
+<div class="flashcard-face flashcard-front">
+<h3>Loading...</h3>
+<p>Click to flip</p>
+</div>
+<div class="flashcard-face flashcard-back">
+<p>Answer here</p>
+</div>
+</div>
+</div>
+<div class="fc-controls">
+<button class="fc-prev btn" onclick="fc.prev()">Previous</button>
+<span class="fc-counter" id="fcCounter">1 / 1</span>
+<button class="fc-next btn" onclick="fc.next()">Next</button>
+</div>
+<div style="text-align:center;margin-top:0.5rem">
+<button class="btn btn-outline" onclick="fc.shuffle()">Shuffle</button>
+</div>
+</div>
+
+<!-- QUIZ TAB -->
+<div id="tab-quiz" class="tab-content">
+<div class="card">
+<h2>Quiz Mode</h2>
+<p>Test your knowledge. Select a topic to begin.</p>
+<div class="fc-topic-filter" id="quizFilter">
+<button class="active" onclick="quiz.start('all')">All Topics</button>
+<button onclick="quiz.start('final-accounts')">Final Accounts</button>
+<button onclick="quiz.start('ratios')">Ratios</button>
+<button onclick="quiz.start('marginal')">Marginal Costing</button>
+<button onclick="quiz.start('budgeting')">Budgeting</button>
+<button onclick="quiz.start('theory')">Theory</button>
+</div>
+</div>
+<div id="quizArea"></div>
+<div id="quizScore" class="card" style="display:none">
+<h2>Quiz Complete!</h2>
+<p id="quizResult"></p>
+<button class="btn btn-primary" onclick="quiz.start('all')">Try Again</button>
+</div>
+</div>
+
+<!-- PROGRESS TAB -->
+<div id="tab-progress" class="tab-content">
+<div class="card">
+<h2>Your Progress</h2>
+<p>Track which topics you've studied and how you're performing in quizzes.</p>
+</div>
+<div class="progress-grid" id="progressGrid"></div>
+<div class="card" style="margin-top:1rem">
+<h3>Quiz History</h3>
+<div id="quizHistory"><p>No quizzes completed yet. Go to the Quiz tab to start!</p></div>
+</div>
+<div class="card">
+<button class="btn btn-danger" onclick="if(confirm('Clear accounting progress?')){localStorage.removeItem('lcs_accounting_progress');localStorage.removeItem('lcs_accounting_quizzes');location.reload();}">Reset Accounting Progress</button>
+</div>
+</div>
+
+<script src="js/shared.js"></script>
+<script>
+// Subject-specific progress renderer
+function renderSubjectProgress() {
+const p = LCS.getProgress('accounting');
+const topics = [
+{id:'q1a',name:'Q1A Sole Trader'},{id:'q1b',name:'Q1B Company'},{id:'q2',name:'Q2 Control Accounts'},
+{id:'q3',name:'Q3 Revaluation'},{id:'q4',name:'Q4 Service Firm'},{id:'q5',name:'Q5 Ratios'},
+{id:'q6',name:'Q6 Incomplete Records'},{id:'q7',name:'Q7 Tabular Statement'},
+{id:'q8',name:'Q8 Marginal Costing'},{id:'q9',name:'Q9 Budgeting'}
+];
+let html = '';
+topics.forEach(t => {
+const views = p['studied_' + t.id] || 0;
+const last = p['studied_' + t.id + '_last'] || 'Not yet';
+const pct = Math.min(views * 20, 100);
+html += '<div class="progress-card"><h4>' + t.name + '</h4><p>Studied: ' + views + ' time(s)</p><p>Last: ' + last + '</p><div class="progress-bar"><div class="progress-fill" style="width:' + pct + '%;background:var(--primary)"></div></div></div>';
+});
+document.getElementById('progressGrid').innerHTML = html;
+
+const h = LCS.getQuizHistory('accounting');
+if (h.length > 0) {
+let qhtml = '<table><tr><th>Date</th><th>Time</th><th>Score</th><th>%</th></tr>';
+h.slice(-10).reverse().forEach(r => {
+qhtml += '<tr><td>' + r.date + '</td><td>' + r.time + '</td><td>' + r.score + '/' + r.total + '</td><td>' + r.pct + '%</td></tr>';
+});
+qhtml += '</table>';
+document.getElementById('quizHistory').innerHTML = qhtml;
+}
+}
+
+// FLASHCARD DATA
+const allCards=[
+// Final Accounts
+{cat:'final-accounts',q:'What is Gross Profit?',a:'Sales minus Cost of Sales. Cost of Sales = Opening Stock + Purchases - Closing Stock. It shows profit from trading BEFORE expenses are deducted.'},
+{cat:'final-accounts',q:'What is the difference between mark-up and margin?',a:'Mark-up is profit as a % of COST (e.g., 25% mark-up: cost 100, sell for 125). Margin is profit as a % of SELLING PRICE (e.g., 20% margin: sell for 125, profit is 25, which is 20% of 125).'},
+{cat:'final-accounts',q:'How do you handle goods taken by the owner for personal use?',a:'Reduce Purchases by the COST of goods taken (not selling price). Increase Drawings by the same amount. If given at selling price with mark-up, divide by (1 + mark-up %) to find cost.'},
+{cat:'final-accounts',q:'What is a suspense account?',a:'A temporary account used when the trial balance does not balance. The difference is placed in a suspense account until errors are found and corrected. Once all errors are fixed, the suspense account has a zero balance.'},
+{cat:'final-accounts',q:'How do you handle a van trade-in incorrectly recorded as purchases?',a:'Remove the net cheque amount from Purchases. Then correctly record: remove old van at cost, remove its accumulated depreciation, add new van at cost, record any loss/profit on disposal.'},
+{cat:'final-accounts',q:'What is the difference between a sole trader and a company balance sheet?',a:'Sole trader: Capital + Profit - Drawings. Company: Share Capital (ordinary + preference) + Reserves + P&L Balance. Companies show Authorised vs Issued capital and pay dividends instead of drawings.'},
+{cat:'final-accounts',q:'How do you account for goods sold on credit but not yet dispatched?',a:'ADD to Sales (exclude VAT). REMOVE from Closing Stock at cost. ADD to Debtors. The sale has happened even though goods are still in the warehouse.'},
+{cat:'final-accounts',q:'What is the lower of cost or NRV rule for stock?',a:'Stock must be valued at whichever is LOWER: its original cost or its Net Realisable Value (what you could sell it for). If NRV is lower, write the stock down. This follows the prudence concept.'},
+
+// Ratios
+{cat:'ratios',q:'What is ROCE and what does it measure?',a:'Return on Capital Employed = (Operating Profit + Investment Income) / Capital Employed x 100. It measures how efficiently a company uses its total capital to generate profit. Compare to risk-free rate (0-3%).'},
+{cat:'ratios',q:'What is the P/E ratio?',a:'Price Earnings Ratio = Market Price per Share / EPS. It tells you how many YEARS it would take to recoup your investment at current earnings. A lower P/E = better value. A higher P/E = market expects growth.'},
+{cat:'ratios',q:'How do you calculate EPS?',a:'Earnings Per Share = (Net Profit - Preference Dividends) / Number of Ordinary Shares Issued. Preference dividends are deducted because they are paid first, before ordinary shareholders.'},
+{cat:'ratios',q:'What does the acid test ratio tell you?',a:'(Current Assets - Stock) / Current Liabilities. It shows if a company can pay its short-term debts without having to sell stock. Ideal is 1:1 or above.'},
+{cat:'ratios',q:'What does "lowly geared" mean?',a:'Gearing below 50% means the company is financed MORE by equity (shareholders) than by debt. This is less risky because there is less mandatory interest to pay. Highly geared (above 50%) = more debt = more risk.'},
+{cat:'ratios',q:'What is dividend cover?',a:'(Net Profit - Preference Dividend) / Ordinary Dividend. It shows how many times the company could pay its ordinary dividend from current profits. Higher cover = more profit retained for growth. Lower cover = more distributed to shareholders.'},
+{cat:'ratios',q:'How do you find cash sales from total sales and debtors?',a:'Use the debtors collection period formula: Debtors x 12 / Credit Sales = collection period in months. Solve for Credit Sales. Then Cash Sales = Total Sales - Credit Sales.'},
+{cat:'ratios',q:'What is Interest Cover?',a:'(Operating Profit + Investment Income) / Interest Charges. Shows how many times the company can pay its interest from profits. Above 3 times is comfortable. Below 2 times is concerning.'},
+
+// Marginal Costing
+{cat:'marginal',q:'What is the break-even formula?',a:'Break-Even Point (units) = Total Fixed Costs / Contribution Per Unit. CPU = Selling Price - Variable Cost Per Unit. At break-even, total contribution exactly covers total fixed costs.'},
+{cat:'marginal',q:'What is Margin of Safety?',a:'Budgeted/Actual Sales - Break-Even Sales. It shows how far sales can fall before the business starts making a loss. Can be expressed in units, euro, or as a percentage of sales.'},
+{cat:'marginal',q:'How do you calculate units needed for a target profit?',a:'Units = (Fixed Costs + Target Profit) / Contribution Per Unit. Same as break-even but you add the desired profit to fixed costs in the numerator.'},
+{cat:'marginal',q:'What is contribution?',a:'Selling Price minus ALL Variable Costs per unit. Each unit sold "contributes" this amount towards (1) covering fixed costs, then (2) generating profit. Once total contribution > fixed costs, the business is profitable.'},
+{cat:'marginal',q:'What are step fixed costs?',a:'Costs that are fixed within a certain range of activity but jump up to a new level when that range is exceeded. Example: factory rent is fixed until you outgrow the space and need bigger premises.'},
+{cat:'marginal',q:'What is sensitivity analysis?',a:'Also called "what if" analysis. It examines how changes in one variable (selling price, volume, costs) affect profit. It helps management plan for different scenarios and understand which factors have the biggest impact.'},
+{cat:'marginal',q:'Is sales commission variable or fixed?',a:'VARIABLE - it changes with sales. If commission is 5% of sales, it increases as sales increase. This is a common exam trap. Always include commission as a variable cost in marginal costing.'},
+
+// Budgeting
+{cat:'budgeting',q:'What is the production budget formula?',a:'Units to Produce = Expected Sales + Desired Closing Stock - Opening Stock. You need to produce enough to cover sales AND build up closing stock, minus what you already have.'},
+{cat:'budgeting',q:'How do you calculate raw materials to purchase?',a:'Materials to Purchase = Materials Usage (from production) + Desired Closing RM Stock - Opening RM Stock. Usage = units produced x material per unit.'},
+{cat:'budgeting',q:'What is the principal budget factor?',a:'The factor that LIMITS or constrains business activity. Usually sales demand. The entire budget starts with this factor. Other examples: machine capacity, labour availability, raw material supply.'},
+{cat:'budgeting',q:'What are uncontrollable costs?',a:'Costs a manager CANNOT influence or control. Examples: local authority rates, government levies, head office allocations. Managers should not be held responsible for variances in these costs.'},
+{cat:'budgeting',q:'How do you calculate fixed overhead per labour hour?',a:'Total Fixed Overheads / Total Direct Labour Hours across all products. This rate is then used to allocate fixed overhead to each product based on its labour hours.'},
+{cat:'budgeting',q:'What is FIFO stock valuation?',a:'First In, First Out. The oldest stock is assumed sold first. Closing stock is valued at the most recent prices. Opening stock uses old prices. This is the most common method in LC Accounting.'},
+
+// Control Accounts
+{cat:'control',q:'What goes on the DEBIT side of a Debtors Control Account?',a:'Opening balance (dr), Credit Sales, Interest charged to debtors, Dishonoured cheques, Refunds. Basically anything that INCREASES what debtors owe.'},
+{cat:'control',q:'What goes on the CREDIT side of a Debtors Control Account?',a:'Cash/cheques received from debtors, Discounts allowed, Sales returns, Bad debts written off, Contra entries. Anything that DECREASES what debtors owe.'},
+{cat:'control',q:'Why might a Debtors Control Account have a credit balance?',a:'A debtor has overpaid, or paid then returned goods (refund due), or a discount was given after full payment. The credit balance means WE owe the debtor money.'},
+{cat:'control',q:'What is the purpose of a control account?',a:'To check accuracy of the ledger, locate errors quickly, find credit sales from incomplete records, and quickly ascertain total amounts owed by debtors.'},
+
+// Revaluation
+{cat:'revaluation',q:'What happens when you revalue a fixed asset upward?',a:'Remove old cost and accumulated depreciation. Enter new revalued amount. The NET increase goes to the Revaluation Reserve (not to profit). Future depreciation is based on the new value.'},
+{cat:'revaluation',q:'What is the Revaluation Reserve?',a:'A capital reserve created when fixed assets are revalued upward. It represents unrealised gains - the company hasnt sold the asset, so the gain is not real profit. It CANNOT be used to pay dividends.'},
+{cat:'revaluation',q:'What happens to the Revaluation Reserve when a revalued asset is sold?',a:'The revaluation surplus related to that asset is transferred from the Revaluation Reserve to the Revenue Reserve. The gain is now "realised" (the asset has actually been sold).'},
+{cat:'revaluation',q:'What is the Consistency Concept?',a:'Accounting items must be treated the SAME way from one period to the next. If you depreciate at 2% straight line, continue using that method. If you change, disclose the reason and the effect on profit.'},
+
+// Service Firm
+{cat:'service',q:'How does a service firm differ from a trading firm?',a:'No sales of goods, so no Trading Account. Uses an Income & Expenditure Account instead of P&L. Income comes from fees/subscriptions. Uses a Statement of Reserves instead of Capital Account.'},
+{cat:'service',q:'What is a Receipts & Payments Account?',a:'A summary of all CASH transactions (like a bank statement). Shows actual money in and out. Does NOT include accruals, prepayments, depreciation, or non-cash items. Must be adjusted to create the I&E Account.'},
+{cat:'service',q:'What is a Statement of Reserves?',a:'Lists assets and liabilities at the START of the year to find the firms net worth. This opening net worth is the equivalent of opening capital and appears in the I&E Account.'},
+
+// Incomplete Records
+{cat:'incomplete',q:'How do you find credit sales from incomplete records?',a:'Use the Debtors equation: Opening Debtors + Credit Sales = Cash from Debtors + Closing Debtors. Rearrange to find Credit Sales.'},
+{cat:'incomplete',q:'How do you find total cash sales?',a:'Account for ALL cash: Cash Sales = Cash Payments + Cash Lodgements + Closing Cash - Opening Cash + Drawings (cash). Everything that came in as cash must have come from cash sales.'},
+{cat:'incomplete',q:'What is Goodwill in incomplete records?',a:'When a business is purchased for MORE than the value of its net assets. Goodwill = Purchase Price - (Assets Acquired - Liabilities Acquired). It is an intangible asset on the balance sheet.'},
+{cat:'incomplete',q:'How do you handle private use of business assets?',a:'Add the private portion to Drawings. Common items: private use of heating (25%), private portion of loan interest, goods taken for personal use, private car expenses. Only the BUSINESS portion goes to expenses.'},
+];
+
+// Initialize FlashcardEngine with shared class
+const fc = new FlashcardEngine(allCards, 'fcContainer', 'fcControls', 'fcCounter', 'fcFilter');
+
+// QUIZ DATA
+const quizQuestions=[
+// Final Accounts
+{topic:'final-accounts',type:'mc',q:'What is the formula for Cost of Sales?',options:['Sales - Gross Profit','Opening Stock + Purchases - Closing Stock','Purchases - Returns','Sales - Expenses'],correct:1,explain:'Cost of Sales = Opening Stock + Purchases - Closing Stock. This tells you how much the goods you SOLD actually cost.'},
+{topic:'final-accounts',type:'mc',q:'If goods have a retail value of 12,900 and the mark-up is 20% on cost, what is the cost?',options:['10,320','10,750','11,160','12,900'],correct:1,explain:'Mark-up of 20% means Selling Price = Cost x 1.20. So Cost = 12,900 / 1.20 = 10,750.'},
+{topic:'final-accounts',type:'mc',q:'A price of 14,760 includes 23% VAT. What is the VAT amount?',options:['3,394.80','2,760','2,300','3,000'],correct:1,explain:'VAT = 14,760 x 23/123 = 2,760. The net price is 14,760 x 100/123 = 12,000.'},
+{topic:'final-accounts',type:'mc',q:'Drawings of goods by the owner should be:',options:['Debited to Purchases','Credited to Sales','Credited to Purchases, Debited to Drawings','Added to Capital'],correct:2,explain:'Goods taken by the owner reduce Purchases (credit) and increase Drawings (debit). The cost amount is used, not selling price.'},
+{topic:'final-accounts',type:'mc',q:'Where does a Revaluation Reserve appear on the Balance Sheet?',options:['Current Assets','Current Liabilities','Capital and Reserves','Long-term Liabilities'],correct:2,explain:'The Revaluation Reserve is part of Capital and Reserves. It represents unrealised gains from revaluing fixed assets.'},
+{topic:'final-accounts',type:'mc',q:'Stock at cost is 10,600 but its Net Realisable Value is 8,300. At what value should it appear in the accounts?',options:['10,600','8,300','9,450','2,300'],correct:1,explain:'Stock is valued at the LOWER of cost or NRV. NRV (8,300) is lower than cost (10,600), so use 8,300. This follows the prudence concept.'},
+{topic:'final-accounts',type:'mc',q:'In a company, what replaces "Drawings"?',options:['Expenses','Dividends','Debenture Interest','Commission'],correct:1,explain:'In a company, profits are distributed to shareholders as dividends. In a sole trader, the owner takes drawings. Dividends are the company equivalent.'},
+{topic:'final-accounts',type:'mc',q:'What is the difference between Authorised and Issued share capital?',options:['Authorised is what has been sold; Issued is the maximum','Authorised is the maximum allowed; Issued is what has been sold','They are the same thing','Authorised is for ordinary shares only'],correct:1,explain:'Authorised = maximum the company CAN issue. Issued = what has actually been sold to shareholders. Issued must be less than or equal to Authorised.'},
+
+// Ratios
+{topic:'ratios',type:'mc',q:'ROCE is 13.05%. The risk-free rate is 3%. What does this suggest?',options:['The company is underperforming','The company is performing well - return exceeds risk-free rate','The company should close down','Nothing can be concluded'],correct:1,explain:'ROCE of 13.05% is significantly higher than the risk-free 3%, meaning the company is generating a good return on its capital. Investors are being rewarded for the risk.'},
+{topic:'ratios',type:'mc',q:'If interest cover is 17.57 times, this means:',options:['The company pays interest 17.57 times a year','The company can pay its interest 17.57 times from profits','The interest rate is 17.57%','The company has too much debt'],correct:1,explain:'Interest cover shows how many times the company could pay its interest charges from operating profit. 17.57 times is very comfortable - anything above 3 is considered safe.'},
+{topic:'ratios',type:'mc',q:'A P/E ratio of 7.24 years means:',options:['The share price will double in 7.24 years','It would take 7.24 years to recoup investment at current earnings','The company has been trading for 7.24 years','The dividend is paid every 7.24 years'],correct:1,explain:'P/E ratio = Market Price / EPS. At current earnings of 22.11c per share and a price of 160c, it would take 160/22.11 = 7.24 years to earn back your investment.'},
+{topic:'ratios',type:'mc',q:'Gearing of 39.79% means the company is:',options:['Highly geared','Lowly geared','Neutral','Insolvent'],correct:1,explain:'Below 50% = lowly geared. The company is financed more by equity (shareholders money) than debt. This is generally considered safer.'},
+{topic:'ratios',type:'mc',q:'If dividend cover falls from 3.75 to 2.24 times, this means:',options:['The company is paying out a higher proportion of profits as dividends','The company is retaining more profits','The dividend has been cut','The share price has fallen'],correct:0,explain:'Lower dividend cover means MORE profit is being distributed as dividends and LESS is being retained. Cover went from paying out ~27% to ~45% of profits.'},
+
+// Marginal Costing
+{topic:'marginal',type:'mc',q:'Fixed costs are 218,460 and CPU is 12.53. What is the break-even point?',options:['17,435 units','42,000 units','24,565 units','12,530 units'],correct:0,explain:'BEP = Fixed Costs / CPU = 218,460 / 12.53 = 17,435 units. The business needs to sell at least this many units to cover all costs.'},
+{topic:'marginal',type:'mc',q:'Sales are 42,000 units and BEP is 17,435 units. What is the margin of safety?',options:['17,435 units','42,000 units','24,565 units','59,435 units'],correct:2,explain:'Margin of Safety = Actual Sales - BEP = 42,000 - 17,435 = 24,565 units. Sales can drop by this amount before the business makes a loss.'},
+{topic:'marginal',type:'mc',q:'Which of these is a VARIABLE cost?',options:['Factory rent','Managing directors salary','Raw materials','Insurance'],correct:2,explain:'Raw materials cost increases as more units are produced. The other options are typically fixed - they stay the same regardless of output.'},
+{topic:'marginal',type:'mc',q:'Sales commission of 5% is classified as:',options:['Fixed cost','Variable cost','Semi-variable cost','Capital expenditure'],correct:1,explain:'Commission changes directly with sales volume. More sales = more commission. It is 100% variable. This is a common exam trap.'},
+{topic:'marginal',type:'mc',q:'To achieve a target profit of 384,750 with FC of 218,460 and CPU of 12.53, how many units?',options:['30,683','48,142','17,435','42,000'],correct:1,explain:'Units = (FC + Target Profit) / CPU = (218,460 + 384,750) / 12.53 = 48,142 units.'},
+
+// Budgeting
+{topic:'budgeting',type:'mc',q:'Expected sales: 12,800. Closing stock needed: 792. Opening stock: 720. Units to produce?',options:['12,800','12,872','12,008','13,592'],correct:1,explain:'Production = Sales + Closing Stock - Opening Stock = 12,800 + 792 - 720 = 12,872 units.'},
+{topic:'budgeting',type:'mc',q:'What is the principal budget factor usually?',options:['Labour availability','Machine capacity','Sales demand','Raw material supply'],correct:2,explain:'Sales demand is usually the principal budget factor - the starting point for all budgets. You can only sell what customers want to buy. Other factors can be limiting in special circumstances.'},
+{topic:'budgeting',type:'mc',q:'Opening RM stock is 6,400 kg at 3.40/kg. Closing stock is 7,040 kg at 3.50/kg. Why are they valued differently?',options:['An error was made','FIFO method: opening at old prices, closing at new prices','The stock has been damaged','Inflation is ignored in budgets'],correct:1,explain:'FIFO (First In First Out): opening stock is valued at the PREVIOUS periods prices (3.40). Closing stock is valued at the CURRENT periods purchase prices (3.50).'},
+{topic:'budgeting',type:'mc',q:'Fixed overhead per labour hour is calculated as:',options:['Fixed OH / units produced','Fixed OH / total direct labour hours','Fixed OH / machine hours','Fixed OH / number of products'],correct:1,explain:'Total Fixed Overheads / Total Direct Labour Hours across all products. For Jenkins Ltd: 656,616 / (12,872x6 + 9,658x9) = 656,616 / 164,154 = 4 per hour.'},
+
+// Theory
+{topic:'theory',type:'mc',q:'What is the consistency concept?',options:['Assets must be valued consistently at cost','Accounting methods must be applied the same way each year','All transactions must be recorded consistently in the same book','Profits must be consistent year on year'],correct:1,explain:'Once a method is chosen (e.g., straight-line depreciation at 2%), it must be used consistently every year. If changed, the reason and effect must be disclosed.'},
+{topic:'theory',type:'mc',q:'What is net worth?',options:['Total sales minus total expenses','Total assets minus total liabilities','Capital plus profit','Closing stock value'],correct:1,explain:'Net Worth = Total Assets - Total Liabilities. It represents the owners equity in the business. A positive net worth means assets exceed liabilities.'},
+{topic:'theory',type:'mc',q:'A debenture holder is:',options:['An owner of the company','A creditor (lender) of the company','A preference shareholder','A director'],correct:1,explain:'Debenture holders lend money to the company. They are CREDITORS, not owners. They receive fixed interest regardless of profit and are paid before shareholders.'},
+{topic:'theory',type:'mc',q:'What are the benefits of a special purpose P&L account for a service firm?',options:['It reduces tax','It separates income from different activities to evaluate each separately','It is required by law','It increases profit'],correct:1,explain:'A special purpose P&L keeps revenue and expenses of a specific activity (e.g., gym, shop) separate from the main accounts. The net result is then transferred to the overall I&E Account.'},
+{topic:'theory',type:'mc',q:'Why is it important to show workings in the exam?',options:['Its not important','You only get marks for the final answer','Marks are awarded at each step, so a wrong final answer with correct workings still earns marks','The examiner wants to see your handwriting'],correct:2,explain:'The marking scheme awards marks at EACH step of a working. For example, a [7] mark figure might have 3 separate calculations each worth marks. Even a wrong final answer can earn 4-5 marks with correct method.'},
+];
+
+// Initialize QuizEngine with shared class
+const quiz = new QuizEngine(quizQuestions, 'quizArea', 'quizScore', 'accounting');
+
+// INIT
+document.addEventListener('DOMContentLoaded', function() {
+  quiz.start('all');
+  renderSubjectProgress();
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,1171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LC Biology - Higher Level Study Tool</title>
+<link rel="stylesheet" href="css/shared.css">
+</head>
+<body class="subject-biology">
+<header class="app-header">
+<div>
+<h1>LC Biology - Higher Level</h1>
+<p>2025 Exam Study Tool | Leaving Certificate Ireland</p>
+</div>
+<a href="index.html" class="home-link">&#8592; All Subjects</a>
+</header>
+<nav id="mainNav">
+<button class="active" onclick="showTab('study','biology')">Study</button>
+<button onclick="showTab('flashcards','biology')">Flashcards</button>
+<button onclick="showTab('quiz','biology')">Quiz</button>
+<button onclick="showTab('strategy','biology')">Exam Strategy</button>
+<button onclick="showTab('marks','biology')">Mark Decoder</button>
+<button onclick="showTab('glossary','biology')">Glossary</button>
+<button onclick="showTab('formulas','biology')">Formulas</button>
+<button onclick="showTab('progress','biology')">Progress</button>
+</nav>
+
+<!-- EXAM STRATEGY TAB -->
+<div id="tab-strategy" class="tab-content">
+<div class="card">
+<h2>Exam Paper Structure</h2>
+<p>The LC Biology Higher Level exam is <strong>3 hours</strong> (2:00-5:00pm, Tuesday 10 June 2025) for <strong>400 marks</strong>.</p>
+<table>
+<tr><th>Section</th><th>Answer</th><th>Marks</th><th>Time</th></tr>
+<tr><td><strong>Section A</strong></td><td>Any 5 from 7 questions</td><td>100 marks (20 each)</td><td>~30 min</td></tr>
+<tr><td><strong>Section B</strong></td><td>Any 2 from 3 questions</td><td>60 marks (30 each)</td><td>~30 min</td></tr>
+<tr><td><strong>Section C</strong></td><td>Any 4 from 7 questions</td><td>240 marks (60 each)</td><td>~120 min</td></tr>
+</table>
+<p style="margin-top:1rem"><strong>Total: 400 marks from 11 questions attempted (5+2+4)</strong></p>
+</div>
+
+<div class="card">
+<h2>Time Management</h2>
+<p>Recommended timing: <strong>30 mins Section A | 30 mins Section B | 120 mins Section C</strong></p>
+<div class="formula-box">
+<div class="formula">Section A: 20 marks = 6 minutes | Section B: 30 marks = 15 minutes | Section C: 60 marks = 30 minutes</div>
+</div>
+
+<h3>Suggested Time Plan</h3>
+<div class="time-block"><span class="time">2:00</span><span>Read full paper, choose questions (5 min)</span></div>
+<div class="time-block"><span class="time">2:05</span><span>Section A - 5 short questions (25 min)</span></div>
+<div class="time-block"><span class="time">2:30</span><span>Section B - First mandatory experiment (15 min)</span></div>
+<div class="time-block"><span class="time">2:45</span><span>Section B - Second mandatory experiment (15 min)</span></div>
+<div class="time-block"><span class="time">3:00</span><span>Section C - Question 1 (30 min)</span></div>
+<div class="time-block"><span class="time">3:30</span><span>Section C - Question 2 (30 min)</span></div>
+<div class="time-block"><span class="time">4:00</span><span>Section C - Question 3 (30 min)</span></div>
+<div class="time-block"><span class="time">4:30</span><span>Section C - Question 4 (30 min)</span></div>
+<div class="time-block"><span class="time">5:00</span><span>Finish</span></div>
+</div>
+
+<div class="card">
+<h2>Top Exam Tips</h2>
+<div class="explain"><strong>1. Section A surplus rule!</strong> If you give more answers than asked AND one is wrong, it cancels a correct answer. Only give the exact number requested.</div>
+<div class="explain"><strong>2. Learn mandatory experiments.</strong> Section B is based on experiments you did in class. Very predictable - know procedures, results, controls.</div>
+<div class="explain"><strong>3. Use scientific terminology.</strong> "Osmosis" not "water movement". "Mitochondrion" not "powerhouse". Specific terms earn marks.</div>
+<div class="explain"><strong>4. Label ALL diagrams.</strong> Diagrams without labels earn reduced marks. Label at least 3 parts when asked.</div>
+<div class="explain"><strong>5. Answer the question asked.</strong> "Name" = one word. "Describe" = detailed explanation. "Outline" = brief explanation.</div>
+<div class="explain"><strong>6. Section C has options.</strong> Q16 and Q17 each have 4 parts (a,b,c,d) - answer any 2 from each. Pick your strongest topics.</div>
+<div class="explain"><strong>7. Start each Section C question on a new page.</strong> Write the question number in the box at top of page.</div>
+</div>
+
+<div class="card">
+<h2>Question Selection Strategy</h2>
+<table>
+<tr><th>Section</th><th>Q</th><th>Topic</th><th>Advice</th></tr>
+<tr><td rowspan="7">A</td><td>1</td><td>Nutrition</td><td>Carbohydrates, proteins, vitamins, trace elements. Learn definitions.</td></tr>
+<tr><td>2</td><td>Plant Structure</td><td>Root structure, tissues, diagrams. Practice drawing cross-sections.</td></tr>
+<tr><td>3</td><td>Respiration</td><td>Aerobic vs anaerobic, ATP, organelles. Know the mitochondrion diagram.</td></tr>
+<tr><td>4</td><td>Cell Structure</td><td>Cell membrane, prokaryotic vs eukaryotic, plant cell wall.</td></tr>
+<tr><td>5</td><td>Bioprocessing</td><td>Bioreactor, growth curves, food processing techniques.</td></tr>
+<tr><td>6</td><td>Digestion</td><td>Human digestive system, peristalsis, pH changes, enzymes.</td></tr>
+<tr><td>7</td><td>Scientific Method</td><td>Hypothesis, controls, limitations, theory. Easy marks.</td></tr>
+<tr><td rowspan="3">B</td><td>8</td><td>Ecosystem Study</td><td>Mandatory experiment - quantitative plant study, abiotic factors.</td></tr>
+<tr><td>9</td><td>Osmosis</td><td>Mandatory experiment - Visking tubing or potato, describe setup.</td></tr>
+<tr><td>10</td><td>Leaf Yeast Growth</td><td>Mandatory experiment - sterility, safety, pink colonies result.</td></tr>
+<tr><td rowspan="7">C</td><td>11</td><td>Plant Reproduction</td><td>Geotropism, flower structure, embryo sac, double fertilisation, seed dispersal.</td></tr>
+<tr><td>12</td><td>Genetics</td><td>Mutations, alleles, fruit fly crosses, DNA structure, DNA profiling.</td></tr>
+<tr><td>13</td><td>Photosynthesis</td><td>Anabolic reactions, light stages, chloroplast, enzymes, immobilisation.</td></tr>
+<tr><td>14</td><td>Nervous System</td><td>CNS vs PNS, eye, ear, neurons, neurotransmitters, disorders.</td></tr>
+<tr><td>15</td><td>Ecology</td><td>Predator-prey, nitrogen cycle, pollution, food chains.</td></tr>
+<tr><td>16</td><td>4 Options</td><td>(a) Rhizopus (b) Breathing (c) Mitosis/Meiosis (d) Lymphatic - pick any 2</td></tr>
+<tr><td>17</td><td>4 Options</td><td>(a) Circulation (b) Skeleton (c) Homeostasis (d) Reproduction - pick any 2</td></tr>
+</table>
+</div>
+</div>
+
+<!-- STUDY TAB -->
+<div id="tab-study" class="tab-content active">
+<div class="card">
+<h2>Question Walkthroughs - 2025 Paper</h2>
+<p>Select a question to see detailed solutions with step-by-step explanations.</p>
+</div>
+<div class="question-nav" id="studyNav">
+<button class="active" onclick="showQuestion('q1','biology')">Q1 Nutrition</button>
+<button onclick="showQuestion('q2','biology')">Q2 Plant</button>
+<button onclick="showQuestion('q3','biology')">Q3 Respiration</button>
+<button onclick="showQuestion('q4','biology')">Q4 Cell</button>
+<button onclick="showQuestion('q5','biology')">Q5 Bioreactor</button>
+<button onclick="showQuestion('q6','biology')">Q6 Digestion</button>
+<button onclick="showQuestion('q7','biology')">Q7 Scientific</button>
+<button onclick="showQuestion('q8','biology')">Q8 Ecosystem</button>
+<button onclick="showQuestion('q11','biology')">Q11 Plant Repro</button>
+<button onclick="showQuestion('q12','biology')">Q12 Genetics</button>
+</div>
+
+<!-- Q1 NUTRITION -->
+<div class="q-section active" id="q-q1">
+<div class="card">
+<h2>Q1: Nutrition - Section A <span class="marks-badge">20 marks</span></h2>
+<p>Answer any 5 from parts (a) to (f). Each part worth 4 marks.</p>
+
+<h3>(a) General formula for carbohydrates <span class="marks-badge">4</span></h3>
+<div class="working"><strong>Answer:</strong> C<sub>x</sub>(H<sub>2</sub>O)<sub>y</sub></div>
+<div class="explain"><strong>Why?</strong> Carbohydrates contain carbon, hydrogen, and oxygen. The ratio of H:O is always 2:1 (like water). Examples: glucose C₆H₁₂O₆ fits the pattern C₆(H₂O)₆.</div>
+
+<h3>(b) Four chemical elements in all proteins <span class="marks-badge">4</span></h3>
+<div class="working"><strong>Answer:</strong> Carbon (C), Hydrogen (H), Oxygen (O), Nitrogen (N)</div>
+<div class="explain"><strong>Remember CHON.</strong> All proteins contain these four elements. Some also contain sulfur (S) in amino acids like cysteine.</div>
+
+<h3>(c) One structural role of proteins <span class="marks-badge">4</span></h3>
+<div class="working"><strong>Answer:</strong> Muscles / tendons / ligaments / hair / skin / nails (any one)</div>
+<div class="explain"><strong>Structural vs functional.</strong> Structural proteins provide support and shape (collagen, keratin). Functional proteins include enzymes, antibodies, hormones.</div>
+
+<h3>(d) Small subunits that make protein <span class="marks-badge">4</span></h3>
+<div class="working"><strong>Answer:</strong> Amino acids</div>
+<div class="explain"><strong>20 different amino acids</strong> can combine in different sequences to make thousands of different proteins. They link via peptide bonds.</div>
+
+<h3>(e) One water-soluble vitamin <span class="marks-badge">4</span></h3>
+<div class="working"><strong>Answer:</strong> Vitamin B (or B1, B2, B12 etc.) / Vitamin C</div>
+<div class="explain"><strong>Water-soluble vs fat-soluble.</strong> Water-soluble: B and C (not stored, need daily intake). Fat-soluble: A, D, E, K (stored in body fat).</div>
+
+<h3>(f) One trace element found in food <span class="marks-badge">4</span></h3>
+<div class="working"><strong>Answer:</strong> Copper (Cu) / Iron (Fe) / Zinc (Zn) / Iodine (I)</div>
+<div class="explain"><strong>Trace elements</strong> are needed in tiny amounts. Iron is in haemoglobin. Iodine is needed for thyroid hormones. Zinc aids enzyme function.</div>
+</div>
+</div>
+
+<!-- Q2 PLANT STRUCTURE -->
+<div class="q-section" id="q-q2">
+<div class="card">
+<h2>Q2: Plant Root Structure - Section A <span class="marks-badge">20 marks</span></h2>
+<p>Diagram shows a longitudinal section through a plant root with structures X, Y, Z labelled.</p>
+
+<h3>(a) Structure X and its function <span class="marks-badge">6</span></h3>
+<div class="working"><strong>Name:</strong> Root hair [3]<br><strong>Function:</strong> Absorption of water or minerals [3]</div>
+<div class="explain"><strong>Root hairs</strong> are extensions of epidermal cells. They increase surface area for absorption from soil. Short-lived (few weeks).</div>
+
+<h3>(b) Tissue type Y and its function <span class="marks-badge">6</span></h3>
+<div class="working"><strong>Name:</strong> Vascular tissue [3]<br><strong>Function:</strong> Transport of water / minerals / food [3]</div>
+<div class="explain"><strong>Vascular tissue</strong> includes xylem (water & minerals up) and phloem (sugars up/down). Forms the central core in roots.</div>
+
+<h3>(c) Tissue Z where rapid mitosis occurs <span class="marks-badge">3</span></h3>
+<div class="working"><strong>Answer:</strong> Meristematic (tissue)</div>
+<div class="explain"><strong>Meristem</strong> = region of rapid cell division. Found at root tips and shoot tips. Cells are small, thin-walled, actively dividing.</div>
+
+<h3>(d) Draw transverse section at dashed line <span class="marks-badge">5</span></h3>
+<div class="working"><strong>Drawing:</strong> Circle with vascular tissue in centre [3]<br><strong>Labels:</strong> Any two from: dermal tissue, vascular tissue, ground tissue, root hair [2×1]</div>
+<div class="explain"><strong>Cross-section shows:</strong> Outer epidermis (dermal), cortex (ground tissue), central vascular cylinder. Different from stem where vascular bundles are arranged in a ring.</div>
+</div>
+</div>
+
+<!-- Q3 RESPIRATION -->
+<div class="q-section" id="q-q3">
+<div class="card">
+<h2>Q3: Aerobic & Anaerobic Respiration - Section A <span class="marks-badge">20 marks</span></h2>
+<p>Diagram shows a mitochondrion where stage 2 of aerobic respiration occurs.</p>
+
+<h3>(a) Name the cell organelle shown <span class="marks-badge">2</span></h3>
+<div class="working"><strong>Answer:</strong> Mitochondrion</div>
+<div class="explain"><strong>Mitochondria</strong> (plural) are the "powerhouses" of the cell. They have a double membrane - cristae (inner folds) increase surface area for ATP production.</div>
+
+<h3>(b) Name the cycle in stage 2 <span class="marks-badge">3</span></h3>
+<div class="working"><strong>Answer:</strong> Krebs cycle</div>
+<div class="explain"><strong>Stage 1 = glycolysis (cytosol). Stage 2 = Krebs cycle (mitochondria).</strong> Krebs cycle produces CO₂, NADH, FADH₂, and some ATP.</div>
+
+<h3>(c) What does ATP stand for? <span class="marks-badge">3</span></h3>
+<div class="working"><strong>Answer:</strong> Adenosine triphosphate</div>
+<div class="explain"><strong>ATP</strong> is the energy currency of cells. When the third phosphate bond breaks (ATP → ADP + P), energy is released for cellular work.</div>
+
+<h3>(d) Function of NAD⁺ <span class="marks-badge">3</span></h3>
+<div class="working"><strong>Answer:</strong> Carries (high energy) electrons and protons</div>
+<div class="explain"><strong>NAD⁺</strong> is an electron carrier. It accepts electrons (becomes NADH), then delivers them to the electron transport chain where ATP is made.</div>
+
+<h3>(e) Condition for anaerobic respiration <span class="marks-badge">3</span></h3>
+<div class="working"><strong>Answer:</strong> Lack of oxygen / described</div>
+<div class="explain"><strong>When oxygen runs out</strong> (intense exercise, waterlogged soil), cells switch to anaerobic respiration. Much less efficient - only 2 ATP per glucose vs 38 ATP aerobically.</div>
+
+<h3>(f) Where anaerobic respiration occurs <span class="marks-badge">3</span></h3>
+<div class="working"><strong>Answer:</strong> Cytosol</div>
+<div class="explain"><strong>Anaerobic = no mitochondria needed.</strong> Occurs in cytosol (cell fluid). Just glycolysis, no Krebs cycle or electron transport.</div>
+
+<h3>(g) One main product of anaerobic respiration <span class="marks-badge">3</span></h3>
+<div class="working"><strong>Answer:</strong> Lactic acid (animals) / Ethanol (yeast, plants)</div>
+<div class="explain"><strong>In muscle cells:</strong> glucose → lactic acid (causes muscle fatigue). <strong>In yeast:</strong> glucose → ethanol + CO₂ (brewing, baking).</div>
+</div>
+</div>
+
+<!-- Q4 CELL STRUCTURE -->
+<div class="q-section" id="q-q4">
+<div class="card">
+<h2>Q4: Cell Membrane & Structure - Section A <span class="marks-badge">20 marks</span></h2>
+<p>Diagram shows cell membrane ultrastructure with parts X and Y labelled.</p>
+
+<h3>(a) Name parts X and Y <span class="marks-badge">4</span></h3>
+<div class="working"><strong>X:</strong> Phospholipid [2]<br><strong>Y:</strong> Protein [2]</div>
+<div class="explain"><strong>Fluid mosaic model:</strong> Phospholipid bilayer (double layer) with proteins embedded. Phospholipids have hydrophilic heads (out) and hydrophobic tails (in).</div>
+
+<h3>(b) Function of cell membrane <span class="marks-badge">3</span></h3>
+<div class="working"><strong>Answer:</strong> Controls what substances pass through / selective permeability</div>
+<div class="explain"><strong>Semi-permeable membrane</strong> allows some substances through (water, small molecules) but blocks others (large molecules, ions without channels).</div>
+
+<h3>(c)(i) Term for cells without membrane-bound organelles <span class="marks-badge">3</span></h3>
+<div class="working"><strong>Answer:</strong> Prokaryotic</div>
+<div class="explain"><strong>Prokaryotes</strong> = bacteria. No nucleus, no mitochondria, no chloroplasts. DNA free in cytoplasm. Small and simple.</div>
+
+<h3>(c)(ii) Term for cells with membrane-bound organelles <span class="marks-badge">3</span></h3>
+<div class="working"><strong>Answer:</strong> Eukaryotic</div>
+<div class="explain"><strong>Eukaryotes</strong> = animals, plants, fungi, protists. Have nucleus, mitochondria, and other organelles. Larger and more complex than prokaryotes.</div>
+
+<h3>(d)(i) Sketch plant cell - label membrane & wall <span class="marks-badge">5</span></h3>
+<div class="working"><strong>Sketch:</strong> Showing cell membrane inside cell wall [3]<br><strong>Labels:</strong> Cell membrane [1], Cell wall [1]</div>
+<div class="explain"><strong>Plant cells have BOTH.</strong> Cell wall (outer, rigid, cellulose) + cell membrane (inner, controls entry). Animal cells only have membrane.</div>
+
+<h3>(d)(ii) One function of plant cell wall <span class="marks-badge">2</span></h3>
+<div class="working"><strong>Answer:</strong> Gives shape (to the cell) / Protection</div>
+<div class="explain"><strong>Cell wall</strong> prevents cell bursting when water enters by osmosis. Made of cellulose. Fully permeable (not selective like membrane).</div>
+</div>
+</div>
+
+<!-- Q5 BIOREACTOR -->
+<div class="q-section" id="q-q5">
+<div class="card">
+<h2>Q5: Bioprocessing & Growth Curves - Section A <span class="marks-badge">20 marks</span></h2>
+<p>Image shows equipment for food processing with bacteria. Graph shows population growth curve with stages X and Y.</p>
+
+<h3>(a) Common name for equipment <span class="marks-badge">3</span></h3>
+<div class="working"><strong>Answer:</strong> Bioreactor</div>
+<div class="explain"><strong>Bioreactor (fermenter)</strong> provides controlled conditions for microorganism growth. Used in brewing, antibiotic production, yogurt making.</div>
+
+<h3>(b) Two factors controlled (not nutrients) <span class="marks-badge">6</span></h3>
+<div class="working"><strong>Answer:</strong> Any two from: pH / temperature / pressure / oxygen / stirring rate [2×3]</div>
+<div class="explain"><strong>Optimum conditions</strong> maximize growth and product yield. Too hot = enzymes denature. Wrong pH = enzymes don't work efficiently.</div>
+
+<h3>(c) Name stages X and Y <span class="marks-badge">6</span></h3>
+<div class="working"><strong>Stage X:</strong> Log (phase) [3]<br><strong>Stage Y:</strong> Stationary (phase) [3]</div>
+<div class="explain"><strong>Growth phases:</strong> Lag (adapting) → Log (rapid exponential growth) → Stationary (birth rate = death rate) → Death (toxins accumulate, nutrients depleted).</div>
+
+<h3>(d) Type of food processing technique <span class="marks-badge">3</span></h3>
+<div class="working"><strong>Answer:</strong> Continuous (culture)</div>
+<div class="explain"><strong>Continuous vs batch.</strong> Continuous = fresh nutrients added constantly, population stays steady. Batch = sealed vessel, population rises then falls.</div>
+
+<h3>(e) Draw how line continues if nutrients run out <span class="marks-badge">2</span></h3>
+<div class="working"><strong>Answer:</strong> Line drops (death phase)</div>
+<div class="explain"><strong>No nutrients = death phase.</strong> Bacteria die faster than they reproduce. Population crashes. Toxins accumulate.</div>
+</div>
+</div>
+
+<!-- Q6 DIGESTION -->
+<div class="q-section" id="q-q6">
+<div class="card">
+<h2>Q6: Human Digestive System - Section A <span class="marks-badge">20 marks</span></h2>
+<p>Diagram shows digestive system with parts A and B labelled.</p>
+
+<h3>(a) Name parts A and B <span class="marks-badge">4</span></h3>
+<div class="working"><strong>A:</strong> Oesophagus [2]<br><strong>B:</strong> Stomach [2]</div>
+<div class="explain"><strong>Oesophagus</strong> = food pipe connecting mouth to stomach. <strong>Stomach</strong> = muscular bag where protein digestion begins.</div>
+
+<h3>(b) Method food travels through A <span class="marks-badge">6</span></h3>
+<div class="working"><strong>Name:</strong> Peristalsis [3]<br><strong>Description:</strong> (Involuntary) muscular contractions (that push food) [3]</div>
+<div class="explain"><strong>Peristalsis</strong> = wave-like muscle contractions. Circular muscles contract behind food bolus, longitudinal muscles contract ahead. Works even upside down.</div>
+
+<h3>(c) pH change from A to B <span class="marks-badge">2</span></h3>
+<div class="working"><strong>Answer:</strong> Lowers (becomes more acidic)</div>
+<div class="explain"><strong>Oesophagus ≈ neutral pH 7. Stomach ≈ pH 2 (very acidic).</strong> HCl acid kills bacteria and activates pepsin enzyme.</div>
+
+<h3>(d) Pancreatic enzyme that digests lipids <span class="marks-badge">3</span></h3>
+<div class="working"><strong>Answer:</strong> Lipase</div>
+<div class="explain"><strong>Lipase</strong> breaks down lipids (fats) into fatty acids and glycerol. Produced in pancreas, works in small intestine (alkaline conditions).</div>
+
+<h3>(e) Draw and label internal structure of villus <span class="marks-badge">5</span></h3>
+<div class="working"><strong>Drawing:</strong> Villus / lacteal / blood vessels - any two [3]<br><strong>Labels:</strong> Villus / lacteal / capillary - any two [2×1]</div>
+<div class="explain"><strong>Villus</strong> = finger-like projection in small intestine. Contains blood capillaries (absorb glucose, amino acids) and lacteal (absorbs fats). Huge surface area for absorption.</div>
+</div>
+</div>
+
+<!-- Q7 SCIENTIFIC METHOD -->
+<div class="q-section" id="q-q7">
+<div class="card">
+<h2>Q7: Scientific Method - Section A <span class="marks-badge">20 marks</span></h2>
+
+<h3>(a) Testable statement is called <span class="marks-badge">2</span></h3>
+<div class="working"><strong>Answer:</strong> Hypothesis</div>
+<div class="explain"><strong>Hypothesis</strong> = educated guess that can be tested by experiment. Must be falsifiable (can be proven wrong).</div>
+
+<h3>(b) How to test the statement <span class="marks-badge">3</span></h3>
+<div class="working"><strong>Answer:</strong> Conducting an experiment</div>
+<div class="explain"><strong>Experiment</strong> tests hypothesis by changing one variable (independent) and measuring effect on another (dependent). All other variables kept constant.</div>
+
+<h3>(c) Function of scientific control <span class="marks-badge">3</span></h3>
+<div class="working"><strong>Answer:</strong> A comparison to the experiment / baseline</div>
+<div class="explain"><strong>Control</strong> = identical setup without the variable being tested. Lets you compare and see if your variable caused the effect.</div>
+
+<h3>(d) Two limitations of scientific method <span class="marks-badge">6</span></h3>
+<div class="working"><strong>Answer:</strong> Any two from: Accidental discovery / application to nature / (human) bias / human error / constrained by existing knowledge / constrained by technology / ability to interpret results / experimental design [2×3]</div>
+<div class="explain"><strong>Not all discoveries follow method.</strong> Penicillin was accidental. Some things can't be tested ethically. Observer bias affects results.</div>
+
+<h3>(e) Where biologists publish results <span class="marks-badge">3</span></h3>
+<div class="working"><strong>Answer:</strong> Scientific journal</div>
+<div class="explain"><strong>Peer-reviewed journals</strong> ensure quality. Other scientists check the work before publication. Examples: Nature, Science, Cell.</div>
+
+<h3>(f) What is a theory? <span class="marks-badge">3</span></h3>
+<div class="working"><strong>Answer:</strong> Supported (or tested) hypothesis</div>
+<div class="explain"><strong>Theory ≠ guess.</strong> A theory is a hypothesis tested many times with consistent results. Example: Cell theory, Evolution theory.</div>
+</div>
+</div>
+
+<!-- Q8 ECOSYSTEM STUDY -->
+<div class="q-section" id="q-q8">
+<div class="card">
+<h2>Q8: Ecosystem Study (Mandatory Experiment) - Section B <span class="marks-badge">30 marks</span></h2>
+
+<h3>(a)(i) What is an ecosystem? <span class="marks-badge">2</span></h3>
+<div class="working"><strong>Answer:</strong> Organisms and their environment</div>
+<div class="explain"><strong>Ecosystem</strong> = all living organisms (biotic) and non-living factors (abiotic) interacting in an area. Examples: woodland, pond, rocky shore.</div>
+
+<h3>(a)(ii) What aids identification of organisms? <span class="marks-badge">4</span></h3>
+<div class="working"><strong>Answer:</strong> Key (identification key / dichotomous key)</div>
+<div class="explain"><strong>Keys</strong> use paired statements to identify species. Each choice narrows down possibilities until species is identified.</div>
+
+<h3>(b)(i) Quantitative study of named plant species <span class="marks-badge">12</span></h3>
+<div class="working"><strong>Named plant species</strong> [3]<br><strong>Equipment:</strong> Used quadrat or line transect or belt transect and correct use [3]<br><strong>Method:</strong> Counted and repeated [3]<br><strong>Calculation:</strong> By percentage cover or percentage frequency [3]</div>
+<div class="explain"><strong>Quadrat method:</strong> Throw 50cm × 50cm frame randomly. Count how many squares contain the plant. Repeat 10+ times. Calculate % frequency = (squares with plant ÷ total squares) × 100.</div>
+
+<h3>(b)(ii) Two abiotic factors and how measured <span class="marks-badge">12</span></h3>
+<div class="working"><strong>Factor 1:</strong> Correctly named (e.g., light intensity) [3]<br><strong>Method 1:</strong> Matching method (e.g., light meter) [3]<br><strong>Factor 2:</strong> Correctly named (e.g., soil pH) [3]<br><strong>Method 2:</strong> Matching method (e.g., pH meter or indicator) [3]</div>
+<div class="explain"><strong>Common abiotic factors:</strong> Light (light meter), Temperature (thermometer), Soil pH (pH meter/indicator), Soil moisture (moisture meter), Wind speed (anemometer).</div>
+</div>
+</div>
+
+<!-- Q11 PLANT REPRODUCTION -->
+<div class="q-section" id="q-q11">
+<div class="card">
+<h2>Q11: Plant Reproduction - Section C <span class="marks-badge">60 marks</span></h2>
+
+<h3>(a)(i) What is geotropism? <span class="marks-badge">3</span></h3>
+<div class="working"><strong>Answer:</strong> Growth response (of a plant) to gravity</div>
+<div class="explain"><strong>Tropism</strong> = directional growth response to stimulus. Geo = earth/gravity. Roots show positive geotropism (grow down). Shoots show negative geotropism (grow up).</div>
+
+<h3>(a)(ii) Part that responds positively to geotropism <span class="marks-badge">3</span></h3>
+<div class="working"><strong>Answer:</strong> Root</div>
+<div class="explain"><strong>Positive = grows toward stimulus.</strong> Roots grow toward gravity (downward). Ensures roots anchor plant and reach water.</div>
+
+<h3>(a)(iii) How does this benefit plants? <span class="marks-badge">3</span></h3>
+<div class="working"><strong>Answer:</strong> Obtain (more) water or minerals or anchorage</div>
+<div class="explain"><strong>Survival advantage.</strong> Downward-growing roots find water underground and anchor plant securely.</div>
+
+<h3>(b)(i) Collective names for reproductive parts <span class="marks-badge">6</span></h3>
+<div class="working"><strong>1. Male parts:</strong> Stamen [3]<br><strong>2. Female parts:</strong> Carpel [3]</div>
+<div class="explain"><strong>Stamen</strong> = anther (makes pollen) + filament. <strong>Carpel</strong> = stigma + style + ovary.</div>
+
+<h3>(b)(ii) Part that holds embryo sac <span class="marks-badge">3</span></h3>
+<div class="working"><strong>Answer:</strong> Ovule (accept ovary)</div>
+<div class="explain"><strong>Ovule</strong> is inside the ovary. After fertilisation, ovule becomes seed and ovary becomes fruit.</div>
+
+<h3>(b)(iii) Embryo sac develops from this cell <span class="marks-badge">3</span></h3>
+<div class="working"><strong>Answer:</strong> Megaspore mother (cell)</div>
+<div class="explain"><strong>Megaspore mother cell</strong> is diploid. Undergoes meiosis to produce 4 haploid cells. 3 degenerate, 1 survives and divides by mitosis to form 8-nuclei embryo sac.</div>
+
+<h3>(b)(iv) Parts P and Q involved in double fertilisation <span class="marks-badge">6</span></h3>
+<div class="working"><strong>P:</strong> Polar nucleus [3]<br><strong>Q:</strong> Egg (cell) [3]</div>
+<div class="explain"><strong>Double fertilisation</strong> is unique to flowering plants. One sperm fuses with egg (→ zygote). Second sperm fuses with 2 polar nuclei (→ endosperm).</div>
+
+<h3>(b)(v) Why P and Q genetically identical <span class="marks-badge">3</span></h3>
+<div class="working"><strong>Answer:</strong> They were produced by mitosis</div>
+<div class="explain"><strong>Mitosis</strong> produces genetically identical cells. All 8 nuclei in embryo sac came from mitosis of one megaspore.</div>
+
+<h3>(b)(vi) What P and Q develop into after fertilisation <span class="marks-badge">6</span></h3>
+<div class="working"><strong>P:</strong> Endosperm [3]<br><strong>Q:</strong> Diploid zygote [3]</div>
+<div class="explain"><strong>Endosperm</strong> = food store for embryo (triploid 3n). <strong>Zygote</strong> divides to form embryo (diploid 2n).</div>
+
+<h3>(c)(i) Two methods of seed dispersal <span class="marks-badge">6</span></h3>
+<div class="working"><strong>Answer:</strong> Any two from: Wind / animal / water / self (explosive) [2×3]</div>
+<div class="explain"><strong>Examples:</strong> Wind (dandelion, sycamore), Animal (berries, burrs), Water (coconut), Explosive (gorse pod).</div>
+
+<h3>(c)(ii) Two advantages of seed dispersal <span class="marks-badge">6</span></h3>
+<div class="working"><strong>Answer:</strong> Any two from: Reduce competition / colonise new habitats / better chance of survival [2×3]</div>
+<div class="explain"><strong>Why disperse?</strong> Seedlings under parent plant compete for light, water, nutrients. Spreading increases species range.</div>
+
+<h3>(c)(iii) Two advantages of dormancy <span class="marks-badge">6</span></h3>
+<div class="working"><strong>Answer:</strong> Any two from: Allows time for development of embryo / allows time for dispersal / allows survival in unfavourable conditions [2×3]</div>
+<div class="explain"><strong>Dormancy</strong> = period when seed doesn't germinate even with water/warmth. Lets it survive winter or drought.</div>
+
+<h3>(c)(iv) Examples of asexual reproduction <span class="marks-badge">6</span></h3>
+<div class="working"><strong>1. Using leaves:</strong> Correct example (e.g., Bryophyllum) [3]<br><strong>2. Using buds:</strong> Correct example (e.g., potato, daffodil) [3]</div>
+<div class="explain"><strong>Vegetative propagation</strong> = asexual reproduction using plant parts. Leaves (Kalanchoe), Stems (runners in strawberry), Roots (dahlia), Buds (potato tuber).</div>
+</div>
+</div>
+
+<!-- Q12 GENETICS -->
+<div class="q-section" id="q-q12">
+<div class="card">
+<h2>Q12: Genetics & DNA - Section C <span class="marks-badge">60 marks</span></h2>
+
+<h3>(a)(i) Explain mutation <span class="marks-badge">3</span></h3>
+<div class="working"><strong>Answer:</strong> Change in the structure (or sequence) of DNA (or of a chromosome)</div>
+<div class="explain"><strong>Mutation</strong> = permanent change in genetic material. Can be beneficial, harmful, or neutral. Source of genetic variation.</div>
+
+<h3>(a)(ii) Two causes of mutations <span class="marks-badge">6</span></h3>
+<div class="working"><strong>Answer:</strong> Any two from: Radiation / chemicals / viruses [2×3]</div>
+<div class="explain"><strong>Mutagens</strong> increase mutation rate. UV radiation, X-rays, tobacco smoke, certain viruses (HPV). Most mutations during DNA replication are random errors.</div>
+
+<h3>(b)(i) Distinguish gene and allele <span class="marks-badge">6</span></h3>
+<div class="working"><strong>Gene:</strong> Region of chromosome (or DNA) that contains (genetic) code for (production of) a protein [3]<br><strong>Allele:</strong> Form of a gene [3]</div>
+<div class="explain"><strong>Example:</strong> Gene for eye colour has different alleles (brown, blue, green). You inherit one allele from each parent.</div>
+
+<h3>(b)(ii)1. Genotype ebony/normal heterozygous <span class="marks-badge">3</span></h3>
+<div class="working"><strong>Answer:</strong> EeNn</div>
+<div class="explain"><strong>Heterozygous</strong> = two different alleles. E (ebony dominant) and e (black recessive), N (normal dominant) and n (curly recessive).</div>
+
+<h3>(b)(ii)2. Genotype black body/curly wings <span class="marks-badge">3</span></h3>
+<div class="working"><strong>Answer:</strong> eenn</div>
+<div class="explain"><strong>Recessive phenotype</strong> = homozygous recessive genotype. Black is recessive (ee), curly is recessive (nn).</div>
+
+<h3>(b)(ii)3. Offspring genotypes and phenotypes <span class="marks-badge">12</span></h3>
+<div class="working">Cross: EeNn × eenn<br><strong>EeNn:</strong> ebony, normal [3]<br><strong>Eenn:</strong> ebony, curly [3]<br><strong>eeNn:</strong> black, normal [3]<br><strong>eenn:</strong> black, curly [3]</div>
+<div class="explain"><strong>Use Punnett square.</strong> EeNn produces gametes: EN, En, eN, en. eenn produces only en. 4 different offspring types in 1:1:1:1 ratio.</div>
+
+<h3>(b)(iii) Term for genes on same chromosome <span class="marks-badge">3</span></h3>
+<div class="working"><strong>Answer:</strong> Linked</div>
+<div class="explain"><strong>Linked genes</strong> are inherited together (don't follow Mendel's law of independent assortment). Closer together = less likely to separate by crossing over.</div>
+
+<h3>(c)(i) What does DNA stand for? <span class="marks-badge">3</span></h3>
+<div class="working"><strong>Answer:</strong> Deoxyribonucleic acid</div>
+<div class="explain"><strong>DNA</strong> carries genetic information. Double helix structure discovered by Watson & Crick (1953).</div>
+
+<h3>(c)(ii) Purines and pyrimidines <span class="marks-badge">6</span></h3>
+<div class="working"><strong>Purines:</strong> Adenine (A) and Guanine (G) [3]<br><strong>Pyrimidines:</strong> Cytosine (C) and Thymine (T) [3]</div>
+<div class="explain"><strong>Base pairing rules:</strong> A pairs with T (2 H-bonds), G pairs with C (3 H-bonds). Purines are larger (double ring), pyrimidines smaller (single ring).</div>
+
+<h3>(c)(iii) One difference between DNA and RNA <span class="marks-badge">3</span></h3>
+<div class="working"><strong>Answer:</strong> DNA is double stranded, RNA is single stranded<br>OR DNA has deoxyribose sugar, RNA has ribose<br>OR DNA has thymine, RNA has uracil</div>
+<div class="explain"><strong>RNA</strong> (ribonucleic acid) is temporary copy of DNA used to make proteins. mRNA, tRNA, rRNA are different types.</div>
+
+<h3>(c)(iv) Four steps in DNA profiling <span class="marks-badge">12</span></h3>
+<div class="working"><strong>1.</strong> Cells are broken down to release DNA [3]<br><strong>2.</strong> DNA is cut into fragments using enzymes [3]<br><strong>3.</strong> Fragments are separated based on size [3]<br><strong>4.</strong> Pattern of fragments is analysed [3]</div>
+<div class="explain"><strong>DNA profiling</strong> uses gel electrophoresis to separate fragments. Smaller fragments travel further. Pattern is unique to each individual (except identical twins). Used in forensics, paternity testing.</div>
+</div>
+</div>
+
+</div>
+
+<!-- FLASHCARDS TAB -->
+<div id="tab-flashcards" class="tab-content">
+<div class="card">
+<h2>Biology Flashcards</h2>
+<p>Click to reveal answer. Use arrow buttons to navigate.</p>
+<div id="flashcard-counter">Card <span id="current-card">1</span> of <span id="total-cards">35</span></div>
+</div>
+<div id="flashcard-container">
+<div class="flashcard" onclick="this.classList.toggle('flipped')">
+<div class="flashcard-inner">
+<div class="flashcard-front">What is osmosis?</div>
+<div class="flashcard-back">Movement of water from a region of higher water concentration to a region of lower water concentration across a selectively permeable membrane.</div>
+</div>
+</div>
+<div class="flashcard" onclick="this.classList.toggle('flipped')">
+<div class="flashcard-inner">
+<div class="flashcard-front">What are the four chemical elements in all proteins?</div>
+<div class="flashcard-back">Carbon (C), Hydrogen (H), Oxygen (O), Nitrogen (N) - remember CHON</div>
+</div>
+</div>
+<div class="flashcard" onclick="this.classList.toggle('flipped')">
+<div class="flashcard-inner">
+<div class="flashcard-front">What is the function of mitochondria?</div>
+<div class="flashcard-back">Site of aerobic respiration / ATP production (powerhouse of the cell)</div>
+</div>
+</div>
+<div class="flashcard" onclick="this.classList.toggle('flipped')">
+<div class="flashcard-inner">
+<div class="flashcard-front">What does ATP stand for?</div>
+<div class="flashcard-back">Adenosine triphosphate</div>
+</div>
+</div>
+<div class="flashcard" onclick="this.classList.toggle('flipped')">
+<div class="flashcard-inner">
+<div class="flashcard-front">Distinguish between prokaryotic and eukaryotic cells.</div>
+<div class="flashcard-back">Prokaryotic = no membrane-bound organelles (bacteria). Eukaryotic = have nucleus and organelles (animals, plants, fungi)</div>
+</div>
+</div>
+<div class="flashcard" onclick="this.classList.toggle('flipped')">
+<div class="flashcard-inner">
+<div class="flashcard-front">What is a catalyst?</div>
+<div class="flashcard-back">A substance that increases rate of reaction by lowering activation energy. Not consumed in the reaction.</div>
+</div>
+</div>
+<div class="flashcard" onclick="this.classList.toggle('flipped')">
+<div class="flashcard-inner">
+<div class="flashcard-front">What is photosynthesis equation?</div>
+<div class="flashcard-back">6CO₂ + 6H₂O → C₆H₁₂O₆ + 6O₂ (light energy required)</div>
+</div>
+</div>
+<div class="flashcard" onclick="this.classList.toggle('flipped')">
+<div class="flashcard-inner">
+<div class="flashcard-front">Where in the cell does photosynthesis occur?</div>
+<div class="flashcard-back">Chloroplast</div>
+</div>
+</div>
+<div class="flashcard" onclick="this.classList.toggle('flipped')">
+<div class="flashcard-inner">
+<div class="flashcard-front">What is geotropism?</div>
+<div class="flashcard-back">Growth response of a plant to gravity. Roots = positive (grow down). Shoots = negative (grow up)</div>
+</div>
+</div>
+<div class="flashcard" onclick="this.classList.toggle('flipped')">
+<div class="flashcard-inner">
+<div class="flashcard-front">What is the difference between gene and allele?</div>
+<div class="flashcard-back">Gene = region of DNA coding for a protein. Allele = different form of a gene (e.g., brown/blue eye alleles)</div>
+</div>
+</div>
+<div class="flashcard" onclick="this.classList.toggle('flipped')">
+<div class="flashcard-inner">
+<div class="flashcard-front">What does DNA stand for?</div>
+<div class="flashcard-back">Deoxyribonucleic acid</div>
+</div>
+</div>
+<div class="flashcard" onclick="this.classList.toggle('flipped')">
+<div class="flashcard-inner">
+<div class="flashcard-front">Name the four DNA bases.</div>
+<div class="flashcard-back">Adenine, Thymine, Guanine, Cytosine (A pairs with T, G pairs with C)</div>
+</div>
+</div>
+<div class="flashcard" onclick="this.classList.toggle('flipped')">
+<div class="flashcard-inner">
+<div class="flashcard-front">What is a mutation?</div>
+<div class="flashcard-back">Change in the structure or sequence of DNA</div>
+</div>
+</div>
+<div class="flashcard" onclick="this.classList.toggle('flipped')">
+<div class="flashcard-inner">
+<div class="flashcard-front">What is double fertilisation?</div>
+<div class="flashcard-back">One sperm fuses with egg (→ zygote). Second sperm fuses with polar nuclei (→ endosperm). Unique to flowering plants.</div>
+</div>
+</div>
+<div class="flashcard" onclick="this.classList.toggle('flipped')">
+<div class="flashcard-inner">
+<div class="flashcard-front">What is an ecosystem?</div>
+<div class="flashcard-back">All organisms (biotic) and their environment (abiotic) interacting in an area</div>
+</div>
+</div>
+<div class="flashcard" onclick="this.classList.toggle('flipped')">
+<div class="flashcard-inner">
+<div class="flashcard-front">What is nitrogen fixation?</div>
+<div class="flashcard-back">Conversion of nitrogen gas into ammonia/nitrates (by bacteria in root nodules or soil)</div>
+</div>
+</div>
+<div class="flashcard" onclick="this.classList.toggle('flipped')">
+<div class="flashcard-inner">
+<div class="flashcard-front">Distinguish predator and prey.</div>
+<div class="flashcard-back">Predator = kills and eats another organism. Prey = organism that is killed and eaten.</div>
+</div>
+</div>
+<div class="flashcard" onclick="this.classList.toggle('flipped')">
+<div class="flashcard-inner">
+<div class="flashcard-front">What is peristalsis?</div>
+<div class="flashcard-back">Involuntary muscular contractions that push food through digestive system</div>
+</div>
+</div>
+<div class="flashcard" onclick="this.classList.toggle('flipped')">
+<div class="flashcard-inner">
+<div class="flashcard-front">Function of root hairs?</div>
+<div class="flashcard-back">Absorption of water and minerals from soil (increase surface area)</div>
+</div>
+</div>
+<div class="flashcard" onclick="this.classList.toggle('flipped')">
+<div class="flashcard-inner">
+<div class="flashcard-front">What is vascular tissue?</div>
+<div class="flashcard-back">Transport tissue in plants - xylem (water up) and phloem (sugars up/down)</div>
+</div>
+</div>
+<div class="flashcard" onclick="this.classList.toggle('flipped')">
+<div class="flashcard-inner">
+<div class="flashcard-front">What is meristematic tissue?</div>
+<div class="flashcard-back">Region of rapid cell division (mitosis) at root and shoot tips</div>
+</div>
+</div>
+<div class="flashcard" onclick="this.classList.toggle('flipped')">
+<div class="flashcard-inner">
+<div class="flashcard-front">Name the cycle in stage 2 of aerobic respiration.</div>
+<div class="flashcard-back">Krebs cycle (occurs in mitochondria)</div>
+</div>
+</div>
+<div class="flashcard" onclick="this.classList.toggle('flipped')">
+<div class="flashcard-inner">
+<div class="flashcard-front">Products of anaerobic respiration?</div>
+<div class="flashcard-back">Animals: lactic acid. Yeast/plants: ethanol + CO₂</div>
+</div>
+</div>
+<div class="flashcard" onclick="this.classList.toggle('flipped')">
+<div class="flashcard-inner">
+<div class="flashcard-front">What is a hypothesis?</div>
+<div class="flashcard-back">A testable statement / educated guess that can be tested by experiment</div>
+</div>
+</div>
+<div class="flashcard" onclick="this.classList.toggle('flipped')">
+<div class="flashcard-inner">
+<div class="flashcard-front">Function of a scientific control?</div>
+<div class="flashcard-back">Provides a comparison/baseline to show the variable being tested caused the effect</div>
+</div>
+</div>
+<div class="flashcard" onclick="this.classList.toggle('flipped')">
+<div class="flashcard-inner">
+<div class="flashcard-front">What is a bioreactor?</div>
+<div class="flashcard-back">Equipment providing controlled conditions for microorganism growth (fermenter)</div>
+</div>
+</div>
+<div class="flashcard" onclick="this.classList.toggle('flipped')">
+<div class="flashcard-inner">
+<div class="flashcard-front">Name the bacterial growth phases.</div>
+<div class="flashcard-back">Lag → Log (exponential) → Stationary → Death</div>
+</div>
+</div>
+<div class="flashcard" onclick="this.classList.toggle('flipped')">
+<div class="flashcard-inner">
+<div class="flashcard-front">Function of cell membrane?</div>
+<div class="flashcard-back">Controls what substances pass through (selective permeability)</div>
+</div>
+</div>
+<div class="flashcard" onclick="this.classList.toggle('flipped')">
+<div class="flashcard-inner">
+<div class="flashcard-front">Function of cell wall in plants?</div>
+<div class="flashcard-back">Gives shape to cell / protection / prevents bursting</div>
+</div>
+</div>
+<div class="flashcard" onclick="this.classList.toggle('flipped')">
+<div class="flashcard-inner">
+<div class="flashcard-front">Name enzyme that digests lipids.</div>
+<div class="flashcard-back">Lipase (produced in pancreas)</div>
+</div>
+</div>
+<div class="flashcard" onclick="this.classList.toggle('flipped')">
+<div class="flashcard-inner">
+<div class="flashcard-front">What is a villus?</div>
+<div class="flashcard-back">Finger-like projection in small intestine that increases surface area for absorption</div>
+</div>
+</div>
+<div class="flashcard" onclick="this.classList.toggle('flipped')">
+<div class="flashcard-inner">
+<div class="flashcard-front">What is mitosis?</div>
+<div class="flashcard-back">Cell division producing 2 genetically identical diploid daughter cells</div>
+</div>
+</div>
+<div class="flashcard" onclick="this.classList.toggle('flipped')">
+<div class="flashcard-inner">
+<div class="flashcard-front">What is meiosis?</div>
+<div class="flashcard-back">Cell division producing 4 genetically different haploid gametes (sex cells)</div>
+</div>
+</div>
+<div class="flashcard" onclick="this.classList.toggle('flipped')">
+<div class="flashcard-inner">
+<div class="flashcard-front">Distinguish CNS and PNS.</div>
+<div class="flashcard-back">CNS = brain and spinal cord. PNS = nerves throughout body</div>
+</div>
+</div>
+<div class="flashcard" onclick="this.classList.toggle('flipped')">
+<div class="flashcard-inner">
+<div class="flashcard-front">What is homeostasis?</div>
+<div class="flashcard-back">Maintenance of a constant internal environment</div>
+</div>
+</div>
+</div>
+<div class="flashcard-nav">
+<button onclick="previousCard('biology')">&#8592; Previous</button>
+<button onclick="nextCard('biology')">Next &#8594;</button>
+</div>
+</div>
+
+<!-- QUIZ TAB -->
+<div id="tab-quiz" class="tab-content">
+<div class="card">
+<h2>Biology Quiz</h2>
+<p>Test your knowledge. Select your answer then click "Check Answer".</p>
+<div id="quiz-score">Score: <span id="score">0</span>/<span id="total">15</span></div>
+</div>
+<div id="quiz-container"></div>
+</div>
+
+<!-- MARK DECODER TAB -->
+<div id="tab-marks" class="tab-content">
+<div class="card">
+<h2>Mark Scheme Decoder</h2>
+<p>Understanding how Biology examiners award marks maximises your score.</p>
+</div>
+
+<div class="card">
+<h3>General Marking Rules</h3>
+<table>
+<tr><th>Rule</th><th>Detail</th></tr>
+<tr><td><strong>Surplus wrong answer (Section A only)</strong></td><td>If you give more answers than requested AND one is wrong, it cancels a correct answer. Be precise!</td></tr>
+<tr><td><strong>Key words in context</strong></td><td>Specific terms must appear in correct context. "Osmosis" earns marks only if correctly explained.</td></tr>
+<tr><td><strong>Cancelled answers</strong></td><td>If you cancel and don't re-answer, examiners mark it. If you give two versions, they mark the better one.</td></tr>
+<tr><td><strong>Asterisk (*) in scheme</strong></td><td>Exact word required - alternatives not accepted. Example: *Root means only "root" earns marks.</td></tr>
+<tr><td><strong>Diagrams</strong></td><td>Must be labelled. -1 mark if H atoms systematically omitted in organic structures.</td></tr>
+</table>
+</div>
+
+<div class="card">
+<h3>Section A - Short Questions (100 marks)</h3>
+<div class="mark-info"><strong>Choose 5 from 7 questions</strong> - Each worth 20 marks. Multiple parts in each question.</div>
+<div class="mark-info"><strong>Example Q1 marking:</strong> 5 parts worth 4 marks each (20 total). Answer best 5 from 6 parts available.</div>
+<div class="mark-info"><strong>Surplus rule applies!</strong> If Q asks for "one example" and you give two (one correct, one wrong), you score 4 - 4 = 0.</div>
+<div class="mark-info"><strong>Diagrams:</strong> Drawing = 3 marks typically. Labels = 1-2 marks each. Must label minimum requested (usually 2-3).</div>
+</div>
+
+<div class="card">
+<h3>Section B - Mandatory Experiments (60 marks)</h3>
+<div class="mark-info"><strong>Choose 2 from 3 questions</strong> - Each worth 30 marks. Part (a) = 6 marks, Part (b) = 24 marks.</div>
+<div class="mark-info"><strong>Q8 Ecosystem Study:</strong> Named species (3) + Method (3+3+3) + Calculation (3) + Two abiotic factors (3+3+3+3) = 24 marks.</div>
+<div class="mark-info"><strong>Q9 Osmosis:</strong> Explain osmosis (2+4=6) + Tissue named (3) + Setup described (7×3=21) = 30 marks.</div>
+<div class="mark-info"><strong>Q10 Leaf Yeast:</strong> Kingdom (4) + Sterility (2) + Setup (6×3=18) + Result (3+3) = 30 marks.</div>
+<div class="mark-info"><strong>Labelled diagrams:</strong> Can earn marks if specifically mentioned in answer. "Points may be obtained from appropriately labelled diagram".</div>
+</div>
+
+<div class="card">
+<h3>Section C - Long Questions (240 marks)</h3>
+<div class="mark-info"><strong>Choose 4 from 7 questions</strong> - Each worth 60 marks. Q16 and Q17 have options (answer 2 from 4 parts).</div>
+<div class="mark-info"><strong>Typical breakdown:</strong> Part (a) = 9 marks, Part (b) = 27 marks, Part (c) = 24 marks.</div>
+<div class="mark-info"><strong>Q11 Plant Reproduction:</strong> Geotropism (9) + Flower structure & fertilisation (27) + Dispersal & asexual (24) = 60.</div>
+<div class="mark-info"><strong>Q12 Genetics:</strong> Mutations (9) + Fruit fly crosses & linkage (27) + DNA structure & profiling (24) = 60.</div>
+<div class="mark-info"><strong>Start each question on new page.</strong> Write question number in box at top. Label each part clearly.</div>
+</div>
+
+<div class="card">
+<h3>Golden Rules for Maximum Marks</h3>
+<div class="explain"><strong>1. Only give exact number requested.</strong> "Name ONE" = give one. Two answers risks cancellation if one is wrong.</div>
+<div class="explain"><strong>2. Use precise scientific terms.</strong> "Osmosis" not "water passing through". "Mitochondrion" not "powerhouse".</div>
+<div class="explain"><strong>3. Label ALL diagrams requested.</strong> "At least three parts" = label at least 3 or lose marks.</div>
+<div class="explain"><strong>4. Answer matches question type.</strong> "Name" = single word. "Describe" = detailed. "Outline" = brief. "Explain" = give reasons.</div>
+<div class="explain"><strong>5. Watch for asterisk (*) in practice.</strong> When you see exact terms required, memorise them precisely.</div>
+<div class="explain"><strong>6. Experiments need detail.</strong> Procedure (3 marks), Control (3 marks), Result (3 marks), Safety (3 marks) typically. Each step earns marks.</div>
+</div>
+</div>
+
+<!-- GLOSSARY TAB -->
+<div id="tab-glossary" class="tab-content">
+<div class="card">
+<h2>Biology Glossary</h2>
+<p>Search for any term. All definitions written in exam-focused language.</p>
+<input type="text" class="glossary-search" id="glossarySearch" placeholder="Search terms..." oninput="filterGlossary()">
+</div>
+<div id="glossaryList">
+<dl>
+<div class="glossary-item"><dt>Aerobic Respiration</dt><dd>Breakdown of glucose using oxygen to release energy (ATP). Occurs in mitochondria. Equation: C₆H₁₂O₆ + 6O₂ → 6CO₂ + 6H₂O + 38 ATP</dd></div>
+<div class="glossary-item"><dt>Allele</dt><dd>Different form of a gene. Example: eye colour gene has brown, blue, green alleles. You inherit one allele from each parent.</dd></div>
+<div class="glossary-item"><dt>Amino Acid</dt><dd>Small subunit that makes proteins. 20 different amino acids can combine in different sequences. Linked by peptide bonds.</dd></div>
+<div class="glossary-item"><dt>Anaerobic Respiration</dt><dd>Breakdown of glucose without oxygen. Much less efficient than aerobic (2 ATP vs 38). Animals: glucose → lactic acid. Yeast: glucose → ethanol + CO₂</dd></div>
+<div class="glossary-item"><dt>ATP</dt><dd>Adenosine triphosphate - the energy currency of cells. When ATP → ADP + P, energy is released for cellular work.</dd></div>
+<div class="glossary-item"><dt>Bioreactor</dt><dd>Equipment (fermenter) providing controlled conditions for microorganism growth. Controls temperature, pH, oxygen, nutrients. Used in brewing, antibiotics, yogurt.</dd></div>
+<div class="glossary-item"><dt>Carbohydrate</dt><dd>Organic compound with general formula Cx(H₂O)y. Includes sugars (glucose), starch, cellulose. Made of C, H, O in 1:2:1 ratio.</dd></div>
+<div class="glossary-item"><dt>Catalyst</dt><dd>Substance that increases reaction rate by lowering activation energy. Not consumed in reaction. Enzymes are biological catalysts.</dd></div>
+<div class="glossary-item"><dt>Cell Membrane</dt><dd>Selectively permeable barrier surrounding all cells. Controls what enters/exits. Made of phospholipid bilayer with embedded proteins.</dd></div>
+<div class="glossary-item"><dt>Cell Wall</dt><dd>Rigid outer layer in plant cells (not animals). Made of cellulose. Gives shape, prevents bursting, fully permeable.</dd></div>
+<div class="glossary-item"><dt>Chloroplast</dt><dd>Organelle in plant cells where photosynthesis occurs. Contains chlorophyll (green pigment that absorbs light). Has double membrane.</dd></div>
+<div class="glossary-item"><dt>Chromosome</dt><dd>Thread-like structure of DNA and protein carrying genetic information. Humans have 46 chromosomes (23 pairs) in body cells.</dd></div>
+<div class="glossary-item"><dt>DNA</dt><dd>Deoxyribonucleic acid - genetic material carrying hereditary information. Double helix structure. Bases: A, T, G, C (A pairs with T, G pairs with C).</dd></div>
+<div class="glossary-item"><dt>Double Fertilisation</dt><dd>Unique to flowering plants. One sperm fuses with egg (→ diploid zygote → embryo). Second sperm fuses with 2 polar nuclei (→ triploid endosperm → food store).</dd></div>
+<div class="glossary-item"><dt>Ecosystem</dt><dd>All organisms (biotic factors) and their environment (abiotic factors) interacting in an area. Examples: woodland, pond, rocky shore.</dd></div>
+<div class="glossary-item"><dt>Enzyme</dt><dd>Biological catalyst (protein) that speeds up reactions by lowering activation energy. Specific shape - each enzyme catalyses one reaction. Affected by temperature and pH.</dd></div>
+<div class="glossary-item"><dt>Eukaryotic Cell</dt><dd>Cell with membrane-bound organelles (nucleus, mitochondria, etc.). Found in animals, plants, fungi, protists. Larger and more complex than prokaryotic.</dd></div>
+<div class="glossary-item"><dt>Gene</dt><dd>Region of chromosome (DNA) containing code for production of a protein. Determines inherited characteristics.</dd></div>
+<div class="glossary-item"><dt>Genotype</dt><dd>Genetic makeup - the alleles an organism has. Example: Bb, EeNn. Written using letters.</dd></div>
+<div class="glossary-item"><dt>Geotropism</dt><dd>Growth response of plant to gravity. Roots = positive geotropism (grow down toward gravity). Shoots = negative geotropism (grow up away from gravity).</dd></div>
+<div class="glossary-item"><dt>Heterozygous</dt><dd>Having two different alleles for a gene. Example: Bb (B from one parent, b from other). Shows dominant trait.</dd></div>
+<div class="glossary-item"><dt>Homeostasis</dt><dd>Maintenance of a constant internal environment despite external changes. Examples: body temperature, blood glucose, water balance.</dd></div>
+<div class="glossary-item"><dt>Homozygous</dt><dd>Having two identical alleles for a gene. Example: BB or bb. Breeds true.</dd></div>
+<div class="glossary-item"><dt>Hypothesis</dt><dd>Testable statement / educated guess that can be tested by experiment. Must be falsifiable (can be proven wrong).</dd></div>
+<div class="glossary-item"><dt>Krebs Cycle</dt><dd>Stage 2 of aerobic respiration occurring in mitochondria. Breaks down pyruvate to CO₂, producing ATP, NADH, FADH₂.</dd></div>
+<div class="glossary-item"><dt>Lipase</dt><dd>Enzyme that breaks down lipids (fats) into fatty acids and glycerol. Produced in pancreas, works in small intestine.</dd></div>
+<div class="glossary-item"><dt>Meiosis</dt><dd>Cell division producing 4 haploid gametes (sex cells) from one diploid cell. Introduces genetic variation through crossing over and independent assortment.</dd></div>
+<div class="glossary-item"><dt>Meristematic Tissue</dt><dd>Plant tissue where rapid cell division (mitosis) occurs. Found at root tips and shoot tips. Cells are small, thin-walled, actively dividing.</dd></div>
+<div class="glossary-item"><dt>Mitochondrion</dt><dd>Organelle where aerobic respiration occurs. "Powerhouse of cell" - produces ATP. Has double membrane with cristae (inner folds).</dd></div>
+<div class="glossary-item"><dt>Mitosis</dt><dd>Cell division producing 2 genetically identical diploid daughter cells. Used for growth and repair. Maintains chromosome number.</dd></div>
+<div class="glossary-item"><dt>Mutation</dt><dd>Change in structure or sequence of DNA. Can be beneficial, harmful, or neutral. Caused by radiation, chemicals, viruses, or random errors during DNA replication.</dd></div>
+<div class="glossary-item"><dt>Nitrogen Fixation</dt><dd>Conversion of atmospheric nitrogen gas (N₂) into usable forms (ammonia, nitrates). Done by bacteria in root nodules (legumes) or soil.</dd></div>
+<div class="glossary-item"><dt>Osmosis</dt><dd>Movement of water from region of higher water concentration to region of lower water concentration across a selectively permeable membrane. Special case of diffusion.</dd></div>
+<div class="glossary-item"><dt>Peristalsis</dt><dd>Involuntary wave-like muscular contractions that push food through digestive system. Circular muscles contract behind food, longitudinal ahead.</dd></div>
+<div class="glossary-item"><dt>Phenotype</dt><dd>Observable characteristics - what the organism looks like. Example: brown eyes, tall plant. Determined by genotype and environment.</dd></div>
+<div class="glossary-item"><dt>Photosynthesis</dt><dd>Process where plants make glucose from CO₂ and water using light energy. Occurs in chloroplasts. Equation: 6CO₂ + 6H₂O → C₆H₁₂O₆ + 6O₂</dd></div>
+<div class="glossary-item"><dt>Predator</dt><dd>Organism that kills and eats another organism. Example: white-tailed sea eagle eating fish.</dd></div>
+<div class="glossary-item"><dt>Prey</dt><dd>Organism that is killed and eaten by another organism. Example: fish eaten by white-tailed sea eagle.</dd></div>
+<div class="glossary-item"><dt>Prokaryotic Cell</dt><dd>Cell without membrane-bound organelles. No nucleus - DNA free in cytoplasm. Bacteria are prokaryotes. Small and simple.</dd></div>
+<div class="glossary-item"><dt>Protein</dt><dd>Large molecule made of amino acids linked by peptide bonds. Functions: structural (muscle, hair), enzymes, antibodies, hormones. Contains C, H, O, N.</dd></div>
+<div class="glossary-item"><dt>Root Hair</dt><dd>Extension of root epidermal cell. Increases surface area for absorption of water and minerals from soil. Short-lived (few weeks).</dd></div>
+<div class="glossary-item"><dt>Scientific Control</dt><dd>Identical setup to experiment but without the variable being tested. Provides comparison/baseline to show variable caused the effect.</dd></div>
+<div class="glossary-item"><dt>Stamen</dt><dd>Male reproductive part of flower. Consists of anther (produces pollen) and filament (stalk).</dd></div>
+<div class="glossary-item"><dt>Theory</dt><dd>Supported hypothesis that has been tested many times with consistent results. Not just a guess. Examples: cell theory, evolution theory.</dd></div>
+<div class="glossary-item"><dt>Vascular Tissue</dt><dd>Transport tissue in plants. Xylem transports water and minerals upward. Phloem transports sugars up and down.</dd></div>
+<div class="glossary-item"><dt>Villus</dt><dd>Finger-like projection in small intestine. Greatly increases surface area for absorption. Contains blood capillaries (absorb glucose, amino acids) and lacteal (absorbs fats).</dd></div>
+</dl>
+</div>
+</div>
+
+<!-- FORMULAS TAB -->
+<div id="tab-formulas" class="tab-content">
+<div class="card">
+<h2>Biology Key Concepts & Formulas</h2>
+<p>Essential equations, processes, and relationships you need to know.</p>
+</div>
+
+<div class="card">
+<h3>Respiration Equations</h3>
+<div class="formula-box"><strong>Aerobic Respiration</strong><div class="formula">C₆H₁₂O₆ + 6O₂ → 6CO₂ + 6H₂O + 38 ATP</div><p>Occurs in mitochondria. Stage 1: Glycolysis (cytosol). Stage 2: Krebs cycle (mitochondria)</p></div>
+<div class="formula-box"><strong>Anaerobic (Animals)</strong><div class="formula">C₆H₁₂O₆ → 2 Lactic acid + 2 ATP</div><p>Occurs in cytosol when oxygen lacking. Causes muscle fatigue.</p></div>
+<div class="formula-box"><strong>Anaerobic (Yeast)</strong><div class="formula">C₆H₁₂O₆ → 2 Ethanol + 2CO₂ + 2 ATP</div><p>Used in brewing and baking. CO₂ makes bread rise.</p></div>
+</div>
+
+<div class="card">
+<h3>Photosynthesis</h3>
+<div class="formula-box"><strong>Overall Equation</strong><div class="formula">6CO₂ + 6H₂O → C₆H₁₂O₆ + 6O₂</div><p>Requires light energy. Occurs in chloroplasts. Anabolic reaction (builds large molecules).</p></div>
+<div class="formula-box"><strong>Light-dependent Stage</strong><div class="formula">Water split → O₂ released | Energy captured → ATP and NADPH produced</div><p>Occurs in grana (thylakoid membranes). Requires light.</p></div>
+<div class="formula-box"><strong>Light-independent Stage (Calvin Cycle)</strong><div class="formula">CO₂ fixed using ATP and NADPH → Glucose produced</div><p>Occurs in stroma. Can occur in dark using products from light stage.</p></div>
+</div>
+
+<div class="card">
+<h3>Genetics Formulas</h3>
+<div class="formula-box"><strong>Monohybrid Cross</strong><div class="formula">Heterozygous × Heterozygous (Bb × Bb) → 3:1 ratio (3 dominant : 1 recessive)</div><p>Use Punnett square. BB (25%), Bb (50%), bb (25%)</p></div>
+<div class="formula-box"><strong>Dihybrid Cross</strong><div class="formula">BbNn × BbNn → 9:3:3:1 ratio</div><p>For two unlinked genes. 9 both dominant : 3 first dominant : 3 second dominant : 1 both recessive</p></div>
+<div class="formula-box"><strong>DNA Base Pairing</strong><div class="formula">A pairs with T (2 hydrogen bonds) | G pairs with C (3 hydrogen bonds)</div><p>Complementary base pairing. If one strand is ATGC, other is TACG.</p></div>
+</div>
+
+<div class="card">
+<h3>Population Growth</h3>
+<div class="formula-box"><strong>Growth Curve Phases</strong><div class="formula">Lag → Log (exponential) → Stationary → Death</div><p>Lag = adapting. Log = rapid growth. Stationary = births = deaths. Death = nutrients depleted.</p></div>
+<div class="formula-box"><strong>Predator-Prey Relationship</strong><div class="formula">Prey peaks BEFORE predator | Prey numbers higher than predator</div><p>Cycles out of sync. Time delay due to breeding time.</p></div>
+</div>
+
+<div class="card">
+<h3>Ecology Cycles</h3>
+<div class="formula-box"><strong>Nitrogen Cycle</strong><div class="formula">N₂ (air) → Fixation → NH₃/NO₃ → Plants → Animals → Decomposition → NH₃ → Nitrification → NO₃ → Denitrification → N₂</div><p>Nitrogen fixation by bacteria. Nitrification converts ammonia to nitrates. Denitrification returns nitrogen to air.</p></div>
+<div class="formula-box"><strong>Energy Transfer in Food Chains</strong><div class="formula">Only 10% energy passes to next trophic level (90% lost as heat)</div><p>Limits food chain length to 4-5 levels. Explains why producers most abundant.</p></div>
+</div>
+
+<div class="card">
+<h3>Plant Processes</h3>
+<div class="formula-box"><strong>Osmosis Direction</strong><div class="formula">Water moves from HIGH water concentration → LOW water concentration</div><p>Across selectively permeable membrane. Dilute solution has HIGH water concentration.</p></div>
+<div class="formula-box"><strong>Seed Dispersal Methods</strong><div class="formula">Wind | Animal | Water | Explosive</div><p>Reduces competition, colonises new areas, increases survival chance.</p></div>
+</div>
+
+<div class="card">
+<h3>Cell Division</h3>
+<div class="formula-box"><strong>Mitosis</strong><div class="formula">1 diploid cell → 2 diploid identical cells</div><p>Prophase → Metaphase → Anaphase → Telophase. Used for growth and repair.</p></div>
+<div class="formula-box"><strong>Meiosis</strong><div class="formula">1 diploid cell → 4 haploid different gametes</div><p>Two divisions. Introduces variation. Makes sex cells (sperm, egg).</p></div>
+</div>
+
+<div class="card">
+<h3>Homeostasis</h3>
+<div class="formula-box"><strong>Negative Feedback</strong><div class="formula">Change detected → Response opposes change → Returns to normal</div><p>Example: Blood glucose high → Insulin released → Glucose stored → Blood glucose normal</p></div>
+<div class="formula-box"><strong>ADH (Anti-Diuretic Hormone)</strong><div class="formula">Blood volume LOW → ADH HIGH → Less urine → Blood volume restored</div><p>ADH increases water reabsorption in kidney. Secreted by pituitary gland.</p></div>
+</div>
+</div>
+
+<!-- PROGRESS TAB -->
+<div id="tab-progress" class="tab-content">
+<div class="card">
+<h2>Study Progress Tracker</h2>
+<p>Track which questions you've mastered. Click to toggle completion.</p>
+</div>
+
+<div class="card">
+<h3>Section A - Short Questions (Choose 5 from 7)</h3>
+<div class="progress-grid">
+<div class="progress-item" onclick="toggleProgress(this, 'biology')">
+<input type="checkbox" id="bio-q1"><label for="bio-q1">Q1: Nutrition</label>
+</div>
+<div class="progress-item" onclick="toggleProgress(this, 'biology')">
+<input type="checkbox" id="bio-q2"><label for="bio-q2">Q2: Plant Structure</label>
+</div>
+<div class="progress-item" onclick="toggleProgress(this, 'biology')">
+<input type="checkbox" id="bio-q3"><label for="bio-q3">Q3: Respiration</label>
+</div>
+<div class="progress-item" onclick="toggleProgress(this, 'biology')">
+<input type="checkbox" id="bio-q4"><label for="bio-q4">Q4: Cell Structure</label>
+</div>
+<div class="progress-item" onclick="toggleProgress(this, 'biology')">
+<input type="checkbox" id="bio-q5"><label for="bio-q5">Q5: Bioprocessing</label>
+</div>
+<div class="progress-item" onclick="toggleProgress(this, 'biology')">
+<input type="checkbox" id="bio-q6"><label for="bio-q6">Q6: Digestion</label>
+</div>
+<div class="progress-item" onclick="toggleProgress(this, 'biology')">
+<input type="checkbox" id="bio-q7"><label for="bio-q7">Q7: Scientific Method</label>
+</div>
+</div>
+</div>
+
+<div class="card">
+<h3>Section B - Mandatory Experiments (Choose 2 from 3)</h3>
+<div class="progress-grid">
+<div class="progress-item" onclick="toggleProgress(this, 'biology')">
+<input type="checkbox" id="bio-q8"><label for="bio-q8">Q8: Ecosystem Study</label>
+</div>
+<div class="progress-item" onclick="toggleProgress(this, 'biology')">
+<input type="checkbox" id="bio-q9"><label for="bio-q9">Q9: Osmosis</label>
+</div>
+<div class="progress-item" onclick="toggleProgress(this, 'biology')">
+<input type="checkbox" id="bio-q10"><label for="bio-q10">Q10: Leaf Yeast</label>
+</div>
+</div>
+</div>
+
+<div class="card">
+<h3>Section C - Long Questions (Choose 4 from 7)</h3>
+<div class="progress-grid">
+<div class="progress-item" onclick="toggleProgress(this, 'biology')">
+<input type="checkbox" id="bio-q11"><label for="bio-q11">Q11: Plant Reproduction</label>
+</div>
+<div class="progress-item" onclick="toggleProgress(this, 'biology')">
+<input type="checkbox" id="bio-q12"><label for="bio-q12">Q12: Genetics & DNA</label>
+</div>
+<div class="progress-item" onclick="toggleProgress(this, 'biology')">
+<input type="checkbox" id="bio-q13"><label for="bio-q13">Q13: Photosynthesis & Enzymes</label>
+</div>
+<div class="progress-item" onclick="toggleProgress(this, 'biology')">
+<input type="checkbox" id="bio-q14"><label for="bio-q14">Q14: Nervous System</label>
+</div>
+<div class="progress-item" onclick="toggleProgress(this, 'biology')">
+<input type="checkbox" id="bio-q15"><label for="bio-q15">Q15: Ecology & Pollution</label>
+</div>
+<div class="progress-item" onclick="toggleProgress(this, 'biology')">
+<input type="checkbox" id="bio-q16"><label for="bio-q16">Q16: Options (pick 2 from 4)</label>
+</div>
+<div class="progress-item" onclick="toggleProgress(this, 'biology')">
+<input type="checkbox" id="bio-q17"><label for="bio-q17">Q17: Options (pick 2 from 4)</label>
+</div>
+</div>
+</div>
+
+<div class="card">
+<h3>Key Topics Checklist</h3>
+<div class="progress-grid">
+<div class="progress-item" onclick="toggleProgress(this, 'biology')">
+<input type="checkbox" id="bio-osmosis"><label for="bio-osmosis">Osmosis & Diffusion</label>
+</div>
+<div class="progress-item" onclick="toggleProgress(this, 'biology')">
+<input type="checkbox" id="bio-respiration"><label for="bio-respiration">Aerobic & Anaerobic Respiration</label>
+</div>
+<div class="progress-item" onclick="toggleProgress(this, 'biology')">
+<input type="checkbox" id="bio-photosyn"><label for="bio-photosyn">Photosynthesis Stages</label>
+</div>
+<div class="progress-item" onclick="toggleProgress(this, 'biology')">
+<input type="checkbox" id="bio-mitosis"><label for="bio-mitosis">Mitosis Stages</label>
+</div>
+<div class="progress-item" onclick="toggleProgress(this, 'biology')">
+<input type="checkbox" id="bio-meiosis"><label for="bio-meiosis">Meiosis & Gametes</label>
+</div>
+<div class="progress-item" onclick="toggleProgress(this, 'biology')">
+<input type="checkbox" id="bio-genetics"><label for="bio-genetics">Punnet Squares & Crosses</label>
+</div>
+<div class="progress-item" onclick="toggleProgress(this, 'biology')">
+<input type="checkbox" id="bio-dna"><label for="bio-dna">DNA Structure & Replication</label>
+</div>
+<div class="progress-item" onclick="toggleProgress(this, 'biology')">
+<input type="checkbox" id="bio-nitrogen"><label for="bio-nitrogen">Nitrogen Cycle</label>
+</div>
+<div class="progress-item" onclick="toggleProgress(this, 'biology')">
+<input type="checkbox" id="bio-digestion"><label for="bio-digestion">Digestive System</label>
+</div>
+<div class="progress-item" onclick="toggleProgress(this, 'biology')">
+<input type="checkbox" id="bio-nervous"><label for="bio-nervous">Nervous System & Neurons</label>
+</div>
+<div class="progress-item" onclick="toggleProgress(this, 'biology')">
+<input type="checkbox" id="bio-homeostasis"><label for="bio-homeostasis">Homeostasis & ADH</label>
+</div>
+<div class="progress-item" onclick="toggleProgress(this, 'biology')">
+<input type="checkbox" id="bio-plant"><label for="bio-plant">Plant Structure & Transport</label>
+</div>
+</div>
+</div>
+
+<div class="card">
+<button class="reset-progress" onclick="resetProgress('biology')">Reset All Progress</button>
+</div>
+</div>
+
+<script src="js/shared.js"></script>
+<script>
+// Quiz questions specific to Biology
+const biologyQuizData = [
+    {
+        question: "What is osmosis?",
+        options: [
+            "Movement of sugar across a membrane",
+            "Movement of water from high to low water concentration across a selectively permeable membrane",
+            "Movement of ions through a cell wall",
+            "Active transport of water"
+        ],
+        correct: 1,
+        explanation: "Osmosis is the movement of WATER from a region of higher water concentration to lower water concentration across a selectively permeable membrane."
+    },
+    {
+        question: "What are the four chemical elements present in all proteins?",
+        options: [
+            "C, H, O, S",
+            "C, H, N, P",
+            "C, H, O, N",
+            "C, O, N, S"
+        ],
+        correct: 2,
+        explanation: "All proteins contain Carbon, Hydrogen, Oxygen, and Nitrogen (CHON). Some proteins also contain sulfur."
+    },
+    {
+        question: "Where does aerobic respiration occur?",
+        options: [
+            "Nucleus",
+            "Ribosomes",
+            "Mitochondria",
+            "Chloroplasts"
+        ],
+        correct: 2,
+        explanation: "Aerobic respiration occurs in mitochondria. Stage 1 (glycolysis) is in cytosol, but Stage 2 (Krebs cycle) is in mitochondria."
+    },
+    {
+        question: "What does ATP stand for?",
+        options: [
+            "Adenosine triphosphate",
+            "Amino acid transport protein",
+            "Active transport pathway",
+            "Adenine triple phosphate"
+        ],
+        correct: 0,
+        explanation: "ATP = Adenosine triphosphate. It's the energy currency of cells."
+    },
+    {
+        question: "Which cells are prokaryotic?",
+        options: [
+            "Plant cells",
+            "Animal cells",
+            "Bacteria",
+            "Fungi"
+        ],
+        correct: 2,
+        explanation: "Bacteria are prokaryotic (no membrane-bound organelles, no nucleus). Plants, animals, and fungi are eukaryotic."
+    },
+    {
+        question: "What is the product of anaerobic respiration in animals?",
+        options: [
+            "Ethanol",
+            "Lactic acid",
+            "Carbon dioxide only",
+            "Water"
+        ],
+        correct: 1,
+        explanation: "In animals: glucose → lactic acid + 2 ATP. In yeast: glucose → ethanol + CO₂ + 2 ATP."
+    },
+    {
+        question: "What is geotropism?",
+        options: [
+            "Growth response to light",
+            "Growth response to gravity",
+            "Growth response to water",
+            "Growth response to touch"
+        ],
+        correct: 1,
+        explanation: "Geotropism = growth response to gravity. Roots show positive geotropism (grow down). Shoots show negative geotropism (grow up)."
+    },
+    {
+        question: "What is the difference between a gene and an allele?",
+        options: [
+            "Gene is DNA, allele is RNA",
+            "Gene is a region coding for protein, allele is a form of that gene",
+            "Gene is dominant, allele is recessive",
+            "Gene is in nucleus, allele is in cytoplasm"
+        ],
+        correct: 1,
+        explanation: "Gene = region of DNA coding for a protein. Allele = different form of that gene (e.g., brown/blue eye alleles)."
+    },
+    {
+        question: "What are the DNA base pairs?",
+        options: [
+            "A-G and T-C",
+            "A-T and G-C",
+            "A-C and T-G",
+            "A-A and T-T"
+        ],
+        correct: 1,
+        explanation: "Adenine pairs with Thymine (2 H-bonds). Guanine pairs with Cytosine (3 H-bonds). Complementary base pairing."
+    },
+    {
+        question: "What is double fertilisation in flowering plants?",
+        options: [
+            "Two eggs fertilised by one sperm",
+            "One sperm fuses with egg, second sperm fuses with polar nuclei",
+            "Two sperm fuse together",
+            "Fertilisation happens twice in succession"
+        ],
+        correct: 1,
+        explanation: "One sperm + egg → zygote (→ embryo). Second sperm + 2 polar nuclei → endosperm (→ food store). Unique to flowering plants."
+    },
+    {
+        question: "What is nitrogen fixation?",
+        options: [
+            "Conversion of nitrates to nitrogen gas",
+            "Conversion of nitrogen gas to ammonia/nitrates",
+            "Conversion of ammonia to nitrites",
+            "Decomposition of nitrogen compounds"
+        ],
+        correct: 1,
+        explanation: "Nitrogen fixation converts atmospheric N₂ into usable forms (ammonia, nitrates). Done by bacteria in root nodules or soil."
+    },
+    {
+        question: "What is peristalsis?",
+        options: [
+            "Chemical breakdown of food",
+            "Absorption through villi",
+            "Wave-like muscular contractions pushing food",
+            "Enzyme secretion"
+        ],
+        correct: 2,
+        explanation: "Peristalsis = involuntary wave-like muscular contractions that push food through digestive system."
+    },
+    {
+        question: "What is the function of root hairs?",
+        options: [
+            "Photosynthesis",
+            "Storage",
+            "Absorption of water and minerals",
+            "Anchorage only"
+        ],
+        correct: 2,
+        explanation: "Root hairs increase surface area for absorption of water and minerals from soil. They're extensions of epidermal cells."
+    },
+    {
+        question: "What is a hypothesis?",
+        options: [
+            "A proven scientific fact",
+            "A testable statement that can be investigated",
+            "The conclusion of an experiment",
+            "A random guess"
+        ],
+        correct: 1,
+        explanation: "Hypothesis = testable statement / educated guess. Must be falsifiable (can be proven wrong by experiment)."
+    },
+    {
+        question: "What are the stages of the bacterial growth curve?",
+        options: [
+            "Start, Peak, End",
+            "Lag, Log, Stationary, Death",
+            "Growth, Reproduction, Decline",
+            "Phase 1, Phase 2, Phase 3"
+        ],
+        correct: 1,
+        explanation: "Lag (adapting) → Log/Exponential (rapid growth) → Stationary (births = deaths) → Death (nutrients depleted)."
+    }
+];
+
+// Initialize quiz when page loads
+if (document.getElementById('quiz-container')) {
+    initQuiz('biology', biologyQuizData);
+}
+</script>
+</body>
+</html>

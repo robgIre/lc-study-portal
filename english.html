@@ -1,0 +1,1206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LC English - Higher Level Study Tool</title>
+<link rel="stylesheet" href="css/shared.css">
+</head>
+<body class="subject-english">
+<header class="app-header">
+<div>
+<h1>LC English - Higher Level</h1>
+<p>2025 Exam Study Tool | Leaving Certificate Ireland</p>
+</div>
+<a href="index.html" class="home-link">&#8592; All Subjects</a>
+</header>
+<nav id="mainNav">
+<button class="active" onclick="showTab('study','english')">Study</button>
+<button onclick="showTab('flashcards','english')">Flashcards</button>
+<button onclick="showTab('quiz','english')">Quiz</button>
+<button onclick="showTab('strategy','english')">Exam Strategy</button>
+<button onclick="showTab('marks','english')">Mark Decoder</button>
+<button onclick="showTab('glossary','english')">Glossary</button>
+<button onclick="showTab('frameworks','english')">Writing Frameworks</button>
+<button onclick="showTab('progress','english')">Progress</button>
+</nav>
+
+<!-- EXAM STRATEGY TAB -->
+<div id="tab-strategy" class="tab-content">
+<div class="card">
+<h2>Exam Paper Structure - TWO Papers</h2>
+<p>The LC English Higher Level exam consists of <strong>TWO papers</strong>, each worth <strong>200 marks</strong> (400 marks total).</p>
+</div>
+
+<div class="card">
+<h3>Paper 1: Comprehending & Composing</h3>
+<p><strong>Wednesday, 4 June</strong> - Morning, 9:30-12:20 (2 hours 50 minutes) | <strong>200 marks</strong></p>
+<table>
+<tr><th>Section</th><th>Marks</th><th>What You Do</th><th>Time</th></tr>
+<tr><td><strong>Section I: COMPREHENDING</strong></td><td>100</td><td>3 texts provided. Answer ONE Question A (50 marks) and ONE Question B (50 marks) from DIFFERENT texts.</td><td>~1 hour 20 min</td></tr>
+<tr><td><strong>Section II: COMPOSING</strong></td><td>100</td><td>Choose ONE composition from 7 options (discursive essay, speech, short story, personal essay, feature article).</td><td>~1 hour 30 min</td></tr>
+</table>
+<p style="margin-top:1rem"><strong>IMPORTANT:</strong> You CANNOT answer Question A and Question B on the same text. Pick two different texts.</p>
+</div>
+
+<div class="card">
+<h3>Paper 2: Single Text, Comparative, Poetry</h3>
+<p><strong>Thursday, 5 June</strong> - Afternoon, 2:00-5:20 (3 hours 20 minutes) | <strong>200 marks</strong></p>
+<table>
+<tr><th>Section</th><th>Marks</th><th>What You Do</th><th>Time</th></tr>
+<tr><td><strong>Section I: The Single Text</strong></td><td>60</td><td>Answer ONE question on your studied text (King Lear, The Crucible, Frankenstein, All the Light We Cannot See, or The Tenant of Wildfell Hall).</td><td>~1 hour</td></tr>
+<tr><td><strong>Section II: Comparative Study</strong></td><td>70</td><td>Answer ONE question comparing 3 texts you studied (Theme/Issue, Cultural Context, or General Vision).</td><td>~1 hour 10 min</td></tr>
+<tr><td><strong>Section III: Poetry</strong></td><td>70</td><td>A. Unseen Poem (20 marks) - answer 1 of 2 questions<br>B. Prescribed Poetry (50 marks) - answer on ONE poet you studied</td><td>~1 hour 10 min</td></tr>
+</table>
+<p style="margin-top:1rem"><strong>IMPORTANT:</strong> You MUST answer on Shakespearean Drama - either in Section I (King Lear) OR in Section II Comparative (King Lear or The Merry Wives of Windsor).</p>
+</div>
+
+<div class="card">
+<h2>Paper 1 Time Management</h2>
+<p>You get <strong>170 minutes</strong> for <strong>200 marks</strong>. Each section is worth 100 marks.</p>
+
+<h3>Suggested Time Plan - Paper 1</h3>
+<div class="time-block"><span class="time">9:30</span><span>Read all 3 texts, decide which texts for Q-A and Q-B (10 min)</span></div>
+<div class="time-block"><span class="time">9:40</span><span>Section I: Question A - 50 marks (40 min)</span></div>
+<div class="time-block"><span class="time">10:20</span><span>Section I: Question B - 50 marks (40 min)</span></div>
+<div class="time-block"><span class="time">11:00</span><span>Read all 7 composition options, choose one (5 min)</span></div>
+<div class="time-block"><span class="time">11:05</span><span>Section II: Plan your composition (10 min)</span></div>
+<div class="time-block"><span class="time">11:15</span><span>Section II: Write composition - 100 marks (1 hour)</span></div>
+<div class="time-block"><span class="time">12:15</span><span>Review and proofread (5 min)</span></div>
+</div>
+
+<div class="card">
+<h2>Paper 2 Time Management</h2>
+<p>You get <strong>200 minutes</strong> for <strong>200 marks</strong>. Time proportional to marks.</p>
+
+<h3>Suggested Time Plan - Paper 2</h3>
+<div class="time-block"><span class="time">2:00</span><span>Read all questions across all sections (5 min)</span></div>
+<div class="time-block"><span class="time">2:05</span><span>Section I: Single Text - 60 marks (1 hour)</span></div>
+<div class="time-block"><span class="time">3:05</span><span>Section II: Comparative Study - 70 marks (1 hour 10 min)</span></div>
+<div class="time-block"><span class="time">4:15</span><span>Section III: Unseen Poem - 20 marks (20 min)</span></div>
+<div class="time-block"><span class="time">4:35</span><span>Section III: Prescribed Poetry - 50 marks (40 min)</span></div>
+<div class="time-block"><span class="time">5:15</span><span>Review all answers (5 min)</span></div>
+</div>
+
+<div class="card">
+<h2>Top Exam Tips</h2>
+<div class="explain"><strong>1. Use the PCLM criteria.</strong> Every answer should include: Point, Context (quote/reference), Language (techniques), and your view/Meaning. This structure maximizes marks.</div>
+<div class="explain"><strong>2. Quote precisely.</strong> Short, integrated quotes work best. "The writer describes the earth as a 'suspended jewel'" is better than copying whole paragraphs.</div>
+<div class="explain"><strong>3. Name the techniques.</strong> Don't just say "effective language" - name the technique: metaphor, imagery, repetition, contrast, rhetorical question, emotive language, etc.</div>
+<div class="explain"><strong>4. Plan your composition.</strong> Spend 10 minutes planning. A clear structure (intro, 3-4 developed points, conclusion) earns more than rambling.</div>
+<div class="explain"><strong>5. Answer the question directly.</strong> If asked "To what extent do you agree?", state your position clearly and develop it. Don't just describe the text.</div>
+<div class="explain"><strong>6. Write in paragraphs.</strong> One clear point per paragraph. Topic sentence, evidence, analysis, link to question.</div>
+<div class="explain"><strong>7. Manage your time strictly.</strong> Don't spend 90 minutes on Section I comprehension and have only 30 minutes left for your composition. The composition is worth 100 marks.</div>
+<div class="explain"><strong>8. Use literary terminology.</strong> First-person narrative, omniscient narrator, personification, anaphora, tone, diction, syntax. Shows sophistication.</div>
+<div class="explain"><strong>9. In comparative, connect your texts.</strong> Use phrases like "Similarly...", "In contrast to...", "Both texts...", "While Text A shows... Text B reveals..."</div>
+<div class="explain"><strong>10. Proofread.</strong> Save 5 minutes at the end. Check spelling, grammar, clarity. Cross out mistakes neatly rather than leaving them.</div>
+</div>
+</div>
+
+<!-- WRITING FRAMEWORKS TAB -->
+<div id="tab-frameworks" class="tab-content">
+<div class="card">
+<h2>Writing Frameworks & Key Terms</h2>
+<p>Essential structures and techniques for compositions and literary analysis.</p>
+</div>
+
+<div class="card">
+<h3>Essay Structure (Discursive/Personal)</h3>
+<div class="formula-box"><strong>Introduction</strong><div class="formula">Hook → Context → Thesis Statement<br>Engage the reader, introduce the topic, state your position clearly.</div></div>
+<div class="formula-box"><strong>Body Paragraphs (3-4)</strong><div class="formula">Topic Sentence → Evidence/Example → Analysis → Link to Thesis<br>One clear idea per paragraph. Develop fully.</div></div>
+<div class="formula-box"><strong>Conclusion</strong><div class="formula">Restate Thesis → Summarize Main Points → Broader Implication/Final Thought<br>Don't introduce new ideas. Leave the reader thinking.</div></div>
+</div>
+
+<div class="card">
+<h3>Short Story Structure</h3>
+<div class="formula-box"><strong>Opening</strong><div class="formula">Set scene, introduce character, establish tone. Hook the reader immediately.</div></div>
+<div class="formula-box"><strong>Rising Action</strong><div class="formula">Build conflict, develop character, increase tension.</div></div>
+<div class="formula-box"><strong>Climax</strong><div class="formula">Turning point, moment of greatest tension or revelation.</div></div>
+<div class="formula-box"><strong>Resolution</strong><div class="formula">Resolve conflict, show character change, leave lasting impression.</div></div>
+<p><strong>Key techniques:</strong> Dialogue, descriptive language, show don't tell, varied sentence structure, sensory details.</p>
+</div>
+
+<div class="card">
+<h3>Speech Structure</h3>
+<div class="formula-box"><strong>Opening</strong><div class="formula">Greeting → Hook → Establish credibility → Preview main points<br>"Good morning. Imagine a world where..."</div></div>
+<div class="formula-box"><strong>Body</strong><div class="formula">3 main points, each developed with evidence, examples, anecdotes<br>Use rhetorical devices: repetition, rule of three, rhetorical questions</div></div>
+<div class="formula-box"><strong>Conclusion</strong><div class="formula">Summarize → Call to action → Memorable closing line<br>"So I ask you today..."</div></div>
+<p><strong>Techniques:</strong> Direct address ("you"), anaphora (repetition), emotive language, inclusive pronouns ("we"), contrast, humor.</p>
+</div>
+
+<div class="card">
+<h3>Feature Article Structure</h3>
+<div class="formula-box"><strong>Headline</strong><div class="formula">Catchy, informative title (often includes wordplay or intrigue)</div></div>
+<div class="formula-box"><strong>Introduction</strong><div class="formula">Engaging lead paragraph - anecdote, startling fact, or vivid description</div></div>
+<div class="formula-box"><strong>Body</strong><div class="formula">Develop topic with varied paragraphs: facts, quotes, examples, analysis<br>Use subheadings for structure</div></div>
+<div class="formula-box"><strong>Conclusion</strong><div class="formula">Circle back to opening, leave reader with insight or question</div></div>
+<p><strong>Tone:</strong> Engaging, accessible, informative. Mix facts with opinion/reflection.</p>
+</div>
+
+<div class="card">
+<h3>PCLM Analysis Framework (For Comprehending Questions)</h3>
+<div class="formula-box"><strong>P - Point</strong><div class="formula">State your point clearly and directly.</div></div>
+<div class="formula-box"><strong>C - Context</strong><div class="formula">Quote or reference the text specifically.</div></div>
+<div class="formula-box"><strong>L - Language</strong><div class="formula">Identify the technique used (metaphor, imagery, tone, etc.)</div></div>
+<div class="formula-box"><strong>M - Meaning</strong><div class="formula">Explain the effect/significance. Connect to the question.</div></div>
+<p><strong>Example:</strong> "Atwood uses humor to engage her audience (P). She states she's 'older than Donald Trump - and better looking!' (C). This self-deprecating humor and contrast (L) immediately establishes rapport with young listeners and shows she doesn't take herself too seriously (M)."</p>
+</div>
+</div>
+
+<!-- GLOSSARY TAB -->
+<div id="tab-glossary" class="tab-content">
+<div class="card">
+<h2>Literary Terms & Techniques Glossary</h2>
+<p>Search for any term. Essential vocabulary for analyzing texts and writing compositions.</p>
+<input type="text" class="glossary-search" id="glossarySearch" placeholder="Search terms..." oninput="filterGlossary()">
+</div>
+<div id="glossaryList">
+<dl>
+<div class="glossary-item"><dt>Metaphor</dt><dd>A figure of speech that describes something by saying it IS something else. Creates direct comparison without 'like' or 'as'. Example: "The earth is a mother waiting for her children to return."</dd></div>
+<div class="glossary-item"><dt>Simile</dt><dd>A comparison using 'like' or 'as'. Example: "Africa from space looks like a Turner painting."</dd></div>
+<div class="glossary-item"><dt>Personification</dt><dd>Giving human qualities to non-human things. Example: "The way the planet seems to breathe, an animal unto itself."</dd></div>
+<div class="glossary-item"><dt>Imagery</dt><dd>Vivid descriptive language that appeals to the senses (sight, sound, touch, taste, smell). Creates mental pictures for the reader.</dd></div>
+<div class="glossary-item"><dt>Tone</dt><dd>The writer's attitude toward the subject or audience. Can be serious, humorous, sarcastic, optimistic, pessimistic, etc.</dd></div>
+<div class="glossary-item"><dt>Diction</dt><dd>Word choice. Formal vs informal, technical vs accessible, emotive vs neutral. The specific words a writer selects.</dd></div>
+<div class="glossary-item"><dt>Syntax</dt><dd>Sentence structure. How words and phrases are arranged. Can be simple, complex, fragmented, repetitive, varied.</dd></div>
+<div class="glossary-item"><dt>Anaphora</dt><dd>Repetition of a word or phrase at the beginning of successive clauses or sentences. Example: "Once, there were no avocadoes... Once, children were taught to duck... Once, there was a world war..."</dd></div>
+<div class="glossary-item"><dt>Rhetorical Question</dt><dd>A question asked for effect, not requiring an answer. Used to make the audience think or to emphasize a point.</dd></div>
+<div class="glossary-item"><dt>Rule of Three</dt><dd>Listing three elements for emphasis and rhythm. Example: "inspiring visionaries, scientists, inventors, entrepreneurs, funders, policy makers, on-the-ground organisers."</dd></div>
+<div class="glossary-item"><dt>Juxtaposition</dt><dd>Placing two contrasting ideas/images side by side for effect. Highlights differences.</dd></div>
+<div class="glossary-item"><dt>Contrast</dt><dd>Emphasizing differences between two things, ideas, or time periods. Used to highlight change or opposing viewpoints.</dd></div>
+<div class="glossary-item"><dt>Alliteration</dt><dd>Repetition of initial consonant sounds in neighboring words. Example: "plucky chancer."</dd></div>
+<div class="glossary-item"><dt>Emotive Language</dt><dd>Words chosen to provoke an emotional response. Loaded with feeling or judgment.</dd></div>
+<div class="glossary-item"><dt>Hyperbole</dt><dd>Deliberate exaggeration for emphasis or effect. Example: "I haven't yet killed off every single character in them."</dd></div>
+<div class="glossary-item"><dt>Irony</dt><dd>Saying one thing but meaning another, or when the outcome is opposite to what's expected. Can be verbal, situational, or dramatic.</dd></div>
+<div class="glossary-item"><dt>First-Person Narrative</dt><dd>Story told from the perspective of "I" or "we". The narrator is a character in the story.</dd></div>
+<div class="glossary-item"><dt>Third-Person Narrative</dt><dd>Story told from an outside perspective using "he", "she", "they". Can be omniscient (all-knowing) or limited.</dd></div>
+<div class="glossary-item"><dt>Omniscient Narrator</dt><dd>A narrator who knows everything about all characters and events. Can enter any character's mind.</dd></div>
+<div class="glossary-item"><dt>Foreshadowing</dt><dd>Hints or clues about what will happen later in the narrative. Builds anticipation.</dd></div>
+<div class="glossary-item"><dt>Flashback</dt><dd>Interruption of chronological narrative to show events from the past.</dd></div>
+<div class="glossary-item"><dt>Symbolism</dt><dd>Using an object, character, or event to represent something deeper or more abstract. Example: a journey symbolizing personal growth.</dd></div>
+<div class="glossary-item"><dt>Theme</dt><dd>The central idea or underlying message of a text. Universal concepts like love, power, justice, identity.</dd></div>
+<div class="glossary-item"><dt>Motif</dt><dd>A recurring element (image, phrase, idea) that has symbolic significance and helps develop the theme.</dd></div>
+<div class="glossary-item"><dt>Allegory</dt><dd>A narrative where characters and events represent abstract ideas or moral qualities. The story has both literal and symbolic meaning.</dd></div>
+<div class="glossary-item"><dt>Allusion</dt><dd>A reference to another text, historical event, or cultural element. Assumes reader's knowledge.</dd></div>
+<div class="glossary-item"><dt>Analogy</dt><dd>A comparison between two things to explain or clarify. Often used to make complex ideas accessible.</dd></div>
+<div class="glossary-item"><dt>Apostrophe</dt><dd>Directly addressing an absent person, abstract concept, or inanimate object.</dd></div>
+<div class="glossary-item"><dt>Bathos</dt><dd>An abrupt shift from the serious/elevated to the trivial/mundane, often for comic effect.</dd></div>
+<div class="glossary-item"><dt>Dialogue</dt><dd>Conversation between characters. Reveals character, advances plot, provides information.</dd></div>
+<div class="glossary-item"><dt>Euphemism</dt><dd>A mild or indirect word/phrase used instead of something harsh or blunt. Example: "passed away" for "died."</dd></div>
+<div class="glossary-item"><dt>Pathos</dt><dd>Quality that evokes pity, sadness, or compassion in the audience/reader.</dd></div>
+<div class="glossary-item"><dt>Ethos</dt><dd>Appeal to credibility or character. Establishing authority or trustworthiness.</dd></div>
+<div class="glossary-item"><dt>Logos</dt><dd>Appeal to logic and reason. Using facts, statistics, logical arguments.</dd></div>
+<div class="glossary-item"><dt>Oxymoron</dt><dd>Two contradictory words placed together. Example: "bittersweet", "deafening silence."</dd></div>
+<div class="glossary-item"><dt>Paradox</dt><dd>A statement that appears self-contradictory but reveals a deeper truth.</dd></div>
+<div class="glossary-item"><dt>Satire</dt><dd>Use of humor, irony, or exaggeration to criticize or expose flaws, often in society or politics.</dd></div>
+<div class="glossary-item"><dt>Stream of Consciousness</dt><dd>Narrative technique that presents thoughts and feelings as they occur, without conventional structure.</dd></div>
+<div class="glossary-item"><dt>Understatement</dt><dd>Deliberately representing something as less important or serious than it is, often for ironic effect.</dd></div>
+<div class="glossary-item"><dt>Vernacular</dt><dd>Everyday language of a particular region or group. Informal, conversational speech.</dd></div>
+<div class="glossary-item"><dt>Climax</dt><dd>The turning point or moment of greatest tension in a narrative. The peak of the action.</dd></div>
+<div class="glossary-item"><dt>Denouement</dt><dd>The resolution or unraveling of the plot after the climax. Loose ends are tied up.</dd></div>
+<div class="glossary-item"><dt>Protagonist</dt><dd>The main character or hero of a story. The character the reader typically follows.</dd></div>
+<div class="glossary-item"><dt>Antagonist</dt><dd>The character or force that opposes the protagonist. Creates conflict.</dd></div>
+<div class="glossary-item"><dt>Foil</dt><dd>A character who contrasts with another character (usually the protagonist) to highlight particular qualities.</dd></div>
+<div class="glossary-item"><dt>Genre</dt><dd>A category of literature characterized by particular style, form, or content. Example: tragedy, comedy, romance, dystopia.</dd></div>
+<div class="glossary-item"><dt>Internal Conflict</dt><dd>Psychological struggle within a character's mind. Character vs self.</dd></div>
+<div class="glossary-item"><dt>External Conflict</dt><dd>Struggle between character and outside force. Character vs character, society, nature, or fate.</dd></div>
+</dl>
+</div>
+</div>
+
+<!-- MARK SCHEME DECODER TAB -->
+<div id="tab-marks" class="tab-content">
+<div class="card">
+<h2>Mark Scheme Decoder</h2>
+<p>Understanding how English examiners award marks is crucial for maximizing your score.</p>
+</div>
+
+<div class="card">
+<h3>Paper 1 - Section I: Comprehending (100 marks)</h3>
+<div class="mark-info"><strong>Question A Structure (50 marks)</strong> - Three parts: (i) 15 marks, (ii) 15 marks, (iii) 20 marks</div>
+<div class="mark-info"><strong>Part (i) - Insights from text (15 marks)</strong> - Make THREE points. Each point with supporting reference = 5 marks. Must quote or reference the text specifically.</div>
+<div class="mark-info"><strong>Part (ii) - Personal response (15 marks)</strong> - Develop TWO points minimum. Each point = ~7-8 marks. Must show clear personal engagement with the question.</div>
+<div class="mark-info"><strong>Part (iii) - Language analysis (20 marks)</strong> - Discuss FOUR elements of style. Each element analyzed = 5 marks. Must NAME the technique and explain its EFFECT.</div>
+</div>
+
+<div class="card">
+<h3>Paper 1 - Section I: Question B (50 marks)</h3>
+<div class="mark-info"><strong>Functional Writing Task</strong> - You're writing in a specific role (team captain, hotel manager, podcast contributor). Marks awarded for:</div>
+<div class="mark-info"><strong>Content & Purpose (25 marks)</strong> - Addressing all bullet points, staying in role, achieving the purpose.</div>
+<div class="mark-info"><strong>Coherence & Structure (15 marks)</strong> - Logical organization, paragraph structure, transitions.</div>
+<div class="mark-info"><strong>Language & Style (10 marks)</strong> - Appropriate tone, vocabulary, sentence variety, technical accuracy.</div>
+<p><strong>Key point:</strong> You MUST address ALL the bullet points given in the question. Missing one = significant mark loss.</p>
+</div>
+
+<div class="card">
+<h3>Paper 1 - Section II: Composing (100 marks)</h3>
+<div class="mark-info"><strong>Clarity of Purpose (P) - 30 marks</strong> - How well you understand and fulfill the task (essay, speech, story, etc.). Clear focus and sustained engagement.</div>
+<div class="mark-info"><strong>Coherence of Delivery (C) - 30 marks</strong> - Structure, organization, logical flow. Introduction, development, conclusion. Paragraphing.</div>
+<div class="mark-info"><strong>Efficiency of Language Use (L) - 30 marks</strong> - Vocabulary, sentence structure, style, tone appropriate to task. Sophistication and variety.</div>
+<div class="mark-info"><strong>Accuracy of Mechanics (M) - 10 marks</strong> - Spelling, grammar, punctuation. Consistent tense. Technical correctness.</div>
+<p><strong>PCLM breakdown:</strong> Each category is marked independently. A piece with brilliant ideas but poor structure won't score full marks.</p>
+</div>
+
+<div class="card">
+<h3>Paper 2 - Section I: Single Text (60 marks)</h3>
+<div class="mark-info"><strong>Relevance & Insight (15 marks)</strong> - Direct engagement with the question, depth of understanding, original thought.</div>
+<div class="mark-info"><strong>Argument & Support (30 marks)</strong> - Quality of points, use of textual evidence (quotes/references), development of ideas.</div>
+<div class="mark-info"><strong>Language & Style (10 marks)</strong> - Clarity, vocabulary, sentence structure, literary terminology.</div>
+<div class="mark-info"><strong>Mechanics (5 marks)</strong> - Spelling, grammar, punctuation.</div>
+<p><strong>Note:</strong> Two questions per text - often one on power/themes, one on literary techniques & credibility.</p>
+</div>
+
+<div class="card">
+<h3>Paper 2 - Section II: Comparative Study (70 marks)</h3>
+<div class="mark-info"><strong>Part (a) - 30 marks</strong> - Depth of engagement with ONE text. Clear understanding of the mode (Theme, Cultural Context, or General Vision).</div>
+<div class="mark-info"><strong>Part (b) - 40 marks</strong> - Comparison of TWO other texts. Must explicitly COMPARE (similarities/differences), not just describe each separately.</div>
+<p><strong>Comparison markers award extra marks:</strong> "Similarly...", "In contrast...", "While Text A..., Text B...", "Both texts show..."</p>
+<div class="mark-info"><strong>Mode-specific focus required:</strong> Theme/Issue questions focus on central ideas. Cultural Context questions focus on societal norms and values. General Vision questions focus on overall outlook (optimistic/pessimistic).</div>
+</div>
+
+<div class="card">
+<h3>Paper 2 - Section III: Poetry (70 marks total)</h3>
+<div class="mark-info"><strong>A. Unseen Poem (20 marks)</strong> - Either Question 1 (two parts: mood description 10 marks + title evaluation 10 marks) OR Question 2 (single question on language use 20 marks).</div>
+<div class="mark-info"><strong>B. Prescribed Poetry (50 marks)</strong> - Answer on ONE poet studied. Must discuss MULTIPLE poems. Marks for: relevance to question (10), quality of argument with textual support (30), language & style (7), mechanics (3).</div>
+<p><strong>Poetry technique terminology essential:</strong> Enjambment, caesura, assonance, consonance, meter, stanza structure, volta, etc.</p>
+</div>
+
+<div class="card">
+<h3>Golden Rules for Maximum Marks</h3>
+<div class="explain"><strong>1. Use the PCLM structure.</strong> Point → Context (quote) → Language (technique name) → Meaning (effect/significance). This hits all marking criteria.</div>
+<div class="explain"><strong>2. Quote intelligently.</strong> Short, integrated quotes work best. "The writer describes X as 'Y'" earns more marks than copying paragraphs without analysis.</div>
+<div class="explain"><strong>3. Name the technique.</strong> Don't say "nice language" - say "metaphor", "emotive diction", "anaphora", "contrast". Shows literary knowledge.</div>
+<div class="explain"><strong>4. Answer the question directly.</strong> If asked "To what extent...?", state your position clearly. Don't waffle or avoid committing.</div>
+<div class="explain"><strong>5. Develop your points fully.</strong> One well-developed point with evidence > three superficial points without support.</div>
+<div class="explain"><strong>6. Address ALL bullet points.</strong> In Question B (functional writing), every bullet point must be covered. Missing one loses major marks.</div>
+<div class="explain"><strong>7. Compare explicitly in Comparative.</strong> Use comparison language. Don't write separate essays on each text.</div>
+<div class="explain"><strong>8. Use literary terminology.</strong> Shows sophistication. First-person narrative, omniscient narrator, foreshadowing, juxtaposition, etc.</div>
+<div class="explain"><strong>9. Plan before writing.</strong> 10 minutes planning your composition saves time and earns more marks. Structure matters.</div>
+<div class="explain"><strong>10. Proofread.</strong> 5 minutes checking spelling, grammar, clarity. Cross out mistakes neatly. Mechanics marks matter.</div>
+</div>
+</div>
+
+<!-- STUDY TAB -->
+<div id="tab-study" class="tab-content active">
+<div class="card">
+<h2>Paper Walkthroughs</h2>
+<p>Select a section to see detailed breakdowns and strategies from the 2025 papers.</p>
+</div>
+<div class="question-nav" id="studyNav">
+<button class="active" onclick="showQuestion('p1-text1','english')">P1: Text 1</button>
+<button onclick="showQuestion('p1-text2','english')">P1: Text 2</button>
+<button onclick="showQuestion('p1-text3','english')">P1: Text 3</button>
+<button onclick="showQuestion('p1-composing','english')">P1: Composing</button>
+<button onclick="showQuestion('p2-single','english')">P2: Single Text</button>
+<button onclick="showQuestion('p2-comparative','english')">P2: Comparative</button>
+<button onclick="showQuestion('p2-poetry','english')">P2: Poetry</button>
+</div>
+
+<!-- PAPER 1: TEXT 1 - UNDERDOG EFFECT -->
+<div class="q-section active" id="q-p1-text1">
+<div class="card">
+<h2>Paper 1 - Text 1: The Underdog Effect <span class="marks-badge">50 marks</span></h2>
+<p><strong>Source:</strong> "The Underdog's Surprising Appeal" by David Robson (BBC Essential, 4 August 2024)</p>
+<p><strong>Theme:</strong> How the "underdog effect" influences our perspectives - why we support disadvantaged competitors.</p>
+
+<h3>Key Points from Text 1</h3>
+<div class="explain"><strong>Main Idea:</strong> We're psychologically drawn to support underdogs - those with odds stacked against them - even when it contradicts our desire for status and success.</div>
+<div class="explain"><strong>Evidence Cited:</strong> Jamaican bobsled team (1988 Olympics), Donald Trump's 2016 campaign, Vandello's medal study (75% preferred country with fewer medals), sports team wealth experiment.</div>
+<div class="explain"><strong>Key Finding:</strong> The underdog effect depends on perception of GENUINE disadvantage. If disadvantage comes from wealth or resources, sympathy disappears.</div>
+<div class="explain"><strong>Psychological Explanation:</strong> We have heightened empathy for low-power individuals. We perceive high-power individuals as "colder". We assume underdogs work harder, making them more likeable.</div>
+<div class="explain"><strong>Applications:</strong> Politics, justice decisions, conflict resolution, sports, personal inspiration ("anything is possible with hard work").</div>
+</div>
+
+<div class="card">
+<h3>Question A - Part (i) <span class="marks-badge">15 marks</span></h3>
+<p><strong>Q:</strong> Based on your reading of TEXT 1, what insights do you gain about how the 'underdog effect' can influence our perspectives? Make three points, supporting your response with reference to the text.</p>
+
+<div class="working"><strong>Sample Answer Structure (3 points × 5 marks each):</strong></div>
+
+<div class="explain">
+<strong>Point 1:</strong> The underdog effect reveals that we often prefer emotional connection over logical self-interest when choosing who to support.<br>
+<strong>Context:</strong> The text notes that supporting underdogs "sits rather uncomfortably with humankind's known fixation on status and prestige" - logically we should align with likely winners "so that we can bask in their glory."<br>
+<strong>Insight:</strong> This shows our perspectives are shaped more by empathy and emotional response than rational calculation of benefits. [5 marks]
+</div>
+
+<div class="explain">
+<strong>Point 2:</strong> Our perception of justice and fairness fundamentally shapes our loyalties and support.<br>
+<strong>Context:</strong> Vandello's research showed the underdog effect "shrank if they found that the team was awash with cash" - disadvantage must come from "genuine weakness" not lack of effort.<br>
+<strong>Insight:</strong> We don't support ALL disadvantaged parties equally - our perspective is influenced by whether we perceive the disadvantage as unjust or self-inflicted. [5 marks]
+</div>
+
+<div class="explain">
+<strong>Point 3:</strong> The underdog effect shows we project our own aspirations onto others' struggles.<br>
+<strong>Context:</strong> The text explains we "often draw personal inspiration from these stories, which 'highlight that anything is possible with hard work and determination.'"<br>
+<strong>Insight:</strong> Our perspective is shaped by seeing ourselves in the underdog's position - their potential success represents hope for our own challenges. [5 marks]
+</div>
+</div>
+
+<div class="card">
+<h3>Question A - Part (ii) <span class="marks-badge">15 marks</span></h3>
+<p><strong>Q:</strong> To what extent do you agree with the writer's claim, in TEXT 1, that humankind has a "fixation on status and prestige"? Develop at least two points in your response.</p>
+
+<div class="working"><strong>Sample Answer Structure (2+ points, ~7-8 marks each):</strong></div>
+
+<div class="explain">
+<strong>Approach:</strong> State your position clearly (agree/disagree/qualified agreement), then develop with personal reflection, examples, counter-arguments.
+</div>
+
+<div class="explain">
+<strong>Point 1 - Agreement:</strong> Social media demonstrates our obsession with status. Platforms like Instagram and TikTok are built entirely around follower counts, likes, and visible markers of success. People curate perfect lives to project prestige. This supports Robson's claim - we ARE fixated on status.<br>[7-8 marks for development with specific examples]
+</div>
+
+<div class="explain">
+<strong>Point 2 - Counter-argument:</strong> However, the very existence of the underdog effect contradicts this fixation. If we were truly obsessed with status, we'd only support winners. The fact that 75% of study participants preferred countries with FEWER medals shows something more complex than simple prestige-seeking. Perhaps we're conflicted - wanting status but also valuing authenticity, effort, and justice.<br>[7-8 marks for developed counter-argument]
+</div>
+</div>
+
+<div class="card">
+<h3>Question A - Part (iii) <span class="marks-badge">20 marks</span></h3>
+<p><strong>Q:</strong> "In TEXT 1, David Robson uses elements of language that are effective in making this article both informative and thought-provoking." To what extent do you agree with this statement? Support your answer with reference to four elements of Robson's style from the text.</p>
+
+<div class="working"><strong>Sample Answer Structure (4 elements × 5 marks each):</strong></div>
+
+<div class="explain">
+<strong>Element 1 - Concrete Examples:</strong> Robson grounds abstract psychological concepts in recognizable examples - "From fairy tale's Cinderella and fictional boxer Rocky, to real-world activist Erin Brockovich." This makes complex ideas accessible and informative by connecting them to cultural touchstones readers know. The mix of fiction and reality is thought-provoking as it shows the effect spans both worlds. [5 marks]
+</div>
+
+<div class="explain">
+<strong>Element 2 - Scientific Evidence:</strong> Robson cites specific research with precise data: "75% preferred the team with the fewer medals." This statistical specificity makes the article informative and credible. The unexpected nature of the finding (three-quarters!) is thought-provoking - it challenges assumptions about human behavior. [5 marks]
+</div>
+
+<div class="explain">
+<strong>Element 3 - Rhetorical Questions:</strong> He poses questions readers likely ask themselves: "Why would we willingly put ourselves through disappointment by supporting the 'back runner'?" This technique is thought-provoking as it engages readers directly, while the subsequent answer is informative. The question-answer structure creates a conversational, accessible tone. [5 marks]
+</div>
+
+<div class="explain">
+<strong>Element 4 - Contrasting Ideas:</strong> Robson juxtapositions expectations against reality - the underdog effect "sits rather uncomfortably with humankind's known fixation on status and prestige." This contrast is thought-provoking because it highlights paradoxes in human nature, while informatively explaining the tension between competing psychological drives. [5 marks]
+</div>
+</div>
+
+<div class="card">
+<h3>Question B <span class="marks-badge">50 marks</span></h3>
+<p><strong>Task:</strong> You are the captain of a school's sports team, about to compete as the underdogs in the final of a national competition. Write the text of the pre-match team-talk you would deliver.</p>
+<p><strong>Must include:</strong></p>
+<ul>
+<li>Outline aspects of the game plan you'll employ on the field</li>
+<li>Remind them of the strengths and weaknesses of your opponents</li>
+<li>Motivate them to overcome the odds and achieve victory</li>
+</ul>
+
+<div class="working"><strong>Sample Opening:</strong></div>
+<div class="explain">
+"Listen up, team. Gather round. I know what everyone's been saying all week - we're the underdogs. We shouldn't even be here. They've got the bigger budget, the fancier facilities, the star players everyone's heard of. But you know what? That's exactly why we're going to win today..."
+</div>
+
+<div class="working"><strong>Structure Tips:</strong></div>
+<div class="explain"><strong>1. Acknowledge underdog status</strong> - Show you understand the challenge but reframe it as an advantage (no pressure, element of surprise, motivation).</div>
+<div class="explain"><strong>2. Game plan specifics</strong> - Describe actual tactics: "We'll press high in the first 20 minutes while they're overconfident... focus on quick transitions... exploit their weak left side..."</div>
+<div class="explain"><strong>3. Opponent analysis</strong> - "Their striker is fast but predictable - always cuts inside. Their defense is solid but slow to turn. They expect us to sit back - we won't."</div>
+<div class="explain"><strong>4. Emotional appeal</strong> - Reference shared struggles, past victories, belief in each other. Use "we" language. Build to crescendo.</div>
+<div class="explain"><strong>5. Call to action</strong> - End with specific, actionable instruction and rallying cry: "So when that whistle blows, we hit them with everything we've got. Are you ready?"</div>
+</div>
+</div>
+
+<!-- PAPER 1: TEXT 2 - MARGARET ATWOOD -->
+<div class="q-section" id="q-p1-text2">
+<div class="card">
+<h2>Paper 1 - Text 2: Margaret Atwood Speech <span class="marks-badge">50 marks</span></h2>
+<p><strong>Source:</strong> Speech at One Young World Congress, Montreal, September 2024</p>
+<p><strong>Theme:</strong> A "wise old counsellor" offers advice and perspective on world problems to young people.</p>
+
+<h3>Key Points from Text 2</h3>
+<div class="explain"><strong>Tone:</strong> Humorous, self-deprecating, yet ultimately serious and inspiring. Atwood uses comedy to engage before delivering weighty messages.</div>
+<div class="explain"><strong>Opening Strategy:</strong> Jokes about age, dystopian novels, naps after lunch. Establishes rapport and shows she doesn't take herself too seriously.</div>
+<div class="explain"><strong>Historical Perspective:</strong> "Cheer up, it's been worse." References French Revolution, World War II, bubonic plague, atomic bomb drills. Message: humanity has survived catastrophes before.</div>
+<div class="explain"><strong>Current Challenges:</strong> Climate change as the "worst one now" - brings wildfires, floods, droughts, migration. Also mentions old problems: wars, economic inequality, authoritarian regimes.</div>
+<div class="explain"><strong>Solutions Focus:</strong> Highlights innovations already underway: marine parks, mushrooms that eat plastic, hydrogen fuels, new foods. Emphasizes THREE requirements: lower carbon, affordability, attractiveness.</div>
+<div class="explain"><strong>Call to Action:</strong> "All beneficial actions must be local and grounded" BUT must also scale internationally. Requires collaboration: "indigenous peoples, scientists, inventors, entrepreneurs, funders, policy makers."</div>
+<div class="explain"><strong>Closing:</strong> "Go. For. It." - Direct, emphatic, optimistic command.</div>
+</div>
+
+<div class="card">
+<h3>Question A - Part (i) <span class="marks-badge">15 marks</span></h3>
+<p><strong>Q:</strong> Based on your reading of TEXT 2 what insights do you gain about Margaret Atwood's perspective on current world problems? Make three points, supporting your response with reference to the text.</p>
+
+<div class="working"><strong>Sample Answer Structure:</strong></div>
+
+<div class="explain">
+<strong>Point 1:</strong> Atwood believes current crises should be contextualized within human history rather than viewed in isolation.<br>
+<strong>Context:</strong> She emphasizes "Cheer up, it's been worse" and lists historical catastrophes - world wars that "killed an estimated 80 million people" and plagues that "killed half the population of Europe."<br>
+<strong>Insight:</strong> Her perspective is that while problems are serious, humanity has proven resilient. Historical context prevents despair. [5 marks]
+</div>
+
+<div class="explain">
+<strong>Point 2:</strong> She views climate change as fundamentally different from past problems because it creates cascading, interconnected challenges.<br>
+<strong>Context:</strong> She calls climate change "the worst one now" and shows how it brings "whirlwind wildfires, floods, soil erosion, violent winds, droughts, bad harvests" and "human migration on a vast scale."<br>
+<strong>Insight:</strong> Unlike isolated historical catastrophes, this crisis is systemic - one problem triggers multiple others. Her perspective emphasizes interconnectedness. [5 marks]
+</div>
+
+<div class="explain">
+<strong>Point 3:</strong> Atwood believes solutions exist but require both innovation AND pragmatism to succeed.<br>
+<strong>Context:</strong> She lists innovations but stresses they must be "cheap enough so that many, many people will be able to deploy them" and "attractive enough so people will want to actually use them."<br>
+<strong>Insight:</strong> Her perspective is realistic - she knows brilliant ideas fail if they're unaffordable or unappealing. Real-world implementation matters more than theoretical perfection. [5 marks]
+</div>
+</div>
+
+<div class="card">
+<h3>Question A - Part (iii) <span class="marks-badge">20 marks</span></h3>
+<p><strong>Q:</strong> "In TEXT 2, Margaret Atwood uses elements of language that are effective in making this speech both engaging and inspiring." To what extent do you agree with this statement? Support your answer with reference to four elements of Atwood's style from the text.</p>
+
+<div class="working"><strong>Sample Answer Structure:</strong></div>
+
+<div class="explain">
+<strong>Element 1 - Self-Deprecating Humor:</strong> Atwood immediately engages the audience with jokes: "I'm older than Donald Trump - and better looking!" and "One day you will have to take naps after lunch. So, cherish the moment." This humor is engaging because it's unexpected from a literary icon, and inspiring because it shows humility - she positions herself as approachable rather than superior. [5 marks]
+</div>
+
+<div class="explain">
+<strong>Element 2 - Anaphora (Repetition):</strong> She uses powerful repetition with "Once..." to list historical hardships: "Once, there were no avocadoes... Once, children were taught to duck... Once, there was a world war..." This repetition is engaging rhythmically - it builds momentum like a drumbeat - and inspiring because the implicit message is "those times passed, these will too." [5 marks]
+</div>
+
+<div class="explain">
+<strong>Element 3 - Concrete Examples:</strong> Rather than abstract discussion, Atwood lists specific innovations: "mushrooms that eat plastics", "organic fibres made from sea algae, bamboo, and bananas", "chia seeds in 1955." These concrete details are engaging because they're surprising and memorable, and inspiring because they prove solutions are REAL and happening now, not theoretical. [5 marks]
+</div>
+
+<div class="explain">
+<strong>Element 4 - Direct Address:</strong> She speaks directly to the audience: "You yourselves will know", "you've got the energy and optimism", "I'm very much looking forward to seeing what you'll come up with." This second-person address is engaging because it creates intimacy and conversation rather than lecture, and inspiring because it explicitly expresses belief in their capabilities. [5 marks]
+</div>
+</div>
+
+<div class="card">
+<h3>Question B <span class="marks-badge">50 marks</span></h3>
+<p><strong>Task:</strong> You are a hotel manager. A recent, disgruntled guest has left a highly critical review on a travel-review website. Write your online response.</p>
+<p><strong>Must include:</strong></p>
+<ul>
+<li>Outline the proud tradition and history of your establishment</li>
+<li>Challenge the specific criticisms of the guest reviewer</li>
+<li>Encourage the reviewer to return by highlighting upcoming events in your hotel and its locality</li>
+</ul>
+
+<div class="working"><strong>Sample Structure:</strong></div>
+<div class="explain"><strong>Opening:</strong> Thank them for feedback (professional tone), acknowledge their disappointment, introduce hotel history naturally.</div>
+<div class="explain"><strong>History:</strong> "The Grand Harbour Hotel has welcomed guests since 1887, earning our reputation through..." - brief but proud, not defensive.</div>
+<div class="explain"><strong>Address Criticisms:</strong> Be specific. If they complained about noise: "I was surprised to read about noise disturbance as our rooms were renovated in 2023 with soundproofing..." Challenge factually, not emotionally.</div>
+<div class="explain"><strong>Invite Return:</strong> "I would love the opportunity to restore your faith in our service. This summer we're hosting..." - list specific events, special offers, local attractions.</div>
+<div class="explain"><strong>Tone:</strong> Professional, courteous, confident but not arrogant. Acknowledge without groveling. Focus on solutions.</div>
+</div>
+</div>
+
+<!-- PAPER 1: TEXT 3 - ORBITAL -->
+<div class="q-section" id="q-p1-text3">
+<div class="card">
+<h2>Paper 1 - Text 3: Planet Earth from Space <span class="marks-badge">50 marks</span></h2>
+<p><strong>Source:</strong> Extracts from Samantha Harvey's novel "Orbital" (2024)</p>
+<p><strong>Theme:</strong> Six astronauts in a spacecraft observe Earth from space - perspective shift from viewing the planet from outside.</p>
+
+<h3>Key Points from Text 3</h3>
+<div class="explain"><strong>Setting:</strong> H-shaped spacecraft, six astronauts (American, Japanese, British, Italian, two Russian), orbiting Earth, nine-month mission.</div>
+<div class="explain"><strong>Initial Attraction:</strong> Night views - "gorgeous encrusting of city lights", "thick embroidered urban tapestries", electric excess. Can point to home cities.</div>
+<div class="explain"><strong>Perspective Shift:</strong> "After a week or so" they come to love the daytime earth - "humanless simplicity of land and sea", "the way the planet seems to breathe, an animal unto itself."</div>
+<div class="explain"><strong>Key Imagery:</strong> Earth as mother ("Mother Earth... waiting for her children to return"), as lover ("exulted lover"), as miracle ("suspended jewel so bright").</div>
+<div class="explain"><strong>Unity Message:</strong> At night, only ONE man-made border visible (Pakistan-India). "By day even that has gone." Shows Earth's natural unity despite human divisions.</div>
+<div class="explain"><strong>Emotional Response:</strong> "A desire takes hold... the need (fuelled by fervour) - to protect this huge yet tiny earth." Seeing Earth's fragility inspires protective instinct.</div>
+<div class="explain"><strong>Future Perspective:</strong> Roman contemplates space station ending through "restless spirit of endeavour" - "Striking out, further and deeper. The moon, Mars." Human nature: "not made to stand still."</div>
+</div>
+
+<div class="card">
+<h3>Question B <span class="marks-badge">50 marks</span></h3>
+<p><strong>Task:</strong> You are a contributor to a podcast entitled "Eyes Wide Open" where you reflect on how your perspective on a significant issue changed as a result of an experience or encounter.</p>
+<p><strong>Must include:</strong></p>
+<ul>
+<li>Identify the issue and explain your previous attitude towards it</li>
+<li>Describe the experience or encounter that changed your perspective</li>
+<li>Consider some of the life lessons that you and others can learn from this reflection</li>
+</ul>
+
+<div class="working"><strong>Sample Structure:</strong></div>
+<div class="explain"><strong>Opening:</strong> "Welcome back to Eyes Wide Open. I'm [name], and today I want to talk about the moment I realized..." - podcast tone, conversational.</div>
+<div class="explain"><strong>The Issue:</strong> Choose something meaningful - climate change, homelessness, mental health, immigration, technology addiction. State your previous view clearly: "I used to think... I believed... My attitude was..."</div>
+<div class="explain"><strong>The Experience:</strong> Tell the story vividly. Use sensory details. Build to the moment of realization. "That's when it hit me..." Make it personal and specific.</div>
+<div class="explain"><strong>Life Lessons:</strong> Extract broader wisdom: "What I learned is...", "The lesson here is...", "If there's one thing listeners can take away..." Connect personal experience to universal truths.</div>
+<div class="explain"><strong>Closing:</strong> "So that's my story. Thanks for listening to Eyes Wide Open. I'd love to hear about your perspective-changing moments..." - podcast sign-off.</div>
+</div>
+</div>
+
+<!-- PAPER 1: COMPOSING OPTIONS -->
+<div class="q-section" id="q-p1-composing">
+<div class="card">
+<h2>Paper 1 - Section II: Composing Options <span class="marks-badge">100 marks</span></h2>
+<p>Choose ONE composition from seven options. All compositions are marked using PCLM criteria (Purpose 30, Coherence 30, Language 30, Mechanics 10).</p>
+
+<h3>The Seven Options (2025 Paper)</h3>
+
+<div class="explain">
+<strong>1. Discursive Essay:</strong> "Consider the power and value of both printed and digital photographic images today."<br>
+<strong>Approach:</strong> Explore both types. Printed photos = tangible, permanent, curated. Digital = instant, shareable, abundant. Argue which has more value or how they serve different purposes.
+</div>
+
+<div class="explain">
+<strong>2. Speech:</strong> For/against the motion: "Truth has become a valueless currency in today's world."<br>
+<strong>Approach:</strong> Strong opening, clear position, 3-4 developed arguments, rhetorical devices (repetition, rhetorical questions, anecdotes), call to action. Address audience directly.
+</div>
+
+<div class="explain">
+<strong>3. Short Story:</strong> "A 'plucky chancer' challenges a more privileged or established opponent."<br>
+<strong>Approach:</strong> Create vivid characters, build tension, show the challenge through action/dialogue, resolve with impact. Clear underdog narrative. Show don't tell.
+</div>
+
+<div class="explain">
+<strong>4. Personal Essay:</strong> "Reflect on some of the disappointments you have experienced and the impact they have had on you."<br>
+<strong>Approach:</strong> Honest, reflective tone. Choose 2-3 specific disappointments. Show growth/learning. Balance vulnerability with insight. Avoid self-pity - focus on understanding.
+</div>
+
+<div class="explain">
+<strong>5. Feature Article:</strong> "'A love letter to Ireland' - explore reasons to view contemporary Irish society through an optimistic lens."<br>
+<strong>Approach:</strong> Catchy headline, engaging opening, mix of facts and opinion, varied paragraphs, conversational but informative tone. Celebrate specific aspects of Irish life/culture/progress.
+</div>
+
+<div class="explain">
+<strong>6. Personal Essay:</strong> "Reflect on factors that would influence your voting intentions in future elections."<br>
+<strong>Approach:</strong> Identify 3-4 key factors (policies, character, vision, track record). Explain WHY each matters to you. Show political awareness without being partisan. Balance idealism and pragmatism.
+</div>
+
+<div class="explain">
+<strong>7. Short Story:</strong> "An ambitious character whose reckless actions lead to disaster."<br>
+<strong>Approach:</strong> Create compelling protagonist, establish their ambition clearly, show escalation of recklessness, build to catastrophic climax. Tragedy structure. Internal and external conflict.
+</div>
+</div>
+
+<div class="card">
+<h3>Choosing Your Composition</h3>
+<div class="explain"><strong>Play to your strengths.</strong> If you're good at storytelling, choose a short story. If you prefer argument, choose speech or discursive essay. If you like personal reflection, choose personal essay.</div>
+<div class="explain"><strong>Consider the time.</strong> Short stories need careful pacing and editing. Essays can be more straightforward. Speeches need rhetorical flair but clear structure.</div>
+<div class="explain"><strong>Check you can develop 3-4 substantial points.</strong> Before committing, mentally outline your main ideas. If you can only think of 1-2 points, choose a different topic.</div>
+<div class="explain"><strong>Think about language opportunities.</strong> Which task lets you show vocabulary range, varied sentences, sophisticated style? That's how you maximize the Language marks (30).</div>
+</div>
+</div>
+
+<!-- PAPER 2: SINGLE TEXT -->
+<div class="q-section" id="q-p2-single">
+<div class="card">
+<h2>Paper 2 - Section I: The Single Text <span class="marks-badge">60 marks</span></h2>
+<p>Answer ONE question on your studied text. Each text has TWO questions to choose from.</p>
+
+<h3>The Texts (2025)</h3>
+<ul>
+<li>The Tenant of Wildfell Hall - Anne Brontë</li>
+<li>All the Light We Cannot See - Anthony Doerr</li>
+<li>The Crucible - Arthur Miller</li>
+<li>King Lear - William Shakespeare</li>
+<li>Frankenstein - Mary Shelley</li>
+</ul>
+
+<h3>Question Types (Pattern across all texts)</h3>
+
+<div class="explain">
+<strong>Type 1: Power/Justice/Themes Question</strong><br>
+Example: "The world Brontë creates offers readers an opportunity to gain fascinating insights into how power, in different forms, operates in this society."<br>
+<strong>Approach:</strong> Identify different FORMS of power in the text (political, social, economic, gender-based, etc.). Discuss how each operates. Use specific examples and quotes. Show how the text reveals/critiques power dynamics.
+</div>
+
+<div class="explain">
+<strong>Type 2: Literary Techniques & Credibility Question</strong><br>
+Example: "Writers employ a range of literary techniques to heighten the credibility of characters. Choose TWO characters and discuss effectiveness of techniques used."<br>
+<strong>Approach:</strong> Choose characters carefully (complex ones give more to discuss). Identify specific techniques: dialogue, internal monologue, description, actions, relationships, development. Explain how each technique makes the character BELIEVABLE/AUTHENTIC.
+</div>
+
+<div class="card">
+<h3>Sample Question - The Crucible</h3>
+<p><strong>Option (ii):</strong> "Miller's exploration of the conflict between obeying one's conscience or betraying one's conscience reveals a variety of compelling insights into human nature." Discuss.</p>
+
+<div class="working"><strong>Sample Structure:</strong></div>
+<div class="explain"><strong>Introduction:</strong> State your position - agree, show you understand the question. Preview the insights you'll discuss.</div>
+<div class="explain"><strong>Point 1:</strong> John Proctor's arc shows conscience vs survival. His confession recantation - "I have given you my soul; leave me my name!" Shows human need for integrity even at ultimate cost. Reveals we define ourselves by moral choices.</div>
+<div class="explain"><strong>Point 2:</strong> Reverend Hale's journey shows conscience evolution. Initially obeys authority blindly, later tries to save lives even if it means encouraging lies. Reveals conscience isn't fixed - it develops through experience and moral awakening.</div>
+<div class="explain"><strong>Point 3:</strong> Abigail represents conscience suppression. She betrays hers repeatedly but shows no remorse - self-preservation dominates. Reveals how power and self-interest can silence moral voice entirely.</div>
+<div class="explain"><strong>Point 4:</strong> Rebecca Nurse embodies unwavering conscience. Refuses to confess to lies even facing death. Her steadfastness reveals the strength some find in moral certainty and faith.</div>
+<div class="explain"><strong>Conclusion:</strong> Miller shows conscience as battlefield - between self and society, survival and integrity, expediency and principle. Compelling because every character faces this conflict differently.</div>
+</div>
+</div>
+
+<!-- PAPER 2: COMPARATIVE -->
+<div class="q-section" id="q-p2-comparative">
+<div class="card">
+<h2>Paper 2 - Section II: Comparative Study <span class="marks-badge">70 marks</span></h2>
+<p>Answer ONE question from either: A - Theme or Issue, B - Cultural Context, or C - General Vision and Viewpoint.</p>
+<p><strong>IMPORTANT:</strong> Cannot use the text from Section I. Must use texts prescribed for comparative study. Maximum ONE film.</p>
+
+<h3>The Three Modes</h3>
+
+<div class="explain">
+<strong>THEME OR ISSUE:</strong> Focus on central ideas explored across texts. Common themes: power, justice, identity, relationships, ambition, isolation, coming of age, conflict, survival, love, betrayal, truth, freedom.
+</div>
+
+<div class="explain">
+<strong>CULTURAL CONTEXT:</strong> Focus on the society/world of the texts - values, norms, expectations, social structures, attitudes, historical period. How does the cultural context shape characters and events?
+</div>
+
+<div class="explain">
+<strong>GENERAL VISION AND VIEWPOINT:</strong> Focus on the overall outlook/tone - optimistic vs pessimistic, hopeful vs despairing, light vs dark. Is the world presented as fundamentally good or bad? Are characters able to overcome challenges or crushed by them?
+</div>
+
+<h3>Sample Question - Cultural Context</h3>
+<p><strong>2(a):</strong> In ONE text, discuss the extent to which understanding the consequences of not conforming to societal norms influences the behaviour of a central character (30 marks).</p>
+<p><strong>2(b):</strong> In TWO other texts, compare the extent to which this understanding influences behaviour of a central character in each (40 marks).</p>
+
+<div class="working"><strong>Sample Structure:</strong></div>
+
+<div class="explain">
+<strong>Part (a) - 30 marks (ONE TEXT):</strong><br>
+Choose a text where a character faces pressure to conform. Example: In "The Crucible", John Proctor understands that refusing to confess means death, but his internal conflict shows how awareness of consequences (execution vs life) ultimately strengthens rather than weakens his resistance. His behavior shifts from private guilt to public defiance BECAUSE he understands what's at stake - his understanding makes him choose conscience over survival. Develop with quotes, scenes, analysis.
+</div>
+
+<div class="explain">
+<strong>Part (b) - 40 marks (TWO OTHER TEXTS - MUST COMPARE):</strong><br>
+Text 2 example: In "Brave New World", Bernard understands consequences of nonconformity (exile to Iceland) which makes him CAREFUL - he criticizes privately but conforms publicly until forced into open rebellion. CONTRAST with...<br>
+Text 3 example: In "The Great Gatsby", Gatsby completely IGNORES consequences of not conforming to class boundaries - his understanding doesn't influence his behavior because his obsession overrides caution.<br>
+<strong>KEY:</strong> Use comparison language - "Similarly...", "In contrast...", "While Bernard..., Gatsby...", "Both texts show..."
+</div>
+</div>
+
+<div class="card">
+<h3>Comparison Tips</h3>
+<div class="explain"><strong>1. Don't write two separate essays.</strong> Weave texts together. Compare point by point, not text by text.</div>
+<div class="explain"><strong>2. Use comparison markers.</strong> Similarly, in contrast, both, whereas, while, however, likewise, unlike, just as.</div>
+<div class="explain"><strong>3. Find meaningful connections.</strong> Look for similarities AND differences. The most interesting comparisons show nuance.</div>
+<div class="explain"><strong>4. Stay focused on the mode.</strong> Theme questions need theme focus. Cultural Context questions need society focus. Don't drift between modes.</div>
+<div class="explain"><strong>5. Quote from all texts.</strong> Show detailed knowledge of each. Short, integrated quotes work best.</div>
+</div>
+</div>
+
+<!-- PAPER 2: POETRY -->
+<div class="q-section" id="q-p2-poetry">
+<div class="card">
+<h2>Paper 2 - Section III: Poetry <span class="marks-badge">70 marks total</span></h2>
+<p>Must answer BOTH parts: A - Unseen Poem (20 marks) and B - Prescribed Poetry (50 marks).</p>
+
+<h3>Part A: Unseen Poem (20 marks)</h3>
+<p><strong>2025 Unseen Poem:</strong> "As Far as Turn Back" by Pat Boran - about a lockdown walk where "not knowing where that turn would turn out to be would turn out to be the thing we'd miss the most."</p>
+
+<div class="explain">
+<strong>Question 1 Option (20 marks total):</strong><br>
+(a) How would you describe the mood? Support with reference to the poem. (10 marks)<br>
+(b) Is "As Far as Turn Back" an appropriate title? Give two reasons with reference. (10 marks)
+</div>
+
+<div class="explain">
+<strong>Question 2 Option (20 marks total):</strong><br>
+"The poet's use of language is both clever and skilful." To what extent do you agree? Support with reference to the poem. (20 marks)
+</div>
+
+<div class="working"><strong>Approach for Unseen Poetry:</strong></div>
+<div class="explain"><strong>1. Read carefully 2-3 times.</strong> Understand literal meaning first, then deeper themes.</div>
+<div class="explain"><strong>2. Identify techniques.</strong> Look for imagery, metaphor, alliteration, enjambment, caesura, rhyme scheme, repetition, wordplay.</div>
+<div class="explain"><strong>3. Consider structure.</strong> How do stanzas work? Where's the volta (turn)? How does it open vs close?</div>
+<div class="explain"><strong>4. Quote specifically.</strong> Integrate short quotes to support each point. Don't just paraphrase.</div>
+<div class="explain"><strong>5. Explain effects.</strong> Don't just identify techniques - say what they ACHIEVE. How do they contribute to mood/meaning/theme?</div>
+</div>
+
+<div class="card">
+<h3>Part B: Prescribed Poetry (50 marks)</h3>
+<p>Answer on ONE poet you studied. Must discuss MULTIPLE poems.</p>
+
+<h3>The Poets (2025)</h3>
+<ul>
+<li>Eavan Boland - "evocative imagery... explores complex nature of powerlessness"</li>
+<li>Patrick Kavanagh - "simple language... powerful insights into nature and human nature, from parochial perspective"</li>
+<li>T.S. Eliot - "clever use of imagery... vivid portrayal of morally bankrupt and futile world"</li>
+<li>Derek Mahon - "appreciation enhanced if poetry read aloud... language and thematic concerns"</li>
+<li>Tracy K. Smith - "effective use of tone... heighten thought-provoking questions about nature of our lives"</li>
+</ul>
+
+<div class="working"><strong>Sample Answer Structure (Eavan Boland example):</strong></div>
+
+<div class="explain">
+<strong>Introduction:</strong> State your agreement with the statement. Preview which poems you'll discuss and the main argument. "Boland's imagery is indeed evocative and essential to her exploration of powerlessness, particularly in poems like 'Child of Our Time', 'The Famine Road', and 'This Moment'..."
+</div>
+
+<div class="explain">
+<strong>Paragraph 1:</strong> "Child of Our Time" - Analyze specific images (bomb, ordinary street becomes warzone). Show how imagery makes abstract powerlessness (civilian casualties) visceral and emotional. Quote: "Your death was not an incident in a war, / it was a crime." The stark imagery of the child's death evokes the ultimate powerlessness - innocent life ended by forces beyond control.
+</div>
+
+<div class="explain">
+<strong>Paragraph 2:</strong> "The Famine Road" - Imagery of physical labor, broken bodies, road-building as futile. "this had been hunger" - the past tense imagery evokes historical powerlessness. The road itself becomes symbol of oppression - forced labor that benefits others.
+</div>
+
+<div class="explain">
+<strong>Paragraph 3:</strong> "This Moment" - Domestic imagery (woman, child, doorway, summer dusk). Evokes different type of powerlessness - trapped in domestic sphere, waiting. The beauty of the imagery (moths, light, tenderness) contrasts with the stasis, making the powerlessness poignant rather than angry.
+</div>
+
+<div class="explain">
+<strong>Conclusion:</strong> Synthesize - Boland's imagery works across different contexts (political violence, historical oppression, domestic confinement) to make powerlessness tangible, emotional, and complex. The evocative nature of her images ensures we FEEL the powerlessness, not just understand it intellectually.
+</div>
+</div>
+
+<div class="card">
+<h3>Poetry Analysis Tips</h3>
+<div class="explain"><strong>1. Name specific poems.</strong> Don't write vaguely about "Boland's poetry" - cite actual titles.</div>
+<div class="explain"><strong>2. Quote precisely.</strong> Short, relevant quotes integrated into sentences. Show you know the poems intimately.</div>
+<div class="explain"><strong>3. Use technical terminology.</strong> Enjambment, caesura, volta, imagery, metaphor, assonance, alliteration, meter, stanza structure, tone, diction.</div>
+<div class="explain"><strong>4. Discuss multiple poems.</strong> Aim for 3-4 poems discussed in depth rather than 6-7 mentioned briefly.</div>
+<div class="explain"><strong>5. Stay focused on the question.</strong> If it asks about imagery, focus on imagery. If it asks about tone, focus on tone. Don't write a generic essay.</div>
+<div class="explain"><strong>6. Show relationships between poems.</strong> How do different poems explore the same theme differently? Find patterns and contrasts within the poet's work.</div>
+</div>
+</div>
+
+</div>
+
+<!-- FLASHCARDS TAB -->
+<div id="tab-flashcards" class="tab-content">
+<div class="card">
+<h2>English Flashcards</h2>
+<p>Essential terms, techniques, and concepts for LC English. Click cards to flip.</p>
+<div class="flashcard-controls">
+<button onclick="shuffleFlashcards('english')">Shuffle</button>
+<button onclick="resetFlashcards('english')">Reset</button>
+<span id="flashcard-counter-english">Card 1 of 35</span>
+</div>
+</div>
+<div class="flashcard-container" id="flashcardContainer-english">
+<!-- Cards will be generated by JS, but here's the structure -->
+<div class="flashcard" onclick="this.classList.toggle('flipped')">
+<div class="flashcard-inner">
+<div class="flashcard-front">What is PCLM?</div>
+<div class="flashcard-back">Point, Context, Language, Meaning - the structure for answering comprehension questions. State your point, quote the text, identify the technique, explain the effect.</div>
+</div>
+</div>
+<div class="flashcard" onclick="this.classList.toggle('flipped')">
+<div class="flashcard-inner">
+<div class="flashcard-front">What is anaphora?</div>
+<div class="flashcard-back">Repetition of a word or phrase at the beginning of successive clauses or sentences. Example: "Once, there were no avocadoes... Once, children were taught to duck..."</div>
+</div>
+</div>
+<div class="flashcard" onclick="this.classList.toggle('flipped')">
+<div class="flashcard-inner">
+<div class="flashcard-front">What is personification?</div>
+<div class="flashcard-back">Giving human qualities to non-human things. Example: "The way the planet seems to breathe, an animal unto itself."</div>
+</div>
+</div>
+<div class="flashcard" onclick="this.classList.toggle('flipped')">
+<div class="flashcard-inner">
+<div class="flashcard-front">What is the Rule of Three?</div>
+<div class="flashcard-back">Listing three elements for emphasis and rhythm. A rhetorical device that makes ideas memorable and persuasive.</div>
+</div>
+</div>
+<div class="flashcard" onclick="this.classList.toggle('flipped')">
+<div class="flashcard-inner">
+<div class="flashcard-front">Paper 1 Section I marks breakdown?</div>
+<div class="flashcard-back">100 marks total. Question A: 50 marks (15+15+20). Question B: 50 marks (functional writing). Must answer on TWO DIFFERENT texts.</div>
+</div>
+</div>
+<div class="flashcard" onclick="this.classList.toggle('flipped')">
+<div class="flashcard-inner">
+<div class="flashcard-front">Paper 1 Section II marks?</div>
+<div class="flashcard-back">100 marks total. Composition marked on PCLM: Purpose (30), Coherence (30), Language (30), Mechanics (10).</div>
+</div>
+</div>
+<div class="flashcard" onclick="this.classList.toggle('flipped')">
+<div class="flashcard-inner">
+<div class="flashcard-front">Paper 2 total time?</div>
+<div class="flashcard-back">3 hours 20 minutes (200 minutes) for 200 marks. Single Text (60 marks, ~1 hour), Comparative (70 marks, ~1h 10min), Poetry (70 marks total: 20 unseen + 50 prescribed).</div>
+</div>
+</div>
+<div class="flashcard" onclick="this.classList.toggle('flipped')">
+<div class="flashcard-inner">
+<div class="flashcard-front">What is a metaphor?</div>
+<div class="flashcard-back">A figure of speech that describes something by saying it IS something else (no 'like' or 'as'). Direct comparison. Example: "The earth is a mother."</div>
+</div>
+</div>
+<div class="flashcard" onclick="this.classList.toggle('flipped')">
+<div class="flashcard-inner">
+<div class="flashcard-front">What is imagery?</div>
+<div class="flashcard-back">Vivid descriptive language that appeals to the senses (sight, sound, touch, taste, smell). Creates mental pictures for the reader.</div>
+</div>
+</div>
+<div class="flashcard" onclick="this.classList.toggle('flipped')">
+<div class="flashcard-inner">
+<div class="flashcard-front">What is tone?</div>
+<div class="flashcard-back">The writer's attitude toward the subject or audience. Can be serious, humorous, sarcastic, optimistic, pessimistic, formal, informal, etc.</div>
+</div>
+</div>
+<div class="flashcard" onclick="this.classList.toggle('flipped')">
+<div class="flashcard-inner">
+<div class="flashcard-front">What is juxtaposition?</div>
+<div class="flashcard-back">Placing two contrasting ideas or images side by side for effect. Highlights differences and creates emphasis.</div>
+</div>
+</div>
+<div class="flashcard" onclick="this.classList.toggle('flipped')">
+<div class="flashcard-inner">
+<div class="flashcard-front">What is emotive language?</div>
+<div class="flashcard-back">Words chosen to provoke an emotional response in the reader. Loaded with feeling or judgment rather than neutral.</div>
+</div>
+</div>
+<div class="flashcard" onclick="this.classList.toggle('flipped')">
+<div class="flashcard-inner">
+<div class="flashcard-front">What are the three Comparative modes?</div>
+<div class="flashcard-back">1. Theme or Issue (central ideas), 2. Cultural Context (society/values/norms), 3. General Vision and Viewpoint (overall outlook: optimistic/pessimistic).</div>
+</div>
+</div>
+<div class="flashcard" onclick="this.classList.toggle('flipped')">
+<div class="flashcard-inner">
+<div class="flashcard-front">Comparative: Part (a) vs Part (b) marks?</div>
+<div class="flashcard-back">Part (a): 30 marks for ONE text. Part (b): 40 marks for comparing TWO other texts. Total 70 marks. Must explicitly COMPARE in part (b).</div>
+</div>
+</div>
+<div class="flashcard" onclick="this.classList.toggle('flipped')">
+<div class="flashcard-inner">
+<div class="flashcard-front">What is diction?</div>
+<div class="flashcard-back">Word choice. The specific words a writer selects. Can be formal/informal, technical/accessible, emotive/neutral, etc.</div>
+</div>
+</div>
+<div class="flashcard" onclick="this.classList.toggle('flipped')">
+<div class="flashcard-inner">
+<div class="flashcard-front">What is syntax?</div>
+<div class="flashcard-back">Sentence structure. How words and phrases are arranged. Can be simple, complex, fragmented, repetitive, varied.</div>
+</div>
+</div>
+<div class="flashcard" onclick="this.classList.toggle('flipped')">
+<div class="flashcard-inner">
+<div class="flashcard-front">What is a rhetorical question?</div>
+<div class="flashcard-back">A question asked for effect, not requiring an answer. Used to make the audience think or to emphasize a point.</div>
+</div>
+</div>
+<div class="flashcard" onclick="this.classList.toggle('flipped')">
+<div class="flashcard-inner">
+<div class="flashcard-front">What is alliteration?</div>
+<div class="flashcard-back">Repetition of initial consonant sounds in neighboring words. Example: "plucky chancer", "deep-seated", "stately sphere".</div>
+</div>
+</div>
+<div class="flashcard" onclick="this.classList.toggle('flipped')">
+<div class="flashcard-inner">
+<div class="flashcard-front">What is hyperbole?</div>
+<div class="flashcard-back">Deliberate exaggeration for emphasis or effect. Not meant to be taken literally. Used for dramatic or comic impact.</div>
+</div>
+</div>
+<div class="flashcard" onclick="this.classList.toggle('flipped')">
+<div class="flashcard-inner">
+<div class="flashcard-front">What is irony?</div>
+<div class="flashcard-back">Saying one thing but meaning another, or when the outcome is opposite to what's expected. Can be verbal, situational, or dramatic.</div>
+</div>
+</div>
+<div class="flashcard" onclick="this.classList.toggle('flipped')">
+<div class="flashcard-inner">
+<div class="flashcard-front">What is symbolism?</div>
+<div class="flashcard-back">Using an object, character, or event to represent something deeper or more abstract. The symbol carries meaning beyond its literal sense.</div>
+</div>
+</div>
+<div class="flashcard" onclick="this.classList.toggle('flipped')">
+<div class="flashcard-inner">
+<div class="flashcard-front">What is a theme?</div>
+<div class="flashcard-back">The central idea or underlying message of a text. Universal concepts like love, power, justice, identity, ambition, isolation, betrayal.</div>
+</div>
+</div>
+<div class="flashcard" onclick="this.classList.toggle('flipped')">
+<div class="flashcard-inner">
+<div class="flashcard-front">First-person vs third-person narrative?</div>
+<div class="flashcard-back">First-person: told from "I" perspective - narrator is a character. Third-person: told from outside using "he/she/they" - can be omniscient or limited.</div>
+</div>
+</div>
+<div class="flashcard" onclick="this.classList.toggle('flipped')">
+<div class="flashcard-inner">
+<div class="flashcard-front">What is foreshadowing?</div>
+<div class="flashcard-back">Hints or clues about what will happen later in the narrative. Builds anticipation and creates dramatic irony.</div>
+</div>
+</div>
+<div class="flashcard" onclick="this.classList.toggle('flipped')">
+<div class="flashcard-inner">
+<div class="flashcard-front">What are ethos, pathos, logos?</div>
+<div class="flashcard-back">Rhetorical appeals. Ethos = credibility/character. Pathos = emotion. Logos = logic/reason. Used in persuasive writing and speeches.</div>
+</div>
+</div>
+<div class="flashcard" onclick="this.classList.toggle('flipped')">
+<div class="flashcard-inner">
+<div class="flashcard-front">What is an oxymoron?</div>
+<div class="flashcard-back">Two contradictory words placed together. Example: "bittersweet", "deafening silence", "living death", "cruel kindness".</div>
+</div>
+</div>
+<div class="flashcard" onclick="this.classList.toggle('flipped')">
+<div class="flashcard-inner">
+<div class="flashcard-front">What is the climax?</div>
+<div class="flashcard-back">The turning point or moment of greatest tension in a narrative. The peak of the action. What the story has been building toward.</div>
+</div>
+</div>
+<div class="flashcard" onclick="this.classList.toggle('flipped')">
+<div class="flashcard-inner">
+<div class="flashcard-front">Protagonist vs antagonist?</div>
+<div class="flashcard-back">Protagonist = main character/hero the reader follows. Antagonist = character or force opposing the protagonist, creating conflict.</div>
+</div>
+</div>
+<div class="flashcard" onclick="this.classList.toggle('flipped')">
+<div class="flashcard-inner">
+<div class="flashcard-front">What is a foil character?</div>
+<div class="flashcard-back">A character who contrasts with another character (usually protagonist) to highlight particular qualities. The contrast reveals characteristics.</div>
+</div>
+</div>
+<div class="flashcard" onclick="this.classList.toggle('flipped')">
+<div class="flashcard-inner">
+<div class="flashcard-front">Internal vs external conflict?</div>
+<div class="flashcard-back">Internal = psychological struggle within a character's mind (character vs self). External = struggle with outside force (vs character, society, nature, fate).</div>
+</div>
+</div>
+<div class="flashcard" onclick="this.classList.toggle('flipped')">
+<div class="flashcard-inner">
+<div class="flashcard-front">What is enjambment?</div>
+<div class="flashcard-back">In poetry, when a sentence or phrase runs over from one line to the next without a pause. Creates flow and can emphasize certain words.</div>
+</div>
+</div>
+<div class="flashcard" onclick="this.classList.toggle('flipped')">
+<div class="flashcard-inner">
+<div class="flashcard-front">What is caesura?</div>
+<div class="flashcard-back">A pause or break in the middle of a line of poetry, often marked by punctuation. Creates rhythm and emphasis.</div>
+</div>
+</div>
+<div class="flashcard" onclick="this.classList.toggle('flipped')">
+<div class="flashcard-inner">
+<div class="flashcard-front">Shakespeare requirement for Paper 2?</div>
+<div class="flashcard-back">MUST answer on Shakespearean Drama - either Section I Single Text (King Lear) OR Section II Comparative (King Lear or The Merry Wives of Windsor). No choice to skip.</div>
+</div>
+</div>
+<div class="flashcard" onclick="this.classList.toggle('flipped')">
+<div class="flashcard-inner">
+<div class="flashcard-front">What is contrast?</div>
+<div class="flashcard-back">Emphasizing differences between two things, ideas, or time periods. Used to highlight change, show opposing viewpoints, or create emphasis.</div>
+</div>
+</div>
+<div class="flashcard" onclick="this.classList.toggle('flipped')">
+<div class="flashcard-inner">
+<div class="flashcard-front">How many poems in Prescribed Poetry answer?</div>
+<div class="flashcard-back">Must discuss MULTIPLE poems (aim for 3-4 discussed in depth). Shows breadth of knowledge. Don't focus on just one poem.</div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- QUIZ TAB -->
+<div id="tab-quiz" class="tab-content">
+<div class="card">
+<h2>English Quiz</h2>
+<p>Test your knowledge of exam structure, literary terms, and strategies. Click to reveal answers.</p>
+</div>
+
+<div class="quiz-item">
+<div class="quiz-question" onclick="this.parentElement.classList.toggle('revealed')">
+<strong>Q1:</strong> How many texts are provided in Paper 1 Section I, and what must you do with them?
+<span class="toggle-icon">▼</span>
+</div>
+<div class="quiz-answer">THREE texts are provided. You must answer ONE Question A on one text and ONE Question B on a DIFFERENT text. Cannot answer both questions on the same text.</div>
+</div>
+
+<div class="quiz-item">
+<div class="quiz-question" onclick="this.parentElement.classList.toggle('revealed')">
+<strong>Q2:</strong> What does PCLM stand for and when do you use it?
+<span class="toggle-icon">▼</span>
+</div>
+<div class="quiz-answer">Point, Context, Language, Meaning. Use it for answering comprehension questions - state your point, quote the text (context), identify the technique (language), explain the effect (meaning).</div>
+</div>
+
+<div class="quiz-item">
+<div class="quiz-question" onclick="this.parentElement.classList.toggle('revealed')">
+<strong>Q3:</strong> In Paper 1 Section II Composing, how are the 100 marks distributed?
+<span class="toggle-icon">▼</span>
+</div>
+<div class="quiz-answer">Purpose (P) 30 marks, Coherence (C) 30 marks, Language (L) 30 marks, Mechanics (M) 10 marks.</div>
+</div>
+
+<div class="quiz-item">
+<div class="quiz-question" onclick="this.parentElement.classList.toggle('revealed')">
+<strong>Q4:</strong> What is the difference between a metaphor and a simile?
+<span class="toggle-icon">▼</span>
+</div>
+<div class="quiz-answer">Metaphor = direct comparison saying something IS something else (no 'like'/'as'). Simile = comparison using 'like' or 'as'. Example: "The earth is a jewel" (metaphor) vs "The earth looks like a jewel" (simile).</div>
+</div>
+
+<div class="quiz-item">
+<div class="quiz-question" onclick="this.parentElement.classList.toggle('revealed')">
+<strong>Q5:</strong> In Paper 2 Comparative, what's the difference between Part (a) and Part (b)?
+<span class="toggle-icon">▼</span>
+</div>
+<div class="quiz-answer">Part (a) = 30 marks for discussing ONE text in depth. Part (b) = 40 marks for COMPARING two other texts. Part (b) must explicitly compare - use comparison language, don't write separate essays.</div>
+</div>
+
+<div class="quiz-item">
+<div class="quiz-question" onclick="this.parentElement.classList.toggle('revealed')">
+<strong>Q6:</strong> What are the three Comparative modes?
+<span class="toggle-icon">▼</span>
+</div>
+<div class="quiz-answer">1. Theme or Issue (central ideas), 2. Cultural Context (society/values/norms), 3. General Vision and Viewpoint (overall outlook: optimistic/pessimistic).</div>
+</div>
+
+<div class="quiz-item">
+<div class="quiz-question" onclick="this.parentElement.classList.toggle('revealed')">
+<strong>Q7:</strong> What is anaphora and give an example?
+<span class="toggle-icon">▼</span>
+</div>
+<div class="quiz-answer">Repetition of a word or phrase at the beginning of successive clauses or sentences. Example from Atwood speech: "Once, there were no avocadoes... Once, children were taught to duck... Once, there was a world war..."</div>
+</div>
+
+<div class="quiz-item">
+<div class="quiz-question" onclick="this.parentElement.classList.toggle('revealed')">
+<strong>Q8:</strong> What is the Shakespeare requirement in Paper 2?
+<span class="toggle-icon">▼</span>
+</div>
+<div class="quiz-answer">You MUST answer on Shakespearean Drama. Either choose King Lear in Section I (Single Text) OR include King Lear or The Merry Wives of Windsor in Section II (Comparative). No way to avoid Shakespeare.</div>
+</div>
+
+<div class="quiz-item">
+<div class="quiz-question" onclick="this.parentElement.classList.toggle('revealed')">
+<strong>Q9:</strong> How many poems must you discuss in Prescribed Poetry (Paper 2 Section III Part B)?
+<span class="toggle-icon">▼</span>
+</div>
+<div class="quiz-answer">MULTIPLE poems - aim for 3-4 poems discussed in depth rather than 6-7 mentioned briefly. Shows breadth of knowledge of the poet's work.</div>
+</div>
+
+<div class="quiz-item">
+<div class="quiz-question" onclick="this.parentElement.classList.toggle('revealed')">
+<strong>Q10:</strong> What is personification?
+<span class="toggle-icon">▼</span>
+</div>
+<div class="quiz-answer">Giving human qualities to non-human things. Example from Orbital: "the way the planet seems to breathe, an animal unto itself."</div>
+</div>
+
+<div class="quiz-item">
+<div class="quiz-question" onclick="this.parentElement.classList.toggle('revealed')">
+<strong>Q11:</strong> In Paper 1 Question B (functional writing), what must you ensure to maximize marks?
+<span class="toggle-icon">▼</span>
+</div>
+<div class="quiz-answer">You MUST address ALL the bullet points given in the question. Missing even one bullet point results in significant mark loss. Also stay in role (team captain, hotel manager, etc.).</div>
+</div>
+
+<div class="quiz-item">
+<div class="quiz-question" onclick="this.parentElement.classList.toggle('revealed')">
+<strong>Q12:</strong> What is the Rule of Three?
+<span class="toggle-icon">▼</span>
+</div>
+<div class="quiz-answer">A rhetorical device where you list three elements for emphasis and rhythm. Makes ideas memorable and persuasive. Common in speeches and persuasive writing.</div>
+</div>
+
+<div class="quiz-item">
+<div class="quiz-question" onclick="this.parentElement.classList.toggle('revealed')">
+<strong>Q13:</strong> What's the difference between internal and external conflict?
+<span class="toggle-icon">▼</span>
+</div>
+<div class="quiz-answer">Internal conflict = psychological struggle within a character's mind (character vs self). External conflict = struggle with outside force (character vs character, society, nature, or fate).</div>
+</div>
+
+<div class="quiz-item">
+<div class="quiz-question" onclick="this.parentElement.classList.toggle('revealed')">
+<strong>Q14:</strong> In Unseen Poetry (Paper 2), what are you analyzing?
+<span class="toggle-icon">▼</span>
+</div>
+<div class="quiz-answer">A poem you've never seen before. You must analyze it on the spot - identify techniques, discuss mood/tone, evaluate title, or analyze language use. 20 marks. Shows ability to apply literary analysis skills to new material.</div>
+</div>
+
+<div class="quiz-item">
+<div class="quiz-question" onclick="this.parentElement.classList.toggle('revealed')">
+<strong>Q15:</strong> What are ethos, pathos, and logos?
+<span class="toggle-icon">▼</span>
+</div>
+<div class="quiz-answer">Rhetorical appeals used in persuasive writing. Ethos = appeal to credibility/character. Pathos = appeal to emotion. Logos = appeal to logic/reason. Important for analyzing speeches and persuasive texts.</div>
+</div>
+
+</div>
+
+<!-- PROGRESS TAB -->
+<div id="tab-progress" class="tab-content">
+<div class="card">
+<h2>Progress Tracker</h2>
+<p>Track your study progress across all components of the LC English exam. Mark topics as you complete them.</p>
+</div>
+
+<div class="card">
+<h3>Paper 1 - Comprehending Skills</h3>
+<div class="progress-section">
+<label><input type="checkbox" class="progress-checkbox" data-subject="english" data-topic="p1-insights"> Extracting insights from text (Question A part i)</label>
+<label><input type="checkbox" class="progress-checkbox" data-subject="english" data-topic="p1-personal-response"> Personal response development (Question A part ii)</label>
+<label><input type="checkbox" class="progress-checkbox" data-subject="english" data-topic="p1-language-analysis"> Language analysis - 4 elements (Question A part iii)</label>
+<label><input type="checkbox" class="progress-checkbox" data-subject="english" data-topic="p1-functional-writing"> Functional writing tasks (Question B)</label>
+<label><input type="checkbox" class="progress-checkbox" data-subject="english" data-topic="p1-pclm-practice"> PCLM structure practice</label>
+</div>
+</div>
+
+<div class="card">
+<h3>Paper 1 - Composing Skills</h3>
+<div class="progress-section">
+<label><input type="checkbox" class="progress-checkbox" data-subject="english" data-topic="comp-essay"> Discursive essay structure</label>
+<label><input type="checkbox" class="progress-checkbox" data-subject="english" data-topic="comp-speech"> Speech writing (rhetorical devices)</label>
+<label><input type="checkbox" class="progress-checkbox" data-subject="english" data-topic="comp-story"> Short story structure and techniques</label>
+<label><input type="checkbox" class="progress-checkbox" data-subject="english" data-topic="comp-personal"> Personal essay (reflection + insight)</label>
+<label><input type="checkbox" class="progress-checkbox" data-subject="english" data-topic="comp-feature"> Feature article style</label>
+<label><input type="checkbox" class="progress-checkbox" data-subject="english" data-topic="comp-planning"> Planning compositions (10-min strategy)</label>
+</div>
+</div>
+
+<div class="card">
+<h3>Paper 2 - Single Text</h3>
+<div class="progress-section">
+<label><input type="checkbox" class="progress-checkbox" data-subject="english" data-topic="single-read"> Completed reading of studied text</label>
+<label><input type="checkbox" class="progress-checkbox" data-subject="english" data-topic="single-themes"> Key themes identified</label>
+<label><input type="checkbox" class="progress-checkbox" data-subject="english" data-topic="single-characters"> Character analysis completed</label>
+<label><input type="checkbox" class="progress-checkbox" data-subject="english" data-topic="single-techniques"> Literary techniques catalogued</label>
+<label><input type="checkbox" class="progress-checkbox" data-subject="english" data-topic="single-quotes"> Key quotes memorized</label>
+<label><input type="checkbox" class="progress-checkbox" data-subject="english" data-topic="single-practice"> Practice essay completed</label>
+</div>
+</div>
+
+<div class="card">
+<h3>Paper 2 - Comparative Study</h3>
+<div class="progress-section">
+<label><input type="checkbox" class="progress-checkbox" data-subject="english" data-topic="comp-text1"> Text 1 read and analyzed</label>
+<label><input type="checkbox" class="progress-checkbox" data-subject="english" data-topic="comp-text2"> Text 2 read and analyzed</label>
+<label><input type="checkbox" class="progress-checkbox" data-subject="english" data-topic="comp-text3"> Text 3 read and analyzed</label>
+<label><input type="checkbox" class="progress-checkbox" data-subject="english" data-topic="comp-theme"> Theme/Issue mode prepared</label>
+<label><input type="checkbox" class="progress-checkbox" data-subject="english" data-topic="comp-cultural"> Cultural Context mode prepared</label>
+<label><input type="checkbox" class="progress-checkbox" data-subject="english" data-topic="comp-gvv"> General Vision & Viewpoint mode prepared</label>
+<label><input type="checkbox" class="progress-checkbox" data-subject="english" data-topic="comp-comparison"> Comparison language practice</label>
+<label><input type="checkbox" class="progress-checkbox" data-subject="english" data-topic="comp-practice"> Comparative essay practice</label>
+</div>
+</div>
+
+<div class="card">
+<h3>Paper 2 - Poetry</h3>
+<div class="progress-section">
+<label><input type="checkbox" class="progress-checkbox" data-subject="english" data-topic="poetry-poet"> Prescribed poet studied (multiple poems)</label>
+<label><input type="checkbox" class="progress-checkbox" data-subject="english" data-topic="poetry-themes"> Poet's key themes identified</label>
+<label><input type="checkbox" class="progress-checkbox" data-subject="english" data-topic="poetry-techniques"> Poetry techniques mastered</label>
+<label><input type="checkbox" class="progress-checkbox" data-subject="english" data-topic="poetry-quotes"> Key lines/quotes memorized</label>
+<label><input type="checkbox" class="progress-checkbox" data-subject="english" data-topic="poetry-unseen"> Unseen poetry practice (analysis skills)</label>
+<label><input type="checkbox" class="progress-checkbox" data-subject="english" data-topic="poetry-practice"> Poetry essay practice</label>
+</div>
+</div>
+
+<div class="card">
+<h3>Literary Terminology</h3>
+<div class="progress-section">
+<label><input type="checkbox" class="progress-checkbox" data-subject="english" data-topic="terms-figures"> Figures of speech (metaphor, simile, personification)</label>
+<label><input type="checkbox" class="progress-checkbox" data-subject="english" data-topic="terms-rhetoric"> Rhetorical devices (anaphora, rule of three, rhetorical Q)</label>
+<label><input type="checkbox" class="progress-checkbox" data-subject="english" data-topic="terms-narrative"> Narrative techniques (POV, foreshadowing, flashback)</label>
+<label><input type="checkbox" class="progress-checkbox" data-subject="english" data-topic="terms-poetry"> Poetry terms (enjambment, caesura, volta, meter)</label>
+<label><input type="checkbox" class="progress-checkbox" data-subject="english" data-topic="terms-structure"> Structure terms (climax, denouement, theme, motif)</label>
+<label><input type="checkbox" class="progress-checkbox" data-subject="english" data-topic="terms-character"> Character terms (protagonist, antagonist, foil)</label>
+</div>
+</div>
+
+<div class="card">
+<h3>Exam Technique</h3>
+<div class="progress-section">
+<label><input type="checkbox" class="progress-checkbox" data-subject="english" data-topic="tech-timing"> Time management practiced (both papers)</label>
+<label><input type="checkbox" class="progress-checkbox" data-subject="english" data-topic="tech-question-choice"> Question selection strategy</label>
+<label><input type="checkbox" class="progress-checkbox" data-subject="english" data-topic="tech-quoting"> Quote integration technique</label>
+<label><input type="checkbox" class="progress-checkbox" data-subject="english" data-topic="tech-pclm"> PCLM structure fluent</label>
+<label><input type="checkbox" class="progress-checkbox" data-subject="english" data-topic="tech-comparison"> Comparison linking words mastered</label>
+<label><input type="checkbox" class="progress-checkbox" data-subject="english" data-topic="tech-proofreading"> Proofreading checklist prepared</label>
+</div>
+</div>
+
+<div class="progress-summary">
+<h3>Overall Progress</h3>
+<div class="progress-bar-container">
+<div class="progress-bar" id="progress-bar-english" style="width: 0%"></div>
+</div>
+<p><span id="progress-text-english">0% Complete</span> | <span id="topics-complete-english">0 of 47 topics</span></p>
+</div>
+</div>
+
+<script src="js/shared.js"></script>
+</body>
+</html>
