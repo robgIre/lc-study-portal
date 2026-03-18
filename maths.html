@@ -993,235 +993,379 @@ Having a pet in the home is <strong>unlikely to be related to maths test scores<
 
 <!-- FLASHCARDS TAB -->
 <div id="tab-flashcards" class="tab-content">
-<h2>Flashcards</h2>
-<p>Click a card to reveal the answer. Filter by topic or shuffle.</p>
-
-<div class="fc-topic-filter" id="fcFilter">
-<button class="active" onclick="fc.filter('all')">All Topics</button>
-<button onclick="fc.filter('algebra')">Algebra</button>
-<button onclick="fc.filter('calculus')">Calculus</button>
-<button onclick="fc.filter('complex')">Complex Numbers</button>
-<button onclick="fc.filter('sequences')">Sequences</button>
-<button onclick="fc.filter('geometry')">Geometry</button>
-<button onclick="fc.filter('trigonometry')">Trigonometry</button>
-<button onclick="fc.filter('probability')">Probability</button>
-<button onclick="fc.filter('statistics')">Statistics</button>
-</div>
-
-<div class="flashcard-container" id="fcContainer">
-<div class="flashcard" onclick="fc.flip()">
-<div class="flashcard-face flashcard-front">
-<h3>TOPIC</h3>
-<p>Loading...</p>
-</div>
-<div class="flashcard-face flashcard-back">
-<p>Loading...</p>
+<div class="card">
+<h2>Maths Flashcards</h2>
+<p>Click a card to flip and reveal the answer. Use these to test your recall of key concepts and formulas.</p>
+<div class="flashcard-controls">
+<button onclick="shuffleFlashcards('maths')">Shuffle Cards</button>
+<button onclick="resetFlashcards('maths')">Reset All</button>
 </div>
 </div>
+<div class="flashcard-container" id="flashcardContainer">
+<div class="flashcard" onclick="flipCard(this)">
+<div class="front">What is the quadratic formula?</div>
+<div class="back">x = (-b ± √(b² - 4ac)) / 2a<br>For equation ax² + bx + c = 0</div>
 </div>
-
-<div class="fc-controls" id="fcControls">
-<button class="fc-prev" onclick="fc.prev()">Previous</button>
-<span class="fc-counter" id="fcCounter">0 / 0</span>
-<button class="fc-next" onclick="fc.next()">Next</button>
-<button onclick="fc.shuffle()">Shuffle</button>
+<div class="flashcard" onclick="flipCard(this)">
+<div class="front">What does the discriminant tell you?</div>
+<div class="back">Δ = b² - 4ac<br>Δ > 0: two real roots<br>Δ = 0: one repeated root<br>Δ < 0: no real roots</div>
+</div>
+<div class="flashcard" onclick="flipCard(this)">
+<div class="front">What is the chain rule for differentiation?</div>
+<div class="back">If y = f(g(x)), then<br>dy/dx = f'(g(x)) × g'(x)<br>Or: dy/dx = dy/du × du/dx</div>
+</div>
+<div class="flashcard" onclick="flipCard(this)">
+<div class="front">What is de Moivre's theorem?</div>
+<div class="back">[r(cos θ + i sin θ)]^n = r^n(cos nθ + i sin nθ)<br>Used for powers and roots of complex numbers</div>
+</div>
+<div class="flashcard" onclick="flipCard(this)">
+<div class="front">How do you find the modulus of a complex number z = a + bi?</div>
+<div class="back">|z| = √(a² + b²)<br>This is the distance from origin in complex plane</div>
+</div>
+<div class="flashcard" onclick="flipCard(this)">
+<div class="front">What is the formula for the nth term of an arithmetic sequence?</div>
+<div class="back">T_n = a + (n-1)d<br>where a = first term, d = common difference</div>
+</div>
+<div class="flashcard" onclick="flipCard(this)">
+<div class="front">What is the sum of an arithmetic series?</div>
+<div class="back">S_n = n/2[2a + (n-1)d]<br>or S_n = n/2(a + l) where l = last term</div>
+</div>
+<div class="flashcard" onclick="flipCard(this)">
+<div class="front">What is the formula for the nth term of a geometric sequence?</div>
+<div class="back">T_n = ar^(n-1)<br>where a = first term, r = common ratio</div>
+</div>
+<div class="flashcard" onclick="flipCard(this)">
+<div class="front">What is the sum of a geometric series?</div>
+<div class="back">S_n = a(r^n - 1)/(r - 1)<br>or a(1 - r^n)/(1 - r)</div>
+</div>
+<div class="flashcard" onclick="flipCard(this)">
+<div class="front">When is sin θ = 1/2? (all solutions 0° to 360°)</div>
+<div class="back">θ = 30° and θ = 150°<br>Or θ = π/6 and θ = 5π/6 in radians</div>
+</div>
+<div class="flashcard" onclick="flipCard(this)">
+<div class="front">What is the cosine rule?</div>
+<div class="back">c² = a² + b² - 2ab cos C<br>Used when you know 3 sides or 2 sides and included angle</div>
+</div>
+<div class="flashcard" onclick="flipCard(this)">
+<div class="front">What is the sine rule?</div>
+<div class="back">a/sin A = b/sin B = c/sin C<br>Used when you know 2 angles and 1 side</div>
+</div>
+<div class="flashcard" onclick="flipCard(this)">
+<div class="front">What is the derivative of e^(ax)?</div>
+<div class="back">d/dx(e^(ax)) = ae^(ax)<br>The coefficient becomes a multiplier</div>
+</div>
+<div class="flashcard" onclick="flipCard(this)">
+<div class="front">What is the derivative of ln x?</div>
+<div class="back">d/dx(ln x) = 1/x</div>
+</div>
+<div class="flashcard" onclick="flipCard(this)">
+<div class="front">What is the quotient rule?</div>
+<div class="back">d/dx(u/v) = [v(du/dx) - u(dv/dx)] / v²<br>"Low d-high minus high d-low over low squared"</div>
+</div>
+<div class="flashcard" onclick="flipCard(this)">
+<div class="front">What is the integral of e^x?</div>
+<div class="back">∫ e^x dx = e^x + C<br>e^x is its own derivative AND integral</div>
+</div>
+<div class="flashcard" onclick="flipCard(this)">
+<div class="front">How do you solve |x - a| ≤ b?</div>
+<div class="back">a - b ≤ x ≤ a + b<br>The value is within distance b of a</div>
+</div>
+<div class="flashcard" onclick="flipCard(this)">
+<div class="front">What is the standard form of a circle equation?</div>
+<div class="back">(x - h)² + (y - k)² = r²<br>Centre at (h, k), radius r</div>
+</div>
+<div class="flashcard" onclick="flipCard(this)">
+<div class="front">How do you find the slope of a tangent to a circle?</div>
+<div class="back">Slope of tangent × slope of radius = -1<br>(Tangent is perpendicular to radius at point of contact)</div>
+</div>
+<div class="flashcard" onclick="flipCard(this)">
+<div class="front">What does P(A|B) mean?</div>
+<div class="back">Probability of A given that B has occurred<br>P(A|B) = P(A ∩ B) / P(B)</div>
+</div>
+<div class="flashcard" onclick="flipCard(this)">
+<div class="front">When are events A and B independent?</div>
+<div class="back">P(A ∩ B) = P(A) × P(B)<br>The outcome of one doesn't affect the other</div>
+</div>
+<div class="flashcard" onclick="flipCard(this)">
+<div class="front">What is the volume of a sphere?</div>
+<div class="back">V = (4/3)πr³</div>
+</div>
+<div class="flashcard" onclick="flipCard(this)">
+<div class="front">What is the volume of a cone?</div>
+<div class="back">V = (1/3)πr²h<br>One-third of a cylinder with same base and height</div>
+</div>
+<div class="flashcard" onclick="flipCard(this)">
+<div class="front">If lengths scale by factor k, how do areas and volumes scale?</div>
+<div class="back">Areas scale by k²<br>Volumes scale by k³</div>
+</div>
+<div class="flashcard" onclick="flipCard(this)">
+<div class="front">What is the empirical rule for normal distribution?</div>
+<div class="back">68% within μ ± σ<br>95% within μ ± 2σ<br>99.7% within μ ± 3σ</div>
+</div>
+<div class="flashcard" onclick="flipCard(this)">
+<div class="front">What is a z-score?</div>
+<div class="back">z = (X - μ) / σ<br>Number of standard deviations from the mean</div>
+</div>
+<div class="flashcard" onclick="flipCard(this)">
+<div class="front">What is the 95% confidence interval formula?</div>
+<div class="back">x̄ ± 1.96(σ/√n)<br>We're 95% confident the true mean is in this range</div>
+</div>
+<div class="flashcard" onclick="flipCard(this)">
+<div class="front">What is the interquartile range (IQR)?</div>
+<div class="back">IQR = Q₃ - Q₁<br>The range of the middle 50% of data</div>
+</div>
+<div class="flashcard" onclick="flipCard(this)">
+<div class="front">What is the binomial coefficient C(n,r)?</div>
+<div class="back">C(n,r) = n! / [r!(n-r)!]<br>Number of ways to choose r items from n</div>
+</div>
+<div class="flashcard" onclick="flipCard(this)">
+<div class="front">What is the double angle formula for cos 2θ?</div>
+<div class="back">cos 2θ = cos²θ - sin²θ<br>Also = 2cos²θ - 1<br>Also = 1 - 2sin²θ</div>
+</div>
 </div>
 </div>
 
 <!-- QUIZ TAB -->
 <div id="tab-quiz" class="tab-content">
-<h2>Quiz Mode</h2>
-<p>Test your knowledge with multiple-choice questions. Select a topic or try all.</p>
-
+<div class="card">
+<h2>Maths Knowledge Quiz</h2>
+<p>Test your understanding with these practice questions. Answers are revealed when you submit.</p>
 <div class="quiz-controls">
-<button onclick="quiz.start('all')">All Topics</button>
-<button onclick="quiz.start('algebra')">Algebra</button>
-<button onclick="quiz.start('calculus')">Calculus</button>
-<button onclick="quiz.start('complex')">Complex Numbers</button>
-<button onclick="quiz.start('sequences')">Sequences</button>
-<button onclick="quiz.start('geometry')">Geometry</button>
-<button onclick="quiz.start('trigonometry')">Trigonometry</button>
-<button onclick="quiz.start('probability')">Probability</button>
-<button onclick="quiz.start('statistics')">Statistics</button>
+<span id="quizScore">Score: <strong>0/15</strong></span>
+<button onclick="resetQuiz('maths')">Reset Quiz</button>
+</div>
 </div>
 
-<div id="quizArea"></div>
+<div class="quiz-container" id="quizContainer">
+<div class="quiz-question">
+<p><strong>1.</strong> What is the discriminant of 2x² - 7x + 3 = 0?</p>
+<div class="quiz-options">
+<label><input type="radio" name="q1" value="a"> 25</label>
+<label><input type="radio" name="q1" value="b"> 37</label>
+<label><input type="radio" name="q1" value="c"> 49</label>
+<label><input type="radio" name="q1" value="d"> 61</label>
+</div>
+<div class="quiz-answer" data-correct="a">Correct answer: 25. Δ = b² - 4ac = (-7)² - 4(2)(3) = 49 - 24 = 25</div>
+</div>
 
-<div class="quiz-score" id="quizScore" style="display:none">
-<h3>Quiz Complete!</h3>
-<p id="quizResult"></p>
-<button onclick="quiz.start('all')">Try Again</button>
+<div class="quiz-question">
+<p><strong>2.</strong> If f(x) = x³ + 2x, what is f'(x)?</p>
+<div class="quiz-options">
+<label><input type="radio" name="q2" value="a"> 3x² + 2x</label>
+<label><input type="radio" name="q2" value="b"> 3x² + 2</label>
+<label><input type="radio" name="q2" value="c"> x² + 2</label>
+<label><input type="radio" name="q2" value="d"> 3x³ + 2x</label>
+</div>
+<div class="quiz-answer" data-correct="b">Correct answer: 3x² + 2. Use power rule: d/dx(x³) = 3x², d/dx(2x) = 2</div>
+</div>
+
+<div class="quiz-question">
+<p><strong>3.</strong> What is the modulus of z = 3 + 4i?</p>
+<div class="quiz-options">
+<label><input type="radio" name="q3" value="a"> 7</label>
+<label><input type="radio" name="q3" value="b"> 5</label>
+<label><input type="radio" name="q3" value="c"> 12</label>
+<label><input type="radio" name="q3" value="d"> 25</label>
+</div>
+<div class="quiz-answer" data-correct="b">Correct answer: 5. |z| = √(3² + 4²) = √(9 + 16) = √25 = 5</div>
+</div>
+
+<div class="quiz-question">
+<p><strong>4.</strong> If the 3rd term of an arithmetic sequence is 17 and the 7th term is 33, what is the common difference?</p>
+<div class="quiz-options">
+<label><input type="radio" name="q4" value="a"> 2</label>
+<label><input type="radio" name="q4" value="b"> 4</label>
+<label><input type="radio" name="q4" value="c"> 5</label>
+<label><input type="radio" name="q4" value="d"> 8</label>
+</div>
+<div class="quiz-answer" data-correct="b">Correct answer: 4. From T₃ to T₇ is 4 steps. Difference = (33 - 17)/4 = 16/4 = 4</div>
+</div>
+
+<div class="quiz-question">
+<p><strong>5.</strong> What is ∫ 6x² dx?</p>
+<div class="quiz-options">
+<label><input type="radio" name="q5" value="a"> 12x + C</label>
+<label><input type="radio" name="q5" value="b"> 2x³ + C</label>
+<label><input type="radio" name="q5" value="c"> 6x³ + C</label>
+<label><input type="radio" name="q5" value="d"> 3x² + C</label>
+</div>
+<div class="quiz-answer" data-correct="b">Correct answer: 2x³ + C. ∫ 6x² dx = 6 × x³/3 + C = 2x³ + C</div>
+</div>
+
+<div class="quiz-question">
+<p><strong>6.</strong> If sin θ = 0.5 and 0° ≤ θ ≤ 180°, what are the values of θ?</p>
+<div class="quiz-options">
+<label><input type="radio" name="q6" value="a"> 30° and 60°</label>
+<label><input type="radio" name="q6" value="b"> 30° and 150°</label>
+<label><input type="radio" name="q6" value="c"> 45° and 135°</label>
+<label><input type="radio" name="q6" value="d"> 60° and 120°</label>
+</div>
+<div class="quiz-answer" data-correct="b">Correct answer: 30° and 150°. sin θ = 0.5 at θ = 30° and θ = 180° - 30° = 150°</div>
+</div>
+
+<div class="quiz-question">
+<p><strong>7.</strong> What is the centre of the circle x² + y² - 6x + 4y - 12 = 0?</p>
+<div class="quiz-options">
+<label><input type="radio" name="q7" value="a"> (3, -2)</label>
+<label><input type="radio" name="q7" value="b"> (-3, 2)</label>
+<label><input type="radio" name="q7" value="c"> (6, -4)</label>
+<label><input type="radio" name="q7" value="d"> (-6, 4)</label>
+</div>
+<div class="quiz-answer" data-correct="a">Correct answer: (3, -2). General form: x² + y² + 2gx + 2fy + c = 0 has centre (-g, -f). Here 2g = -6 so g = -3, 2f = 4 so f = 2. Centre = (3, -2)</div>
+</div>
+
+<div class="quiz-question">
+<p><strong>8.</strong> In a bag with 3 red and 7 blue marbles, what is P(red)?</p>
+<div class="quiz-options">
+<label><input type="radio" name="q8" value="a"> 0.3</label>
+<label><input type="radio" name="q8" value="b"> 0.5</label>
+<label><input type="radio" name="q8" value="c"> 0.7</label>
+<label><input type="radio" name="q8" value="d"> 3/7</label>
+</div>
+<div class="quiz-answer" data-correct="a">Correct answer: 0.3. P(red) = 3/(3+7) = 3/10 = 0.3</div>
+</div>
+
+<div class="quiz-question">
+<p><strong>9.</strong> What is the median of: 3, 7, 2, 9, 5?</p>
+<div class="quiz-options">
+<label><input type="radio" name="q9" value="a"> 5</label>
+<label><input type="radio" name="q9" value="b"> 5.2</label>
+<label><input type="radio" name="q9" value="c"> 6</label>
+<label><input type="radio" name="q9" value="d"> 7</label>
+</div>
+<div class="quiz-answer" data-correct="a">Correct answer: 5. Arrange in order: 2, 3, 5, 7, 9. Middle value = 5</div>
+</div>
+
+<div class="quiz-question">
+<p><strong>10.</strong> If two lines have slopes 2 and -1/2, what is their relationship?</p>
+<div class="quiz-options">
+<label><input type="radio" name="q10" value="a"> Parallel</label>
+<label><input type="radio" name="q10" value="b"> Perpendicular</label>
+<label><input type="radio" name="q10" value="c"> Neither</label>
+<label><input type="radio" name="q10" value="d"> Coincident</label>
+</div>
+<div class="quiz-answer" data-correct="b">Correct answer: Perpendicular. m₁ × m₂ = 2 × (-1/2) = -1, so they're perpendicular</div>
+</div>
+
+<div class="quiz-question">
+<p><strong>11.</strong> What is the volume of a cone with radius 3 cm and height 4 cm? (Use π ≈ 3.14)</p>
+<div class="quiz-options">
+<label><input type="radio" name="q11" value="a"> 12π cm³</label>
+<label><input type="radio" name="q11" value="b"> 36π cm³</label>
+<label><input type="radio" name="q11" value="c"> 48π cm³</label>
+<label><input type="radio" name="q11" value="d"> 144π cm³</label>
+</div>
+<div class="quiz-answer" data-correct="a">Correct answer: 12π cm³. V = (1/3)πr²h = (1/3)π(3²)(4) = (1/3)π(36) = 12π</div>
+</div>
+
+<div class="quiz-question">
+<p><strong>12.</strong> For normal distribution with μ = 50, σ = 10, what is the z-score for X = 65?</p>
+<div class="quiz-options">
+<label><input type="radio" name="q12" value="a"> 1.0</label>
+<label><input type="radio" name="q12" value="b"> 1.5</label>
+<label><input type="radio" name="q12" value="c"> 2.0</label>
+<label><input type="radio" name="q12" value="d"> 2.5</label>
+</div>
+<div class="quiz-answer" data-correct="b">Correct answer: 1.5. z = (X - μ)/σ = (65 - 50)/10 = 15/10 = 1.5</div>
+</div>
+
+<div class="quiz-question">
+<p><strong>13.</strong> Simplify log₂(8) + log₂(4)</p>
+<div class="quiz-options">
+<label><input type="radio" name="q13" value="a"> 3</label>
+<label><input type="radio" name="q13" value="b"> 5</label>
+<label><input type="radio" name="q13" value="c"> 7</label>
+<label><input type="radio" name="q13" value="d"> 12</label>
+</div>
+<div class="quiz-answer" data-correct="b">Correct answer: 5. log₂(8) = 3 (since 2³ = 8), log₂(4) = 2 (since 2² = 4). Sum = 3 + 2 = 5. Or: log₂(8×4) = log₂(32) = 5</div>
+</div>
+
+<div class="quiz-question">
+<p><strong>14.</strong> What is the 5th term in the binomial expansion of (x + 2)⁶?</p>
+<div class="quiz-options">
+<label><input type="radio" name="q14" value="a"> 15x²·16</label>
+<label><input type="radio" name="q14" value="b"> 20x²·16</label>
+<label><input type="radio" name="q14" value="c"> 15x²·8</label>
+<label><input type="radio" name="q14" value="d"> 6x²·32</label>
+</div>
+<div class="quiz-answer" data-correct="a">Correct answer: 15x²·16 = 240x². T₅ = C(6,4)x²·2⁴ = 15·x²·16</div>
+</div>
+
+<div class="quiz-question">
+<p><strong>15.</strong> If events A and B are independent with P(A) = 0.4 and P(B) = 0.3, what is P(A ∩ B)?</p>
+<div class="quiz-options">
+<label><input type="radio" name="q15" value="a"> 0.12</label>
+<label><input type="radio" name="q15" value="b"> 0.7</label>
+<label><input type="radio" name="q15" value="c"> 0.1</label>
+<label><input type="radio" name="q15" value="d"> 0.24</label>
+</div>
+<div class="quiz-answer" data-correct="a">Correct answer: 0.12. For independent events: P(A ∩ B) = P(A) × P(B) = 0.4 × 0.3 = 0.12</div>
+</div>
+
+<button class="submit-quiz" onclick="submitQuiz('maths')">Submit Quiz</button>
 </div>
 </div>
 
 <!-- PROGRESS TAB -->
 <div id="tab-progress" class="tab-content">
-<h2>Your Progress</h2>
-<p>Track your study sessions and quiz scores for Maths.</p>
+<div class="card">
+<h2>Your Study Progress</h2>
+<p>Track your preparation for both Paper 1 and Paper 2. Mark topics as you master them.</p>
+</div>
 
-<div class="progress-dashboard">
-<div class="progress-stats">
-<div class="stat-card">
-<div class="stat-number" id="progTopics">0</div>
-<div class="stat-label">Topics Studied</div>
-</div>
-<div class="stat-card">
-<div class="stat-number" id="progQuizzes">0</div>
-<div class="stat-label">Quizzes Done</div>
-</div>
-<div class="stat-card">
-<div class="stat-number" id="progAvgScore">0%</div>
-<div class="stat-label">Avg Quiz Score</div>
-</div>
-<div class="stat-card">
-<div class="stat-number" id="progStreak">0</div>
-<div class="stat-label">Day Streak</div>
+<div class="card">
+<h3>Paper 1 Progress</h3>
+<div class="progress-tracker">
+<label><input type="checkbox" class="progress-check" data-subject="maths" data-topic="p1-algebra"> Algebra (Q1, Q5, Q6)</label>
+<label><input type="checkbox" class="progress-check" data-subject="maths" data-topic="p1-calculus"> Calculus (Q2, Q3)</label>
+<label><input type="checkbox" class="progress-check" data-subject="maths" data-topic="p1-complex"> Complex Numbers (Q4)</label>
+<label><input type="checkbox" class="progress-check" data-subject="maths" data-topic="p1-sequences"> Sequences & Series (Q7)</label>
+<label><input type="checkbox" class="progress-check" data-subject="maths" data-topic="p1-optimization"> Applied Calculus (Q8, Q9)</label>
+<label><input type="checkbox" class="progress-check" data-subject="maths" data-topic="p1-proof"> Proof & Patterns (Q10)</label>
 </div>
 </div>
 
-<div class="progress-history">
-<h3>Recent Quiz Results</h3>
-<div id="quizHistory"></div>
+<div class="card">
+<h3>Paper 2 Progress</h3>
+<div class="progress-tracker">
+<label><input type="checkbox" class="progress-check" data-subject="maths" data-topic="p2-lines"> Lines (Q1)</label>
+<label><input type="checkbox" class="progress-check" data-subject="maths" data-topic="p2-circles"> Circles (Q2)</label>
+<label><input type="checkbox" class="progress-check" data-subject="maths" data-topic="p2-probability"> Probability (Q3)</label>
+<label><input type="checkbox" class="progress-check" data-subject="maths" data-topic="p2-statistics"> Statistics (Q4)</label>
+<label><input type="checkbox" class="progress-check" data-subject="maths" data-topic="p2-geometry"> Geometry (Q5)</label>
+<label><input type="checkbox" class="progress-check" data-subject="maths" data-topic="p2-trig"> Trigonometry (Q6)</label>
+<label><input type="checkbox" class="progress-check" data-subject="maths" data-topic="p2-3dgeom"> 3D Geometry (Q7)</label>
+<label><input type="checkbox" class="progress-check" data-subject="maths" data-topic="p2-appliedtrig"> Applied Trig (Q8)</label>
+<label><input type="checkbox" class="progress-check" data-subject="maths" data-topic="p2-statscontext"> Statistics Context (Q9, Q10)</label>
+</div>
 </div>
 
-<div class="progress-topics">
-<h3>Topics Progress</h3>
-<div id="topicsProgress"></div>
+<div class="card">
+<h3>Skills Checklist</h3>
+<div class="progress-tracker">
+<label><input type="checkbox" class="progress-check" data-subject="maths" data-topic="skill-showwork"> Always show ALL working steps</label>
+<label><input type="checkbox" class="progress-check" data-subject="maths" data-topic="skill-formulas"> Write formulas before calculating</label>
+<label><input type="checkbox" class="progress-check" data-subject="maths" data-topic="skill-units"> Check units in final answers</label>
+<label><input type="checkbox" class="progress-check" data-subject="maths" data-topic="skill-rounding"> Don't round until final answer</label>
+<label><input type="checkbox" class="progress-check" data-subject="maths" data-topic="skill-booklet"> Comfortable using Formulae & Tables booklet</label>
+<label><input type="checkbox" class="progress-check" data-subject="maths" data-topic="skill-time"> Can manage time across 8 questions</label>
+<label><input type="checkbox" class="progress-check" data-subject="maths" data-topic="skill-choice"> Know how to choose best 5+3 questions</label>
+</div>
+</div>
+
+<div class="card">
+<h3>Past Papers Completed</h3>
+<div class="progress-tracker">
+<label><input type="checkbox" class="progress-check" data-subject="maths" data-topic="paper-2025p1"> 2025 Paper 1</label>
+<label><input type="checkbox" class="progress-check" data-subject="maths" data-topic="paper-2025p2"> 2025 Paper 2</label>
+<label><input type="checkbox" class="progress-check" data-subject="maths" data-topic="paper-2024p1"> 2024 Paper 1</label>
+<label><input type="checkbox" class="progress-check" data-subject="maths" data-topic="paper-2024p2"> 2024 Paper 2</label>
+<label><input type="checkbox" class="progress-check" data-subject="maths" data-topic="paper-2023p1"> 2023 Paper 1</label>
+<label><input type="checkbox" class="progress-check" data-subject="maths" data-topic="paper-2023p2"> 2023 Paper 2</label>
 </div>
 </div>
 </div>
 
 <script src="js/shared.js"></script>
-<script>
-// FLASHCARD DATA
-const allCards = [
-// Algebra
-{cat:'algebra',q:'What is the quadratic formula?',a:'x = (-b ± √(b² - 4ac)) / 2a<br>For equation ax² + bx + c = 0'},
-{cat:'algebra',q:'What does the discriminant tell you?',a:'Δ = b² - 4ac<br>Δ > 0: two real roots<br>Δ = 0: one repeated root<br>Δ < 0: no real roots'},
-{cat:'algebra',q:'How do you solve |x - a| ≤ b?',a:'a - b ≤ x ≤ a + b<br>The value is within distance b of a'},
-{cat:'algebra',q:'What is completing the square?',a:'Rewrite ax² + bx + c as a(x + h)² + k<br>where h = b/(2a), k = c - ah²<br>Useful for finding vertex of parabola'},
-{cat:'algebra',q:'What are the logarithm laws?',a:'log(AB) = log A + log B<br>log(A/B) = log A - log B<br>log(A^n) = n log A<br>log_a(a) = 1, log_a(1) = 0'},
-{cat:'algebra',q:'Sum and product of roots of ax² + bx + c = 0?',a:'α + β = -b/a<br>αβ = c/a'},
-
-// Calculus
-{cat:'calculus',q:'What is the chain rule for differentiation?',a:'If y = f(g(x)), then<br>dy/dx = f\'(g(x)) × g\'(x)<br>Or: dy/dx = dy/du × du/dx'},
-{cat:'calculus',q:'What is the quotient rule?',a:'d/dx(u/v) = [v(du/dx) - u(dv/dx)] / v²<br>"Low d-high minus high d-low over low squared"'},
-{cat:'calculus',q:'What is the product rule?',a:'d/dx(uv) = u(dv/dx) + v(du/dx)<br>Or: uv\' + vu\''},
-{cat:'calculus',q:'What is the derivative of e^(ax)?',a:'d/dx(e^(ax)) = ae^(ax)<br>The coefficient becomes a multiplier'},
-{cat:'calculus',q:'What is the derivative of ln x?',a:'d/dx(ln x) = 1/x'},
-{cat:'calculus',q:'What is the derivative of sin x?',a:'d/dx(sin x) = cos x'},
-{cat:'calculus',q:'What is the derivative of cos x?',a:'d/dx(cos x) = -sin x'},
-{cat:'calculus',q:'What is the integral of e^x?',a:'∫ e^x dx = e^x + C<br>e^x is its own derivative AND integral'},
-{cat:'calculus',q:'What is the power rule for integration?',a:'∫ x^n dx = x^(n+1)/(n+1) + C<br>(n ≠ -1)'},
-{cat:'calculus',q:'How do you find the equation of a tangent?',a:'y - y₁ = m(x - x₁)<br>where m = f\'(x₁) = slope at point'},
-{cat:'calculus',q:'What is a definite integral?',a:'∫[a to b] f(x) dx = F(b) - F(a)<br>Gives net area under curve from x=a to x=b'},
-
-// Complex Numbers
-{cat:'complex',q:'What is de Moivre\'s theorem?',a:'[r(cos θ + i sin θ)]^n = r^n(cos nθ + i sin nθ)<br>Used for powers and roots of complex numbers'},
-{cat:'complex',q:'How do you find the modulus of z = a + bi?',a:'|z| = √(a² + b²)<br>Distance from origin in complex plane'},
-{cat:'complex',q:'How do you find the argument of z = a + bi?',a:'arg(z) = θ = tan⁻¹(b/a)<br>Angle with positive real axis'},
-{cat:'complex',q:'What is polar form of a complex number?',a:'z = r(cos θ + i sin θ)<br>where r = |z| and θ = arg(z)'},
-{cat:'complex',q:'What is the complex conjugate of a + bi?',a:'z̄ = a - bi<br>z × z̄ = a² + b² (real number)'},
-{cat:'complex',q:'How do you find nth roots of a complex number?',a:'z^n = w  ⟹  z = w^(1/n)<br>Use: r^(1/n)[cos((θ + 2πk)/n) + i sin((θ + 2πk)/n)]<br>k = 0, 1, 2, ..., n-1'},
-
-// Sequences
-{cat:'sequences',q:'What is the nth term of an arithmetic sequence?',a:'T_n = a + (n-1)d<br>where a = first term, d = common difference'},
-{cat:'sequences',q:'What is the sum of an arithmetic series?',a:'S_n = n/2[2a + (n-1)d]<br>or S_n = n/2(a + l) where l = last term'},
-{cat:'sequences',q:'What is the nth term of a geometric sequence?',a:'T_n = ar^(n-1)<br>where a = first term, r = common ratio'},
-{cat:'sequences',q:'What is the sum of a geometric series?',a:'S_n = a(r^n - 1)/(r - 1)<br>or a(1 - r^n)/(1 - r)'},
-{cat:'sequences',q:'What is the sum of an infinite geometric series?',a:'S_∞ = a/(1 - r)<br>Only when |r| < 1'},
-{cat:'sequences',q:'What is the binomial coefficient C(n,r)?',a:'C(n,r) = n! / [r!(n-r)!]<br>Number of ways to choose r items from n'},
-
-// Geometry
-{cat:'geometry',q:'What is the standard form of a circle equation?',a:'(x - h)² + (y - k)² = r²<br>Centre at (h, k), radius r'},
-{cat:'geometry',q:'What is the general form of a circle?',a:'x² + y² + 2gx + 2fy + c = 0<br>Centre: (-g, -f)<br>Radius: √(g² + f² - c)'},
-{cat:'geometry',q:'How do you find the slope of a tangent to a circle?',a:'Slope of tangent × slope of radius = -1<br>(Tangent is perpendicular to radius at point of contact)'},
-{cat:'geometry',q:'What is the slope formula?',a:'m = (y₂ - y₁)/(x₂ - x₁)<br>Rise over run'},
-{cat:'geometry',q:'When are two lines perpendicular?',a:'m₁ × m₂ = -1<br>Product of slopes equals -1'},
-{cat:'geometry',q:'When are two lines parallel?',a:'m₁ = m₂<br>Same slope'},
-{cat:'geometry',q:'What is the volume of a sphere?',a:'V = (4/3)πr³'},
-{cat:'geometry',q:'What is the volume of a cone?',a:'V = (1/3)πr²h<br>One-third of a cylinder with same base and height'},
-{cat:'geometry',q:'If lengths scale by factor k, how do areas and volumes scale?',a:'Areas scale by k²<br>Volumes scale by k³'},
-
-// Trigonometry
-{cat:'trigonometry',q:'What is the sine rule?',a:'a/sin A = b/sin B = c/sin C<br>Used when you know 2 angles and 1 side'},
-{cat:'trigonometry',q:'What is the cosine rule?',a:'c² = a² + b² - 2ab cos C<br>Used when you know 3 sides or 2 sides and included angle'},
-{cat:'trigonometry',q:'What is the area of a triangle formula (trig)?',a:'Area = ½ab sin C<br>Half the product of two sides times sine of included angle'},
-{cat:'trigonometry',q:'When is sin θ = 1/2? (0° to 360°)',a:'θ = 30° and θ = 150°<br>Or θ = π/6 and θ = 5π/6 in radians'},
-{cat:'trigonometry',q:'What is the Pythagorean identity?',a:'sin²θ + cos²θ = 1<br>Also: tan θ = sin θ / cos θ'},
-{cat:'trigonometry',q:'What is the double angle formula for cos 2θ?',a:'cos 2θ = cos²θ - sin²θ<br>Also = 2cos²θ - 1<br>Also = 1 - 2sin²θ'},
-{cat:'trigonometry',q:'What is the double angle formula for sin 2θ?',a:'sin 2θ = 2 sin θ cos θ'},
-{cat:'trigonometry',q:'What are the periods of trig functions?',a:'sin x and cos x: period = 2π<br>tan x: period = π'},
-
-// Probability
-{cat:'probability',q:'What does P(A|B) mean?',a:'Probability of A given that B has occurred<br>P(A|B) = P(A ∩ B) / P(B)'},
-{cat:'probability',q:'When are events A and B independent?',a:'P(A ∩ B) = P(A) × P(B)<br>The outcome of one doesn\'t affect the other'},
-{cat:'probability',q:'What is the addition rule for probability?',a:'P(A ∪ B) = P(A) + P(B) - P(A ∩ B)<br>Subtract overlap to avoid double counting'},
-{cat:'probability',q:'What are mutually exclusive events?',a:'Events that cannot happen at the same time<br>P(A ∩ B) = 0<br>Then: P(A ∪ B) = P(A) + P(B)'},
-{cat:'probability',q:'What is the complement rule?',a:'P(A\') = 1 - P(A)<br>Probability of "not A"'},
-{cat:'probability',q:'What is binomial probability?',a:'P(X = r) = C(n,r) × p^r × (1-p)^(n-r)<br>n trials, r successes, probability p'},
-
-// Statistics
-{cat:'statistics',q:'What is the empirical rule for normal distribution?',a:'68% within μ ± σ<br>95% within μ ± 2σ<br>99.7% within μ ± 3σ'},
-{cat:'statistics',q:'What is a z-score?',a:'z = (X - μ) / σ<br>Number of standard deviations from the mean'},
-{cat:'statistics',q:'What is the 95% confidence interval formula?',a:'x̄ ± 1.96(σ/√n)<br>We\'re 95% confident the true mean is in this range'},
-{cat:'statistics',q:'What is the interquartile range (IQR)?',a:'IQR = Q₃ - Q₁<br>The range of the middle 50% of data'},
-{cat:'statistics',q:'What is the mean formula?',a:'x̄ = Σx / n<br>Or x̄ = Σfx / Σf (grouped data)'},
-{cat:'statistics',q:'What is the median?',a:'Middle value when data is ordered<br>For even count: average of two middle values'},
-{cat:'statistics',q:'What are quartiles?',a:'Q₁ = 25th percentile<br>Q₂ = median = 50th percentile<br>Q₃ = 75th percentile'},
-{cat:'statistics',q:'What is expected value?',a:'E(X) = Σ[x × P(x)]<br>Average outcome if repeated many times'},
-];
-
-// Initialize FlashcardEngine
-const fc = new FlashcardEngine(allCards, 'fcContainer', 'fcControls', 'fcCounter', 'fcFilter');
-
-// QUIZ DATA
-const quizQuestions = [
-// Algebra
-{topic:'algebra',type:'mc',q:'What is the discriminant of 2x² - 7x + 3 = 0?',options:['25','37','49','61'],correct:0,explain:'Δ = b² - 4ac = (-7)² - 4(2)(3) = 49 - 24 = 25. Since Δ > 0, the equation has two distinct real roots.'},
-{topic:'algebra',type:'mc',q:'Solve |x - 5| ≤ 3',options:['2 ≤ x ≤ 8','x ≤ 8','x ≥ 2','5 ≤ x ≤ 8'],correct:0,explain:'|x - 5| ≤ 3 means -3 ≤ x - 5 ≤ 3. Adding 5 throughout: 2 ≤ x ≤ 8.'},
-{topic:'algebra',type:'mc',q:'Simplify log₂(8) + log₂(4)',options:['3','5','7','12'],correct:1,explain:'log₂(8) = 3 (since 2³ = 8), log₂(4) = 2 (since 2² = 4). Sum = 3 + 2 = 5. Or use: log₂(8×4) = log₂(32) = 5.'},
-
-// Calculus
-{topic:'calculus',type:'mc',q:'If f(x) = x³ + 2x, what is f\'(x)?',options:['3x² + 2x','3x² + 2','x² + 2','3x³ + 2x'],correct:1,explain:'Use power rule: d/dx(x³) = 3x², d/dx(2x) = 2. Therefore f\'(x) = 3x² + 2.'},
-{topic:'calculus',type:'mc',q:'What is ∫ 6x² dx?',options:['12x + C','2x³ + C','6x³ + C','3x² + C'],correct:1,explain:'∫ 6x² dx = 6 × x³/3 + C = 2x³ + C. Using power rule: increase power by 1, divide by new power.'},
-{topic:'calculus',type:'mc',q:'If y = e^(3x), what is dy/dx?',options:['e^(3x)','3e^x','3e^(3x)','e^(3x+1)'],correct:2,explain:'d/dx(e^(ax)) = ae^(ax). So d/dx(e^(3x)) = 3e^(3x).'},
-
-// Complex Numbers
-{topic:'complex',type:'mc',q:'What is the modulus of z = 3 + 4i?',options:['7','5','12','25'],correct:1,explain:'|z| = √(3² + 4²) = √(9 + 16) = √25 = 5. This is the distance from the origin in the complex plane.'},
-{topic:'complex',type:'mc',q:'What is the conjugate of 5 - 2i?',options:['5 + 2i','-5 + 2i','-5 - 2i','2 + 5i'],correct:0,explain:'The conjugate of a + bi is a - bi. So conjugate of 5 - 2i is 5 + 2i (change sign of imaginary part).'},
-
-// Sequences
-{topic:'sequences',type:'mc',q:'If the 3rd term of an arithmetic sequence is 17 and the 7th term is 33, what is the common difference?',options:['2','4','5','8'],correct:1,explain:'From T₃ to T₇ is 4 steps. Difference in values = 33 - 17 = 16. Common difference d = 16/4 = 4.'},
-{topic:'sequences',type:'mc',q:'What is the sum of the infinite geometric series 8 + 4 + 2 + 1 + ...?',options:['15','16','18','∞'],correct:1,explain:'a = 8, r = 1/2. Since |r| < 1, S∞ = a/(1-r) = 8/(1-1/2) = 8/(1/2) = 16.'},
-
-// Geometry
-{topic:'geometry',type:'mc',q:'What is the centre of the circle x² + y² - 6x + 4y - 12 = 0?',options:['(3, -2)','(-3, 2)','(6, -4)','(-6, 4)'],correct:0,explain:'General form: x² + y² + 2gx + 2fy + c = 0 has centre (-g, -f). Here 2g = -6 so g = -3, 2f = 4 so f = 2. Centre = (3, -2).'},
-{topic:'geometry',type:'mc',q:'If two lines have slopes 2 and -1/2, what is their relationship?',options:['Parallel','Perpendicular','Neither','Coincident'],correct:1,explain:'m₁ × m₂ = 2 × (-1/2) = -1. When product of slopes = -1, lines are perpendicular.'},
-{topic:'geometry',type:'mc',q:'What is the volume of a cone with radius 3 cm and height 4 cm?',options:['12π cm³','36π cm³','48π cm³','144π cm³'],correct:0,explain:'V = (1/3)πr²h = (1/3)π(3²)(4) = (1/3)π(9)(4) = (1/3)π(36) = 12π cm³.'},
-
-// Trigonometry
-{topic:'trigonometry',type:'mc',q:'If sin θ = 0.5 and 0° ≤ θ ≤ 180°, what are the values of θ?',options:['30° and 60°','30° and 150°','45° and 135°','60° and 120°'],correct:1,explain:'sin θ = 0.5 = 1/2 when θ = 30°. In the range [0°, 180°], sine is also 0.5 at θ = 180° - 30° = 150°.'},
-{topic:'trigonometry',type:'mc',q:'In a triangle, a = 7, b = 5, C = 60°. What is c?',options:['√39','√69','6','8'],correct:0,explain:'Use cosine rule: c² = a² + b² - 2ab cos C = 49 + 25 - 2(7)(5)cos 60° = 74 - 70(0.5) = 74 - 35 = 39. So c = √39.'},
-
-// Probability
-{topic:'probability',type:'mc',q:'In a bag with 3 red and 7 blue marbles, what is P(red)?',options:['0.3','0.5','0.7','3/7'],correct:0,explain:'P(red) = 3/(3+7) = 3/10 = 0.3. There are 3 favorable outcomes out of 10 total.'},
-{topic:'probability',type:'mc',q:'If events A and B are independent with P(A) = 0.4 and P(B) = 0.3, what is P(A ∩ B)?',options:['0.12','0.7','0.1','0.24'],correct:0,explain:'For independent events: P(A ∩ B) = P(A) × P(B) = 0.4 × 0.3 = 0.12.'},
-
-// Statistics
-{topic:'statistics',type:'mc',q:'What is the median of: 3, 7, 2, 9, 5?',options:['5','5.2','6','7'],correct:0,explain:'Arrange in order: 2, 3, 5, 7, 9. The middle value (3rd of 5) is 5.'},
-{topic:'statistics',type:'mc',q:'For normal distribution with μ = 50, σ = 10, what is the z-score for X = 65?',options:['1.0','1.5','2.0','2.5'],correct:1,explain:'z = (X - μ)/σ = (65 - 50)/10 = 15/10 = 1.5. X is 1.5 standard deviations above the mean.'},
-{topic:'statistics',type:'mc',q:'What is the IQR if Q₁ = 20 and Q₃ = 45?',options:['20','25','45','65'],correct:1,explain:'IQR = Q₃ - Q₁ = 45 - 20 = 25. This represents the range of the middle 50% of the data.'},
-];
-
-// Initialize QuizEngine
-const quiz = new QuizEngine(quizQuestions, 'quizArea', 'quizScore', 'maths');
-
-// Initialize on page load
-document.addEventListener('DOMContentLoaded', function() {
-  quiz.start('all');
-  renderSubjectProgress();
-});
-</script>
 </body>
 </html>
