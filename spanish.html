@@ -942,11 +942,12 @@
 <div class="tab-content" id="tab-pastpapers">
 <div class="card">
 <h2>Past Papers & Marking Schemes</h2>
-<p>Review actual exam papers and marking schemes from previous years. Select a year to view.</p>
-<div style="margin-top:1rem;">
-<label for="yearSelect" style="font-weight:600;margin-right:0.5rem;">Select Year:</label>
+<p>Review actual exam papers and marking schemes. Select a year, then search for specific topics or questions.</p>
+<div style="display:flex;gap:1rem;margin-top:1rem;flex-wrap:wrap;align-items:center;">
+<div>
+<label for="yearSelect" style="font-weight:600;margin-right:0.5rem;">Year:</label>
 <select id="yearSelect" onchange="loadPaperYear(this.value)" style="padding:0.5rem 1rem;border:2px solid var(--primary);border-radius:8px;font-size:1rem;font-weight:600;color:var(--primary);background:#fff;cursor:pointer;">
-<option value="">-- Choose a year --</option>
+<option value="">-- Choose --</option>
 <option value="2025">2025</option>
 <option value="2024">2024</option>
 <option value="2023">2023</option>
@@ -963,11 +964,17 @@
 <option value="2012">2012</option>
 </select>
 </div>
+<div style="flex:1;min-width:200px;">
+<input type="text" id="paperSearch" placeholder="Search within paper (e.g. Q3, algebra, osmosis...)" 
+  oninput="searchPapers(this.value)" 
+  style="width:100%;padding:0.5rem 1rem;border:2px solid var(--border);border-radius:8px;font-size:0.95rem;">
+</div>
+</div>
 </div>
 <div id="paperContent">
 <div class="card" style="text-align:center;color:var(--text-light);padding:3rem;">
 <p style="font-size:1.1rem;">Select a year above to view past papers and marking schemes.</p>
-<p style="margin-top:0.5rem;font-size:0.9rem;">Available: 2025 - 2012 (14 years)</p>
+<p style="margin-top:0.5rem;font-size:0.9rem;">Available: 2012 — 2025 (14 years)</p>
 </div>
 </div>
 </div>
@@ -1084,13 +1091,81 @@ const fc = new FlashcardEngine(allCards, 'fcContainer', 'fcControls', 'fcCounter
 const quiz = new QuizEngine(quizQuestions, 'quizArea', 'quizScore', 'spanish');
 
 
+  if (year === '2025') {
+    document.getElementById('paperContent').innerHTML = '<div class="card"><h2>2025</h2><p>The 2025 content is in the <strong>Study</strong> and <strong>Mark Decoder</strong> tabs — that\'s the current year with full detailed walkthroughs.</p><p style="margin-top:0.5rem;"><button class="btn btn-primary" onclick="showTab(\'study\',\'spanish\')">Go to Study Tab</button></p></div>';
+    return;
+  }
+  renderPastPaper('spanish', year);
+}
+
+
+function renderPastPaper(subject, year) {
+    var dataVar = 'PAST_PAPERS_' + subject.toUpperCase();
+    var data = window[dataVar];
+    if (!data || !data[year]) {
+        document.getElementById('paperContent').innerHTML = '<div class="card"><p>No data available for ' + year + '.</p></div>';
+        return;
+    }
+    var info = data[year];
+    var html = '';
+    
+    // Papers
+    var paperKeys = Object.keys(info.papers);
+    if (paperKeys.length > 0) {
+        paperKeys.forEach(function(pname) {
+            var p = info.papers[pname];
+            html += '<div class="card"><h3>' + p.label + ' — ' + year + '</h3>';
+            html += '<div class="paper-text" style="white-space:pre-wrap;font-size:0.88rem;color:var(--text-light);line-height:1.7;max-height:500px;overflow-y:auto;padding:1rem;background:var(--bg);border-radius:8px;border:1px solid var(--border);">';
+            html += p.text;
+            html += '</div></div>';
+        });
+    } else {
+        html += '<div class="card"><p style="color:var(--text-light);">Exam paper text not available for ' + year + '. See marking scheme below.</p></div>';
+    }
+    
+    // Marking scheme
+    if (info.marking) {
+        html += '<div class="card"><h3>Marking Scheme — ' + year + '</h3>';
+        html += '<div class="paper-text" style="white-space:pre-wrap;font-size:0.88rem;color:var(--text-light);line-height:1.7;max-height:600px;overflow-y:auto;padding:1rem;background:var(--bg);border-radius:8px;border:1px solid var(--border);">';
+        html += info.marking;
+        html += '</div></div>';
+    }
+    
+    document.getElementById('paperContent').innerHTML = html;
+    
+    // Highlight search term if one exists
+    var searchVal = document.getElementById('paperSearch');
+    if (searchVal && searchVal.value.trim()) {
+        highlightSearch(searchVal.value.trim());
+    }
+}
+
+function searchPapers(term) {
+    if (!term || term.length < 2) return;
+    highlightSearch(term);
+}
+
+function highlightSearch(term) {
+    var container = document.getElementById('paperContent');
+    var textDivs = container.querySelectorAll('.paper-text');
+    textDivs.forEach(function(div) {
+        var text = div.textContent;
+        if (!term) { div.innerHTML = text; return; }
+        var regex = new RegExp('(' + term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')', 'gi');
+        div.innerHTML = text.replace(regex, '<mark style="background:#fdcb6e;padding:1px 2px;border-radius:2px;">$1</mark>');
+        // Scroll to first match
+        var firstMark = div.querySelector('mark');
+        if (firstMark) firstMark.scrollIntoView({block:'center'});
+    });
+}
+
 function loadPaperYear(year) {
   if (!year) {
-    document.getElementById('paperContent').innerHTML = '<div class="card" style="text-align:center;color:var(--text-light);padding:3rem;"><p style="font-size:1.1rem;">Select a year above to view past papers and marking schemes.</p></div>';
+    document.getElementById('paperContent').innerHTML = '<div class="card" style="text-align:center;color:var(--text-light);padding:3rem;"><p>Select a year above.</p></div>';
     return;
   }
   if (year === '2025') {
-    document.getElementById('paperContent').innerHTML = '<div class="card"><h2>2025</h2><p>The 2025 content is in the <strong>Study</strong> and <strong>Mark Decoder</strong> tabs — that\'s the current year with full detailed walkthroughs.</p><p style="margin-top:0.5rem;"><button class="btn btn-primary" onclick="showTab(\'study\',\'spanish\')">Go to Study Tab</button></p></div>';
+    document.getElementById('paperContent').innerHTML = '<div class="card"><h2>2025</h2><p>The 2025 content is in the <strong>Study</strong> and <strong>Mark Decoder</strong> tabs with full detailed walkthroughs.</p><p style="margin-top:0.5rem;"><button class="btn btn-primary" onclick="document.querySelectorAll(\'nav button\')[0].click()">Go to Study Tab</button></p></div>';
     return;
   }
   renderPastPaper('spanish', year);
