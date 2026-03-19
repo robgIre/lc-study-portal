@@ -5,6 +5,56 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>LC Biology - Higher Level Study Tool</title>
 <link rel="stylesheet" href="css/shared.css">
+<style>
+/* Year selector dropdowns */
+.year-selector {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-left: 1rem;
+  font-size: 0.85rem;
+}
+.year-selector label {
+  color: var(--text-light);
+  font-weight: 500;
+  font-size: 0.8rem;
+}
+.year-selector select {
+  padding: 3px 8px;
+  border: 2px solid var(--primary-light);
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--primary);
+  background: #fff;
+  cursor: pointer;
+}
+.year-content-box {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: rgba(108,92,231,0.04);
+  border: 1px solid var(--primary-light);
+  border-radius: 8px;
+  font-size: 0.88rem;
+  color: var(--text-light);
+  line-height: 1.7;
+  white-space: pre-wrap;
+  max-height: 500px;
+  overflow-y: auto;
+  display: none;
+}
+.year-content-box.visible { display: block; }
+.year-content-box .year-badge {
+  display: inline-block;
+  background: var(--primary);
+  color: #fff;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+</style>
 </head>
 <body class="subject-biology">
 <header class="app-header">
@@ -98,7 +148,10 @@
 <!-- STUDY TAB -->
 <div id="tab-study" class="tab-content active">
 <div class="card">
-<h2>Question Walkthroughs - 2025 Paper</h2>
+<h2>Question Walkthroughs<span class="year-selector"><label>Year:</label><select onchange="showYearContent('full',this.value,'yearBoxBio')">
+<option value="">2025 (current)</option><option value="2023">2023</option><option value="2022">2022</option><option value="2021">2021</option><option value="2020">2020</option><option value="2018">2018</option><option value="2017">2017</option><option value="2016">2016</option><option value="2015">2015</option><option value="2014">2014</option><option value="2013">2013</option><option value="2012">2012</option>
+</select></span></h2>
+<div class="year-content-box" id="yearBoxBio"></div>
 <p>Select a question to see detailed solutions with step-by-step explanations.</p>
 </div>
 <div class="question-nav" id="studyNav">
@@ -602,6 +655,7 @@
 </div>
 
 <script src="js/biology_papers.js"></script>
+<script src="js/biology_yeardata.js"></script>
 <script src="js/shared.js"></script>
 <script>
 function renderSubjectProgress() {
@@ -760,6 +814,26 @@ function loadPaperYear(year) {
     return;
   }
   renderPastPaper('biology', year);
+}
+
+
+function showYearContent(sectionKey, year, containerId) {
+  var container = document.getElementById(containerId);
+  if (!year) {
+    container.classList.remove('visible');
+    container.innerHTML = '';
+    return;
+  }
+  var subjectName = document.body.className.replace('subject-','');
+  var dataVar = 'YEAR_DATA_' + subjectName.toUpperCase();
+  var data = window[dataVar];
+  if (!data || !data[sectionKey] || !data[sectionKey].years[year]) {
+    container.classList.add('visible');
+    container.innerHTML = '<p>No marking scheme data available for ' + year + ' for this section.</p>';
+    return;
+  }
+  container.classList.add('visible');
+  container.innerHTML = '<span class="year-badge">' + year + ' Marking Scheme</span>\n' + data[sectionKey].years[year];
 }
 
 document.addEventListener('DOMContentLoaded', function() {
