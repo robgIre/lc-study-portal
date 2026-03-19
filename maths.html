@@ -22,6 +22,7 @@
 <button onclick="showTab('marks','maths')">Mark Decoder</button>
 <button onclick="showTab('glossary','maths')">Glossary</button>
 <button onclick="showTab('formulas','maths')">Formulas</button>
+<button onclick="showTab('pastpapers','maths')">Past Papers</button>
 <button onclick="showTab('progress','maths')">Progress</button>
 </nav>
 
@@ -1061,6 +1062,41 @@ Having a pet in the home is <strong>unlikely to be related to maths test scores<
 </div>
 </div>
 
+
+<!-- ====== PAST PAPERS TAB ====== -->
+<div class="tab-content" id="tab-pastpapers">
+<div class="card">
+<h2>Past Papers & Marking Schemes</h2>
+<p>Review actual exam papers and marking schemes from previous years. Select a year to view.</p>
+<div style="margin-top:1rem;">
+<label for="yearSelect" style="font-weight:600;margin-right:0.5rem;">Select Year:</label>
+<select id="yearSelect" onchange="loadPaperYear(this.value)" style="padding:0.5rem 1rem;border:2px solid var(--primary);border-radius:8px;font-size:1rem;font-weight:600;color:var(--primary);background:#fff;cursor:pointer;">
+<option value="">-- Choose a year --</option>
+<option value="2025">2025</option>
+<option value="2024">2024</option>
+<option value="2023">2023</option>
+<option value="2022">2022</option>
+<option value="2021">2021</option>
+<option value="2020">2020</option>
+<option value="2019">2019</option>
+<option value="2018">2018</option>
+<option value="2017">2017</option>
+<option value="2016">2016</option>
+<option value="2015">2015</option>
+<option value="2014">2014</option>
+<option value="2013">2013</option>
+<option value="2012">2012</option>
+</select>
+</div>
+</div>
+<div id="paperContent">
+<div class="card" style="text-align:center;color:var(--text-light);padding:3rem;">
+<p style="font-size:1.1rem;">Select a year above to view past papers and marking schemes.</p>
+<p style="margin-top:0.5rem;font-size:0.9rem;">Available: 2025 - 2012 (14 years)</p>
+</div>
+</div>
+</div>
+
 <!-- ====== PROGRESS TAB ====== -->
 <div class="tab-content" id="tab-progress">
 <div class="card">
@@ -1093,6 +1129,7 @@ Having a pet in the home is <strong>unlikely to be related to maths test scores<
 </div>
 </div>
 
+<script src="js/maths_papers.js"></script>
 <script src="js/shared.js"></script>
 <script>
 function renderSubjectProgress() {
@@ -1171,6 +1208,19 @@ const quizQuestions = [
 
 const fc = new FlashcardEngine(allCards, 'fcContainer', 'fcControls', 'fcCounter', 'fcFilter');
 const quiz = new QuizEngine(quizQuestions, 'quizArea', 'quizScore', 'maths');
+
+
+function loadPaperYear(year) {
+  if (!year) {
+    document.getElementById('paperContent').innerHTML = '<div class="card" style="text-align:center;color:var(--text-light);padding:3rem;"><p style="font-size:1.1rem;">Select a year above to view past papers and marking schemes.</p></div>';
+    return;
+  }
+  if (year === '2025') {
+    document.getElementById('paperContent').innerHTML = '<div class="card"><h2>2025</h2><p>The 2025 content is in the <strong>Study</strong> and <strong>Mark Decoder</strong> tabs — that\'s the current year with full detailed walkthroughs.</p><p style="margin-top:0.5rem;"><button class="btn btn-primary" onclick="showTab(\'study\',\'maths\')">Go to Study Tab</button></p></div>';
+    return;
+  }
+  renderPastPaper('maths', year);
+}
 
 document.addEventListener('DOMContentLoaded', function() {
   quiz.start('all');
