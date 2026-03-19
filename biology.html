@@ -153,6 +153,7 @@
 <div class="year-content-box" id="yearBoxBio"></div>
 <p>Select a question to see detailed solutions with step-by-step explanations.</p>
 </div>
+<div id="content2025">
 <div class="question-nav" id="studyNav">
 <button class="active" onclick="showQuestion('q1','biology')">Q1 Nutrition</button>
 <button onclick="showQuestion('q2','biology')">Q2 Plant</button>
@@ -510,6 +511,9 @@
 </div>
 </div>
 
+
+</div>
+<div id="contentPastYear" style="display:none;"></div>
 </div>
 
 <!-- FLASHCARDS TAB -->
@@ -694,19 +698,34 @@ const fc = new FlashcardEngine(allCards, 'fcContainer', 'fcControls', 'fcCounter
 const quiz = new QuizEngine(quizQuestions, 'quizArea', 'quizScore', 'biology');
 
 function showYearContent(sectionKey, year, containerId) {
-  var container = document.getElementById(containerId);
-  if (!year) {
-    container.classList.remove('visible');
-    container.innerHTML = '';
+  var content2025 = document.getElementById('content2025');
+  var pastYear = document.getElementById('contentPastYear');
+  if (!content2025 || !pastYear) return;
+
+  if (!year || year === '2025') {
+    content2025.style.display = 'block';
+    pastYear.style.display = 'none';
+    pastYear.innerHTML = '';
     return;
   }
+
   var subjectName = document.body.className.replace('subject-','');
   var dataVar = 'YEAR_DATA_' + subjectName.toUpperCase();
   var data = window[dataVar];
+
   if (!data || !data[sectionKey] || !data[sectionKey].years[year]) {
+    content2025.style.display = 'none';
+    pastYear.style.display = 'block';
+    pastYear.innerHTML = '<div class="card"><h2>' + year + '</h2><p>No marking scheme data available for this year.</p></div>';
+    return;
   }
-  container.classList.add('visible');
-  container.innerHTML = '<span class="year-badge">' + year + ' Marking Scheme</span>\n' + data[sectionKey].years[year];
+
+  content2025.style.display = 'none';
+  pastYear.style.display = 'block';
+  pastYear.innerHTML = '<div class="card"><h2>' + year + ' — ' + data[sectionKey].label + '</h2>'
+    + '<div style="white-space:pre-wrap;font-size:0.88rem;color:var(--text-light);line-height:1.7;max-height:700px;overflow-y:auto;padding:1rem;background:var(--bg);border-radius:8px;border:1px solid var(--border);">'
+    + data[sectionKey].years[year]
+    + '</div></div>';
 }
 
 document.addEventListener('DOMContentLoaded', function() {
