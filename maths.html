@@ -5,56 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>LC Maths - Higher Level Study Tool</title>
 <link rel="stylesheet" href="css/shared.css">
-<style>
-/* Year selector dropdowns */
-.year-selector {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  margin-left: 1rem;
-  font-size: 0.85rem;
-}
-.year-selector label {
-  color: var(--text-light);
-  font-weight: 500;
-  font-size: 0.8rem;
-}
-.year-selector select {
-  padding: 3px 8px;
-  border: 2px solid var(--primary-light);
-  border-radius: 6px;
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: var(--primary);
-  background: #fff;
-  cursor: pointer;
-}
-.year-content-box {
-  margin-top: 1rem;
-  padding: 1rem;
-  background: rgba(108,92,231,0.04);
-  border: 1px solid var(--primary-light);
-  border-radius: 8px;
-  font-size: 0.88rem;
-  color: var(--text-light);
-  line-height: 1.7;
-  white-space: pre-wrap;
-  max-height: 500px;
-  overflow-y: auto;
-  display: none;
-}
-.year-content-box.visible { display: block; }
-.year-content-box .year-badge {
-  display: inline-block;
-  background: var(--primary);
-  color: #fff;
-  padding: 2px 8px;
-  border-radius: 4px;
-  font-size: 0.75rem;
-  font-weight: 700;
-  margin-bottom: 0.5rem;
-}
-</style>
 </head>
 <body class="subject-maths">
 <header class="app-header">
@@ -72,6 +22,7 @@
 <button onclick="showTab('marks','maths')">Mark Decoder</button>
 <button onclick="showTab('glossary','maths')">Glossary</button>
 <button onclick="showTab('formulas','maths')">Formulas</button>
+<button onclick="showTab('pastpapers','maths')">Past Papers</button>
 <button onclick="showTab('progress','maths')">Progress</button>
 </nav>
 
@@ -125,10 +76,7 @@
 </div>
 
 <div class="card">
-<h2>Paper 1 Topics<span class="year-selector"><label>Year:</label><select onchange="showYearContent('full',this.value,'yearBox_0')">
-<option value="">2025 (current)</option><option value="2024">2024</option><option value="2023">2023</option><option value="2022">2022</option><option value="2021">2021</option><option value="2020">2020</option><option value="2019">2019</option><option value="2018">2018</option><option value="2017">2017</option><option value="2016">2016</option><option value="2015">2015</option><option value="2014">2014</option><option value="2013">2013</option><option value="2012">2012</option>
-</select></span></h2>
-<div class="year-content-box" id="yearBox_0"></div>
+<h2>Paper 1 Topics</h2>
 <table>
 <tr><th>Q</th><th>Topic</th><th>Type</th><th>Advice</th></tr>
 <tr><td>Q1</td><td>Algebra</td><td>Section A</td><td>Inequalities, surds, factorization. Very algebraic manipulation heavy.</td></tr>
@@ -145,10 +93,7 @@
 </div>
 
 <div class="card">
-<h2>Paper 2 Topics<span class="year-selector"><label>Year:</label><select onchange="showYearContent('full',this.value,'yearBox_1')">
-<option value="">2025 (current)</option><option value="2024">2024</option><option value="2023">2023</option><option value="2022">2022</option><option value="2021">2021</option><option value="2020">2020</option><option value="2019">2019</option><option value="2018">2018</option><option value="2017">2017</option><option value="2016">2016</option><option value="2015">2015</option><option value="2014">2014</option><option value="2013">2013</option><option value="2012">2012</option>
-</select></span></h2>
-<div class="year-content-box" id="yearBox_1"></div>
+<h2>Paper 2 Topics</h2>
 <table>
 <tr><th>Q</th><th>Topic</th><th>Type</th><th>Advice</th></tr>
 <tr><td>Q1</td><td>Lines</td><td>Section A</td><td>Equation of a line, slope, angles between lines, intercepts.</td></tr>
@@ -471,7 +416,6 @@
 <div class="card">
 <h2>Paper Selection</h2>
 <p>LC Maths Higher Level has TWO papers. Choose which paper's questions you want to study:</p>
-<div id="content2025">
 <div class="question-nav" id="paperNav">
 <button class="active" onclick="showPaper('paper1','maths')">Paper 1</button>
 <button onclick="showPaper('paper2','maths')">Paper 2</button>
@@ -487,12 +431,8 @@
 <div class="question-nav" id="studyNavP1">
 <button class="active" onclick="showQuestion('p1q1','maths')">Q1 Algebra</button>
 <button onclick="showQuestion('p1q2','maths')">Q2 Calculus</button>
-<button onclick="showQuestion('p1q3','maths')">Q3 Calculus</button>
 <button onclick="showQuestion('p1q4','maths')">Q4 Complex</button>
-<button onclick="showQuestion('p1q5','maths')">Q5 Algebra</button>
-<button onclick="showQuestion('p1q6','maths')">Q6 Binomial</button>
 <button onclick="showQuestion('p1q7','maths')">Q7 Sequences</button>
-<button onclick="showQuestion('p1q8','maths')">Q8 Optimization</button>
 </div>
 
 <!-- P1 Q1 -->
@@ -768,8 +708,6 @@ Length of 1 lap = S₁₈ = (25/3)(1.06¹⁸ - 1)<br><br>
 <button class="active" onclick="showQuestion('p2q1','maths')">Q1 Lines</button>
 <button onclick="showQuestion('p2q2','maths')">Q2 Circles</button>
 <button onclick="showQuestion('p2q3','maths')">Q3 Probability</button>
-<button onclick="showQuestion('p2q4','maths')">Q4 Statistics</button>
-<button onclick="showQuestion('p2q6','maths')">Q6 Trig</button>
 <button onclick="showQuestion('p2q10','maths')">Q10 Stats Context</button>
 </div>
 
@@ -1046,9 +984,6 @@ Having a pet in the home is <strong>unlikely to be related to maths test scores<
 
 </div>
 
-
-</div>
-<div id="contentPastYear" style="display:none;"></div>
 </div>
 
 <!-- FLASHCARDS TAB -->
@@ -1121,6 +1056,41 @@ Having a pet in the home is <strong>unlikely to be related to maths test scores<
 </div>
 </div>
 
+
+<!-- ====== PAST PAPERS TAB ====== -->
+<div class="tab-content" id="tab-pastpapers">
+<div class="card">
+<h2>Past Papers & Marking Schemes</h2>
+<p>Review actual exam papers and marking schemes from previous years. Select a year to view.</p>
+<div style="margin-top:1rem;">
+<label for="yearSelect" style="font-weight:600;margin-right:0.5rem;">Select Year:</label>
+<select id="yearSelect" onchange="loadPaperYear(this.value)" style="padding:0.5rem 1rem;border:2px solid var(--primary);border-radius:8px;font-size:1rem;font-weight:600;color:var(--primary);background:#fff;cursor:pointer;">
+<option value="">-- Choose a year --</option>
+<option value="2025">2025</option>
+<option value="2024">2024</option>
+<option value="2023">2023</option>
+<option value="2022">2022</option>
+<option value="2021">2021</option>
+<option value="2020">2020</option>
+<option value="2019">2019</option>
+<option value="2018">2018</option>
+<option value="2017">2017</option>
+<option value="2016">2016</option>
+<option value="2015">2015</option>
+<option value="2014">2014</option>
+<option value="2013">2013</option>
+<option value="2012">2012</option>
+</select>
+</div>
+</div>
+<div id="paperContent">
+<div class="card" style="text-align:center;color:var(--text-light);padding:3rem;">
+<p style="font-size:1.1rem;">Select a year above to view past papers and marking schemes.</p>
+<p style="margin-top:0.5rem;font-size:0.9rem;">Available: 2025 - 2012 (14 years)</p>
+</div>
+</div>
+</div>
+
 <!-- ====== PROGRESS TAB ====== -->
 <div class="tab-content" id="tab-progress">
 <div class="card">
@@ -1153,11 +1123,9 @@ Having a pet in the home is <strong>unlikely to be related to maths test scores<
 </div>
 </div>
 
-<script src="js/format_marking.js"></script>
-<script src="js/maths_yeardata.js"></script>
+<script src="js/maths_papers.js"></script>
 <script src="js/shared.js"></script>
 <script>
-
 function renderSubjectProgress() {
   const p = LCS.getProgress('maths');
   let topics = 0;
@@ -1226,7 +1194,7 @@ const quizQuestions = [
 {topic:'geometry',q:'What is the distance between (1,2) and (4,6)?',options:['5','7','√13','25'],correct:0,explain:'d = √((4-1)² + (6-2)²) = √(9 + 16) = √25 = 5.'},
 {topic:'geometry',q:'The centre of the circle x² + y² - 6x + 4y - 12 = 0 is:',options:['(6, -4)','(3, -2)','(-3, 2)','(-6, 4)'],correct:1,explain:'In form x² + y² + 2gx + 2fy + c = 0: 2g = -6, so g = -3. 2f = 4, so f = 2. Centre = (-g, -f) = (3, -2).'},
 {topic:'trigonometry',q:'sin 30° equals:',options:['1/√2','√3/2','1/2','√3'],correct:2,explain:'sin 30° = 1/2. This is one of the standard angles you must know.'},
-{topic:'trigonometry',q:'Using the cosine rule, if a=5, b=7, C=60°, then a² = ?',options:['39','74','25','49'],correct:0,explain:'a² = b² + c² - 2bc·cosA. But here we find c²: wait — a²=5²=25 is given. The question asks for c² = a²+b²-2ab·cosC = 25+49-2(5)(7)(0.5) = 74-35 = 39.'},
+{topic:'trigonometry',q:'Using the cosine rule, if a=5, b=7, C=60°, then c² = ?',options:['39','74','25','49'],correct:0,explain:'c² = a² + b² - 2ab·cosC = 25 + 49 - 2(5)(7)(0.5) = 74 - 35 = 39.'},
 {topic:'probability',q:'If P(A) = 0.3 and P(B) = 0.5 and A,B are independent, P(A∩B) = ?',options:['0.15','0.80','0.20','0.35'],correct:0,explain:'For independent events: P(A∩B) = P(A) × P(B) = 0.3 × 0.5 = 0.15.'},
 {topic:'probability',q:'A fair die is rolled. P(even or > 4) = ?',options:['1/2','2/3','1/3','5/6'],correct:1,explain:'Even: {2,4,6}. >4: {5,6}. Union: {2,4,5,6} = 4 outcomes. P = 4/6 = 2/3.'},
 {topic:'statistics',q:'The empirical rule says ~95% of data falls within:',options:['1 standard deviation','2 standard deviations','3 standard deviations','The mean'],correct:1,explain:'For normal distributions: ~68% within 1 SD, ~95% within 2 SDs, ~99.7% within 3 SDs of the mean.'}
@@ -1235,34 +1203,18 @@ const quizQuestions = [
 const fc = new FlashcardEngine(allCards, 'fcContainer', 'fcControls', 'fcCounter', 'fcFilter');
 const quiz = new QuizEngine(quizQuestions, 'quizArea', 'quizScore', 'maths');
 
-function showYearContent(sectionKey, year, containerId) {
-  var content2025 = document.getElementById('content2025');
-  var pastYear = document.getElementById('contentPastYear');
-  if (!content2025 || !pastYear) return;
 
-  if (!year || year === '2025') {
-    content2025.style.display = 'block';
-    pastYear.style.display = 'none';
-    pastYear.innerHTML = '';
+function loadPaperYear(year) {
+  if (!year) {
+    document.getElementById('paperContent').innerHTML = '<div class="card" style="text-align:center;color:var(--text-light);padding:3rem;"><p style="font-size:1.1rem;">Select a year above to view past papers and marking schemes.</p></div>';
     return;
   }
-
-  var subjectName = document.body.className.replace('subject-','');
-  var dataVar = 'YEAR_DATA_' + subjectName.toUpperCase();
-  var data = window[dataVar];
-
-  if (!data || !data[sectionKey] || !data[sectionKey].years[year]) {
-    content2025.style.display = 'none';
-    pastYear.style.display = 'block';
-    pastYear.innerHTML = '<div class="card"><p>No data available for ' + year + '.</p></div>';
+  if (year === '2025') {
+    document.getElementById('paperContent').innerHTML = '<div class="card"><h2>2025</h2><p>The 2025 content is in the <strong>Study</strong> and <strong>Mark Decoder</strong> tabs — that\'s the current year with full detailed walkthroughs.</p><p style="margin-top:0.5rem;"><button class="btn btn-primary" onclick="showTab(\'study\',\'maths\')">Go to Study Tab</button></p></div>';
     return;
   }
-
-  content2025.style.display = 'none';
-  pastYear.style.display = 'block';
-  pastYear.innerHTML = formatMarkingScheme(data[sectionKey].years[year], year);
+  renderPastPaper('maths', year);
 }
-
 
 document.addEventListener('DOMContentLoaded', function() {
   quiz.start('all');

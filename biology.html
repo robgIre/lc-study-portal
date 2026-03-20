@@ -5,56 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>LC Biology - Higher Level Study Tool</title>
 <link rel="stylesheet" href="css/shared.css">
-<style>
-/* Year selector dropdowns */
-.year-selector {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  margin-left: 1rem;
-  font-size: 0.85rem;
-}
-.year-selector label {
-  color: var(--text-light);
-  font-weight: 500;
-  font-size: 0.8rem;
-}
-.year-selector select {
-  padding: 3px 8px;
-  border: 2px solid var(--primary-light);
-  border-radius: 6px;
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: var(--primary);
-  background: #fff;
-  cursor: pointer;
-}
-.year-content-box {
-  margin-top: 1rem;
-  padding: 1rem;
-  background: rgba(108,92,231,0.04);
-  border: 1px solid var(--primary-light);
-  border-radius: 8px;
-  font-size: 0.88rem;
-  color: var(--text-light);
-  line-height: 1.7;
-  white-space: pre-wrap;
-  max-height: 500px;
-  overflow-y: auto;
-  display: none;
-}
-.year-content-box.visible { display: block; }
-.year-content-box .year-badge {
-  display: inline-block;
-  background: var(--primary);
-  color: #fff;
-  padding: 2px 8px;
-  border-radius: 4px;
-  font-size: 0.75rem;
-  font-weight: 700;
-  margin-bottom: 0.5rem;
-}
-</style>
 </head>
 <body class="subject-biology">
 <header class="app-header">
@@ -72,6 +22,7 @@
 <button onclick="showTab('marks','biology')">Mark Decoder</button>
 <button onclick="showTab('glossary','biology')">Glossary</button>
 <button onclick="showTab('formulas','biology')">Formulas</button>
+<button onclick="showTab('pastpapers','biology')">Past Papers</button>
 <button onclick="showTab('progress','biology')">Progress</button>
 </nav>
 
@@ -144,16 +95,231 @@
 </div>
 </div>
 
+<!-- MARK SCHEME DECODER TAB -->
+<div id="tab-marks" class="tab-content">
+<div class="card">
+<h2>Mark Scheme Decoder</h2>
+<p>Understanding how Biology examiners award marks helps you maximise your score.</p>
+</div>
+
+<div class="card">
+<h3>General Marking Principles</h3>
+<table>
+<tr><th>Principle</th><th>Detail</th></tr>
+<tr><td><strong>Key words</strong></td><td>Examiners look for specific scientific terms. Synonyms are usually accepted, but exact terms are safer.</td></tr>
+<tr><td><strong>Separate points</strong></td><td>Each mark is typically awarded for a separate point. Write one point per line or clearly separate them.</td></tr>
+<tr><td><strong>No penalty for extras</strong></td><td>If you give more points than asked for, the examiner marks the best ones. But contradictions can lose marks.</td></tr>
+<tr><td><strong>Diagrams</strong></td><td>Diagrams must be labelled to earn marks. A diagram alone without labels scores poorly.</td></tr>
+<tr><td><strong>Definitions</strong></td><td>Must be precise. "Osmosis = water moving" is too vague. Include direction (high to low water concentration) and membrane.</td></tr>
+<tr><td><strong>Experiments</strong></td><td>Must include method, controls, and expected results. Just naming the experiment isn't enough.</td></tr>
+</table>
+</div>
+
+<div class="card">
+<h3>Marking Scale Notation</h3>
+<p>Biology marking schemes use a specific shorthand:</p>
+<table>
+<tr><th>Notation</th><th>Meaning</th><th>Example</th></tr>
+<tr><td><strong>3(4)</strong></td><td>3 points, each worth 4 marks</td><td>Name three organelles = 12 marks</td></tr>
+<tr><td><strong>2(4) + 4(3)</strong></td><td>First 2 correct = 4 marks each, next 4 = 3 marks each</td><td>Rewards first correct answers more</td></tr>
+<tr><td><strong>(9)</strong></td><td>Total of 9 marks for the section</td><td>Subdivided across parts</td></tr>
+<tr><td><strong>any 5</strong></td><td>Choose 5 from the options</td><td>Only first 5 answers are marked</td></tr>
+</table>
+</div>
+
+<div class="card">
+<h3>Section A - Short Questions (20 marks each)</h3>
+<div class="mark-info"><strong>Format:</strong> 5 parts, answer all. Usually 4 marks per part.</div>
+<div class="mark-info"><strong>Typical structure:</strong> Define, name, state, give an example, draw and label.</div>
+<div class="mark-info"><strong>Common errors:</strong> Vague definitions, missing labels on diagrams, giving functions when asked for locations.</div>
+<div class="explain"><strong>Tip:</strong> These should take ~6 minutes each. Don't overthink — short, precise answers. One correct scientific term per mark.</div>
+</div>
+
+<div class="card">
+<h3>Section B - Short Answer (30 marks each)</h3>
+<div class="mark-info"><strong>Format:</strong> Usually involves a practical/experiment scenario.</div>
+<div class="mark-info"><strong>Key elements for full marks:</strong> State the method clearly, identify variables (independent, dependent, controlled), give expected results, draw conclusions.</div>
+<div class="mark-info"><strong>Diagrams:</strong> Must be large, clear, and labelled. Each correct label = marks.</div>
+<div class="explain"><strong>Tip:</strong> Always mention a control in experiment questions. "A control was set up using [same conditions minus the variable being tested]."</div>
+</div>
+
+<div class="card">
+<h3>Section C - Long Questions (60 marks each)</h3>
+<div class="mark-info"><strong>Format:</strong> 3 parts (a), (b), (c), usually 18-24 marks each.</div>
+<div class="mark-info"><strong>Parts often follow a pattern:</strong> (a) Definitions/basic knowledge, (b) Process description/experiment, (c) Application/higher-order thinking.</div>
+<div class="mark-info"><strong>Marking:</strong> Each sub-part has allocated marks. Examiners use the "first correct answers" principle — if you give 6 answers and only 4 are needed, the first 4 encountered are marked.</div>
+<div class="explain"><strong>Tip:</strong> Answer in bullet points or numbered lists. Makes it easy for the examiner to award marks. Write more points than required — extras won't lose marks (unless contradictory).</div>
+</div>
+
+<div class="card">
+<h3>Golden Rules for Maximum Marks</h3>
+<div class="explain"><strong>1. Use scientific terminology.</strong> "Selectively permeable membrane" not "skin of the cell".</div>
+<div class="explain"><strong>2. Label everything.</strong> Diagrams without labels lose most of their marks.</div>
+<div class="explain"><strong>3. Separate your points.</strong> One idea per line. Don't bury answers in paragraphs.</div>
+<div class="explain"><strong>4. State the obvious.</strong> If asked "What is the role of chlorophyll?", say "Chlorophyll absorbs light energy for photosynthesis." Don't assume the examiner knows what you mean.</div>
+<div class="explain"><strong>5. Answer what's asked.</strong> "Name" = one word. "Explain" = definition + detail. "Describe" = step by step. "Discuss" = for and against.</div>
+<div class="explain"><strong>6. Include controls in experiments.</strong> Always mention what you kept the same and what you changed.</div>
+<div class="explain"><strong>7. Give units.</strong> Temperature in °C, concentration in M or %, time in minutes. Missing units can cost marks.</div>
+<div class="explain"><strong>8. Don't leave blanks.</strong> Write something for every part. Even a partially correct answer earns marks.</div>
+</div>
+</div>
+
+<!-- GLOSSARY TAB -->
+<div id="tab-glossary" class="tab-content">
+<div class="card">
+<h2>Biology Glossary</h2>
+<p>Search for any term. All definitions written in plain language with exam-ready precision.</p>
+<input type="text" class="glossary-search" id="glossarySearch" placeholder="Search terms..." oninput="filterGlossary()">
+</div>
+<div id="glossaryList">
+<dl>
+<div class="glossary-item"><dt>Active Transport</dt><dd>Movement of molecules across a membrane from low to high concentration, requiring energy (ATP). Against the concentration gradient.</dd></div>
+<div class="glossary-item"><dt>Aerobic Respiration</dt><dd>Breakdown of glucose using oxygen to release energy (ATP). Occurs in the mitochondria. C₆H₁₂O₆ + 6O₂ → 6CO₂ + 6H₂O + 38 ATP.</dd></div>
+<div class="glossary-item"><dt>Allele</dt><dd>An alternative form of a gene. Each gene has two alleles (one from each parent). Can be dominant or recessive.</dd></div>
+<div class="glossary-item"><dt>Anaerobic Respiration</dt><dd>Breakdown of glucose without oxygen. In animals: glucose → lactic acid + 2 ATP. In yeast: glucose → ethanol + CO₂ + 2 ATP.</dd></div>
+<div class="glossary-item"><dt>Antibiotic</dt><dd>A chemical substance that kills or inhibits the growth of bacteria. Does NOT work on viruses. E.g., penicillin.</dd></div>
+<div class="glossary-item"><dt>Antibody</dt><dd>A protein produced by white blood cells (lymphocytes) in response to an antigen. Specific to each antigen.</dd></div>
+<div class="glossary-item"><dt>Antigen</dt><dd>A foreign substance (usually a protein on the surface of a pathogen) that triggers an immune response.</dd></div>
+<div class="glossary-item"><dt>ATP</dt><dd>Adenosine triphosphate. The energy currency of the cell. Produced during respiration and used for cell activities.</dd></div>
+<div class="glossary-item"><dt>Autotroph</dt><dd>An organism that makes its own food from inorganic substances (e.g., plants using photosynthesis).</dd></div>
+<div class="glossary-item"><dt>Biodiversity</dt><dd>The variety of different species of organisms in an ecosystem. Higher biodiversity = more stable ecosystem.</dd></div>
+<div class="glossary-item"><dt>Biome</dt><dd>A large ecological area with characteristic climate, plants, and animals. E.g., tropical rainforest, tundra, desert.</dd></div>
+<div class="glossary-item"><dt>Bioreactor</dt><dd>A vessel in which microorganisms are grown under controlled conditions to produce useful products (e.g., enzymes, antibiotics, ethanol).</dd></div>
+<div class="glossary-item"><dt>Carnivore</dt><dd>An organism that feeds on other animals. A secondary or tertiary consumer in a food chain.</dd></div>
+<div class="glossary-item"><dt>Catalyst</dt><dd>A substance that speeds up a chemical reaction without being used up. Enzymes are biological catalysts.</dd></div>
+<div class="glossary-item"><dt>Cell Membrane</dt><dd>The selectively permeable barrier surrounding all cells. Controls what enters and leaves the cell. Made of a phospholipid bilayer.</dd></div>
+<div class="glossary-item"><dt>Cell Wall</dt><dd>A rigid outer layer found in plant cells (made of cellulose), fungi (chitin), and bacteria (peptidoglycan). Provides structural support.</dd></div>
+<div class="glossary-item"><dt>Chlorophyll</dt><dd>The green pigment in chloroplasts that absorbs light energy for photosynthesis. Absorbs red and blue light, reflects green.</dd></div>
+<div class="glossary-item"><dt>Chloroplast</dt><dd>The organelle where photosynthesis occurs in plant cells. Contains chlorophyll on thylakoid membranes.</dd></div>
+<div class="glossary-item"><dt>Chromosome</dt><dd>A structure made of DNA and protein found in the nucleus. Humans have 46 chromosomes (23 pairs). Carries genes.</dd></div>
+<div class="glossary-item"><dt>Cohesion-Tension Theory</dt><dd>Explains water transport in plants. Water evaporates from leaves (transpiration), creating tension that pulls water up through xylem vessels in a continuous column.</dd></div>
+<div class="glossary-item"><dt>Community</dt><dd>All the populations of different species living and interacting in a particular area.</dd></div>
+<div class="glossary-item"><dt>Competition</dt><dd>Interaction where organisms compete for the same limited resources (food, space, mates, light). Can be intraspecific or interspecific.</dd></div>
+<div class="glossary-item"><dt>Crossing Over</dt><dd>Exchange of genetic material between homologous chromosomes during meiosis I. Increases genetic variation.</dd></div>
+<div class="glossary-item"><dt>Decomposer</dt><dd>An organism that breaks down dead organic matter, recycling nutrients back into the ecosystem. E.g., bacteria, fungi.</dd></div>
+<div class="glossary-item"><dt>Denaturation</dt><dd>Loss of the 3D shape of a protein (especially an enzyme) due to heat or extreme pH. The active site changes shape.</dd></div>
+<div class="glossary-item"><dt>Denitrification</dt><dd>Conversion of nitrates (NO₃⁻) back to atmospheric nitrogen (N₂) by denitrifying bacteria in waterlogged/anaerobic soil.</dd></div>
+<div class="glossary-item"><dt>Diffusion</dt><dd>Net movement of molecules from a region of high concentration to low concentration. Passive — no energy required.</dd></div>
+<div class="glossary-item"><dt>Diploid</dt><dd>A cell with two complete sets of chromosomes (2n). In humans, 2n = 46. Body cells are diploid.</dd></div>
+<div class="glossary-item"><dt>DNA</dt><dd>Deoxyribonucleic acid. Double helix molecule carrying genetic instructions. Made of nucleotides (sugar, phosphate, base).</dd></div>
+<div class="glossary-item"><dt>Dominant</dt><dd>An allele that is expressed in the phenotype when present in one or two copies. Represented by a capital letter.</dd></div>
+<div class="glossary-item"><dt>Ecology</dt><dd>The study of the relationships between living organisms and their environment.</dd></div>
+<div class="glossary-item"><dt>Ecosystem</dt><dd>A community of living organisms interacting with each other and their physical (abiotic) environment.</dd></div>
+<div class="glossary-item"><dt>Endocrine System</dt><dd>The system of glands that produce hormones. Hormones travel in the blood and regulate body functions.</dd></div>
+<div class="glossary-item"><dt>Enzyme</dt><dd>A biological catalyst (protein) that speeds up reactions by lowering activation energy. Specific to its substrate (lock and key model).</dd></div>
+<div class="glossary-item"><dt>Eukaryotic</dt><dd>A cell with a true nucleus and membrane-bound organelles. Includes animal, plant, and fungal cells.</dd></div>
+<div class="glossary-item"><dt>Evolution</dt><dd>Change in the inherited characteristics of a population over successive generations through natural selection.</dd></div>
+<div class="glossary-item"><dt>Fermentation</dt><dd>Anaerobic respiration in yeast. Glucose → Ethanol + CO₂ + 2 ATP. Used in brewing and baking.</dd></div>
+<div class="glossary-item"><dt>Food Chain</dt><dd>A linear sequence showing energy transfer from one organism to the next. E.g., Grass → Rabbit → Fox.</dd></div>
+<div class="glossary-item"><dt>Food Web</dt><dd>A network of interconnected food chains showing the complex feeding relationships in an ecosystem.</dd></div>
+<div class="glossary-item"><dt>Gamete</dt><dd>A sex cell (sperm or egg). Haploid — contains half the chromosome number. Produced by meiosis.</dd></div>
+<div class="glossary-item"><dt>Gene</dt><dd>A section of DNA that codes for a specific protein. Located on chromosomes.</dd></div>
+<div class="glossary-item"><dt>Genetic Engineering</dt><dd>The deliberate modification of an organism's DNA by inserting genes from another organism. Used to produce insulin, GMOs.</dd></div>
+<div class="glossary-item"><dt>Genotype</dt><dd>The genetic makeup of an organism (the alleles it carries). E.g., Bb (heterozygous).</dd></div>
+<div class="glossary-item"><dt>Glycolysis</dt><dd>First stage of respiration. Occurs in the cytoplasm. Glucose (6C) is broken into 2 molecules of pyruvate (3C). Produces 2 ATP.</dd></div>
+<div class="glossary-item"><dt>Habitat</dt><dd>The place where an organism lives. Provides food, shelter, and conditions for survival.</dd></div>
+<div class="glossary-item"><dt>Haploid</dt><dd>A cell with one set of chromosomes (n). In humans, n = 23. Gametes (sex cells) are haploid.</dd></div>
+<div class="glossary-item"><dt>Herbivore</dt><dd>An organism that feeds on plants. A primary consumer in a food chain.</dd></div>
+<div class="glossary-item"><dt>Heterotroph</dt><dd>An organism that cannot make its own food. Must consume other organisms for energy. Includes all animals.</dd></div>
+<div class="glossary-item"><dt>Heterozygous</dt><dd>Having two different alleles for a gene. E.g., Bb. The dominant allele is expressed.</dd></div>
+<div class="glossary-item"><dt>Homeostasis</dt><dd>The maintenance of a constant internal environment in the body. E.g., temperature, blood sugar, water balance.</dd></div>
+<div class="glossary-item"><dt>Homozygous</dt><dd>Having two identical alleles for a gene. E.g., BB (homozygous dominant) or bb (homozygous recessive).</dd></div>
+<div class="glossary-item"><dt>Hormone</dt><dd>A chemical messenger produced by endocrine glands, carried in the blood, that affects target organs.</dd></div>
+<div class="glossary-item"><dt>Hypothesis</dt><dd>A testable prediction or proposed explanation for an observation. Must be capable of being proven true or false.</dd></div>
+<div class="glossary-item"><dt>Immobilised Enzyme</dt><dd>An enzyme that is attached to an inert material (e.g., alginate beads). Can be reused, works at higher temperatures.</dd></div>
+<div class="glossary-item"><dt>Krebs Cycle</dt><dd>Second stage of aerobic respiration. Occurs in the matrix of mitochondria. Pyruvate is broken down, releasing CO₂ and producing ATP, NADH, FADH₂.</dd></div>
+<div class="glossary-item"><dt>Meiosis</dt><dd>Cell division producing 4 genetically different haploid cells. Two divisions. Used to produce gametes. Introduces variation.</dd></div>
+<div class="glossary-item"><dt>Metabolism</dt><dd>All the chemical reactions occurring in a living organism. Includes anabolism (building up) and catabolism (breaking down).</dd></div>
+<div class="glossary-item"><dt>Mitochondria</dt><dd>The organelle where aerobic respiration occurs. The "powerhouse of the cell." Has a double membrane with inner folds (cristae).</dd></div>
+<div class="glossary-item"><dt>Mitosis</dt><dd>Cell division producing 2 genetically identical diploid cells. Used for growth and repair. Stages: PMAT (Prophase, Metaphase, Anaphase, Telophase).</dd></div>
+<div class="glossary-item"><dt>Mutation</dt><dd>A change in the base sequence of DNA. Can be spontaneous or caused by mutagens (radiation, chemicals). May be harmful, beneficial, or neutral.</dd></div>
+<div class="glossary-item"><dt>Natural Selection</dt><dd>The process where organisms with favourable traits are more likely to survive, reproduce, and pass on their genes. "Survival of the fittest."</dd></div>
+<div class="glossary-item"><dt>Niche</dt><dd>The functional role of an organism in its ecosystem — what it eats, where it lives, when it's active, how it interacts with others.</dd></div>
+<div class="glossary-item"><dt>Nitrification</dt><dd>Conversion of ammonium (NH₄⁺) to nitrites and then nitrates (NO₃⁻) by nitrifying bacteria in soil. Requires oxygen.</dd></div>
+<div class="glossary-item"><dt>Nitrogen Fixation</dt><dd>Conversion of atmospheric nitrogen (N₂) to ammonium (NH₄⁺) by nitrogen-fixing bacteria (e.g., Rhizobium in root nodules of legumes).</dd></div>
+<div class="glossary-item"><dt>Nucleus</dt><dd>The organelle containing DNA. Controls cell activities. Surrounded by a nuclear membrane with pores.</dd></div>
+<div class="glossary-item"><dt>Osmosis</dt><dd>Movement of water from a region of higher water concentration to lower water concentration across a selectively permeable membrane.</dd></div>
+<div class="glossary-item"><dt>Pathogen</dt><dd>A microorganism that causes disease. Includes bacteria, viruses, fungi, and parasites.</dd></div>
+<div class="glossary-item"><dt>Phenotype</dt><dd>The observable characteristics of an organism, determined by genotype and environment. E.g., brown eyes.</dd></div>
+<div class="glossary-item"><dt>Photosynthesis</dt><dd>Process by which plants convert light energy to chemical energy. 6CO₂ + 6H₂O → C₆H₁₂O₆ + 6O₂. Occurs in chloroplasts.</dd></div>
+<div class="glossary-item"><dt>Plasmolysis</dt><dd>Shrinkage of cell contents away from the cell wall when a plant cell is placed in a hypertonic solution. Water leaves by osmosis.</dd></div>
+<div class="glossary-item"><dt>Population</dt><dd>All the organisms of the same species living in a particular area at a particular time.</dd></div>
+<div class="glossary-item"><dt>Producer</dt><dd>An organism that makes its own food (autotroph). The first trophic level in a food chain. E.g., plants, algae.</dd></div>
+<div class="glossary-item"><dt>Prokaryotic</dt><dd>A cell without a true nucleus or membrane-bound organelles. Includes bacteria. DNA is a single circular chromosome.</dd></div>
+<div class="glossary-item"><dt>Protein</dt><dd>A macromolecule made of amino acids joined by peptide bonds. Functions: enzymes, antibodies, structural (collagen), transport (haemoglobin).</dd></div>
+<div class="glossary-item"><dt>Recessive</dt><dd>An allele that is only expressed in the phenotype when homozygous (two copies). Represented by a lowercase letter.</dd></div>
+<div class="glossary-item"><dt>Ribosome</dt><dd>The organelle where protein synthesis (translation) occurs. Found free in cytoplasm or attached to rough ER.</dd></div>
+<div class="glossary-item"><dt>Selectively Permeable</dt><dd>A membrane that allows some molecules to pass through but not others. The cell membrane is selectively permeable.</dd></div>
+<div class="glossary-item"><dt>Stomata</dt><dd>Tiny pores on the underside of leaves. Controlled by guard cells. Allow gas exchange (CO₂ in, O₂ out) and transpiration (water vapour out).</dd></div>
+<div class="glossary-item"><dt>Transpiration</dt><dd>Loss of water vapour from the leaves of a plant through the stomata. Driven by evaporation.</dd></div>
+<div class="glossary-item"><dt>Trophic Level</dt><dd>The position an organism occupies in a food chain. T1 = producer, T2 = primary consumer, T3 = secondary consumer, etc.</dd></div>
+<div class="glossary-item"><dt>Turgid</dt><dd>A plant cell that is swollen with water. The vacuole is full and pushes the cell membrane against the cell wall. Keeps plants upright.</dd></div>
+<div class="glossary-item"><dt>Vaccination</dt><dd>Introduction of a weakened or dead pathogen to stimulate the immune system to produce antibodies, providing future immunity.</dd></div>
+<div class="glossary-item"><dt>Xylem</dt><dd>Plant tissue that transports water and minerals upward from roots to leaves. Made of dead, hollow cells with lignin walls.</dd></div>
+</dl>
+</div>
+</div>
+
+<!-- FORMULAS TAB -->
+<div id="tab-formulas" class="tab-content">
+<div class="card">
+<h2>Key Equations & Formulas - LC Biology</h2>
+<p>Essential equations, chemical reactions, and formulas you need to know.</p>
+</div>
+
+<div class="card">
+<h3>Photosynthesis</h3>
+<div class="formula-box"><strong>Overall Equation</strong><div class="formula">6CO₂ + 6H₂O → C₆H₁₂O₆ + 6O₂</div><p>Carbon dioxide + Water → Glucose + Oxygen (requires light energy and chlorophyll)</p></div>
+<div class="formula-box"><strong>Light Stage</strong><div class="formula">Water → H⁺ + e⁻ + O₂ (photolysis)<br>ADP + P → ATP (photophosphorylation)<br>NADP + H⁺ → NADPH (reduction)</div><p>Occurs on thylakoid membranes. Light splits water, producing ATP and NADPH.</p></div>
+<div class="formula-box"><strong>Dark Stage (Calvin Cycle)</strong><div class="formula">CO₂ + RuBP → 2 × GP → G3P → Glucose<br>Uses ATP and NADPH from the light stage</div><p>Occurs in the stroma. CO₂ is fixed into organic molecules.</p></div>
+</div>
+
+<div class="card">
+<h3>Respiration</h3>
+<div class="formula-box"><strong>Aerobic Respiration</strong><div class="formula">C₆H₁₂O₆ + 6O₂ → 6CO₂ + 6H₂O + 38 ATP</div><p>Glucose + Oxygen → Carbon dioxide + Water + Energy</p></div>
+<div class="formula-box"><strong>Glycolysis</strong><div class="formula">Glucose (6C) → 2 Pyruvate (3C) + 2 ATP + 2 NADH</div><p>Occurs in cytoplasm. Does not require oxygen.</p></div>
+<div class="formula-box"><strong>Anaerobic (Animals)</strong><div class="formula">Glucose → Lactic Acid + 2 ATP</div><p>Occurs when oxygen is insufficient (e.g., sprinting).</p></div>
+<div class="formula-box"><strong>Anaerobic (Yeast/Fermentation)</strong><div class="formula">Glucose → Ethanol + CO₂ + 2 ATP</div><p>Used in brewing (ethanol) and baking (CO₂ makes bread rise).</p></div>
+</div>
+
+<div class="card">
+<h3>Genetics</h3>
+<div class="formula-box"><strong>Monohybrid Cross</strong><div class="formula">Parent 1 (Bb) × Parent 2 (Bb)<br>Offspring: BB : Bb : Bb : bb = 3:1 ratio</div><p>Phenotype ratio 3 dominant : 1 recessive. Genotype ratio 1:2:1.</p></div>
+<div class="formula-box"><strong>DNA Replication</strong><div class="formula">DNA → (helicase unwinds) → 2 single strands → (DNA polymerase adds complementary bases) → 2 identical DNA molecules</div><p>Semi-conservative: each new molecule has one old strand and one new strand.</p></div>
+<div class="formula-box"><strong>Protein Synthesis</strong><div class="formula">DNA → (transcription) → mRNA → (translation at ribosome) → Protein<br>Codon (3 bases on mRNA) codes for 1 amino acid</div></div>
+</div>
+
+<div class="card">
+<h3>Ecology Calculations</h3>
+<div class="formula-box"><strong>Percentage Frequency</strong><div class="formula">% Frequency = (Number of quadrats containing species / Total quadrats) × 100</div></div>
+<div class="formula-box"><strong>Percentage Cover</strong><div class="formula">% Cover = Estimated area covered by species in quadrat / Total area of quadrat × 100</div></div>
+<div class="formula-box"><strong>Population Estimation (Capture-Recapture)</strong><div class="formula">N = (n₁ × n₂) / n₃</div><p>N = estimated population, n₁ = first capture, n₂ = second capture, n₃ = recaptured marked individuals</p></div>
+<div class="formula-box"><strong>Energy Transfer</strong><div class="formula">Only ~10% of energy is transferred between trophic levels<br>The rest is lost as heat (respiration), waste, and uneaten parts</div></div>
+</div>
+
+<div class="card">
+<h3>Enzymes & Digestion</h3>
+<div class="formula-box"><strong>Enzyme Action</strong><div class="formula">Substrate + Enzyme → Enzyme-Substrate Complex → Products + Enzyme</div><p>Enzyme is unchanged and can be reused.</p></div>
+<div class="formula-box"><strong>Key Digestive Enzymes</strong><div class="formula">Amylase: Starch → Maltose (mouth, small intestine)<br>Protease/Pepsin: Protein → Amino acids (stomach, small intestine)<br>Lipase: Fats → Fatty acids + Glycerol (small intestine)</div></div>
+<div class="formula-box"><strong>Optimum Conditions</strong><div class="formula">Most enzymes: ~37°C, pH 7 (neutral)<br>Pepsin (stomach): pH 2 (acidic)<br>Above optimum → denaturation</div></div>
+</div>
+
+<div class="card">
+<h3>Food Tests</h3>
+<div class="formula-box"><strong>Starch Test</strong><div class="formula">Add iodine solution → Blue-black = starch present</div></div>
+<div class="formula-box"><strong>Reducing Sugar (Benedict's)</strong><div class="formula">Add Benedict's reagent + heat → Blue → Green → Orange → Red = sugar present</div></div>
+<div class="formula-box"><strong>Protein (Biuret)</strong><div class="formula">Add NaOH + CuSO₄ → Purple/violet = protein present</div></div>
+<div class="formula-box"><strong>Fat (Emulsion Test)</strong><div class="formula">Shake with ethanol, pour into water → White emulsion = fat present</div></div>
+<div class="formula-box"><strong>Vitamin C (DCPIP)</strong><div class="formula">Add DCPIP (blue dye) to juice → Decolourises = vitamin C present</div></div>
+</div>
+</div>
+
 <!-- STUDY TAB -->
 <div id="tab-study" class="tab-content active">
 <div class="card">
-<h2>Question Walkthroughs<span class="year-selector"><label>Year:</label><select onchange="showYearContent('full',this.value,'yearBoxBio')">
-<option value="">2025 (current)</option><option value="2023">2023</option><option value="2022">2022</option><option value="2021">2021</option><option value="2020">2020</option><option value="2018">2018</option><option value="2017">2017</option><option value="2016">2016</option><option value="2015">2015</option><option value="2014">2014</option><option value="2013">2013</option><option value="2012">2012</option>
-</select></span></h2>
-<div class="year-content-box" id="yearBoxBio"></div>
+<h2>Question Walkthroughs - 2025 Paper</h2>
 <p>Select a question to see detailed solutions with step-by-step explanations.</p>
 </div>
-<div id="content2025">
 <div class="question-nav" id="studyNav">
 <button class="active" onclick="showQuestion('q1','biology')">Q1 Nutrition</button>
 <button onclick="showQuestion('q2','biology')">Q2 Plant</button>
@@ -511,9 +677,6 @@
 </div>
 </div>
 
-
-</div>
-<div id="contentPastYear" style="display:none;"></div>
 </div>
 
 <!-- FLASHCARDS TAB -->
@@ -584,6 +747,41 @@
 </div>
 </div>
 
+
+<!-- ====== PAST PAPERS TAB ====== -->
+<div class="tab-content" id="tab-pastpapers">
+<div class="card">
+<h2>Past Papers & Marking Schemes</h2>
+<p>Review actual exam papers and marking schemes from previous years. Select a year to view.</p>
+<div style="margin-top:1rem;">
+<label for="yearSelect" style="font-weight:600;margin-right:0.5rem;">Select Year:</label>
+<select id="yearSelect" onchange="loadPaperYear(this.value)" style="padding:0.5rem 1rem;border:2px solid var(--primary);border-radius:8px;font-size:1rem;font-weight:600;color:var(--primary);background:#fff;cursor:pointer;">
+<option value="">-- Choose a year --</option>
+<option value="2025">2025</option>
+<option value="2024">2024</option>
+<option value="2023">2023</option>
+<option value="2022">2022</option>
+<option value="2021">2021</option>
+<option value="2020">2020</option>
+<option value="2019">2019</option>
+<option value="2018">2018</option>
+<option value="2017">2017</option>
+<option value="2016">2016</option>
+<option value="2015">2015</option>
+<option value="2014">2014</option>
+<option value="2013">2013</option>
+<option value="2012">2012</option>
+</select>
+</div>
+</div>
+<div id="paperContent">
+<div class="card" style="text-align:center;color:var(--text-light);padding:3rem;">
+<p style="font-size:1.1rem;">Select a year above to view past papers and marking schemes.</p>
+<p style="margin-top:0.5rem;font-size:0.9rem;">Available: 2025 - 2012 (13 years)</p>
+</div>
+</div>
+</div>
+
 <!-- ====== PROGRESS TAB ====== -->
 <div class="tab-content" id="tab-progress">
 <div class="card">
@@ -616,11 +814,9 @@
 </div>
 </div>
 
-<script src="js/format_marking.js"></script>
-<script src="js/biology_yeardata.js"></script>
+<script src="js/biology_papers.js"></script>
 <script src="js/shared.js"></script>
 <script>
-
 function renderSubjectProgress() {
   const p = LCS.getProgress('biology');
   let topics = 0;
@@ -698,34 +894,18 @@ const quizQuestions = [
 const fc = new FlashcardEngine(allCards, 'fcContainer', 'fcControls', 'fcCounter', 'fcFilter');
 const quiz = new QuizEngine(quizQuestions, 'quizArea', 'quizScore', 'biology');
 
-function showYearContent(sectionKey, year, containerId) {
-  var content2025 = document.getElementById('content2025');
-  var pastYear = document.getElementById('contentPastYear');
-  if (!content2025 || !pastYear) return;
 
-  if (!year || year === '2025') {
-    content2025.style.display = 'block';
-    pastYear.style.display = 'none';
-    pastYear.innerHTML = '';
+function loadPaperYear(year) {
+  if (!year) {
+    document.getElementById('paperContent').innerHTML = '<div class="card" style="text-align:center;color:var(--text-light);padding:3rem;"><p style="font-size:1.1rem;">Select a year above to view past papers and marking schemes.</p></div>';
     return;
   }
-
-  var subjectName = document.body.className.replace('subject-','');
-  var dataVar = 'YEAR_DATA_' + subjectName.toUpperCase();
-  var data = window[dataVar];
-
-  if (!data || !data[sectionKey] || !data[sectionKey].years[year]) {
-    content2025.style.display = 'none';
-    pastYear.style.display = 'block';
-    pastYear.innerHTML = '<div class="card"><p>No data available for ' + year + '.</p></div>';
+  if (year === '2025') {
+    document.getElementById('paperContent').innerHTML = '<div class="card"><h2>2025</h2><p>The 2025 content is in the <strong>Study</strong> and <strong>Mark Decoder</strong> tabs — that\'s the current year with full detailed walkthroughs.</p><p style="margin-top:0.5rem;"><button class="btn btn-primary" onclick="showTab(\'study\',\'biology\')">Go to Study Tab</button></p></div>';
     return;
   }
-
-  content2025.style.display = 'none';
-  pastYear.style.display = 'block';
-  pastYear.innerHTML = formatMarkingScheme(data[sectionKey].years[year], year);
+  renderPastPaper('biology', year);
 }
-
 
 document.addEventListener('DOMContentLoaded', function() {
   quiz.start('all');

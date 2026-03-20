@@ -275,6 +275,28 @@ function showQuestion(qId, subject) {
   if (subject) LCS.trackView(subject, 'studied_' + qId);
 }
 
+// Paper switching (e.g. Paper 1 / Paper 2)
+function showPaper(paperId, subject) {
+  document.querySelectorAll('.paper-section').forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('#paperNav button').forEach(b => b.classList.remove('active'));
+  document.getElementById('paper-' + paperId).classList.add('active');
+  if (event && event.target) event.target.classList.add('active');
+  // Reset question nav to first question in the new paper
+  const paperEl = document.getElementById('paper-' + paperId);
+  const firstQ = paperEl.querySelector('.q-section');
+  if (firstQ) {
+    paperEl.querySelectorAll('.q-section').forEach(s => s.classList.remove('active'));
+    firstQ.classList.add('active');
+    const nav = paperEl.querySelector('.question-nav');
+    if (nav) {
+      nav.querySelectorAll('button').forEach(b => b.classList.remove('active'));
+      const firstBtn = nav.querySelector('button');
+      if (firstBtn) firstBtn.classList.add('active');
+    }
+  }
+  if (subject) LCS.trackView(subject, 'viewed_' + paperId);
+}
+
 // Glossary filter
 function filterGlossary() {
   const term = document.getElementById('glossarySearch').value.toLowerCase();

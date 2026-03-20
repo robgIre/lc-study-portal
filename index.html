@@ -4,216 +4,316 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>LC Study Portal - Leaving Certificate Higher Level</title>
-<link rel="stylesheet" href="css/shared.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
-.hero{background:linear-gradient(135deg,#6C5CE7,#4834d4,#0984e3);color:#fff;padding:3rem 2rem;text-align:center}
-.hero h1{font-size:2.2rem;font-weight:800;margin-bottom:0.5rem}
-.hero p{font-size:1.1rem;opacity:0.9;max-width:600px;margin:0 auto}
-.dashboard{max-width:1000px;margin:0 auto;padding:1.5rem}
-.top-stats{display:flex;gap:1.5rem;margin-bottom:2rem;flex-wrap:wrap;justify-content:center}
-.stat-card{background:var(--card);border-radius:16px;padding:1.5rem 2rem;box-shadow:var(--shadow);text-align:center;min-width:150px;flex:1}
-.stat-card .stat-number{font-size:2.5rem;font-weight:800;line-height:1}
-.stat-card .stat-label{font-size:0.8rem;color:var(--text-light);text-transform:uppercase;font-weight:600;margin-top:0.25rem}
-.section-title{font-size:1.3rem;font-weight:700;margin:2rem 0 1rem;color:var(--text)}
-.motivational{background:linear-gradient(135deg,#00b894,#00a383);color:#fff;border-radius:16px;padding:2rem;text-align:center;margin:2rem 0}
-.motivational p{font-size:1.1rem;font-style:italic;margin-bottom:0.5rem}
-.motivational .author{font-size:0.9rem;opacity:0.8}
-.weak-topics{background:var(--card);border-radius:var(--radius);padding:1.5rem;margin:1.5rem 0;box-shadow:var(--shadow)}
-.weak-topics h3{color:var(--danger);margin-bottom:0.75rem}
-.weak-topic-item{display:flex;align-items:center;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid var(--border)}
-.weak-topic-item:last-child{border:none}
-.weak-topic-item .score{font-weight:700;color:var(--danger)}
-.study-tip{background:rgba(108,92,231,0.06);border:2px solid var(--primary-light);border-radius:var(--radius);padding:1.5rem;margin:1.5rem 0}
-.study-tip h3{color:var(--primary);margin-bottom:0.5rem}
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#0a0a0f;--surface:#151520;--surface-2:#1e1e2e;--surface-3:#2a2a3d;
+  --text:#f0f0f5;--text-mid:#a0a0b8;--text-dim:#6a6a80;
+  --accent:#8b5cf6;--accent-glow:rgba(139,92,246,0.3);
+  --green:#10b981;--blue:#3b82f6;--pink:#ec4899;--orange:#f59e0b;--red:#ef4444;--cyan:#06b6d4;--teal:#14b8a6;
+  --radius:16px;--radius-sm:10px;
+}
+body{font-family:'Inter',system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;min-height:100vh;overflow-x:hidden}
+
+/* Animated gradient background */
+.bg-glow{position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:0}
+.bg-glow::before{content:'';position:absolute;top:-20%;left:-10%;width:50%;height:50%;background:radial-gradient(circle,rgba(139,92,246,0.12) 0%,transparent 70%);animation:float 15s ease-in-out infinite}
+.bg-glow::after{content:'';position:absolute;bottom:-20%;right:-10%;width:50%;height:50%;background:radial-gradient(circle,rgba(236,72,153,0.08) 0%,transparent 70%);animation:float 18s ease-in-out infinite reverse}
+@keyframes float{0%,100%{transform:translate(0,0)}50%{transform:translate(40px,-30px)}}
+
+.page{position:relative;z-index:1}
+
+/* Hero */
+.hero{padding:3rem 2rem 2rem;text-align:center;position:relative}
+.hero-badge{display:inline-flex;align-items:center;gap:6px;background:var(--surface-2);border:1px solid var(--surface-3);color:var(--text-mid);padding:6px 14px;border-radius:99px;font-size:0.75rem;font-weight:600;text-transform:uppercase;letter-spacing:1px;margin-bottom:1.2rem}
+.hero-badge .dot{width:6px;height:6px;border-radius:50%;background:var(--green);animation:pulse-dot 2s ease-in-out infinite}
+@keyframes pulse-dot{0%,100%{opacity:1}50%{opacity:0.4}}
+.hero h1{font-size:clamp(2rem,5vw,3.2rem);font-weight:900;letter-spacing:-1px;background:linear-gradient(135deg,#fff 0%,#c4b5fd 50%,#f0abfc 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:0.6rem}
+.hero p{font-size:1.05rem;color:var(--text-mid);max-width:480px;margin:0 auto 1.5rem}
+
+/* Countdown */
+.countdown-row{display:flex;gap:0.75rem;justify-content:center;margin:1.5rem 0;flex-wrap:wrap}
+.cd-unit{background:var(--surface);border:1px solid var(--surface-3);border-radius:var(--radius-sm);padding:0.8rem 1.2rem;min-width:75px;text-align:center;backdrop-filter:blur(10px)}
+.cd-unit .num{font-size:1.8rem;font-weight:800;background:linear-gradient(135deg,var(--accent),var(--pink));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1}
+.cd-unit .lbl{font-size:0.65rem;color:var(--text-dim);text-transform:uppercase;letter-spacing:1px;font-weight:600;margin-top:4px}
+
+/* Stats strip */
+.stats-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--surface-3);border-radius:var(--radius);overflow:hidden;max-width:700px;margin:0 auto 2.5rem;border:1px solid var(--surface-3)}
+.ss-item{background:var(--surface);padding:1.2rem;text-align:center}
+.ss-item .ss-val{font-size:1.6rem;font-weight:800;line-height:1}
+.ss-item .ss-label{font-size:0.7rem;color:var(--text-dim);text-transform:uppercase;letter-spacing:0.5px;font-weight:600;margin-top:4px}
+.ss-item:nth-child(1) .ss-val{color:var(--accent)}
+.ss-item:nth-child(2) .ss-val{color:var(--blue)}
+.ss-item:nth-child(3) .ss-val{color:var(--green)}
+.ss-item:nth-child(4) .ss-val{color:var(--orange)}
+
+/* Dashboard */
+.dashboard{max-width:960px;margin:0 auto;padding:0 1.5rem 3rem}
+
+/* Section headers */
+.section-head{display:flex;align-items:center;gap:10px;margin-bottom:1.2rem}
+.section-head h2{font-size:1.2rem;font-weight:700;letter-spacing:-0.3px}
+.section-head .line{flex:1;height:1px;background:linear-gradient(90deg,var(--surface-3),transparent)}
+
+/* Subject grid */
+.subject-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:1rem;margin-bottom:2.5rem}
+.subject-card{background:var(--surface);border:1px solid var(--surface-3);border-radius:var(--radius);overflow:hidden;text-decoration:none;color:var(--text);transition:all 0.3s cubic-bezier(0.4,0,0.2,1);position:relative}
+.subject-card::before{content:'';position:absolute;inset:0;border-radius:var(--radius);opacity:0;transition:opacity 0.3s;pointer-events:none}
+.subject-card:hover{transform:translateY(-4px);border-color:transparent}
+.subject-card:hover::before{opacity:1}
+.subject-card:nth-child(1){--card-color:#8b5cf6}.subject-card:nth-child(1)::before{background:linear-gradient(135deg,rgba(139,92,246,0.15),transparent)}
+.subject-card:nth-child(1):hover{box-shadow:0 8px 30px rgba(139,92,246,0.2)}
+.subject-card:nth-child(2){--card-color:#3b82f6}.subject-card:nth-child(2)::before{background:linear-gradient(135deg,rgba(59,130,246,0.15),transparent)}
+.subject-card:nth-child(2):hover{box-shadow:0 8px 30px rgba(59,130,246,0.2)}
+.subject-card:nth-child(3){--card-color:#ef4444}.subject-card:nth-child(3)::before{background:linear-gradient(135deg,rgba(239,68,68,0.15),transparent)}
+.subject-card:nth-child(3):hover{box-shadow:0 8px 30px rgba(239,68,68,0.2)}
+.subject-card:nth-child(4){--card-color:#f59e0b}.subject-card:nth-child(4)::before{background:linear-gradient(135deg,rgba(245,158,11,0.15),transparent)}
+.subject-card:nth-child(4):hover{box-shadow:0 8px 30px rgba(245,158,11,0.2)}
+.subject-card:nth-child(5){--card-color:#10b981}.subject-card:nth-child(5)::before{background:linear-gradient(135deg,rgba(16,185,129,0.15),transparent)}
+.subject-card:nth-child(5):hover{box-shadow:0 8px 30px rgba(16,185,129,0.2)}
+.subject-card:nth-child(6){--card-color:#a78bfa}.subject-card:nth-child(6)::before{background:linear-gradient(135deg,rgba(167,139,250,0.15),transparent)}
+.subject-card:nth-child(6):hover{box-shadow:0 8px 30px rgba(167,139,250,0.2)}
+.subject-card:nth-child(7){--card-color:#06b6d4}.subject-card:nth-child(7)::before{background:linear-gradient(135deg,rgba(6,182,212,0.15),transparent)}
+.subject-card:nth-child(7):hover{box-shadow:0 8px 30px rgba(6,182,212,0.2)}
+
+.sc-top{padding:1.4rem 1.4rem 1rem;position:relative;z-index:1}
+.sc-icon{width:42px;height:42px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;margin-bottom:0.8rem;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.08)}
+.sc-name{font-size:1.1rem;font-weight:700;letter-spacing:-0.3px;margin-bottom:2px}
+.sc-level{font-size:0.75rem;color:var(--text-dim);font-weight:500}
+
+.sc-bottom{padding:0.8rem 1.4rem 1.2rem;position:relative;z-index:1}
+.sc-progress{height:4px;background:var(--surface-3);border-radius:2px;overflow:hidden;margin-bottom:0.6rem}
+.sc-progress-fill{height:100%;border-radius:2px;background:var(--card-color);transition:width 0.5s ease}
+.sc-stats{display:flex;justify-content:space-between;font-size:0.75rem;color:var(--text-dim);font-weight:500}
+.sc-stats span:last-child{color:var(--card-color);font-weight:600}
+
+/* Tip card */
+.tip-card{background:var(--surface);border:1px solid var(--surface-3);border-radius:var(--radius);padding:1.5rem;margin-bottom:1.5rem;position:relative;overflow:hidden}
+.tip-card::before{content:'';position:absolute;top:0;left:0;width:3px;height:100%;background:linear-gradient(180deg,var(--accent),var(--pink))}
+.tip-card .tip-label{font-size:0.7rem;text-transform:uppercase;letter-spacing:1px;color:var(--accent);font-weight:700;margin-bottom:0.5rem}
+.tip-card p{color:var(--text-mid);font-size:0.95rem;line-height:1.7;padding-left:1rem}
+
+/* Quote */
+.quote-card{background:linear-gradient(135deg,var(--surface),var(--surface-2));border:1px solid var(--surface-3);border-radius:var(--radius);padding:2rem;text-align:center;margin-bottom:1.5rem}
+.quote-card .quote-mark{font-size:2.5rem;line-height:1;color:var(--accent);opacity:0.4;font-family:Georgia,serif}
+.quote-card blockquote{font-size:1.1rem;font-weight:500;font-style:italic;color:var(--text);margin:0.5rem 0;line-height:1.6}
+.quote-card .quote-author{font-size:0.8rem;color:var(--text-dim);font-weight:500;margin-top:0.5rem}
+
+/* Weak topics */
+.weak-card{background:var(--surface);border:1px solid rgba(239,68,68,0.2);border-radius:var(--radius);padding:1.5rem;margin-bottom:1.5rem}
+.weak-card h3{color:var(--red);font-size:0.95rem;font-weight:700;margin-bottom:0.3rem}
+.weak-card .weak-sub{font-size:0.8rem;color:var(--text-dim);margin-bottom:1rem}
+.weak-item{display:flex;align-items:center;justify-content:space-between;padding:0.6rem 0;border-bottom:1px solid var(--surface-3)}
+.weak-item:last-child{border:none}
+.weak-item .score{font-weight:700;color:var(--red);font-size:0.9rem}
+
+/* Footer */
+.footer{text-align:center;padding:2rem;color:var(--text-dim);font-size:0.75rem;border-top:1px solid var(--surface-3)}
+
+/* Responsive */
+@media(max-width:640px){
+  .hero{padding:2rem 1.5rem 1.5rem}
+  .stats-strip{grid-template-columns:repeat(2,1fr)}
+  .subject-grid{grid-template-columns:1fr}
+  .dashboard{padding:0 1rem 2rem}
+  .cd-unit{min-width:65px;padding:0.6rem 0.8rem}
+  .cd-unit .num{font-size:1.4rem}
+}
 </style>
 </head>
 <body>
+<div class="bg-glow"></div>
+<div class="page">
+
+<!-- Hero -->
 <div class="hero">
+<div class="hero-badge"><span class="dot"></span> Leaving Cert 2025</div>
 <h1>LC Study Portal</h1>
-<p>Your personal Leaving Certificate Higher Level study hub. All subjects. All tools. One place.</p>
-<div class="countdown" id="examCountdown"></div>
+<p>All subjects. All tools. One place. Built for Higher Level.</p>
+<div class="countdown-row" id="examCountdown"></div>
+</div>
+
+<!-- Stats -->
+<div class="stats-strip">
+<div class="ss-item">
+<div class="ss-val" id="streakCount">0</div>
+<div class="ss-label">Day Streak</div>
+</div>
+<div class="ss-item">
+<div class="ss-val" id="totalDays">0</div>
+<div class="ss-label">Days Studied</div>
+</div>
+<div class="ss-item">
+<div class="ss-val" id="totalQuizzes">0</div>
+<div class="ss-label">Quizzes Done</div>
+</div>
+<div class="ss-item">
+<div class="ss-val" id="avgScore">-</div>
+<div class="ss-label">Avg Score</div>
+</div>
 </div>
 
 <div class="dashboard">
 
-<!-- Top Stats Row -->
-<div class="top-stats">
-<div class="stat-card">
-<div class="stat-number" style="color:#6C5CE7" id="streakCount">0</div>
-<div class="stat-label">Day Streak</div>
-</div>
-<div class="stat-card">
-<div class="stat-number" style="color:#0984e3" id="totalDays">0</div>
-<div class="stat-label">Days Studied</div>
-</div>
-<div class="stat-card">
-<div class="stat-number" style="color:#00b894" id="totalQuizzes">0</div>
-<div class="stat-label">Quizzes Done</div>
-</div>
-<div class="stat-card">
-<div class="stat-number" style="color:#e17055" id="avgScore">-</div>
-<div class="stat-label">Avg Quiz %</div>
-</div>
-</div>
-
-<!-- Subjects Grid -->
-<div class="section-title">Your Subjects</div>
+<!-- Subjects -->
+<div class="section-head"><h2>Your Subjects</h2><div class="line"></div></div>
 <div class="subject-grid" id="subjectGrid">
 
 <a href="accounting.html" class="subject-card">
-<div class="card-banner" style="background:linear-gradient(135deg,#6C5CE7,#4834d4)">
-<h3>Accounting</h3>
-<p>Higher Level</p>
-<div class="card-icon">&#128200;</div>
+<div class="sc-top">
+<div class="sc-icon">&#128200;</div>
+<div class="sc-name">Accounting</div>
+<div class="sc-level">Higher Level</div>
 </div>
-<div class="card-body">
-<div class="progress-bar"><div class="progress-fill" style="width:0%;background:#6C5CE7" id="prog-accounting"></div></div>
-<div class="card-stats">
-<span id="stat-accounting-quizzes">0 quizzes</span>
-<span id="stat-accounting-avg">-</span>
-</div>
+<div class="sc-bottom">
+<div class="sc-progress"><div class="sc-progress-fill" style="width:0%" id="prog-accounting"></div></div>
+<div class="sc-stats"><span id="stat-accounting-quizzes">0 quizzes</span><span id="stat-accounting-avg">-</span></div>
 </div>
 </a>
 
 <a href="maths.html" class="subject-card">
-<div class="card-banner" style="background:linear-gradient(135deg,#0984e3,#0652DD)">
-<h3>Maths</h3>
-<p>Higher Level</p>
-<div class="card-icon">&#128290;</div>
+<div class="sc-top">
+<div class="sc-icon">&#128290;</div>
+<div class="sc-name">Maths</div>
+<div class="sc-level">Higher Level</div>
 </div>
-<div class="card-body">
-<div class="progress-bar"><div class="progress-fill" style="width:0%;background:#0984e3" id="prog-maths"></div></div>
-<div class="card-stats">
-<span id="stat-maths-quizzes">0 quizzes</span>
-<span id="stat-maths-avg">-</span>
-</div>
+<div class="sc-bottom">
+<div class="sc-progress"><div class="sc-progress-fill" style="width:0%" id="prog-maths"></div></div>
+<div class="sc-stats"><span id="stat-maths-quizzes">0 quizzes</span><span id="stat-maths-avg">-</span></div>
 </div>
 </a>
 
 <a href="english.html" class="subject-card">
-<div class="card-banner" style="background:linear-gradient(135deg,#e17055,#d63031)">
-<h3>English</h3>
-<p>Higher Level</p>
-<div class="card-icon">&#128214;</div>
+<div class="sc-top">
+<div class="sc-icon">&#128214;</div>
+<div class="sc-name">English</div>
+<div class="sc-level">Higher Level</div>
 </div>
-<div class="card-body">
-<div class="progress-bar"><div class="progress-fill" style="width:0%;background:#e17055" id="prog-english"></div></div>
-<div class="card-stats">
-<span id="stat-english-quizzes">0 quizzes</span>
-<span id="stat-english-avg">-</span>
-</div>
+<div class="sc-bottom">
+<div class="sc-progress"><div class="sc-progress-fill" style="width:0%" id="prog-english"></div></div>
+<div class="sc-stats"><span id="stat-english-quizzes">0 quizzes</span><span id="stat-english-avg">-</span></div>
 </div>
 </a>
 
 <a href="spanish.html" class="subject-card">
-<div class="card-banner" style="background:linear-gradient(135deg,#fdcb6e,#f39c12)">
-<h3>Spanish</h3>
-<p>Higher Level</p>
-<div class="card-icon">&#127466;&#127480;</div>
+<div class="sc-top">
+<div class="sc-icon">&#127466;&#127480;</div>
+<div class="sc-name">Spanish</div>
+<div class="sc-level">Higher Level</div>
 </div>
-<div class="card-body">
-<div class="progress-bar"><div class="progress-fill" style="width:0%;background:#f39c12" id="prog-spanish"></div></div>
-<div class="card-stats">
-<span id="stat-spanish-quizzes">0 quizzes</span>
-<span id="stat-spanish-avg">-</span>
-</div>
+<div class="sc-bottom">
+<div class="sc-progress"><div class="sc-progress-fill" style="width:0%" id="prog-spanish"></div></div>
+<div class="sc-stats"><span id="stat-spanish-quizzes">0 quizzes</span><span id="stat-spanish-avg">-</span></div>
 </div>
 </a>
 
 <a href="biology.html" class="subject-card">
-<div class="card-banner" style="background:linear-gradient(135deg,#00b894,#00a383)">
-<h3>Biology</h3>
-<p>Higher Level</p>
-<div class="card-icon">&#129516;</div>
+<div class="sc-top">
+<div class="sc-icon">&#129516;</div>
+<div class="sc-name">Biology</div>
+<div class="sc-level">Higher Level</div>
 </div>
-<div class="card-body">
-<div class="progress-bar"><div class="progress-fill" style="width:0%;background:#00b894" id="prog-biology"></div></div>
-<div class="card-stats">
-<span id="stat-biology-quizzes">0 quizzes</span>
-<span id="stat-biology-avg">-</span>
-</div>
+<div class="sc-bottom">
+<div class="sc-progress"><div class="sc-progress-fill" style="width:0%" id="prog-biology"></div></div>
+<div class="sc-stats"><span id="stat-biology-quizzes">0 quizzes</span><span id="stat-biology-avg">-</span></div>
 </div>
 </a>
 
 <a href="chemistry.html" class="subject-card">
-<div class="card-banner" style="background:linear-gradient(135deg,#a29bfe,#6C5CE7)">
-<h3>Chemistry</h3>
-<p>Higher Level</p>
-<div class="card-icon">&#9883;</div>
+<div class="sc-top">
+<div class="sc-icon">&#9883;</div>
+<div class="sc-name">Chemistry</div>
+<div class="sc-level">Higher Level</div>
 </div>
-<div class="card-body">
-<div class="progress-bar"><div class="progress-fill" style="width:0%;background:#a29bfe" id="prog-chemistry"></div></div>
-<div class="card-stats">
-<span id="stat-chemistry-quizzes">0 quizzes</span>
-<span id="stat-chemistry-avg">-</span>
-</div>
+<div class="sc-bottom">
+<div class="sc-progress"><div class="sc-progress-fill" style="width:0%" id="prog-chemistry"></div></div>
+<div class="sc-stats"><span id="stat-chemistry-quizzes">0 quizzes</span><span id="stat-chemistry-avg">-</span></div>
 </div>
 </a>
 
 <a href="economics.html" class="subject-card">
-<div class="card-banner" style="background:linear-gradient(135deg,#00cec9,#00b5ad)">
-<h3>Economics</h3>
-<p>Higher Level</p>
-<div class="card-icon">&#128176;</div>
+<div class="sc-top">
+<div class="sc-icon">&#128176;</div>
+<div class="sc-name">Economics</div>
+<div class="sc-level">Higher Level</div>
 </div>
-<div class="card-body">
-<div class="progress-bar"><div class="progress-fill" style="width:0%;background:#00cec9" id="prog-economics"></div></div>
-<div class="card-stats">
-<span id="stat-economics-quizzes">0 quizzes</span>
-<span id="stat-economics-avg">-</span>
-</div>
+<div class="sc-bottom">
+<div class="sc-progress"><div class="sc-progress-fill" style="width:0%" id="prog-economics"></div></div>
+<div class="sc-stats"><span id="stat-economics-quizzes">0 quizzes</span><span id="stat-economics-avg">-</span></div>
 </div>
 </a>
 
 </div>
 
-<!-- Study Tip -->
-<div class="study-tip" id="studyTip">
-<h3>Study Tip of the Day</h3>
+<!-- Tip -->
+<div class="section-head"><h2>Today</h2><div class="line"></div></div>
+
+<div class="tip-card">
+<div class="tip-label">Study Tip</div>
 <p id="tipText"></p>
 </div>
 
-<!-- Motivational Quote -->
-<div class="motivational">
-<p id="quoteText"></p>
-<div class="author" id="quoteAuthor"></div>
+<!-- Quote -->
+<div class="quote-card">
+<div class="quote-mark">"</div>
+<blockquote id="quoteText"></blockquote>
+<div class="quote-author" id="quoteAuthor"></div>
 </div>
 
-<!-- Weak Topics Alert -->
-<div class="weak-topics" id="weakTopics" style="display:none">
+<!-- Weak Topics -->
+<div class="weak-card" id="weakTopics" style="display:none">
 <h3>Topics to Revisit</h3>
-<p style="color:var(--text-light);font-size:0.9rem;margin-bottom:0.5rem">These topics had quiz scores below 60%</p>
+<div class="weak-sub">Quiz scores below 60%</div>
 <div id="weakTopicsList"></div>
 </div>
 
 </div>
 
+<div class="footer">LC Study Portal &middot; Built for the Leaving Cert</div>
+
+</div>
+
 <script src="js/shared.js"></script>
 <script>
-// Exam countdown - LC 2025 English Paper 1 is the first exam
-const examDate = localStorage.getItem('lcs_exam_date') || '2025-06-04';
-renderCountdown(examDate, 'examCountdown');
+// Countdown - custom renderer for dark theme
+(function(){
+  const examDate = localStorage.getItem('lcs_exam_date') || '2025-06-04';
+  const container = document.getElementById('examCountdown');
+  function update(){
+    const now = new Date(), target = new Date(examDate), diff = target - now;
+    if(diff <= 0){container.innerHTML='<div style="color:var(--green);font-weight:700;font-size:1.1rem">Exam time! You\'ve got this!</div>';return}
+    const days = Math.floor(diff/(1000*60*60*24));
+    const hours = Math.floor((diff%(1000*60*60*24))/(1000*60*60));
+    const mins = Math.floor((diff%(1000*60*60))/(1000*60));
+    const weeks = Math.floor(days/7), rd = days%7;
+    container.innerHTML=`
+      <div class="cd-unit"><div class="num">${weeks}</div><div class="lbl">Weeks</div></div>
+      <div class="cd-unit"><div class="num">${rd}</div><div class="lbl">Days</div></div>
+      <div class="cd-unit"><div class="num">${hours}</div><div class="lbl">Hours</div></div>
+      <div class="cd-unit"><div class="num">${mins}</div><div class="lbl">Mins</div></div>`;
+  }
+  update();setInterval(update,60000);
+})();
 
-// Load stats
-function loadDashboard() {
+// Dashboard stats
+function loadDashboard(){
   const streak = LCS.getStreak();
   const totalDays = LCS.getTotalDays();
   const stats = LCS.getOverallStats();
-
   document.getElementById('streakCount').textContent = streak;
   document.getElementById('totalDays').textContent = totalDays;
   document.getElementById('totalQuizzes').textContent = stats.totalQuizzes;
   document.getElementById('avgScore').textContent = stats.totalQuizzes > 0 ? stats.avgScore + '%' : '-';
-
-  // Per-subject stats
   Object.keys(stats.perSubject).forEach(s => {
     const d = stats.perSubject[s];
     const quizEl = document.getElementById('stat-' + s + '-quizzes');
     const avgEl = document.getElementById('stat-' + s + '-avg');
     const progEl = document.getElementById('prog-' + s);
-    if (quizEl) quizEl.textContent = d.quizCount + ' quizzes';
-    if (avgEl) avgEl.textContent = d.quizCount > 0 ? d.avgScore + '% avg' : '-';
-    if (progEl) progEl.style.width = Math.min(d.topicsViewed * 10, 100) + '%';
+    if(quizEl) quizEl.textContent = d.quizCount + ' quizzes';
+    if(avgEl) avgEl.textContent = d.quizCount > 0 ? d.avgScore + '%' : '-';
+    if(progEl) progEl.style.width = Math.min(d.topicsViewed * 10, 100) + '%';
   });
 }
 
@@ -237,24 +337,24 @@ const tips = [
 ];
 document.getElementById('tipText').textContent = tips[Math.floor(Math.random() * tips.length)];
 
-// Motivational quotes
+// Quotes
 const quotes = [
-  { text: "The expert in anything was once a beginner.", author: "Helen Hayes" },
-  { text: "It does not matter how slowly you go as long as you do not stop.", author: "Confucius" },
-  { text: "Success is the sum of small efforts, repeated day in and day out.", author: "Robert Collier" },
-  { text: "The only way to do great work is to love what you do.", author: "Steve Jobs" },
-  { text: "Believe you can and you're halfway there.", author: "Theodore Roosevelt" },
-  { text: "Education is the passport to the future.", author: "Malcolm X" },
-  { text: "You don't have to be great to start, but you have to start to be great.", author: "Zig Ziglar" },
-  { text: "A little progress each day adds up to big results.", author: "" },
-  { text: "The pain of studying is temporary. The pain of not knowing is forever.", author: "" },
-  { text: "Push yourself, because no one else is going to do it for you.", author: "" },
-  { text: "Don't watch the clock; do what it does. Keep going.", author: "Sam Levenson" },
-  { text: "Your future is created by what you do today, not tomorrow.", author: "Robert Kiyosaki" },
+  {text:"The expert in anything was once a beginner.",author:"Helen Hayes"},
+  {text:"It does not matter how slowly you go as long as you do not stop.",author:"Confucius"},
+  {text:"Success is the sum of small efforts, repeated day in and day out.",author:"Robert Collier"},
+  {text:"The only way to do great work is to love what you do.",author:"Steve Jobs"},
+  {text:"Believe you can and you're halfway there.",author:"Theodore Roosevelt"},
+  {text:"Education is the passport to the future.",author:"Malcolm X"},
+  {text:"You don't have to be great to start, but you have to start to be great.",author:"Zig Ziglar"},
+  {text:"A little progress each day adds up to big results.",author:""},
+  {text:"The pain of studying is temporary. The pain of not knowing is forever.",author:""},
+  {text:"Push yourself, because no one else is going to do it for you.",author:""},
+  {text:"Don't watch the clock; do what it does. Keep going.",author:"Sam Levenson"},
+  {text:"Your future is created by what you do today, not tomorrow.",author:"Robert Kiyosaki"},
 ];
-const quote = quotes[Math.floor(Math.random() * quotes.length)];
-document.getElementById('quoteText').textContent = '"' + quote.text + '"';
-document.getElementById('quoteAuthor').textContent = quote.author ? '- ' + quote.author : '';
+const q = quotes[Math.floor(Math.random() * quotes.length)];
+document.getElementById('quoteText').textContent = q.text;
+document.getElementById('quoteAuthor').textContent = q.author ? '— ' + q.author : '';
 
 loadDashboard();
 </script>
