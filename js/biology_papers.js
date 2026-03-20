@@ -1,5 +1,5 @@
 // LC Biology Past Papers Data (auto-generated)
-const PAST_PAPERS_BIOLOGY = {
+var PAST_PAPERS_BIOLOGY = {
   '2012': {
     year: '2012',
     has_marking: true,

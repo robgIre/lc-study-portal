@@ -1,5 +1,5 @@
 // LC Economics Past Papers Data (auto-generated)
-const PAST_PAPERS_ECONOMICS = {
+var PAST_PAPERS_ECONOMICS = {
   "2012": {
     year: "2012",
     has_marking: true,

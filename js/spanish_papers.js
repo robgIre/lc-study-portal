@@ -1,5 +1,5 @@
 // LC Spanish Past Papers Data (auto-generated)
-const PAST_PAPERS_SPANISH = {
+var PAST_PAPERS_SPANISH = {
   '2012': {
     year: '2012',
     has_marking: true,

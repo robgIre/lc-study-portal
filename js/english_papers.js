@@ -1,5 +1,5 @@
 // LC English Past Papers Data (auto-generated)
-const PAST_PAPERS_ENGLISH = {
+var PAST_PAPERS_ENGLISH = {
   '2012': {
     year: '2012',
     has_marking: true,
