@@ -313,75 +313,108 @@ function switchStudyYear(year, subject) {
   walkthrough.style.display = 'none';
   pastContent.style.display = 'block';
 
-  var dataVar = window['PAST_PAPERS_' + subject.toUpperCase()];
-  if (!dataVar || !dataVar[year]) {
-    pastContent.innerHTML = '<div class="card"><p>No data available for ' + year + '.</p></div>';
+  // Use pre-processed walkthrough data
+  var wtData = window['WALKTHROUGHS_' + subject.toUpperCase()];
+  if (!wtData || !wtData[year]) {
+    pastContent.innerHTML = '<div class="card"><p>No walkthrough data available for ' + year + '.</p></div>';
     return;
   }
 
-  var info = dataVar[year];
-  // Combine all paper text
-  var allPaperText = '';
-  var paperNames = Object.keys(info.papers);
-  var paperLabels = [];
-  paperNames.forEach(function(pname) {
-    var label = pname.replace('paper1','Paper 1').replace('paper2','Paper 2')
-      .replace('paper','Exam Paper').replace('written','Written Exam').replace('listening','Listening Test')
-      .replace('sectionsAB','Sections A & B').replace('sectionC','Section C');
-    paperLabels.push({key: pname, label: label, text: info.papers[pname]});
-    allPaperText += info.papers[pname] + '\n\n';
-  });
+  var entries = wtData[year];
+  var html = '';
 
-  var markingText = info.marking || '';
+  // Question nav buttons
+  if (entries.length > 1) {
+    html += '<div class="question-nav" id="pastQNav">';
+    entries.forEach(function(e, i) {
+      var cls = i === 0 ? ' class="active"' : '';
+      html += '<button' + cls + ' onclick="showPastQ(' + i + ')">' + escH(e.label) + '</button>';
+    });
+    html += '</div>';
+  }
 
-  // Split paper and marking into question blocks
-  var paperQs = splitIntoQuestions(allPaperText, subject);
-  var markingQs = splitIntoQuestions(markingText, subject);
-
-  // Build question nav buttons
-  var html = '<div class="question-nav" id="pastQNav">';
-  paperQs.forEach(function(q, i) {
-    var activeClass = i === 0 ? ' class="active"' : '';
-    html += '<button' + activeClass + ' onclick="showPastQ(' + i + ')">' + escHtml(q.label) + '</button>';
-  });
-  html += '</div>';
-
-  // Build question sections
-  paperQs.forEach(function(q, i) {
-    var display = i === 0 ? 'block' : 'none';
-    html += '<div class="past-q-section" id="pastQ' + i + '" style="display:' + display + '">';
+  // Question sections
+  entries.forEach(function(e, i) {
+    var disp = i === 0 ? 'block' : 'none';
+    html += '<div class="past-q-section" id="pastQ' + i + '" style="display:' + disp + '">';
 
     // Question card
-    html += '<div class="card"><h2>' + escHtml(q.label) + ' <span class="marks-badge">' + year + '</span></h2>';
-    html += '<div style="white-space:pre-wrap;font-size:0.95rem;line-height:1.8;color:var(--text);">' + escHtml(q.text) + '</div>';
+    html += '<div class="card"><h2>' + escH(e.label) + ' <span class="marks-badge">' + year + '</span></h2>';
+    // Format question text with sub-parts highlighted
+    html += formatQText(e.q);
     html += '</div>';
 
-    // Find matching marking scheme section
-    var matchedMark = findMatchingMarking(q, markingQs);
-    if (matchedMark) {
-      html += '<div class="card"><h3 style="color:var(--success)">Marking Scheme & Answers</h3>';
-      html += '<div class="explain" style="white-space:pre-wrap;font-size:0.9rem;line-height:1.8;">' + escHtml(matchedMark.text) + '</div>';
+    // Answer/marking scheme card
+    if (e.a) {
+      html += '<div class="card">';
+      html += '<h3 style="color:var(--success);margin-bottom:0.8rem">Answer & Marking Scheme</h3>';
+      html += formatAnswer(e.a);
       html += '</div>';
     }
 
     html += '</div>';
   });
 
-  // If no questions were extracted, show full paper
-  if (paperQs.length === 0) {
-    html = '<div class="card"><h2>Exam Paper — ' + year + '</h2>';
-    html += '<div style="white-space:pre-wrap;font-size:0.9rem;color:var(--text-light);line-height:1.8;">' + escHtml(allPaperText) + '</div></div>';
-    if (markingText) {
-      html += '<div class="card"><h2>Marking Scheme — ' + year + '</h2>';
-      html += '<div class="explain" style="white-space:pre-wrap;font-size:0.9rem;line-height:1.8;">' + escHtml(markingText) + '</div></div>';
-    }
-  }
-
   pastContent.innerHTML = html;
 }
 
-function escHtml(s) {
-  return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+function escH(s) {
+  return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+}
+
+function formatQText(text) {
+  // Format question text: highlight sub-parts (a), (b), etc. and marks
+  var lines = text.split('\n');
+  var html = '';
+  lines.forEach(function(line) {
+    var trimmed = line.trim();
+    if (!trimmed) { html += '<br>'; return; }
+    // Sub-part labels like (a), (b), (i), (ii)
+    if (/^\([a-z]\)/.test(trimmed) || /^\([ivx]+\)/.test(trimmed)) {
+      html += '<div style="margin:0.6rem 0 0.3rem;"><strong style="color:var(--primary);">' + escH(trimmed) + '</strong></div>';
+    }
+    // Marks indicators like (15) or [20] at end
+    else if (/\(\d+\)\s*$/.test(trimmed) || /\[\d+\]\s*$/.test(trimmed)) {
+      var markMatch = trimmed.match(/[\(\[]\s*(\d+)\s*[\)\]]\s*$/);
+      var mainText = trimmed.replace(/[\(\[]\s*\d+\s*[\)\]]\s*$/, '').trim();
+      html += '<p>' + escH(mainText) + ' <span class="marks-badge">' + markMatch[1] + '</span></p>';
+    }
+    // Section headers
+    else if (/^Section\s+[A-C]/i.test(trimmed) || /^SECTION/i.test(trimmed)) {
+      html += '<h3 style="margin:1rem 0 0.5rem;color:var(--primary);">' + escH(trimmed) + '</h3>';
+    }
+    else {
+      html += '<p style="margin:0.2rem 0;">' + escH(trimmed) + '</p>';
+    }
+  });
+  return html;
+}
+
+function formatAnswer(text) {
+  // Format marking scheme text into answer + why sections
+  var lines = text.split('\n');
+  var html = '';
+  var inAnswer = false;
+  lines.forEach(function(line) {
+    var trimmed = line.trim();
+    if (!trimmed) { html += '<br>'; return; }
+    // Sub-part answers (a), (b), etc
+    if (/^\([a-z]\)/.test(trimmed) || /^\([ivx]+\)/.test(trimmed)) {
+      html += '<div class="working" style="margin:0.5rem 0;"><strong>' + escH(trimmed) + '</strong></div>';
+    }
+    // Lines with mark allocations like "3(4)" or "(20 marks)" or bold answers
+    else if (/\b\d+\s*(?:marks?|×|x)\b/i.test(trimmed) || /^\d+\(\d+\)/.test(trimmed)) {
+      html += '<div class="explain" style="margin:0.3rem 0;"><strong>Marks:</strong> ' + escH(trimmed) + '</div>';
+    }
+    // Question number headers in marking scheme
+    else if (/^(?:Question|Q)\s*\d+/i.test(trimmed) || /^\d{1,2}\.\s*\(a\)/.test(trimmed)) {
+      html += '<h4 style="margin:0.8rem 0 0.3rem;color:var(--primary);">' + escH(trimmed) + '</h4>';
+    }
+    else {
+      html += '<div class="working" style="margin:0.2rem 0;border:none;background:transparent;padding:0.2rem 0;">' + escH(trimmed) + '</div>';
+    }
+  });
+  return html;
 }
 
 function showPastQ(idx) {
@@ -391,86 +424,6 @@ function showPastQ(idx) {
   if (el) el.style.display = 'block';
   var btns = document.querySelectorAll('#pastQNav button');
   if (btns[idx]) btns[idx].classList.add('active');
-}
-
-function splitIntoQuestions(text, subject) {
-  if (!text || text.trim().length < 50) return [];
-  var questions = [];
-  // Multiple patterns to catch question numbering across different subjects/years
-  // Patterns: "Question 1", "Q1", "1.", "1 (a)", numbered at start of line
-  var patterns = [
-    /\n\s*(?:Question|QUESTION)\s+(\d+)/gi,
-    /\n\s*(?:Q|q)\.?\s*(\d+)\b/g,
-    /\n\s*(\d{1,2})\.\s+(?:\(a\)|[A-Z])/g,
-    /\n\s*(\d{1,2})\s*\.\s*\n/g,
-    /\n\s*(\d{1,2})\s*\(a\)/gi,
-  ];
-
-  // Try each pattern and use the one that finds the most questions
-  var bestSplits = [];
-  patterns.forEach(function(pat) {
-    var splits = [];
-    var match;
-    var regex = new RegExp(pat.source, pat.flags);
-    while ((match = regex.exec(text)) !== null) {
-      var qNum = parseInt(match[1]);
-      if (qNum >= 1 && qNum <= 20) {
-        splits.push({ num: qNum, index: match.index, matchLen: match[0].length });
-      }
-    }
-    // Remove duplicates (same question number)
-    var seen = {};
-    splits = splits.filter(function(s) {
-      if (seen[s.num]) return false;
-      seen[s.num] = true;
-      return true;
-    });
-    if (splits.length > bestSplits.length) {
-      bestSplits = splits;
-    }
-  });
-
-  // Also try section-based splitting for subjects with sections (like Biology Section C)
-  if (bestSplits.length < 3) {
-    var sectionPat = /\n\s*(?:Section|SECTION)\s+([A-C])/gi;
-    var secMatch;
-    var secSplits = [];
-    while ((secMatch = sectionPat.exec(text)) !== null) {
-      secSplits.push({ num: secMatch[1], index: secMatch.index, matchLen: secMatch[0].length, isSection: true });
-    }
-    if (secSplits.length > 0 && secSplits.length >= bestSplits.length) {
-      bestSplits = secSplits;
-    }
-  }
-
-  if (bestSplits.length === 0) return [];
-
-  // Sort by position
-  bestSplits.sort(function(a, b) { return a.index - b.index; });
-
-  // Extract text between splits
-  for (var i = 0; i < bestSplits.length; i++) {
-    var start = bestSplits[i].index;
-    var end = (i + 1 < bestSplits.length) ? bestSplits[i + 1].index : text.length;
-    var qText = text.substring(start, end).trim();
-    var label = bestSplits[i].isSection ? 'Section ' + bestSplits[i].num : 'Question ' + bestSplits[i].num;
-    questions.push({ num: bestSplits[i].num, label: label, text: qText });
-  }
-
-  return questions;
-}
-
-function findMatchingMarking(paperQ, markingQs) {
-  if (!markingQs || markingQs.length === 0) return null;
-  // Direct number match
-  for (var i = 0; i < markingQs.length; i++) {
-    if (markingQs[i].num === paperQ.num) return markingQs[i];
-  }
-  // Section match
-  for (var j = 0; j < markingQs.length; j++) {
-    if (markingQs[j].label === paperQ.label) return markingQs[j];
-  }
-  return null;
 }
 
 // Glossary filter
