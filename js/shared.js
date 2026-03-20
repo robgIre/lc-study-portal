@@ -297,6 +297,57 @@ function showPaper(paperId, subject) {
   if (subject) LCS.trackView(subject, 'viewed_' + paperId);
 }
 
+// Year selector on Study tab
+function switchStudyYear(year, subject) {
+  const walkthrough = document.getElementById('walkthrough-2025');
+  const pastContent = document.getElementById('pastYearContent');
+  if (!walkthrough || !pastContent) return;
+
+  if (year === '2025' || year === '') {
+    walkthrough.style.display = 'block';
+    pastContent.style.display = 'none';
+    pastContent.innerHTML = '';
+    return;
+  }
+
+  // Hide 2025 walkthrough, show past year content
+  walkthrough.style.display = 'none';
+  pastContent.style.display = 'block';
+
+  var dataVar = window['PAST_PAPERS_' + subject.toUpperCase()];
+  if (!dataVar || !dataVar[year]) {
+    pastContent.innerHTML = '<div class="card"><p>No data available for ' + year + '.</p></div>';
+    return;
+  }
+
+  var info = dataVar[year];
+  var html = '';
+
+  // Render papers
+  var paperNames = Object.keys(info.papers);
+  paperNames.forEach(function(pname) {
+    var label = pname.replace('paper1','Paper 1').replace('paper2','Paper 2')
+      .replace('paper','Exam Paper').replace('written','Written Exam').replace('listening','Listening Test')
+      .replace('sectionsAB','Sections A & B').replace('sectionC','Section C');
+    var text = info.papers[pname];
+    // Split into question blocks for better readability
+    html += '<div class="card"><h2>' + label + ' — ' + year + '</h2>';
+    html += '<div style="white-space:pre-wrap;font-size:0.9rem;color:var(--text-light);line-height:1.8;max-height:600px;overflow-y:auto;padding:0.5rem 0;">';
+    html += text.replace(/</g,'&lt;').replace(/>/g,'&gt;');
+    html += '</div></div>';
+  });
+
+  // Render marking scheme
+  if (info.marking) {
+    html += '<div class="card"><h2>Marking Scheme — ' + year + '</h2>';
+    html += '<div style="white-space:pre-wrap;font-size:0.9rem;color:var(--text-light);line-height:1.8;max-height:600px;overflow-y:auto;padding:0.5rem 0;">';
+    html += info.marking.replace(/</g,'&lt;').replace(/>/g,'&gt;');
+    html += '</div></div>';
+  }
+
+  pastContent.innerHTML = html;
+}
+
 // Glossary filter
 function filterGlossary() {
   const term = document.getElementById('glossarySearch').value.toLowerCase();
