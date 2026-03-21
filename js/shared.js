@@ -338,17 +338,18 @@ function switchStudyYear(year, subject) {
     var disp = i === 0 ? 'block' : 'none';
     html += '<div class="past-q-section" id="pastQ' + i + '" style="display:' + disp + '">';
 
-    // Question card
+    // Question card - fix literal \n in data
+    var qText = e.q.replace(/\\n/g, '\n');
     html += '<div class="card"><h2>' + escH(e.label) + ' <span class="marks-badge">' + year + '</span></h2>';
-    // Format question text with sub-parts highlighted
-    html += formatQText(e.q);
+    html += formatQText(qText);
     html += '</div>';
 
     // Answer/marking scheme card
     if (e.a) {
+      var aText = e.a.replace(/\\n/g, '\n');
       html += '<div class="card">';
       html += '<h3 style="color:var(--success);margin-bottom:0.8rem">Answer & Marking Scheme</h3>';
-      html += formatAnswer(e.a);
+      html += formatAnswer(aText);
       html += '</div>';
     }
 
