@@ -134,6 +134,8 @@ table tr:nth-child(even){background:rgba(108,92,231,0.03)}
 .question-nav button:hover,.question-nav button.active{background:var(--primary);color:#fff}
 .q-section{display:none}
 .q-section.active{display:block}
+.paper-section{display:none}
+.paper-section.active{display:block}
 
 /* Countdown */
 .countdown{display:flex;gap:1.5rem;justify-content:center;margin:1.5rem 0;flex-wrap:wrap}

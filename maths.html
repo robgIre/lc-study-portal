@@ -452,8 +452,14 @@
 <div class="question-nav" id="studyNavP1">
 <button class="active" onclick="showQuestion('p1q1','maths')">Q1 Algebra</button>
 <button onclick="showQuestion('p1q2','maths')">Q2 Calculus</button>
+<button onclick="showQuestion('p1q3','maths')">Q3 Calculus</button>
 <button onclick="showQuestion('p1q4','maths')">Q4 Complex</button>
+<button onclick="showQuestion('p1q5','maths')">Q5 Algebra</button>
+<button onclick="showQuestion('p1q6','maths')">Q6 Binomial</button>
 <button onclick="showQuestion('p1q7','maths')">Q7 Sequences</button>
+<button onclick="showQuestion('p1q8','maths')">Q8 Optimization</button>
+<button onclick="showQuestion('p1q9','maths')">Q9 Calculus Context</button>
+<button onclick="showQuestion('p1q10','maths')">Q10 Proof</button>
 </div>
 
 <!-- P1 Q1 -->
@@ -559,6 +565,16 @@ Draw a smooth curve through these reflected points
 </div>
 </div>
 
+<!-- P1 Q3 -->
+<div class="q-section" id="q-p1q3">
+<div class="card">
+<h2>Paper 1 - Q3: Calculus <span class="marks-badge">30 marks</span></h2>
+<p><strong>Topics:</strong> Chain rule, quotient rule, integration with limits.</p>
+<div class="explain"><strong>This question typically covers:</strong> Differentiating composite functions using the chain rule, applying the quotient rule to rational functions, and evaluating definite integrals. Show all steps — each rule application earns marks independently.</div>
+<div class="explain"><strong>Key formulas:</strong><br>Chain rule: dy/dx = dy/du × du/dx<br>Quotient rule: d/dx(u/v) = [v(du/dx) - u(dv/dx)] / v²<br>Definite integral: ∫[a to b] f(x)dx = F(b) - F(a)</div>
+</div>
+</div>
+
 <!-- P1 Q4 -->
 <div class="q-section" id="q-p1q4">
 <div class="card">
@@ -620,6 +636,26 @@ z = (-√6 + √2)/2 + i(√6 + √2)/2<br><br>
 (There are 6 roots total; you only need to give 2 in surd form)
 </div>
 <div class="explain"><strong>Note:</strong> Since z⁶ is an even power, if you find one root z₀, then -z₀ is also a root. So finding √2 + √2i means -√2 - √2i is automatically another root.</div>
+</div>
+</div>
+
+<!-- P1 Q5 -->
+<div class="q-section" id="q-p1q5">
+<div class="card">
+<h2>Paper 1 - Q5: Algebra <span class="marks-badge">30 marks</span></h2>
+<p><strong>Topics:</strong> Completing the square, logarithms, simultaneous equations.</p>
+<div class="explain"><strong>This question typically covers:</strong> Rewriting quadratic expressions in completed square form a(x+h)²+k, solving logarithmic equations using log laws, and solving systems of equations (often one linear, one quadratic).</div>
+<div class="explain"><strong>Key formulas:</strong><br>Completing the square: ax² + bx + c = a(x + b/2a)² + (c - b²/4a)<br>Log laws: log(AB) = logA + logB, log(A/B) = logA - logB, log(Aⁿ) = nlogA<br>Change of base: log_a(b) = log(b)/log(a)</div>
+</div>
+</div>
+
+<!-- P1 Q6 -->
+<div class="q-section" id="q-p1q6">
+<div class="card">
+<h2>Paper 1 - Q6: Binomial Expansion <span class="marks-badge">30 marks</span></h2>
+<p><strong>Topics:</strong> Binomial theorem, discriminant, quadratic theory.</p>
+<div class="explain"><strong>This question typically covers:</strong> Expanding (a+b)ⁿ using the binomial theorem, finding specific terms in an expansion, using the discriminant (b²-4ac) to determine the nature of roots, and applying conditions for equal/real/complex roots.</div>
+<div class="explain"><strong>Key formulas:</strong><br>Binomial: T(r+1) = C(n,r) × aⁿ⁻ʳ × bʳ<br>Discriminant: Δ = b² - 4ac<br>Δ > 0: two real roots | Δ = 0: equal roots | Δ < 0: no real roots</div>
 </div>
 </div>
 
@@ -719,6 +755,38 @@ Length of 1 lap = S₁₈ = (25/3)(1.06¹⁸ - 1)<br><br>
 
 </div>
 
+<!-- P1 Q8 -->
+<div class="q-section" id="q-p1q8">
+<div class="card">
+<h2>Paper 1 - Q8: Applied Calculus <span class="marks-badge">50 marks</span></h2>
+<p><strong>Section B — Topics:</strong> Optimization, rates of change, related rates problems.</p>
+<div class="explain"><strong>This question typically covers:</strong> Finding maximum/minimum values in real-world contexts (area, volume, cost), setting up equations from word problems, differentiating and setting f'(x)=0, verifying with second derivative test. Often involves modelling a real scenario.</div>
+<div class="explain"><strong>Approach:</strong><br>1. Express the quantity to optimize as a function of one variable<br>2. Differentiate and set equal to zero<br>3. Solve for the variable<br>4. Verify it's a max/min using f''(x)<br>5. Answer the question in context with units</div>
+</div>
+</div>
+
+<!-- P1 Q9 -->
+<div class="q-section" id="q-p1q9">
+<div class="card">
+<h2>Paper 1 - Q9: Calculus in Context <span class="marks-badge">50 marks</span></h2>
+<p><strong>Section B — Topics:</strong> Chain rule applications, piecewise functions, integration for averages.</p>
+<div class="explain"><strong>This question typically covers:</strong> Real-world applications of calculus — often involving rates, areas, averages. May include piecewise-defined functions, interpreting graphs, and using integration to find average values over an interval.</div>
+<div class="explain"><strong>Key formula:</strong> Average value = (1/(b-a)) × ∫[a to b] f(x)dx</div>
+</div>
+</div>
+
+<!-- P1 Q10 -->
+<div class="q-section" id="q-p1q10">
+<div class="card">
+<h2>Paper 1 - Q10: Proof & Patterns <span class="marks-badge">50 marks</span></h2>
+<p><strong>Section B — Topics:</strong> Coordinate geometry patterns, limits, proof by induction.</p>
+<div class="explain"><strong>This question typically covers:</strong> Identifying patterns, proving formulas using mathematical induction, evaluating limits, and connecting algebra to geometric interpretations.</div>
+<div class="explain"><strong>Proof by Induction steps:</strong><br>1. Prove the base case (n=1)<br>2. Assume true for n=k<br>3. Prove true for n=k+1 using the assumption<br>4. Conclude: true for all n ∈ ℕ by induction</div>
+</div>
+</div>
+
+</div>
+
 <!-- PAPER 2 CONTENT -->
 <div class="paper-section" id="paper-paper2">
 <div class="card">
@@ -729,7 +797,13 @@ Length of 1 lap = S₁₈ = (25/3)(1.06¹⁸ - 1)<br><br>
 <button class="active" onclick="showQuestion('p2q1','maths')">Q1 Lines</button>
 <button onclick="showQuestion('p2q2','maths')">Q2 Circles</button>
 <button onclick="showQuestion('p2q3','maths')">Q3 Probability</button>
-<button onclick="showQuestion('p2q10','maths')">Q10 Stats Context</button>
+<button onclick="showQuestion('p2q4','maths')">Q4 Statistics</button>
+<button onclick="showQuestion('p2q5','maths')">Q5 Geometry</button>
+<button onclick="showQuestion('p2q6','maths')">Q6 Trig</button>
+<button onclick="showQuestion('p2q7','maths')">Q7 3D Geometry</button>
+<button onclick="showQuestion('p2q8','maths')">Q8 Applied Trig</button>
+<button onclick="showQuestion('p2q9','maths')">Q9 Stats Context</button>
+<button onclick="showQuestion('p2q10','maths')">Q10 Stats Theory</button>
 </div>
 
 <!-- P2 Q1 -->
@@ -920,6 +994,66 @@ GCD(3082, 57360) = 2<br>
 P = 1541/28680<br><br>
 <strong>Answer: 1541/28680</strong>
 </div>
+</div>
+</div>
+
+<!-- P2 Q4 -->
+<div class="q-section" id="q-p2q4">
+<div class="card">
+<h2>Paper 2 - Q4: Statistics <span class="marks-badge">30 marks</span></h2>
+<p><strong>Topics:</strong> Median, quartiles, mean, frequency tables, grouped data.</p>
+<div class="explain"><strong>This question typically covers:</strong> Calculating measures of centre and spread from frequency tables, constructing cumulative frequency curves, reading quartiles, and interpreting statistical data in context.</div>
+<div class="explain"><strong>Key formulas:</strong><br>Mean (grouped) = Σfx / Σf<br>Median position = (n+1)/2<br>Q₁ = 25th percentile, Q₃ = 75th percentile<br>IQR = Q₃ - Q₁</div>
+</div>
+</div>
+
+<!-- P2 Q5 -->
+<div class="q-section" id="q-p2q5">
+<div class="card">
+<h2>Paper 2 - Q5: Geometry <span class="marks-badge">30 marks</span></h2>
+<p><strong>Topics:</strong> Congruent triangles, enlargements, similarity, area ratios.</p>
+<div class="explain"><strong>This question typically covers:</strong> Proving triangles congruent (SSS, SAS, ASA, RHS), applying enlargement scale factors, using similarity to find unknown lengths, and relating areas/volumes to scale factors.</div>
+<div class="explain"><strong>Key facts:</strong><br>If scale factor = k: lengths × k, areas × k², volumes × k³<br>Congruence conditions: SSS, SAS, ASA, RHS<br>Similar triangles: corresponding angles equal, sides in proportion</div>
+</div>
+</div>
+
+<!-- P2 Q6 -->
+<div class="q-section" id="q-p2q6">
+<div class="card">
+<h2>Paper 2 - Q6: Trigonometry <span class="marks-badge">30 marks</span></h2>
+<p><strong>Topics:</strong> Sine, cosine, period, range, cosine rule, exact values.</p>
+<div class="explain"><strong>This question typically covers:</strong> Graphing trig functions, finding period and range, solving trig equations, applying sine/cosine rules, and using exact values (sin30°=½, cos60°=½, etc.).</div>
+<div class="explain"><strong>Key formulas:</strong><br>Sine rule: a/sinA = b/sinB = c/sinC<br>Cosine rule: c² = a² + b² - 2ab·cosC<br>Area = ½ab·sinC<br>sin²θ + cos²θ = 1</div>
+</div>
+</div>
+
+<!-- P2 Q7 -->
+<div class="q-section" id="q-p2q7">
+<div class="card">
+<h2>Paper 2 - Q7: 3D Geometry <span class="marks-badge">50 marks</span></h2>
+<p><strong>Section B — Topics:</strong> Pythagoras in 3D, volumes, surface areas, scaled diagrams.</p>
+<div class="explain"><strong>This question typically covers:</strong> Applying Pythagoras' theorem in 3D shapes, calculating volumes and surface areas of cylinders, cones, spheres, and composite solids, and using scale factors for enlargements.</div>
+<div class="explain"><strong>Key formulas:</strong><br>Sphere: V = 4/3πr³, SA = 4πr²<br>Cone: V = 1/3πr²h, CSA = πrl<br>Cylinder: V = πr²h, SA = 2πr² + 2πrh<br>3D diagonal: d² = l² + w² + h²</div>
+</div>
+</div>
+
+<!-- P2 Q8 -->
+<div class="q-section" id="q-p2q8">
+<div class="card">
+<h2>Paper 2 - Q8: Applied Trigonometry <span class="marks-badge">50 marks</span></h2>
+<p><strong>Section B — Topics:</strong> Angles of elevation, sine rule, percentage error, surveying.</p>
+<div class="explain"><strong>This question typically covers:</strong> Real-world trig problems — finding heights of buildings/towers using angles of elevation/depression, applying sine and cosine rules in non-right-angled triangles, and calculating percentage error.</div>
+<div class="explain"><strong>Approach:</strong> Draw a clear diagram, label all known values, identify which rule to use (sine rule when you have angle + opposite side, cosine rule when you have SAS or SSS), show all working.</div>
+</div>
+</div>
+
+<!-- P2 Q9 -->
+<div class="q-section" id="q-p2q9">
+<div class="card">
+<h2>Paper 2 - Q9: Statistics in Context <span class="marks-badge">50 marks</span></h2>
+<p><strong>Section B — Topics:</strong> Tree diagrams, combinations, binomial probability, clinical trials.</p>
+<div class="explain"><strong>This question typically covers:</strong> Multi-stage probability problems using tree diagrams, calculating combinations C(n,r), applying the binomial distribution P(X=r) = C(n,r)p^r(1-p)^(n-r), and interpreting probability in real-world contexts.</div>
+<div class="explain"><strong>Key formulas:</strong><br>C(n,r) = n! / [r!(n-r)!]<br>P(X=r) = C(n,r) × pʳ × (1-p)ⁿ⁻ʳ<br>Expected value: E(X) = np</div>
 </div>
 </div>
 
