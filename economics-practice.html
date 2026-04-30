@@ -249,158 +249,16 @@ textarea::placeholder{color:var(--text-dim)}
 
 <script src="js/shared.js"></script>
 <script src="js/economics_walkthroughs.js"></script>
-<script src="js/economics_papers.js"></script>
 <script src="js/marking-engine.js"></script>
 <script src="js/economics_practice_data.js"></script>
 <script>
 const App = {
   currentQ: null,
-  parsedPapers: {},
 
   init() {
-    this.parsePapers();
     this.renderQuestions();
     this.renderHistory();
     this.updateStreak();
-  },
-
-  parsePapers() {
-    if (typeof PAST_PAPERS_ECONOMICS === 'undefined') return;
-    const allYears = Object.keys(PAST_PAPERS_ECONOMICS).sort().reverse();
-
-    for (const year of allYears) {
-      if (WALKTHROUGHS_ECONOMICS && WALKTHROUGHS_ECONOMICS[year]) continue;
-      const data = PAST_PAPERS_ECONOMICS[year];
-      if (!data || !data.papers) continue;
-
-      const paperText = (data.papers.paper || '').replace(/\\n/g, '\n').replace(/\\t/g, '\t');
-      const markingText = (data.marking || '').replace(/\\n/g, '\n').replace(/\\t/g, '\t');
-
-      const questions = this.extractQuestionsFromRaw(paperText, markingText, year);
-      if (questions.length > 0) {
-        this.parsedPapers[year] = questions;
-      }
-    }
-  },
-
-  extractQuestionsFromRaw(paperText, markingText, year) {
-    const questions = [];
-    const lines = paperText.split('\n');
-
-    const qStarts = [];
-    for (let i = 0; i < lines.length; i++) {
-      const t = lines[i].trim();
-      if (/^\d+\s*\|\s*Page/i.test(t)) continue;
-      if (/^Page\s+\d/i.test(t)) continue;
-      const m = t.match(/^(\d{1,2})\.\s+(.{5,})/);
-      if (m) {
-        const num = parseInt(m[1]);
-        if (num >= 1 && num <= 16 && !qStarts.find(q => q.num === num)) {
-          qStarts.push({ num, lineIdx: i, firstLine: m[2] });
-        }
-      }
-    }
-
-    for (let qi = 0; qi < qStarts.length; qi++) {
-      const start = qStarts[qi];
-      const endLine = qi + 1 < qStarts.length ? qStarts[qi + 1].lineIdx : lines.length;
-      let qLines = lines.slice(start.lineIdx, endLine);
-
-      let qText = qLines.join('\n')
-        .replace(/_{3,}/g, '')
-        .replace(/\d+\s*\|\s*Page/gi, '')
-        .replace(/^Page\s+\d+.*$/gm, '')
-        .replace(/SECTION\s+[AB].*$/gm, '')
-        .replace(/Answer\s+six\s+of.*$/gm, '')
-        .replace(/\n{3,}/g, '\n\n')
-        .trim();
-
-      const marksMatch = qText.match(/\((\d+)\s*marks?\)/i);
-      const section = start.num <= 10 ? 'A' : 'B';
-
-      let topic = this.guessTopicFromText(qText);
-      const label = 'Q' + start.num + ': ' + topic;
-
-      let markingForQ = this.extractMarkingForQuestion(markingText, start.num, qi + 1 < qStarts.length ? qStarts[qi + 1].num : 99);
-
-      questions.push({
-        num: start.num,
-        label: label,
-        q: qText,
-        a: markingForQ || '',
-        section: section,
-        marks: marksMatch ? parseInt(marksMatch[1]) : (section === 'A' ? 15 : 75),
-        fromRaw: true
-      });
-    }
-
-    return questions;
-  },
-
-  extractMarkingForQuestion(markingText, qNum, nextQNum) {
-    if (!markingText) return '';
-    const lines = markingText.split('\n');
-    let capturing = false;
-    let captured = [];
-
-    for (let i = 0; i < lines.length; i++) {
-      const t = lines[i].trim();
-      if (!t) { if (capturing) captured.push(''); continue; }
-      if (/^\d+\s*\|\s*Page/i.test(t)) continue;
-      if (/^Page\s+\d/i.test(t)) continue;
-
-      const qMatch = t.match(/^(\d{1,2})\.\s+\S/);
-      if (qMatch) {
-        const n = parseInt(qMatch[1]);
-        if (n === qNum && !capturing) {
-          capturing = true;
-          captured.push(t);
-          continue;
-        }
-        if (capturing && n >= 1 && n <= 16 && n !== qNum) break;
-      }
-      if (capturing) captured.push(t);
-    }
-
-    let result = captured.join('\n').replace(/\n{3,}/g, '\n\n').trim();
-    if (result.length < 20) result = '';
-    return result;
-  },
-
-  guessTopicFromText(text) {
-    const first200 = text.substring(0, 200).toLowerCase();
-    const topics = [
-      [/demand\s+(curve|elasticity|supply)/i, 'Demand & Supply'],
-      [/price\s+elasticity/i, 'Price Elasticity'],
-      [/monopoly|monopolist/i, 'Monopoly'],
-      [/perfect\s+competition/i, 'Perfect Competition'],
-      [/oligopoly/i, 'Oligopoly'],
-      [/inflation|cpi|consumer\s+price/i, 'Inflation'],
-      [/interest\s+rate|ecb/i, 'Interest Rates & ECB'],
-      [/tax(ation)?|vat|paye|excise/i, 'Taxation'],
-      [/gdp|gnp|gni|national\s+income/i, 'National Income'],
-      [/balance\s+of\s+payments|export|import/i, 'Balance of Payments'],
-      [/employment|unemployment|labour/i, 'Employment & Labour'],
-      [/opportunity\s+cost/i, 'Opportunity Cost'],
-      [/market\s+failure|externality/i, 'Market Failure'],
-      [/fiscal\s+policy|budget/i, 'Fiscal Policy'],
-      [/multiplier/i, 'Multiplier'],
-      [/ppf|production\s+possibility/i, 'Production Possibility'],
-      [/circular\s+flow/i, 'Circular Flow'],
-      [/cost\s+curve|average\s+cost|marginal\s+cost/i, 'Cost Curves'],
-      [/utility|diminishing/i, 'Utility & Demand'],
-      [/population|ageing/i, 'Population'],
-      [/enterprise|entrepreneur/i, 'Enterprise'],
-      [/land|rent|factor/i, 'Factors of Production'],
-      [/trade|wto|comparative/i, 'International Trade'],
-      [/privatisation|deregulation/i, 'Market Structures'],
-      [/price\s+discrimination/i, 'Price Discrimination'],
-      [/subsid|grant|government/i, 'Government Policy'],
-    ];
-    for (const [regex, name] of topics) {
-      if (regex.test(first200)) return name;
-    }
-    return 'Economics';
   },
 
   escH(s) { return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); },
@@ -412,18 +270,13 @@ const App = {
 
   // ─── QUESTION BROWSER ────────────────────────────
   getAllYears() {
-    const ySet = new Set();
-    if (typeof WALKTHROUGHS_ECONOMICS !== 'undefined') Object.keys(WALKTHROUGHS_ECONOMICS).forEach(y => ySet.add(y));
-    Object.keys(this.parsedPapers).forEach(y => ySet.add(y));
-    return [...ySet].sort().reverse();
+    if (typeof WALKTHROUGHS_ECONOMICS === 'undefined') return [];
+    return Object.keys(WALKTHROUGHS_ECONOMICS).sort().reverse();
   },
 
   getEntriesForYear(year) {
-    if (WALKTHROUGHS_ECONOMICS && WALKTHROUGHS_ECONOMICS[year]) {
-      return WALKTHROUGHS_ECONOMICS[year].filter(e => e.q && !e.q.startsWith('Section B question') && !e.q.startsWith('Key concepts'));
-    }
-    if (this.parsedPapers[year]) return this.parsedPapers[year];
-    return [];
+    if (!WALKTHROUGHS_ECONOMICS || !WALKTHROUGHS_ECONOMICS[year]) return [];
+    return WALKTHROUGHS_ECONOMICS[year].filter(e => e.q && !e.q.startsWith('Section B question') && !e.q.startsWith('Key concepts'));
   },
 
   renderQuestions() {
@@ -439,7 +292,7 @@ const App = {
       if (!entries || entries.length === 0) continue;
 
       const filtered = entries.filter(e => {
-        const sec = e.section || (e.num <= 10 ? 'A' : 'B');
+        const sec = e.num <= 10 ? 'A' : 'B';
         return sf === 'all' || sf === sec;
       });
 
@@ -450,7 +303,7 @@ const App = {
         const qKey = year + '_' + entry.num;
         const best = h.best[qKey];
         const hasMarking = ECON_MARKING[year] && ECON_MARKING[year][entry.num];
-        const sec = entry.section || (entry.num <= 10 ? 'A' : 'B');
+        const sec = entry.num <= 10 ? 'A' : 'B';
         let cls = '';
         let statusHtml = '<span class="q-new">New</span>';
         if (best) {
@@ -458,7 +311,7 @@ const App = {
           statusHtml = '<span class="q-best">' + best.pct + '%</span><span class="q-attempts">(' + (best.attempts||1) + ' tries)</span>';
         }
         const topicName = this.escH(entry.label.replace(/^Q\d+:\s*/, ''));
-        const markLabel = hasMarking ? 'Detailed marking' : (entry.fromRaw ? 'Auto-marking (raw)' : 'Auto-marking');
+        const markLabel = hasMarking ? 'Detailed marking' : 'Auto-marking';
 
         html += '<div class="q-card ' + cls + '" onclick="App.startPractice(\'' + year + '\',' + entry.num + ')">' +
           '<div class="q-top"><span class="q-num">Q' + entry.num + '</span><span class="q-sec">Section ' + sec + '</span></div>' +
