@@ -151,6 +151,20 @@ textarea::placeholder{color:var(--text-dim)}
 .improve.up{color:var(--green);background:rgba(16,185,129,0.1)}
 .improve.down{color:var(--red);background:rgba(239,68,68,0.1)}
 
+/* Answer parts */
+.ans-part{background:var(--surface);border:1px solid var(--surface-3);border-radius:var(--radius);padding:1.2rem 1.4rem;margin-bottom:0.8rem}
+.ans-part-label{display:flex;justify-content:space-between;align-items:center;margin-bottom:0.6rem}
+.ans-part-label .part-tag{font-weight:800;color:var(--accent);font-size:0.9rem;text-transform:uppercase}
+.ans-part-label .part-wc{font-size:0.78rem;color:var(--text-dim)}
+.ans-part-q{font-size:0.88rem;color:var(--text-mid);line-height:1.6;margin-bottom:0.7rem}
+.ans-part textarea{width:100%;background:var(--surface-2);border:1px solid var(--surface-3);color:var(--text);padding:0.8rem 1rem;border-radius:var(--radius-sm);font-size:0.92rem;font-family:inherit;line-height:1.7;resize:vertical;min-height:100px}
+.ans-part textarea:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(6,182,212,0.1)}
+.ans-part textarea::placeholder{color:var(--text-dim)}
+.or-divider{display:flex;align-items:center;gap:0.8rem;margin:0.3rem 0;padding:0.4rem 0}
+.or-divider .or-line{flex:1;height:1px;background:var(--surface-3)}
+.or-divider .or-text{font-size:0.75rem;font-weight:700;color:var(--orange);text-transform:uppercase;letter-spacing:1px}
+.ans-actions{margin-top:1rem}
+
 /* Responsive */
 @media(max-width:640px){
   .q-grid{grid-template-columns:1fr}
@@ -205,17 +219,7 @@ textarea::placeholder{color:var(--text-dim)}
 
   <div class="card" id="pracQuestion"></div>
 
-  <div>
-    <div class="ans-head">
-      <label for="answerInput">Your Answer</label>
-      <span class="wc" id="wordCount">0 words</span>
-    </div>
-    <textarea id="answerInput" placeholder="Type your answer here..." rows="10"></textarea>
-    <div class="ans-actions">
-      <button class="btn-mark" onclick="App.markAnswer()">Mark My Answer</button>
-      <button class="btn-clear" onclick="App.clearAnswer()">Clear</button>
-    </div>
-  </div>
+  <div id="answerArea"></div>
 
   <div id="resultsSection" style="display:none"></div>
 </div>
@@ -245,10 +249,6 @@ const App = {
     this.renderQuestions();
     this.renderHistory();
     this.updateStreak();
-    document.getElementById('answerInput').addEventListener('input', function() {
-      const wc = this.value.trim() ? this.value.trim().split(/\s+/).length : 0;
-      document.getElementById('wordCount').textContent = wc + ' words';
-    });
   },
 
   escH(s) { return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); },
@@ -307,6 +307,105 @@ const App = {
     grid.innerHTML = html;
   },
 
+  // ─── PARTS EXTRACTION ─────────────────────────────
+  extractParts(text) {
+    const lines = text.replace(/\\n/g, '\n').split('\n');
+    const parts = [];
+    let current = null;
+    let nextIsOr = false;
+
+    for (const line of lines) {
+      const t = line.trim();
+      if (!t) continue;
+
+      const partMatch = t.match(/^\(([a-z])\)/i) || t.match(/^\(([ivx]+)\)/i);
+      if (partMatch) {
+        if (current) parts.push(current);
+        current = { label: '(' + partMatch[1] + ')', text: t, isOr: nextIsOr };
+        nextIsOr = false;
+      } else if (/^OR$/i.test(t)) {
+        nextIsOr = true;
+      } else if (/^Answer\s+\([a-z]\)\s+or\s+\([a-z]\)/i.test(t)) {
+        nextIsOr = true;
+      } else if (current && !current.isPreamble) {
+        current.text += '\n' + t;
+      } else {
+        if (current) parts.push(current);
+        current = { label: '', text: t, isOr: false, isPreamble: true };
+      }
+    }
+    if (current) parts.push(current);
+
+    const labeledParts = parts.filter(p => p.label);
+    if (labeledParts.length < 2) return null;
+    return parts;
+  },
+
+  renderAnswerArea(questionText) {
+    const area = document.getElementById('answerArea');
+    const parts = this.extractParts(questionText);
+
+    if (!parts) {
+      area.innerHTML =
+        '<div class="ans-part">' +
+          '<div class="ans-part-label"><span class="part-tag">Your Answer</span><span class="part-wc" id="wc-single">0 words</span></div>' +
+          '<textarea id="ans-single" placeholder="Type your answer here..." rows="10" oninput="App.updateWc(\'single\')"></textarea>' +
+        '</div>' +
+        '<div class="ans-actions">' +
+          '<button class="btn-mark" onclick="App.markAnswer()">Mark My Answer</button>' +
+          '<button class="btn-clear" onclick="App.clearAnswer()">Clear</button>' +
+        '</div>';
+      this.currentParts = null;
+      return;
+    }
+
+    let html = '';
+    const answerParts = [];
+
+    for (const part of parts) {
+      if (part.isPreamble) continue;
+
+      if (part.isOr) {
+        html += '<div class="or-divider"><div class="or-line"></div><span class="or-text">or — choose one</span><div class="or-line"></div></div>';
+      }
+
+      const pid = part.label.replace(/[()]/g, '');
+      answerParts.push(pid);
+
+      html += '<div class="ans-part">' +
+        '<div class="ans-part-label"><span class="part-tag">Part ' + this.escH(part.label) + '</span><span class="part-wc" id="wc-' + pid + '">0 words</span></div>' +
+        '<div class="ans-part-q">' + this.escH(part.text) + '</div>' +
+        '<textarea id="ans-' + pid + '" placeholder="Answer part ' + this.escH(part.label) + ' here..." rows="6" oninput="App.updateWc(\'' + pid + '\')"></textarea>' +
+        '</div>';
+    }
+
+    html += '<div class="ans-actions">' +
+      '<button class="btn-mark" onclick="App.markAnswer()">Mark My Answer</button>' +
+      '<button class="btn-clear" onclick="App.clearAnswer()">Clear</button>' +
+    '</div>';
+
+    area.innerHTML = html;
+    this.currentParts = answerParts;
+  },
+
+  updateWc(pid) {
+    const ta = document.getElementById('ans-' + pid);
+    const wc = ta && ta.value.trim() ? ta.value.trim().split(/\s+/).length : 0;
+    const el = document.getElementById('wc-' + pid);
+    if (el) el.textContent = wc + ' words';
+  },
+
+  getFullAnswer() {
+    if (!this.currentParts) {
+      const ta = document.getElementById('ans-single');
+      return ta ? ta.value : '';
+    }
+    return this.currentParts.map(pid => {
+      const ta = document.getElementById('ans-' + pid);
+      return ta ? ta.value : '';
+    }).filter(v => v.trim()).join('\n\n');
+  },
+
   // ─── PRACTICE ────────────────────────────────────
   startPractice(year, num) {
     const entries = WALKTHROUGHS_ECONOMICS[year];
@@ -316,17 +415,21 @@ const App = {
     this.currentQ = { year, num, entry };
     document.getElementById('pracTitle').textContent = year + ' — ' + entry.label;
     document.getElementById('pracQuestion').innerHTML = this.fmtQuestion(entry.q);
-    document.getElementById('answerInput').value = '';
-    document.getElementById('wordCount').textContent = '0 words';
+    this.renderAnswerArea(entry.q);
     document.getElementById('resultsSection').style.display = 'none';
     this.showView('practice');
-    setTimeout(() => document.getElementById('answerInput').focus(), 100);
+    const firstTa = document.querySelector('#answerArea textarea');
+    if (firstTa) setTimeout(() => firstTa.focus(), 100);
   },
 
   markAnswer() {
     if (!this.currentQ) return;
-    const answer = document.getElementById('answerInput').value;
-    if (!answer.trim()) { document.getElementById('answerInput').focus(); return; }
+    const answer = this.getFullAnswer();
+    if (!answer.trim()) {
+      const firstTa = document.querySelector('#answerArea textarea');
+      if (firstTa) firstTa.focus();
+      return;
+    }
 
     const { year, num, entry } = this.currentQ;
     const markingData = ECON_MARKING[year] && ECON_MARKING[year][num];
@@ -346,10 +449,11 @@ const App = {
   },
 
   clearAnswer() {
-    document.getElementById('answerInput').value = '';
-    document.getElementById('wordCount').textContent = '0 words';
+    document.querySelectorAll('#answerArea textarea').forEach(ta => { ta.value = ''; });
+    document.querySelectorAll('[id^="wc-"]').forEach(el => { el.textContent = '0 words'; });
     document.getElementById('resultsSection').style.display = 'none';
-    document.getElementById('answerInput').focus();
+    const firstTa = document.querySelector('#answerArea textarea');
+    if (firstTa) firstTa.focus();
     window.scrollTo({ top: 0, behavior: 'smooth' });
   },
 
