@@ -290,7 +290,9 @@ const App = {
     const qStarts = [];
     for (let i = 0; i < lines.length; i++) {
       const t = lines[i].trim();
-      const m = t.match(/^(\d{1,2})\.\s+(.+)/);
+      if (/^\d+\s*\|\s*Page/i.test(t)) continue;
+      if (/^Page\s+\d/i.test(t)) continue;
+      const m = t.match(/^(\d{1,2})\.\s+(.{5,})/);
       if (m) {
         const num = parseInt(m[1]);
         if (num >= 1 && num <= 16 && !qStarts.find(q => q.num === num)) {
@@ -306,6 +308,10 @@ const App = {
 
       let qText = qLines.join('\n')
         .replace(/_{3,}/g, '')
+        .replace(/\d+\s*\|\s*Page/gi, '')
+        .replace(/^Page\s+\d+.*$/gm, '')
+        .replace(/SECTION\s+[AB].*$/gm, '')
+        .replace(/Answer\s+six\s+of.*$/gm, '')
         .replace(/\n{3,}/g, '\n\n')
         .trim();
 
@@ -339,20 +345,26 @@ const App = {
 
     for (let i = 0; i < lines.length; i++) {
       const t = lines[i].trim();
-      const qMatch = t.match(/^(?:Q(?:uestion)?\.?\s*)?(\d{1,2})[\.\s\)]/);
+      if (!t) { if (capturing) captured.push(''); continue; }
+      if (/^\d+\s*\|\s*Page/i.test(t)) continue;
+      if (/^Page\s+\d/i.test(t)) continue;
+
+      const qMatch = t.match(/^(\d{1,2})\.\s+\S/);
       if (qMatch) {
         const n = parseInt(qMatch[1]);
-        if (n === qNum) {
+        if (n === qNum && !capturing) {
           capturing = true;
           captured.push(t);
           continue;
         }
-        if (capturing && n === nextQNum) break;
+        if (capturing && n >= 1 && n <= 16 && n !== qNum) break;
       }
       if (capturing) captured.push(t);
     }
 
-    return captured.join('\n').trim();
+    let result = captured.join('\n').replace(/\n{3,}/g, '\n\n').trim();
+    if (result.length < 20) result = '';
+    return result;
   },
 
   guessTopicFromText(text) {
