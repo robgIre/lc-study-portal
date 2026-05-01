@@ -158,15 +158,15 @@
 <script src="js/shared.js"></script>
 <script src="js/biology_walkthroughs.js"></script>
 <script src="js/marking-engine.js"></script>
+<script src="js/biology_practice_data.js"></script>
 <script>
-var BIO_MARKING = {};
 
 const App = {
   currentQ: null,
   currentParts: null,
   subject: 'biology',
   walkthroughs: typeof WALKTHROUGHS_BIOLOGY !== 'undefined' ? WALKTHROUGHS_BIOLOGY : {},
-  marking: BIO_MARKING,
+  marking: typeof BIO_MARKING !== 'undefined' ? BIO_MARKING : {},
   storageKey: 'lcs_bio_practice',
 
   init() {
