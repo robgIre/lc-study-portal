@@ -182,7 +182,7 @@ const App = {
 
   getEntriesForYear(year) {
     if (!this.walkthroughs[year]) return [];
-    return this.walkthroughs[year].filter(e => e.q && !e.q.startsWith('Section ') && !e.q.startsWith('Key concepts'));
+    return this.walkthroughs[year].filter(e => e.q && !e.q.startsWith('Key concepts') && !/^Section [A-C] question/i.test(e.q));
   },
 
   getSectionForNum(num) {
