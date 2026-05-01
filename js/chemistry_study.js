@@ -1,125 +1,55 @@
 var STUDY_CHEMISTRY = [
-  {
+{
     topic: "Atomic Structure",
     icon: "⚛️",
     subtopics: [
       {
-        title: "Dalton's Atomic Theory",
-        content: "Dalton proposed that all matter is made of indivisible atoms. Atoms of the same element are identical in mass and properties. Atoms of different elements combine in simple whole-number ratios to form compounds.\nDalton's theory was later modified when subatomic particles (protons, neutrons, electrons) were discovered. His key contribution was establishing the atom as the fundamental unit of matter.",
-        keyTerms: ["atom", "element", "compound", "indivisible"],
-        formula: null,
-        examTip: "Know the limitations of Dalton's theory — atoms ARE divisible (subatomic particles exist) and isotopes show atoms of the same element can differ in mass."
+        title: "Development of Atomic Theory",
+        content: "The concept of the atom has evolved dramatically over centuries, beginning with the ancient Greek philosopher Democritus who first proposed that matter was made of indivisible particles called 'atomos'.\nJohn Dalton (1808) put forward the first scientific atomic theory, proposing that all matter is made of tiny indivisible atoms, that atoms of the same element are identical in mass and properties, that atoms of different elements differ in mass and properties, that atoms combine in simple whole-number ratios to form compounds, and that atoms cannot be created or destroyed in chemical reactions.\nJ.J. Thomson (1897) discovered the electron using cathode ray tubes and proposed the 'plum pudding' model, where negatively charged electrons were embedded in a sphere of positive charge, like raisins in a pudding.\nErnest Rutherford (1911) conducted the famous gold foil experiment, firing alpha particles at thin gold foil. Most particles passed straight through, a few were deflected at large angles, and very rarely one bounced back. This led him to propose the nuclear model: the atom has a tiny, dense, positively charged nucleus at its centre, with electrons orbiting around it in mostly empty space.\nNiels Bohr (1913) refined Rutherford's model by proposing that electrons orbit the nucleus in fixed energy levels (shells), not at random distances. Electrons can only exist in these specific orbits and must absorb or emit a precise quantum of energy to jump between levels. This successfully explained the hydrogen emission spectrum — each coloured line corresponds to an electron dropping from a higher to a lower energy level, releasing a photon of a specific wavelength.\nThe modern quantum mechanical model (Schrödinger, Heisenberg, 1920s onwards) replaced fixed orbits with orbitals — three-dimensional regions of space where there is a high probability (about 90%) of finding an electron. Electrons do not follow defined paths; instead their behaviour is described by wave functions and probability distributions.\nKey subatomic particles: protons (charge +1, mass 1 u, in nucleus), neutrons (charge 0, mass 1 u, in nucleus), electrons (charge −1, mass 1/1836 u, in orbitals around nucleus). The atomic number (Z) equals the number of protons and defines the element. The mass number (A) equals protons + neutrons. Isotopes are atoms of the same element with the same atomic number but different mass numbers (different number of neutrons).\nRelative atomic mass (Ar) is the weighted average of the masses of all naturally occurring isotopes of an element, measured on a scale where carbon-12 is exactly 12. For example, chlorine has two isotopes: ³⁵Cl (75%) and ³⁷Cl (25%), giving Ar = (35 × 0.75) + (37 × 0.25) = 35.5.",
+        keyTerms: ["Atom", "Proton", "Neutron", "Electron", "Atomic number", "Mass number", "Isotope", "Relative atomic mass", "Plum pudding model", "Nuclear model", "Bohr model", "Quantum mechanical model"],
+        formula: "Ar = Σ(isotope mass × fractional abundance)\nMass number (A) = protons + neutrons\nAtomic number (Z) = number of protons",
+        examTip: "Exam questions frequently ask you to describe the contributions of Dalton, Thomson, Rutherford, and Bohr in sequence. Know the key experiment for each (especially Rutherford's gold foil) and what conclusion was drawn. Isotope Ar calculations appear nearly every year — always show the weighted average working clearly."
       },
       {
-        title: "Thomson's Plum Pudding Model",
-        content: "Thomson discovered the electron using cathode ray tubes (1897). He proposed the 'plum pudding' model: a sphere of positive charge with electrons embedded throughout, like plums in a pudding.\nThomson showed cathode rays were deflected by electric and magnetic fields, proving they were negatively charged particles. He calculated the charge-to-mass ratio (e/m) of the electron.",
-        keyTerms: ["cathode rays", "electron", "plum pudding model", "charge-to-mass ratio"],
-        formula: null,
-        examTip: "A common exam question asks you to describe the cathode ray experiment and what it proved. Always mention deflection by electric/magnetic fields."
+        title: "Electron Configuration and Energy Levels",
+        content: "Electrons are arranged around the nucleus in principal energy levels (shells) numbered n = 1, 2, 3, 4, etc. Each principal energy level can hold a maximum of 2n² electrons: the first shell holds 2, the second holds 8, the third holds 18, and the fourth holds 32.\nWithin each principal energy level, electrons occupy sublevels (subshells): s, p, d, and f. An s sublevel contains 1 orbital and holds up to 2 electrons. A p sublevel contains 3 orbitals and holds up to 6 electrons. A d sublevel contains 5 orbitals and holds up to 10 electrons. An f sublevel contains 7 orbitals and holds up to 14 electrons.\nAn orbital is a region of space where there is a high probability of finding an electron. Each orbital can hold a maximum of 2 electrons, which must have opposite spins (Pauli Exclusion Principle). The s orbital is spherical. The three p orbitals are dumbbell-shaped and oriented along the x, y, and z axes.\nThe Aufbau Principle states that electrons fill orbitals in order of increasing energy: 1s, 2s, 2p, 3s, 3p, 4s, 3d, 4p, 5s, 4d, 5p... Note that 4s fills before 3d because it is lower in energy.\nHund's Rule states that when filling orbitals of equal energy (degenerate orbitals), electrons occupy them singly first with parallel spins before pairing up. For example, in the 2p sublevel with 3 electrons, each of the three p orbitals gets one electron before any pairing occurs.\nExample electron configurations: sodium (Z=11) is 1s² 2s² 2p⁶ 3s¹; iron (Z=26) is 1s² 2s² 2p⁶ 3s² 3p⁶ 3d⁶ 4s² (but note exceptions like chromium 1s² 2s² 2p⁶ 3s² 3p⁶ 3d⁵ 4s¹ and copper 1s² 2s² 2p⁶ 3s² 3p⁶ 3d¹⁰ 4s¹ — half-filled and fully filled d sublevels are extra stable).\nHeisenberg's Uncertainty Principle states that it is impossible to simultaneously know both the exact position and the exact momentum of an electron. This is why we use probability-based orbitals rather than fixed orbits.\nThe emission spectrum of an element is produced when excited electrons fall back to lower energy levels, emitting photons of specific frequencies. Each element has a unique line spectrum, which acts like a fingerprint. The energy of the emitted photon equals the energy gap between the two levels: E = hf, where h is Planck's constant (6.626 × 10⁻³⁴ J s) and f is the frequency.\nConvergence of spectral lines at high frequency indicates that energy levels get closer together further from the nucleus, eventually converging at the ionisation energy — the minimum energy needed to remove the most loosely bound electron from a gaseous atom in its ground state.",
+        keyTerms: ["Principal energy level", "Sublevel", "Orbital", "Aufbau Principle", "Pauli Exclusion Principle", "Hund's Rule", "Electron configuration", "Heisenberg Uncertainty Principle", "Emission spectrum", "Ionisation energy", "Ground state", "Excited state"],
+        formula: "Max electrons per shell = 2n²\nE = hf (energy of photon)\nc = fλ (speed of light = frequency × wavelength)\nh = 6.626 × 10⁻³⁴ J s, c = 3.0 × 10⁸ m/s",
+        examTip: "Writing electron configurations is worth easy marks — practise writing them for elements 1–36. Remember the 4s/3d crossover and the chromium/copper exceptions. When asked about emission spectra, always link 'electron drops from higher to lower energy level' → 'photon emitted' → 'specific frequency/colour'."
       },
       {
-        title: "Rutherford's Nuclear Model",
-        content: "Rutherford fired alpha particles at thin gold foil (Geiger-Marsden experiment). Most passed straight through, some deflected, and a very few bounced back.\nThis proved the atom is mostly empty space with a small, dense, positively charged nucleus. Electrons orbit the nucleus at a distance. This replaced the plum pudding model.",
-        keyTerms: ["alpha particles", "gold foil", "nucleus", "empty space", "deflection"],
-        formula: null,
-        examTip: "You must be able to explain EACH observation: most pass through (empty space), some deflect (positive nucleus repels), few bounce back (nucleus is dense and small)."
-      },
-      {
-        title: "Bohr Model",
-        content: "Bohr proposed that electrons orbit the nucleus in fixed energy levels (shells), not just anywhere. Electrons can jump between levels by absorbing or emitting specific quanta of energy.\nThis explained the line emission spectrum of hydrogen — each line corresponds to a specific electron transition. Ground state is the lowest energy level; excited state is any higher level.",
-        keyTerms: ["energy levels", "quanta", "ground state", "excited state", "line spectrum", "electron transition"],
-        formula: "E = hf (energy of a photon, where h = Planck's constant, f = frequency)",
-        examTip: "Be able to explain how line spectra provide evidence for energy levels. The exam often asks why the spectrum is lines (discrete) rather than continuous."
-      },
-      {
-        title: "Energy Levels and Sublevels",
-        content: "The principal energy levels are n = 1, 2, 3, 4... Each level contains sublevels: s, p, d, f. The s sublevel holds 2 electrons, p holds 6, d holds 10, f holds 14.\nThe order of filling follows the Aufbau principle: 1s, 2s, 2p, 3s, 3p, 4s, 3d, 4p... Note that 4s fills before 3d because it is lower in energy.",
-        keyTerms: ["principal energy level", "sublevel", "s orbital", "p orbital", "d orbital", "Aufbau principle"],
-        formula: "Max electrons per level = 2n²",
-        examTip: "The 4s fills before 3d but empties first when forming transition metal ions. This catches many students out — e.g. Fe is [Ar]3d⁶ 4s² but Fe²⁺ is [Ar]3d⁶."
-      },
-      {
-        title: "Orbitals and Shapes",
-        content: "An orbital is a region of space where there is a high probability of finding an electron. An s orbital is spherical; p orbitals are dumbbell-shaped along the x, y, and z axes.\nEach orbital holds a maximum of 2 electrons with opposite spins (Pauli exclusion principle). Hund's rule states electrons fill orbitals of equal energy singly before pairing.",
-        keyTerms: ["orbital", "Pauli exclusion principle", "Hund's rule", "spin", "spherical", "dumbbell"],
-        formula: null,
-        examTip: "Draw orbital diagrams using boxes and arrows. Remember: electrons in the same orbital must have opposite spins (one up, one down arrow)."
-      },
-      {
-        title: "Electron Configuration",
-        content: "Write electron configurations using the notation: 1s² 2s² 2p⁶ 3s² 3p⁶ etc. Follow Aufbau, Pauli, and Hund's rules.\nExamples: Na (11) = 1s² 2s² 2p⁶ 3s¹. Cl (17) = 1s² 2s² 2p⁶ 3s² 3p⁵. Fe (26) = 1s² 2s² 2p⁶ 3s² 3p⁶ 3d⁶ 4s². Chromium and copper are exceptions: Cr = [Ar]3d⁵ 4s¹, Cu = [Ar]3d¹⁰ 4s¹.",
-        keyTerms: ["electron configuration", "noble gas core", "chromium exception", "copper exception"],
-        formula: null,
-        examTip: "Cr and Cu are common exam exceptions — half-filled and fully filled d sublevels are extra stable. Always write configurations for ions by removing 4s electrons first."
-      },
-      {
-        title: "Heisenberg Uncertainty Principle",
-        content: "It is impossible to simultaneously know both the exact position and exact momentum of an electron. The more precisely one is known, the less precisely the other can be determined.\nThis is why we use probability (orbitals) rather than fixed orbits. It replaced Bohr's model of electrons in definite circular paths with the quantum mechanical model.",
-        keyTerms: ["uncertainty principle", "position", "momentum", "probability", "quantum mechanical model"],
-        formula: "Δx × Δp ≥ h/4π",
-        examTip: "This is a short-answer definition question. State that you cannot know both position and momentum of an electron simultaneously — that's worth the marks."
+        title: "Radioactivity and Nuclear Chemistry",
+        content: "Radioactivity is the spontaneous disintegration of unstable nuclei, emitting radiation to become more stable. There are three main types of radiation: alpha (α), beta (β), and gamma (γ).\nAlpha particles consist of 2 protons and 2 neutrons (a helium-4 nucleus, ⁴₂He). They have a charge of +2, a large mass, travel a few centimetres in air, and are stopped by a sheet of paper. They cause the most ionisation per unit distance but have the lowest penetrating power. In alpha decay, the mass number decreases by 4 and the atomic number decreases by 2.\nBeta particles are high-speed electrons (⁰₋₁e) emitted when a neutron converts to a proton in the nucleus. They have a charge of −1, a very small mass, travel several metres in air, and are stopped by a few millimetres of aluminium. They cause moderate ionisation. In beta decay, the mass number stays the same but the atomic number increases by 1.\nGamma rays are high-energy electromagnetic radiation with no mass and no charge. They are highly penetrating (require several centimetres of lead or metres of concrete to stop) but cause the least ionisation per unit distance. Gamma emission often accompanies alpha or beta decay as the nucleus releases excess energy.\nHalf-life (t₁/₂) is the time taken for half of the radioactive atoms in a sample to decay, or equivalently, the time for the activity of a sample to fall to half its original value. Half-life is constant for a given isotope and is unaffected by temperature, pressure, or chemical combination.\nNuclear fission is the splitting of a heavy nucleus (e.g., uranium-235) into two lighter nuclei plus neutrons and a large amount of energy, triggered by neutron bombardment. This is the basis of nuclear power plants and atomic bombs. A chain reaction occurs when the neutrons released cause further fission events.\nNuclear fusion is the joining of two light nuclei (e.g., hydrogen isotopes deuterium and tritium) to form a heavier nucleus, releasing enormous energy. This powers the sun and stars. Fusion requires extremely high temperatures (millions of degrees) to overcome electrostatic repulsion between positively charged nuclei.\nUses of radioisotopes: carbon-14 dating (t₁/₂ = 5730 years), cobalt-60 (cancer treatment), technetium-99m (medical imaging), americium-241 (smoke detectors).",
+        keyTerms: ["Radioactivity", "Alpha particle", "Beta particle", "Gamma ray", "Half-life", "Nuclear fission", "Nuclear fusion", "Chain reaction", "Isotope", "Decay", "Activity", "Ionisation"],
+        formula: "N = N₀ × (1/2)^(t/t₁/₂)\nwhere N = remaining amount, N₀ = initial amount, t = time elapsed, t₁/₂ = half-life",
+        examTip: "Half-life calculations are very common — practise using the formula and the 'halving' table method. Know the properties of α, β, γ radiation (charge, mass, penetration, ionisation) as a comparison table. Be able to write balanced nuclear equations showing conservation of mass number and atomic number."
       }
     ]
   },
   {
     topic: "The Periodic Table",
-    icon: "🗂️",
+    icon: "📋",
     subtopics: [
       {
-        title: "History — Mendeleev",
-        content: "Mendeleev arranged elements by increasing atomic mass and grouped elements with similar properties together. He left gaps for undiscovered elements and predicted their properties (e.g. germanium).\nThe modern periodic table arranges elements by increasing atomic number (Moseley). Mendeleev's genius was in leaving gaps — when the predicted elements were found with matching properties, this validated his table.",
-        keyTerms: ["Mendeleev", "atomic mass", "atomic number", "Moseley", "predicted elements", "germanium"],
-        formula: null,
-        examTip: "The exam often asks why Mendeleev is considered the father of the periodic table — emphasise his predictions and willingness to leave gaps and swap element order."
+        title: "Organisation and History of the Periodic Table",
+        content: "The Periodic Table arranges elements in order of increasing atomic number. Elements in the same vertical column (group) have the same number of electrons in their outermost shell and therefore similar chemical properties. Elements in the same horizontal row (period) have the same number of occupied electron shells.\nDmitri Mendeleev (1869) produced the most significant early periodic table by arranging elements in order of increasing atomic mass. He left gaps for undiscovered elements and predicted their properties with remarkable accuracy (e.g., eka-silicon was later discovered as germanium). He also swapped the positions of some elements (e.g., tellurium and iodine) where the properties did not fit, prioritising chemical behaviour over atomic mass.\nHenry Moseley (1913) determined that the fundamental property for ordering elements is atomic number (number of protons), not atomic mass. This resolved anomalies in Mendeleev's table and is the basis of the modern periodic table.\nThe table is divided into blocks based on the sublevel being filled: the s-block (Groups 1 and 2 plus helium), the p-block (Groups 13–18), the d-block (transition metals, Groups 3–12), and the f-block (lanthanides and actinides, shown separately at the bottom).\nGroup 1 elements (alkali metals: Li, Na, K, Rb, Cs, Fr) have one electron in their outer shell. They are soft, highly reactive metals that react vigorously with water to produce hydrogen gas and an alkaline solution. Reactivity increases down the group because the outer electron is further from the nucleus and more easily lost.\nGroup 7/17 elements (halogens: F, Cl, Br, I, At) have seven electrons in their outer shell and need one more to achieve a full outer shell. They are reactive non-metals that exist as diatomic molecules (F₂, Cl₂, etc.). Reactivity decreases down the group because the incoming electron is added further from the nucleus and the attraction is weaker.\nGroup 0/18 elements (noble gases: He, Ne, Ar, Kr, Xe, Rn) have full outer electron shells and are therefore very stable and unreactive. They exist as monatomic gases. Their inertness makes them useful in lighting (neon signs), welding (argon shielding), and deep-sea diving (helium-oxygen mixtures).\nMetals are found on the left and centre of the periodic table; non-metals on the right. Metalloids (e.g., silicon, germanium) lie along the staircase line and have intermediate properties — they are semiconductors, crucial for electronics.",
+        keyTerms: ["Periodic Table", "Group", "Period", "Block", "Mendeleev", "Moseley", "Alkali metals", "Halogens", "Noble gases", "Transition metals", "Metalloid", "Semiconductor"],
+        formula: "Group number = number of outer shell electrons (for main group elements)\nPeriod number = number of occupied electron shells",
+        examTip: "Know Mendeleev's contribution — especially that he left gaps and predicted properties of undiscovered elements. This is frequently examined. Be clear on the difference between groups (vertical, similar properties) and periods (horizontal, same number of shells)."
       },
       {
-        title: "Atomic Radius Trend",
-        content: "Atomic radius DECREASES across a period (left to right) because the nuclear charge increases, pulling electrons closer, while shielding stays roughly constant.\nAtomic radius INCREASES down a group because extra electron shells are added, increasing the distance from the nucleus despite increasing nuclear charge.",
-        keyTerms: ["atomic radius", "nuclear charge", "shielding", "electron shells"],
-        formula: null,
-        examTip: "When explaining trends, always use both factors: nuclear charge AND shielding. Saying only one will lose marks."
+        title: "Periodic Trends: Atomic Radius, Ionisation Energy, and Electronegativity",
+        content: "Atomic radius generally decreases across a period from left to right. This is because each successive element has one more proton in the nucleus and one more electron in the same shell. The increased nuclear charge pulls the electron cloud closer to the nucleus, reducing the atomic radius. For example, sodium has a larger atomic radius than chlorine even though chlorine has more electrons, because chlorine's greater nuclear charge (17 vs 11 protons) pulls its outer electrons in more tightly.\nAtomic radius increases down a group. Each successive element has an additional principal energy level (shell), placing the outer electrons further from the nucleus. Although nuclear charge also increases, the effect of extra shielding from inner electron shells outweighs this, and the outer electrons are held less tightly.\nFirst ionisation energy is the minimum energy required to remove the most loosely bound electron from one mole of gaseous atoms in their ground state: X(g) → X⁺(g) + e⁻. First ionisation energy generally increases across a period because nuclear charge increases while shielding remains roughly constant, so outer electrons are held more tightly. There are two notable dips: between Group 2 and Group 3 (the 3p electron in Al is easier to remove than the 3s electron in Mg because p electrons are higher in energy and slightly shielded by the s electrons), and between Group 5 and Group 6 (in oxygen, the first paired electron in the 2p sublevel experiences extra repulsion, making it easier to remove than the unpaired 2p electrons in nitrogen).\nFirst ionisation energy decreases down a group because the outer electron is further from the nucleus with more shielding, so less energy is needed to remove it. Successive ionisation energies increase progressively as each removal leaves a more positively charged ion, holding the remaining electrons more tightly. A large jump in successive ionisation energies indicates removal of an electron from an inner shell (closer to the nucleus with less shielding).\nElectronegativity is the relative attraction an atom in a molecule has for the shared pair of electrons in a covalent bond (Pauling scale). Electronegativity increases across a period (greater nuclear charge attracts bonding electrons more strongly) and decreases down a group (outer electrons are further from the nucleus with more shielding). Fluorine is the most electronegative element (3.98 on the Pauling scale). Noble gases are generally not assigned electronegativity values as they do not typically form bonds.\nElectron affinity is the energy change when one mole of gaseous atoms each gains one electron: X(g) + e⁻ → X⁻(g). A more negative electron affinity means the atom more readily accepts an electron. The halogens have large negative electron affinities because gaining one electron gives them a stable full outer shell.\nThese trends are interlinked: small atomic radius correlates with high ionisation energy, high electronegativity, and large electron affinity. The three underlying factors — nuclear charge, shielding, and distance — explain every trend.",
+        keyTerms: ["Atomic radius", "Ionisation energy", "Electronegativity", "Electron affinity", "Nuclear charge", "Shielding", "Effective nuclear charge", "Pauling scale", "Successive ionisation energies"],
+        formula: "First ionisation energy: X(g) → X⁺(g) + e⁻\nElectron affinity: X(g) + e⁻ → X⁻(g)\nEffective nuclear charge ≈ Z − number of inner (shielding) electrons",
+        examTip: "Trend questions are guaranteed on the LC paper. Always explain the trend using three factors: nuclear charge, shielding/screening, and distance from nucleus. For ionisation energy dips across a period (Be→B and N→O), know the sublevel explanations. Successive ionisation energy data can reveal the group number of an element — look for the big jump."
       },
       {
-        title: "Ionisation Energy Trend",
-        content: "First ionisation energy is the minimum energy required to remove the most loosely bound electron from a neutral gaseous atom. It INCREASES across a period and DECREASES down a group.\nAcross a period: increased nuclear charge holds electrons more tightly. Down a group: more shells mean greater distance and more shielding, so outer electrons are easier to remove.",
-        keyTerms: ["ionisation energy", "gaseous atom", "nuclear charge", "shielding", "first ionisation energy"],
-        formula: "X(g) → X⁺(g) + e⁻ (definition equation)",
-        examTip: "You must write the definition with 'gaseous' and 'neutral atom'. The exam penalises missing the word 'gaseous'. Know the anomalies: Be > B and N > O due to sublevel stability."
-      },
-      {
-        title: "Electronegativity Trend",
-        content: "Electronegativity is the relative attraction that an atom in a molecule has for the shared pair of electrons in a covalent bond. It INCREASES across a period and DECREASES down a group.\nFluorine is the most electronegative element. The difference in electronegativity between two bonded atoms determines bond polarity. Large differences lead to ionic character.",
-        keyTerms: ["electronegativity", "Pauling scale", "fluorine", "bond polarity", "shared pair"],
-        formula: null,
-        examTip: "The definition must include 'atom in a molecule' and 'shared pair of electrons in a covalent bond'. Noble gases have no electronegativity value (they don't form bonds normally)."
-      },
-      {
-        title: "Electron Affinity",
-        content: "Electron affinity is the energy change when an electron is added to a neutral gaseous atom to form a negative ion. First electron affinities are generally exothermic (energy released).\nIt generally increases across a period and decreases down a group, following similar reasoning to ionisation energy trends. Group 7 elements have the highest electron affinities.",
-        keyTerms: ["electron affinity", "exothermic", "gaseous atom", "negative ion"],
-        formula: "X(g) + e⁻ → X⁻(g)",
-        examTip: "Second electron affinity is always endothermic — energy is needed to overcome the repulsion of adding an electron to an already negative ion."
-      },
-      {
-        title: "Alkali Metals (Group 1)",
-        content: "Alkali metals have one electron in their outer shell, making them very reactive. Reactivity INCREASES down the group because the outer electron is further from the nucleus and easier to remove.\nThey form +1 ions, react vigorously with water to produce hydrogen gas and an alkali (MOH), and have low melting points that decrease down the group. They are stored under oil to prevent reaction with air/moisture.",
-        keyTerms: ["alkali metals", "reactivity", "+1 ion", "low melting point", "stored under oil"],
-        formula: "2Na + 2H₂O → 2NaOH + H₂",
-        examTip: "Know the flame colours: Li = red, Na = yellow, K = lilac. The water reaction gets more vigorous down the group — Li fizzes, Na melts into a ball, K catches fire."
-      },
-      {
-        title: "Halogens (Group 7)",
-        content: "Halogens have 7 outer electrons and need one more to achieve a full shell. Reactivity DECREASES down the group because the atoms get larger and it's harder to attract an extra electron.\nA more reactive halogen displaces a less reactive one from its salt (e.g. Cl₂ displaces Br⁻ from KBr solution). States at room temperature: F₂ = pale yellow gas, Cl₂ = green-yellow gas, Br₂ = red-brown liquid, I₂ = grey-black solid.",
-        keyTerms: ["halogens", "displacement", "diatomic", "reactivity decreases"],
-        formula: "Cl₂ + 2KBr → 2KCl + Br₂",
-        examTip: "Halogen displacement reactions are a favourite exam question. Always state the colour change observed as evidence the reaction occurred."
-      },
-      {
-        title: "Transition Metals",
-        content: "Transition metals have partially filled d orbitals. They form coloured compounds, have variable oxidation states, act as catalysts, and form complex ions.\nExamples: Fe²⁺ (green) and Fe³⁺ (yellow/brown), Cu²⁺ (blue), MnO₄⁻ (purple). They have high melting points, high density, and are good conductors of heat and electricity.",
-        keyTerms: ["d orbital", "variable oxidation state", "coloured compounds", "catalyst", "complex ion"],
-        formula: null,
-        examTip: "Define a transition metal as an element that forms at least one stable ion with a partially filled d sublevel. Zinc is NOT a transition metal (Zn²⁺ has a full d¹⁰)."
+        title: "Transition Metals and the d-Block",
+        content: "Transition metals are d-block elements that form at least one stable ion with a partially filled d sublevel. This definition excludes scandium (Sc³⁺ has no d electrons: 3d⁰) and zinc (Zn²⁺ has a full d sublevel: 3d¹⁰) from being true transition metals, though they are d-block elements.\nCharacteristic properties of transition metals include: variable oxidation states (e.g., iron can be Fe²⁺ or Fe³⁺, manganese ranges from +2 to +7), formation of coloured compounds and ions (due to d-d electron transitions when light is absorbed), catalytic activity (e.g., iron in the Haber process, vanadium(V) oxide in the Contact process, manganese dioxide in decomposing hydrogen peroxide), and formation of complex ions.\nA complex ion consists of a central transition metal ion surrounded by ligands. A ligand is a molecule or ion that donates a lone pair of electrons to the central metal ion, forming a coordinate (dative covalent) bond. Common ligands include H₂O (neutral), NH₃ (neutral), Cl⁻, CN⁻, and OH⁻. The coordination number is the total number of coordinate bonds formed with the central ion.\nThe colour of transition metal complexes arises because the d orbitals split into two groups of different energy when surrounded by ligands. When visible light passes through, electrons absorb photons of specific energies and jump from lower to higher d orbitals. The colour we see is the complementary colour to the one absorbed. Different ligands cause different amounts of splitting, so changing the ligand changes the colour.\nVariable oxidation states occur because the 3d and 4s electrons are close in energy, so different numbers of electrons can be lost or shared in bonding. For example, iron loses its two 4s electrons to form Fe²⁺ (green compounds) and can also lose a 3d electron to form Fe³⁺ (yellow/brown compounds).\nTransition metals and their compounds act as catalysts because they can change oxidation state, providing an alternative reaction pathway with lower activation energy. They can also adsorb reactants onto their surface, bringing them into close proximity and weakening bonds.\nTransition metals have high melting points, high densities, and are hard and strong compared to s-block metals because metallic bonding is stronger — more electrons are available for delocalisation from both 4s and 3d orbitals.",
+        keyTerms: ["Transition metal", "Variable oxidation state", "Complex ion", "Ligand", "Coordinate bond", "Coordination number", "d-d transition", "Catalyst", "Complementary colour", "d-orbital splitting"],
+        formula: "Common oxidation states:\nFe: +2, +3 | Cu: +1, +2 | Mn: +2, +4, +7\nCr: +2, +3, +6 | Co: +2, +3 | Ni: +2",
+        examTip: "Know the definition of a transition metal (partially filled d sublevel in at least one stable ion) — this distinguishes them from general d-block elements. Be able to explain why they form coloured compounds (d-d transitions) and act as catalysts (variable oxidation states). Complex ion questions often ask you to identify the central ion, ligands, and coordination number."
       }
     ]
   },
@@ -129,59 +59,31 @@ var STUDY_CHEMISTRY = [
     subtopics: [
       {
         title: "Ionic Bonding",
-        content: "Ionic bonding involves the transfer of electrons from a metal to a non-metal, forming positive cations and negative anions. The electrostatic attraction between oppositely charged ions forms the ionic bond.\nIonic compounds form crystal lattices, have high melting/boiling points, conduct electricity when molten or dissolved (ions are free to move), and are generally soluble in water but insoluble in organic solvents.",
-        keyTerms: ["ionic bond", "electrostatic attraction", "cation", "anion", "crystal lattice", "electron transfer"],
-        formula: null,
-        examTip: "Always say 'electrostatic attraction between oppositely charged ions'. Don't just say 'transfer of electrons' — the bond is the attraction, not the transfer itself."
+        content: "Ionic bonding involves the transfer of one or more electrons from a metal atom to a non-metal atom, forming oppositely charged ions that are held together by strong electrostatic forces of attraction. The metal atom loses electrons to form a positive ion (cation) with a stable noble gas electron configuration, while the non-metal atom gains electrons to form a negative ion (anion) with a stable noble gas configuration.\nFor example, in sodium chloride (NaCl), sodium (2,8,1) loses one electron to become Na⁺ (2,8), and chlorine (2,8,7) gains one electron to become Cl⁻ (2,8,8). Both ions now have the electron configuration of a noble gas (neon and argon respectively). In magnesium oxide (MgO), magnesium loses two electrons to form Mg²⁺ and oxygen gains two electrons to form O²⁻.\nIonic compounds form giant ionic lattices — three-dimensional structures where each ion is surrounded by ions of the opposite charge. In NaCl, each Na⁺ is surrounded by 6 Cl⁻ ions and vice versa (coordination number 6). The lattice is held together by strong electrostatic attractions acting in all directions.\nProperties of ionic compounds: they have high melting and boiling points because a large amount of energy is needed to overcome the strong electrostatic forces throughout the lattice. They are hard but brittle — when a force is applied, layers of ions shift, bringing like charges together, which causes repulsion and the crystal shatters. They do not conduct electricity when solid because the ions are fixed in position in the lattice and cannot move. However, they do conduct electricity when molten or dissolved in water because the ions are free to move and carry charge. Most ionic compounds are soluble in water (a polar solvent) because water molecules can surround and stabilise the individual ions (hydration), overcoming the lattice energy.\nLattice energy is the energy released when one mole of an ionic compound is formed from its gaseous ions. It is a measure of the strength of the ionic bond. Lattice energy increases with increasing charge on the ions and decreasing ionic radius, because smaller, more highly charged ions pack more closely and attract each other more strongly. For example, MgO has a much higher lattice energy than NaCl.\nElectron transfer can be demonstrated by heating sodium in chlorine gas — a bright yellow flame produces NaCl. The ionic nature is confirmed by dissolving in water and testing for electrical conductivity.",
+        keyTerms: ["Ionic bond", "Cation", "Anion", "Electron transfer", "Electrostatic attraction", "Ionic lattice", "Lattice energy", "Coordination number", "Hydration", "Brittle", "Conductivity"],
+        formula: "NaCl: Na → Na⁺ + e⁻ and Cl + e⁻ → Cl⁻\nMgO: Mg → Mg²⁺ + 2e⁻ and O + 2e⁻ → O²⁻\nLattice energy ∝ (q⁺ × q⁻) / (r⁺ + r⁻)",
+        examTip: "When drawing ionic bond diagrams, show the full electron transfer with square brackets around each ion and the charge written outside. Always state that the bond is due to 'electrostatic attraction between oppositely charged ions.' Know the properties of ionic compounds and be able to explain each one in terms of the structure."
       },
       {
-        title: "Covalent Bonding",
-        content: "A covalent bond is formed by the sharing of a pair of electrons between two atoms. Each atom contributes one electron to the shared pair. A single bond shares 1 pair, double shares 2 pairs, triple shares 3 pairs.\nCovalent compounds typically have low melting/boiling points (weak intermolecular forces), do not conduct electricity, and are often soluble in organic solvents but insoluble in water.",
-        keyTerms: ["covalent bond", "shared pair", "single bond", "double bond", "triple bond", "lone pair"],
-        formula: null,
-        examTip: "A co-ordinate (dative) bond is a covalent bond where BOTH electrons come from the same atom. Example: NH₄⁺ (the lone pair on N bonds to H⁺). Draw this with an arrow."
+        title: "Covalent Bonding and Molecular Shapes (VSEPR)",
+        content: "Covalent bonding involves the sharing of one or more pairs of electrons between two non-metal atoms so that each atom achieves a stable noble gas electron configuration. A single covalent bond involves one shared pair of electrons (e.g., H₂, H-H). A double bond involves two shared pairs (e.g., O₂, O=O). A triple bond involves three shared pairs (e.g., N₂, N≡N). The shared electrons are attracted to the nuclei of both atoms, holding the atoms together.\nA coordinate (dative covalent) bond is a special type of covalent bond where both electrons in the shared pair come from the same atom. The donating atom must have a lone pair of electrons. For example, in the ammonium ion (NH₄⁺), the nitrogen atom donates its lone pair to a hydrogen ion (H⁺). Once formed, a coordinate bond is identical to an ordinary covalent bond.\nCovalent compounds can exist as simple molecular structures (e.g., H₂O, CO₂, CH₄) or giant covalent (macromolecular) structures (e.g., diamond, graphite, silicon dioxide). Simple molecular substances have low melting and boiling points because only weak intermolecular forces (not the strong covalent bonds) need to be overcome to separate the molecules. Giant covalent substances have very high melting points because many strong covalent bonds must be broken.\nThe VSEPR (Valence Shell Electron Pair Repulsion) theory predicts molecular shapes. The principle is that electron pairs (both bonding pairs and lone pairs) around a central atom repel each other and arrange themselves as far apart as possible to minimise repulsion.\nFor molecules with no lone pairs on the central atom: 2 bonding pairs give a linear shape with a bond angle of 180° (e.g., CO₂, BeCl₂); 3 bonding pairs give a trigonal planar shape with bond angles of 120° (e.g., BF₃, AlCl₃); 4 bonding pairs give a tetrahedral shape with bond angles of 109.5° (e.g., CH₄, CCl₄); 5 bonding pairs give a trigonal bipyramidal shape (e.g., PCl₅); 6 bonding pairs give an octahedral shape with bond angles of 90° (e.g., SF₆).\nLone pairs repel more strongly than bonding pairs because they are held closer to the nucleus and occupy more space. This compresses the bond angles. With one lone pair and three bonding pairs, the shape is trigonal pyramidal with a bond angle of approximately 107° (e.g., NH₃). With two lone pairs and two bonding pairs, the shape is V-shaped (bent) with a bond angle of approximately 104.5° (e.g., H₂O).\nBond polarity arises when two atoms in a covalent bond have different electronegativities. The more electronegative atom attracts the shared electrons more strongly, creating a polar bond with partial charges (δ+ and δ−). A molecule may be polar overall or non-polar depending on its shape: if the bond dipoles cancel due to symmetry (e.g., CO₂ is linear and symmetrical), the molecule is non-polar. If the dipoles do not cancel (e.g., H₂O is bent, so the dipoles add up), the molecule is polar.",
+        keyTerms: ["Covalent bond", "Shared pair", "Single bond", "Double bond", "Triple bond", "Coordinate bond", "Lone pair", "VSEPR", "Linear", "Trigonal planar", "Tetrahedral", "Trigonal pyramidal", "V-shaped", "Bond polarity", "Dipole"],
+        formula: "Bond angles:\nLinear = 180° | Trigonal planar = 120° | Tetrahedral = 109.5°\nTrigonal pyramidal ≈ 107° | V-shaped/Bent ≈ 104.5°",
+        examTip: "VSEPR questions are extremely common. Always count the total number of electron pairs (bonding + lone) around the central atom. Draw the 3D shape, name it, and give the bond angle. Remember: lone pairs are NOT included in the shape name (tetrahedral electron arrangement with 1 lone pair = trigonal pyramidal shape). Know examples for each shape."
       },
       {
         title: "Metallic Bonding",
-        content: "Metallic bonding consists of a lattice of positive metal ions (cations) surrounded by a sea of delocalised electrons. The electrostatic attraction between the positive ions and the sea of electrons is the metallic bond.\nThis explains why metals conduct electricity (delocalised electrons move freely), are malleable and ductile (layers of ions can slide), and have high melting points (strong attraction).",
-        keyTerms: ["metallic bond", "delocalised electrons", "sea of electrons", "lattice", "cations"],
-        formula: null,
-        examTip: "The phrase 'sea of delocalised electrons' is essential. Explain conductivity, malleability, and high melting point in terms of this model for full marks."
+        content: "Metallic bonding is the electrostatic attraction between a lattice of positive metal ions (cations) and a 'sea' of delocalised electrons. In a metal, the outer shell electrons are not associated with any particular atom but are free to move throughout the entire structure. The metal atoms lose their outer electrons to become positive ions, which arrange in a regular lattice structure.\nThe strength of metallic bonding depends on the number of delocalised electrons per atom and the size of the metal cation. More delocalised electrons and smaller cations lead to stronger metallic bonding. For example, magnesium (Mg²⁺, 2 delocalised electrons) has a higher melting point than sodium (Na⁺, 1 delocalised electron) because magnesium contributes more electrons to the 'sea' and has a smaller, more highly charged ion, resulting in stronger electrostatic attraction.\nProperties of metals explained by metallic bonding: metals have high melting and boiling points because considerable energy is needed to overcome the strong electrostatic attractions between the positive ions and the sea of delocalised electrons. Transition metals generally have higher melting points than s-block metals because they can contribute d electrons as well as s electrons to the delocalised sea.\nMetals are good conductors of electricity because the delocalised electrons are free to move through the lattice and carry charge when a potential difference is applied. This is why metals are used for electrical wiring. Metals are also good conductors of heat because the delocalised electrons can transfer kinetic energy rapidly through the structure, and the closely packed ions can also transmit vibrations.\nMetals are malleable (can be hammered into shape) and ductile (can be drawn into wires) because the layers of positive ions can slide over each other without breaking the metallic bond — the delocalised electrons simply readjust around the ions in their new positions. This is in contrast to ionic compounds, where shifting layers brings like charges together and causes shattering.\nMetals are lustrous (shiny) because the delocalised electrons on the surface can absorb and re-emit light at many frequencies, giving a characteristic metallic sheen.\nAlloys are mixtures of two or more metals (or a metal and a non-metal). In an alloy, atoms of different sizes disrupt the regular lattice arrangement, making it harder for layers to slide over each other. This makes alloys harder and stronger than pure metals. Examples include steel (iron + carbon), brass (copper + zinc), and bronze (copper + tin).\nIn reality, many bonds have intermediate character — for example, aluminium oxide has significant covalent character despite being classified as ionic, due to the high charge density of Al³⁺ (Fajans' rules).",
+        keyTerms: ["Metallic bond", "Delocalised electrons", "Sea of electrons", "Cation lattice", "Malleable", "Ductile", "Conductor", "Alloy", "Lustre", "Electrostatic attraction"],
+        formula: "Strength of metallic bond ∝ (number of delocalised electrons × charge on cation) / (cationic radius)\nConduction: electrons carry charge under potential difference",
+        examTip: "Always describe metallic bonding as 'electrostatic attraction between positive metal ions and delocalised electrons' — do not just say 'sea of electrons.' When comparing metals, use the number of delocalised electrons and ionic radius to explain differences in melting points and hardness. Know why alloys are harder than pure metals."
       },
       {
-        title: "Intermolecular Forces — Van der Waals",
-        content: "Van der Waals forces are the weakest intermolecular forces, caused by temporary dipoles due to random movement of electrons. A temporary dipole in one molecule induces a dipole in a neighbouring molecule.\nVan der Waals forces increase with molecular size (more electrons = larger temporary dipoles). They explain why boiling points increase with molecular mass in non-polar molecules like the noble gases and alkanes.",
-        keyTerms: ["van der Waals", "temporary dipole", "induced dipole", "non-polar", "molecular size"],
-        formula: null,
-        examTip: "All molecules have van der Waals forces, including polar ones. Van der Waals are the ONLY forces between non-polar molecules like Br₂, CH₄, and noble gases."
-      },
-      {
-        title: "Intermolecular Forces — Dipole-Dipole",
-        content: "Dipole-dipole forces occur between polar molecules. The slightly positive end of one molecule attracts the slightly negative end of another. They are stronger than van der Waals forces.\nA molecule is polar if it has polar bonds AND an asymmetric shape. CO₂ is non-polar despite polar bonds (linear, dipoles cancel). H₂O is polar (bent shape, dipoles don't cancel).",
-        keyTerms: ["dipole-dipole", "polar molecule", "electronegativity difference", "permanent dipole"],
-        formula: null,
-        examTip: "Shape matters! Learn which molecules are polar vs non-polar. Symmetric shapes (linear, trigonal planar, tetrahedral with identical atoms) cancel dipoles."
-      },
-      {
-        title: "Intermolecular Forces — Hydrogen Bonding",
-        content: "Hydrogen bonding occurs when H is bonded directly to F, O, or N. These atoms are very electronegative and small, creating a very strong dipole. The lone pair on F, O, or N of a neighbouring molecule attracts the H.\nHydrogen bonding explains water's unusually high boiling point, ice being less dense than water (open lattice structure), and the solubility of alcohols and carboxylic acids in water.",
-        keyTerms: ["hydrogen bond", "F O N", "lone pair", "high boiling point", "ice density"],
-        formula: null,
-        examTip: "Hydrogen bonds are NOT covalent bonds — they are strong intermolecular forces. In the exam, draw hydrogen bonds as dashed lines between the H and the lone pair on F, O, or N."
-      },
-      {
-        title: "VSEPR and Molecular Shapes",
-        content: "VSEPR (Valence Shell Electron Pair Repulsion) theory: electron pairs around a central atom repel each other and arrange themselves to be as far apart as possible. Lone pairs repel more strongly than bonding pairs.\nCommon shapes: linear (2 bonding, 0 lone pairs, 180°), trigonal planar (3,0, 120°), tetrahedral (4,0, 109.5°), V-shaped/bent (2,2, ~104.5° in water), trigonal pyramidal (3,1, ~107° in NH₃).",
-        keyTerms: ["VSEPR", "lone pair", "bonding pair", "linear", "tetrahedral", "trigonal planar", "bent", "trigonal pyramidal"],
-        formula: null,
-        examTip: "Always count BOTH bonding pairs AND lone pairs on the central atom. The shape name describes the arrangement of ATOMS only, not lone pairs. Bond angle decreases as lone pairs increase."
-      },
-      {
-        title: "Sigma and Pi Bonds",
-        content: "A sigma (σ) bond is formed by head-on overlap of orbitals along the bond axis. It is the first bond formed between two atoms and allows free rotation.\nA pi (π) bond is formed by sideways overlap of p orbitals above and below the bond axis. A double bond = 1σ + 1π. A triple bond = 1σ + 2π. Pi bonds prevent rotation and create geometric isomerism.",
-        keyTerms: ["sigma bond", "pi bond", "head-on overlap", "sideways overlap", "free rotation"],
-        formula: null,
-        examTip: "Count sigma and pi bonds: ethene (C₂H₄) has 5 sigma + 1 pi. Ethyne (C₂H₂) has 3 sigma + 2 pi. Every single bond is 1 sigma. This is a common exam question."
+        title: "Intermolecular Forces",
+        content: "Intermolecular forces are the forces of attraction between molecules. They are much weaker than intramolecular bonds (covalent, ionic, metallic) but determine many physical properties such as boiling point, solubility, and viscosity. There are three main types: van der Waals forces, dipole-dipole forces, and hydrogen bonding.\nVan der Waals forces (London dispersion forces) are the weakest intermolecular force and exist between all molecules, including non-polar ones. They arise from temporary (instantaneous) dipoles caused by the random movement of electrons creating an uneven distribution of charge at any given moment. This temporary dipole induces a dipole in a neighbouring molecule, creating a short-lived attraction. Van der Waals forces increase with molecular size (more electrons = larger electron cloud = more easily polarised = stronger temporary dipoles). This explains why the boiling points of the noble gases and the halogens increase down their respective groups.\nDipole-dipole forces occur between polar molecules (molecules with a permanent dipole). The δ+ end of one molecule attracts the δ− end of a neighbouring molecule. These are stronger than van der Waals forces for molecules of similar size. For example, propanone (CH₃COCH₃) has a higher boiling point than butane (C₄H₁₀) despite having fewer electrons, because propanone has permanent dipole-dipole interactions while butane only has van der Waals forces.\nHydrogen bonding is a particularly strong type of dipole-dipole interaction. It occurs when hydrogen is bonded to a very electronegative atom with a lone pair — specifically nitrogen, oxygen, or fluorine (remember: N, O, F). The very small size of the hydrogen atom means the δ+ charge is concentrated, and the lone pair on N, O, or F is strongly attracted to it. Hydrogen bonds are represented as dashed lines between the δ+ hydrogen and the lone pair of the N, O, or F atom on an adjacent molecule.\nHydrogen bonding explains many anomalous properties of water: its unexpectedly high boiling point (100°C, compared to H₂S at −60°C — without hydrogen bonding, water would boil at about −80°C), its high specific heat capacity, its high surface tension, and the fact that ice is less dense than liquid water (hydrogen bonds hold water molecules in an open lattice structure in ice, which collapses on melting).\n'Like dissolves like': polar solutes dissolve in polar solvents (e.g., NaCl in water) because solute-solvent interactions overcome solute-solute and solvent-solvent forces. Non-polar solutes dissolve in non-polar solvents (e.g., iodine in hexane).\nStronger intermolecular forces mean higher boiling points. Within a homologous series, boiling point increases with chain length (more van der Waals forces). Branched isomers have lower boiling points than straight-chain isomers due to smaller surface area for contact.",
+        keyTerms: ["Intermolecular forces", "Van der Waals forces", "London dispersion forces", "Temporary dipole", "Induced dipole", "Dipole-dipole forces", "Hydrogen bonding", "Polar", "Non-polar", "Boiling point", "Surface tension", "Viscosity"],
+        formula: "Strength: Hydrogen bonding > Dipole-dipole > Van der Waals\nHydrogen bonding requires: H bonded to N, O, or F\nVan der Waals ∝ number of electrons (molecular size)",
+        examTip: "Intermolecular forces questions are very common. Always identify the TYPE of intermolecular force present before explaining a property. For boiling point comparisons, name the dominant intermolecular force in each substance. Remember: covalent bonds are NOT broken when a molecular substance boils — only intermolecular forces are overcome. Water's anomalous properties are a favourite exam topic."
       }
     ]
   },
@@ -190,101 +92,55 @@ var STUDY_CHEMISTRY = [
     icon: "⚖️",
     subtopics: [
       {
-        title: "The Mole Concept",
-        content: "A mole is the amount of substance that contains 6.022 × 10²³ particles (Avogadro's number). One mole of any element has a mass equal to its relative atomic mass in grams.\nThe mole bridges the gap between atoms (too small to count) and grams (which we can measure). It allows us to relate masses of reactants and products using balanced equations.",
-        keyTerms: ["mole", "Avogadro's number", "amount of substance", "6.022 × 10²³"],
-        formula: "n = mass / molar mass (n = m/M)",
-        examTip: "Always include units in mole calculations. Molar mass is in g/mol. If given mass in kg, convert to grams first. This is a common error that loses easy marks."
+        title: "The Mole Concept and Molar Calculations",
+        content: "The mole is the SI unit for amount of substance. One mole of any substance contains 6.022 × 10²³ particles (atoms, molecules, ions, etc.). This number is known as Avogadro's constant (Nₐ or L). The mole provides a bridge between the atomic scale and the laboratory scale.\nThe molar mass (M) of a substance is the mass of one mole of that substance, expressed in grams per mole (g/mol). It is numerically equal to the relative atomic mass (Ar) or relative molecular mass (Mr) of the substance. For example, the molar mass of water (H₂O) is (2 × 1) + 16 = 18 g/mol. The molar mass of calcium carbonate (CaCO₃) is 40 + 12 + (3 × 16) = 100 g/mol.\nThe fundamental mole equation is: number of moles (n) = mass (m) / molar mass (M). This can be rearranged to m = n × M or M = m / n. For example, to find the number of moles in 11.0 g of CO₂: n = 11.0 / 44.0 = 0.25 mol.\nFor gases at standard temperature and pressure (STP: 273 K and 1 atm, or at room conditions 20°C and 1 atm), one mole of any ideal gas occupies 22.4 L at STP (or approximately 24.0 L at room temperature and pressure). Therefore, for gases: n = V / 22,400 (if volume is in cm³ at STP) or n = V / 22.4 (if volume is in litres at STP).\nFor solutions, concentration is measured in moles per litre (mol/L or M, molarity). The relationship is: n = C × V, where C is the concentration in mol/L and V is the volume in litres. For example, 250 cm³ of 0.1 M NaOH contains n = 0.1 × 0.250 = 0.025 mol of NaOH. Always convert cm³ to litres by dividing by 1000.\nWorked example — mass to moles to particles: How many molecules are in 9.0 g of water? Step 1: Find moles: n = m/M = 9.0/18.0 = 0.50 mol. Step 2: Find number of molecules: N = n × Nₐ = 0.50 × 6.022 × 10²³ = 3.011 × 10²³ molecules.\nWorked example — solution preparation: What mass of NaOH is needed to make 500 cm³ of 0.2 M solution? Step 1: Find moles needed: n = C × V = 0.2 × 0.500 = 0.10 mol. Step 2: Find mass: m = n × M = 0.10 × 40.0 = 4.0 g. So dissolve 4.0 g of NaOH in water and make up to 500 cm³.\nEmpirical formula is the simplest whole-number ratio of atoms of each element in a compound. Molecular formula is the actual number of atoms of each element in one molecule. For example, the empirical formula of glucose is CH₂O, but the molecular formula is C₆H₁₂O₆. To find empirical formula from percentage composition: convert percentages to grams (assume 100 g sample), convert to moles using molar masses, divide all by the smallest number of moles to get the simplest ratio.",
+        keyTerms: ["Mole", "Avogadro's constant", "Molar mass", "Relative atomic mass", "Relative molecular mass", "Molarity", "Concentration", "STP", "Molar volume", "Empirical formula", "Molecular formula"],
+        formula: "n = m / M (moles from mass)\nn = C × V (moles from solution, V in litres)\nn = V / 22400 (moles of gas at STP, V in cm³)\nN = n × Nₐ (number of particles)\nNₐ = 6.022 × 10²³ mol⁻¹",
+        examTip: "Mole calculations appear on every LC Chemistry paper. Master the triangle: n = m/M for solids, n = C × V for solutions, n = V/22400 for gases. Always show your working clearly and include units. Converting cm³ to litres is the most common source of error — divide by 1000."
       },
       {
-        title: "Molar Mass and Relative Molecular Mass",
-        content: "The molar mass (M) of a compound is the sum of the relative atomic masses of all atoms in the formula, expressed in g/mol. For example, H₂SO₄ = 2(1) + 32 + 4(16) = 98 g/mol.\nRelative molecular mass (Mr) is the same number but has no units. Use the periodic table to look up atomic masses. Always show your working clearly in calculations.",
-        keyTerms: ["molar mass", "relative molecular mass", "relative atomic mass", "g/mol"],
-        formula: "M(H₂O) = 2(1) + 16 = 18 g/mol",
-        examTip: "Double-check you've counted all atoms correctly, especially in formulas with brackets like Ca(OH)₂ = 40 + 2(16+1) = 74 g/mol."
+        title: "Balancing Equations and Reacting Masses",
+        content: "A balanced chemical equation shows the reactants and products of a chemical reaction with the correct stoichiometric ratios, ensuring that the number of atoms of each element is the same on both sides (conservation of mass). Coefficients (large numbers in front of formulae) are adjusted to achieve balance — never change the subscripts within a chemical formula.\nSteps to balance an equation: (1) Write the correct formulae for all reactants and products. (2) Count atoms of each element on both sides. (3) Balance one element at a time, starting with the most complex molecule. (4) Leave hydrogen and oxygen until last. (5) Check that all atoms balance. (6) Add state symbols: (s) solid, (l) liquid, (g) gas, (aq) aqueous solution.\nWorked example: The combustion of ethanol. Unbalanced: C₂H₅OH + O₂ → CO₂ + H₂O. Balance carbons: need 2 CO₂. Balance hydrogens: 6 H atoms → need 3 H₂O. Balance oxygens: right side has (2×2) + 3 = 7 O atoms, left side has 1 from ethanol, so need 6 more from O₂ → 3 O₂. Balanced: C₂H₅OH + 3O₂ → 2CO₂ + 3H₂O.\nThe coefficients in a balanced equation give the molar ratios of reactants and products. In the equation 2Mg + O₂ → 2MgO, 2 moles of magnesium react with 1 mole of oxygen to produce 2 moles of magnesium oxide. These ratios are the key to all stoichiometric calculations.\nWorked example — reacting masses: What mass of magnesium oxide is produced when 4.86 g of magnesium is burned in excess oxygen? Step 1: Write balanced equation: 2Mg + O₂ → 2MgO. Step 2: Calculate moles of Mg: n = 4.86/24.3 = 0.200 mol. Step 3: Use molar ratio: 2 mol Mg produces 2 mol MgO, so 0.200 mol Mg produces 0.200 mol MgO. Step 4: Calculate mass of MgO: m = 0.200 × 40.3 = 8.06 g.\nWorked example — gas volumes: What volume of CO₂ (at STP) is produced when 10.0 g of CaCO₃ reacts with excess HCl? CaCO₃ + 2HCl → CaCl₂ + H₂O + CO₂. Moles of CaCO₃: n = 10.0/100.0 = 0.100 mol. From the equation, 1 mol CaCO₃ produces 1 mol CO₂, so 0.100 mol CO₂ is produced. Volume = 0.100 × 22,400 = 2,240 cm³ at STP.\nWorked example — volumes of solutions (titration): 25.0 cm³ of 0.10 M NaOH is exactly neutralised by HCl. What volume of 0.050 M HCl is needed? NaOH + HCl → NaCl + H₂O. Moles of NaOH: n = 0.10 × 0.0250 = 0.0025 mol. Molar ratio is 1:1, so moles of HCl = 0.0025 mol. Volume of HCl: V = n/C = 0.0025/0.050 = 0.050 L = 50.0 cm³.\nAlways identify which reactant is in excess. The reactant NOT in excess (the limiting reagent) determines the amount of product formed. If a question says 'excess', you can ignore that reactant in your mole calculation.",
+        keyTerms: ["Balanced equation", "Coefficient", "Stoichiometry", "Molar ratio", "Conservation of mass", "State symbols", "Combustion", "Neutralisation", "Titration", "Excess"],
+        formula: "Steps: Write balanced equation → Find moles of known substance → Use molar ratio → Find moles of unknown → Convert to required units (mass, volume, concentration)",
+        examTip: "Always start with a balanced equation — you cannot do stoichiometry without one. Show the molar ratio step explicitly (e.g., 'from the equation, 1 mol A produces 2 mol B'). State symbols are often required for full marks. In titration calculations, watch out for ratios that are not 1:1 (e.g., H₂SO₄ + 2NaOH)."
       },
       {
-        title: "Percentage Composition",
-        content: "Percentage composition tells you the mass percentage of each element in a compound. Calculate by dividing the total mass of that element in one mole by the molar mass of the compound, then multiply by 100.\nExample: % O in H₂O = (16/18) × 100 = 88.9%. This is useful for comparing the amount of a desired element in different compounds (e.g. which fertiliser has most nitrogen).",
-        keyTerms: ["percentage composition", "mass percentage"],
-        formula: "% element = (total mass of element in formula / molar mass of compound) × 100",
-        examTip: "The percentages of all elements in a compound must add up to 100%. Use this as a check on your answer."
+        title: "Limiting Reagent and Percentage Yield",
+        content: "In most real reactions, reactants are not present in exact stoichiometric amounts. The limiting reagent (or limiting reactant) is the reactant that is completely used up first, and it determines the maximum amount of product that can be formed. The other reactant(s) are said to be in excess.\nTo identify the limiting reagent: (1) Calculate the number of moles of each reactant. (2) Divide each by its coefficient in the balanced equation to find the 'available molar equivalents.' (3) The reactant with the smallest value is the limiting reagent.\nWorked example: 5.40 g of aluminium reacts with 25.0 g of iron(III) oxide. 2Al + Fe₂O₃ → Al₂O₃ + 2Fe. Moles of Al: 5.40/27.0 = 0.200 mol. Moles of Fe₂O₃: 25.0/159.7 = 0.1565 mol. Divide by coefficients: Al → 0.200/2 = 0.100; Fe₂O₃ → 0.1565/1 = 0.1565. Al has the smaller value (0.100 < 0.1565), so Al is the limiting reagent. The maximum moles of Fe produced = 0.200 mol (same coefficient as Al, ratio 2:2). Mass of Fe = 0.200 × 55.8 = 11.16 g.\nThe theoretical yield is the maximum mass of product that could be formed from a given amount of limiting reagent, assuming the reaction goes to completion with no losses. It is calculated from stoichiometry as shown above.\nThe actual yield is the mass of product actually obtained in an experiment. It is always less than or equal to the theoretical yield because of practical losses such as: incomplete reactions (equilibrium or side reactions), transfer losses (product left on glassware), impure reactants, and losses during purification (e.g., filtration, evaporation).\nPercentage yield = (actual yield / theoretical yield) × 100%. For example, if the theoretical yield of Fe is 11.16 g but only 9.50 g is obtained, the percentage yield = (9.50/11.16) × 100 = 85.1%.\nPercentage purity: If a sample of reactant is impure, only the pure part reacts. Percentage purity = (mass of pure substance / total mass of sample) × 100%. For example, if 10.0 g of limestone (CaCO₃) is only 92% pure, the mass of CaCO₃ that reacts = 10.0 × 0.92 = 9.2 g.\nAtom economy (or atom utilisation) measures how efficiently a reaction uses atoms. Atom economy = (mass of desired product / total mass of all products) × 100%. Reactions with high atom economy are preferred in green chemistry because they produce less waste. Addition reactions have 100% atom economy (all atoms end up in the product), while substitution and elimination reactions have lower atom economy.\nWorked example — combining limiting reagent and percentage yield: 3.00 g of ethanol (C₂H₅OH, M = 46.0) reacts with excess ethanoic acid to form ethyl ethanoate (C₄H₈O₂, M = 88.0). C₂H₅OH + CH₃COOH → CH₃COOC₂H₅ + H₂O. Moles of ethanol = 3.00/46.0 = 0.0652 mol. Ethanol is limiting (excess acid). Theoretical moles of ester = 0.0652 mol. Theoretical yield = 0.0652 × 88.0 = 5.74 g. If 4.20 g is obtained, percentage yield = (4.20/5.74) × 100 = 73.2%.\nIn industry, low percentage yield can be acceptable if unreacted material is recycled (e.g., the Haber process). Percentage yield and atom economy together give a fuller picture of efficiency.",
+        keyTerms: ["Limiting reagent", "Excess reagent", "Theoretical yield", "Actual yield", "Percentage yield", "Percentage purity", "Atom economy", "Green chemistry", "Stoichiometric ratio", "Transfer losses"],
+        formula: "Percentage yield = (actual yield / theoretical yield) × 100%\nPercentage purity = (mass of pure substance / total mass of sample) × 100%\nAtom economy = (mass of desired product / total mass of all products) × 100%",
+        examTip: "Limiting reagent questions often give you amounts of TWO reactants — this is your clue to find the limiting reagent. Calculate moles of both, use the ratio from the balanced equation, and the one that runs out first is limiting. For percentage yield, always calculate the theoretical yield first. Show each step clearly for full marks."
       },
       {
-        title: "Empirical and Molecular Formula",
-        content: "The empirical formula is the simplest whole-number ratio of atoms in a compound. The molecular formula is the actual number of atoms. To find empirical formula: divide each element's mass (or %) by its atomic mass, then divide all by the smallest.\nThe molecular formula is a whole-number multiple of the empirical formula. Given the molar mass, divide by the empirical formula mass to find the multiple. Example: empirical CH₂O (30), molar mass 60, so molecular formula = C₂H₄O₂.",
-        keyTerms: ["empirical formula", "molecular formula", "simplest ratio"],
-        formula: "Molecular formula = n × empirical formula, where n = molar mass / empirical formula mass",
-        examTip: "Set out empirical formula calculations in a clear table: element, mass, ÷ Ar, ratio, simplest ratio. This structured approach earns method marks even if arithmetic goes wrong."
-      },
-      {
-        title: "Balancing Equations and Mole Ratios",
-        content: "A balanced equation has equal numbers of each type of atom on both sides. Coefficients represent mole ratios. For example, 2H₂ + O₂ → 2H₂O means 2 moles H₂ react with 1 mole O₂.\nUse these ratios to convert between moles of different substances. Steps: mass → moles (of known) → moles (of unknown via ratio) → mass (of unknown).",
-        keyTerms: ["balanced equation", "mole ratio", "coefficient", "stoichiometry"],
-        formula: null,
-        examTip: "Always balance the equation FIRST. Then use it as a recipe. State the mole ratio explicitly in your answer — examiners want to see you using the equation."
-      },
-      {
-        title: "Limiting Reagent",
-        content: "The limiting reagent is the reactant that is completely used up first and determines the maximum amount of product formed. The other reactant is in excess.\nTo find it: convert both reactant masses to moles, divide each by its coefficient in the balanced equation. The one with the smaller value is the limiting reagent. Use its moles to calculate the product.",
-        keyTerms: ["limiting reagent", "excess reagent", "theoretical yield"],
-        formula: null,
-        examTip: "A very common exam question. Always clearly state which reagent is limiting and why. Use the limiting reagent's moles (not the excess) for all further calculations."
-      },
-      {
-        title: "Molar Volume of Gases",
-        content: "At standard temperature and pressure (STP: 0°C, 1 atm), one mole of any gas occupies 22.4 litres. At room temperature (25°C, 1 atm), it is approximately 24.0 litres.\nThis allows conversion between moles and volume of gases: n = V / molar volume. Useful in reactions involving gases where you measure volume rather than mass.",
-        keyTerms: ["molar volume", "STP", "22.4 L", "ideal gas"],
-        formula: "n = V / 22,400 cm³ (at STP) or n = V / 24,000 cm³ (at RTP)",
-        examTip: "Check whether the question states STP or room temperature — using the wrong molar volume is a common mistake. Convert mL to L if needed."
+        title: "Volumetric Analysis (Titrations)",
+        content: "Volumetric analysis is a quantitative analytical technique used to determine the concentration of a solution by reacting it with a solution of known concentration (a standard solution). The most common type at LC level is acid-base titration, but redox titrations are also examined.\nA primary standard is a substance that can be used to prepare a standard solution of accurately known concentration. Requirements for a primary standard: it must be available in a high degree of purity, it must be stable (not react with air or moisture), it must have a high molar mass (to minimise weighing errors), and it must be soluble. Common primary standards: anhydrous sodium carbonate (Na₂CO₃, M = 106.0 g/mol) for standardising acids, and potassium hydrogen phthalate for standardising bases.\nPreparing a standard solution: (1) Accurately weigh the primary standard (e.g., 2.65 g Na₂CO₃). (2) Dissolve in deionised water in a beaker. (3) Transfer quantitatively to a volumetric flask via funnel, rinsing beaker and rod several times. (4) Make up to the mark (e.g., 250 cm³) with deionised water, using a dropper for final addition. (5) Stopper and invert to mix. Concentration = (2.65/106.0)/0.250 = 0.100 mol/L.\nTitration procedure: (1) Rinse burette with its solution (e.g., HCl), fill and record initial reading. (2) Pipette exactly 25.0 cm³ of the other solution into a conical flask (rinse pipette with that solution first). (3) Add 2-3 drops of indicator. (4) Add from burette slowly, swirling, until the indicator changes colour permanently (endpoint). (5) Record final reading, calculate titre. (6) Repeat for concordant results (within 0.1 cm³). Average concordant titres for calculations.\nIndicator choice: strong acid + strong base — any indicator; strong acid + weak base — methyl orange (pH 3.1–4.4); weak acid + strong base — phenolphthalein (pH 8.3–10); weak acid + weak base — no suitable indicator, use a pH meter.",\nWorked example — full titration calculation: 25.0 cm³ of Na₂CO₃ solution of unknown concentration is titrated against 0.10 M HCl. Average titre = 27.50 cm³. Na₂CO₃ + 2HCl → 2NaCl + H₂O + CO₂. Moles of HCl = 0.10 × 0.02750 = 0.00275 mol. Molar ratio: 1 Na₂CO₃ : 2 HCl, so moles of Na₂CO₃ = 0.00275/2 = 0.001375 mol. Concentration of Na₂CO₃ = 0.001375/0.0250 = 0.055 mol/L.\nBack titrations are used when the analyte is insoluble or reacts too slowly for direct titration. An excess of one reagent is added, allowed to react completely, and then the remaining excess is titrated. For example, to find the percentage of CaCO₃ in an impure limestone sample: add excess HCl to the limestone, then titrate the unreacted HCl with NaOH.\nSources of error: incorrect rinsing of apparatus, parallax errors reading the burette, overshooting the endpoint, wrong indicator choice, leaving the funnel in the burette, and air bubbles in the burette tip.",
+        keyTerms: ["Volumetric analysis", "Titration", "Standard solution", "Primary standard", "Burette", "Pipette", "Volumetric flask", "Indicator", "Endpoint", "Concordant results", "Titre", "Back titration", "Methyl orange", "Phenolphthalein"],
+        formula: "n(acid) × ratio(base) = n(base) × ratio(acid)\nC = n / V (concentration in mol/L, V in litres)\nAlways: moles of known → molar ratio → moles of unknown → concentration",
+        examTip: "Titration calculations appear every year on the LC paper. Always write the balanced equation first and clearly identify the molar ratio. Show the moles calculation, the ratio step, and then the final concentration. Remember to convert cm³ to litres. In the practical, know why each piece of glassware is rinsed with a specific solution and be able to list sources of error."
       }
     ]
   },
-  {
+
+{
     topic: "Volumetric Analysis",
     icon: "🧪",
     subtopics: [
       {
-        title: "Titration Principles",
-        content: "A titration determines the unknown concentration of a solution by reacting it with a solution of known concentration (standard solution). The standard solution is placed in the burette, the unknown in a conical flask with indicator.\nThe endpoint is when the indicator changes colour, showing the reaction is complete. The equivalence point is the theoretical point where moles of acid equal moles of base (for 1:1 reactions).",
-        keyTerms: ["titration", "standard solution", "endpoint", "equivalence point", "burette", "conical flask"],
-        formula: "C₁V₁/n₁ = C₂V₂/n₂ (where n = moles from balanced equation)",
-        examTip: "Use a white tile under the conical flask to see the colour change more clearly. Wash the conical flask with deionised water only (not the solution) — this is a favourite precaution question."
+        title: "Introduction to Volumetric Analysis",
+        content: "Volumetric analysis is a quantitative analytical technique used to determine the concentration of an unknown solution by reacting it with a solution of known concentration (a standard solution).\nThe process involves a titration, where one solution is added from a burette to another solution in a conical flask until the reaction is just complete.\nThe point at which the reaction is exactly complete is called the equivalence point or stoichiometric point.\nThe end point is the point at which the indicator changes colour, signalling that the equivalence point has been reached.\nIdeally, the end point and equivalence point coincide, but in practice there is often a tiny difference.\nVolumetric analysis is one of the most examined topics in LC Chemistry HL and appears on the paper almost every year.\nYou must be comfortable with the practical procedure, the calculations, and the underlying chemistry.\nThe key types of volumetric analysis at HL level are acid-base titrations, redox titrations (including iodometric), and water hardness titrations.\nA primary standard is a substance of known high purity that can be weighed accurately and dissolved to make a standard solution of precisely known concentration.\nCommon primary standards include anhydrous sodium carbonate (Na2CO3), potassium hydrogen phthalate (KHP), and hydrated sodium oxalate (Na2C2O4.H2O).\nA primary standard must have a high purity, known formula, high molar mass (to reduce weighing errors), be stable in air, be readily soluble, and react completely and rapidly.\nA secondary standard is a solution whose concentration is determined by titration against a primary standard (e.g., HCl standardised against Na2CO3).\nMolarity (M) is defined as the number of moles of solute per litre of solution: M = n / V, where n = moles and V = volume in litres.\nAlways convert volumes from cm3 to litres by dividing by 1000 before performing calculations.\nThe mole ratio from the balanced equation is essential for linking the moles of titrant to the moles of analyte."
       },
       {
-        title: "Primary Standards",
-        content: "A primary standard is a substance of known high purity used to prepare a standard solution of accurately known concentration. It must have a known, stable composition, high purity, high molar mass (for accurate weighing), and be soluble.\nCommon primary standards: anhydrous sodium carbonate (Na₂CO₃) for acid-base, oxalic acid (H₂C₂O₄.2H₂O) for permanganate titrations. NaOH is NOT a primary standard (absorbs CO₂ and water).",
-        keyTerms: ["primary standard", "high purity", "stable composition", "Na₂CO₃", "oxalic acid"],
-        formula: null,
-        examTip: "A standard exam question: 'Why is NaOH not suitable as a primary standard?' Answer: it absorbs CO₂ from air and is hygroscopic, so its mass is unreliable."
+        title: "Acid-Base Titration Procedure",
+        content: "Wash all glassware with deionised water before use; additionally rinse the burette with the solution it will contain and the pipette with the solution it will deliver.\nThe conical flask should be rinsed with deionised water only -- never with the solution being titrated, as this would add extra moles of analyte.\nUse a pipette filler to draw exactly 25.0 cm3 of the analyte solution into the conical flask.\nAdd 2-3 drops of a suitable indicator (e.g., methyl orange for strong acid/weak base, phenolphthalein for weak acid/strong base).\nFill the burette with the titrant solution above the zero mark, then run solution through the tap to remove air bubbles and bring the meniscus to the zero mark.\nRecord the initial burette reading to the nearest 0.05 cm3, reading the bottom of the meniscus at eye level.\nAdd titrant slowly from the burette, swirling the conical flask continuously to ensure thorough mixing.\nAs you approach the expected end point, add the titrant drop by drop until the indicator changes colour permanently (for at least 30 seconds).\nRecord the final burette reading and calculate the titre (volume of titrant used = final reading - initial reading).\nPerform a rough titration first, then at least two accurate titrations that agree within 0.1 cm3 of each other.\nUse the average of the concordant (agreeing) titres in your calculation -- discard the rough titre and any outliers.\nFor the calculation: (1) find moles of the known solution using n = M x V, (2) use the mole ratio to find moles of the unknown, (3) calculate the concentration using M = n / V.\nExample: 25.0 cm3 of NaOH required 22.50 cm3 of 0.10 M HCl. HCl + NaOH -> NaCl + H2O. Moles HCl = 0.10 x 0.02250 = 0.00225 mol. Mole ratio 1:1, so moles NaOH = 0.00225. Concentration NaOH = 0.00225 / 0.02500 = 0.09 M.\nWhen dilution is involved, remember M1V1 = M2V2 only applies to dilution, not to reactions -- always use the mole ratio for reactions.\nSources of error include parallax error when reading the burette, using the wrong indicator, not rinsing glassware correctly, and overshooting the end point."
       },
       {
-        title: "Indicators",
-        content: "An indicator changes colour at or near the equivalence point. Different indicators are suited to different titration types.\nStrong acid + strong base: any indicator works (methyl orange, phenolphthalein). Strong acid + weak base: methyl orange (changes in acidic range). Weak acid + strong base: phenolphthalein (changes in basic range). Weak acid + weak base: no suitable indicator.",
-        keyTerms: ["indicator", "methyl orange", "phenolphthalein", "pH range"],
-        formula: null,
-        examTip: "Phenolphthalein: colourless in acid, pink in base. Methyl orange: red in acid, yellow in base. Know which to use for each titration type."
+        title: "Redox Titrations",
+        content: "Redox titrations involve a reaction where one species is oxidised and another is reduced, with electron transfer occurring between them.\nThe most common redox titration at LC HL involves potassium permanganate (KMnO4) as the oxidising agent, which acts as a self-indicator.\nIn acidified KMnO4 titrations, the MnO4- ion (purple) is reduced to Mn2+ (almost colourless): MnO4- + 8H+ + 5e- -> Mn2+ + 4H2O.\nThe end point is reached when the first permanent pale pink/purple colour persists in the conical flask for at least 30 seconds, indicating a slight excess of KMnO4.\nNo separate indicator is needed because KMnO4 is its own indicator -- the colour change from colourless to pink is the signal.\nThe solution must be acidified with dilute sulfuric acid (H2SO4) -- never HCl (which would be oxidised to Cl2) or HNO3 (which is itself an oxidising agent).\nA common analyte is iron(II) sulfate (FeSO4), where Fe2+ is oxidised to Fe3+: Fe2+ -> Fe3+ + e-.\nThe balanced equation is: MnO4- + 8H+ + 5Fe2+ -> Mn2+ + 5Fe3+ + 4H2O, giving a mole ratio of 1:5 (KMnO4 : Fe2+).\nExample: 25.0 cm3 of Fe2+ solution required 20.00 cm3 of 0.02 M KMnO4. Moles KMnO4 = 0.02 x 0.02000 = 0.0004 mol. Moles Fe2+ = 5 x 0.0004 = 0.002 mol. Concentration Fe2+ = 0.002 / 0.025 = 0.08 M.\nIodometric titrations involve iodine (I2) and sodium thiosulfate (Na2S2O3): I2 + 2S2O3^2- -> 2I- + S4O6^2-.\nStarch indicator is added near the end point (when the solution is pale yellow) and turns the solution blue-black in the presence of I2; the end point is when the blue-black colour disappears.\nTo determine the concentration of an oxidising agent (e.g., household bleach, H2O2), you first react it with excess KI to liberate I2, then titrate the I2 with standard Na2S2O3.\nAlways add the starch indicator late in the titration -- if added too early, the starch-iodine complex is difficult to break down and gives a less sharp end point.\nIn back titrations, an excess of reagent is added and the unreacted amount is titrated -- useful when the analyte reacts slowly or is insoluble.\nPractical tips: keep KMnO4 in a brown bottle (light-sensitive), standardise Na2S2O3 freshly, and always record concordant titres."
       },
       {
-        title: "Acid-Base Titration Calculations",
-        content: "Steps: (1) Calculate moles of standard solution: n = C × V (in litres). (2) Use the balanced equation to find moles of unknown. (3) Calculate concentration: C = n / V.\nAlways use the average titre from concordant results (results within 0.1 cm³ of each other). Discard the rough titre and any outliers. Convert cm³ to litres by dividing by 1000.",
-        keyTerms: ["moles", "concentration", "titre", "concordant results", "average titre"],
-        formula: "n = C × V (V in litres); C = n / V; C = 1000 × n / V (V in cm³)",
-        examTip: "Show all steps clearly and include units throughout. A common error is forgetting to use the mole RATIO from the equation — e.g. H₂SO₄ + 2NaOH means 1 mole acid reacts with 2 moles base."
-      },
-      {
-        title: "Redox Titrations (Permanganate)",
-        content: "Potassium permanganate (KMnO₄) is used in redox titrations as both the titrant and the indicator — it is self-indicating. Purple KMnO₄ is decolourised by the reducing agent until the endpoint.\nThe endpoint is when a permanent pink/purple colour persists (excess KMnO₄). The solution must be acidified with dilute H₂SO₄ (not HCl, which reacts with KMnO₄). Warm the solution to ~60°C for oxalic acid titrations.",
-        keyTerms: ["potassium permanganate", "self-indicating", "redox", "reducing agent", "acidified"],
-        formula: "MnO₄⁻ + 8H⁺ + 5Fe²⁺ → Mn²⁺ + 4H₂O + 5Fe³⁺",
-        examTip: "Never use HCl to acidify — it reacts with KMnO₄ and produces Cl₂ gas. Use dilute H₂SO₄. This is worth marks as a precaution in the mandatory experiment."
-      },
-      {
-        title: "Water of Crystallisation",
-        content: "Many salts crystallise with water molecules incorporated into their crystal structure (e.g. Na₂CO₃.10H₂O). The number of water molecules (n) can be found by heating a known mass of hydrated salt to constant mass.\nMass loss = mass of water. Calculate moles of anhydrous salt and moles of water, then find the ratio. This determines the value of n in the formula salt.nH₂O.",
-        keyTerms: ["water of crystallisation", "hydrated", "anhydrous", "heat to constant mass"],
-        formula: "n = moles of H₂O / moles of anhydrous salt",
-        examTip: "Heat to constant mass means heat, cool, weigh, repeat until mass doesn't change. This ensures all water is removed. State this in experiment answers."
+        title: "Dilutions, Back Titrations & Calculations",
+        content: "A dilution involves adding solvent to reduce the concentration of a solution; the number of moles of solute remains constant, so M1V1 = M2V2.\nExample: If 10.0 cm3 of 2.0 M HCl is diluted to 250 cm3 in a volumetric flask, the new concentration is (2.0 x 10.0) / 250 = 0.08 M.\nWhen preparing a standard solution, weigh the primary standard accurately on a balance (to 2 decimal places minimum), dissolve in a small amount of deionised water in a beaker, and transfer quantitatively to a volumetric flask.\nRinse the beaker and glass rod with deionised water several times, adding the rinsings to the volumetric flask to ensure complete transfer.\nMake up to the graduation mark with deionised water, using a dropping pipette for the last few cm3, and invert the flask several times to mix.\nThe concentration in mol/L is calculated as: mass of solute (g) / molar mass (g/mol) / volume of flask (L).\nIn back titration problems, you add a known excess of reagent A to the analyte, let the reaction go to completion, then titrate the unreacted A with reagent B.\nMoles of A that reacted with analyte = total moles of A added - moles of A remaining (found by titration with B).\nExample: To find CaCO3 in an antacid tablet, add 50.0 cm3 of 1.0 M HCl (excess). CaCO3 + 2HCl -> CaCl2 + H2O + CO2. Titrate remaining HCl with 0.50 M NaOH; suppose 30.0 cm3 is required.\nMoles HCl added = 1.0 x 0.050 = 0.050 mol. Moles NaOH = 0.50 x 0.030 = 0.015 mol, so moles HCl remaining = 0.015 mol. Moles HCl reacted = 0.050 - 0.015 = 0.035 mol.\nMoles CaCO3 = 0.035 / 2 = 0.0175 mol (from 1:2 ratio). Mass CaCO3 = 0.0175 x 100 = 1.75 g.\nAlways check your units: volumes in litres for molarity calculations, masses in grams, and molar masses in g/mol.\nSignificant figures should match the least precise measurement -- typically 3-4 significant figures in LC titration calculations.\nCommon exam pitfalls: forgetting to halve or multiply by the mole ratio, not converting cm3 to litres, and confusing dilution with reaction stoichiometry.\nPractice is essential -- work through past paper questions from 2012-2024 to become confident with every variation of volumetric analysis calculation."
       }
     ]
   },
@@ -293,46 +149,20 @@ var STUDY_CHEMISTRY = [
     icon: "⏱️",
     subtopics: [
       {
-        title: "Definition and Measurement",
-        content: "Rate of reaction is the change in concentration of a reactant or product per unit time. It can be measured by monitoring mass loss (gas escaping), volume of gas produced, colour change, or change in pH.\nThe rate is fastest at the start (highest concentration of reactants) and decreases over time as reactants are used up. Units: mol/L/s or mol L⁻¹ s⁻¹.",
-        keyTerms: ["rate of reaction", "concentration", "per unit time", "mass loss", "gas volume"],
-        formula: "Rate = Δ[concentration] / Δtime",
-        examTip: "In rate graphs, the gradient (slope) of the curve at any point gives the rate at that time. The initial rate = gradient at time zero. Draw a tangent to find it."
+        title: "Collision Theory & Activation Energy",
+        content: "The rate of a chemical reaction is defined as the change in concentration of a reactant or product per unit time, typically measured in mol L-1 s-1.\nCollision theory states that for a reaction to occur, reactant particles must collide with sufficient energy and in the correct orientation.\nNot all collisions lead to a reaction -- only effective collisions (those with enough energy and proper orientation) result in product formation.\nThe minimum energy required for a successful collision is called the activation energy (Ea).\nActivation energy can be thought of as the energy barrier that reactants must overcome to be converted into products.\nA reaction profile (energy diagram) shows the energy of reactants, the activation energy peak (transition state), and the energy of products.\nFor an exothermic reaction, the products are at a lower energy level than the reactants, and Delta H is negative.\nFor an endothermic reaction, the products are at a higher energy level, and Delta H is positive.\nThe transition state (activated complex) is the highest energy point on the reaction profile -- it is an unstable, transient arrangement of atoms.\nThe activated complex cannot be isolated; it either breaks down to form products or reverts to reactants.\nIncreasing the fraction of molecules with energy >= Ea increases the rate of reaction.\nThe Maxwell-Boltzmann distribution curve shows the spread of kinetic energies among molecules at a given temperature.\nAt higher temperatures, the distribution shifts to the right and flattens, meaning more molecules have energy >= Ea.\nThis is why even a small increase in temperature (e.g., 10 degrees C) can significantly increase the reaction rate -- roughly doubling it in many cases.\nThe area under the Maxwell-Boltzmann curve to the right of the Ea line represents the fraction of molecules with enough energy to react."
       },
       {
-        title: "Collision Theory",
-        content: "For a reaction to occur, particles must collide with sufficient energy (at least the activation energy) and with the correct orientation. Not all collisions lead to reaction — only effective collisions do.\nAnything that increases the frequency or energy of collisions will increase the rate of reaction. This theory explains the effect of all the factors that affect rate.",
-        keyTerms: ["collision theory", "effective collision", "activation energy", "orientation"],
-        formula: null,
-        examTip: "Always mention BOTH conditions for a successful collision: sufficient energy AND correct orientation. Leaving out either one will lose a mark."
+        title: "Factors Affecting Rate of Reaction",
+        content: "Temperature: increasing temperature increases the kinetic energy of particles, leading to more frequent collisions and a greater proportion of collisions exceeding the activation energy.\nAs a general rule, a 10 degrees C rise in temperature approximately doubles the rate of many reactions.\nConcentration: increasing the concentration of reactants in solution means more particles per unit volume, leading to more frequent collisions and a higher reaction rate.\nFor gases, increasing pressure has the same effect as increasing concentration -- particles are forced closer together.\nSurface area: for reactions involving solids, breaking the solid into smaller pieces (e.g., powder vs. lump) increases the surface area exposed to the other reactant, increasing the rate.\nThis is why a fine powder reacts much faster than a single large lump of the same mass -- more particles are accessible for collision.\nCatalyst: a catalyst increases the rate of reaction by providing an alternative reaction pathway with a lower activation energy.\nA catalyst is not consumed in the reaction -- it is regenerated and can be used repeatedly.\nOn the reaction profile, a catalyst lowers the peak of the activation energy curve but does not change the energy of reactants or products (Delta H is unchanged).\nCatalysts can be homogeneous (same phase as reactants, e.g., H+ ions catalysing ester hydrolysis) or heterogeneous (different phase, e.g., solid MnO2 catalysing the decomposition of liquid H2O2).\nEnzymes are biological catalysts -- highly specific proteins that catalyse biochemical reactions at body temperature with remarkable efficiency.\nThe nature of the reactants also affects rate: ionic reactions in solution tend to be very fast (no bonds to break), while covalent reactions are often slower.\nLight can also affect certain reactions (photochemical reactions), such as the reaction of methane with chlorine, which requires UV light to initiate.\nIn the exam, you should be able to explain each factor in terms of collision theory: frequency of collisions, energy of collisions, and orientation.\nWhen designing experiments to test factors, you must control all variables except the one being investigated -- a key point for practical exam questions."
       },
       {
-        title: "Factors Affecting Rate — Concentration",
-        content: "Increasing concentration increases the number of particles per unit volume. This leads to more frequent collisions and therefore more effective collisions per second, increasing the rate.\nOn a graph, higher concentration gives a steeper initial curve and reaches completion sooner. The same total amount of product is formed (if other reactant is in excess).",
-        keyTerms: ["concentration", "frequency of collisions", "particles per unit volume"],
-        formula: null,
-        examTip: "For gases, increasing pressure has the same effect as increasing concentration — particles are closer together, so more frequent collisions."
+        title: "Measuring & Graphing Reaction Rates",
+        content: "Reaction rate can be measured experimentally by monitoring a change in a physical property over time: volume of gas produced, mass lost, colour intensity, pH change, or conductivity.\nFor gas-producing reactions, you can collect the gas in a graduated cylinder over water or measure the volume with a gas syringe, recording readings at regular time intervals.\nAlternatively, place the reaction vessel on a balance and record the decrease in mass as gas escapes (suitable for CO2 but not H2, which is too light).\nFor reactions involving colour change (e.g., thiosulfate and acid producing sulfur), you can measure the time taken for a marked cross beneath the flask to disappear.\nThe 'clock reaction' method (e.g., iodine clock) measures the time for a fixed amount of product to form, giving an initial rate.\nA graph of concentration (or volume of gas) vs. time for a typical reaction shows a curve that starts steep and levels off as reactants are consumed.\nThe initial rate is found from the slope (tangent) of the concentration-time graph at time t = 0.\nThe instantaneous rate at any point is found by drawing a tangent to the curve at that point and calculating its gradient.\nA steeper initial gradient indicates a faster reaction; factors like higher temperature, concentration, or catalyst use will produce steeper initial slopes.\nIf you plot rate vs. concentration, you can determine the order of reaction: a horizontal line = zero order, a straight line through the origin = first order, a curve (parabola) = second order.\nFor a first-order reaction, the half-life (t1/2) is constant regardless of initial concentration -- this is a characteristic feature.\nFor a zero-order reaction, the concentration decreases linearly with time (constant rate until reactant runs out).\nFor a second-order reaction, a plot of 1/concentration vs. time gives a straight line.\nAt LC HL level, you should be able to interpret rate graphs, identify orders from data, and relate graphical features to the factors affecting rate.\nPractice sketching comparative graphs: e.g., same reaction at two different temperatures, or with and without a catalyst -- label axes and explain differences."
       },
       {
-        title: "Factors Affecting Rate — Temperature",
-        content: "Increasing temperature gives particles more kinetic energy, so they move faster and collide more frequently. More importantly, a greater proportion of particles have energy ≥ the activation energy.\nA 10°C rise roughly doubles the rate. The Maxwell-Boltzmann distribution curve shifts right at higher temperature, showing more particles with energy above Ea.",
-        keyTerms: ["temperature", "kinetic energy", "activation energy", "Maxwell-Boltzmann distribution"],
-        formula: null,
-        examTip: "The main reason temperature increases rate is MORE particles exceeding Ea, not just more frequent collisions. This is the key point examiners look for."
-      },
-      {
-        title: "Factors Affecting Rate — Surface Area and Catalysts",
-        content: "Increasing surface area (e.g. powdering a solid) exposes more particles to collisions, increasing the rate. The total product formed is the same.\nA catalyst increases rate by providing an alternative reaction pathway with lower activation energy. More particles now have sufficient energy to react. The catalyst is not consumed — it is regenerated.",
-        keyTerms: ["surface area", "catalyst", "alternative pathway", "lower activation energy"],
-        formula: null,
-        examTip: "A catalyst does NOT give particles more energy — it lowers the energy barrier. On an energy profile diagram, show the catalysed pathway with a lower Ea peak."
-      },
-      {
-        title: "Rate Graphs and Interpretation",
-        content: "A graph of product vs time starts steep (fast initial rate) and levels off (reaction complete). The steeper the initial slope, the faster the reaction.\nComparing experiments: same final amount of product but steeper curve = faster rate (e.g. higher temperature or concentration). Less product at the end = less reactant was available or different limiting reagent.",
-        keyTerms: ["product vs time graph", "initial rate", "gradient", "plateau"],
-        formula: null,
-        examTip: "Sketch rate graphs neatly with labelled axes. Show that a catalyst reaches the same final product amount but faster. A higher temperature does the same."
+        title: "Catalysis & Industrial Applications",
+        content: "A catalyst provides an alternative reaction pathway with a lower activation energy (Ea), allowing a greater fraction of molecules to react at the same temperature.\nOn a Maxwell-Boltzmann distribution, adding a catalyst shifts the Ea line to the left, meaning the shaded area (molecules with E >= Ea) increases without changing the distribution itself.\nHomogeneous catalysts are in the same phase as the reactants: for example, sulfuric acid (H2SO4) catalysing the esterification of ethanol and ethanoic acid.\nHeterogeneous catalysts are in a different phase: for example, solid iron (Fe) in the Haber process (N2(g) + 3H2(g) -> 2NH3(g)).\nIn heterogeneous catalysis, reactant molecules adsorb onto the surface of the catalyst, weakening bonds and bringing reactants into correct orientation.\nThe catalytic converter in car exhausts uses platinum, palladium, and rhodium to convert CO and NOx into less harmful CO2 and N2.\nEnzymes are highly efficient biological catalysts with specific active sites that bind to substrate molecules (lock and key model or induced fit model).\nEnzymes have an optimum temperature and pH; denaturation occurs outside these ranges, destroying the active site shape.\nIn industry, catalysts are crucial for economic and environmental reasons: they lower energy costs, allow reactions at lower temperatures and pressures, and reduce waste.\nThe Haber process uses an iron catalyst at 450 degrees C and 200 atm; without the catalyst, the temperature needed would be impractically high.\nThe Contact process uses vanadium(V) oxide (V2O5) to catalyse the oxidation of SO2 to SO3 in sulfuric acid manufacture.\nCatalytic poisoning occurs when impurities bind to the catalyst surface, blocking active sites and reducing effectiveness (e.g., lead poisoning platinum catalysts).\nAutocatalysis is a special case where a product of the reaction acts as a catalyst -- the reaction starts slowly and accelerates (e.g., the reaction of MnO4- with C2O4^2- in acid, where Mn2+ catalyses the reaction).\nFor exam purposes, be prepared to draw and annotate reaction profile diagrams showing the effect of a catalyst, and to explain catalysis in terms of collision theory.\nRemember: a catalyst speeds up both the forward and reverse reactions equally -- it does not change the position of equilibrium, only how quickly equilibrium is reached."
       }
     ]
   },
@@ -342,45 +172,23 @@ var STUDY_CHEMISTRY = [
     subtopics: [
       {
         title: "Dynamic Equilibrium",
-        content: "A dynamic equilibrium is established in a closed system when the rate of the forward reaction equals the rate of the reverse reaction. The concentrations of reactants and products remain constant but are NOT necessarily equal.\nDynamic means both reactions are still occurring — it is not a static situation. Equilibrium can only be reached in a closed system (no substances can escape).",
-        keyTerms: ["dynamic equilibrium", "closed system", "forward rate equals reverse rate", "constant concentrations"],
-        formula: null,
-        examTip: "Key definition: rates are equal and concentrations are constant. Always mention 'closed system' and 'dynamic' (reactions still occurring). These are essential for full marks."
+        content: "A reversible reaction is one that can proceed in both the forward and reverse directions, denoted by the equilibrium sign (double half-arrows).\nDynamic equilibrium is established when the rate of the forward reaction equals the rate of the reverse reaction, so the concentrations of reactants and products remain constant over time.\nIt is 'dynamic' because both reactions are still occurring -- molecules are continuously being formed and consumed, but there is no net change in concentration.\nEquilibrium can only be established in a closed system -- one where no substances can enter or leave.\nAt equilibrium, the macroscopic properties (colour, pressure, concentration) remain constant, even though molecular-level changes continue.\nThe position of equilibrium refers to the relative amounts of reactants and products at equilibrium -- it can lie to the left (favouring reactants), to the right (favouring products), or roughly in the middle.\nIf the equilibrium lies to the right, the forward reaction is favoured and the concentration of products is greater than that of reactants.\nEquilibrium does not mean equal concentrations of reactants and products -- it means the rates of the forward and reverse reactions are equal.\nThe time taken to reach equilibrium depends on the rate of reaction, which is influenced by temperature, concentration, surface area, and catalysts.\nA catalyst speeds up both the forward and reverse reactions equally, so equilibrium is reached faster, but the position of equilibrium is not changed.\nExamples of reversible reactions include: N2(g) + 3H2(g) <=> 2NH3(g), the esterification reaction, and the dissolving of CO2 in water.\nIn an open system, equilibrium cannot be established because products can escape (e.g., heating CaCO3 in an open container -- CO2 escapes, so the decomposition goes to completion).\nThe concept of equilibrium is fundamental to understanding industrial processes, acid-base chemistry, and biological systems.\nAt LC HL level, you must be able to explain what is meant by dynamic equilibrium, identify when a system is at equilibrium, and predict how changes will affect the equilibrium position.\nEquilibrium is a key link between rates of reaction and thermodynamics -- it bridges the 'how fast' and 'how far' aspects of a reaction."
       },
       {
         title: "Le Chatelier's Principle",
-        content: "If a system at equilibrium is disturbed, the system shifts to partially counteract the disturbance and re-establish equilibrium.\nIncrease concentration of reactant → shifts right (forward). Increase pressure → shifts to side with fewer moles of gas. Increase temperature → shifts in endothermic direction. A catalyst has NO effect on equilibrium position — it speeds up both directions equally.",
-        keyTerms: ["Le Chatelier", "shift", "counteract", "disturbance", "forward", "reverse"],
-        formula: null,
-        examTip: "Catalyst does NOT shift equilibrium — it only helps equilibrium be reached faster. This is a very common exam trap. State clearly: 'no effect on position of equilibrium'."
+        content: "Le Chatelier's principle states: if a system at equilibrium is subjected to a change in concentration, temperature, or pressure, the system will shift to partially counteract the change and restore a new equilibrium.\nChange in concentration: adding more reactant shifts the equilibrium to the right (towards products) to use up the added reactant; removing a product also shifts it to the right.\nConversely, adding more product or removing a reactant shifts the equilibrium to the left (towards reactants).\nChange in pressure (for gaseous equilibria): increasing pressure shifts the equilibrium towards the side with fewer moles of gas.\nFor N2(g) + 3H2(g) <=> 2NH3(g), there are 4 moles of gas on the left and 2 on the right, so increasing pressure shifts equilibrium to the right, favouring NH3 production.\nDecreasing pressure shifts the equilibrium towards the side with more moles of gas.\nIf both sides have the same number of moles of gas, changing pressure has no effect on the position of equilibrium.\nChange in temperature: increasing temperature favours the endothermic direction; decreasing temperature favours the exothermic direction.\nFor the exothermic Haber process (Delta H = -92 kJ/mol), lowering the temperature shifts equilibrium to the right (more NH3), but the rate becomes too slow -- hence a compromise temperature of 450 degrees C is used.\nA catalyst does NOT affect the position of equilibrium -- it only speeds up the attainment of equilibrium by lowering Ea equally for both directions.\nAdding an inert gas at constant volume does not affect the equilibrium position because the partial pressures (and hence concentrations) of the reacting gases remain unchanged.\nHowever, adding an inert gas at constant pressure increases the total volume, effectively decreasing the partial pressures of reacting gases -- this shifts equilibrium towards the side with more moles of gas.\nIn the Contact process, SO2 + 1/2 O2 <=> SO3 (exothermic): high pressure and low temperature favour SO3, but a compromise of 450 degrees C and 1-2 atm with V2O5 catalyst is used.\nLe Chatelier's principle is qualitative -- it tells you the direction of the shift but not the exact new concentrations. For quantitative analysis, you need Kc.\nExam tip: always state the principle, identify the change, explain which direction the equilibrium shifts and why, and describe the effect on concentrations of reactants and products."
       },
       {
-        title: "Equilibrium Constant (Kc)",
-        content: "For the reaction aA + bB ⇌ cC + dD, the equilibrium constant Kc = [C]ᶜ[D]ᵈ / [A]ᵃ[B]ᵇ. Products on top, reactants on bottom, raised to the power of their coefficients.\nKc is constant at a given temperature. A large Kc means equilibrium lies to the right (products favoured). A small Kc means it lies to the left (reactants favoured). Kc only changes with temperature.",
-        keyTerms: ["equilibrium constant", "Kc", "products over reactants", "temperature dependent"],
-        formula: "Kc = [C]ᶜ[D]ᵈ / [A]ᵃ[B]ᵇ",
-        examTip: "Solids and pure liquids are NOT included in the Kc expression — only aqueous and gaseous species. Don't include water if it's a pure liquid."
+        title: "The Equilibrium Constant Kc",
+        content: "For the general equilibrium aA + bB <=> cC + dD, the equilibrium constant Kc is defined as: Kc = [C]^c [D]^d / [A]^a [B]^b, where square brackets denote equilibrium concentrations in mol/L.\nKc is constant at a given temperature -- it does not change when concentrations or pressure change, only when temperature changes.\nA large Kc (>> 1) means the equilibrium lies to the right (products are favoured); a small Kc (<< 1) means it lies to the left (reactants are favoured).\nPure solids and pure liquids are not included in the Kc expression because their concentrations are constant.\nFor the Haber process: N2(g) + 3H2(g) <=> 2NH3(g), Kc = [NH3]^2 / ([N2][H2]^3).\nThe units of Kc depend on the stoichiometry: for the Haber process, units = (mol/L)^2 / ((mol/L)(mol/L)^3) = (mol/L)^-2 = L^2 mol^-2.\nIf the equation is reversed, the new Kc is the reciprocal of the original: Kc(reverse) = 1 / Kc(forward).\nIf the equation is multiplied by a factor n, the new Kc = (Kc)^n.\nChanging temperature changes the value of Kc: for an exothermic reaction, increasing temperature decreases Kc (equilibrium shifts left); for endothermic, increasing temperature increases Kc.\nAdding a catalyst or changing concentration/pressure does NOT change Kc -- the system adjusts concentrations to maintain the same Kc value.\nTo determine Kc experimentally, you measure equilibrium concentrations of all species, typically by 'freezing' the equilibrium (rapid cooling or dilution) and then analysing.\nAn ICE table (Initial, Change, Equilibrium) is a systematic method for calculating Kc when given initial concentrations and one equilibrium concentration.\nKp is the equilibrium constant expressed in terms of partial pressures (for gaseous equilibria): Kp = (pC)^c (pD)^d / (pA)^a (pB)^b.\nThe relationship between Kc and Kp is: Kp = Kc(RT)^(Delta n), where Delta n = moles of gaseous products - moles of gaseous reactants.\nAt LC HL level, you must be able to write Kc expressions, calculate Kc from data, and interpret the magnitude of Kc."
       },
       {
-        title: "Kc Calculations",
-        content: "To calculate Kc: set up an ICE table (Initial, Change, Equilibrium) to find equilibrium concentrations. Use concentration in mol/L (divide moles by volume in litres).\nExample: If 1 mol A and 1 mol B react in 1L, and 0.6 mol C is formed at equilibrium, then [A] = 0.4, [B] = 0.4, [C] = 0.6. For A + B ⇌ C: Kc = 0.6/(0.4 × 0.4) = 3.75.",
-        keyTerms: ["ICE table", "equilibrium concentration", "mol/L"],
-        formula: null,
-        examTip: "Always convert moles to concentration (mol/L) before substituting into the Kc expression. Use an ICE table to organise your working — examiners award method marks for this."
+        title: "Kc Calculations & ICE Tables",
+        content: "An ICE table organises information for equilibrium calculations: I = Initial concentrations, C = Change in concentrations, E = Equilibrium concentrations.\nStep 1: Write the balanced equation and the Kc expression.\nStep 2: Fill in the initial concentrations (before reaction begins) in the I row.\nStep 3: Define the change using a variable x based on stoichiometry (reactants decrease by their coefficient times x, products increase by their coefficient times x).\nStep 4: Write the equilibrium concentrations as (Initial + Change) for each species.\nStep 5: Substitute the equilibrium values into the Kc expression and solve for x.\nWorked example: For H2(g) + I2(g) <=> 2HI(g) at 450 degrees C, Kc = 50. If 1.0 mol H2 and 1.0 mol I2 are placed in a 1.0 L container, find equilibrium concentrations.\nICE table: H2: I = 1.0, C = -x, E = 1.0 - x. I2: I = 1.0, C = -x, E = 1.0 - x. HI: I = 0, C = +2x, E = 2x.\nKc = [HI]^2 / ([H2][I2]) = (2x)^2 / ((1.0 - x)(1.0 - x)) = 4x^2 / (1.0 - x)^2 = 50.\nTaking the square root of both sides: 2x / (1.0 - x) = 7.07. So 2x = 7.07 - 7.07x. Therefore 9.07x = 7.07, giving x = 0.78.\nEquilibrium concentrations: [H2] = [I2] = 1.0 - 0.78 = 0.22 M. [HI] = 2(0.78) = 1.56 M.\nCheck: Kc = (1.56)^2 / (0.22 x 0.22) = 2.434 / 0.0484 = 50.3, which is approximately 50. Confirmed.\nWhen Kc is very large, assume the reaction goes nearly to completion and work backwards from the product side.\nWhen Kc is very small, assume very little reaction occurs, and use approximations (e.g., 1.0 - x is approximately 1.0) to simplify the algebra.\nIf the equation does not simplify to a perfect square, you may need to use the quadratic formula: x = (-b +/- sqrt(b^2 - 4ac)) / 2a. Discard any negative or physically impossible roots.\nAlways verify your answer by substituting equilibrium concentrations back into the Kc expression to check it gives the stated value.\nIn exam questions, you may be given Kc and asked to find concentrations, or given concentrations and asked to calculate Kc -- practice both directions.\nRemember to check units and significant figures in your final answer."
       },
       {
-        title: "Industrial Applications — Haber Process",
-        content: "N₂ + 3H₂ ⇌ 2NH₃ (ΔH = -92 kJ/mol). Conditions: 450°C, 200 atm, iron catalyst. The forward reaction is exothermic and produces fewer moles of gas.\nLow temperature would favour products but the rate would be too slow — 450°C is a compromise. High pressure favours fewer moles (products) but is expensive — 200 atm is a compromise. Unreacted gases are recycled.",
-        keyTerms: ["Haber process", "ammonia", "nitrogen", "hydrogen", "compromise conditions", "iron catalyst"],
-        formula: "N₂(g) + 3H₂(g) ⇌ 2NH₃(g)",
-        examTip: "The exam loves asking about compromise conditions. Explain WHY each condition is a compromise between yield and rate. Mention recycling of unreacted gases."
-      },
-      {
-        title: "Industrial Applications — Contact Process",
-        content: "The Contact process produces sulfuric acid. Key step: 2SO₂ + O₂ ⇌ 2SO₃ (ΔH = -196 kJ/mol). Conditions: 450°C, 1-2 atm, V₂O₅ catalyst.\nSO₃ is dissolved in concentrated H₂SO₄ to form oleum (H₂S₂O₇), which is then diluted with water to give H₂SO₄. Direct addition of SO₃ to water would create a dangerous acid mist.",
-        keyTerms: ["Contact process", "sulfuric acid", "V₂O₅", "oleum", "SO₃"],
-        formula: "2SO₂(g) + O₂(g) ⇌ 2SO₃(g)",
-        examTip: "Know why SO₃ is not added directly to water (forms acid mist). The V₂O₅ catalyst is used because it is cheaper and less toxic than the platinum alternative."
+        title: "Industrial Applications of Equilibrium",
+        content: "The Haber process synthesises ammonia: N2(g) + 3H2(g) <=> 2NH3(g), Delta H = -92 kJ/mol.\nTo maximise yield of NH3, Le Chatelier's principle suggests: high pressure (fewer moles on product side), low temperature (exothermic forward reaction), and removal of NH3 as it forms.\nIn practice, a compromise is used: 200 atm pressure (very high pressures are expensive and dangerous), 450 degrees C (low temperature gives better yield but too slow), and an iron catalyst (to speed up attainment of equilibrium).\nThe yield is only about 15% per pass, but unreacted N2 and H2 are recycled, and NH3 is liquefied and removed continuously.\nThe Contact process produces sulfuric acid: 2SO2(g) + O2(g) <=> 2SO3(g), Delta H = -196 kJ/mol.\nHigh pressure and low temperature favour SO3 production. Conditions used: 1-2 atm (sufficient because Kc is already large), 450 degrees C (compromise), V2O5 catalyst.\nThe yield of SO3 is about 99.5% -- essentially complete conversion because Kc is very large at the operating temperature.\nSO3 is absorbed in concentrated H2SO4 to form oleum (H2S2O7), which is then diluted with water to give H2SO4. Direct addition of SO3 to water would create a dangerous acid mist.\nIn esterification: alcohol + carboxylic acid <=> ester + water, the equilibrium can be shifted to the right by using excess of one reactant (usually the cheaper alcohol) or removing water.\nA concentrated H2SO4 catalyst is used to speed up esterification, but does not change the equilibrium position.\nThe conversion of limestone in cement kilns (CaCO3 <=> CaO + CO2) is driven to completion by using an open system where CO2 is continuously removed.\nUnderstanding equilibrium principles allows chemists to optimise industrial conditions to maximise yield while minimising cost and energy consumption.\nExam questions often ask you to explain why specific conditions are chosen for industrial processes using Le Chatelier's principle and economic/safety considerations.\nAlways discuss the trade-off between thermodynamic favourability (equilibrium position) and kinetic feasibility (rate of reaction) when explaining industrial conditions.\nKey point: industrial chemistry is about compromise -- the best conditions are not always the ones that give the highest yield on paper, but those that give an acceptable yield at an acceptable rate and cost."
       }
     ]
   },
@@ -389,170 +197,149 @@ var STUDY_CHEMISTRY = [
     icon: "🧫",
     subtopics: [
       {
-        title: "Arrhenius Theory",
-        content: "Arrhenius defined an acid as a substance that produces H⁺ ions in aqueous solution, and a base as a substance that produces OH⁻ ions in aqueous solution.\nLimitation: it only applies to aqueous solutions. It cannot explain why NH₃ is a base (it doesn't contain OH⁻) or why CO₂ dissolved in water is acidic. This led to the Bronsted-Lowry theory.",
-        keyTerms: ["Arrhenius", "H⁺ ions", "OH⁻ ions", "aqueous solution"],
-        formula: null,
-        examTip: "Know the limitations of Arrhenius theory — it only works in water. The exam may ask you to compare Arrhenius and Bronsted-Lowry definitions."
+        title: "Definitions & Theories of Acids and Bases",
+        content: "Arrhenius definition: an acid produces H+ ions in aqueous solution; a base produces OH- ions in aqueous solution. This definition is limited to water as solvent.\nBronsted-Lowry definition (used at LC HL): an acid is a proton (H+) donor; a base is a proton (H+) acceptor. This is broader and applies to non-aqueous solvents.\nIn a Bronsted-Lowry acid-base reaction, a proton is transferred from the acid to the base.\nExample: HCl(aq) + H2O(l) -> H3O+(aq) + Cl-(aq). HCl donates a proton to H2O; HCl is the acid, H2O is the base.\nConjugate acid-base pairs: when an acid donates a proton, it becomes a conjugate base; when a base accepts a proton, it becomes a conjugate acid.\nIn the above example, HCl/Cl- is one conjugate pair (acid/conjugate base), and H2O/H3O+ is the other (base/conjugate acid).\nA strong acid fully dissociates in water (e.g., HCl, H2SO4, HNO3) -- essentially 100% of molecules donate their protons.\nA weak acid only partially dissociates in water (e.g., ethanoic acid CH3COOH, carbonic acid H2CO3) -- an equilibrium is established between the undissociated acid and its ions.\nA strong base fully dissociates (e.g., NaOH, KOH); a weak base partially accepts protons (e.g., NH3, which forms NH4+ + OH- in water).\nMonoprotic acids donate one proton per molecule (e.g., HCl, CH3COOH); diprotic acids donate two (e.g., H2SO4); triprotic acids donate three (e.g., H3PO4).\nAmphoteric (amphiprotic) substances can act as both acids and bases depending on the reaction partner -- water is the classic example.\nH2O + HCl -> H3O+ + Cl- (water acts as a base); H2O + NH3 -> NH4+ + OH- (water acts as an acid, donating H+ to NH3).\nThe Lewis definition (not a major focus at LC HL but worth knowing): an acid is an electron-pair acceptor; a base is an electron-pair donor.\nFor exam purposes, you should be able to identify acids, bases, and conjugate pairs in any given equation, and distinguish between strong and weak acids/bases.\nA common question is to explain, with examples, the difference between a strong acid and a concentrated acid -- strong refers to degree of dissociation, concentrated refers to the amount of solute per unit volume."
       },
       {
-        title: "Bronsted-Lowry Theory",
-        content: "A Bronsted-Lowry acid is a proton (H⁺) donor. A Bronsted-Lowry base is a proton acceptor. This is broader than Arrhenius and works in non-aqueous solutions too.\nConjugate acid-base pairs differ by one proton. In HCl + H₂O → H₃O⁺ + Cl⁻: HCl/Cl⁻ is one conjugate pair, H₂O/H₃O⁺ is the other. Water is amphoteric — it can act as both acid and base.",
-        keyTerms: ["Bronsted-Lowry", "proton donor", "proton acceptor", "conjugate pair", "amphoteric"],
-        formula: null,
-        examTip: "Identify conjugate acid-base pairs by finding species that differ by one H⁺. Water is amphoteric — acts as acid with NH₃ and as base with HCl. This is a favourite question."
+        title: "pH, pOH, and the Ionic Product of Water (Kw)",
+        content: "pH is a measure of the hydrogen ion concentration in a solution: pH = -log10[H+]. A low pH means high [H+] (acidic); a high pH means low [H+] (basic).\nThe pH scale typically runs from 0 to 14, but values outside this range are possible for very concentrated solutions.\npH 7 is neutral (at 25 degrees C), pH < 7 is acidic, pH > 7 is basic.\npOH = -log10[OH-], and the relationship is: pH + pOH = 14 (at 25 degrees C).\nWater undergoes autoionisation (self-ionisation): H2O + H2O <=> H3O+ + OH-, or simplified: H2O <=> H+ + OH-.\nThe ionic product of water, Kw = [H+][OH-] = 1.0 x 10^-14 at 25 degrees C.\nIn pure water at 25 degrees C, [H+] = [OH-] = 1.0 x 10^-7 M, so pH = 7.\nKw is temperature-dependent: it increases with temperature because autoionisation is endothermic. At higher temperatures, neutral pH is less than 7.\nFor a strong acid like HCl: [H+] = concentration of the acid (assuming full dissociation). So 0.01 M HCl has [H+] = 0.01 M, pH = -log(0.01) = 2.0.\nFor a strong base like NaOH: [OH-] = concentration of the base. Find [H+] using Kw: [H+] = Kw / [OH-]. So 0.01 M NaOH: [OH-] = 0.01, [H+] = 10^-14 / 0.01 = 10^-12, pH = 12.\nFor diprotic strong acids like H2SO4: each molecule produces 2 H+ ions, so [H+] = 2 x concentration. 0.01 M H2SO4: [H+] = 0.02 M, pH = -log(0.02) = 1.70.\nTo convert from pH back to [H+]: [H+] = 10^(-pH). For example, pH 3.5 gives [H+] = 10^-3.5 = 3.16 x 10^-4 M.\nA change of one pH unit represents a tenfold change in [H+]. So pH 3 is ten times more acidic (in terms of [H+]) than pH 4.\nThe pH of a mixture can be found by calculating the total moles of H+ (or OH- if base is in excess) in the total volume.\nPractice converting between [H+], [OH-], pH, and pOH -- these calculations are fundamental and appear frequently in the exam."
       },
       {
-        title: "Strong and Weak Acids/Bases",
-        content: "A strong acid fully dissociates in water (HCl, H₂SO₄, HNO₃). A weak acid only partially dissociates (CH₃COOH, H₂CO₃). Use a double arrow (⇌) for weak, single arrow (→) for strong.\nStrong acids have lower pH than weak acids of the same concentration. Weak acids have higher pH, react slower with metals, and conduct electricity less well (fewer ions in solution).",
-        keyTerms: ["strong acid", "weak acid", "full dissociation", "partial dissociation", "HCl", "CH₃COOH"],
-        formula: null,
-        examTip: "Concentrated ≠ strong. Concentration is the amount of acid per litre. Strength is the degree of dissociation. You can have a concentrated weak acid or a dilute strong acid."
+        title: "Ka, Weak Acid Calculations & Buffers",
+        content: "The acid dissociation constant Ka measures the strength of a weak acid: for HA <=> H+ + A-, Ka = [H+][A-] / [HA].\nA larger Ka indicates a stronger weak acid (more dissociation); a smaller Ka indicates a weaker acid.\npKa = -log10(Ka), and a smaller pKa means a stronger acid.\nFor a weak acid, the degree of dissociation is small, so we can approximate [HA] at equilibrium as approximately equal to the initial concentration c.\nSince [H+] = [A-] for a monoprotic weak acid dissociating in pure water, Ka = [H+]^2 / c, giving [H+] = sqrt(Ka x c).\nExample: Find the pH of 0.10 M ethanoic acid (Ka = 1.8 x 10^-5). [H+] = sqrt(1.8 x 10^-5 x 0.10) = sqrt(1.8 x 10^-6) = 1.34 x 10^-3 M. pH = -log(1.34 x 10^-3) = 2.87.\nCheck the approximation: degree of dissociation = 1.34 x 10^-3 / 0.10 = 1.34%, which is less than 5%, so the approximation is valid.\nIf the approximation is not valid (> 5% dissociation), you must solve the full quadratic equation.\nA buffer solution resists changes in pH when small amounts of acid or base are added, or when diluted.\nAn acidic buffer is made from a weak acid and its conjugate base (e.g., CH3COOH and CH3COONa). A basic buffer is made from a weak base and its conjugate acid (e.g., NH3 and NH4Cl).\nHow a buffer works: when H+ is added to an acidic buffer, the conjugate base A- reacts with it (A- + H+ -> HA), removing the excess H+. When OH- is added, the weak acid HA reacts with it (HA + OH- -> A- + H2O), removing the excess OH-.\nThe Henderson-Hasselbalch equation gives the pH of a buffer: pH = pKa + log10([A-] / [HA]).\nWhen [A-] = [HA], pH = pKa -- the buffer is most effective at this point, with maximum buffer capacity.\nBuffer capacity is the amount of acid or base a buffer can neutralise before the pH changes significantly. It depends on the concentrations of the weak acid and conjugate base -- higher concentrations give greater capacity.\nBuffers are essential in biological systems: blood is buffered at pH 7.4 by the carbonic acid / hydrogen carbonate system (H2CO3 / HCO3-).\nIn the exam, you may be asked to calculate the pH of a buffer, explain how it resists pH change, or choose appropriate components for a buffer at a given pH."
       },
       {
-        title: "pH Calculations",
-        content: "pH = -log₁₀[H⁺]. For strong acids, [H⁺] = concentration (full dissociation). For strong bases, find [OH⁻] first, then use Kw = [H⁺][OH⁻] = 1 × 10⁻¹⁴ at 25°C to find [H⁺].\npH 7 is neutral (at 25°C), below 7 is acidic, above 7 is basic. Each pH unit represents a tenfold change in [H⁺]. pH 3 is 10 times more acidic than pH 4.",
-        keyTerms: ["pH", "logarithm", "H⁺ concentration", "neutral", "tenfold"],
-        formula: "pH = -log[H⁺]; [H⁺] = 10⁻ᵖᴴ; Kw = [H⁺][OH⁻] = 1 × 10⁻¹⁴",
-        examTip: "For diprotic acids like H₂SO₄, [H⁺] = 2 × concentration (each molecule releases 2 H⁺). For NaOH: [OH⁻] = concentration, then [H⁺] = Kw/[OH⁻]."
+        title: "Indicators & Acid-Base Titration Curves",
+        content: "An acid-base indicator is a weak acid (HIn) where the undissociated form (HIn) and the conjugate base (In-) have different colours.\nThe equilibrium HIn <=> H+ + In- shifts depending on pH: in acidic solution, the equilibrium lies to the left (colour of HIn dominates); in basic solution, it lies to the right (colour of In- dominates).\nThe colour change occurs over a range of about 2 pH units, centred on the pKa of the indicator (pKin).\nThe indicator changes colour when [HIn] = [In-], which occurs at pH = pKa of the indicator.\nCommon indicators: litmus (red below pH 5, blue above pH 8), methyl orange (red below pH 3.1, yellow above pH 4.4), phenolphthalein (colourless below pH 8.3, pink above pH 10).\nChoosing the correct indicator: the pKa of the indicator should fall within the steep vertical portion of the titration curve (the equivalence point region).\nStrong acid + strong base titration: equivalence point at pH 7. The curve has a long steep section from about pH 3 to pH 11. Either methyl orange or phenolphthalein can be used.\nStrong acid + weak base: equivalence point below pH 7 (acidic, because the conjugate acid of the weak base is present). Use methyl orange (changes in the acidic range).\nWeak acid + strong base: equivalence point above pH 7 (basic, because the conjugate base of the weak acid is present). Use phenolphthalein (changes in the basic range).\nWeak acid + weak base: no sharp vertical section on the titration curve, so no indicator gives a sharp colour change. This titration is not suitable for volumetric analysis with indicators.\nA titration curve (pH vs. volume of titrant added) shows several key features: initial pH, buffer region (for weak acid/base), half-equivalence point (pH = pKa), equivalence point, and final pH.\nAt the half-equivalence point, exactly half the acid has been neutralised, so [HA] = [A-] and pH = pKa. This is useful for experimentally determining Ka.\nFor a diprotic acid, the titration curve shows two equivalence points and two buffer regions.\nA pH meter gives a more accurate determination of the equivalence point than an indicator, as you can plot the full titration curve and identify the inflection point.\nIn exam questions on indicators, always justify your choice by reference to the pH at the equivalence point and the pH range of the indicator."
       },
       {
-        title: "Ka and Weak Acid Calculations",
-        content: "Ka is the acid dissociation constant for a weak acid: Ka = [H⁺][A⁻] / [HA]. A larger Ka means a stronger weak acid (more dissociation).\nFor a weak acid of concentration c: [H⁺] = √(Ka × c), assuming dissociation is small compared to c. Then pH = -log[H⁺]. This approximation works when Ka is small relative to c.",
-        keyTerms: ["Ka", "acid dissociation constant", "weak acid equilibrium", "partial dissociation"],
-        formula: "Ka = [H⁺][A⁻]/[HA]; [H⁺] ≈ √(Ka × c)",
-        examTip: "Show the equilibrium expression first, then substitute. If Ka = 1.8 × 10⁻⁵ and c = 0.1 M, then [H⁺] = √(1.8 × 10⁻⁶) = 1.34 × 10⁻³, pH = 2.87."
-      },
-      {
-        title: "Buffers",
-        content: "A buffer solution resists changes in pH when small amounts of acid or base are added. An acidic buffer is made from a weak acid and its conjugate base (e.g. CH₃COOH + CH₃COONa).\nWhen acid is added, the conjugate base (A⁻) reacts with H⁺. When base is added, the weak acid (HA) reacts with OH⁻. The pH remains approximately constant because the ratio [HA]/[A⁻] changes only slightly.",
-        keyTerms: ["buffer", "weak acid", "conjugate base", "resist pH change"],
-        formula: "pH = -log Ka + log([A⁻]/[HA]) (Henderson-Hasselbalch equation)",
-        examTip: "Blood is buffered at pH 7.4 by the H₂CO₃/HCO₃⁻ system. The exam often asks for a practical example of a buffer and how it works."
-      },
-      {
-        title: "Titration Curves",
-        content: "A titration curve plots pH against volume of titrant added. Strong acid + strong base: steep vertical section at equivalence (pH 7), S-shaped curve. Weak acid + strong base: equivalence at pH > 7. Strong acid + weak base: equivalence at pH < 7.\nThe half-equivalence point (for weak acid + strong base) is where pH = pKa, and exactly half the acid has been neutralised. The buffer region is the relatively flat section before the equivalence point.",
-        keyTerms: ["titration curve", "equivalence point", "half-equivalence", "buffer region", "steep section"],
-        formula: null,
-        examTip: "Be able to sketch all four types of titration curve and identify the equivalence point pH. The choice of indicator depends on where the steep section falls."
+        title: "Neutralisation, Salts & pH of Salt Solutions",
+        content: "Neutralisation is the reaction between an acid and a base to form a salt and water: acid + base -> salt + water.\nThe enthalpy of neutralisation for strong acid + strong base is approximately -57.9 kJ/mol (for dilute aqueous solutions), because the net reaction is simply H+(aq) + OH-(aq) -> H2O(l).\nFor reactions involving weak acids or weak bases, the enthalpy of neutralisation is less exothermic because energy is required to complete the dissociation of the weak acid/base.\nSalts are ionic compounds formed from the cation of the base and the anion of the acid.\nThe pH of a salt solution depends on the strengths of the parent acid and base.\nSalt of strong acid + strong base (e.g., NaCl): neutral solution (pH 7). Neither ion undergoes hydrolysis.\nSalt of strong acid + weak base (e.g., NH4Cl): acidic solution (pH < 7). The NH4+ ion donates a proton to water: NH4+ + H2O -> NH3 + H3O+.\nSalt of weak acid + strong base (e.g., CH3COONa): basic solution (pH > 7). The CH3COO- ion accepts a proton from water: CH3COO- + H2O -> CH3COOH + OH-.\nSalt of weak acid + weak base (e.g., CH3COONH4): pH depends on the relative Ka and Kb values. If Ka > Kb, the solution is acidic; if Kb > Ka, it is basic.\nHydrolysis is the reaction of an ion with water to produce either H3O+ or OH-, thereby affecting the pH.\nAnions of weak acids are good bases (they hydrolyse to produce OH-); cations of weak bases are good acids (they hydrolyse to produce H3O+).\nThe degree of hydrolysis determines how far the pH deviates from 7.\nCommon exam question: explain why a solution of sodium carbonate (Na2CO3) is basic. Answer: CO3^2- is the conjugate base of the weak acid HCO3-, so it hydrolyses: CO3^2- + H2O -> HCO3- + OH-, producing OH- and raising the pH.\nAnother common question: predict and explain the pH of solutions of FeCl3 (acidic -- Fe3+ is a small, highly charged cation that polarises water molecules and releases H+), Na2SO4 (neutral), KF (basic -- F- is conjugate base of weak acid HF).\nUnderstanding salt hydrolysis connects acid-base chemistry with equilibrium concepts and is essential for predicting the behaviour of real chemical systems."
       }
     ]
   },
-  {
+
+{
     topic: "Organic Chemistry",
-    icon: "⬡",
+    icon: "🧪",
     subtopics: [
       {
+        title: "Introduction to Organic Chemistry",
+        content: "Organic chemistry studies carbon-containing compounds. Carbon forms four covalent bonds and can bond to itself in chains, branches, and rings (catenation), explaining the millions of organic compounds that exist.\nA homologous series is a family with the same general formula, similar chemical properties, and gradual physical property trends. Each member differs by CH₂. Structural isomers have the same molecular formula but different structural arrangements (e.g. butane and methylpropane are both C₄H₁₀).\nKey series: alkanes CₙH₂ₙ₊₂ (saturated), alkenes CₙH₂ₙ (unsaturated, C=C), alkynes CₙH₂ₙ₋₂ (triple bond), alcohols CₙH₂ₙ₊₁OH.",
+        keyTerms: ["catenation", "homologous series", "structural isomers", "hydrocarbons"],
+        formula: "Alkanes: CₙH₂ₙ₊₂ | Alkenes: CₙH₂ₙ | Alkynes: CₙH₂ₙ₋₂",
+        examTip: "Know general formulae for each series. Common exam Q: explain why structural isomers have different boiling points despite the same molecular formula (different branching → different surface area → different van der Waals)."
+      },
+      {
         title: "IUPAC Naming Rules",
-        content: "Find the longest carbon chain (parent chain). Number from the end nearest the first substituent/functional group. Name substituents as prefixes (methyl, ethyl) and functional groups as suffixes (-ol, -al, -one, -oic acid).\nExamples: CH₃CH(CH₃)CH₃ = 2-methylpropane. CH₃CH₂OH = ethanol. CH₃COOH = ethanoic acid. CH₃COCH₃ = propanone. Use commas between numbers and hyphens between numbers and words.",
-        keyTerms: ["IUPAC", "parent chain", "substituent", "prefix", "suffix", "numbering"],
+        content: "Step 1: Find the longest continuous carbon chain for the parent name (meth-, eth-, prop-, but-, pent-, hex-). Step 2: Number from the end giving substituents the lowest locants. Step 3: Name substituents (methyl, ethyl, chloro, bromo). Step 4: List alphabetically before the parent name.\nSuffixes: alkene = -ene (specify double bond position, e.g. but-1-ene), alcohol = -ol, aldehyde = -al, ketone = -one, carboxylic acid = -oic acid, ester = -yl -anoate. Multiple identical substituents use di-, tri-, tetra-.\nFunctional group naming priority: -COOH > -CHO > C=O > -OH > -NH₂ > C=C > C-X. Cyclic compounds use the prefix cyclo-. Halogen substituents: fluoro-, chloro-, bromo-, iodo-.",
+        keyTerms: ["IUPAC", "parent chain", "substituent", "locant", "suffix", "functional group priority"],
         formula: null,
-        examTip: "The exam always tests naming. Practice drawing structures from names and vice versa. Common error: not numbering from the correct end of the chain."
+        examTip: "Always number to give the LOWEST set of locants. 2,3-dimethyl is correct, not 3,4-dimethyl. The exam gives structural formulae for naming, or names for drawing — practise both directions."
       },
       {
-        title: "Alkanes (CₙH₂ₙ₊₂)",
-        content: "Alkanes are saturated hydrocarbons with only single C-C bonds. They are relatively unreactive due to strong, non-polar C-H and C-C bonds. Main reactions: combustion and substitution (with halogens in UV light).\nBoiling points increase with chain length (more van der Waals forces). Branched alkanes have lower boiling points than straight-chain isomers (less surface area for intermolecular contact).",
-        keyTerms: ["alkane", "saturated", "single bond", "combustion", "substitution", "CnH2n+2"],
-        formula: "CₙH₂ₙ₊₂ (general formula)",
-        examTip: "Alkanes burn in excess O₂ to give CO₂ + H₂O (complete combustion). In limited O₂: CO or C (soot) forms. Know the difference for exam questions."
+        title: "Alkanes — Properties and Reactions",
+        content: "Alkanes are saturated hydrocarbons (single bonds only, CₙH₂ₙ₊₂). Relatively unreactive due to strong, non-polar C-C and C-H bonds. Boiling points increase with chain length (more van der Waals forces); branched isomers have lower b.p. (less surface area).\nInsoluble in water (non-polar), soluble in non-polar solvents, less dense than water. C1-C4 are gases; C5-C17 liquids; C18+ solids at room temperature.\nComplete combustion: CH₄ + 2O₂ → CO₂ + 2H₂O. Incomplete combustion (limited O₂) produces CO (toxic) or C (soot). Alkanes also undergo free radical substitution with halogens in UV light.",
+        keyTerms: ["saturated", "van der Waals", "combustion", "non-polar"],
+        formula: "CH₄ + 2O₂ → CO₂ + 2H₂O",
+        examTip: "Explain boiling point trends: branching → reduced surface area → weaker van der Waals → lower b.p. Link each factor in a chain of reasoning for full marks."
       },
       {
-        title: "Alkenes (CₙH₂ₙ)",
-        content: "Alkenes are unsaturated hydrocarbons containing at least one C=C double bond. They are more reactive than alkanes because the pi bond is weaker and electron-rich, making it susceptible to electrophilic addition.\nTest for unsaturation: bromine water turns from brown/orange to colourless when shaken with an alkene. This is the standard test to distinguish alkenes from alkanes.",
-        keyTerms: ["alkene", "unsaturated", "double bond", "C=C", "addition reaction", "bromine water test"],
-        formula: "CₙH₂ₙ (general formula)",
-        examTip: "The bromine water test is a mandatory experiment question favourite. State the colour change: brown/orange to colourless. Alkanes do NOT decolourise bromine water."
-      },
-      {
-        title: "Alkynes (CₙH₂ₙ₋₂)",
-        content: "Alkynes contain a C≡C triple bond (one sigma + two pi bonds). Ethyne (C₂H₂) is the simplest. They undergo similar addition reactions to alkenes but can add two equivalents.\nEthyne is a linear molecule (180° bond angle). It burns with a very hot flame (used in oxyacetylene welding). Alkynes also decolourise bromine water, confirming unsaturation.",
-        keyTerms: ["alkyne", "triple bond", "ethyne", "linear", "addition"],
-        formula: "CₙH₂ₙ₋₂ (general formula)",
-        examTip: "Alkynes are less commonly examined than alkenes, but know ethyne's structure, bonding (1σ + 2π), and that it is linear."
+        title: "Alkenes — Properties and Reactions",
+        content: "Alkenes contain at least one C=C double bond (CₙH₂ₙ, unsaturated). The double bond has one sigma bond (head-on overlap) and one pi bond (sideways p-orbital overlap). The pi bond makes alkenes reactive.\nPlanar around C=C with ~120° bond angles. No rotation around C=C gives rise to cis-trans (geometric) isomerism. Cis: substituents same side; trans: opposite sides.\nTest for unsaturation: bromine water (Br₂(aq)) decolourises from orange to colourless via electrophilic addition. Alkanes do NOT decolourise bromine water. Alkenes undergo addition with H₂ (hydrogenation), HBr, HCl, H₂O (hydration), and Br₂.",
+        keyTerms: ["unsaturated", "sigma bond", "pi bond", "cis-trans isomerism", "bromine water test", "electrophilic addition"],
+        formula: "C₂H₄ + Br₂ → CH₂BrCH₂Br",
+        examTip: "Bromine water test is a mandatory experiment — state observation (decolourises) and reaction type (electrophilic addition). Distinguish sigma from pi bonds clearly."
       },
       {
         title: "Alcohols",
-        content: "Alcohols contain the -OH functional group. Named with the suffix -ol (methanol, ethanol, propan-1-ol). They are classified as primary (1°), secondary (2°), or tertiary (3°) based on the carbon bearing the OH.\nAlcohols have higher boiling points than corresponding alkanes due to hydrogen bonding. Short-chain alcohols are soluble in water (H-bonding with water). They undergo oxidation, dehydration, and esterification reactions.",
-        keyTerms: ["alcohol", "-OH", "primary", "secondary", "tertiary", "hydrogen bonding", "-ol"],
-        formula: null,
-        examTip: "Know oxidation products: primary alcohol → aldehyde → carboxylic acid. Secondary alcohol → ketone. Tertiary alcohols resist oxidation. This pattern is frequently examined."
+        content: "Alcohols contain -OH (general formula CₙH₂ₙ₊₁OH). Classified as primary (1°: 1 carbon on C-OH), secondary (2°: 2 carbons), or tertiary (3°: 3 carbons). Higher b.p. than similar-mass alkanes due to hydrogen bonding.\nShort-chain alcohols are miscible with water (H-bonding); solubility decreases as chain length grows. Ethanol made by fermentation (C₆H₁₂O₆ → 2C₂H₅OH + 2CO₂) or hydration of ethene (C₂H₄ + H₂O → C₂H₅OH).\nOxidation: 1° alcohol → aldehyde → carboxylic acid; 2° → ketone; 3° resists oxidation (no H on C-OH). Oxidising agent: acidified K₂Cr₂O₇ (orange → green).",
+        keyTerms: ["hydroxyl", "primary", "secondary", "tertiary", "hydrogen bonding", "fermentation", "oxidation"],
+        formula: "C₆H₁₂O₆ → 2C₂H₅OH + 2CO₂ | C₂H₄ + H₂O → C₂H₅OH",
+        examTip: "Classic Q: why can't 3° alcohols be oxidised? No H on the carbon bearing -OH. Know 1°→aldehyde→acid (reflux) vs 1°→aldehyde only (distillation)."
+      },
+      {
+        title: "Carboxylic Acids and Esters",
+        content: "Carboxylic acids contain -COOH; they are weak acids (partially dissociate). React with bases (→ salt + water), carbonates (→ salt + water + CO₂), metals (→ salt + H₂). Relatively high b.p. due to H-bonding.\nEsters form by esterification: acid + alcohol with conc. H₂SO₄ catalyst: CH₃COOH + C₂H₅OH ⇌ CH₃COOC₂H₅ + H₂O. Named: alcohol part (-yl) then acid part (-anoate), e.g. ethyl ethanoate.\nEsters have fruity smells, lower b.p. than corresponding acids (no O-H hydrogen bonding). Hydrolysis reverses esterification; base hydrolysis (saponification) produces soap.",
+        keyTerms: ["carboxyl", "weak acid", "esterification", "ester naming", "saponification"],
+        formula: "CH₃COOH + C₂H₅OH ⇌ CH₃COOC₂H₅ + H₂O",
+        examTip: "Ester naming: alcohol first (-yl), acid second (-anoate). The mandatory experiment involves reflux with conc. H₂SO₄ catalyst — know the setup and why reflux is used."
       },
       {
         title: "Aldehydes and Ketones",
-        content: "Aldehydes have a -CHO group at the end of the chain (suffix -al). Ketones have a C=O group within the chain (suffix -one). Both contain the carbonyl group (C=O).\nAdehydes are easily oxidised to carboxylic acids; ketones resist oxidation. Tests to distinguish them: Fehling's solution (aldehydes give brick-red precipitate, ketones don't), Tollens' reagent (aldehydes give silver mirror, ketones don't).",
-        keyTerms: ["aldehyde", "ketone", "carbonyl", "-CHO", "C=O", "Fehling's", "Tollens'"],
-        formula: null,
-        examTip: "Fehling's and Tollens' tests distinguish aldehydes from ketones. Remember: aldehydes are more easily oxidised. Brady's reagent (2,4-DNP) confirms ANY carbonyl compound."
+        content: "Both contain C=O (carbonyl). Aldehydes: carbonyl at chain end (RCHO, suffix -al). Ketones: carbonyl within chain (RCOR', suffix -one). Aldehydes from mild oxidation of 1° alcohols; ketones from 2° alcohols.\nDistinguishing test — Fehling's solution: aldehydes give brick-red Cu₂O precipitate; ketones no reaction. Tollens' reagent (ammoniacal AgNO₃): aldehydes give silver mirror; ketones no reaction. Aldehydes are reducing agents; ketones resist oxidation.\nTo stop oxidation at aldehyde stage: distil product away immediately. For carboxylic acid: reflux to allow further oxidation.",
+        keyTerms: ["carbonyl", "aldehyde", "ketone", "Fehling's test", "Tollens' test", "silver mirror"],
+        formula: "RCHO → RCOOH (further oxidation) | Ag⁺ → Ag (Tollens')",
+        examTip: "Two tests to distinguish aldehydes from ketones: Fehling's (brick-red precipitate) and Tollens' (silver mirror). State observation AND conclusion for marks."
       },
       {
-        title: "Carboxylic Acids",
-        content: "Carboxylic acids contain the -COOH group (suffix -oic acid). They are weak acids — they partially dissociate in water to release H⁺. Examples: methanoic acid (HCOOH), ethanoic acid (CH₃COOH).\nThey react with bases to form salts and water, with carbonates to produce CO₂, and with alcohols to form esters. They have high boiling points due to hydrogen bonding (can form dimers with two H-bonds).",
-        keyTerms: ["carboxylic acid", "-COOH", "weak acid", "salt", "ester", "dimer"],
-        formula: null,
-        examTip: "The reaction with sodium carbonate (fizzing/CO₂) is a simple test for carboxylic acids. Write the equation: 2CH₃COOH + Na₂CO₃ → 2CH₃COONa + H₂O + CO₂."
-      },
-      {
-        title: "Esters",
-        content: "Esters are formed from a carboxylic acid + alcohol in the presence of an acid catalyst (H₂SO₄). The reaction is called esterification (a condensation reaction — water is released).\nEsters have fruity smells and are used as flavourings and solvents. Named as alkyl alkanoate: ethyl ethanoate from ethanol + ethanoic acid. They have lower boiling points than the parent acid (no H-bonding between ester molecules).",
-        keyTerms: ["ester", "esterification", "condensation", "acid catalyst", "fruity smell", "alkyl alkanoate"],
-        formula: "CH₃COOH + C₂H₅OH ⇌ CH₃COOC₂H₅ + H₂O",
-        examTip: "Ester naming: the alcohol part comes first (ethyl from ethanol), then the acid part (ethanoate from ethanoic acid). Remember the acid catalyst (conc. H₂SO₄) and that it's reversible."
-      },
-      {
-        title: "Isomerism",
-        content: "Structural isomers have the same molecular formula but different structural arrangements. Types: chain isomers (different carbon skeleton), position isomers (different position of functional group), functional group isomers (different functional group).\nGeometric (cis-trans) isomers occur in alkenes where rotation around C=C is restricted. Cis = same side, trans = opposite side. Required: two different groups on each carbon of the C=C.",
-        keyTerms: ["structural isomer", "chain isomer", "position isomer", "functional group isomer", "cis", "trans", "geometric"],
-        formula: null,
-        examTip: "Draw ALL possible isomers systematically. C₄H₁₀ has 2 structural isomers (butane, methylpropane). C₄H₈ has more (but-1-ene, but-2-ene, methylpropene, plus cis/trans of but-2-ene)."
+        title: "Functional Groups Summary",
+        content: "A functional group determines the characteristic reactions of a compound. Key groups: alkyl halide (-X), alcohol (-OH), aldehyde (-CHO), ketone (-CO-), carboxylic acid (-COOH), ester (-COO-), amine (-NH₂), amide (-CONH₂).\nHaloalkanes undergo nucleophilic substitution: the polar C-X bond (C is δ+) is attacked by nucleophiles (OH⁻, CN⁻, NH₃). Example: CH₃Br + NaOH → CH₃OH + NaBr.\nAmines (-NH₂) are organic bases; amides (-CONH₂) contain the peptide bond found in proteins. The interconversion roadmap: alkane → haloalkane → alcohol → aldehyde/ketone → carboxylic acid → ester.",
+        keyTerms: ["functional group", "haloalkane", "nucleophilic substitution", "amine", "amide", "interconversion"],
+        formula: "CH₃Br + NaOH → CH₃OH + NaBr",
+        examTip: "Draw the functional group interconversion roadmap. The exam tests: given compound A, what reagents/conditions convert it to compound B? Know each step and its conditions."
       }
     ]
   },
   {
     topic: "Organic Reactions",
-    icon: "🔄",
+    icon: "⚗️",
     subtopics: [
       {
-        title: "Addition Reactions",
-        content: "Addition reactions occur with unsaturated compounds (alkenes/alkynes). A molecule adds across the double bond, breaking the pi bond. The product has only single bonds (becomes saturated).\nExamples: hydrogenation (+ H₂, Ni catalyst), halogenation (+ Br₂), hydrohalogenation (+ HBr), hydration (+ H₂O, H₂SO₄ catalyst). Markovnikov's rule: H adds to the carbon with more H atoms already.",
-        keyTerms: ["addition", "hydrogenation", "halogenation", "hydration", "Markovnikov's rule"],
-        formula: "CH₂=CH₂ + Br₂ → CH₂BrCH₂Br",
-        examTip: "Markovnikov's rule: 'The rich get richer' — H goes to the C with more H's. This determines which product forms when HBr adds to propene: 2-bromopropane, not 1-bromopropane."
+        title: "Free Radical Substitution",
+        content: "Mechanism for alkane + halogen in UV light. Three stages: Initiation — UV causes homolytic fission: Cl₂ → 2Cl• (two radicals, each with an unpaired electron). Propagation — Step 1: Cl• + CH₄ → •CH₃ + HCl. Step 2: •CH₃ + Cl₂ → CH₃Cl + Cl• (radical regenerated = chain reaction). Termination — any two radicals combine: Cl• + Cl•, •CH₃ + Cl•, •CH₃ + •CH₃ → C₂H₆.\nEthane as by-product is evidence for the radical mechanism. Limitation: further substitution gives a mixture (CH₃Cl → CH₂Cl₂ → CHCl₃ → CCl₄). Use fish-hook (half) arrows for single-electron movement, not curly arrows.",
+        keyTerms: ["free radical", "homolytic fission", "initiation", "propagation", "termination", "chain reaction"],
+        formula: "Cl₂ → 2Cl• | Cl• + CH₄ → •CH₃ + HCl | •CH₃ + Cl₂ → CH₃Cl + Cl•",
+        examTip: "Name ALL three stages. State UV light is needed (not heat). Mention the limitation: mixture of products. Ethane by-product proves radicals exist."
       },
       {
-        title: "Free Radical Substitution",
-        content: "Alkanes react with halogens (Cl₂, Br₂) in UV light via a free radical mechanism. Three stages: initiation (UV breaks Cl-Cl homolytically into 2 Cl• radicals), propagation (chain reaction), termination (two radicals combine).\nInitiation: Cl₂ → 2Cl•. Propagation: CH₄ + Cl• → •CH₃ + HCl, then •CH₃ + Cl₂ → CH₃Cl + Cl•. Termination: Cl• + Cl• → Cl₂ (or other radical combinations).",
-        keyTerms: ["free radical", "substitution", "initiation", "propagation", "termination", "UV light", "homolytic fission"],
-        formula: "CH₄ + Cl₂ → CH₃Cl + HCl (overall, in UV light)",
-        examTip: "You MUST know all three stages with equations. Use dots (•) to show unpaired electrons on radicals. The propagation steps are self-sustaining — that's the chain reaction."
+        title: "Electrophilic Addition",
+        content: "Characteristic reaction of alkenes. An electrophile (electron-pair acceptor) attacks the electron-rich C=C pi bond. Mechanism with HBr + ethene: Step 1 — pi electrons attract HBr, break the pi bond to form C-H bond; HBr undergoes heterolytic fission, creating a carbocation intermediate. Step 2 — Br⁻ attacks the carbocation.\nMarkovnikov's rule (unsymmetrical alkenes): H adds to the carbon with MORE hydrogens. HBr + propene → mainly 2-bromopropane (secondary carbocation more stable than primary).\nBr₂ addition: pi electrons induce a dipole in Br₂; one Br adds while the other leaves as Br⁻, then Br⁻ attacks. This explains the decolourisation of bromine water.",
+        keyTerms: ["electrophile", "carbocation", "Markovnikov's rule", "heterolytic fission", "pi bond attack"],
+        formula: "CH₂=CH₂ + HBr → CH₃CH₂Br | CH₃CH=CH₂ + HBr → CH₃CHBrCH₃",
+        examTip: "Draw the mechanism with curly arrows from the pi bond to the electrophile. Show the carbocation intermediate. State Markovnikov's rule for unsymmetrical alkenes."
+      },
+      {
+        title: "Nucleophilic Substitution",
+        content: "Occurs at haloalkanes. A nucleophile (electron-pair donor with a lone pair) attacks the δ+ carbon of the polar C-X bond. Common nucleophiles: OH⁻ (→ alcohol), CN⁻ (→ nitrile), NH₃ (→ amine).\nMechanism: nucleophile donates lone pair to δ+ carbon (curly arrow from nucleophile to carbon); C-X bond breaks heterolytically (Br⁻ leaves). Conditions: aqueous NaOH + reflux.\nReactivity order: C-I > C-Br > C-Cl > C-F (bond strength decreases, I⁻ is best leaving group). Aqueous NaOH → substitution; ethanolic KOH → elimination (gives alkene instead).",
+        keyTerms: ["nucleophile", "leaving group", "haloalkane", "reflux", "SN2"],
+        formula: "CH₃Br + OH⁻ → CH₃OH + Br⁻ | CH₃Br + CN⁻ → CH₃CN + Br⁻",
+        examTip: "Draw the curly arrow FROM the nucleophile's lone pair TO the δ+ carbon. Key distinction: aqueous NaOH = substitution; ethanolic KOH = elimination. This is tested almost every year."
       },
       {
         title: "Elimination Reactions",
-        content: "Elimination removes atoms from adjacent carbons to form a double bond. Dehydration of alcohols (removal of H₂O) uses concentrated H₂SO₄ or Al₂O₃ as catalyst at high temperature.\nDehydrohalogenation removes HX from a haloalkane using ethanolic KOH (alcoholic, not aqueous). Example: CH₃CH₂Br + KOH(ethanol) → CH₂=CH₂ + KBr + H₂O.",
-        keyTerms: ["elimination", "dehydration", "dehydrohalogenation", "double bond formation"],
-        formula: "C₂H₅OH → C₂H₄ + H₂O (with conc. H₂SO₄, 170°C)",
-        examTip: "Elimination vs substitution depends on conditions. Ethanolic KOH = elimination (gives alkene). Aqueous KOH = substitution (gives alcohol). The exam tests this distinction."
+        content: "Elimination removes atoms from adjacent carbons to form a C=C double bond plus a small molecule (HX or H₂O). Competes with substitution at haloalkanes.\nDehydrohalogenation: haloalkane + ethanolic KOH → alkene + KX + H₂O. KOH acts as a base, removing H from the adjacent carbon. Dehydration: alcohol + conc. H₂SO₄ at 170°C (or hot Al₂O₃) → alkene + H₂O.\nFactors favouring elimination over substitution: strong base, ethanol solvent, high temperature, tertiary substrate. Zaitsev's rule: the more substituted alkene is the major product.",
+        keyTerms: ["elimination", "dehydrohalogenation", "dehydration", "Zaitsev's rule"],
+        formula: "CH₃CH₂Br + KOH(ethanol) → CH₂=CH₂ + KBr + H₂O",
+        examTip: "The key exam distinction: aqueous NaOH → substitution (alcohol). Ethanolic KOH → elimination (alkene). Know conditions for dehydration of alcohols too."
       },
       {
-        title: "Oxidation of Alcohols",
-        content: "Primary alcohols are oxidised to aldehydes (with distillation to remove product) and then to carboxylic acids (with reflux). Secondary alcohols are oxidised to ketones. Tertiary alcohols resist oxidation.\nOxidising agents: acidified potassium dichromate (K₂Cr₂O₇/H₂SO₄) changes from orange to green when oxidation occurs. Acidified potassium permanganate (purple to colourless) can also be used.",
-        keyTerms: ["oxidation", "K₂Cr₂O₇", "orange to green", "distillation", "reflux", "primary", "secondary", "tertiary"],
-        formula: "CH₃CH₂OH + [O] → CH₃CHO + H₂O (distil); CH₃CHO + [O] → CH₃COOH (reflux)",
-        examTip: "Distil to get the aldehyde (it's removed before further oxidation). Reflux to get the carboxylic acid (keeps everything in the flask for complete oxidation). Know the difference."
+        title: "Addition Polymerisation",
+        content: "Many unsaturated monomers (with C=C) join to form a long-chain polymer with no by-product. Double bonds open and link: n(CH₂=CH₂) → -(CH₂-CH₂)ₙ-. High pressure + catalyst required.\nExamples: poly(ethene) from ethene, PVC from chloroethene (CH₂=CHCl), polystyrene from phenylethene, PTFE from tetrafluoroethene.\nAddition polymers are non-biodegradable (strong C-C backbone). Environmental issues: persistence in landfills/oceans. Solutions: recycling, incineration with energy recovery, biodegradable alternatives.",
+        keyTerms: ["addition polymerisation", "monomer", "polymer", "repeat unit", "non-biodegradable"],
+        formula: "n(CH₂=CH₂) → -(CH₂-CH₂)ₙ-",
+        examTip: "Given a polymer, draw the monomer (reintroduce C=C). Given a monomer, draw the repeat unit in brackets with extending bonds. Always show the extending bonds."
       },
       {
-        title: "Esterification and Hydrolysis",
-        content: "Esterification: carboxylic acid + alcohol ⇌ ester + water (acid catalyst, reflux). This is a reversible condensation reaction.\nHydrolysis is the reverse: ester + water → acid + alcohol (acid hydrolysis) or ester + NaOH → sodium salt of acid + alcohol (base hydrolysis/saponification). Base hydrolysis is irreversible and goes to completion.",
-        keyTerms: ["esterification", "hydrolysis", "saponification", "condensation", "reflux"],
-        formula: "RCOOH + R'OH ⇌ RCOOR' + H₂O",
-        examTip: "Saponification (base hydrolysis of fats/oils with NaOH) produces soap (sodium salt of fatty acid) + glycerol. This is a common long question on the exam."
+        title: "Condensation Polymerisation",
+        content: "Monomers with TWO functional groups join, releasing a small molecule (usually water) at each linkage. Monomers need not be unsaturated.\nPolyesters: diacid + diol → ester linkage (-COO-) + H₂O. Example: PET from terephthalic acid + ethylene glycol. Polyamides: diacid + diamine → amide linkage (-CONH-) + H₂O. Example: nylon-6,6. Proteins are natural polyamides (peptide bonds).\nCondensation polymers are potentially biodegradable (ester/amide linkages can be hydrolysed by enzymes). Key contrast with addition polymers.",
+        keyTerms: ["condensation polymerisation", "polyester", "polyamide", "ester linkage", "amide linkage", "biodegradable"],
+        formula: "diacid + diol → polyester + nH₂O | diacid + diamine → polyamide + nH₂O",
+        examTip: "Addition: no by-product, unsaturated monomers. Condensation: water released, bifunctional monomers. Identify the linkage: ester (-COO-) or amide (-CONH-)."
       },
       {
-        title: "Polymerisation",
-        content: "Addition polymerisation: monomers with C=C double bonds join together. The double bond opens and monomers link in a chain. No by-product. Example: ethene → polyethene.\nCondensation polymerisation: monomers with two functional groups join, releasing a small molecule (usually water). Examples: polyesters (diol + diacid), polyamides/nylon (diamine + diacid), proteins (amino acids).",
-        keyTerms: ["addition polymerisation", "condensation polymerisation", "monomer", "polymer", "polyethene", "nylon", "polyester"],
-        formula: "nCH₂=CH₂ → -(CH₂-CH₂)-ₙ (addition polymerisation of ethene)",
-        examTip: "Be able to draw the repeating unit from the monomer and vice versa. For addition polymers: open the double bond. For condensation: show where H₂O is lost from the functional groups."
+        title: "Oxidation and Reduction in Organic Chemistry",
+        content: "Oxidation = gain of O or loss of H (increase in C oxidation state). Reduction = loss of O or gain of H. Oxidation level: alkane → alcohol → aldehyde/ketone → carboxylic acid → CO₂.\nOxidising agents: K₂Cr₂O₇/H₂SO₄ (orange → green), KMnO₄/H₂SO₄ (purple → colourless). Reducing agents: LiAlH₄ (strong — reduces COOH to alcohol), NaBH₄ (mild — reduces C=O only), H₂/Ni (hydrogenation).\nPractical: distillation apparatus = aldehyde product (removed before further oxidation). Reflux = carboxylic acid product (kept in flask for complete oxidation).",
+        keyTerms: ["oxidation", "reduction", "K₂Cr₂O₇", "LiAlH₄", "NaBH₄", "distillation vs reflux"],
+        formula: "RCH₂OH → RCHO → RCOOH (1° alcohol oxidation sequence)",
+        examTip: "Distillation = aldehyde. Reflux = carboxylic acid. This distinction comes up almost every year. Know the colour changes of the oxidising agents."
+      },
+      {
+        title: "Reactions of Benzene",
+        content: "Benzene (C₆H₆) is aromatic: planar hexagonal ring, six delocalised pi electrons above and below the ring. This delocalisation gives extra stability, so benzene undergoes electrophilic SUBSTITUTION (preserving the ring) rather than addition.\nNitration: C₆H₆ + conc. HNO₃/H₂SO₄ at 50-55°C → nitrobenzene. Electrophile: NO₂⁺ (nitronium ion). Halogenation: C₆H₆ + Br₂ with AlBr₃ catalyst → bromobenzene + HBr. Electrophile: Br⁺.\nKey contrast: alkenes undergo addition (no catalyst needed with Br₂); benzene requires a Lewis acid catalyst and undergoes substitution. The exam tests this comparison frequently.",
+        keyTerms: ["benzene", "aromatic", "delocalisation", "electrophilic substitution", "nitration", "halogenation"],
+        formula: "C₆H₆ + HNO₃ → C₆H₅NO₂ + H₂O | C₆H₆ + Br₂ → C₆H₅Br + HBr",
+        examTip: "Benzene = substitution (preserves stable ring). Alkenes = addition. Know the electrophile for each reaction: NO₂⁺ for nitration, Br⁺ for halogenation."
       }
     ]
   },
@@ -561,94 +348,94 @@ var STUDY_CHEMISTRY = [
     icon: "🔥",
     subtopics: [
       {
-        title: "Exothermic and Endothermic Reactions",
-        content: "Exothermic reactions release energy to the surroundings (ΔH is negative). The products have less energy than the reactants. Examples: combustion, neutralisation, respiration.\nEndothermic reactions absorb energy from the surroundings (ΔH is positive). The products have more energy than the reactants. Examples: photosynthesis, dissolving ammonium nitrate, thermal decomposition.",
-        keyTerms: ["exothermic", "endothermic", "enthalpy change", "ΔH", "energy profile diagram"],
-        formula: null,
-        examTip: "Draw energy profile diagrams clearly: label reactants, products, activation energy (Ea), and ΔH. For exothermic: products lower. For endothermic: products higher."
+        title: "Enthalpy and Enthalpy Change",
+        content: "Enthalpy (H) is total heat content at constant pressure. We measure enthalpy change (ΔH). Exothermic: ΔH < 0, heat released, temperature rises (combustion, neutralisation). Endothermic: ΔH > 0, heat absorbed, temperature falls (thermal decomposition).\nStandard conditions: 25°C (298 K), 1 atm, 1 mol/L solutions. Standard enthalpy changes denoted ΔH°. All substances in their most stable form at standard conditions.\nDraw enthalpy level diagrams: exothermic = products lower than reactants; endothermic = products higher. Label activation energy (Ea) and ΔH.",
+        keyTerms: ["enthalpy", "exothermic", "endothermic", "standard conditions", "ΔH"],
+        formula: "ΔH = H(products) - H(reactants)",
+        examTip: "Always include sign AND units (kJ/mol). Draw labelled enthalpy diagrams showing reactants, products, Ea, and ΔH."
       },
       {
-        title: "Enthalpy Definitions",
-        content: "Enthalpy of formation (ΔHf): energy change when 1 mole of a compound is formed from its elements in their standard states. Enthalpy of combustion (ΔHc): energy change when 1 mole of a substance is completely burned in excess oxygen.\nEnthalpy of neutralisation: energy change when an acid and base react to form 1 mole of water. For strong acid + strong base, ΔH ≈ -57.3 kJ/mol. It's less for weak acids/bases (energy used for dissociation).",
-        keyTerms: ["enthalpy of formation", "enthalpy of combustion", "enthalpy of neutralisation", "standard states"],
-        formula: null,
-        examTip: "All definitions specify '1 mole'. The enthalpy of formation of an element in its standard state is zero by definition. This is used in Hess's Law calculations."
+        title: "Standard Enthalpy Definitions",
+        content: "ΔHf° (formation): enthalpy change when ONE mole of compound forms from elements in standard states. ΔHf° of any element in its standard state = 0 by definition.\nΔHc° (combustion): enthalpy change when ONE mole burns completely in excess O₂. Always exothermic (negative). ΔHn° (neutralisation): enthalpy change producing one mole of water. Strong acid + strong base ≈ -57.3 kJ/mol; weaker value for weak acids/bases (energy used to ionise).\nBond enthalpy: energy to break one mole of a bond in gaseous state. Breaking bonds = endothermic; forming bonds = exothermic. ΔH(reaction) ≈ Σ(bonds broken) - Σ(bonds formed).",
+        keyTerms: ["enthalpy of formation", "enthalpy of combustion", "enthalpy of neutralisation", "bond enthalpy"],
+        formula: "ΔH = Σ(bonds broken) - Σ(bonds formed) | ΔHf°(element) = 0",
+        examTip: "Definitions must say 'one mole', 'standard conditions', and specify states. Missing any of these loses marks. Explain why weak acid neutralisation differs from -57.3."
       },
       {
-        title: "Hess's Law",
-        content: "Hess's Law states that the total enthalpy change for a reaction is independent of the route taken, provided the initial and final conditions are the same. This is a consequence of energy conservation.\nTwo main calculation methods: (1) Using enthalpies of formation: ΔH = ΣΔHf(products) - ΣΔHf(reactants). (2) Using enthalpies of combustion: ΔH = ΣΔHc(reactants) - ΣΔHc(products). Note the reversal.",
-        keyTerms: ["Hess's Law", "enthalpy cycle", "formation", "combustion", "route"],
-        formula: "ΔH = ΣΔHf(products) - ΣΔHf(reactants) OR ΔH = ΣΔHc(reactants) - ΣΔHc(products)",
-        examTip: "Hess's Law appears almost every year. Draw the enthalpy cycle diagram clearly. Remember: formation = products minus reactants, combustion = reactants minus products (reversed!)."
-      },
-      {
-        title: "Bond Energy Calculations",
-        content: "Bond energy (bond dissociation energy) is the energy required to break one mole of a particular bond in the gaseous state. Breaking bonds requires energy (endothermic); forming bonds releases energy (exothermic).\nΔH = Σ(bonds broken) - Σ(bonds formed). If more energy is released forming bonds than is absorbed breaking them, the reaction is exothermic (ΔH negative).",
-        keyTerms: ["bond energy", "bond breaking", "bond forming", "gaseous state"],
-        formula: "ΔH = Σ(bond energies broken) - Σ(bond energies formed)",
-        examTip: "Bond energies give approximate ΔH values (averages). Draw out the full structural formulas and count ALL bonds broken and formed. Don't forget O=O in O₂ and N≡N in N₂."
+        title: "Hess's Law and Worked Examples",
+        content: "Hess's Law: total ΔH is independent of the route taken (enthalpy is a state function). Using formation: ΔH° = ΣΔHf°(products) - ΣΔHf°(reactants). Using combustion: ΔH° = ΣΔHc°(reactants) - ΣΔHc°(products) — note reversed!\nWorked example (formation): CH₄ + 2O₂ → CO₂ + 2H₂O. ΔH° = [(-393.5) + 2(-285.8)] - [(-74.8) + 0] = -965.1 + 74.8 = -890.3 kJ/mol.\nWorked example (bond enthalpies): H₂ + Cl₂ → 2HCl. Broken: H-H (436) + Cl-Cl (242) = 678 kJ. Formed: 2×H-Cl (2×431) = 862 kJ. ΔH = 678 - 862 = -184 kJ/mol. Bond enthalpy values are approximate (averages across many compounds).",
+        keyTerms: ["Hess's Law", "state function", "enthalpy cycle", "formation route", "combustion route"],
+        formula: "ΔH° = ΣΔHf°(products) - ΣΔHf°(reactants) | ΔH° = ΣΔHc°(reactants) - ΣΔHc°(products)",
+        examTip: "Formation: products minus reactants. Combustion: reactants minus products (opposite!). Show ALL working with stoichiometric coefficients. Bond enthalpy gives approximate values — state this."
       },
       {
         title: "Calorimetry",
-        content: "Calorimetry measures the heat energy change in a reaction by measuring the temperature change of a known mass of water. The equation q = mcΔT is used, where m = mass of water (g), c = specific heat capacity (4.18 J/g/°C), ΔT = temperature change.\nTo find ΔH per mole: divide q by the moles of substance reacted. Sources of error: heat loss to surroundings, incomplete combustion, heat absorbed by the calorimeter itself.",
-        keyTerms: ["calorimetry", "q = mcΔT", "specific heat capacity", "temperature change", "heat loss"],
-        formula: "q = mcΔT; ΔH = -q/n (per mole)",
-        examTip: "The negative sign in ΔH = -q/n is because heat released by the reaction is absorbed by the water. Always state sources of error: heat loss is the main one."
+        content: "Measures enthalpy changes using a calorimeter (simplest: polystyrene cup with water). Heat absorbed: q = mcΔT (m = mass of water in g, c = 4.18 J/g/K, ΔT = temperature change). ΔH = -q/n (negative sign: heat gained by water = lost by reaction).\nWorked example: 50 mL of 1.0 M HCl + 50 mL of 1.0 M NaOH, ΔT = 6.8°C. q = 100 × 4.18 × 6.8 = 2842 J. Moles H₂O formed = 0.050. ΔH = -2842/0.050 = -56,840 J/mol ≈ -56.8 kJ/mol (accepted: -57.3).\nSources of error: heat loss to surroundings (main error), heat absorbed by calorimeter, incomplete reaction, assuming density/specific heat = water. Bomb calorimeter (sealed steel vessel) gives more accurate results.",
+        keyTerms: ["calorimetry", "specific heat capacity", "polystyrene cup", "bomb calorimeter", "heat loss"],
+        formula: "q = mcΔT | ΔH = -q/n | c(water) = 4.18 J/g/K",
+        examTip: "Always state sources of error (heat loss is #1). Convert J to kJ (÷1000). The negative sign in ΔH = -q/n is often forgotten. Round only at the end."
       },
       {
-        title: "Mandatory Experiment — Heat of Reaction",
-        content: "Measure the temperature change when a known amount of reactant reacts with excess of the other (e.g. dissolving NaOH in HCl). Use a polystyrene cup as a calorimeter to minimise heat loss.\nProcedure: measure a known volume of acid, record initial temperature, add base, stir, record highest temperature. Calculate q = mcΔT using mass of total solution. Then ΔH = q/moles of limiting reagent.",
-        keyTerms: ["polystyrene cup", "thermometer", "temperature rise", "mcΔT"],
-        formula: "q = mcΔT, then ΔH = q / n",
-        examTip: "Use a lid on the polystyrene cup. Rinse the cup with deionised water between experiments. Assume the density and specific heat capacity of the solution are the same as water."
+        title: "Lattice Enthalpy and Born-Haber Cycles",
+        content: "Lattice enthalpy (ΔHlatt°): enthalpy change when one mole of ionic compound forms from gaseous ions. Na⁺(g) + Cl⁻(g) → NaCl(s) — highly exothermic.\nBorn-Haber cycle applies Hess's Law: ΔHf° = ΔHat°(metal) + ΔHat°(non-metal) + IE(metal) + EA(non-metal) + ΔHlatt°. Rearrange to find lattice enthalpy.\nLattice enthalpy depends on ionic charge and radius (Coulomb's law: F = kq₁q₂/r²). Higher charges and smaller ions → larger lattice enthalpy → higher melting point. MgO >> NaCl.",
+        keyTerms: ["lattice enthalpy", "Born-Haber cycle", "ionisation energy", "electron affinity", "Coulomb's law"],
+        formula: "ΔHf° = ΔHat°(M) + ΔHat°(X) + IE + EA + ΔHlatt°",
+        examTip: "Draw the cycle step by step. Get signs right: IE positive, EA₁ usually negative, lattice enthalpy (formation definition) negative."
+      },
+      {
+        title: "Entropy and Gibbs Free Energy",
+        content: "Entropy (S) measures disorder. Increases when: solid → liquid → gas, more gas moles produced, solute dissolves, temperature rises. ΔS° = ΣS°(products) - ΣS°(reactants). Units: J/K/mol (NOT kJ).\nGibbs free energy: ΔG° = ΔH° - TΔS° (T in Kelvin). Spontaneous when ΔG° < 0. If ΔH < 0 and ΔS > 0: always spontaneous. If ΔH > 0 and ΔS < 0: never spontaneous. Mixed signs: depends on temperature. At equilibrium: ΔG° = 0, so T = ΔH°/ΔS°.\nUnit trap: ΔH is kJ/mol but ΔS is J/K/mol. Convert before substituting into ΔG = ΔH - TΔS.",
+        keyTerms: ["entropy", "disorder", "Gibbs free energy", "spontaneous", "ΔG = ΔH - TΔS"],
+        formula: "ΔG° = ΔH° - TΔS° | Spontaneous when ΔG° < 0",
+        examTip: "The most common error: mixing kJ and J units. Convert ΔS to kJ (÷1000) OR ΔH to J (×1000) before calculating. Always state whether the reaction is spontaneous based on the sign of ΔG."
       }
     ]
   },
   {
     topic: "Electrochemistry",
-    icon: "⚡",
+    icon: "🔋",
     subtopics: [
       {
-        title: "Oxidation and Reduction",
-        content: "Oxidation Is Loss of electrons, Reduction Is Gain of electrons (OIL RIG). Oxidation can also mean gain of oxygen or loss of hydrogen. Reduction is the reverse.\nIn any redox reaction, one species is oxidised and another is reduced. The substance that causes oxidation is the oxidising agent (it is itself reduced). The substance that causes reduction is the reducing agent (it is itself oxidised).",
-        keyTerms: ["oxidation", "reduction", "OIL RIG", "oxidising agent", "reducing agent", "electron transfer"],
-        formula: null,
-        examTip: "Use OIL RIG to remember. In half-equations, show electrons explicitly: Zn → Zn²⁺ + 2e⁻ (oxidation), Cu²⁺ + 2e⁻ → Cu (reduction). Always check electrons balance."
+        title: "Oxidation, Reduction and Oxidation Numbers",
+        content: "Oxidation: loss of electrons / gain of oxygen / increase in oxidation number. Reduction: gain of electrons / loss of oxygen / decrease in oxidation number. OIL RIG: Oxidation Is Loss, Reduction Is Gain.\nOxidising agent is itself reduced; reducing agent is itself oxidised. Half-equations separate the processes: Zn → Zn²⁺ + 2e⁻ (oxidation); Cu²⁺ + 2e⁻ → Cu (reduction).\nOxidation number rules: element = 0, monatomic ion = charge, O = -2 (peroxides: -1), H = +1 (hydrides: -1), F always -1, sum in compound = 0, in ion = charge. Example: Mn in KMnO₄: +1 + Mn + 4(-2) = 0 → Mn = +7.",
+        keyTerms: ["oxidation", "reduction", "redox", "oxidation number", "half-equation", "OIL RIG"],
+        formula: "Zn → Zn²⁺ + 2e⁻ | Cu²⁺ + 2e⁻ → Cu",
+        examTip: "Identify what is oxidised/reduced, the oxidising/reducing agents, and write both half-equations. Practise oxidation numbers for Mn and Cr compounds — they appear every year."
       },
       {
-        title: "Oxidation Numbers",
-        content: "Oxidation numbers track electron transfer. Rules: elements = 0, monatomic ions = charge, O = -2 (except peroxides = -1), H = +1 (except metal hydrides = -1), sum in compound = 0, sum in ion = charge.\nA species is oxidised if its oxidation number increases (e.g. Fe²⁺ → Fe³⁺, +2 to +3). It is reduced if its oxidation number decreases (e.g. Mn⁷⁺ in MnO₄⁻ → Mn²⁺, +7 to +2).",
-        keyTerms: ["oxidation number", "increase = oxidation", "decrease = reduction"],
-        formula: null,
-        examTip: "Practice assigning oxidation numbers in compounds like K₂Cr₂O₇, KMnO₄, Na₂S₂O₃. This is a straightforward marks question if you know the rules."
-      },
-      {
-        title: "Electrochemical Cells",
-        content: "An electrochemical (galvanic/voltaic) cell converts chemical energy to electrical energy. Two half-cells are connected by a salt bridge (allows ion flow to complete the circuit) and an external wire (electron flow).\nThe more reactive metal is the anode (oxidation occurs, electrons flow away). The less reactive metal is the cathode (reduction occurs, electrons flow towards it). EMF = E°(cathode) - E°(anode).",
-        keyTerms: ["electrochemical cell", "anode", "cathode", "salt bridge", "EMF", "half-cell"],
-        formula: "EMF = E°(cathode) - E°(anode)",
-        examTip: "Remember: AN OX (anode = oxidation), RED CAT (reduction = cathode). The salt bridge contains KNO₃ or KCl solution in agar. Without it, the cell stops working (circuit incomplete)."
+        title: "Galvanic (Voltaic) Cells",
+        content: "Converts chemical energy to electrical energy via a spontaneous redox reaction. Two half-cells connected by a salt bridge and external wire.\nDaniell cell: Zn anode (oxidised: Zn → Zn²⁺ + 2e⁻, negative terminal) and Cu cathode (reduced: Cu²⁺ + 2e⁻ → Cu, positive terminal). Electrons flow anode → cathode through wire. Salt bridge (KNO₃) completes circuit by allowing ion migration and maintaining electrical neutrality.\nCell notation: anode on left: Zn(s)|Zn²⁺(aq)||Cu²⁺(aq)|Cu(s). AN OX (anode = oxidation), RED CAT (reduction = cathode).",
+        keyTerms: ["galvanic cell", "anode", "cathode", "salt bridge", "Daniell cell", "cell notation"],
+        formula: "Zn(s)|Zn²⁺(aq)||Cu²⁺(aq)|Cu(s) | E°cell = E°cathode - E°anode",
+        examTip: "In a galvanic cell, anode is NEGATIVE (electrons leave). Salt bridge maintains electrical neutrality — state this for full marks. Know cell notation conventions."
       },
       {
         title: "Standard Electrode Potentials",
-        content: "The standard electrode potential (E°) measures the tendency of a half-cell to be reduced, relative to the standard hydrogen electrode (SHE, E° = 0.00 V). More positive E° = stronger oxidising agent.\nThe electrochemical series lists half-reactions in order of E°. A species higher in the series (more negative E°) is a better reducing agent. A species lower (more positive E°) is a better oxidising agent.",
-        keyTerms: ["standard electrode potential", "E°", "standard hydrogen electrode", "electrochemical series"],
-        formula: "E°(cell) = E°(cathode) - E°(anode)",
-        examTip: "To predict if a reaction occurs spontaneously: E°(cell) must be positive. The species with the more positive E° is reduced, the other is oxidised."
+        content: "E° measured vs Standard Hydrogen Electrode (SHE) = 0.00 V (Pt electrode, 1 M H⁺, 1 atm H₂, 25°C). More positive E° = greater tendency to be reduced (stronger oxidising agent). More negative E° = greater tendency to be oxidised (stronger reducing agent).\nE°cell = E°(cathode) - E°(anode). Positive E°cell = spontaneous. Example: E°(Cu²⁺/Cu) = +0.34 V, E°(Zn²⁺/Zn) = -0.76 V. E°cell = +0.34 - (-0.76) = +1.10 V.\nKey values: Li⁺/Li = -3.04, Zn²⁺/Zn = -0.76, Fe²⁺/Fe = -0.44, H⁺/H₂ = 0.00, Cu²⁺/Cu = +0.34, Ag⁺/Ag = +0.80, F₂/F⁻ = +2.87 V.",
+        keyTerms: ["standard electrode potential", "SHE", "electrochemical series", "EMF", "E°cell"],
+        formula: "E°cell = E°cathode - E°anode | Positive = spontaneous",
+        examTip: "The more positive E° goes to the cathode (gets reduced). Never reverse individual E° signs when calculating — just use the formula. The species at the top of the electrochemical series (most negative E°) is the strongest reducing agent."
       },
       {
         title: "Electrolysis",
-        content: "Electrolysis uses electrical energy to drive a non-spontaneous reaction. Cations migrate to the cathode (negative electrode) and are reduced. Anions migrate to the anode (positive electrode) and are oxidised.\nExample: electrolysis of brine (NaCl solution) produces Cl₂ at anode, H₂ at cathode, and NaOH in solution. Faraday's laws relate the amount of substance deposited to the charge passed.",
-        keyTerms: ["electrolysis", "cathode", "anode", "cation", "anion", "Faraday", "brine"],
-        formula: "Q = It (charge = current × time); moles of electrons = Q / 96,500",
-        examTip: "Faraday's constant = 96,500 C/mol of electrons. To find mass deposited: Q = It, then moles of e⁻ = Q/96500, then use half-equation to find moles of metal, then mass = n × M."
+        content: "Uses electrical energy to drive a non-spontaneous redox reaction. Requires: electrolyte (molten/aqueous ionic compound), two electrodes, DC power supply. Cathode (NEGATIVE): cations reduced. Anode (POSITIVE): anions oxidised. Note: cathode polarity is opposite to galvanic cells.\nMolten NaCl: cathode: Na⁺ + e⁻ → Na; anode: 2Cl⁻ → Cl₂ + 2e⁻. Aqueous NaCl (brine): cathode: 2H₂O + 2e⁻ → H₂ + 2OH⁻ (water reduced preferentially — Na too reactive); anode: 2Cl⁻ → Cl₂ + 2e⁻.\nFaraday's laws: Q = It (charge = current × time in seconds). Moles of electrons = Q/F (F = 96,485 C/mol). Use the half-equation for the mole ratio to find mass deposited.",
+        keyTerms: ["electrolysis", "electrolyte", "DC supply", "Faraday's laws", "Faraday constant"],
+        formula: "Q = It | n(e⁻) = Q/F | F = 96,485 C/mol",
+        examTip: "In electrolysis: cathode is NEGATIVE. In galvanic cells: cathode is POSITIVE. This swap is a classic trap. For aqueous solutions, determine whether water or the ion is preferentially discharged."
+      },
+      {
+        title: "Faraday Calculations",
+        content: "Steps: (1) Q = I × t (convert minutes to seconds!). (2) Moles e⁻ = Q/96,485. (3) Use half-equation for mole ratio. (4) Mass = moles × molar mass.\nWorked example: 2.0 A through CuSO₄ for 30 min. Q = 2.0 × 1800 = 3600 C. n(e⁻) = 3600/96,485 = 0.0373 mol. Cu²⁺ + 2e⁻ → Cu: n(Cu) = 0.0373/2 = 0.01865 mol. Mass = 0.01865 × 63.5 = 1.18 g.\nElectroplating: object to be plated = cathode; plating metal = anode (dissolves); electrolyte contains ions of plating metal. Applications: silver-plating, chromium-plating.",
+        keyTerms: ["Faraday calculation", "charge", "electroplating", "moles of electrons"],
+        formula: "Q = It | n(e⁻) = Q/96485 | mass = n × M",
+        examTip: "Convert minutes to SECONDS before calculating Q. Write the half-equation to find the mole ratio. Common error: Cu²⁺ needs 2e⁻, Ag⁺ needs 1, Al³⁺ needs 3."
       },
       {
         title: "Corrosion and Prevention",
-        content: "Rusting of iron requires both water and oxygen. Iron is oxidised: Fe → Fe²⁺ + 2e⁻. The electrons reduce oxygen: O₂ + 2H₂O + 4e⁻ → 4OH⁻. Fe²⁺ and OH⁻ form rust (hydrated iron(III) oxide).\nPrevention methods: painting/oiling (barrier), galvanising (zinc coating — sacrificial protection), sacrificial anode (attach more reactive metal like zinc/magnesium), electroplating, alloying (stainless steel).",
-        keyTerms: ["rusting", "corrosion", "galvanising", "sacrificial protection", "barrier methods"],
-        formula: null,
-        examTip: "Explain WHY sacrificial protection works: zinc is more reactive than iron, so it is oxidised preferentially, protecting the iron. The zinc is 'sacrificed'. This is electrochemistry in action."
+        content: "Corrosion: electrochemical destruction of metals. Rusting requires BOTH water AND oxygen. Anodic area: Fe → Fe²⁺ + 2e⁻. Cathodic area: O₂ + 2H₂O + 4e⁻ → 4OH⁻. Fe²⁺ + 2OH⁻ → Fe(OH)₂ → further oxidised to rust (Fe₂O₃·xH₂O).\nAccelerators: acid, salt water, contact with less reactive metals, damage to coatings. Prevention: (1) Barrier methods — paint, oil, plastic, tin-plating. (2) Galvanising — zinc coating; Zn oxidised preferentially (sacrificial protection, E° = -0.76 vs Fe -0.44). (3) Sacrificial anodes — Zn/Mg blocks on ship hulls. (4) Alloying — stainless steel (Cr₂O₃ protective layer).\nRusting experiment: tube with boiled water + oil (no O₂, no rust); tube with CaCl₂ (no water, no rust); tube with air + water (rusts). Three controls needed.",
+        keyTerms: ["corrosion", "rusting", "galvanising", "sacrificial protection", "barrier method"],
+        formula: "Fe → Fe²⁺ + 2e⁻ | O₂ + 2H₂O + 4e⁻ → 4OH⁻",
+        examTip: "Rusting experiment: describe all THREE test tubes and explain what each proves. Galvanising works even when scratched — Zn corrodes instead (sacrificial protection)."
       }
     ]
   },
@@ -658,86 +445,58 @@ var STUDY_CHEMISTRY = [
     subtopics: [
       {
         title: "Water Treatment",
-        content: "Stages of water treatment: screening (remove large debris), flocculation (add aluminium sulfate — forms a gel-like floc that traps suspended particles), sedimentation (floc settles), filtration (through sand beds), chlorination (kills bacteria), fluoridation (prevents tooth decay).\nChlorination is essential for disinfection but can form trihalomethanes (THMs) which are potentially harmful. pH is adjusted with lime if needed.",
-        keyTerms: ["screening", "flocculation", "sedimentation", "filtration", "chlorination", "fluoridation"],
-        formula: null,
-        examTip: "Know ALL the stages in order. The exam commonly asks for the role of aluminium sulfate (causes flocculation) and why chlorine is added (kills bacteria/pathogens)."
+        content: "Stages: (1) Screening — removes large debris. (2) Flocculation — Al₂(SO₄)₃ added, forms gelatinous Al(OH)₃ floc that traps suspended particles and bacteria. (3) Sedimentation — floc settles by gravity. (4) Filtration — through sand beds removes fine particles. (5) Chlorination — Cl₂ or NaOCl kills pathogens: Cl₂ + H₂O → HCl + HOCl (HOCl is the active disinfectant). Residual chlorine maintained in distribution.\nFluoridation: NaF added (~0.6-0.8 ppm) to prevent tooth decay. Controversial (mass medication concerns). Ireland fluoridates its water. pH adjustment with Ca(OH)₂ prevents pipe corrosion.",
+        keyTerms: ["screening", "flocculation", "chlorination", "fluoridation", "Al₂(SO₄)₃", "HOCl"],
+        formula: "Cl₂ + H₂O → HCl + HOCl",
+        examTip: "Know the ORDER of treatment steps and the REASON for each. HOCl is the active disinfectant, not Cl₂ itself. Al₂(SO₄)₃ for flocculation is a common exam question."
       },
       {
         title: "Water Hardness",
-        content: "Hard water contains dissolved Ca²⁺ or Mg²⁺ ions. It does not lather easily with soap (forms scum instead). Temporary hardness is caused by Ca(HCO₃)₂ — removed by boiling (decomposes to CaCO₃). Permanent hardness is caused by CaSO₄ — not removed by boiling.\nBoth types can be removed by ion exchange (replaces Ca²⁺/Mg²⁺ with Na⁺) or by adding washing soda (Na₂CO₃) which precipitates CaCO₃. Hard water has advantages: Ca²⁺ for bones/teeth, better taste, protective coating in pipes.",
-        keyTerms: ["hard water", "temporary hardness", "permanent hardness", "Ca²⁺", "Mg²⁺", "ion exchange", "washing soda"],
-        formula: "Ca(HCO₃)₂ → CaCO₃ + H₂O + CO₂ (boiling removes temporary hardness)",
-        examTip: "Distinguish temporary from permanent hardness clearly. Remember: temporary = bicarbonates (removed by boiling), permanent = sulfates/chlorides (cannot be boiled away)."
+        content: "Hard water contains Ca²⁺/Mg²⁺ ions. Does not lather with soap (forms scum). Causes limescale (CaCO₃) in kettles/pipes.\nTemporary hardness: dissolved Ca(HCO₃)₂. Removed by boiling: Ca(HCO₃)₂ → CaCO₃↓ + H₂O + CO₂. Forms when rain (CO₂ dissolved) flows through limestone.\nPermanent hardness: dissolved CaSO₄ or MgSO₄. NOT removed by boiling. Removed by: washing soda (Na₂CO₃ — precipitates CaCO₃), ion exchange (replaces Ca²⁺ with Na⁺), or distillation.\nAdvantages of hard water: better taste, calcium for bones, protects lead pipes. Disadvantages: wastes soap, limescale reduces efficiency.",
+        keyTerms: ["hard water", "temporary hardness", "permanent hardness", "limescale", "ion exchange", "washing soda"],
+        formula: "Ca(HCO₃)₂ → CaCO₃ + H₂O + CO₂ (boiling)",
+        examTip: "Temporary = boiling removes it. Permanent = boiling does NOT. Know at least TWO methods for permanent hardness removal. Very frequently examined."
       },
       {
-        title: "Biochemical Oxygen Demand (BOD)",
-        content: "BOD is the amount of dissolved oxygen consumed by microorganisms to decompose organic matter in water over 5 days at 20°C. High BOD indicates high levels of organic pollution.\nClean water has BOD < 5 mg/L. Sewage-polluted water can have BOD > 100 mg/L. High organic waste → bacteria multiply → oxygen depleted → fish and aquatic life die.",
-        keyTerms: ["BOD", "dissolved oxygen", "organic pollution", "microorganisms"],
-        formula: null,
-        examTip: "BOD is measured over 5 days at 20°C — state these conditions. A high BOD means the water is heavily polluted with organic waste."
+        title: "Greenhouse Effect and Ozone Depletion",
+        content: "Greenhouse effect: atmospheric gases trap IR radiation re-emitted by Earth. Natural effect keeps Earth ~33°C warmer. Greenhouse gases: CO₂, CH₄, H₂O, N₂O, CFCs — they absorb IR because their molecular vibrations change their dipole moment.\nEnhanced greenhouse effect (global warming): increased CO₂ from fossil fuels (280 → 420+ ppm) and CH₄ from livestock/landfills. Consequences: sea level rise, extreme weather, ocean acidification (CO₂ + H₂O → H₂CO₃).\nOzone depletion: CFCs reach stratosphere, UV breaks them down: CCl₂F₂ → •CClF₂ + Cl•. Catalytic cycle: Cl• + O₃ → ClO• + O₂; ClO• + O → Cl• + O₂ (Cl• regenerated — one radical destroys thousands of O₃ molecules). Montreal Protocol (1987) phased out CFCs — ozone hole slowly recovering. Replacements: HFCs (no Cl, so no ozone depletion).",
+        keyTerms: ["greenhouse effect", "CO₂", "CH₄", "ozone", "CFCs", "chlorine radical", "Montreal Protocol"],
+        formula: "Cl• + O₃ → ClO• + O₂ | ClO• + O → Cl• + O₂ | Net: O₃ + O → 2O₂",
+        examTip: "Distinguish natural (beneficial) from enhanced (problematic) greenhouse effect. For ozone: write the catalytic cycle, explain why Cl• is a catalyst (regenerated). Name the Montreal Protocol."
       },
       {
-        title: "Eutrophication",
-        content: "Eutrophication occurs when excess nutrients (nitrates, phosphates from fertilisers and detergents) enter water bodies. This causes rapid algal growth (algal bloom) which blocks sunlight to plants below.\nWhen the algae die, bacteria decompose them, using up dissolved oxygen (increased BOD). Fish and other organisms die from lack of oxygen. Prevention: reduce fertiliser use, phosphate-free detergents, tertiary water treatment.",
-        keyTerms: ["eutrophication", "algal bloom", "nitrates", "phosphates", "oxygen depletion"],
-        formula: null,
-        examTip: "Know the sequence: excess nutrients → algal bloom → light blocked → plants die → bacteria decompose → oxygen depleted → fish die. Each step earns a mark."
-      },
-      {
-        title: "Ozone Layer",
-        content: "Ozone (O₃) in the stratosphere absorbs harmful UV radiation, protecting life on Earth. CFCs (chlorofluorocarbons) deplete the ozone layer. UV light breaks C-Cl bonds in CFCs, releasing Cl• radicals.\nCl• + O₃ → ClO• + O₂, then ClO• + O → Cl• + O₂. The Cl• radical is regenerated — one Cl atom can destroy thousands of O₃ molecules. Montreal Protocol (1987) banned CFCs.",
-        keyTerms: ["ozone", "CFC", "UV radiation", "free radical", "chlorine radical", "Montreal Protocol"],
-        formula: "Cl• + O₃ → ClO• + O₂; ClO• + O → Cl• + O₂",
-        examTip: "The Cl radical is a CATALYST in ozone destruction — it is regenerated. Show both equations. Replacement chemicals: HCFCs and HFCs (less harmful but still contribute to greenhouse effect)."
-      },
-      {
-        title: "Greenhouse Effect and Acid Rain",
-        content: "Greenhouse gases (CO₂, CH₄, N₂O, H₂O vapour, CFCs) absorb and re-emit infrared radiation, warming the Earth. This natural effect is essential for life, but enhanced levels cause global warming.\nAcid rain forms when SO₂ and NO₂ (from burning fossil fuels) dissolve in rainwater: SO₂ + H₂O → H₂SO₃ (sulfurous acid). Effects: corrodes buildings (limestone), kills fish (acidifies lakes), damages forests. Prevention: flue gas desulfurisation, catalytic converters.",
-        keyTerms: ["greenhouse effect", "CO₂", "infrared radiation", "acid rain", "SO₂", "NO₂", "catalytic converter"],
-        formula: "SO₂ + H₂O → H₂SO₃; 2SO₂ + O₂ + 2H₂O → 2H₂SO₄",
-        examTip: "Know the sources of SO₂ (burning fossil fuels with sulfur impurities) and NOx (high-temperature combustion in engines). Catalytic converters reduce NOx and CO emissions."
+        title: "Acid Rain and Water Pollution",
+        content: "Acid rain (pH < 5.6) caused by SO₂ and NOₓ. SO₂ from burning sulfur-containing fuels: SO₂ + H₂O → H₂SO₃; 2SO₂ + O₂ → 2SO₃; SO₃ + H₂O → H₂SO₄. NOₓ from car engines at high T: N₂ + O₂ → 2NO → 2NO₂; 3NO₂ + H₂O → 2HNO₃ + NO.\nEffects: dissolves limestone (CaCO₃ + H₂SO₄ →), acidifies lakes (Al³⁺ toxicity kills fish), damages forests, corrodes metals. Prevention: flue gas desulfurisation (CaCO₃ + SO₂ → CaSO₃ + CO₂), catalytic converters (2NO → N₂ + O₂).\nWater pollution: BOD (Biochemical Oxygen Demand) measures organic pollution — bacteria consume dissolved O₂ decomposing waste. High BOD = polluted. Eutrophication: excess nitrates/phosphates → algal bloom → algae die → bacterial decomposition → O₂ depletion → fish death.",
+        keyTerms: ["acid rain", "SO₂", "NOₓ", "BOD", "eutrophication", "flue gas desulfurisation", "catalytic converter"],
+        formula: "SO₃ + H₂O → H₂SO₄ | 3NO₂ + H₂O → 2HNO₃ + NO | CaCO₃ + SO₂ → CaSO₃ + CO₂",
+        examTip: "Name BOTH pollutants and their sources. Write acid formation equations. Eutrophication sequence: nutrients → algal bloom → death → decomposition → O₂ depletion → fish die. Step by step for full marks."
       }
     ]
   },
   {
-    topic: "Fuels",
+    topic: "Fuels and Energy",
     icon: "⛽",
     subtopics: [
       {
-        title: "Fossil Fuels",
-        content: "Fossil fuels (coal, oil, natural gas) formed from the remains of ancient organisms over millions of years. They are non-renewable — once used, they cannot be replaced on a human timescale.\nCrude oil is a mixture of hydrocarbons separated by fractional distillation based on boiling point. Shorter chains have lower boiling points and are collected higher up the column.",
-        keyTerms: ["fossil fuels", "non-renewable", "crude oil", "hydrocarbons"],
-        formula: null,
-        examTip: "Know the fractions from fractional distillation (top to bottom): refinery gas, petrol/gasoline, naphtha, kerosene, diesel, fuel oil, bitumen. Boiling point increases down the column."
+        title: "Fossil Fuels and Fractional Distillation",
+        content: "Fossil fuels (coal, oil, gas) formed from ancient organisms over millions of years. Non-renewable. Coal: solid, mainly carbon, most CO₂ per unit energy, releases SO₂. Natural gas: mainly CH₄, cleanest burning fossil fuel.\nCrude oil separated by fractional distillation based on boiling point. Fractions (increasing b.p.): refinery gas (C1-C4), petrol/gasoline (C5-C10), naphtha, kerosene (C10-C16), diesel (C14-C20), fuel oil, bitumen (residue). Shorter chains = lower b.p., more volatile, more flammable.\nCracking: breaks large molecules into smaller, more useful ones. Thermal cracking (700-1000°C, high pressure): produces alkanes + alkenes. Catalytic cracking (~500°C, zeolite catalyst): more branched/aromatic products. Reforming: straight-chain → branched/aromatic (higher octane rating) using Pt catalyst. Octane scale: heptane = 0, isooctane = 100.",
+        keyTerms: ["fossil fuels", "fractional distillation", "fractions", "cracking", "reforming", "octane rating"],
+        formula: "CH₄ + 2O₂ → CO₂ + 2H₂O | C₁₀H₂₂ → C₈H₁₈ + C₂H₄ (cracking)",
+        examTip: "Know crude oil fractions in order. Cracking always produces at least one alkene (test with bromine water). Thermal vs catalytic: know different conditions and products."
       },
       {
-        title: "Fractional Distillation",
-        content: "Crude oil is heated to ~350°C and fed into a fractionating column. Vapours rise and condense at different heights according to their boiling points. Shorter chain hydrocarbons rise higher (lower bp).\nEach fraction is a mixture of hydrocarbons with similar boiling points and chain lengths. The process works because of the different intermolecular forces — longer chains have stronger van der Waals forces and higher boiling points.",
-        keyTerms: ["fractional distillation", "fractionating column", "boiling point", "condensation"],
-        formula: null,
-        examTip: "Explain WHY shorter chains have lower boiling points: fewer electrons → weaker van der Waals forces → less energy needed to separate molecules."
+        title: "Biofuels and Alternative Fuels",
+        content: "Biofuels: renewable fuels from biomass. Bioethanol: fermentation of sugars (C₆H₁₂O₆ → 2C₂H₅OH + 2CO₂). Carbon-neutral in theory (CO₂ absorbed during growth = released during combustion), but not fully in practice (energy for farming/distillation). Can blend with petrol (E10, E85).\nBiodiesel: transesterification of vegetable oils with methanol (NaOH catalyst) → fatty acid methyl esters + glycerol. Biodegradable, fewer particulates.\nHydrogen: 2H₂ + O₂ → 2H₂O — only product is water (cleanest fuel). Challenges: storage (low density, high pressure needed), explosive (4-75% in air), mostly produced from natural gas currently. Fuel cells convert H₂ chemical energy directly to electricity with high efficiency.",
+        keyTerms: ["bioethanol", "biodiesel", "carbon neutral", "hydrogen fuel", "fuel cell", "transesterification"],
+        formula: "C₆H₁₂O₆ → 2C₂H₅OH + 2CO₂ | 2H₂ + O₂ → 2H₂O",
+        examTip: "Bioethanol is carbon neutral IN THEORY — explain both the theory and why it falls short in practice. Hydrogen fuel: only product is water — but state the challenges (storage, production method)."
       },
       {
-        title: "Cracking and Reforming",
-        content: "Cracking breaks long-chain alkanes into shorter, more useful molecules (shorter alkanes + alkenes). Thermal cracking uses high temperature (700-1000°C). Catalytic cracking uses a zeolite catalyst at lower temperature.\nReforming converts straight-chain alkanes into branched or cyclic hydrocarbons to increase the octane number of petrol. This improves the fuel's performance in engines (reduces knocking).",
-        keyTerms: ["cracking", "thermal cracking", "catalytic cracking", "reforming", "zeolite", "octane number"],
-        formula: "C₁₀H₂₂ → C₈H₁₈ + C₂H₄ (example of cracking)",
-        examTip: "Cracking always produces at least one alkene (useful for making polymers like polyethene). Write a balanced equation for cracking — atoms must be conserved."
-      },
-      {
-        title: "Octane Number",
-        content: "The octane number rates a fuel's resistance to knocking (premature ignition in the engine). Heptane has an octane number of 0 (knocks badly) and 2,2,4-trimethylpentane (iso-octane) has an octane number of 100.\nA fuel with octane number 95 performs like a mixture of 95% iso-octane and 5% heptane. Higher octane = smoother burning, better engine performance. Branched alkanes and aromatics have higher octane numbers than straight-chain alkanes.",
-        keyTerms: ["octane number", "knocking", "heptane", "iso-octane", "2,2,4-trimethylpentane"],
-        formula: null,
-        examTip: "Know that branched-chain alkanes have higher octane numbers than straight-chain. This is why reforming (converting straight to branched) improves fuel quality."
-      },
-      {
-        title: "Alternative Fuels",
-        content: "Hydrogen fuel: burns cleanly (2H₂ + O₂ → 2H₂O), no CO₂ emissions. Challenges: storage (very low bp, -253°C), explosive, energy-intensive production.\nBiofuels: ethanol from fermentation of sugars, biodiesel from vegetable oils. They are renewable and approximately carbon neutral (CO₂ released was recently absorbed by the plants). However, they use agricultural land and may compete with food production.",
-        keyTerms: ["hydrogen fuel", "biofuels", "ethanol", "biodiesel", "carbon neutral", "renewable"],
-        formula: "C₆H₁₂O₆ → 2C₂H₅OH + 2CO₂ (fermentation of glucose)",
-        examTip: "Compare fuels: hydrogen (cleanest but hardest to store), biofuels (renewable but land-use issues), fossil fuels (convenient but non-renewable and polluting). Exam loves compare-and-contrast."
+        title: "Energy and Heat of Combustion",
+        content: "ΔHc° measured experimentally: burn known mass under a calorimeter with known mass of water. q = mcΔT, then ΔHc° = q/n (kJ/mol).\nWorked example: 0.46 g ethanol (M=46) heats 200 g water by 13.5°C. q = 200 × 4.18 × 13.5 = 11,286 J = 11.29 kJ. n = 0.46/46 = 0.010 mol. ΔHc° = 11.29/0.010 = 1129 kJ/mol (accepted: 1367 — lower due to heat loss).\nErrors: heat loss (main), incomplete combustion, heat absorbed by apparatus, evaporation. Bomb calorimeter minimises these. Activation energy (Ea): minimum energy for reaction. Catalysts lower Ea via alternative pathway but don't change ΔH.\nEnergy density: hydrogen 142 kJ/g (highest per gram), petrol ~47, ethanol ~30, coal ~24 kJ/g. Compare fuels on: energy density, cost, availability, environmental impact, storage/transport.",
+        keyTerms: ["heat of combustion", "calorimetry", "activation energy", "energy density", "catalyst"],
+        formula: "q = mcΔT | ΔHc° = q/n | Ea lowered by catalyst",
+        examTip: "Experimental ΔHc° values are ALWAYS lower than accepted — explain why (heat loss). State at least 3 sources of error. Draw energy profile diagrams with and without catalyst."
       }
     ]
   },
@@ -747,114 +506,93 @@ var STUDY_CHEMISTRY = [
     subtopics: [
       {
         title: "Types of Radiation",
-        content: "Alpha (α): helium nucleus (²⁴He), charge +2, mass 4. Stopped by paper. Most ionising, least penetrating.\nBeta (β): high-speed electron (⁰⁻¹e), charge -1, mass ~0. Stopped by aluminium. Moderate ionising and penetrating.\nGamma (γ): electromagnetic radiation, no charge, no mass. Stopped by thick lead/concrete. Least ionising, most penetrating.",
-        keyTerms: ["alpha", "beta", "gamma", "ionising", "penetrating", "helium nucleus", "electron"],
-        formula: null,
-        examTip: "Remember the order: ionising power α > β > γ, but penetrating power γ > β > α. Alpha is the most dangerous INSIDE the body, gamma is most dangerous from outside."
+        content: "Radioactivity: spontaneous disintegration of unstable nuclei. Three types: Alpha (α) — ⁴₂He nucleus (2p + 2n), charge +2, mass 4, MOST ionising, LEAST penetrating (stopped by paper/few cm air). Mass number decreases by 4, atomic number by 2. Example: ²²⁶₈₈Ra → ²²²₈₆Rn + ⁴₂α.\nBeta (β) — high-speed electron (⁰₋₁e), emitted when n → p + e⁻. Moderate ionising/penetrating power, stopped by few mm aluminium. Mass number unchanged, atomic number increases by 1. Example: ¹⁴₆C → ¹⁴₇N + ⁰₋₁β.\nGamma (γ) — high-energy EM radiation, no mass/charge. LEAST ionising, MOST penetrating (thick lead or metres of concrete). Accompanies α/β decay. No change in mass or atomic number.",
+        keyTerms: ["alpha", "beta", "gamma", "ionising power", "penetrating power"],
+        formula: "²²⁶₈₈Ra → ²²²₈₆Rn + ⁴₂α | ¹⁴₆C → ¹⁴₇N + ⁰₋₁β",
+        examTip: "Compare all three in a table: nature, charge, mass, ionising power, penetrating power, stopped by. This comparison appears almost every year."
       },
       {
-        title: "Nuclear Equations",
-        content: "In nuclear equations, mass number (top) and atomic number (bottom) must be conserved on both sides.\nAlpha decay: ²²₆₈Ra → ²²₂₆₆Rn + ⁴₂He (mass number drops by 4, atomic number by 2).\nBeta decay: ¹⁴₆C → ¹⁴₇N + ⁰⁻¹e (a neutron converts to a proton, atomic number increases by 1).",
-        keyTerms: ["mass number", "atomic number", "conservation", "alpha decay", "beta decay"],
-        formula: null,
-        examTip: "Check both numbers balance. In alpha decay: A drops by 4, Z drops by 2. In beta decay: A stays same, Z increases by 1. Show working clearly."
+        title: "Half-Life and Calculations",
+        content: "Half-life (t½): time for half the radioactive nuclei to decay (or activity to halve). Constant for each isotope, unaffected by temperature, pressure, or chemistry.\nAfter n half-lives: fraction remaining = (½)ⁿ. N = N₀ × (½)ⁿ where n = t/t½. Worked example: I-131 (t½ = 8 days), initial activity 800 Bq. After 24 days: n = 24/8 = 3. Activity = 800 × (½)³ = 100 Bq.\nKey half-lives: U-238 = 4.5 billion years; C-14 = 5730 years; I-131 = 8 days; Tc-99m = 6 hours. Short t½ = intense but brief activity. Long t½ = low activity but persists (nuclear waste issue).",
+        keyTerms: ["half-life", "exponential decay", "activity", "becquerel"],
+        formula: "N = N₀ × (½)ⁿ | n = t/t½",
+        examTip: "Draw a decay curve (exponential). Read t½ from graph where activity halves. Always show n = t/t½ calculation. Don't round n — use exact values."
       },
       {
-        title: "Half-Life",
-        content: "The half-life (t½) is the time taken for half the radioactive atoms in a sample to decay, or for the activity to halve. It is constant for a given isotope and cannot be changed by physical or chemical means.\nExample: if a sample starts with 800 g and the half-life is 10 years, then after 10 years: 400 g, after 20 years: 200 g, after 30 years: 100 g, and so on.",
-        keyTerms: ["half-life", "decay", "activity", "constant", "radioactive isotope"],
-        formula: "Amount remaining = initial amount × (1/2)ⁿ where n = number of half-lives = time/t½",
-        examTip: "Half-life questions are straightforward calculation marks. Count the number of half-lives (n = total time / t½), then halve the amount n times. Show each step."
+        title: "Nuclear Equations, Fission, and Fusion",
+        content: "In nuclear equations, mass number (A) and atomic number (Z) must balance on both sides. Example: ²³⁸₉₂U → ²³⁴₉₀Th + ⁴₂He. Check: 238 = 234 + 4 ✓; 92 = 90 + 2 ✓.\nFission: heavy nucleus splits into two lighter nuclei + neutrons + energy. ²³⁵₉₂U + ¹₀n → ¹⁴⁴₅₆Ba + ⁸⁹₃₆Kr + 3¹₀n. Released neutrons cause further fissions = chain reaction. Controlled in reactors using: control rods (B/Cd, absorb neutrons), moderator (water/graphite, slows neutrons).\nFusion: light nuclei join: ²₁H + ³₁H → ⁴₂He + ¹₀n. Powers the sun. Releases more energy per unit mass than fission but requires extreme temperatures (>10⁷ K). Not yet commercially viable.",
+        keyTerms: ["nuclear equation", "fission", "fusion", "chain reaction", "control rods", "moderator"],
+        formula: "²³⁵U + ¹n → ¹⁴⁴Ba + ⁸⁹Kr + 3¹n | ²H + ³H → ⁴He + ¹n",
+        examTip: "Balance equations: check BOTH A and Z. Fission: mention chain reaction, control rods, moderator. Fusion: state extreme temperature required. E = mc² explains the enormous energy."
       },
       {
-        title: "Uses of Radioactivity",
-        content: "Medical: cobalt-60 (gamma) for cancer treatment, technetium-99m for medical imaging (short half-life, gamma emitter). Carbon-14 dating to determine the age of organic remains (t½ = 5730 years).\nIndustrial: thickness gauges (beta in paper manufacturing), smoke detectors (americium-241, alpha source), sterilisation of medical equipment (gamma), tracers for detecting leaks in pipes.",
-        keyTerms: ["carbon dating", "medical imaging", "tracers", "cobalt-60", "technetium-99m", "smoke detector"],
-        formula: null,
-        examTip: "Match the type of radiation to the application. Short half-life for medical tracers (clears quickly). Gamma for treatment (penetrates body). Alpha for smoke detectors (easily blocked if particles present)."
+        title: "Uses of Radioisotopes",
+        content: "Carbon-14 dating: living things absorb C-14 via CO₂/photosynthesis. After death, C-14 decays (t½ = 5730 years). Measure C-14/C-12 ratio to find age. If ¼ of C-14 remains: 2 half-lives = 11,460 years. Useful to ~50,000 years.\nMedical: Co-60 (γ, t½ = 5.3 yr) — radiotherapy for cancer. Tc-99m (γ, t½ = 6 hr) — most common tracer; short t½ = low patient dose, γ penetrates body, detected externally. I-131 (β/γ, t½ = 8 days) — treats thyroid cancer (thyroid absorbs iodine).\nIndustrial: Am-241 (α, t½ = 432 yr) in smoke detectors — α ionises air, smoke disrupts current → alarm. β sources for thickness gauges. γ for food irradiation (kills bacteria).\nSafety: minimise time, maximise distance, use appropriate shielding (paper for α, aluminium for β, lead for γ).",
+        keyTerms: ["carbon dating", "radiotherapy", "tracer", "Tc-99m", "smoke detector", "radiation protection"],
+        formula: "Age = n × t½ | C-14 t½ = 5730 years",
+        examTip: "For each use, state: isotope, radiation type, half-life, and WHY it is suitable. E.g. Tc-99m: gamma (penetrates), short t½ (low dose), detectable externally."
       },
       {
-        title: "Dangers and Safety",
-        content: "Radiation can ionise atoms in living cells, causing DNA mutations which may lead to cancer or cell death. High doses cause radiation sickness.\nSafety precautions: minimise exposure time, maximise distance from source, use appropriate shielding (lead, concrete), wear protective clothing, use tongs to handle sources, monitor exposure with dosimeters/film badges. Radioactive waste must be stored securely for long periods.",
-        keyTerms: ["ionisation", "DNA mutation", "cancer", "shielding", "dosimeter", "radioactive waste"],
-        formula: null,
-        examTip: "Three principles of radiation safety: TIME (minimise), DISTANCE (maximise), SHIELDING (appropriate material). State all three for full marks in safety questions."
+        title: "Nuclear Energy — Benefits and Risks",
+        content: "Nuclear power: controlled fission of U-235 generates heat → steam → turbines → electricity. No CO₂ during operation (low-carbon). High energy density: 1 kg U-235 ≈ 20,000 kg coal. Reliable baseload power.\nRisks: accidents release radioactive material (Chernobyl 1986, Fukushima 2011) causing radiation sickness and cancer. Nuclear waste: low-level (lab coats — shallow storage), intermediate (reactor parts — concrete), high-level (spent fuel — intensely radioactive, requires deep geological storage for thousands of years). Decommissioning is expensive.\nNuclear energy is increasingly important for climate targets despite waste concerns. E = mc² explains the enormous energy: a tiny mass converts to a huge amount of energy.",
+        keyTerms: ["nuclear power", "U-235", "nuclear waste", "Chernobyl", "Fukushima", "E=mc²"],
+        formula: "E = mc²",
+        examTip: "Discuss BOTH benefits AND risks. Always mention: no CO₂ during operation, BUT long-lived waste is a major unsolved problem. Compare with fossil fuels and renewables for a balanced answer."
       }
     ]
   },
   {
     topic: "Mandatory Experiments",
-    icon: "🥊",
+    icon: "🔬",
     subtopics: [
       {
-        title: "Flame Tests",
-        content: "Dip a clean nichrome wire loop in concentrated HCl, then into the sample. Hold in a Bunsen flame and observe the colour.\nResults: Li = red, Na = yellow, K = lilac, Ba = green, Cu = blue-green, Ca = orange-red, Sr = crimson. Clean the wire between tests by dipping in HCl and heating until no colour is produced.",
-        keyTerms: ["flame test", "nichrome wire", "HCl", "Bunsen burner", "characteristic colour"],
-        formula: null,
-        examTip: "The wire must be cleaned thoroughly with HCl between tests to avoid contamination. Na contamination (persistent yellow) is very common — view through blue glass to mask it."
+        title: "Flame Tests and Emission Spectra",
+        content: "Flame test: clean nichrome/Pt wire loop in conc. HCl, heat until no colour. Dip in sample, hold in blue flame. Colours: Li = crimson, Na = yellow, K = lilac, Ca = brick red, Ba = green, Cu = blue-green.\nColours arise because flame excites electrons to higher energy levels; they emit photons of specific wavelengths as they return to lower levels. Each element has unique emission wavelengths.\nLine emission spectra: excited gaseous atoms emit light passed through a prism/diffraction grating → discrete coloured lines on dark background. Each element has a unique line spectrum (fingerprint). Continuous spectrum (white light) has all wavelengths — contrasts with line spectrum. Hydrogen's line spectrum was key evidence for Bohr's quantised energy levels.",
+        keyTerms: ["flame test", "emission spectrum", "line spectrum", "electron transition", "energy levels"],
+        formula: "E = hf (energy of emitted photon)",
+        examTip: "Know all flame colours. Na's yellow flame masks others — use cobalt blue glass to filter when testing for K. Always clean the wire between tests."
       },
       {
-        title: "Titration — Acid-Base (Mandatory)",
-        content: "Prepare a standard solution of primary standard (e.g. Na₂CO₃). Weigh accurately, dissolve in deionised water, transfer to volumetric flask, and make up to the mark.\nFill the burette with the acid, pipette 25 cm³ of the standard solution into a conical flask, add indicator, titrate until colour change. Record titre. Repeat until concordant results (within 0.1 cm³). Calculate concentration.",
-        keyTerms: ["standard solution", "volumetric flask", "burette", "pipette", "concordant", "indicator"],
-        formula: "n = C × V; C = n/V",
-        examTip: "Precautions: rinse burette with the solution to be used, rinse pipette with the solution it will measure, but wash the conical flask with deionised water only. Use a white tile."
+        title: "Acid-Base and Redox Titrations",
+        content: "Titration determines concentration by reacting with a standard solution. Procedure: rinse burette with titrant (not water), rinse conical flask with distilled water only, pipette known volume of analyte, add indicator, add titrant until endpoint (colour change). Repeat for concordant results (within 0.1 cm³).\nIndicators: phenolphthalein (colourless in acid, pink in base), methyl orange (red in acid, yellow in base). Calculations: n = CV (V in litres), use mole ratio from balanced equation.\nWorked example: 25.0 cm³ NaOH needs 20.0 cm³ of 0.10 M HCl. n(HCl) = 0.10 × 0.020 = 0.002 mol. 1:1 ratio. n(NaOH) = 0.002. [NaOH] = 0.002/0.025 = 0.080 M.\nRedox titration with KMnO₄: self-indicating (purple → colourless). Endpoint: first permanent pink. Iodine-starch titration: Na₂S₂O₃ reduces I₂; starch indicator turns blue-black; endpoint when blue disappears.",
+        keyTerms: ["titration", "burette", "pipette", "indicator", "concordant", "KMnO₄", "standard solution"],
+        formula: "n = C × V (in litres)",
+        examTip: "Convert cm³ to litres (÷1000). Don't rinse the conical flask with analyte (only distilled water). Record to nearest 0.05 cm³. Do a rough titration first."
       },
       {
-        title: "Titration — Redox with KMnO₄ (Mandatory)",
-        content: "Standardise KMnO₄ solution against a primary standard (oxalic acid/sodium oxalate). Acidify with dilute H₂SO₄. Warm to ~60°C.\nAdd KMnO₄ from the burette to the oxalic acid in the flask. The purple colour is decolourised as it reacts. The endpoint is a permanent pink/purple colour that persists for 30 seconds. KMnO₄ is self-indicating — no separate indicator needed.",
-        keyTerms: ["KMnO₄", "self-indicating", "oxalic acid", "H₂SO₄", "permanent pink colour", "warm"],
-        formula: "2KMnO₄ + 5H₂C₂O₄ + 3H₂SO₄ → 2MnSO₄ + K₂SO₄ + 10CO₂ + 8H₂O",
-        examTip: "Never use HCl (reacts with KMnO₄). Warm the solution but don't boil. The first drop is slow to decolourise (Mn²⁺ ions catalyse the reaction — autocatalysis). Add drops slowly near endpoint."
+        title: "Standard Solution and pH/Buffers",
+        content: "Standard solution: accurately known concentration from a primary standard. Primary standard requirements: high purity, stable, high molar mass, soluble, reacts completely. Na₂CO₃ and KHP are primary standards; NaOH is NOT (absorbs CO₂/moisture).\nProcedure: calculate mass (m = C × V × M). Weigh accurately, dissolve in distilled water, transfer to volumetric flask with washings, make up to the mark, stopper and invert. Example: 250 cm³ of 0.10 M Na₂CO₃: m = 0.10 × 0.250 × 106 = 2.65 g.\npH = -log₁₀[H⁺]. Measured by pH meter (calibrate first with buffer standards pH 4 and 7), universal indicator, or pH paper.\nBuffer: resists pH change when small amounts of acid/base added. Acidic buffer: weak acid + conjugate base (e.g. CH₃COOH + CH₃COONa). Adding H⁺: CH₃COO⁻ + H⁺ → CH₃COOH. Adding OH⁻: CH₃COOH + OH⁻ → CH₃COO⁻ + H₂O. Blood buffer: H₂CO₃/HCO₃⁻ maintains pH 7.4.",
+        keyTerms: ["standard solution", "primary standard", "volumetric flask", "pH", "buffer", "conjugate base"],
+        formula: "m = C × V × M | pH = -log₁₀[H⁺]",
+        examTip: "Why is NaOH not a primary standard? Absorbs CO₂ and moisture — unreliable mass. Why wash the beaker? Ensures ALL solute transferred. These points are frequently examined."
       },
       {
-        title: "Preparation of a Standard Solution (Mandatory)",
-        content: "Weigh an accurate mass of primary standard on a clock glass or weighing boat using a digital balance. Dissolve in a small amount of deionised water in a beaker. Transfer ALL solution to a volumetric flask using a glass rod and funnel.\nRinse the beaker, rod, and funnel with deionised water into the flask to ensure all solute is transferred. Make up to the calibration mark with deionised water — use a dropper for the last few drops. Stopper and invert several times to mix.",
-        keyTerms: ["primary standard", "volumetric flask", "calibration mark", "quantitative transfer", "deionised water"],
-        formula: "C = n/V = (mass/M)/V",
-        examTip: "The quantitative transfer (rinsing beaker into flask) is crucial — any solute left behind makes the concentration inaccurate. Never heat a volumetric flask. Add water to the meniscus line at eye level."
-      },
-      {
-        title: "Reactions of Ethanal and Ethanoic Acid (Mandatory)",
-        content: "Ethanal (acetaldehyde, CH₃CHO): Fehling's test — add Fehling's A and B, heat gently, brick-red precipitate forms (Cu₂O). Tollens' test — add ammoniacal silver nitrate, warm in hot water bath, silver mirror forms on walls of clean test tube.\nEthanoic acid (acetic acid, CH₃COOH): test with sodium carbonate (fizzing, CO₂ produced), test pH with universal indicator (pH ~3, weak acid), react with alcohol + H₂SO₄ to form an ester (fruity smell).",
-        keyTerms: ["Fehling's", "Tollens'", "brick-red precipitate", "silver mirror", "sodium carbonate", "ester"],
-        formula: null,
-        examTip: "For Tollens' test, the test tube must be very clean (washed with NaOH then deionised water) for the silver mirror to form. Warm gently in a water bath — do NOT heat directly."
-      },
-      {
-        title: "Rate of Reaction Experiment (Mandatory)",
-        content: "Measure the rate of reaction between sodium thiosulfate and hydrochloric acid by timing how long a cross (X) takes to disappear. Na₂S₂O₃ + 2HCl → 2NaCl + H₂O + SO₂ + S. The sulfur precipitate causes the cloudiness.\nVary ONE factor at a time (e.g. concentration or temperature) while keeping others constant. Record time for cross to disappear. Rate ∝ 1/time. Plot graphs of 1/time vs concentration or temperature.",
-        keyTerms: ["sodium thiosulfate", "HCl", "sulfur precipitate", "disappearing cross", "1/time"],
+        title: "Rates of Reaction Experiment",
+        content: "Rate = change in concentration per unit time. Measured by: gas volume (gas syringe), mass loss (balance), colour change timing, or titration of quenched samples.\nMandatory experiment (concentration effect): Na₂S₂O₃ + 2HCl → 2NaCl + H₂O + SO₂ + S↓. Sulfur makes solution cloudy. Place flask over X on paper. Time until X disappears. Rate ∝ 1/time. Vary [Na₂S₂O₃], keep HCl concentration, volume, and temperature constant.\nFactors affecting rate: (1) Concentration — more particles/volume → more collisions. (2) Temperature — more kinetic energy → more collisions exceed Ea. (3) Surface area — finer particles → more exposed surface. (4) Catalyst — lower Ea, alternative pathway.\nCollision theory: particles must collide with sufficient energy (≥ Ea) and correct orientation for reaction to occur.",
+        keyTerms: ["rate of reaction", "collision theory", "Na₂S₂O₃", "concentration effect", "activation energy"],
         formula: "Rate ∝ 1/time",
-        examTip: "Control variables carefully. Same observer should judge the endpoint each time (subjective). Same volume, same flask. Plot 1/time on the y-axis, not time, to show rate."
+        examTip: "Describe clearly: what you vary, what you measure, what you keep constant. Plot 1/time vs concentration — straight line through origin. State collision theory when explaining each factor."
       },
       {
-        title: "Preparation of Ethene and Tests (Mandatory)",
-        content: "Heat ethanol with excess concentrated H₂SO₄ (dehydrating agent) using aluminium oxide on mineral wool. Collect the ethene gas over water.\nTests: (1) Burn ethene — burns with a luminous, smoky flame. (2) Pass through bromine water — decolourises from brown/orange to colourless (addition of Br₂ across the double bond). (3) Pass through acidified KMnO₄ — decolourises from purple to colourless.",
-        keyTerms: ["ethene", "dehydration", "ethanol", "bromine water", "decolourises", "collect over water"],
-        formula: "C₂H₅OH → C₂H₄ + H₂O (with conc. H₂SO₄)",
-        examTip: "Safety: ethene is flammable. Ensure no naked flames near the collection. The bromine water test proves the C=C double bond. State the colour change clearly."
+        title: "Recrystallisation and Melting Point",
+        content: "Recrystallisation purifies solids. Principle: dissolve in minimum hot solvent (soluble hot, insoluble cold); on cooling, pure crystals form while impurities stay in solution.\nProcedure: dissolve in minimum hot solvent, hot filtration if needed (removes insoluble impurities), cool slowly (large pure crystals), vacuum filter (Buchner funnel), wash with cold solvent, dry in desiccator.\nMelting point assesses purity. Pure substance: sharp m.p. (narrow range, 1-2°C). Impure: lower m.p. over wider range. Procedure: pack sample in sealed capillary tube, attach to thermometer, heat slowly in oil bath, record start and end of melting, compare with literature value.",
+        keyTerms: ["recrystallisation", "melting point", "purity", "Buchner funnel", "capillary tube"],
+        formula: null,
+        examTip: "Sharp m.p. = pure. Broad/low m.p. = impure. Key details: MINIMUM hot solvent, SLOW cooling, wash with COLD solvent. These earn marks."
       },
       {
-        title: "Estimation of Iron with KMnO₄ (Mandatory)",
-        content: "Dissolve iron tablets/nails in excess dilute H₂SO₄. Filter if necessary. Make up to a known volume in a volumetric flask.\nTitrate an aliquot (e.g. 25 cm³) against standardised KMnO₄. The Fe²⁺ is oxidised to Fe³⁺ by MnO₄⁻. Endpoint: permanent pink colour persists. Calculate moles of KMnO₄, use the mole ratio (1:5) to find moles of Fe²⁺, then mass of iron.",
-        keyTerms: ["iron estimation", "Fe²⁺", "KMnO₄", "acidified", "1:5 ratio"],
-        formula: "MnO₄⁻ + 8H⁺ + 5Fe²⁺ → Mn²⁺ + 4H₂O + 5Fe³⁺",
-        examTip: "The 1:5 mole ratio is critical: 1 mol KMnO₄ reacts with 5 mol Fe²⁺. Remember to scale up from the aliquot to the total volume when calculating the total iron content."
+        title: "Tests for Anions and Cations",
+        content: "Anion tests: Cl⁻ — add dilute HNO₃ then AgNO₃ → white ppt (AgCl). Br⁻ → cream ppt (AgBr). I⁻ → yellow ppt (AgI). SO₄²⁻ — add dilute HCl then BaCl₂ → white ppt (BaSO₄). CO₃²⁻ — add dilute acid → effervescence (CO₂), turns limewater milky.\nCation tests with NaOH: Cu²⁺ → blue ppt. Fe²⁺ → green ppt (turns brown on standing). Fe³⁺ → brown ppt. Zn²⁺ → white ppt, dissolves in excess NaOH (amphoteric). Al³⁺ → white ppt, also dissolves in excess NaOH. NH₄⁺ → warm with NaOH, ammonia released turns damp red litmus blue.\nAlways add dilute HNO₃ first for halide tests (prevents false positives from CO₃²⁻/SO₄²⁻). Distinguish Zn²⁺/Al³⁺ from other white precipitates by their amphoteric behaviour (dissolve in excess NaOH).",
+        keyTerms: ["qualitative analysis", "AgNO₃", "BaCl₂", "NaOH test", "amphoteric", "limewater"],
+        formula: "Ag⁺ + Cl⁻ → AgCl↓ | Ba²⁺ + SO₄²⁻ → BaSO₄↓ | NH₄⁺ + OH⁻ → NH₃↑ + H₂O",
+        examTip: "Silver halide colours: AgCl white, AgBr cream, AgI yellow. Add dilute HNO₃ FIRST for halide tests. Zn(OH)₂ and Al(OH)₃ dissolve in EXCESS NaOH — key distinguishing test."
       },
       {
-        title: "Recrystallisation (Mandatory)",
-        content: "Dissolve the impure solid in the minimum volume of hot solvent. Filter while hot to remove insoluble impurities. Allow the filtrate to cool slowly — pure crystals form as solubility decreases.\nFilter under reduced pressure (Buchner funnel and flask) to collect the crystals. Wash with a small amount of cold solvent. Dry between filter papers or in a desiccator. Weigh to calculate percentage yield.",
-        keyTerms: ["recrystallisation", "minimum volume", "hot solvent", "slow cooling", "Buchner funnel", "percentage yield"],
-        formula: "% yield = (actual yield / theoretical yield) × 100",
-        examTip: "Key points: use minimum volume of hot solvent (too much = poor yield), cool slowly (larger, purer crystals), wash with cold solvent (dissolves less product than warm solvent)."
-      },
-      {
-        title: "Heat of Reaction by Calorimetry (Mandatory)",
-        content: "Use a polystyrene cup calorimeter. Measure a known volume of solution (e.g. 50 cm³ of HCl). Record initial temperature. Add the second reactant (e.g. NaOH solution). Stir with thermometer and record highest temperature.\nCalculate: q = mcΔT (m = total mass of solutions, c = 4.18 J/g/°C, ΔT = temperature rise). Then ΔH = q / moles of limiting reagent (in kJ/mol). The answer should be negative for an exothermic reaction.",
-        keyTerms: ["calorimeter", "polystyrene cup", "temperature rise", "q = mcΔT", "heat loss"],
-        formula: "q = mcΔT; ΔH = -q/n",
-        examTip: "Sources of error: heat loss (main source), incomplete reaction, heat capacity of cup not accounted for. Use a lid and stir continuously. This experiment commonly appears on the exam."
+        title: "Preparation of Ethene and Ester",
+        content: "Ethene preparation: dehydration of ethanol. Soak glass wool in ethanol, heat Al₂O₃ catalyst. Ethanol vapour passes over hot catalyst: C₂H₅OH → CH₂=CH₂ + H₂O. Collect over water (ethene is insoluble, less dense).\nTest for unsaturation: bubble through bromine water → decolourises (orange → colourless). Electrophilic addition: CH₂=CH₂ + Br₂ → CH₂BrCH₂Br. Also decolourises acidified KMnO₄ (purple → colourless). Safety: ethene is flammable.\nEster preparation (esterification): mix carboxylic acid + alcohol + few drops conc. H₂SO₄ (catalyst). Reflux 15-20 min using water bath (flammable reagents). Cool, pour into Na₂CO₃ solution to neutralise acid — ester floats as oily layer with fruity smell.\nReflux explained: vertical condenser above flask; vapours rise, condense, return to flask. Purpose: maintains constant temperature, prevents loss of volatile reactants. Reaction is reversible (equilibrium); excess reactant or removing water drives it forward.",
+        keyTerms: ["ethene preparation", "dehydration", "bromine water test", "ester preparation", "reflux", "esterification"],
+        formula: "C₂H₅OH → CH₂=CH₂ + H₂O | CH₃COOH + C₂H₅OH ⇌ CH₃COOC₂H₅ + H₂O",
+        examTip: "Describe setups in detail. Ethene: state catalyst (Al₂O₃), collection method (over water), and test (bromine water decolourises). Ester: explain reflux setup and purpose, name the ester (alcohol-yl acid-anoate)."
       }
     ]
   }
