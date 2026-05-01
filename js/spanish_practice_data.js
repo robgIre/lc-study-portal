@@ -1,0 +1,1 @@
+var SPA_MARKING = {};
