@@ -2,124 +2,124 @@
 var WALKTHROUGHS_MATHS = {
   "2025": [
   {
-    "num": "P1 Q1",
-    "label": "Algebra",
-    "q": "(a) Solve the inequality |x - 3| <= 12 [10 marks]\nSolve for x in R.\n\n(b) Multiply out and simplify: (4x - 10sqrt(x))(2x + 5sqrt(x) - 7) [10 marks]\n\n(c) Find three solutions to 4x^3 - 12x^2 - 7x + 30 = 0 [10 marks]\nGiven: (2x + 3) is a factor.",
-    "a": "(a) |x - 3| <= 12 means:\nx - 3 <= 12 AND x - 3 >= -12\nx <= 15 AND x >= -9\nAnswer: -9 <= x <= 15\nWhy: The absolute value |x - 3| represents the distance from x to 3. If this distance is <= 12, then x can be 12 units to the left (3 - 12 = -9) or 12 units to the right (3 + 12 = 15) of 3.\n\n(b) Distribute each term:\n= 4x(2x + 5sqrt(x) - 7) - 10sqrt(x)(2x + 5sqrt(x) - 7)\n= 8x^2 + 20x*sqrt(x) - 28x - 20x*sqrt(x) - 50x + 70sqrt(x)\n= 8x^2 + (20x*sqrt(x) - 20x*sqrt(x)) + (-28x - 50x) + 70sqrt(x)\n= 8x^2 - 78x + 70sqrt(x)\nTip: The middle terms 20x*sqrt(x) cancel out. Check you have 9 terms total before simplifying.\n\n(c) Use long division or synthetic division:\n4x^3 - 12x^2 - 7x + 30 = (2x + 3)(2x^2 - 9x + 10)\nNow factor the quadratic:\n2x^2 - 9x + 10 = (2x - 5)(x - 2)\nFull factorization: (2x + 3)(2x - 5)(x - 2) = 0\nSolutions:\n2x + 3 = 0 -> x = -3/2\n2x - 5 = 0 -> x = 5/2\nx - 2 = 0 -> x = 2\nAnswer: x = -3/2, x = 5/2, x = 2\nSteps earn marks: Setting up the division (2), finding first term (2), finding the quadratic (2), factorizing it (2), finding all 3 values (2) = 10 marks total."
+    num:1,
+    label: "Algebra",
+    q: "(a) Solve the inequality |x - 3| <= 12 [10 marks]\nSolve for x in R.\n\n(b) Multiply out and simplify: (4x - 10sqrt(x))(2x + 5sqrt(x) - 7) [10 marks]\n\n(c) Find three solutions to 4x^3 - 12x^2 - 7x + 30 = 0 [10 marks]\nGiven: (2x + 3) is a factor.",
+    a: "(a) |x - 3| <= 12 means:\nx - 3 <= 12 AND x - 3 >= -12\nx <= 15 AND x >= -9\nAnswer: -9 <= x <= 15\nWhy: The absolute value |x - 3| represents the distance from x to 3. If this distance is <= 12, then x can be 12 units to the left (3 - 12 = -9) or 12 units to the right (3 + 12 = 15) of 3.\n\n(b) Distribute each term:\n= 4x(2x + 5sqrt(x) - 7) - 10sqrt(x)(2x + 5sqrt(x) - 7)\n= 8x^2 + 20x*sqrt(x) - 28x - 20x*sqrt(x) - 50x + 70sqrt(x)\n= 8x^2 + (20x*sqrt(x) - 20x*sqrt(x)) + (-28x - 50x) + 70sqrt(x)\n= 8x^2 - 78x + 70sqrt(x)\nTip: The middle terms 20x*sqrt(x) cancel out. Check you have 9 terms total before simplifying.\n\n(c) Use long division or synthetic division:\n4x^3 - 12x^2 - 7x + 30 = (2x + 3)(2x^2 - 9x + 10)\nNow factor the quadratic:\n2x^2 - 9x + 10 = (2x - 5)(x - 2)\nFull factorization: (2x + 3)(2x - 5)(x - 2) = 0\nSolutions:\n2x + 3 = 0 -> x = -3/2\n2x - 5 = 0 -> x = 5/2\nx - 2 = 0 -> x = 2\nAnswer: x = -3/2, x = 5/2, x = 2\nSteps earn marks: Setting up the division (2), finding first term (2), finding the quadratic (2), factorizing it (2), finding all 3 values (2) = 10 marks total."
   },
   {
-    "num": "P1 Q2",
-    "label": "Calculus and Functions",
-    "q": "(a)(i) Find f'(x) where f(x) = 6 + x^2 + sin 4x [5 marks]\n\n(a)(ii) Find the equation of the tangent at x = 0 in form ax + by + c = 0 [10 marks]\n\n(b)(i) For g(x) shown in the graph, find values of x where g'(x) > 2 [5 marks]\nGraph shows: g(x) is made of two line segments from x = 0 to x = 4\n\n(b)(ii) Find g(g(3)) [5 marks]\n\n(b)(iii) Draw the graph of y = g^(-1)(x) [5 marks]",
-    "a": "(a)(i) Differentiate term by term:\nf'(x) = 0 + 2x + 4cos 4x\nf'(x) = 2x + 4cos 4x\nChain rule: The derivative of sin 4x is cos 4x * 4 (derivative of inside function).\n\n(a)(ii) Step 1: Find the slope at x = 0\nf'(0) = 2(0) + 4cos(4*0) = 4cos(0) = 4\nSlope m = 4\nStep 2: Find the y-value at x = 0\nf(0) = 6 + 0^2 + sin(4*0) = 6\nPoint of contact: (0, 6)\nStep 3: Use point-slope form\ny - 6 = 4(x - 0)\ny - 6 = 4x\nStep 4: Rearrange to required form\n4x - y + 6 = 0\nAnswer: 4x - y + 6 = 0\n\n(b)(i) g'(x) represents the slope of g(x)\nFrom the graph: the second line segment (from x = 3 to x = 4) has slope > 2\nAnswer: 3 < x <= 4\n\n(b)(ii) From the graph:\ng(3) = 1\ng(g(3)) = g(1) = 1/3\nAnswer: 1/3\nComposite functions: Work from the inside out.\n\n(b)(iii) The inverse function g^(-1)(x) is the reflection of g(x) in the line y = x.\nReflect each point (a, b) on g(x) to (b, a) on g^(-1)(x).\nKey points to reflect: If (0, 0), (1, 1/3), (3, 1), (4, 4) are on g, then (0, 0), (1/3, 1), (1, 3), (4, 4) are on g^(-1). Also draw the line y = x as a guide."
+    num:2,
+    label: "Calculus and Functions",
+    q: "(a)(i) Find f'(x) where f(x) = 6 + x^2 + sin 4x [5 marks]\n\n(a)(ii) Find the equation of the tangent at x = 0 in form ax + by + c = 0 [10 marks]\n\n(b)(i) For g(x) shown in the graph, find values of x where g'(x) > 2 [5 marks]\nGraph shows: g(x) is made of two line segments from x = 0 to x = 4\n\n(b)(ii) Find g(g(3)) [5 marks]\n\n(b)(iii) Draw the graph of y = g^(-1)(x) [5 marks]",
+    a: "(a)(i) Differentiate term by term:\nf'(x) = 0 + 2x + 4cos 4x\nf'(x) = 2x + 4cos 4x\nChain rule: The derivative of sin 4x is cos 4x * 4 (derivative of inside function).\n\n(a)(ii) Step 1: Find the slope at x = 0\nf'(0) = 2(0) + 4cos(4*0) = 4cos(0) = 4\nSlope m = 4\nStep 2: Find the y-value at x = 0\nf(0) = 6 + 0^2 + sin(4*0) = 6\nPoint of contact: (0, 6)\nStep 3: Use point-slope form\ny - 6 = 4(x - 0)\ny - 6 = 4x\nStep 4: Rearrange to required form\n4x - y + 6 = 0\nAnswer: 4x - y + 6 = 0\n\n(b)(i) g'(x) represents the slope of g(x)\nFrom the graph: the second line segment (from x = 3 to x = 4) has slope > 2\nAnswer: 3 < x <= 4\n\n(b)(ii) From the graph:\ng(3) = 1\ng(g(3)) = g(1) = 1/3\nAnswer: 1/3\nComposite functions: Work from the inside out.\n\n(b)(iii) The inverse function g^(-1)(x) is the reflection of g(x) in the line y = x.\nReflect each point (a, b) on g(x) to (b, a) on g^(-1)(x).\nKey points to reflect: If (0, 0), (1, 1/3), (3, 1), (4, 4) are on g, then (0, 0), (1/3, 1), (1, 3), (4, 4) are on g^(-1). Also draw the line y = x as a guide."
   },
   {
-    "num": "P1 Q3",
-    "label": "Calculus",
-    "q": "Topics: Chain rule, quotient rule, integration with limits. [30 marks]",
-    "a": "This question typically covers: Differentiating composite functions using the chain rule, applying the quotient rule to rational functions, and evaluating definite integrals. Show all steps -- each rule application earns marks independently.\n\nKey formulas:\nChain rule: dy/dx = dy/du * du/dx\nQuotient rule: d/dx(u/v) = [v(du/dx) - u(dv/dx)] / v^2\nDefinite integral: integral from a to b of f(x)dx = F(b) - F(a)"
+    num:3,
+    label: "Calculus",
+    q: "Topics: Chain rule, quotient rule, integration with limits. [30 marks]",
+    a: "This question typically covers: Differentiating composite functions using the chain rule, applying the quotient rule to rational functions, and evaluating definite integrals. Show all steps -- each rule application earns marks independently.\n\nKey formulas:\nChain rule: dy/dx = dy/du * du/dx\nQuotient rule: d/dx(u/v) = [v(du/dx) - u(dv/dx)] / v^2\nDefinite integral: integral from a to b of f(x)dx = F(b) - F(a)"
   },
   {
-    "num": "P1 Q4",
-    "label": "Complex Numbers",
-    "q": "(a) Write (2 + 3i)/(4 - 5i) in the form a + bi [5 marks]\n\n(b) Use de Moivre's theorem to prove cos 2t = cos^2(t) - sin^2(t) [10 marks]\n\n(c) Find two values of z where z^6 = -64i [15 marks]",
-    "a": "(a) Multiply top and bottom by the conjugate of the denominator:\nConjugate of (4 - 5i) is (4 + 5i)\n= (2 + 3i)(4 + 5i) / (4 - 5i)(4 + 5i)\nNumerator:\n= 8 + 10i + 12i + 15i^2\n= 8 + 22i + 15(-1)\n= -7 + 22i\nDenominator:\n= 16 + 20i - 20i - 25i^2\n= 16 - 25(-1)\n= 16 + 25 = 41\nAnswer: -7/41 + 22i/41\nWhy multiply by conjugate? When you multiply (a - bi)(a + bi), the i terms cancel and you get a^2 + b^2, which is real.\n\n(b) By de Moivre's theorem:\n(cos t + i sin t)^2 = cos 2t + i sin 2t\nExpand the left side:\nLHS = cos^2(t) + 2i cos(t) sin(t) + i^2 sin^2(t)\n= cos^2(t) + 2i cos(t) sin(t) - sin^2(t)\n= (cos^2(t) - sin^2(t)) + i(2 cos(t) sin(t))\nEquate real parts:\nReal part of LHS = cos^2(t) - sin^2(t)\nReal part of RHS = cos 2t\nTherefore: cos 2t = cos^2(t) - sin^2(t)\n\n(c) Step 1: Convert -64i to polar form\n-64i is on the negative imaginary axis\nModulus r = |-64i| = 64\nArgument t = -90 degrees = -pi/2 (or 270 degrees = 3pi/2)\nStep 2: Use z = (-64i)^(1/6)\nz = 64^(1/6) * [cos((3pi/2 + 2pi*n)/6) + i sin((3pi/2 + 2pi*n)/6)]\nz = 2 * [cos(pi/4 + pi*n/3) + i sin(pi/4 + pi*n/3)]\nStep 3: Find roots for n = 0, 1, 2, 3, 4, 5\nn = 0: z = 2[cos(pi/4) + i sin(pi/4)] = sqrt(2) + sqrt(2)i\nn = 1: z = 2[cos(7pi/12) + i sin(7pi/12)] = (-sqrt(6) + sqrt(2))/2 + i(sqrt(6) + sqrt(2))/2\nAnswer (any two): z = sqrt(2) + sqrt(2)i, z = (-sqrt(6) + sqrt(2))/2 + i(sqrt(6) + sqrt(2))/2\nNote: Since z^6 is an even power, if you find one root z0, then -z0 is also a root."
+    num:4,
+    label: "Complex Numbers",
+    q: "(a) Write (2 + 3i)/(4 - 5i) in the form a + bi [5 marks]\n\n(b) Use de Moivre's theorem to prove cos 2t = cos^2(t) - sin^2(t) [10 marks]\n\n(c) Find two values of z where z^6 = -64i [15 marks]",
+    a: "(a) Multiply top and bottom by the conjugate of the denominator:\nConjugate of (4 - 5i) is (4 + 5i)\n= (2 + 3i)(4 + 5i) / (4 - 5i)(4 + 5i)\nNumerator:\n= 8 + 10i + 12i + 15i^2\n= 8 + 22i + 15(-1)\n= -7 + 22i\nDenominator:\n= 16 + 20i - 20i - 25i^2\n= 16 - 25(-1)\n= 16 + 25 = 41\nAnswer: -7/41 + 22i/41\nWhy multiply by conjugate? When you multiply (a - bi)(a + bi), the i terms cancel and you get a^2 + b^2, which is real.\n\n(b) By de Moivre's theorem:\n(cos t + i sin t)^2 = cos 2t + i sin 2t\nExpand the left side:\nLHS = cos^2(t) + 2i cos(t) sin(t) + i^2 sin^2(t)\n= cos^2(t) + 2i cos(t) sin(t) - sin^2(t)\n= (cos^2(t) - sin^2(t)) + i(2 cos(t) sin(t))\nEquate real parts:\nReal part of LHS = cos^2(t) - sin^2(t)\nReal part of RHS = cos 2t\nTherefore: cos 2t = cos^2(t) - sin^2(t)\n\n(c) Step 1: Convert -64i to polar form\n-64i is on the negative imaginary axis\nModulus r = |-64i| = 64\nArgument t = -90 degrees = -pi/2 (or 270 degrees = 3pi/2)\nStep 2: Use z = (-64i)^(1/6)\nz = 64^(1/6) * [cos((3pi/2 + 2pi*n)/6) + i sin((3pi/2 + 2pi*n)/6)]\nz = 2 * [cos(pi/4 + pi*n/3) + i sin(pi/4 + pi*n/3)]\nStep 3: Find roots for n = 0, 1, 2, 3, 4, 5\nn = 0: z = 2[cos(pi/4) + i sin(pi/4)] = sqrt(2) + sqrt(2)i\nn = 1: z = 2[cos(7pi/12) + i sin(7pi/12)] = (-sqrt(6) + sqrt(2))/2 + i(sqrt(6) + sqrt(2))/2\nAnswer (any two): z = sqrt(2) + sqrt(2)i, z = (-sqrt(6) + sqrt(2))/2 + i(sqrt(6) + sqrt(2))/2\nNote: Since z^6 is an even power, if you find one root z0, then -z0 is also a root."
   },
   {
-    "num": "P1 Q5",
-    "label": "Algebra",
-    "q": "Topics: Completing the square, logarithms, simultaneous equations. [30 marks]",
-    "a": "This question typically covers: Rewriting quadratic expressions in completed square form a(x+h)^2+k, solving logarithmic equations using log laws, and solving systems of equations (often one linear, one quadratic).\n\nKey formulas:\nCompleting the square: ax^2 + bx + c = a(x + b/(2a))^2 + (c - b^2/(4a))\nLog laws: log(AB) = logA + logB, log(A/B) = logA - logB, log(A^n) = nlogA\nChange of base: log_a(b) = log(b)/log(a)"
+    num:5,
+    label: "Algebra",
+    q: "Topics: Completing the square, logarithms, simultaneous equations. [30 marks]",
+    a: "This question typically covers: Rewriting quadratic expressions in completed square form a(x+h)^2+k, solving logarithmic equations using log laws, and solving systems of equations (often one linear, one quadratic).\n\nKey formulas:\nCompleting the square: ax^2 + bx + c = a(x + b/(2a))^2 + (c - b^2/(4a))\nLog laws: log(AB) = logA + logB, log(A/B) = logA - logB, log(A^n) = nlogA\nChange of base: log_a(b) = log(b)/log(a)"
   },
   {
-    "num": "P1 Q6",
-    "label": "Binomial Expansion",
-    "q": "Topics: Binomial theorem, discriminant, quadratic theory. [30 marks]",
-    "a": "This question typically covers: Expanding (a+b)^n using the binomial theorem, finding specific terms in an expansion, using the discriminant (b^2-4ac) to determine the nature of roots, and applying conditions for equal/real/complex roots.\n\nKey formulas:\nBinomial: T(r+1) = C(n,r) * a^(n-r) * b^r\nDiscriminant: D = b^2 - 4ac\nD > 0: two real roots | D = 0: equal roots | D < 0: no real roots"
+    num:6,
+    label: "Binomial Expansion",
+    q: "Topics: Binomial theorem, discriminant, quadratic theory. [30 marks]",
+    a: "This question typically covers: Expanding (a+b)^n using the binomial theorem, finding specific terms in an expansion, using the discriminant (b^2-4ac) to determine the nature of roots, and applying conditions for equal/real/complex roots.\n\nKey formulas:\nBinomial: T(r+1) = C(n,r) * a^(n-r) * b^r\nDiscriminant: D = b^2 - 4ac\nD > 0: two real roots | D = 0: equal roots | D < 0: no real roots"
   },
   {
-    "num": "P1 Q7",
-    "label": "Spider Web Sequences",
-    "q": "(a)(i) Find A(2) and A(3) [5 marks]\nGiven: S(1) = 15.8, S(2) = 37.8, S(3) = 66, A(1) = 15.8\n\n(a)(ii) Find an expression for A(n) [5 marks]\n\n(a)(iii) Find A(100) [5 marks]\n\n(a)(iv) Show that S(n) = 3.1n^2 + 12.7n [5 marks]\n\n(a)(v) Find stage k where total silk first exceeds 10m [5 marks]\n\n(b)(i) Find the length of O3 [5 marks]\nGiven: O1 = 0.5 cm, O2 = 0.53 cm, lengths form geometric sequence\n\n(b)(ii) Expression for total length of first n orbitals [10 marks]\n\n(b)(iii) Expression for total length of first k laps [10 marks]\nGiven: Each lap has exactly 18 orbitals",
-    "a": "(a)(i) A(2) = extra silk from Stage 1 to Stage 2\nA(2) = S(2) - S(1) = 37.8 - 15.8 = 22\nA(3) = S(3) - S(2) = 66 - 37.8 = 28.2\n\n(a)(ii) Check if arithmetic sequence:\nA(1) = 15.8, A(2) = 22, A(3) = 28.2\nDifferences: 22 - 15.8 = 6.2, 28.2 - 22 = 6.2\nCommon difference d = 6.2\nArithmetic sequence formula:\nA(n) = a + (n - 1)d\nA(n) = 15.8 + (n - 1)(6.2)\nA(n) = 6.2n + 9.6\n\n(a)(iii) A(100) = 6.2(100) + 9.6 = 620 + 9.6 = 629.6 cm\n\n(a)(iv) S(n) is the sum of arithmetic series A(1) + A(2) + ... + A(n)\nUsing sum formula: S_n = n/2[2a + (n-1)d]\nS(n) = n/2[2(15.8) + (n-1)(6.2)]\nS(n) = n/2[31.6 + 6.2n - 6.2]\nS(n) = n/2[6.2n + 25.4]\nS(n) = n(3.1n + 12.7)\nS(n) = 3.1n^2 + 12.7n\n\n(a)(v) 10 m = 1000 cm\nS(n) > 1000\n3.1n^2 + 12.7n = 1000\n3.1n^2 + 12.7n - 1000 = 0\nQuadratic formula:\nn = [-12.7 +/- sqrt(12.7^2 - 4(3.1)(-1000))] / (2 * 3.1)\nn = [-12.7 +/- sqrt(161.29 + 12400)] / 6.2\nn = [-12.7 +/- sqrt(12561.29)] / 6.2\nn = [-12.7 +/- 112.07] / 6.2\nn = 99.37/6.2 or -124.77/6.2\nn approx 16.02 (taking positive root)\nSince n must be a natural number: k = 17\nWhy 17? Stage 16 gives 996.8 cm (< 1000), Stage 17 gives 1026.5 cm (> 1000).\n\n(b)(i) Find common ratio r:\nr = O2/O1 = 0.53/0.5 = 1.06\nO3 = O2 * r = 0.53 * 1.06 = 0.5618 cm\n\n(b)(ii) Geometric series sum:\nS_n = a(r^n - 1)/(r - 1)\na = 0.5, r = 1.06\nS_n = 0.5(1.06^n - 1)/(1.06 - 1)\nS_n = 0.5(1.06^n - 1)/0.06\nor simplified: S_n = (25/3)(1.06^n - 1)\n\n(b)(iii) One lap = first 18 orbitals\nLength of 1 lap = S18 = (25/3)(1.06^18 - 1)\nk laps = k * S18\nTotal = k * (25/3)(1.06^18 - 1)"
+    num:7,
+    label: "Spider Web Sequences",
+    q: "(a)(i) Find A(2) and A(3) [5 marks]\nGiven: S(1) = 15.8, S(2) = 37.8, S(3) = 66, A(1) = 15.8\n\n(a)(ii) Find an expression for A(n) [5 marks]\n\n(a)(iii) Find A(100) [5 marks]\n\n(a)(iv) Show that S(n) = 3.1n^2 + 12.7n [5 marks]\n\n(a)(v) Find stage k where total silk first exceeds 10m [5 marks]\n\n(b)(i) Find the length of O3 [5 marks]\nGiven: O1 = 0.5 cm, O2 = 0.53 cm, lengths form geometric sequence\n\n(b)(ii) Expression for total length of first n orbitals [10 marks]\n\n(b)(iii) Expression for total length of first k laps [10 marks]\nGiven: Each lap has exactly 18 orbitals",
+    a: "(a)(i) A(2) = extra silk from Stage 1 to Stage 2\nA(2) = S(2) - S(1) = 37.8 - 15.8 = 22\nA(3) = S(3) - S(2) = 66 - 37.8 = 28.2\n\n(a)(ii) Check if arithmetic sequence:\nA(1) = 15.8, A(2) = 22, A(3) = 28.2\nDifferences: 22 - 15.8 = 6.2, 28.2 - 22 = 6.2\nCommon difference d = 6.2\nArithmetic sequence formula:\nA(n) = a + (n - 1)d\nA(n) = 15.8 + (n - 1)(6.2)\nA(n) = 6.2n + 9.6\n\n(a)(iii) A(100) = 6.2(100) + 9.6 = 620 + 9.6 = 629.6 cm\n\n(a)(iv) S(n) is the sum of arithmetic series A(1) + A(2) + ... + A(n)\nUsing sum formula: S_n = n/2[2a + (n-1)d]\nS(n) = n/2[2(15.8) + (n-1)(6.2)]\nS(n) = n/2[31.6 + 6.2n - 6.2]\nS(n) = n/2[6.2n + 25.4]\nS(n) = n(3.1n + 12.7)\nS(n) = 3.1n^2 + 12.7n\n\n(a)(v) 10 m = 1000 cm\nS(n) > 1000\n3.1n^2 + 12.7n = 1000\n3.1n^2 + 12.7n - 1000 = 0\nQuadratic formula:\nn = [-12.7 +/- sqrt(12.7^2 - 4(3.1)(-1000))] / (2 * 3.1)\nn = [-12.7 +/- sqrt(161.29 + 12400)] / 6.2\nn = [-12.7 +/- sqrt(12561.29)] / 6.2\nn = [-12.7 +/- 112.07] / 6.2\nn = 99.37/6.2 or -124.77/6.2\nn approx 16.02 (taking positive root)\nSince n must be a natural number: k = 17\nWhy 17? Stage 16 gives 996.8 cm (< 1000), Stage 17 gives 1026.5 cm (> 1000).\n\n(b)(i) Find common ratio r:\nr = O2/O1 = 0.53/0.5 = 1.06\nO3 = O2 * r = 0.53 * 1.06 = 0.5618 cm\n\n(b)(ii) Geometric series sum:\nS_n = a(r^n - 1)/(r - 1)\na = 0.5, r = 1.06\nS_n = 0.5(1.06^n - 1)/(1.06 - 1)\nS_n = 0.5(1.06^n - 1)/0.06\nor simplified: S_n = (25/3)(1.06^n - 1)\n\n(b)(iii) One lap = first 18 orbitals\nLength of 1 lap = S18 = (25/3)(1.06^18 - 1)\nk laps = k * S18\nTotal = k * (25/3)(1.06^18 - 1)"
   },
   {
-    "num": "P1 Q8",
-    "label": "Applied Calculus",
-    "q": "Section B -- Topics: Optimization, rates of change, related rates problems. [50 marks]",
-    "a": "This question typically covers: Finding maximum/minimum values in real-world contexts (area, volume, cost), setting up equations from word problems, differentiating and setting f'(x)=0, verifying with second derivative test. Often involves modelling a real scenario.\n\nApproach:\n1. Express the quantity to optimize as a function of one variable\n2. Differentiate and set equal to zero\n3. Solve for the variable\n4. Verify it's a max/min using f''(x)\n5. Answer the question in context with units"
+    num:8,
+    label: "Applied Calculus",
+    q: "Section B -- Topics: Optimization, rates of change, related rates problems. [50 marks]",
+    a: "This question typically covers: Finding maximum/minimum values in real-world contexts (area, volume, cost), setting up equations from word problems, differentiating and setting f'(x)=0, verifying with second derivative test. Often involves modelling a real scenario.\n\nApproach:\n1. Express the quantity to optimize as a function of one variable\n2. Differentiate and set equal to zero\n3. Solve for the variable\n4. Verify it's a max/min using f''(x)\n5. Answer the question in context with units"
   },
   {
-    "num": "P1 Q9",
-    "label": "Calculus in Context",
-    "q": "Section B -- Topics: Chain rule applications, piecewise functions, integration for averages. [50 marks]",
-    "a": "This question typically covers: Real-world applications of calculus -- often involving rates, areas, averages. May include piecewise-defined functions, interpreting graphs, and using integration to find average values over an interval.\n\nKey formula: Average value = (1/(b-a)) * integral from a to b of f(x)dx"
+    num:9,
+    label: "Calculus in Context",
+    q: "Section B -- Topics: Chain rule applications, piecewise functions, integration for averages. [50 marks]",
+    a: "This question typically covers: Real-world applications of calculus -- often involving rates, areas, averages. May include piecewise-defined functions, interpreting graphs, and using integration to find average values over an interval.\n\nKey formula: Average value = (1/(b-a)) * integral from a to b of f(x)dx"
   },
   {
-    "num": "P1 Q10",
-    "label": "Proof and Patterns",
-    "q": "Section B -- Topics: Coordinate geometry patterns, limits, proof by induction. [50 marks]",
-    "a": "This question typically covers: Identifying patterns, proving formulas using mathematical induction, evaluating limits, and connecting algebra to geometric interpretations.\n\nProof by Induction steps:\n1. Prove the base case (n=1)\n2. Assume true for n=k\n3. Prove true for n=k+1 using the assumption\n4. Conclude: true for all n in N by induction"
+    num:10,
+    label: "Proof and Patterns",
+    q: "Section B -- Topics: Coordinate geometry patterns, limits, proof by induction. [50 marks]",
+    a: "This question typically covers: Identifying patterns, proving formulas using mathematical induction, evaluating limits, and connecting algebra to geometric interpretations.\n\nProof by Induction steps:\n1. Prove the base case (n=1)\n2. Assume true for n=k\n3. Prove true for n=k+1 using the assumption\n4. Conclude: true for all n in N by induction"
   },
   {
-    "num": "P2 Q1",
-    "label": "Lines",
-    "q": "(a) Find p where (p, 5) lies on 3x - 2y + 28 = 0 [5 marks]\n\n(b) Find acute angle between lines l and h [10 marks]\nGiven: l: y = -x/3 + 11, h: 2x - 5y + 10 = 0\n\n(c) Find equations of two lines with slope -2/3 and triangle area 12 [15 marks]\nGiven: Line cuts x-axis at A(a, 0), y-axis at B(0, b), slope = -2/3, triangle area = 12",
-    "a": "(a) Substitute the point into the equation:\n3(p) - 2(5) + 28 = 0\n3p - 10 + 28 = 0\n3p + 18 = 0\n3p = -18\np = -6\n\n(b) Find slopes:\nLine l: y = -x/3 + 11, so m1 = -1/3\nLine h: 2x - 5y + 10 = 0\n5y = 2x + 10\ny = 2x/5 + 2, so m2 = 2/5\nAngle between lines:\ntan t = |(m1 - m2)/(1 + m1*m2)|\ntan t = |(-1/3 - 2/5)/(1 + (-1/3)(2/5))|\ntan t = |(-5/15 - 6/15)/(1 - 2/15)|\ntan t = |(-11/15)/(13/15)|\ntan t = |-11/13|\ntan t = 11/13\nt = tan^(-1)(11/13)\nt approx 40 degrees\n\n(c) From slope:\nm = -2/3 = (b - 0)/(0 - a) = b/(-a)\nb/(-a) = -2/3\n3b = 2a\nb = 2a/3\nFrom area:\nArea of triangle = (1/2)|a||b| = 12\n|ab| = 24\nSubstitute b = 2a/3:\n|a * 2a/3| = 24\n|2a^2/3| = 24\n2a^2/3 = 24 (taking positive)\na^2 = 36\na = +/-6\nCase 1: a = 6, b = 4\nLine 1: 2x + 3y - 12 = 0\nCase 2: a = -6, b = -4\nLine 2: 2x + 3y + 12 = 0"
+    num:11,
+    label: "Lines",
+    q: "(a) Find p where (p, 5) lies on 3x - 2y + 28 = 0 [5 marks]\n\n(b) Find acute angle between lines l and h [10 marks]\nGiven: l: y = -x/3 + 11, h: 2x - 5y + 10 = 0\n\n(c) Find equations of two lines with slope -2/3 and triangle area 12 [15 marks]\nGiven: Line cuts x-axis at A(a, 0), y-axis at B(0, b), slope = -2/3, triangle area = 12",
+    a: "(a) Substitute the point into the equation:\n3(p) - 2(5) + 28 = 0\n3p - 10 + 28 = 0\n3p + 18 = 0\n3p = -18\np = -6\n\n(b) Find slopes:\nLine l: y = -x/3 + 11, so m1 = -1/3\nLine h: 2x - 5y + 10 = 0\n5y = 2x + 10\ny = 2x/5 + 2, so m2 = 2/5\nAngle between lines:\ntan t = |(m1 - m2)/(1 + m1*m2)|\ntan t = |(-1/3 - 2/5)/(1 + (-1/3)(2/5))|\ntan t = |(-5/15 - 6/15)/(1 - 2/15)|\ntan t = |(-11/15)/(13/15)|\ntan t = |-11/13|\ntan t = 11/13\nt = tan^(-1)(11/13)\nt approx 40 degrees\n\n(c) From slope:\nm = -2/3 = (b - 0)/(0 - a) = b/(-a)\nb/(-a) = -2/3\n3b = 2a\nb = 2a/3\nFrom area:\nArea of triangle = (1/2)|a||b| = 12\n|ab| = 24\nSubstitute b = 2a/3:\n|a * 2a/3| = 24\n|2a^2/3| = 24\n2a^2/3 = 24 (taking positive)\na^2 = 36\na = +/-6\nCase 1: a = 6, b = 4\nLine 1: 2x + 3y - 12 = 0\nCase 2: a = -6, b = -4\nLine 2: 2x + 3y + 12 = 0"
   },
   {
-    "num": "P2 Q2",
-    "label": "Circles",
-    "q": "(a)(i) Centre and radius of (x - 4)^2 + (y + 2)^2 = 45 [5 marks]\n\n(a)(ii) Equation of tangent at (-2, -5) [10 marks]\n\n(b) Find two values of k where y = k is tangent to circle t [15 marks]\nGiven: x^2 + y^2 + 28x - 46y + k = 0",
-    "a": "(a)(i) Standard form: (x - h)^2 + (y - k)^2 = r^2\nCentre (h, k) = (4, -2)\nr^2 = 45, so r = sqrt(45) = 3*sqrt(5)\nCentre: (4, -2)\nRadius: 3*sqrt(5)\n\n(a)(ii) Slope of radius from centre (4, -2) to point (-2, -5):\nm_radius = (-5 - (-2))/(-2 - 4) = -3/(-6) = 1/2\nSlope of tangent (perpendicular to radius):\nm_tangent = -1/m_radius = -1/(1/2) = -2\nEquation of tangent through (-2, -5):\ny - (-5) = -2(x - (-2))\ny + 5 = -2(x + 2)\ny + 5 = -2x - 4\ny = -2x - 9\nAnswer: y = -2x - 9\n\n(b) Complete the square to find centre and radius:\n(x^2 + 28x) + (y^2 - 46y) + k = 0\n(x^2 + 28x + 196) + (y^2 - 46y + 529) + k = 196 + 529\n(x + 14)^2 + (y - 23)^2 = 725 - k\nCentre: (-14, 23)\nRadius: r = sqrt(725 - k)\nFor y = k to be tangent:\nThe distance from centre to line y = k equals the radius\nDistance = |23 - k|\n|23 - k| = sqrt(725 - k)\nSquare both sides:\n(23 - k)^2 = 725 - k\n529 - 46k + k^2 = 725 - k\nk^2 - 45k - 196 = 0\nSolve using quadratic formula:\nk = [45 +/- sqrt(2025 + 784)] / 2\nk = [45 +/- sqrt(2809)] / 2\nk = [45 +/- 53] / 2\nk = 49 or k = -4\nAnswer: k = 49 or k = -4"
+    num:12,
+    label: "Circles",
+    q: "(a)(i) Centre and radius of (x - 4)^2 + (y + 2)^2 = 45 [5 marks]\n\n(a)(ii) Equation of tangent at (-2, -5) [10 marks]\n\n(b) Find two values of k where y = k is tangent to circle t [15 marks]\nGiven: x^2 + y^2 + 28x - 46y + k = 0",
+    a: "(a)(i) Standard form: (x - h)^2 + (y - k)^2 = r^2\nCentre (h, k) = (4, -2)\nr^2 = 45, so r = sqrt(45) = 3*sqrt(5)\nCentre: (4, -2)\nRadius: 3*sqrt(5)\n\n(a)(ii) Slope of radius from centre (4, -2) to point (-2, -5):\nm_radius = (-5 - (-2))/(-2 - 4) = -3/(-6) = 1/2\nSlope of tangent (perpendicular to radius):\nm_tangent = -1/m_radius = -1/(1/2) = -2\nEquation of tangent through (-2, -5):\ny - (-5) = -2(x - (-2))\ny + 5 = -2(x + 2)\ny + 5 = -2x - 4\ny = -2x - 9\nAnswer: y = -2x - 9\n\n(b) Complete the square to find centre and radius:\n(x^2 + 28x) + (y^2 - 46y) + k = 0\n(x^2 + 28x + 196) + (y^2 - 46y + 529) + k = 196 + 529\n(x + 14)^2 + (y - 23)^2 = 725 - k\nCentre: (-14, 23)\nRadius: r = sqrt(725 - k)\nFor y = k to be tangent:\nThe distance from centre to line y = k equals the radius\nDistance = |23 - k|\n|23 - k| = sqrt(725 - k)\nSquare both sides:\n(23 - k)^2 = 725 - k\n529 - 46k + k^2 = 725 - k\nk^2 - 45k - 196 = 0\nSolve using quadratic formula:\nk = [45 +/- sqrt(2025 + 784)] / 2\nk = [45 +/- sqrt(2809)] / 2\nk = [45 +/- 53] / 2\nk = 49 or k = -4\nAnswer: k = 49 or k = -4"
   },
   {
-    "num": "P2 Q3",
-    "label": "Probability",
-    "q": "Context: 240 people surveyed about which countries (A, B, C) they had visited.\n\n(a)(i) Show P(A) = 1/4 [5 marks]\nFrom Venn diagram: n(A only) = 6, n(A intersection B only) = 18, n(A intersection C only) = 13, n(A intersection B intersection C) = 23\n\n(a)(ii) Verify P(A union C) = P(A) + P(C) - P(A intersection C) [5 marks]\n\n(a)(iii) Are A and B independent? Justify. [5 marks]\n\n(b) Probability one person visited all 3, other visited none [15 marks]",
-    "a": "(a)(i) Total in A:\nn(A) = 6 + 18 + 13 + 23 = 60\nP(A) = 60/240 = 1/4\n\n(a)(ii) Count from Venn diagram:\nn(A) = 60\nn(C) = 13 + 41 + 23 + 16 = 93\nn(A intersection C) = 13 + 23 = 36\nn(A union C) = 6 + 18 + 13 + 41 + 23 + 16 = 117\nLHS: P(A union C) = 117/240\nRHS: P(A) + P(C) - P(A intersection C) = 60/240 + 93/240 - 36/240 = 117/240\nLHS = RHS\n\n(a)(iii) For independence: P(A intersection B) = P(A) * P(B)\nn(B) = 18 + 56 + 23 + 16 = 113, P(B) = 113/240\nn(A intersection B) = 18 + 23 = 41, P(A intersection B) = 41/240\nTest: P(A) * P(B) = (60/240) * (113/240) = 113/960\nP(A intersection B) = 41/240 = 164/960\n113/960 != 164/960\nAnswer: No, A and B are NOT independent because P(A intersection B) != P(A) * P(B)\n\n(b) Number who visited all 3: 23\nNumber who visited none: 67\nTwo ways this can happen:\n1. First person visited all 3, second visited none\n2. First person visited none, second visited all 3\nP = (23/240) * (67/239) + (67/240) * (23/239)\nP = 2 * (23 * 67)/(240 * 239)\nP = 2 * 1541/57360\nP = 3082/57360\nSimplify: GCD(3082, 57360) = 2\nP = 1541/28680"
+    num:13,
+    label: "Probability",
+    q: "Context: 240 people surveyed about which countries (A, B, C) they had visited.\n\n(a)(i) Show P(A) = 1/4 [5 marks]\nFrom Venn diagram: n(A only) = 6, n(A intersection B only) = 18, n(A intersection C only) = 13, n(A intersection B intersection C) = 23\n\n(a)(ii) Verify P(A union C) = P(A) + P(C) - P(A intersection C) [5 marks]\n\n(a)(iii) Are A and B independent? Justify. [5 marks]\n\n(b) Probability one person visited all 3, other visited none [15 marks]",
+    a: "(a)(i) Total in A:\nn(A) = 6 + 18 + 13 + 23 = 60\nP(A) = 60/240 = 1/4\n\n(a)(ii) Count from Venn diagram:\nn(A) = 60\nn(C) = 13 + 41 + 23 + 16 = 93\nn(A intersection C) = 13 + 23 = 36\nn(A union C) = 6 + 18 + 13 + 41 + 23 + 16 = 117\nLHS: P(A union C) = 117/240\nRHS: P(A) + P(C) - P(A intersection C) = 60/240 + 93/240 - 36/240 = 117/240\nLHS = RHS\n\n(a)(iii) For independence: P(A intersection B) = P(A) * P(B)\nn(B) = 18 + 56 + 23 + 16 = 113, P(B) = 113/240\nn(A intersection B) = 18 + 23 = 41, P(A intersection B) = 41/240\nTest: P(A) * P(B) = (60/240) * (113/240) = 113/960\nP(A intersection B) = 41/240 = 164/960\n113/960 != 164/960\nAnswer: No, A and B are NOT independent because P(A intersection B) != P(A) * P(B)\n\n(b) Number who visited all 3: 23\nNumber who visited none: 67\nTwo ways this can happen:\n1. First person visited all 3, second visited none\n2. First person visited none, second visited all 3\nP = (23/240) * (67/239) + (67/240) * (23/239)\nP = 2 * (23 * 67)/(240 * 239)\nP = 2 * 1541/57360\nP = 3082/57360\nSimplify: GCD(3082, 57360) = 2\nP = 1541/28680"
   },
   {
-    "num": "P2 Q4",
-    "label": "Statistics",
-    "q": "Topics: Median, quartiles, mean, frequency tables, grouped data. [30 marks]",
-    "a": "This question typically covers: Calculating measures of centre and spread from frequency tables, constructing cumulative frequency curves, reading quartiles, and interpreting statistical data in context.\n\nKey formulas:\nMean (grouped) = sum(fx) / sum(f)\nMedian position = (n+1)/2\nQ1 = 25th percentile, Q3 = 75th percentile\nIQR = Q3 - Q1"
+    num:14,
+    label: "Statistics",
+    q: "Topics: Median, quartiles, mean, frequency tables, grouped data. [30 marks]",
+    a: "This question typically covers: Calculating measures of centre and spread from frequency tables, constructing cumulative frequency curves, reading quartiles, and interpreting statistical data in context.\n\nKey formulas:\nMean (grouped) = sum(fx) / sum(f)\nMedian position = (n+1)/2\nQ1 = 25th percentile, Q3 = 75th percentile\nIQR = Q3 - Q1"
   },
   {
-    "num": "P2 Q5",
-    "label": "Geometry",
-    "q": "Topics: Congruent triangles, enlargements, similarity, area ratios. [30 marks]",
-    "a": "This question typically covers: Proving triangles congruent (SSS, SAS, ASA, RHS), applying enlargement scale factors, using similarity to find unknown lengths, and relating areas/volumes to scale factors.\n\nKey facts:\nIf scale factor = k: lengths * k, areas * k^2, volumes * k^3\nCongruence conditions: SSS, SAS, ASA, RHS\nSimilar triangles: corresponding angles equal, sides in proportion"
+    num:15,
+    label: "Geometry",
+    q: "Topics: Congruent triangles, enlargements, similarity, area ratios. [30 marks]",
+    a: "This question typically covers: Proving triangles congruent (SSS, SAS, ASA, RHS), applying enlargement scale factors, using similarity to find unknown lengths, and relating areas/volumes to scale factors.\n\nKey facts:\nIf scale factor = k: lengths * k, areas * k^2, volumes * k^3\nCongruence conditions: SSS, SAS, ASA, RHS\nSimilar triangles: corresponding angles equal, sides in proportion"
   },
   {
-    "num": "P2 Q6",
-    "label": "Trigonometry",
-    "q": "Topics: Sine, cosine, period, range, cosine rule, exact values. [30 marks]",
-    "a": "This question typically covers: Graphing trig functions, finding period and range, solving trig equations, applying sine/cosine rules, and using exact values (sin30=1/2, cos60=1/2, etc.).\n\nKey formulas:\nSine rule: a/sinA = b/sinB = c/sinC\nCosine rule: c^2 = a^2 + b^2 - 2ab*cosC\nArea = (1/2)ab*sinC\nsin^2(t) + cos^2(t) = 1"
+    num:16,
+    label: "Trigonometry",
+    q: "Topics: Sine, cosine, period, range, cosine rule, exact values. [30 marks]",
+    a: "This question typically covers: Graphing trig functions, finding period and range, solving trig equations, applying sine/cosine rules, and using exact values (sin30=1/2, cos60=1/2, etc.).\n\nKey formulas:\nSine rule: a/sinA = b/sinB = c/sinC\nCosine rule: c^2 = a^2 + b^2 - 2ab*cosC\nArea = (1/2)ab*sinC\nsin^2(t) + cos^2(t) = 1"
   },
   {
-    "num": "P2 Q7",
-    "label": "3D Geometry",
-    "q": "Section B -- Topics: Pythagoras in 3D, volumes, surface areas, scaled diagrams. [50 marks]",
-    "a": "This question typically covers: Applying Pythagoras' theorem in 3D shapes, calculating volumes and surface areas of cylinders, cones, spheres, and composite solids, and using scale factors for enlargements.\n\nKey formulas:\nSphere: V = (4/3)*pi*r^3, SA = 4*pi*r^2\nCone: V = (1/3)*pi*r^2*h, CSA = pi*r*l\nCylinder: V = pi*r^2*h, SA = 2*pi*r^2 + 2*pi*r*h\n3D diagonal: d^2 = l^2 + w^2 + h^2"
+    num:17,
+    label: "3D Geometry",
+    q: "Section B -- Topics: Pythagoras in 3D, volumes, surface areas, scaled diagrams. [50 marks]",
+    a: "This question typically covers: Applying Pythagoras' theorem in 3D shapes, calculating volumes and surface areas of cylinders, cones, spheres, and composite solids, and using scale factors for enlargements.\n\nKey formulas:\nSphere: V = (4/3)*pi*r^3, SA = 4*pi*r^2\nCone: V = (1/3)*pi*r^2*h, CSA = pi*r*l\nCylinder: V = pi*r^2*h, SA = 2*pi*r^2 + 2*pi*r*h\n3D diagonal: d^2 = l^2 + w^2 + h^2"
   },
   {
-    "num": "P2 Q8",
-    "label": "Applied Trigonometry",
-    "q": "Section B -- Topics: Angles of elevation, sine rule, percentage error, surveying. [50 marks]",
-    "a": "This question typically covers: Real-world trig problems -- finding heights of buildings/towers using angles of elevation/depression, applying sine and cosine rules in non-right-angled triangles, and calculating percentage error.\n\nApproach: Draw a clear diagram, label all known values, identify which rule to use (sine rule when you have angle + opposite side, cosine rule when you have SAS or SSS), show all working."
+    num:18,
+    label: "Applied Trigonometry",
+    q: "Section B -- Topics: Angles of elevation, sine rule, percentage error, surveying. [50 marks]",
+    a: "This question typically covers: Real-world trig problems -- finding heights of buildings/towers using angles of elevation/depression, applying sine and cosine rules in non-right-angled triangles, and calculating percentage error.\n\nApproach: Draw a clear diagram, label all known values, identify which rule to use (sine rule when you have angle + opposite side, cosine rule when you have SAS or SSS), show all working."
   },
   {
-    "num": "P2 Q9",
-    "label": "Statistics in Context",
-    "q": "Section B -- Topics: Tree diagrams, combinations, binomial probability, clinical trials. [50 marks]",
-    "a": "This question typically covers: Multi-stage probability problems using tree diagrams, calculating combinations C(n,r), applying the binomial distribution P(X=r) = C(n,r)*p^r*(1-p)^(n-r), and interpreting probability in real-world contexts.\n\nKey formulas:\nC(n,r) = n! / [r!(n-r)!]\nP(X=r) = C(n,r) * p^r * (1-p)^(n-r)\nExpected value: E(X) = np"
+    num:19,
+    label: "Statistics in Context",
+    q: "Section B -- Topics: Tree diagrams, combinations, binomial probability, clinical trials. [50 marks]",
+    a: "This question typically covers: Multi-stage probability problems using tree diagrams, calculating combinations C(n,r), applying the binomial distribution P(X=r) = C(n,r)*p^r*(1-p)^(n-r), and interpreting probability in real-world contexts.\n\nKey formulas:\nC(n,r) = n! / [r!(n-r)!]\nP(X=r) = C(n,r) * p^r * (1-p)^(n-r)\nExpected value: E(X) = np"
   },
   {
-    "num": "P2 Q10",
-    "label": "Statistics with Normal Distribution",
-    "q": "Context: Test scores worldwide are normally distributed with mean 400, standard deviation 60.\n\n(a)(i) Fill in missing values using empirical rule [10 marks]\nEmpirical Rule (68-95-99.7): 68% within mean +/- SD, 95% within mean +/- 2SD, 99.7% within mean +/- 3SD\n\n(a)(ii) Proportion scoring above 420 [10 marks]\n\n(b) 95% confidence interval for Country X [10 marks]\nGiven: Sample mean = 387, SD = 66.2, n = 2161\n\n(c)(i) Test statistic for Country Y [10 marks]\nGiven: x_bar = 403, SD = 70.6, n = 2724, mean0 = 400\n\n(c)(ii) p-value and conclusion [10 marks]\n\n(d) Stratified sampling with respect to having a pet [10 marks]",
-    "a": "(a)(i) Given: Mean = 400, SD = 60\nOne value shown: 520 (which is 400 + 2*60)\nMissing values at mean +/- SD:\n400 - 60 = 340\n400 + 60 = 460\nMissing value at mean - 2SD:\n400 - 2(60) = 280\nThe four missing values are: 280, 340, 460, 520\n\n(a)(ii) Standardize using z-score:\nz = (X - mean)/SD = (420 - 400)/60 = 20/60 = 1/3 approx 0.33\nFrom normal distribution table:\nP(Z < 0.33) approx 0.6293\nP(Z > 0.33) = 1 - 0.6293 = 0.3707\nAnswer: 0.37 (to 2 decimal places)\n\n(b) 95% CI formula:\nx_bar +/- 1.96(SD/sqrt(n))\n= 387 +/- 1.96(66.2/sqrt(2161))\n= 387 +/- 1.96(66.2/46.49)\n= 387 +/- 1.96(1.424)\n= 387 +/- 2.79\nLower bound: 387 - 2.8 = 384.2\nUpper bound: 387 + 2.8 = 389.8\nAnswer: (384.2, 389.8)\n\n(c)(i) z-score formula:\nz = (x_bar - mean0)/(SD/sqrt(n))\nz = (403 - 400)/(70.6/sqrt(2724))\nz = 3/(70.6/52.19)\nz = 3/1.353\nz approx 2.22\n\n(c)(ii) Two-tailed test (H1: mean != 400)\nz = 2.22\nFrom normal table:\nP(Z > 2.22) approx 0.0132\nFor two-tailed: p-value = 2 * 0.0132 = 0.0264\np-value approx 0.026\nConclusion:\nSince p-value (0.026) < 0.05 (5% significance level), we reject the null hypothesis.\nThere is sufficient evidence to conclude that the mean score for Country Y is different from 400.\n\n(d) How to take stratified sample:\nDivide the 2520 students into two strata:\n- Stratum 1: Students with a pet (50% = 1260 students)\n- Stratum 2: Students without a pet (50% = 1260 students)\nTake random samples proportionally from each stratum.\nWhy this would NOT be useful:\nHaving a pet in the home is unlikely to be related to maths test scores. Stratifying on an irrelevant variable doesn't reduce sampling error and adds unnecessary complexity. Better to use simple random sampling or stratify on factors that might affect maths performance (e.g., school type, prior maths grades)."
+    num:20,
+    label: "Statistics with Normal Distribution",
+    q: "Context: Test scores worldwide are normally distributed with mean 400, standard deviation 60.\n\n(a)(i) Fill in missing values using empirical rule [10 marks]\nEmpirical Rule (68-95-99.7): 68% within mean +/- SD, 95% within mean +/- 2SD, 99.7% within mean +/- 3SD\n\n(a)(ii) Proportion scoring above 420 [10 marks]\n\n(b) 95% confidence interval for Country X [10 marks]\nGiven: Sample mean = 387, SD = 66.2, n = 2161\n\n(c)(i) Test statistic for Country Y [10 marks]\nGiven: x_bar = 403, SD = 70.6, n = 2724, mean0 = 400\n\n(c)(ii) p-value and conclusion [10 marks]\n\n(d) Stratified sampling with respect to having a pet [10 marks]",
+    a: "(a)(i) Given: Mean = 400, SD = 60\nOne value shown: 520 (which is 400 + 2*60)\nMissing values at mean +/- SD:\n400 - 60 = 340\n400 + 60 = 460\nMissing value at mean - 2SD:\n400 - 2(60) = 280\nThe four missing values are: 280, 340, 460, 520\n\n(a)(ii) Standardize using z-score:\nz = (X - mean)/SD = (420 - 400)/60 = 20/60 = 1/3 approx 0.33\nFrom normal distribution table:\nP(Z < 0.33) approx 0.6293\nP(Z > 0.33) = 1 - 0.6293 = 0.3707\nAnswer: 0.37 (to 2 decimal places)\n\n(b) 95% CI formula:\nx_bar +/- 1.96(SD/sqrt(n))\n= 387 +/- 1.96(66.2/sqrt(2161))\n= 387 +/- 1.96(66.2/46.49)\n= 387 +/- 1.96(1.424)\n= 387 +/- 2.79\nLower bound: 387 - 2.8 = 384.2\nUpper bound: 387 + 2.8 = 389.8\nAnswer: (384.2, 389.8)\n\n(c)(i) z-score formula:\nz = (x_bar - mean0)/(SD/sqrt(n))\nz = (403 - 400)/(70.6/sqrt(2724))\nz = 3/(70.6/52.19)\nz = 3/1.353\nz approx 2.22\n\n(c)(ii) Two-tailed test (H1: mean != 400)\nz = 2.22\nFrom normal table:\nP(Z > 2.22) approx 0.0132\nFor two-tailed: p-value = 2 * 0.0132 = 0.0264\np-value approx 0.026\nConclusion:\nSince p-value (0.026) < 0.05 (5% significance level), we reject the null hypothesis.\nThere is sufficient evidence to conclude that the mean score for Country Y is different from 400.\n\n(d) How to take stratified sample:\nDivide the 2520 students into two strata:\n- Stratum 1: Students with a pet (50% = 1260 students)\n- Stratum 2: Students without a pet (50% = 1260 students)\nTake random samples proportionally from each stratum.\nWhy this would NOT be useful:\nHaving a pet in the home is unlikely to be related to maths test scores. Stratifying on an irrelevant variable doesn't reduce sampling error and adds unnecessary complexity. Better to use simple random sampling or stratify on factors that might affect maths performance (e.g., school type, prior maths grades)."
   }
 ],
 
