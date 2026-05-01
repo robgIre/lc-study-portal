@@ -14,28 +14,10 @@ var WALKTHROUGHS_MATHS = {
     a: "(a)(i) Differentiate term by term:\nf'(x) = 0 + 2x + 4cos 4x\nf'(x) = 2x + 4cos 4x\nChain rule: The derivative of sin 4x is cos 4x * 4 (derivative of inside function).\n\n(a)(ii) Step 1: Find the slope at x = 0\nf'(0) = 2(0) + 4cos(4*0) = 4cos(0) = 4\nSlope m = 4\nStep 2: Find the y-value at x = 0\nf(0) = 6 + 0^2 + sin(4*0) = 6\nPoint of contact: (0, 6)\nStep 3: Use point-slope form\ny - 6 = 4(x - 0)\ny - 6 = 4x\nStep 4: Rearrange to required form\n4x - y + 6 = 0\nAnswer: 4x - y + 6 = 0\n\n(b)(i) g'(x) represents the slope of g(x)\nFrom the graph: the second line segment (from x = 3 to x = 4) has slope > 2\nAnswer: 3 < x <= 4\n\n(b)(ii) From the graph:\ng(3) = 1\ng(g(3)) = g(1) = 1/3\nAnswer: 1/3\nComposite functions: Work from the inside out.\n\n(b)(iii) The inverse function g^(-1)(x) is the reflection of g(x) in the line y = x.\nReflect each point (a, b) on g(x) to (b, a) on g^(-1)(x).\nKey points to reflect: If (0, 0), (1, 1/3), (3, 1), (4, 4) are on g, then (0, 0), (1/3, 1), (1, 3), (4, 4) are on g^(-1). Also draw the line y = x as a guide."
   },
   {
-    num:3,
-    label: "Calculus",
-    q: "Topics: Chain rule, quotient rule, integration with limits. [30 marks]",
-    a: "This question typically covers: Differentiating composite functions using the chain rule, applying the quotient rule to rational functions, and evaluating definite integrals. Show all steps -- each rule application earns marks independently.\n\nKey formulas:\nChain rule: dy/dx = dy/du * du/dx\nQuotient rule: d/dx(u/v) = [v(du/dx) - u(dv/dx)] / v^2\nDefinite integral: integral from a to b of f(x)dx = F(b) - F(a)"
-  },
-  {
     num:4,
     label: "Complex Numbers",
     q: "(a) Write (2 + 3i)/(4 - 5i) in the form a + bi [5 marks]\n\n(b) Use de Moivre's theorem to prove cos 2t = cos^2(t) - sin^2(t) [10 marks]\n\n(c) Find two values of z where z^6 = -64i [15 marks]",
     a: "(a) Multiply top and bottom by the conjugate of the denominator:\nConjugate of (4 - 5i) is (4 + 5i)\n= (2 + 3i)(4 + 5i) / (4 - 5i)(4 + 5i)\nNumerator:\n= 8 + 10i + 12i + 15i^2\n= 8 + 22i + 15(-1)\n= -7 + 22i\nDenominator:\n= 16 + 20i - 20i - 25i^2\n= 16 - 25(-1)\n= 16 + 25 = 41\nAnswer: -7/41 + 22i/41\nWhy multiply by conjugate? When you multiply (a - bi)(a + bi), the i terms cancel and you get a^2 + b^2, which is real.\n\n(b) By de Moivre's theorem:\n(cos t + i sin t)^2 = cos 2t + i sin 2t\nExpand the left side:\nLHS = cos^2(t) + 2i cos(t) sin(t) + i^2 sin^2(t)\n= cos^2(t) + 2i cos(t) sin(t) - sin^2(t)\n= (cos^2(t) - sin^2(t)) + i(2 cos(t) sin(t))\nEquate real parts:\nReal part of LHS = cos^2(t) - sin^2(t)\nReal part of RHS = cos 2t\nTherefore: cos 2t = cos^2(t) - sin^2(t)\n\n(c) Step 1: Convert -64i to polar form\n-64i is on the negative imaginary axis\nModulus r = |-64i| = 64\nArgument t = -90 degrees = -pi/2 (or 270 degrees = 3pi/2)\nStep 2: Use z = (-64i)^(1/6)\nz = 64^(1/6) * [cos((3pi/2 + 2pi*n)/6) + i sin((3pi/2 + 2pi*n)/6)]\nz = 2 * [cos(pi/4 + pi*n/3) + i sin(pi/4 + pi*n/3)]\nStep 3: Find roots for n = 0, 1, 2, 3, 4, 5\nn = 0: z = 2[cos(pi/4) + i sin(pi/4)] = sqrt(2) + sqrt(2)i\nn = 1: z = 2[cos(7pi/12) + i sin(7pi/12)] = (-sqrt(6) + sqrt(2))/2 + i(sqrt(6) + sqrt(2))/2\nAnswer (any two): z = sqrt(2) + sqrt(2)i, z = (-sqrt(6) + sqrt(2))/2 + i(sqrt(6) + sqrt(2))/2\nNote: Since z^6 is an even power, if you find one root z0, then -z0 is also a root."
-  },
-  {
-    num:5,
-    label: "Algebra",
-    q: "Topics: Completing the square, logarithms, simultaneous equations. [30 marks]",
-    a: "This question typically covers: Rewriting quadratic expressions in completed square form a(x+h)^2+k, solving logarithmic equations using log laws, and solving systems of equations (often one linear, one quadratic).\n\nKey formulas:\nCompleting the square: ax^2 + bx + c = a(x + b/(2a))^2 + (c - b^2/(4a))\nLog laws: log(AB) = logA + logB, log(A/B) = logA - logB, log(A^n) = nlogA\nChange of base: log_a(b) = log(b)/log(a)"
-  },
-  {
-    num:6,
-    label: "Binomial Expansion",
-    q: "Topics: Binomial theorem, discriminant, quadratic theory. [30 marks]",
-    a: "This question typically covers: Expanding (a+b)^n using the binomial theorem, finding specific terms in an expansion, using the discriminant (b^2-4ac) to determine the nature of roots, and applying conditions for equal/real/complex roots.\n\nKey formulas:\nBinomial: T(r+1) = C(n,r) * a^(n-r) * b^r\nDiscriminant: D = b^2 - 4ac\nD > 0: two real roots | D = 0: equal roots | D < 0: no real roots"
   },
   {
     num:7,
@@ -80,24 +62,6 @@ var WALKTHROUGHS_MATHS = {
     a: "(a)(i) Total in A:\nn(A) = 6 + 18 + 13 + 23 = 60\nP(A) = 60/240 = 1/4\n\n(a)(ii) Count from Venn diagram:\nn(A) = 60\nn(C) = 13 + 41 + 23 + 16 = 93\nn(A intersection C) = 13 + 23 = 36\nn(A union C) = 6 + 18 + 13 + 41 + 23 + 16 = 117\nLHS: P(A union C) = 117/240\nRHS: P(A) + P(C) - P(A intersection C) = 60/240 + 93/240 - 36/240 = 117/240\nLHS = RHS\n\n(a)(iii) For independence: P(A intersection B) = P(A) * P(B)\nn(B) = 18 + 56 + 23 + 16 = 113, P(B) = 113/240\nn(A intersection B) = 18 + 23 = 41, P(A intersection B) = 41/240\nTest: P(A) * P(B) = (60/240) * (113/240) = 113/960\nP(A intersection B) = 41/240 = 164/960\n113/960 != 164/960\nAnswer: No, A and B are NOT independent because P(A intersection B) != P(A) * P(B)\n\n(b) Number who visited all 3: 23\nNumber who visited none: 67\nTwo ways this can happen:\n1. First person visited all 3, second visited none\n2. First person visited none, second visited all 3\nP = (23/240) * (67/239) + (67/240) * (23/239)\nP = 2 * (23 * 67)/(240 * 239)\nP = 2 * 1541/57360\nP = 3082/57360\nSimplify: GCD(3082, 57360) = 2\nP = 1541/28680"
   },
   {
-    num:14,
-    label: "Statistics",
-    q: "Topics: Median, quartiles, mean, frequency tables, grouped data. [30 marks]",
-    a: "This question typically covers: Calculating measures of centre and spread from frequency tables, constructing cumulative frequency curves, reading quartiles, and interpreting statistical data in context.\n\nKey formulas:\nMean (grouped) = sum(fx) / sum(f)\nMedian position = (n+1)/2\nQ1 = 25th percentile, Q3 = 75th percentile\nIQR = Q3 - Q1"
-  },
-  {
-    num:15,
-    label: "Geometry",
-    q: "Topics: Congruent triangles, enlargements, similarity, area ratios. [30 marks]",
-    a: "This question typically covers: Proving triangles congruent (SSS, SAS, ASA, RHS), applying enlargement scale factors, using similarity to find unknown lengths, and relating areas/volumes to scale factors.\n\nKey facts:\nIf scale factor = k: lengths * k, areas * k^2, volumes * k^3\nCongruence conditions: SSS, SAS, ASA, RHS\nSimilar triangles: corresponding angles equal, sides in proportion"
-  },
-  {
-    num:16,
-    label: "Trigonometry",
-    q: "Topics: Sine, cosine, period, range, cosine rule, exact values. [30 marks]",
-    a: "This question typically covers: Graphing trig functions, finding period and range, solving trig equations, applying sine/cosine rules, and using exact values (sin30=1/2, cos60=1/2, etc.).\n\nKey formulas:\nSine rule: a/sinA = b/sinB = c/sinC\nCosine rule: c^2 = a^2 + b^2 - 2ab*cosC\nArea = (1/2)ab*sinC\nsin^2(t) + cos^2(t) = 1"
-  },
-  {
     num:17,
     label: "3D Geometry",
     q: "Section B -- Topics: Pythagoras in 3D, volumes, surface areas, scaled diagrams. [50 marks]",
@@ -121,7 +85,7 @@ var WALKTHROUGHS_MATHS = {
     q: "Context: Test scores worldwide are normally distributed with mean 400, standard deviation 60.\n\n(a)(i) Fill in missing values using empirical rule [10 marks]\nEmpirical Rule (68-95-99.7): 68% within mean +/- SD, 95% within mean +/- 2SD, 99.7% within mean +/- 3SD\n\n(a)(ii) Proportion scoring above 420 [10 marks]\n\n(b) 95% confidence interval for Country X [10 marks]\nGiven: Sample mean = 387, SD = 66.2, n = 2161\n\n(c)(i) Test statistic for Country Y [10 marks]\nGiven: x_bar = 403, SD = 70.6, n = 2724, mean0 = 400\n\n(c)(ii) p-value and conclusion [10 marks]\n\n(d) Stratified sampling with respect to having a pet [10 marks]",
     a: "(a)(i) Given: Mean = 400, SD = 60\nOne value shown: 520 (which is 400 + 2*60)\nMissing values at mean +/- SD:\n400 - 60 = 340\n400 + 60 = 460\nMissing value at mean - 2SD:\n400 - 2(60) = 280\nThe four missing values are: 280, 340, 460, 520\n\n(a)(ii) Standardize using z-score:\nz = (X - mean)/SD = (420 - 400)/60 = 20/60 = 1/3 approx 0.33\nFrom normal distribution table:\nP(Z < 0.33) approx 0.6293\nP(Z > 0.33) = 1 - 0.6293 = 0.3707\nAnswer: 0.37 (to 2 decimal places)\n\n(b) 95% CI formula:\nx_bar +/- 1.96(SD/sqrt(n))\n= 387 +/- 1.96(66.2/sqrt(2161))\n= 387 +/- 1.96(66.2/46.49)\n= 387 +/- 1.96(1.424)\n= 387 +/- 2.79\nLower bound: 387 - 2.8 = 384.2\nUpper bound: 387 + 2.8 = 389.8\nAnswer: (384.2, 389.8)\n\n(c)(i) z-score formula:\nz = (x_bar - mean0)/(SD/sqrt(n))\nz = (403 - 400)/(70.6/sqrt(2724))\nz = 3/(70.6/52.19)\nz = 3/1.353\nz approx 2.22\n\n(c)(ii) Two-tailed test (H1: mean != 400)\nz = 2.22\nFrom normal table:\nP(Z > 2.22) approx 0.0132\nFor two-tailed: p-value = 2 * 0.0132 = 0.0264\np-value approx 0.026\nConclusion:\nSince p-value (0.026) < 0.05 (5% significance level), we reject the null hypothesis.\nThere is sufficient evidence to conclude that the mean score for Country Y is different from 400.\n\n(d) How to take stratified sample:\nDivide the 2520 students into two strata:\n- Stratum 1: Students with a pet (50% = 1260 students)\n- Stratum 2: Students without a pet (50% = 1260 students)\nTake random samples proportionally from each stratum.\nWhy this would NOT be useful:\nHaving a pet in the home is unlikely to be related to maths test scores. Stratifying on an irrelevant variable doesn't reduce sampling error and adds unnecessary complexity. Better to use simple random sampling or stratify on factors that might affect maths performance (e.g., school type, prior maths grades)."
   }
-],
+  ],
 
   "2024": [
     {num:1, label:"P1 Q1: Algebra",
