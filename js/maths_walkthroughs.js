@@ -26,24 +26,6 @@ var WALKTHROUGHS_MATHS = {
     a: "(a)(i) A(2) = extra silk from Stage 1 to Stage 2\nA(2) = S(2) - S(1) = 37.8 - 15.8 = 22\nA(3) = S(3) - S(2) = 66 - 37.8 = 28.2\n\n(a)(ii) Check if arithmetic sequence:\nA(1) = 15.8, A(2) = 22, A(3) = 28.2\nDifferences: 22 - 15.8 = 6.2, 28.2 - 22 = 6.2\nCommon difference d = 6.2\nArithmetic sequence formula:\nA(n) = a + (n - 1)d\nA(n) = 15.8 + (n - 1)(6.2)\nA(n) = 6.2n + 9.6\n\n(a)(iii) A(100) = 6.2(100) + 9.6 = 620 + 9.6 = 629.6 cm\n\n(a)(iv) S(n) is the sum of arithmetic series A(1) + A(2) + ... + A(n)\nUsing sum formula: S_n = n/2[2a + (n-1)d]\nS(n) = n/2[2(15.8) + (n-1)(6.2)]\nS(n) = n/2[31.6 + 6.2n - 6.2]\nS(n) = n/2[6.2n + 25.4]\nS(n) = n(3.1n + 12.7)\nS(n) = 3.1n^2 + 12.7n\n\n(a)(v) 10 m = 1000 cm\nS(n) > 1000\n3.1n^2 + 12.7n = 1000\n3.1n^2 + 12.7n - 1000 = 0\nQuadratic formula:\nn = [-12.7 +/- sqrt(12.7^2 - 4(3.1)(-1000))] / (2 * 3.1)\nn = [-12.7 +/- sqrt(161.29 + 12400)] / 6.2\nn = [-12.7 +/- sqrt(12561.29)] / 6.2\nn = [-12.7 +/- 112.07] / 6.2\nn = 99.37/6.2 or -124.77/6.2\nn approx 16.02 (taking positive root)\nSince n must be a natural number: k = 17\nWhy 17? Stage 16 gives 996.8 cm (< 1000), Stage 17 gives 1026.5 cm (> 1000).\n\n(b)(i) Find common ratio r:\nr = O2/O1 = 0.53/0.5 = 1.06\nO3 = O2 * r = 0.53 * 1.06 = 0.5618 cm\n\n(b)(ii) Geometric series sum:\nS_n = a(r^n - 1)/(r - 1)\na = 0.5, r = 1.06\nS_n = 0.5(1.06^n - 1)/(1.06 - 1)\nS_n = 0.5(1.06^n - 1)/0.06\nor simplified: S_n = (25/3)(1.06^n - 1)\n\n(b)(iii) One lap = first 18 orbitals\nLength of 1 lap = S18 = (25/3)(1.06^18 - 1)\nk laps = k * S18\nTotal = k * (25/3)(1.06^18 - 1)"
   },
   {
-    num:8,
-    label: "Applied Calculus",
-    q: "Section B -- Topics: Optimization, rates of change, related rates problems. [50 marks]",
-    a: "This question typically covers: Finding maximum/minimum values in real-world contexts (area, volume, cost), setting up equations from word problems, differentiating and setting f'(x)=0, verifying with second derivative test. Often involves modelling a real scenario.\n\nApproach:\n1. Express the quantity to optimize as a function of one variable\n2. Differentiate and set equal to zero\n3. Solve for the variable\n4. Verify it's a max/min using f''(x)\n5. Answer the question in context with units"
-  },
-  {
-    num:9,
-    label: "Calculus in Context",
-    q: "Section B -- Topics: Chain rule applications, piecewise functions, integration for averages. [50 marks]",
-    a: "This question typically covers: Real-world applications of calculus -- often involving rates, areas, averages. May include piecewise-defined functions, interpreting graphs, and using integration to find average values over an interval.\n\nKey formula: Average value = (1/(b-a)) * integral from a to b of f(x)dx"
-  },
-  {
-    num:10,
-    label: "Proof and Patterns",
-    q: "Section B -- Topics: Coordinate geometry patterns, limits, proof by induction. [50 marks]",
-    a: "This question typically covers: Identifying patterns, proving formulas using mathematical induction, evaluating limits, and connecting algebra to geometric interpretations.\n\nProof by Induction steps:\n1. Prove the base case (n=1)\n2. Assume true for n=k\n3. Prove true for n=k+1 using the assumption\n4. Conclude: true for all n in N by induction"
-  },
-  {
     num:11,
     label: "Lines",
     q: "(a) Find p where (p, 5) lies on 3x - 2y + 28 = 0 [5 marks]\n\n(b) Find acute angle between lines l and h [10 marks]\nGiven: l: y = -x/3 + 11, h: 2x - 5y + 10 = 0\n\n(c) Find equations of two lines with slope -2/3 and triangle area 12 [15 marks]\nGiven: Line cuts x-axis at A(a, 0), y-axis at B(0, b), slope = -2/3, triangle area = 12",
@@ -60,24 +42,6 @@ var WALKTHROUGHS_MATHS = {
     label: "Probability",
     q: "Context: 240 people surveyed about which countries (A, B, C) they had visited.\n\n(a)(i) Show P(A) = 1/4 [5 marks]\nFrom Venn diagram: n(A only) = 6, n(A intersection B only) = 18, n(A intersection C only) = 13, n(A intersection B intersection C) = 23\n\n(a)(ii) Verify P(A union C) = P(A) + P(C) - P(A intersection C) [5 marks]\n\n(a)(iii) Are A and B independent? Justify. [5 marks]\n\n(b) Probability one person visited all 3, other visited none [15 marks]",
     a: "(a)(i) Total in A:\nn(A) = 6 + 18 + 13 + 23 = 60\nP(A) = 60/240 = 1/4\n\n(a)(ii) Count from Venn diagram:\nn(A) = 60\nn(C) = 13 + 41 + 23 + 16 = 93\nn(A intersection C) = 13 + 23 = 36\nn(A union C) = 6 + 18 + 13 + 41 + 23 + 16 = 117\nLHS: P(A union C) = 117/240\nRHS: P(A) + P(C) - P(A intersection C) = 60/240 + 93/240 - 36/240 = 117/240\nLHS = RHS\n\n(a)(iii) For independence: P(A intersection B) = P(A) * P(B)\nn(B) = 18 + 56 + 23 + 16 = 113, P(B) = 113/240\nn(A intersection B) = 18 + 23 = 41, P(A intersection B) = 41/240\nTest: P(A) * P(B) = (60/240) * (113/240) = 113/960\nP(A intersection B) = 41/240 = 164/960\n113/960 != 164/960\nAnswer: No, A and B are NOT independent because P(A intersection B) != P(A) * P(B)\n\n(b) Number who visited all 3: 23\nNumber who visited none: 67\nTwo ways this can happen:\n1. First person visited all 3, second visited none\n2. First person visited none, second visited all 3\nP = (23/240) * (67/239) + (67/240) * (23/239)\nP = 2 * (23 * 67)/(240 * 239)\nP = 2 * 1541/57360\nP = 3082/57360\nSimplify: GCD(3082, 57360) = 2\nP = 1541/28680"
-  },
-  {
-    num:17,
-    label: "3D Geometry",
-    q: "Section B -- Topics: Pythagoras in 3D, volumes, surface areas, scaled diagrams. [50 marks]",
-    a: "This question typically covers: Applying Pythagoras' theorem in 3D shapes, calculating volumes and surface areas of cylinders, cones, spheres, and composite solids, and using scale factors for enlargements.\n\nKey formulas:\nSphere: V = (4/3)*pi*r^3, SA = 4*pi*r^2\nCone: V = (1/3)*pi*r^2*h, CSA = pi*r*l\nCylinder: V = pi*r^2*h, SA = 2*pi*r^2 + 2*pi*r*h\n3D diagonal: d^2 = l^2 + w^2 + h^2"
-  },
-  {
-    num:18,
-    label: "Applied Trigonometry",
-    q: "Section B -- Topics: Angles of elevation, sine rule, percentage error, surveying. [50 marks]",
-    a: "This question typically covers: Real-world trig problems -- finding heights of buildings/towers using angles of elevation/depression, applying sine and cosine rules in non-right-angled triangles, and calculating percentage error.\n\nApproach: Draw a clear diagram, label all known values, identify which rule to use (sine rule when you have angle + opposite side, cosine rule when you have SAS or SSS), show all working."
-  },
-  {
-    num:19,
-    label: "Statistics in Context",
-    q: "Section B -- Topics: Tree diagrams, combinations, binomial probability, clinical trials. [50 marks]",
-    a: "This question typically covers: Multi-stage probability problems using tree diagrams, calculating combinations C(n,r), applying the binomial distribution P(X=r) = C(n,r)*p^r*(1-p)^(n-r), and interpreting probability in real-world contexts.\n\nKey formulas:\nC(n,r) = n! / [r!(n-r)!]\nP(X=r) = C(n,r) * p^r * (1-p)^(n-r)\nExpected value: E(X) = np"
   },
   {
     num:20,
@@ -166,8 +130,7 @@ var WALKTHROUGHS_MATHS = {
 
     {num:20, label:"P2 Q10: Trigonometry & Measurement Applied (Section B)",
      q:"A farmer has a triangular field with sides 120 m, 80 m, and 100 m.\n\n(a) Find the largest angle of the field.\n(b) Find the area of the field.\n(c) The farmer wants to divide the field into two equal areas by a fence from one vertex to the opposite side. Find the length of this fence.",
-     a:"(a) The largest angle is opposite the longest side (120 m).\nCosine rule: 120^2 = 80^2 + 100^2 - 2(80)(100)cos(C).\n14400 = 6400 + 10000 - 16000.cos(C). 14400 = 16400 - 16000.cos(C).\n16000.cos(C) = 2000. cos(C) = 1/8 = 0.125. C = arccos(0.125) = 82.8 degrees.\n\n(b) Area = (1/2)(80)(100)sin(82.8) = 4000 x sin(82.8) = 4000 x 0.9921 = 3968 sq. m.\nOr using Heron's formula: s = (120+80+100)/2 = 150.\nArea = sqrt(150 x 30 x 50 x 70) = sqrt(15750000) = 3969 sq. m.\n\n(c) A median from a vertex to the midpoint of the opposite side divides a triangle into two equal areas.\nThe median from the vertex opposite the 120 m side goes to the midpoint M of that side (60 m from each end).\nUsing the median length formula: m^2 = (2a^2 + 2b^2 - c^2)/4\n= (2(80^2) + 2(100^2) - 120^2)/4 = (12800 + 20000 - 14400)/4 = 18400/4 = 4600.\nm = sqrt(4600) = 67.8 m.\n\nWhy: The cosine rule finds angles when all three sides are known (rearrange to isolate cos). Heron's formula gives area from three sides without needing an angle. A median always bisects the triangle's area."},
-
+     a:"(a) The largest angle is opposite the longest side (120 m).\nCosine rule: 120^2 = 80^2 + 100^2 - 2(80)(100)cos(C).\n14400 = 6400 + 10000 - 16000.cos(C). 14400 = 16400 - 16000.cos(C).\n16000.cos(C) = 2000. cos(C) = 1/8 = 0.125. C = arccos(0.125) = 82.8 degrees.\n\n(b) Area = (1/2)(80)(100)sin(82.8) = 4000 x sin(82.8) = 4000 x 0.9921 = 3968 sq. m.\nOr using Heron's formula: s = (120+80+100)/2 = 150.\nArea = sqrt(150 x 30 x 50 x 70) = sqrt(15750000) = 3969 sq. m.\n\n(c) A median from a vertex to the midpoint of the opposite side divides a triangle into two equal areas.\nThe median from the vertex opposite the 120 m side goes to the midpoint M of that side (60 m from each end).\nUsing the median length formula: m^2 = (2a^2 + 2b^2 - c^2)/4\n= (2(80^2) + 2(100^2) - 120^2)/4 = (12800 + 20000 - 14400)/4 = 18400/4 = 4600.\nm = sqrt(4600) = 67.8 m.\n\nWhy: The cosine rule finds angles when all three sides are known (rearrange to isolate cos). Heron's formula gives area from three sides without needing an angle. A median always bisects the triangle's area."}
   ],
 
   "2023": [
@@ -249,8 +212,7 @@ var WALKTHROUGHS_MATHS = {
 
     {num:20, label:"P2 Q10: Geometry & Trigonometry Applied (Section B)",
      q:"A garden is in the shape of a sector of a circle with radius 12 m and angle 120 degrees at the centre.\n\n(a) Find the length of the arc.\n(b) Find the area of the sector.\n(c) Find the area of the triangle formed by the two radii and the chord.\n(d) Find the area of the segment (region between the chord and the arc).",
-     a:"(a) Arc length = r.theta = 12 x (120 x pi/180) = 12 x 2pi/3 = 8pi = 25.13 m.\n\n(b) Area of sector = (1/2)r^2.theta = (1/2)(144)(2pi/3) = 48pi = 150.80 sq. m.\n\n(c) Area of triangle = (1/2)r^2.sin(theta) = (1/2)(144)sin(120)\n= 72 x (sqrt(3)/2) = 36sqrt(3) = 62.35 sq. m.\n\n(d) Area of segment = Area of sector - Area of triangle\n= 48pi - 36sqrt(3) = 150.80 - 62.35 = 88.44 sq. m.\n\nWhy: Arc length and sector area formulas use radians (convert degrees to radians by multiplying by pi/180). The triangle area uses (1/2)ab.sin(C). The segment is the region between a chord and its arc."},
-
+     a:"(a) Arc length = r.theta = 12 x (120 x pi/180) = 12 x 2pi/3 = 8pi = 25.13 m.\n\n(b) Area of sector = (1/2)r^2.theta = (1/2)(144)(2pi/3) = 48pi = 150.80 sq. m.\n\n(c) Area of triangle = (1/2)r^2.sin(theta) = (1/2)(144)sin(120)\n= 72 x (sqrt(3)/2) = 36sqrt(3) = 62.35 sq. m.\n\n(d) Area of segment = Area of sector - Area of triangle\n= 48pi - 36sqrt(3) = 150.80 - 62.35 = 88.44 sq. m.\n\nWhy: Arc length and sector area formulas use radians (convert degrees to radians by multiplying by pi/180). The triangle area uses (1/2)ab.sin(C). The segment is the region between a chord and its arc."}
   ],
 
   "2022": [
@@ -332,8 +294,7 @@ var WALKTHROUGHS_MATHS = {
 
     {num:20, label:"P2 Q10: Statistics Applied (Section B)",
      q:"A pharmaceutical company tests a new drug. In a sample of 100 patients, 62 showed improvement.\n\n(a) Find the sample proportion.\n(b) Construct a 95% confidence interval for the true proportion.\n(c) The company claims the drug is effective for more than 50% of patients. Based on your confidence interval, is this claim supported?",
-     a:"(a) Sample proportion p-hat = 62/100 = 0.62.\n\n(b) 95% CI: p-hat +/- z* . sqrt(p-hat(1-p-hat)/n)\n= 0.62 +/- 1.96 . sqrt(0.62 x 0.38 / 100)\n= 0.62 +/- 1.96 . sqrt(0.002356)\n= 0.62 +/- 1.96 x 0.04854\n= 0.62 +/- 0.0951.\n95% CI: (0.5249, 0.7151) or approximately (0.525, 0.715).\n\n(c) Since the entire confidence interval (0.525 to 0.715) is above 0.50, the claim is supported. We are 95% confident that the true proportion is greater than 50%.\n\nWhy: The confidence interval estimates the range of plausible values for the true population proportion. The margin of error depends on the sample size and confidence level. If the interval does not contain 0.5, we have evidence the true proportion differs from 50%."},
-
+     a:"(a) Sample proportion p-hat = 62/100 = 0.62.\n\n(b) 95% CI: p-hat +/- z* . sqrt(p-hat(1-p-hat)/n)\n= 0.62 +/- 1.96 . sqrt(0.62 x 0.38 / 100)\n= 0.62 +/- 1.96 . sqrt(0.002356)\n= 0.62 +/- 1.96 x 0.04854\n= 0.62 +/- 0.0951.\n95% CI: (0.5249, 0.7151) or approximately (0.525, 0.715).\n\n(c) Since the entire confidence interval (0.525 to 0.715) is above 0.50, the claim is supported. We are 95% confident that the true proportion is greater than 50%.\n\nWhy: The confidence interval estimates the range of plausible values for the true population proportion. The margin of error depends on the sample size and confidence level. If the interval does not contain 0.5, we have evidence the true proportion differs from 50%."}
   ],
 
   "2021": [
@@ -383,7 +344,7 @@ var WALKTHROUGHS_MATHS = {
 
     {num:12, label:"P2 Q9: Probability Applied (Section B)",
      q:"A bag contains 4 red and 6 blue counters. Three counters are drawn without replacement.\n\n(a) Find the probability that all three are blue.\n(b) Find the probability that exactly two are red.\n(c) The three counters are drawn and not replaced. Two more counters are then drawn. Find the probability that exactly one of the five drawn counters is red.\n(d) Find the expected number of red counters when 3 are drawn.",
-     a:"(a) P(BBB) = (6/10)(5/9)(4/8) = 120/720 = 1/6.\n\n(b) P(exactly 2 red) = C(3,2) x P(RRB in some order)\nUsing combinations: C(4,2).C(6,1) / C(10,3) = 6 x 6 / 120 = 36/120 = 3/10.\nAlternatively: P = 3 x (4/10)(3/9)(6/8) = 3 x 72/720 = 216/720 = 3/10.\n\n(c) Exactly 1 red out of 5 drawn means 1 red and 4 blue.\nP = C(4,1).C(6,4) / C(10,5) = 4 x 15 / 252 = 60/252 = 5/21.\n\n(d) X = number of red counters drawn (out of 3).\nE(X) = n x p = 3 x (4/10) = 12/10 = 1.2.\nAlternatively, using hypergeometric mean: E(X) = n.K/N = 3 x 4/10 = 1.2.\n\nWhy: Without replacement uses the hypergeometric distribution (or sequential probability with shrinking denominators). The combination formula C(n,r) counts ways to choose r items from n. Expected value for hypergeometric: E(X) = nK/N."},
+     a:"(a) P(BBB) = (6/10)(5/9)(4/8) = 120/720 = 1/6.\n\n(b) P(exactly 2 red) = C(3,2) x P(RRB in some order)\nUsing combinations: C(4,2).C(6,1) / C(10,3) = 6 x 6 / 120 = 36/120 = 3/10.\nAlternatively: P = 3 x (4/10)(3/9)(6/8) = 3 x 72/720 = 216/720 = 3/10.\n\n(c) Exactly 1 red out of 5 drawn means 1 red and 4 blue.\nP = C(4,1).C(6,4) / C(10,5) = 4 x 15 / 252 = 60/252 = 5/21.\n\n(d) X = number of red counters drawn (out of 3).\nE(X) = n x p = 3 x (4/10) = 12/10 = 1.2.\nAlternatively, using hypergeometric mean: E(X) = n.K/N = 3 x 4/10 = 1.2.\n\nWhy: Without replacement uses the hypergeometric distribution (or sequential probability with shrinking denominators). The combination formula C(n,r) counts ways to choose r items from n. Expected value for hypergeometric: E(X) = nK/N."}
   ],
 
   "2020": [
@@ -441,7 +402,7 @@ var WALKTHROUGHS_MATHS = {
 
     {num:14, label:"P2 Q9: Statistics Applied (Section B)",
      q:"A survey of 200 adults measured weekly screen time (hours). The data is normally distributed with mean 28 hours and standard deviation 6 hours.\n\n(a) Find the probability that a randomly selected adult has screen time between 20 and 36 hours.\n(b) Find the probability that a randomly selected adult has screen time greater than 40 hours.\n(c) A sample of 50 adults has a mean screen time of 30 hours. Construct a 95% confidence interval for the population mean.\n(d) Test at the 5% significance level whether the mean screen time has increased from 28 hours.",
-     a:"(a) z1 = (20 - 28)/6 = -8/6 = -1.33. z2 = (36 - 28)/6 = 8/6 = 1.33.\nP(-1.33 < Z < 1.33) = P(Z < 1.33) - P(Z < -1.33) = 0.9082 - 0.0918 = 0.8164.\nAbout 81.6%.\n\n(b) z = (40 - 28)/6 = 2. P(Z > 2) = 1 - 0.9772 = 0.0228.\nAbout 2.3%.\n\n(c) 95% CI: x_bar +/- 1.96(sd/sqrt(n))\n= 30 +/- 1.96(6/sqrt(50))\n= 30 +/- 1.96(0.8485)\n= 30 +/- 1.663.\n95% CI: (28.34, 31.66).\n\n(d) H0: mu = 28. H1: mu > 28 (one-tailed test).\nTest statistic: z = (x_bar - mu_0)/(sd/sqrt(n)) = (30 - 28)/(6/sqrt(50))\n= 2/0.8485 = 2.357.\nCritical value at 5% (one-tailed): z = 1.645.\nSince 2.357 > 1.645, reject H0.\nConclusion: There is sufficient evidence at the 5% level to conclude that mean screen time has increased from 28 hours.\n\nWhy: Z-scores standardise values for normal distribution calculations. Confidence intervals estimate population parameters from samples. Hypothesis testing compares a test statistic to a critical value to make decisions about population claims."},
+     a:"(a) z1 = (20 - 28)/6 = -8/6 = -1.33. z2 = (36 - 28)/6 = 8/6 = 1.33.\nP(-1.33 < Z < 1.33) = P(Z < 1.33) - P(Z < -1.33) = 0.9082 - 0.0918 = 0.8164.\nAbout 81.6%.\n\n(b) z = (40 - 28)/6 = 2. P(Z > 2) = 1 - 0.9772 = 0.0228.\nAbout 2.3%.\n\n(c) 95% CI: x_bar +/- 1.96(sd/sqrt(n))\n= 30 +/- 1.96(6/sqrt(50))\n= 30 +/- 1.96(0.8485)\n= 30 +/- 1.663.\n95% CI: (28.34, 31.66).\n\n(d) H0: mu = 28. H1: mu > 28 (one-tailed test).\nTest statistic: z = (x_bar - mu_0)/(sd/sqrt(n)) = (30 - 28)/(6/sqrt(50))\n= 2/0.8485 = 2.357.\nCritical value at 5% (one-tailed): z = 1.645.\nSince 2.357 > 1.645, reject H0.\nConclusion: There is sufficient evidence at the 5% level to conclude that mean screen time has increased from 28 hours.\n\nWhy: Z-scores standardise values for normal distribution calculations. Confidence intervals estimate population parameters from samples. Hypothesis testing compares a test statistic to a critical value to make decisions about population claims."}
   ],
 
   "2019": [
