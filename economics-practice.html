@@ -132,12 +132,16 @@
       <option value="B">Section B (Long)</option>
     </select>
   </div>
+  <div class="action-bar">
+    <button class="btn-surprise" onclick="PracticeFeatures.surpriseMe(App.walkthroughs, App.startPractice.bind(App))">Surprise Me</button>
+    <button class="btn-timed" onclick="App.startTimedExam()">Timed Exam</button>
+  </div>
   <div id="questionGrid" class="q-grid"></div>
 </div>
 
 <div id="view-practice" class="view tab-content">
   <div class="prac-head">
-    <button class="back" onclick="App.showView('browse')">&larr; Back</button>
+    <button class="back" onclick="App.backFromPractice()">&larr; Back</button>
     <span class="title" id="pracTitle"></span>
   </div>
   <div class="card" id="pracQuestion"></div>
@@ -145,17 +149,21 @@
   <div id="resultsSection" style="display:none"></div>
 </div>
 
+<div id="examTimer" class="exam-timer"><span class="timer-time">0:00</span><span class="timer-q"></span></div>
+
 <div id="view-study" class="view tab-content">
   <div id="studyGuideContent"></div>
 </div>
 
 <div id="view-history" class="view tab-content">
+  <div id="dailyPractice"></div>
   <div class="stats-row">
     <div class="stat-box"><div class="stat-val" id="hTotal">0</div><div class="stat-lbl">Attempts</div></div>
     <div class="stat-box"><div class="stat-val" id="hAvg">-</div><div class="stat-lbl">Avg Score</div></div>
     <div class="stat-box"><div class="stat-val" id="hBest">-</div><div class="stat-lbl">Best Score</div></div>
     <div class="stat-box"><div class="stat-val" id="hQs">0</div><div class="stat-lbl">Questions</div></div>
   </div>
+  <div id="weakTopics"></div>
   <div id="historyList"></div>
 </div>
 
@@ -165,6 +173,7 @@
 <script src="js/economics_practice_data.js"></script>
 <script src="js/economics_study.js"></script>
 <script src="js/study-guide.js"></script>
+<script src="js/practice-features.js"></script>
 <script>
 
 
@@ -362,8 +371,12 @@ const App = {
       }
       html += '</div>';
     }
-    html += '<div class="model-section"><button class="btn-reveal" onclick="this.nextElementSibling.style.display=\'block\';this.style.display=\'none\'">Show Model Answer</button>' +
-      '<div class="model-box" style="display:none"><h3>Model Answer</h3>' + this.fmtAnswer(entry.a) + '</div></div>';
+    html += '<div class="model-section"><button class="btn-reveal" onclick="this.nextElementSibling.style.display=\'block\';this.style.display=\'none\'">Compare with Model Answer</button>' +
+      '<div style="display:none"><div id="sbsArea"></div></div></div>';
+    const timedActive = typeof PracticeFeatures !== 'undefined' && PracticeFeatures.timedMode.active;
+    html += '<div class="res-actions"><button class="btn-retry" onclick="App.clearAnswer()">Try Again</button>' +
+      (timedActive ? '<button class="btn-retry" onclick="PracticeFeatures.nextTimedQuestion()">Next Question &rarr;</button>' : '') +
+      '<button class="btn-back" onclick="App.showView(\'browse\')"' + this.fmtAnswer(entry.a) + '</div></div>';
     html += '<div class="res-actions"><button class="btn-retry" onclick="App.clearAnswer()">Try Again</button>' +
       '<button class="btn-back" onclick="App.showView(\'browse\')">All Questions</button></div></div>';
     sec.innerHTML = html;
@@ -414,6 +427,11 @@ const App = {
         '<div class="hist-date">' + dateStr + ' ' + timeStr + '</div></div></div>';
     }
     list.innerHTML = html;
+
+    if (typeof PracticeFeatures !== 'undefined') {
+      PracticeFeatures.renderDailyPractice('dailyPractice', h, this.walkthroughs, 'App.startPractice');
+      PracticeFeatures.renderWeakTopics('weakTopics', h, this.walkthroughs, 'App.startPractice');
+    }
   },
 
   showView(viewId) {
