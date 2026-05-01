@@ -101,8 +101,53 @@
 .improve.up{color:var(--success);background:rgba(0,184,148,0.1)}
 .improve.down{color:var(--danger);background:rgba(225,112,85,0.1)}
 
+/* Accounting Templates */
+.tmpl-container{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:1.5rem;margin-bottom:1rem;box-shadow:var(--shadow)}
+.tmpl-title{font-size:1.1rem;font-weight:700;color:var(--primary);text-align:center;margin-bottom:0.2rem}
+.tmpl-subtitle{font-size:0.8rem;color:var(--text-light);text-align:center;margin-bottom:1rem}
+.tmpl-section-head{font-size:0.8rem;font-weight:700;color:var(--primary);text-transform:uppercase;letter-spacing:0.5px;padding:0.5rem 0 0.3rem;margin-top:0.8rem;border-bottom:1px solid var(--border)}
+.tmpl-row{display:flex;align-items:center;padding:0.3rem 0;gap:0.5rem}
+.tmpl-label{flex:1;font-size:0.88rem}
+.tmpl-input{width:100px;padding:0.35rem 0.5rem;border:1px solid var(--border);border-radius:6px;font-size:0.88rem;font-family:inherit;text-align:right;background:var(--bg)}
+.tmpl-input:focus{outline:none;border-color:var(--primary);box-shadow:0 0 0 2px rgba(108,92,231,0.15)}
+.tmpl-input-sm{width:80px}
+.tmpl-input-total{font-weight:700;border-color:var(--primary-light);background:#f0ecff}
+.tmpl-total{border-top:2px solid var(--primary-light);margin-top:0.3rem;padding-top:0.5rem}
+.tmpl-spacer{height:0.5rem}
+.tmpl-col-head .tmpl-col{width:80px;text-align:center;font-size:0.75rem;font-weight:700;color:var(--text-light)}
+.tmpl-col-head{display:flex;align-items:center;gap:0.5rem;padding:0.3rem 0;border-bottom:1px solid var(--border)}
+.tmpl-col-head .tmpl-label{flex:1}
+
+/* T-Account */
+.tmpl-t-account{display:grid;grid-template-columns:1fr 1fr;border:2px solid var(--primary);border-radius:8px;overflow:hidden}
+.tmpl-t-side{padding:0.5rem}
+.tmpl-t-side:first-child{border-right:2px solid var(--primary)}
+.tmpl-t-head{font-weight:700;color:var(--primary);text-align:center;padding:0.4rem;border-bottom:1px solid var(--border);margin-bottom:0.3rem;font-size:0.85rem}
+.tmpl-t-row{display:flex;gap:0.3rem;margin-bottom:0.3rem}
+.tmpl-t-desc{flex:1;padding:0.3rem;border:1px solid var(--border);border-radius:4px;font-size:0.8rem;font-family:inherit}
+.tmpl-t-amt{width:70px;padding:0.3rem;border:1px solid var(--border);border-radius:4px;font-size:0.8rem;text-align:right;font-family:inherit}
+.tmpl-t-desc:focus,.tmpl-t-amt:focus{outline:none;border-color:var(--primary)}
+
+/* Ratio rows */
+.tmpl-ratio-row{display:flex;align-items:center;gap:0.8rem;padding:0.5rem 0;border-bottom:1px solid var(--border)}
+.tmpl-ratio-name{font-weight:600;font-size:0.88rem;min-width:180px}
+.tmpl-ratio-formula{flex:1;font-size:0.78rem;color:var(--text-light);font-family:'Courier New',monospace}
+
+/* Budget grid */
+.tmpl-budget-grid{display:grid;gap:2px;font-size:0.8rem}
+.tmpl-budget-head{font-weight:700;text-align:center;padding:0.4rem;background:var(--primary);color:#fff;font-size:0.75rem;border-radius:4px}
+.tmpl-budget-label{padding:0.3rem 0.5rem;font-size:0.82rem;display:flex;align-items:center}
+.tmpl-bold{font-weight:700}
+.tmpl-budget-input{padding:0.3rem;border:1px solid var(--border);border-radius:4px;text-align:right;font-size:0.8rem;font-family:inherit}
+.tmpl-budget-input:focus{outline:none;border-color:var(--primary)}
+.tmpl-budget-total{font-weight:700;border-color:var(--primary-light);background:#f0ecff}
+
+.tmpl-toggle{display:flex;gap:0.5rem;margin-bottom:1rem;flex-wrap:wrap}
+.tmpl-toggle button{padding:0.5rem 1rem;border:1px solid var(--border);background:var(--card);color:var(--text-light);border-radius:8px;cursor:pointer;font-size:0.82rem;font-family:inherit;font-weight:600}
+.tmpl-toggle button.active{background:var(--primary);color:#fff;border-color:var(--primary)}
+
 .view{display:none}.view.active{display:block}
-@media(max-width:640px){.q-grid{grid-template-columns:1fr}.stats-row{grid-template-columns:repeat(2,1fr)}.filters{flex-direction:column}}
+@media(max-width:640px){.q-grid{grid-template-columns:1fr}.stats-row{grid-template-columns:repeat(2,1fr)}.filters{flex-direction:column}.tmpl-t-account{grid-template-columns:1fr}.tmpl-t-side:first-child{border-right:none;border-bottom:2px solid var(--primary)}}
 </style>
 </head>
 <body class="subject-accounting">
@@ -157,6 +202,7 @@
 <script src="js/shared.js"></script>
 <script src="js/accounting_walkthroughs.js"></script>
 <script src="js/marking-engine.js"></script>
+<script src="js/accounting_templates.js"></script>
 <script>
 var ACC_MARKING = {};
 
@@ -256,9 +302,35 @@ const App = {
 
   renderAnswerArea(questionText) {
     const area = document.getElementById('answerArea');
+
+    // Check for accounting template
+    let templateHtml = '';
+    if (typeof AccTemplates !== 'undefined') {
+      const tmplType = AccTemplates.detectTemplateType(questionText);
+      if (tmplType) {
+        const availableTypes = [];
+        if (/trading|p\s*&\s*l|profit.*loss/i.test(questionText)) availableTypes.push(['trading_pl', 'Trading P&L']);
+        if (/balance\s*sheet/i.test(questionText)) availableTypes.push(['balance_sheet', 'Balance Sheet']);
+        if (/t[\s-]*account|ledger|debit.*credit|control/i.test(questionText)) availableTypes.push(['t_account', 'T-Account']);
+        if (/ratio|interpretation|dividend|earnings|roce/i.test(questionText)) availableTypes.push(['ratios', 'Ratios']);
+        if (/cash\s*budget/i.test(questionText)) availableTypes.push(['cash_budget', 'Cash Budget']);
+        if (/income.*expenditure|accumulated|club/i.test(questionText)) availableTypes.push(['club_ip', 'Club I&E']);
+
+        if (availableTypes.length > 0) {
+          templateHtml += '<div class="tmpl-toggle">';
+          availableTypes.forEach(([t, label]) => {
+            templateHtml += '<button onclick="App.showTemplate(\'' + t + '\')" class="' + (t === availableTypes[0][0] ? 'active' : '') + '">' + label + '</button>';
+          });
+          templateHtml += '<button onclick="App.showTemplate(\'text\')" class="">Text Only</button></div>';
+          templateHtml += '<div id="templateArea">' + AccTemplates.renderTemplate(availableTypes[0][0], {}) + '</div>';
+        }
+      }
+    }
+
     const parts = this.extractParts(questionText);
     if (!parts) {
-      area.innerHTML = '<div class="ans-part"><div class="ans-part-label"><span class="part-tag">Your Answer</span><span class="part-wc" id="wc-single">0 words</span></div>' +
+      area.innerHTML = templateHtml +
+        '<div class="ans-part"><div class="ans-part-label"><span class="part-tag">Your Answer</span><span class="part-wc" id="wc-single">0 words</span></div>' +
         '<textarea id="ans-single" placeholder="Type your answer here..." rows="10" oninput="App.updateWc(\'single\')"></textarea></div>' +
         '<div class="ans-actions"><button class="btn-mark" onclick="App.markAnswer()">Mark My Answer</button><button class="btn-clear" onclick="App.clearAnswer()">Clear</button></div>';
       this.currentParts = null; return;
@@ -275,8 +347,20 @@ const App = {
         '<textarea id="ans-' + pid + '" placeholder="Answer part ' + this.escH(part.label) + ' here..." rows="6" oninput="App.updateWc(\'' + pid + '\')"></textarea></div>';
     }
     html += '<div class="ans-actions"><button class="btn-mark" onclick="App.markAnswer()">Mark My Answer</button><button class="btn-clear" onclick="App.clearAnswer()">Clear</button></div>';
-    area.innerHTML = html;
+    area.innerHTML = templateHtml + html;
     this.currentParts = answerParts;
+  },
+
+  showTemplate(type) {
+    const tmplArea = document.getElementById('templateArea');
+    const btns = document.querySelectorAll('.tmpl-toggle button');
+    btns.forEach(b => b.classList.remove('active'));
+    if (event && event.target) event.target.classList.add('active');
+    if (type === 'text') {
+      if (tmplArea) tmplArea.style.display = 'none';
+    } else {
+      if (tmplArea) { tmplArea.style.display = 'block'; tmplArea.innerHTML = AccTemplates.renderTemplate(type, {}); }
+    }
   },
 
   updateWc(pid) {
