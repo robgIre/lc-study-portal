@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LC Maths — Practice & Mark</title>
+<link rel="stylesheet" href="css/shared.css">
+<style>
+/* Practice-specific styles using shared theme variables */
+.filters{display:flex;gap:0.8rem;margin-bottom:1.2rem;flex-wrap:wrap}
+.filters select{background:var(--card);border:1px solid var(--border);color:var(--text);padding:0.55rem 1rem;border-radius:8px;font-size:0.85rem;font-family:inherit;cursor:pointer}
+.filters select:focus{outline:none;border-color:var(--primary)}
+
+.year-header{font-size:0.75rem;text-transform:uppercase;letter-spacing:1.5px;color:var(--text-light);font-weight:700;margin:1.5rem 0 0.8rem;padding-bottom:0.4rem;border-bottom:1px solid var(--border);grid-column:1/-1}
+.q-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:0.8rem}
+.q-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:1rem 1.2rem;cursor:pointer;transition:all 0.25s;box-shadow:var(--shadow)}
+.q-card:hover{border-color:var(--primary);transform:translateY(-2px);box-shadow:0 4px 20px rgba(0,0,0,0.1)}
+.q-card.done-good{border-left:3px solid var(--success)}
+.q-card.done-ok{border-left:3px solid var(--warning)}
+.q-card.done-low{border-left:3px solid var(--danger)}
+.q-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:0.4rem}
+.q-num{font-weight:800;color:var(--primary);font-size:0.85rem}
+.q-sec{font-size:0.65rem;color:var(--text-light);text-transform:uppercase;letter-spacing:0.8px;font-weight:600}
+.q-title{font-weight:600;font-size:0.9rem;line-height:1.35;margin-bottom:0.6rem}
+.q-bot{display:flex;justify-content:space-between;align-items:center;font-size:0.75rem}
+.q-type{color:var(--text-light)}
+.q-best{color:var(--success);font-weight:700}
+.q-new{color:var(--primary);font-weight:600;opacity:0.7}
+.q-attempts{color:var(--text-light);font-size:0.7rem;margin-left:0.5rem}
+
+.prac-head{display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem}
+.prac-head .back{background:var(--card);border:1px solid var(--border);color:var(--text-light);padding:0.5rem 1rem;border-radius:8px;cursor:pointer;font-size:0.85rem;font-family:inherit}
+.prac-head .back:hover{border-color:var(--primary);color:var(--text)}
+.prac-head .title{font-weight:700;font-size:1.05rem;color:var(--primary)}
+
+.ans-part{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:1.2rem 1.4rem;margin-bottom:0.8rem;box-shadow:var(--shadow)}
+.ans-part-label{display:flex;justify-content:space-between;align-items:center;margin-bottom:0.6rem}
+.ans-part-label .part-tag{font-weight:800;color:var(--primary);font-size:0.9rem}
+.ans-part-label .part-wc{font-size:0.78rem;color:var(--text-light)}
+.ans-part-q{font-size:0.88rem;color:var(--text-light);line-height:1.6;margin-bottom:0.7rem}
+.ans-part textarea{width:100%;background:var(--bg);border:1px solid var(--border);color:var(--text);padding:0.8rem 1rem;border-radius:8px;font-size:0.92rem;font-family:inherit;line-height:1.7;resize:vertical;min-height:100px}
+.ans-part textarea:focus{outline:none;border-color:var(--primary);box-shadow:0 0 0 3px rgba(0,184,148,0.15)}
+.or-divider{display:flex;align-items:center;gap:0.8rem;margin:0.3rem 0;padding:0.4rem 0}
+.or-divider .or-line{flex:1;height:1px;background:var(--border)}
+.or-divider .or-text{font-size:0.75rem;font-weight:700;color:var(--warning);text-transform:uppercase;letter-spacing:1px}
+
+.ans-actions{margin-top:1rem;display:flex;gap:0.8rem}
+.btn-mark{flex:1;padding:0.85rem;background:linear-gradient(135deg,var(--primary),var(--primary-dark));color:#fff;border:none;border-radius:8px;font-weight:700;font-size:1rem;cursor:pointer;font-family:inherit}
+.btn-mark:hover{opacity:0.9}
+.btn-clear{padding:0.85rem 1.5rem;background:var(--card);border:1px solid var(--border);color:var(--text-light);border-radius:8px;cursor:pointer;font-weight:600;font-family:inherit}
+
+.results{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:1.5rem;margin-top:1.5rem;box-shadow:var(--shadow)}
+.score-block{text-align:center;padding:1.5rem 0;margin-bottom:1rem}
+.score-pct{font-size:3.5rem;font-weight:900;line-height:1}
+.score-marks{font-size:1rem;color:var(--text-light);margin-top:0.4rem}
+.score-label{font-size:0.8rem;color:var(--text-light);text-transform:uppercase;letter-spacing:1px;font-weight:600;margin-top:0.4rem}
+.score-good .score-pct{color:var(--success)}.score-ok .score-pct{color:var(--warning)}.score-low .score-pct{color:var(--danger)}
+
+.result-warn{background:#fff3cd;border:1px solid var(--warning);color:#856404;padding:0.7rem 1rem;border-radius:8px;font-size:0.85rem;margin-bottom:1rem}
+.pts-head{font-size:0.85rem;font-weight:700;color:var(--text-light);margin-bottom:0.8rem;text-transform:uppercase;letter-spacing:0.5px}
+.pt-row{display:flex;gap:0.8rem;padding:0.75rem 0.9rem;border-radius:8px;margin-bottom:0.4rem;align-items:flex-start}
+.pt-hit{background:#d4edda;border:1px solid rgba(0,184,148,0.3)}
+.pt-miss{background:#ffeaea;border:1px solid rgba(225,112,85,0.3)}
+.pt-icon{font-size:1rem;font-weight:700;min-width:22px;text-align:center}
+.pt-hit .pt-icon{color:var(--success)}.pt-miss .pt-icon{color:var(--danger)}
+.pt-desc{font-weight:600;font-size:0.88rem;display:flex;justify-content:space-between}
+.pt-m{color:var(--text-light);font-weight:400;font-size:0.78rem;margin-left:0.5rem}
+.pt-fb{font-size:0.82rem;color:var(--text-light);line-height:1.5}
+
+.auto-note{background:rgba(108,92,231,0.06);border:1px solid rgba(108,92,231,0.2);padding:0.8rem 1rem;border-radius:8px;font-size:0.85rem;color:var(--text-light);margin:1rem 0}
+.auto-note strong{color:var(--primary)}
+.missed-terms{display:flex;flex-wrap:wrap;gap:0.4rem;margin-top:0.5rem}
+.missed-term{background:var(--border);padding:2px 8px;border-radius:4px;font-size:0.78rem}
+
+.model-section{margin-top:1.5rem}
+.btn-reveal{width:100%;padding:0.8rem;background:var(--bg);border:1px solid var(--border);color:var(--text-light);border-radius:8px;cursor:pointer;font-weight:600;font-size:0.9rem;font-family:inherit}
+.btn-reveal:hover{border-color:var(--primary)}
+.model-box{background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:1.2rem;margin-top:0.5rem}
+.model-box h3{color:var(--primary);font-size:0.9rem;margin-bottom:0.8rem}
+.model-box p,.model-box .a-part,.model-box .a-bullet{font-size:0.88rem;line-height:1.7;color:var(--text-light);margin-bottom:0.2rem}
+.model-box .a-part{color:var(--primary);margin-top:0.6rem;font-weight:600}
+
+.res-actions{display:flex;gap:0.8rem;margin-top:1.5rem}
+.btn-retry,.btn-back{flex:1;padding:0.8rem;border-radius:8px;font-weight:700;cursor:pointer;border:none;font-size:0.9rem;font-family:inherit}
+.btn-retry{background:var(--primary);color:#fff}.btn-retry:hover{opacity:0.9}
+.btn-back{background:var(--bg);border:1px solid var(--border);color:var(--text-light)}
+
+.stats-row{display:grid;grid-template-columns:repeat(4,1fr);gap:0.8rem;margin-bottom:1.5rem}
+.stat-box{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:1rem;text-align:center;box-shadow:var(--shadow)}
+.stat-val{font-size:1.6rem;font-weight:800;color:var(--primary);line-height:1}
+.stat-lbl{font-size:0.65rem;color:var(--text-light);text-transform:uppercase;letter-spacing:0.8px;font-weight:600;margin-top:0.3rem}
+
+.hist-row{display:flex;justify-content:space-between;align-items:center;padding:0.8rem 1rem;background:var(--card);border:1px solid var(--border);border-radius:8px;margin-bottom:0.4rem;cursor:pointer;box-shadow:var(--shadow)}
+.hist-row:hover{border-color:var(--primary)}
+.hist-q{font-weight:700;font-size:0.9rem}
+.hist-topic{font-size:0.78rem;color:var(--text-light)}
+.hist-date{font-size:0.72rem;color:var(--text-light)}
+.hist-score{font-weight:800;font-size:1.1rem}
+.empty{text-align:center;color:var(--text-light);padding:3rem 1rem;font-size:0.95rem}
+.improve{display:inline-flex;align-items:center;gap:3px;font-size:0.72rem;font-weight:700;margin-left:0.5rem;padding:1px 6px;border-radius:4px}
+.improve.up{color:var(--success);background:rgba(0,184,148,0.1)}
+.improve.down{color:var(--danger);background:rgba(225,112,85,0.1)}
+
+.view{display:none}.view.active{display:block}
+@media(max-width:640px){.q-grid{grid-template-columns:1fr}.stats-row{grid-template-columns:repeat(2,1fr)}.filters{flex-direction:column}}
+</style>
+</head>
+<body class="subject-maths">
+<header class="app-header">
+<div><h1>LC Maths — Practice & Mark</h1><p>Answer questions and get marked</p></div>
+<a href="index.html" class="home-link">&#8592; Home</a>
+</header>
+
+<nav>
+<button class="active" onclick="App.showView('browse')">Questions</button>
+<button onclick="App.showView('study')">Study Guide</button>
+<button onclick="App.showView('history')">Progress</button>
+</nav>
+
+<div id="view-browse" class="view active tab-content" style="display:block">
+  <div class="filters">
+    <select id="yearFilter" onchange="App.renderQuestions()">
+      <option value="all">All Years</option>
+      <option value="2025">2025</option><option value="2024">2024</option><option value="2023">2023</option><option value="2022">2022</option>
+      <option value="2021">2021</option><option value="2020">2020</option><option value="2019">2019</option><option value="2018">2018</option>
+      <option value="2017">2017</option><option value="2016">2016</option><option value="2015">2015</option><option value="2014">2014</option>
+      <option value="2013">2013</option><option value="2012">2012</option>
+    </select>
+    <select id="sectionFilter" onchange="App.renderQuestions()">
+      <option value="all">All Questions</option>
+      <option value="1">Paper 1</option>
+      <option value="2">Paper 2</option>
+    </select>
+  </div>
+  <div class="action-bar">
+    <button class="btn-surprise" onclick="PracticeFeatures.surpriseMe(App.walkthroughs, App.startPractice.bind(App))">Surprise Me</button>
+    <button class="btn-timed" onclick="App.startTimedExam()">Timed Exam</button>
+  </div>
+  <div id="questionGrid" class="q-grid"></div>
+</div>
+
+<div id="view-practice" class="view tab-content">
+  <div class="prac-head">
+    <button class="back" onclick="App.backFromPractice()">&larr; Back</button>
+    <span class="title" id="pracTitle"></span>
+  </div>
+  <div class="card" id="pracQuestion"></div>
+  <div id="answerArea"></div>
+  <div id="resultsSection" style="display:none"></div>
+</div>
+
+<div id="examTimer" class="exam-timer"><span class="timer-time">0:00</span><span class="timer-q"></span></div>
+
+<div id="view-study" class="view tab-content">
+  <div id="studyGuideContent"></div>
+</div>
+
+<div id="view-history" class="view tab-content">
+  <div id="dailyPractice"></div>
+  <div class="stats-row">
+    <div class="stat-box"><div class="stat-val" id="hTotal">0</div><div class="stat-lbl">Attempts</div></div>
+    <div class="stat-box"><div class="stat-val" id="hAvg">-</div><div class="stat-lbl">Avg Score</div></div>
+    <div class="stat-box"><div class="stat-val" id="hBest">-</div><div class="stat-lbl">Best Score</div></div>
+    <div class="stat-box"><div class="stat-val" id="hQs">0</div><div class="stat-lbl">Questions</div></div>
+  </div>
+  <div id="weakTopics"></div>
+  <div id="historyList"></div>
+</div>
+
+<script src="js/shared.js"></script>
+<script src="js/maths_walkthroughs.js"></script>
+<script src="js/marking-engine.js"></script>
+<script src="js/maths_practice_data.js"></script>
+<script src="js/maths_study.js"></script>
+<script src="js/study-guide.js"></script>
+<script src="js/practice-features.js"></script>
+<script>
+
+const App = {
+  currentQ: null,
+  currentParts: null,
+  subject: 'maths',
+  walkthroughs: typeof WALKTHROUGHS_MATHS !== 'undefined' ? WALKTHROUGHS_MATHS : {},
+  marking: typeof MAT_MARKING !== 'undefined' ? MAT_MARKING : {},
+  storageKey: 'lcs_mat_practice',
+
+  init() {
+    this.renderQuestions();
+    this.renderHistory();
+  },
+
+  escH(s) { return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); },
+
+  getAllYears() {
+    return Object.keys(this.walkthroughs).sort().reverse();
+  },
+
+  getEntriesForYear(year) {
+    if (!this.walkthroughs[year]) return [];
+    return this.walkthroughs[year].filter(e => e.q && !e.q.startsWith('Key concepts') && !/^Section [A-C] question/i.test(e.q));
+  },
+
+  getSectionForNum(num) {
+    if (num <= 10) return '1';
+    
+    return '2';
+  },
+
+  renderQuestions() {
+    const grid = document.getElementById('questionGrid');
+    const yf = document.getElementById('yearFilter').value;
+    const sf = document.getElementById('sectionFilter').value;
+    const h = this.getHistory();
+    let html = '';
+    const years = yf === 'all' ? this.getAllYears() : [yf];
+
+    for (const year of years) {
+      const entries = this.getEntriesForYear(year);
+      if (!entries || entries.length === 0) continue;
+
+      const filtered = entries.filter(e => {
+        const sec = this.getSectionForNum(e.num);
+        return sf === 'all' || sf === sec;
+      });
+
+      if (filtered.length === 0) continue;
+      html += '<div class="year-header">' + year + ' (' + filtered.length + ' questions)</div>';
+
+      for (const entry of filtered) {
+        const qKey = year + '_' + entry.num;
+        const best = h.best[qKey];
+        const hasMarking = this.marking[year] && this.marking[year][entry.num];
+        const sec = this.getSectionForNum(entry.num);
+        let cls = '', statusHtml = '<span class="q-new">New</span>';
+        if (best) {
+          cls = best.pct >= 70 ? 'done-good' : best.pct >= 40 ? 'done-ok' : 'done-low';
+          statusHtml = '<span class="q-best">' + best.pct + '%</span><span class="q-attempts">(' + (best.attempts||1) + ' tries)</span>';
+        }
+        const topicName = this.escH(entry.label.replace(/^Q\d+[A-Za-z]*:\s*/, ''));
+
+        html += '<div class="q-card ' + cls + '" onclick="App.startPractice(\'' + year + '\',' + entry.num + ')">' +
+          '<div class="q-top"><span class="q-num">Q' + entry.num + '</span><span class="q-sec">Section ' + sec + '</span></div>' +
+          '<div class="q-title">' + topicName + '</div>' +
+          '<div class="q-bot"><span class="q-type">' + (hasMarking ? 'Detailed marking' : 'Auto-marking') + '</span>' + statusHtml + '</div></div>';
+      }
+    }
+    if (!html) html = '<div class="empty">No questions match your filters.</div>';
+    grid.innerHTML = html;
+  },
+
+  extractParts(text) {
+    const lines = text.replace(/\\n/g, '\n').split('\n');
+    const parts = [];
+    let current = null, nextIsOr = false;
+    for (const line of lines) {
+      const t = line.trim();
+      if (!t) continue;
+      const partMatch = t.match(/^\(([a-z])\)/i) || t.match(/^\(([ivx]+)\)/i);
+      if (partMatch) {
+        if (current) parts.push(current);
+        current = { label: '(' + partMatch[1] + ')', text: t, isOr: nextIsOr };
+        nextIsOr = false;
+      } else if (/^OR$/i.test(t)) { nextIsOr = true; }
+      else if (/^Answer\s+\([a-z]\)\s+or\s+\([a-z]\)/i.test(t)) { nextIsOr = true; }
+      else if (current && !current.isPreamble) { current.text += '\n' + t; }
+      else { if (current) parts.push(current); current = { label: '', text: t, isOr: false, isPreamble: true }; }
+    }
+    if (current) parts.push(current);
+    if (parts.filter(p => p.label).length < 2) return null;
+    return parts;
+  },
+
+  renderAnswerArea(questionText) {
+    const area = document.getElementById('answerArea');
+    const parts = this.extractParts(questionText);
+    if (!parts) {
+      area.innerHTML = '<div class="ans-part"><div class="ans-part-label"><span class="part-tag">Your Answer</span><span class="part-wc" id="wc-single">0 words</span></div>' +
+        '<textarea id="ans-single" placeholder="Type your answer here..." rows="10" oninput="App.updateWc(\'single\')"></textarea></div>' +
+        '<div class="ans-actions"><button class="btn-mark" onclick="App.markAnswer()">Mark My Answer</button><button class="btn-clear" onclick="App.clearAnswer()">Clear</button></div>';
+      this.currentParts = null; return;
+    }
+    let html = '';
+    const answerParts = [];
+    for (const part of parts) {
+      if (part.isPreamble) continue;
+      if (part.isOr) html += '<div class="or-divider"><div class="or-line"></div><span class="or-text">or — choose one</span><div class="or-line"></div></div>';
+      const pid = part.label.replace(/[()]/g, '');
+      answerParts.push(pid);
+      html += '<div class="ans-part"><div class="ans-part-label"><span class="part-tag">Part ' + this.escH(part.label) + '</span><span class="part-wc" id="wc-' + pid + '">0 words</span></div>' +
+        '<div class="ans-part-q">' + this.escH(part.text) + '</div>' +
+        '<textarea id="ans-' + pid + '" placeholder="Answer part ' + this.escH(part.label) + ' here..." rows="6" oninput="App.updateWc(\'' + pid + '\')"></textarea></div>';
+    }
+    html += '<div class="ans-actions"><button class="btn-mark" onclick="App.markAnswer()">Mark My Answer</button><button class="btn-clear" onclick="App.clearAnswer()">Clear</button></div>';
+    area.innerHTML = html;
+    this.currentParts = answerParts;
+  },
+
+  updateWc(pid) {
+    const ta = document.getElementById('ans-' + pid);
+    const wc = ta && ta.value.trim() ? ta.value.trim().split(/\s+/).length : 0;
+    const el = document.getElementById('wc-' + pid);
+    if (el) el.textContent = wc + ' words';
+  },
+
+  getFullAnswer() {
+    if (!this.currentParts) { const ta = document.getElementById('ans-single'); return ta ? ta.value : ''; }
+    return this.currentParts.map(pid => { const ta = document.getElementById('ans-' + pid); return ta ? ta.value : ''; }).filter(v => v.trim()).join('\n\n');
+  },
+
+  startPractice(year, num) {
+    const entries = this.getEntriesForYear(year);
+    const entry = entries ? entries.find(e => e.num === num) : null;
+    if (!entry) return;
+    this.currentQ = { year, num, entry };
+    document.getElementById('pracTitle').textContent = year + ' — ' + entry.label;
+    document.getElementById('pracQuestion').innerHTML = this.fmtQuestion(entry.q);
+    this.renderAnswerArea(entry.q);
+    document.getElementById('resultsSection').style.display = 'none';
+    this.showView('practice');
+    const firstTa = document.querySelector('#answerArea textarea');
+    if (firstTa) setTimeout(() => firstTa.focus(), 100);
+  },
+
+  markAnswer() {
+    if (!this.currentQ) return;
+    const answer = this.getFullAnswer();
+    if (!answer.trim()) { const firstTa = document.querySelector('#answerArea textarea'); if (firstTa) firstTa.focus(); return; }
+    const { year, num, entry } = this.currentQ;
+    const markingData = this.marking[year] && this.marking[year][num];
+    let result;
+    if (markingData) { result = MarkingEngine.mark(answer, markingData); }
+    else { result = MarkingEngine.autoMark(answer, entry.a, 10); }
+    this.saveAttempt(year, num, entry, result);
+    this.renderResults(result, entry, !!markingData);
+    document.getElementById('resultsSection').style.display = 'block';
+    document.getElementById('resultsSection').scrollIntoView({ behavior: 'smooth' });
+  },
+
+  clearAnswer() {
+    document.querySelectorAll('#answerArea textarea').forEach(ta => { ta.value = ''; });
+    document.querySelectorAll('[id^="wc-"]').forEach(el => { el.textContent = '0 words'; });
+    document.getElementById('resultsSection').style.display = 'none';
+    const firstTa = document.querySelector('#answerArea textarea');
+    if (firstTa) firstTa.focus();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  },
+
+  renderResults(result, entry, isDetailed) {
+    const sec = document.getElementById('resultsSection');
+    const pctCls = result.pct >= 70 ? 'score-good' : result.pct >= 40 ? 'score-ok' : 'score-low';
+    let html = '<div class="results"><div class="score-block ' + pctCls + '"><div class="score-pct">' + result.pct + '%</div>' +
+      '<div class="score-marks">' + result.score + ' / ' + result.max + ' marks</div>' +
+      '<div class="score-label">' + (result.pct >= 70 ? 'Great work!' : result.pct >= 40 ? 'Getting there!' : 'Review the marking points below') + '</div></div>';
+    if (result.warning) html += '<div class="result-warn">' + result.warning + '</div>';
+    if (result.points) {
+      html += '<div class="pts-head">Marking Breakdown</div>';
+      for (const pt of result.points) {
+        const cls = pt.matched ? 'pt-hit' : 'pt-miss';
+        const icon = pt.matched ? '&#10003;' : '&#10007;';
+        html += '<div class="pt-row ' + cls + '"><span class="pt-icon">' + icon + '</span><div class="pt-detail">' +
+          '<div class="pt-desc"><span>' + this.escH(pt.desc) + '</span><span class="pt-m">' + pt.marks + '/' + pt.maxMarks + '</span></div>' +
+          '<div class="pt-fb">' + this.escH(pt.feedback) + '</div></div></div>';
+      }
+    }
+    if (result.auto) {
+      html += '<div class="auto-note"><strong>Auto-marked</strong> — compared against model answer. ' + result.feedback;
+      if (result.missed && result.missed.length > 0) {
+        html += '<div style="margin-top:0.4rem;font-size:0.8rem">Key terms you missed:</div><div class="missed-terms">' +
+          result.missed.map(t => '<span class="missed-term">' + this.escH(t) + '</span>').join('') + '</div>';
+      }
+      html += '</div>';
+    }
+    html += '<div class="model-section"><button class="btn-reveal" onclick="this.nextElementSibling.style.display=\'block\';this.style.display=\'none\';PracticeFeatures.renderSideBySide(App.getFullAnswer(),\'' + entry.a.replace(/'/g, "\\'").replace(/\n/g, "\\n") + '\',\'sbsArea\')">Compare with Model Answer</button>' +
+      '<div style="display:none"><div id="sbsArea"></div></div></div>';
+    const timedActive = typeof PracticeFeatures !== 'undefined' && PracticeFeatures.timedMode.active;
+    html += '<div class="res-actions"><button class="btn-retry" onclick="App.clearAnswer()">Try Again</button>' +
+      (timedActive ? '<button class="btn-retry" onclick="PracticeFeatures.nextTimedQuestion()">Next Question &rarr;</button>' : '') +
+      '<button class="btn-back" onclick="App.showView(\'browse\')">All Questions</button></div></div>';
+    sec.innerHTML = html;
+    if (timedActive) PracticeFeatures.recordTimedResult(result.pct);
+  },
+
+  getHistory() { return JSON.parse(localStorage.getItem(this.storageKey) || '{"attempts":[],"best":{}}'); },
+
+  saveAttempt(year, num, entry, result) {
+    const h = this.getHistory();
+    const qKey = year + '_' + num;
+    const topic = entry.label.replace(/^Q\d+[A-Za-z]*:\s*/, '');
+    h.attempts.unshift({ key: qKey, year: year, num: num, topic: topic, score: result.score, max: result.max, pct: result.pct, date: new Date().toISOString() });
+    if (h.attempts.length > 200) h.attempts = h.attempts.slice(0, 200);
+    if (!h.best[qKey] || result.pct > h.best[qKey].pct) {
+      h.best[qKey] = { pct: result.pct, score: result.score, max: result.max, attempts: (h.best[qKey] ? h.best[qKey].attempts : 0) + 1, topic: topic };
+    } else { h.best[qKey].attempts = (h.best[qKey].attempts || 0) + 1; }
+    localStorage.setItem(this.storageKey, JSON.stringify(h));
+    if (typeof LCS !== 'undefined') LCS.recordStudyDay();
+  },
+
+  renderHistory() {
+    const h = this.getHistory();
+    const total = h.attempts.length;
+    const qs = Object.keys(h.best).length;
+    const avg = total > 0 ? Math.round(h.attempts.reduce((s,a) => s + a.pct, 0) / total) : 0;
+    const best = total > 0 ? Math.max(...h.attempts.map(a => a.pct)) : 0;
+    document.getElementById('hTotal').textContent = total;
+    document.getElementById('hAvg').textContent = total > 0 ? avg + '%' : '-';
+    document.getElementById('hBest').textContent = total > 0 ? best + '%' : '-';
+    document.getElementById('hQs').textContent = qs;
+    const list = document.getElementById('historyList');
+    if (total === 0) { list.innerHTML = '<div class="empty">No attempts yet.<br>Pick a question and start practising!</div>'; return; }
+    let html = '';
+    const seen = {};
+    for (const a of h.attempts.slice(0, 30)) {
+      const date = new Date(a.date);
+      const dateStr = date.toLocaleDateString('en-IE', { day: 'numeric', month: 'short' });
+      const timeStr = date.toLocaleTimeString('en-IE', { hour: '2-digit', minute: '2-digit' });
+      const pctCls = a.pct >= 70 ? 'score-good' : a.pct >= 40 ? 'score-ok' : 'score-low';
+      let improveHtml = '';
+      if (!seen[a.key]) {
+        const prevAttempts = h.attempts.filter(x => x.key === a.key && x.date < a.date);
+        if (prevAttempts.length > 0) { const diff = a.pct - prevAttempts[0].pct; if (diff > 0) improveHtml = '<span class="improve up">+' + diff + '%</span>'; else if (diff < 0) improveHtml = '<span class="improve down">' + diff + '%</span>'; }
+      }
+      seen[a.key] = a.pct;
+      html += '<div class="hist-row" onclick="App.startPractice(\'' + a.year + '\',' + a.num + ')"><div><div class="hist-q">' + a.year + ' Q' + a.num + improveHtml + '</div>' +
+        '<div class="hist-topic">' + this.escH(a.topic || '') + '</div></div><div><div class="hist-score ' + pctCls + '">' + a.pct + '%</div>' +
+        '<div class="hist-date">' + dateStr + ' ' + timeStr + '</div></div></div>';
+    }
+    list.innerHTML = html;
+
+    if (typeof PracticeFeatures !== 'undefined') {
+      PracticeFeatures.renderDailyPractice('dailyPractice', h, this.walkthroughs, 'App.startPractice');
+      PracticeFeatures.renderWeakTopics('weakTopics', h, this.walkthroughs, 'App.startPractice');
+    }
+  },
+
+  startTimedExam() {
+    if (typeof PracticeFeatures === 'undefined') return;
+    PracticeFeatures.startTimedMode(
+      this.walkthroughs, null, 6, 7,
+      this.startPractice.bind(this),
+      function(results) {
+        App.showView('browse');
+        PracticeFeatures.renderTimedResults('resultsSection', results);
+        document.getElementById('resultsSection').style.display = 'block';
+      }
+    );
+  },
+
+  backFromPractice() {
+    if (typeof PracticeFeatures !== 'undefined' && PracticeFeatures.timedMode.active) {
+      PracticeFeatures.endTimedMode();
+    }
+    this.showView('browse');
+  },
+
+  showView(viewId) {
+    document.querySelectorAll('.view').forEach(v => { v.classList.remove('active'); v.style.display = 'none'; });
+    document.querySelectorAll('nav button').forEach(b => b.classList.remove('active'));
+    const el = document.getElementById('view-' + viewId);
+    if (el) { el.classList.add('active'); el.style.display = 'block'; }
+    const btns = document.querySelectorAll('nav button');
+    if (viewId === 'browse') { btns[0].classList.add('active'); this.renderQuestions(); }
+    else if (viewId === 'study') { btns[1].classList.add('active'); if (typeof StudyGuide !== 'undefined' && typeof STUDY_MATHS !== 'undefined') StudyGuide.render(STUDY_MATHS, 'studyGuideContent'); }
+    else if (viewId === 'history') { btns[2].classList.add('active'); this.renderHistory(); }
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  },
+
+  fmtQuestion(text) {
+    const lines = text.replace(/\\n/g, '\n').split('\n');
+    let html = '';
+    for (const line of lines) { const t = line.trim(); if (!t) { html += '<br>'; continue; }
+      if (/^\([a-z]\)/i.test(t) || /^\([ivx]+\)/i.test(t)) html += '<div class="q-part" style="color:var(--primary);margin:0.8rem 0 0.3rem"><strong>' + this.escH(t) + '</strong></div>';
+      else html += '<p>' + this.escH(t) + '</p>';
+    } return html;
+  },
+
+  fmtAnswer(text) {
+    const lines = text.replace(/\\n/g, '\n').split('\n');
+    let html = '';
+    for (const line of lines) { const t = line.trim(); if (!t) { html += '<br>'; continue; }
+      if (/^\([a-z]\)/i.test(t) || /^\([ivx]+\)/i.test(t)) html += '<div class="a-part">' + this.escH(t) + '</div>';
+      else if (/^[-•]/.test(t)) html += '<div class="a-bullet" style="padding-left:1rem">' + this.escH(t) + '</div>';
+      else html += '<p>' + this.escH(t) + '</p>';
+    } return html;
+  }
+};
+
+document.addEventListener('DOMContentLoaded', () => App.init());
+</script>
+</body>
+</html>
