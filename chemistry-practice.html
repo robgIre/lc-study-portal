@@ -114,6 +114,7 @@
 <nav>
 <button class="active" onclick="App.showView('browse')">Questions</button>
 <button onclick="App.showView('study')">Study Guide</button>
+<button onclick="App.showView('flashcards')">Flashcards</button>
 <button onclick="App.showView('history')">Progress</button>
 </nav>
 
@@ -151,6 +152,22 @@
 
 <div id="examTimer" class="exam-timer"><span class="timer-time">0:00</span><span class="timer-q"></span></div>
 
+<div id="view-flashcards" class="view tab-content">
+  <div class="fc-topic-filter" id="fcFilter"></div>
+  <div class="flashcard-container" id="fcContainer">
+    <div class="flashcard" onclick="if(window.fcEngine)fcEngine.flip()">
+      <div class="flashcard-face flashcard-front"><h3>TOPIC</h3><p>Loading flashcards...</p></div>
+      <div class="flashcard-face flashcard-back"><p>Loading...</p></div>
+    </div>
+  </div>
+  <div class="fc-controls" id="fcControls">
+    <button class="fc-prev" onclick="if(window.fcEngine)fcEngine.prev()">Prev</button>
+    <span class="fc-counter" id="fcCounter">0 / 0</span>
+    <button class="fc-next" onclick="if(window.fcEngine)fcEngine.next()">Next</button>
+    <button class="fc-prev" onclick="if(window.fcEngine)fcEngine.shuffle()">Shuffle</button>
+  </div>
+</div>
+
 <div id="view-study" class="view tab-content">
   <div id="studyGuideContent"></div>
 </div>
@@ -172,6 +189,7 @@
 <script src="js/marking-engine.js"></script>
 <script src="js/chemistry_practice_data.js"></script>
 <script src="js/chemistry_study.js"></script>
+<script src="js/flashcards_chemistry.js"></script>
 <script src="js/study-guide.js"></script>
 <script src="js/practice-features.js"></script>
 <script>
