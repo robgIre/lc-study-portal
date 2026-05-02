@@ -489,8 +489,9 @@ const App = {
     if (el) { el.classList.add('active'); el.style.display = 'block'; }
     const btns = document.querySelectorAll('nav button');
     if (viewId === 'browse') { btns[0].classList.add('active'); this.renderQuestions(); }
+    else if (viewId === 'flashcards') { btns[2].classList.add('active'); App.initFlashcards(); }
     else if (viewId === 'study') { btns[1].classList.add('active'); if (typeof StudyGuide !== 'undefined' && typeof STUDY_SPANISH !== 'undefined') StudyGuide.render(STUDY_SPANISH, 'studyGuideContent'); }
-    else if (viewId === 'history') { btns[2].classList.add('active'); this.renderHistory(); }
+    else if (viewId === 'history') { btns[3].classList.add('active'); this.renderHistory(); }
     window.scrollTo({ top: 0, behavior: 'smooth' });
   },
 
